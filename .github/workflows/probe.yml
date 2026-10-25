@@ -10,39 +10,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p raw8
-          python3 - <<'PY' > raw8/index.txt 2>&1
-          import requests, hashlib, pathlib
-          out = pathlib.Path("raw8")
-          UAS = {"chrome": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
-                 "bot": "Mozilla/5.0 (X11; Linux x86_64) laliga-predictor/0.1"}
-          urls = [
-            "https://www.transfermarkt.es/laliga/verletztespieler/wettbewerb/ES1",
-            "https://www.transfermarkt.es/laliga/sperrenausfaelle/wettbewerb/ES1",
-            "https://www.transfermarkt.com/laliga/verletztespieler/wettbewerb/ES1",
-            "https://www.transfermarkt.es/real-madrid/sperrenundverletzungen/verein/418",
-            "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/injuries",
-            "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/injuries",
-            "https://sports.core.api.espn.com/v2/sports/soccer/leagues/esp.1/teams/86/injuries",
-            "https://api.sofascore.com/api/v1/team/2829/players",
-            "https://www.sofascore.com/api/v1/event/14083000/lineups",
-            "https://www.fotmob.com/api/teams?id=8633",
-            "https://www.fotmob.com/api/data/teams?id=8633",
-            "https://www.jornadaperfecta.com/bajas/",
-            "https://www.futbolfantasy.com/laliga/lesionados",
-            "https://www.futbolfantasy.com/laliga/sancionados",
-            "https://www.besoccer.com/competition/injured/primera",
-            "https://www.comuniate.com/lesionados.php",
-          ]
-          for ua_name, ua in UAS.items():
-              for u in urls:
-                  try:
-                      r = requests.get(u, headers={"User-Agent": ua, "Accept-Language": "es-ES,es;q=0.9", "Accept": "text/html,application/json"}, timeout=25)
-                      h = hashlib.md5((ua_name + u).encode()).hexdigest()[:6]
-                      (out / f"{h}.body").write_bytes(r.content)
-                      print(ua_name, h, r.status_code, len(r.content), r.headers.get("content-type", "")[:30], u)
-                  except Exception as e:
-                      print(ua_name, "ERR", u, e)
+          mkdir -p raw9
+          python3 - <<'PY' > raw9/out.txt 2>&1
+          import requests, json
+          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0"
+          G = "https://gamma-api.polymarket.com"
+          for path, params in [("/sports", {}), ("/tags", {"limit": 500}),
+                               ("/events", {"limit": 50, "closed": "false", "tag_slug": "la-liga"}),
+                               ("/events", {"limit": 50, "closed": "false", "tag_slug": "laliga"}),
+                               ("/events", {"limit": 50, "closed": "false", "series_slug": "la-liga"}),
+                               ("/public-search", {"q": "Real Madrid", "limit_per_type": 20}),
+                               ("/events", {"limit": 50, "closed": "true", "tag_slug": "la-liga", "order": "endDate", "ascending": "false"})]:
+              try:
+                  r = s.get(G + path, params=params, timeout=30)
+                  print("==", path, params, r.status_code, len(r.content))
+                  js = r.json()
+                  open("raw9/" + (path.strip("/").replace("/", "_") + "_" + "_".join(f"{k}{v}" for k, v in params.items()))[:80] + ".json", "w").write(json.dumps(js)[:3000000])
+                  if isinstance(js, list):
+                      for e in js[:40]:
+                          print("  ", {k: e.get(k) for k in ("id", "slug", "title", "label", "sport", "series", "volume", "endDate") if k in e})
+                  elif isinstance(js, dict):
+                      print("  keys", list(js)[:10])
+                      for k in ("events", "markets"):
+                          for e in (js.get(k) or [])[:20]:
+                              print("   ", k, {kk: e.get(kk) for kk in ("slug", "title", "question", "volume", "endDate")})
+              except Exception as e:
+                  print("ERR", path, e)
           PY
           git config user.name probe; git config user.email probe@example.com
-          git add raw8; git commit -qm probe-out8; git push origin HEAD:probe
+          git add raw9; git commit -qm probe-out9; git push origin HEAD:probe
