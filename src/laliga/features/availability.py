@@ -248,6 +248,9 @@ def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str |
     hp = {k: _plain(k) for k in (role_hint or {})}
 
     def role_of(name, pos):
+        p_ = str(pos or "").upper().replace("-", "")
+        if p_ and p_ not in ("SUB", "SUBSTITUTE", "S", "BENCH"):  # la demarcación de ESPN, si es concreta
+            return role(pos)
         if hp:
             best = process.extractOne(_plain(name), hp, scorer=fuzz.token_set_ratio)
             if best and best[1] >= 88:
@@ -261,6 +264,7 @@ def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str |
     for _, r in exp.iterrows():
         if not is_out(r["name"]):
             info = _pinfo(r, _status_of(r["name"], ab))
+            info["role"] = role_of(r["name"], r.get("position"))
             info["usual"] = True
             xi.append(info)
             continue
@@ -273,6 +277,9 @@ def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str |
             rep = cand.iloc[0]
             used.add(rep["name"])
             info = _pinfo(rep, _status_of(rep["name"], ab))
+            info["role"] = rl
+            if rl == "G":
+                info["pos"] = "G"
             info["usual"] = False
             info["replaces"] = r["name"]
             xi.append(info)
@@ -300,8 +307,10 @@ def roster(imp: pd.DataFrame | None, players: pd.DataFrame | None, absences: lis
     rows: dict[str, dict] = {}
     if imp is not None and len(imp):
         for _, r in imp.iterrows():
+            pos_ = str(r.get("position") or "").upper()
             rows[r["name"]] = {"name": r["name"], "role": role(r.get("position")), "imp": round(float(r.get("importance", 0) or 0), 2),
-                               "att": round(float(r.get("att_w", 0) or 0), 2), "goals": None, "minutes": None}
+                               "att": None, "goals": None, "minutes": None,
+                               "_known_pos": bool(pos_) and pos_ not in ("SUB", "SUBSTITUTE", "S", "BENCH")}
     if players is not None and len(players):
         plain_rows = {k: _plain(k) for k in rows}
         for r in players.itertuples():
@@ -321,6 +330,8 @@ def roster(imp: pd.DataFrame | None, players: pd.DataFrame | None, absences: lis
     if role_hint:  # demarcación de Understat (más fiable que la de ESPN para los suplentes)
         hp = {k: _plain(k) for k in role_hint}
         for k, v in rows.items():
+            if v.get("_known_pos"):
+                continue
             best = process.extractOne(_plain(k), hp, scorer=fuzz.token_set_ratio)
             if best and best[1] >= 88:
                 v["role"] = role_hint[best[2]]
@@ -339,6 +350,7 @@ def roster(imp: pd.DataFrame | None, players: pd.DataFrame | None, absences: lis
             v["status"] = "titular" if k in st else "suplente"
         else:
             v["status"] = "disponible"
+        v.pop("_known_pos", None)
         out.append(v)
     order = {"G": 0, "D": 1, "M": 2, "F": 3}
     out.sort(key=lambda x: (order.get(x["role"], 2), -(x["imp"] or 0), -(x["minutes"] or 0)))
