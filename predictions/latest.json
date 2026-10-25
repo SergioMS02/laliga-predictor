@@ -1,6 +1,6 @@
 [
  {
-  "generated_at": "2026-10-25T19:07:29.988320+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-10-25",
   "kickoff_utc": "2026-10-25T20:00:00+00:00",
@@ -11,30 +11,30 @@
   "p_away": 0.1349,
   "model": "stacker_mercado",
   "dc": {
-   "p_home": 0.6428,
-   "p_draw": 0.1864,
-   "p_away": 0.1708,
-   "xg_home": 2.5035,
-   "xg_away": 1.2517,
-   "p_over25": 0.7238,
-   "p_btts": 0.6595,
+   "p_home": 0.643,
+   "p_draw": 0.1863,
+   "p_away": 0.1707,
+   "xg_home": 2.505,
+   "xg_away": 1.2518,
+   "p_over25": 0.724,
+   "p_btts": 0.6596,
    "top_scores": [
     [
      "2-1",
-     0.09177659068706631
+     0.09174662495333138
     ],
     [
      "1-1",
-     0.07722670333808294
+     0.07714657970059115
     ],
     [
      "3-1",
-     0.07658666224016054
+     0.07660750777916313
     ]
    ]
   },
   "xg_base": [
-   2.295,
+   2.297,
    1.347
   ],
   "elo_diff": 145.4,
@@ -376,9 +376,9 @@
   ],
   "ou": {
    "p_over": 0.8208,
-   "p_over_model": 0.7238,
+   "p_over_model": 0.724,
    "p_over_market": 0.8047,
-   "p_btts": 0.6595
+   "p_btts": 0.6596
   },
   "odds_market": {
    "max": [
@@ -397,7 +397,7 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.473,
+     "p": 0.474,
      "xg90": 1.02
     },
     {
@@ -1005,76 +1005,54 @@
     1.25
    ],
    "p_full": [
-    0.5828,
-    0.2046,
-    0.2125
+    0.5831,
+    0.2045,
+    0.2124
    ],
    "p_adj": [
-    0.6428,
-    0.1864,
-    0.1708
+    0.643,
+    0.1863,
+    0.1707
    ]
   },
-  "movement": {
-   "home": "Barcelona",
-   "away": "Real Madrid",
-   "date": "2026-10-25",
-   "from_ts": "2026-10-25T18:46:05.659526+00:00",
-   "to_ts": "2026-10-25T19:07:29.988320+00:00",
-   "p_from": [
-    0.6874,
-    0.1675,
-    0.1451
-   ],
-   "p_to": [
-    0.7036,
-    0.1616,
-    0.1349
-   ],
-   "delta_pts": [
-    1.6,
-    -0.6,
-    -1.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-10-26",
   "kickoff_utc": "2026-10-26T20:00:00+00:00",
   "home": "Sevilla",
   "away": "Osasuna",
-  "p_home": 0.4906,
-  "p_draw": 0.286,
-  "p_away": 0.2234,
+  "p_home": 0.4663,
+  "p_draw": 0.2983,
+  "p_away": 0.2354,
   "model": "stacker_mercado",
   "dc": {
-   "p_home": 0.4871,
-   "p_draw": 0.2585,
-   "p_away": 0.2543,
-   "xg_home": 1.6301,
-   "xg_away": 1.1156,
-   "p_over25": 0.5175,
-   "p_btts": 0.5468,
+   "p_home": 0.458,
+   "p_draw": 0.2673,
+   "p_away": 0.2748,
+   "xg_home": 1.529,
+   "xg_away": 1.1315,
+   "p_over25": 0.4967,
+   "p_btts": 0.5371,
    "top_scores": [
     [
      "1-1",
-     0.12297829163081837
+     0.127384023193292
     ],
     [
      "1-0",
-     0.09843205771027727
+     0.10046179029339022
     ],
     [
      "2-1",
-     0.09516178562522112
+     0.09247018550381947
     ]
    ]
   },
   "xg_base": [
-   1.63,
+   1.631,
    1.116
   ],
   "elo_diff": 83.8,
@@ -1090,14 +1068,14 @@
    0.2276
   ],
   "lineup_confirmed": false,
-  "availability_source": "ninguna",
+  "availability_source": "noticias",
   "deficit": [
-   0.0,
-   0.0
+   0.161,
+   0.037
   ],
   "deficit_defence": [
-   0.0,
-   0.0
+   0.104,
+   0.091
   ],
   "context": {
    "stake_diff_late": -0.008,
@@ -1114,8 +1092,46 @@
    "post_break": 0.0
   },
   "absences": {
-   "Sevilla": [],
-   "Osasuna": []
+   "Sevilla": [
+    {
+     "player": "Marcão",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el recto anterior · Baja hasta principios de noviembre"
+    },
+    {
+     "player": "Miguel Sierra",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Luxación acromioclavicular · Baja hasta enero"
+    },
+    {
+     "player": "Jon Guridi",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre"
+    }
+   ],
+   "Osasuna": [
+    {
+     "player": "Jorge Herrando",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta noviembre"
+    },
+    {
+     "player": "Aimar Oroz",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en los isquiotibiales · Baja hasta mediados de noviembre"
+    },
+    {
+     "player": "Romain Del Castillo",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta finales de octubre"
+    }
+   ]
   },
   "lineups": null,
   "squads": {
@@ -1160,13 +1176,14 @@
       "usual": true
      },
      {
-      "name": "Miguel Sierra",
-      "pos": "AM-R",
+      "name": "Giorgi Kochorashvili",
+      "pos": "RM",
       "role": "M",
-      "imp": 0.89,
-      "att": 0.13,
+      "imp": 0.33,
+      "att": 0.25,
       "absent": null,
-      "usual": true
+      "usual": false,
+      "replaces": "Miguel Sierra"
      },
      {
       "name": "Andrés Castrín",
@@ -1205,13 +1222,14 @@
       "usual": true
      },
      {
-      "name": "Jon Guridi",
-      "pos": "SUB",
+      "name": "Peque",
+      "pos": "AM",
       "role": "M",
-      "imp": 0.56,
-      "att": 0.28,
+      "imp": 0.33,
+      "att": 0.13,
       "absent": null,
-      "usual": true
+      "usual": false,
+      "replaces": "Jon Guridi"
      },
      {
       "name": "Felix Correia",
@@ -1223,7 +1241,29 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Marcão",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el recto anterior · Baja hasta principios de noviembre",
+      "imp": 0.0
+     },
+     {
+      "name": "Miguel Sierra",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Luxación acromioclavicular · Baja hasta enero",
+      "imp": 0.89
+     },
+     {
+      "name": "Jon Guridi",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre",
+      "imp": 0.56
+     }
+    ]
    },
    "away": {
     "confirmed": false,
@@ -1329,7 +1369,29 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Jorge Herrando",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el aductor · Baja hasta noviembre",
+      "imp": 0.33
+     },
+     {
+      "name": "Aimar Oroz",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en los isquiotibiales · Baja hasta mediados de noviembre",
+      "imp": 0.22
+     },
+     {
+      "name": "Romain Del Castillo",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el aductor · Baja hasta finales de octubre",
+      "imp": 0.0
+     }
+    ]
    }
   },
   "b365": [
@@ -1342,10 +1404,10 @@
    1.73
   ],
   "ou": {
-   "p_over": 0.4444,
-   "p_over_model": 0.5175,
+   "p_over": 0.4426,
+   "p_over_model": 0.4967,
    "p_over_market": 0.443,
-   "p_btts": 0.5468
+   "p_btts": 0.5371
   },
   "odds_market": {
    "max": [
@@ -1364,39 +1426,39 @@
    "home": [
     {
      "name": "Robbie Ure",
-     "p": 0.318,
+     "p": 0.325,
      "xg90": 0.38
     },
     {
      "name": "Youssouf Fofana",
-     "p": 0.298,
+     "p": 0.304,
      "xg90": 0.33
     },
     {
      "name": "Felix Correia",
-     "p": 0.259,
+     "p": 0.265,
      "xg90": 0.28
     },
     {
-     "name": "Jon Guridi",
-     "p": 0.201,
-     "xg90": 0.21
+     "name": "Peque",
+     "p": 0.186,
+     "xg90": 0.19
     },
     {
-     "name": "Miguel Sierra",
-     "p": 0.102,
-     "xg90": 0.1
+     "name": "Juan Iglesias",
+     "p": 0.071,
+     "xg90": 0.06
     }
    ],
    "away": [
     {
      "name": "Ante Budimir",
-     "p": 0.343,
+     "p": 0.347,
      "xg90": 0.64
     },
     {
      "name": "Raúl García",
-     "p": 0.282,
+     "p": 0.285,
      "xg90": 0.51
     },
     {
@@ -1411,7 +1473,7 @@
     },
     {
      "name": "Jon Moncayola",
-     "p": 0.034,
+     "p": 0.035,
      "xg90": 0.05
     }
    ]
@@ -1488,7 +1550,8 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el recto anterior · Baja hasta principios de noviembre"
     },
     {
      "name": "Fábio Cardoso",
@@ -1515,7 +1578,8 @@
      "att": 0.13,
      "goals": 2,
      "minutes": 592,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Luxación acromioclavicular · Baja hasta enero"
     },
     {
      "name": "Youssouf Fofana",
@@ -1542,7 +1606,8 @@
      "att": 0.28,
      "goals": 1,
      "minutes": 360,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre"
     },
     {
      "name": "Giorgi Kochorashvili",
@@ -1805,7 +1870,8 @@
      "att": null,
      "goals": 0,
      "minutes": 188,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta noviembre"
     },
     {
      "name": "Rockson Yeboah",
@@ -1904,7 +1970,8 @@
      "att": null,
      "goals": 0,
      "minutes": 156,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en los isquiotibiales · Baja hasta mediados de noviembre"
     },
     {
      "name": "Raúl Moro",
@@ -1931,7 +1998,8 @@
      "att": null,
      "goals": 0,
      "minutes": 31,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta finales de octubre"
     },
     {
      "name": "Mauro Echegoyen",
@@ -1995,59 +2063,81 @@
     1.12
    ],
    "xg_adj": [
-    1.63,
-    1.12
+    1.53,
+    1.13
    ],
    "p_full": [
-    0.4871,
-    0.2585,
-    0.2543
+    0.4874,
+    0.2584,
+    0.2542
    ],
    "p_adj": [
-    0.4871,
-    0.2585,
-    0.2543
+    0.458,
+    0.2673,
+    0.2748
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Sevilla",
+   "away": "Osasuna",
+   "date": "2026-10-26",
+   "from_ts": "2026-10-25T18:01:26.218166+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "p_from": [
+    0.4906,
+    0.286,
+    0.2234
+   ],
+   "p_to": [
+    0.4663,
+    0.2983,
+    0.2354
+   ],
+   "delta_pts": [
+    -2.4,
+    1.2,
+    1.2
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-10-30",
   "kickoff_utc": "2026-10-30T20:00:00+00:00",
   "home": "Villarreal",
   "away": "Espanol",
-  "p_home": 0.6888,
-  "p_draw": 0.2055,
-  "p_away": 0.1057,
+  "p_home": 0.6549,
+  "p_draw": 0.2278,
+  "p_away": 0.1173,
   "model": "stacker",
   "dc": {
-   "p_home": 0.5879,
-   "p_draw": 0.2317,
-   "p_away": 0.1804,
-   "xg_home": 1.8954,
-   "xg_away": 0.957,
-   "p_over25": 0.5429,
-   "p_btts": 0.529,
+   "p_home": 0.5376,
+   "p_draw": 0.2513,
+   "p_away": 0.2111,
+   "xg_home": 1.7097,
+   "xg_away": 0.9863,
+   "p_over25": 0.5054,
+   "p_btts": 0.5196,
    "top_scores": [
     [
      "1-1",
-     0.11025020987061629
+     0.11983178899631806
     ],
     [
      "1-0",
-     0.10380246055229903
+     0.10931723167910974
     ],
     [
      "2-0",
-     0.10366018544319427
+     0.09862119649338179
     ]
    ]
   },
   "xg_base": [
-   2.032,
-   0.93
+   2.034,
+   0.931
   ],
   "elo_diff": 192.5,
   "referee": null,
@@ -2060,11 +2150,11 @@
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
-   0.116,
+   0.29,
    0.0
   ],
   "deficit_defence": [
-   0.08,
+   0.166,
    0.0
   ],
   "context": {
@@ -2084,13 +2174,44 @@
   "absences": {
    "Villarreal": [
     {
+     "player": "Nicolas Pépé",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Operado del ojo · Baja hasta finales de octubre"
+    },
+    {
+     "player": "Carlos Romero",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias en el aductor · Duda para la jornada 11"
+    },
+    {
+     "player": "Nathan Saliba",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
+    },
+    {
      "player": "Pape Gueye",
      "status": "out",
      "reason": "suspension",
-     "source": "sanción por roja (24/10)"
+     "source": "futbolfantasy: Roja directa (jornada 11)"
     }
    ],
-   "Espanol": []
+   "Espanol": [
+    {
+     "player": "Jofre Carreras",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias en el aductor · Baja confirmada para la jornada 11"
+    },
+    {
+     "player": "Kike García",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura completa del tendón proximal del bíceps femoral · Baja hasta diciembre"
+    }
+   ]
   },
   "lineups": null,
   "squads": {
@@ -2126,12 +2247,12 @@
       "usual": true
      },
      {
-      "name": "Nicolas Pépé",
+      "name": "Nathan Saliba",
       "pos": "SUB",
       "role": "M",
-      "imp": 0.5,
-      "att": 0.6,
-      "absent": null,
+      "imp": 0.3,
+      "att": 0.11,
+      "absent": "doubtful",
       "usual": false,
       "replaces": "Pape Gueye"
      },
@@ -2201,10 +2322,31 @@
     ],
     "out": [
      {
+      "name": "Nicolas Pépé",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Operado del ojo · Baja hasta finales de octubre",
+      "imp": 0.5
+     },
+     {
+      "name": "Carlos Romero",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias en el aductor · Duda para la jornada 11",
+      "imp": 0.4
+     },
+     {
+      "name": "Nathan Saliba",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11",
+      "imp": 0.3
+     },
+     {
       "name": "Pape Gueye",
       "status": "out",
       "reason": "suspension",
-      "source": "sanción por roja (24/10)",
+      "source": "futbolfantasy: Roja directa (jornada 11)",
       "imp": 0.8
      }
     ]
@@ -2313,16 +2455,31 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Jofre Carreras",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias en el aductor · Baja confirmada para la jornada 11",
+      "imp": 0.0
+     },
+     {
+      "name": "Kike García",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura completa del tendón proximal del bíceps femoral · Baja hasta diciembre",
+      "imp": 0
+     }
+    ]
    }
   },
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5429,
-   "p_over_model": 0.5429,
+   "p_over": 0.5054,
+   "p_over_model": 0.5054,
    "p_over_market": null,
-   "p_btts": 0.529
+   "p_btts": 0.5196
   },
   "odds_market": null,
   "espn_id": "401882817",
@@ -2330,54 +2487,54 @@
    "home": [
     {
      "name": "Ayoze Pérez",
-     "p": 0.327,
+     "p": 0.3,
      "xg90": 0.55
     },
     {
-     "name": "Nicolas Pépé",
-     "p": 0.208,
-     "xg90": 0.31
-    },
-    {
      "name": "Alberto Moleiro",
-     "p": 0.192,
+     "p": 0.175,
      "xg90": 0.29
     },
     {
      "name": "Ilias Akhomach",
-     "p": 0.132,
+     "p": 0.12,
      "xg90": 0.19
     },
     {
      "name": "Tajon Buchanan",
-     "p": 0.124,
+     "p": 0.113,
      "xg90": 0.18
+    },
+    {
+     "name": "Santi Comesaña",
+     "p": 0.104,
+     "xg90": 0.16
     }
    ],
    "away": [
     {
      "name": "Roberto Fernández",
-     "p": 0.23,
+     "p": 0.236,
      "xg90": 0.43
     },
     {
      "name": "Cala",
-     "p": 0.148,
+     "p": 0.152,
      "xg90": 0.26
     },
     {
      "name": "Javi Hernandez",
-     "p": 0.062,
+     "p": 0.064,
      "xg90": 0.1
     },
     {
      "name": "Edu Expósito",
-     "p": 0.058,
+     "p": 0.06,
      "xg90": 0.1
     },
     {
      "name": "Leandro Cabrera",
-     "p": 0.057,
+     "p": 0.058,
      "xg90": 0.09
     }
    ]
@@ -2454,7 +2611,8 @@
      "att": 0.12,
      "goals": 0,
      "minutes": 416,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Molestias en el aductor · Duda para la jornada 11"
     },
     {
      "name": "Pau Navarro",
@@ -2500,7 +2658,7 @@
      "goals": 3,
      "minutes": 796,
      "status": "sancionado",
-     "source": "sanción por roja (24/10)"
+     "source": "futbolfantasy: Roja directa (jornada 11)"
     },
     {
      "name": "Santi Comesaña",
@@ -2518,7 +2676,8 @@
      "att": 0.37,
      "goals": 3,
      "minutes": 526,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Operado del ojo · Baja hasta finales de octubre"
     },
     {
      "name": "Tajon Buchanan",
@@ -2545,7 +2704,8 @@
      "att": 0.11,
      "goals": 0,
      "minutes": 444,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
     },
     {
      "name": "Carlos Macià",
@@ -2853,7 +3013,8 @@
      "att": null,
      "goals": 0,
      "minutes": 9,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Molestias en el aductor · Baja confirmada para la jornada 11"
     },
     {
      "name": "Andoni Gorosabel",
@@ -2908,61 +3069,83 @@
     0.93
    ],
    "xg_adj": [
-    1.9,
-    0.96
+    1.71,
+    0.99
    ],
    "p_full": [
-    0.6239,
-    0.217,
-    0.1591
+    0.6243,
+    0.2168,
+    0.159
    ],
    "p_adj": [
-    0.5879,
-    0.2317,
-    0.1804
+    0.5376,
+    0.2513,
+    0.2111
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Villarreal",
+   "away": "Espanol",
+   "date": "2026-10-30",
+   "from_ts": "2026-10-25T17:56:46.744205+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "p_from": [
+    0.6896,
+    0.2051,
+    0.1053
+   ],
+   "p_to": [
+    0.6549,
+    0.2278,
+    0.1173
+   ],
+   "delta_pts": [
+    -3.5,
+    2.3,
+    1.2
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T13:00:00+00:00",
   "home": "Levante",
   "away": "Ath Madrid",
-  "p_home": 0.2089,
-  "p_draw": 0.2366,
-  "p_away": 0.5545,
+  "p_home": 0.2209,
+  "p_draw": 0.2384,
+  "p_away": 0.5407,
   "model": "stacker",
   "dc": {
-   "p_home": 0.2801,
-   "p_draw": 0.2488,
-   "p_away": 0.4711,
-   "xg_home": 1.2783,
-   "xg_away": 1.7155,
-   "p_over25": 0.5754,
-   "p_btts": 0.5976,
+   "p_home": 0.3068,
+   "p_draw": 0.2542,
+   "p_away": 0.439,
+   "xg_home": 1.3263,
+   "xg_away": 1.6257,
+   "p_over25": 0.566,
+   "p_btts": 0.596,
    "top_scores": [
     [
      "1-1",
-     0.11571399525209831
+     0.11861781138537209
     ],
     [
      "1-2",
-     0.094229794763512
+     0.09154840035030899
     ],
     [
      "0-1",
-     0.0800852361063072
+     0.07893045613184524
     ]
    ]
   },
   "xg_base": [
-   1.278,
-   1.715
+   1.268,
+   1.712
   ],
-  "elo_diff": -87.9,
+  "elo_diff": -95.3,
   "referee": null,
   "weather": {
    "temp_c": 23.5,
@@ -2971,14 +3154,14 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "ninguna",
+  "availability_source": "noticias",
   "deficit": [
    0.0,
-   0.0
+   0.086
   ],
   "deficit_defence": [
    0.0,
-   0.0
+   0.129
   ],
   "context": {
    "stake_diff_late": -0.004,
@@ -2996,7 +3179,26 @@
   },
   "absences": {
    "Levante": [],
-   "Ath Madrid": []
+   "Ath Madrid": [
+    {
+     "player": "Johnny Cardoso",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión muscular en el muslo · Baja hasta principios de noviembre"
+    },
+    {
+     "player": "Koke",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el bíceps femoral · Baja hasta principios de noviembre"
+    },
+    {
+     "player": "Cristian Romero",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Elongación en el aductor · Baja hasta finales de octubre"
+    }
+   ]
   },
   "lineups": null,
   "squads": {
@@ -3036,7 +3238,7 @@
       "pos": "M",
       "role": "M",
       "imp": 0.9,
-      "att": 0.52,
+      "att": 0.5,
       "absent": null,
       "usual": true
      },
@@ -3045,7 +3247,7 @@
       "pos": "M",
       "role": "M",
       "imp": 0.9,
-      "att": 0.38,
+      "att": 0.37,
       "absent": null,
       "usual": true
      },
@@ -3081,7 +3283,7 @@
       "pos": "M",
       "role": "M",
       "imp": 0.7,
-      "att": 0.24,
+      "att": 0.27,
       "absent": null,
       "usual": true
      },
@@ -3210,16 +3412,38 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Johnny Cardoso",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión muscular en el muslo · Baja hasta principios de noviembre",
+      "imp": 0.3
+     },
+     {
+      "name": "Koke",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el bíceps femoral · Baja hasta principios de noviembre",
+      "imp": 0.4
+     },
+     {
+      "name": "Cristian Romero",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Elongación en el aductor · Baja hasta finales de octubre",
+      "imp": 0.5
+     }
+    ]
    }
   },
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5754,
-   "p_over_model": 0.5754,
+   "p_over": 0.566,
+   "p_over_model": 0.566,
    "p_over_market": null,
-   "p_btts": 0.5976
+   "p_btts": 0.596
   },
   "odds_market": null,
   "espn_id": "401882820",
@@ -3227,54 +3451,54 @@
    "home": [
     {
      "name": "Roger Brugué",
-     "p": 0.308,
-     "xg90": 0.49
+     "p": 0.312,
+     "xg90": 0.47
     },
     {
      "name": "Iván Romero",
-     "p": 0.253,
-     "xg90": 0.4
+     "p": 0.259,
+     "xg90": 0.39
     },
     {
      "name": "Nacho Pérez",
-     "p": 0.153,
-     "xg90": 0.2
+     "p": 0.168,
+     "xg90": 0.21
     },
     {
      "name": "Thiago Fernandez",
-     "p": 0.123,
+     "p": 0.126,
      "xg90": 0.17
     },
     {
      "name": "Adrián de la Fuente",
-     "p": 0.108,
+     "p": 0.114,
      "xg90": 0.14
     }
    ],
    "away": [
     {
      "name": "Ademola Lookman",
-     "p": 0.266,
+     "p": 0.254,
      "xg90": 0.41
     },
     {
      "name": "Lee Kang-In",
-     "p": 0.165,
+     "p": 0.157,
      "xg90": 0.24
     },
     {
      "name": "Giuliano Simeone",
-     "p": 0.158,
+     "p": 0.15,
      "xg90": 0.21
     },
     {
      "name": "Álex Baena",
-     "p": 0.115,
+     "p": 0.109,
      "xg90": 0.16
     },
     {
      "name": "Marcos Llorente",
-     "p": 0.055,
+     "p": 0.052,
      "xg90": 0.07
     }
    ]
@@ -3296,7 +3520,7 @@
      "imp": 0.0,
      "att": 0.0,
      "goals": 0,
-     "minutes": 810,
+     "minutes": 900,
      "status": "disponible"
     },
     {
@@ -3323,7 +3547,7 @@
      "imp": 1.0,
      "att": 0.06,
      "goals": 0,
-     "minutes": 797,
+     "minutes": 887,
      "status": "disponible"
     },
     {
@@ -3341,7 +3565,7 @@
      "imp": 0.8,
      "att": 0.04,
      "goals": 0,
-     "minutes": 605,
+     "minutes": 695,
      "status": "disponible"
     },
     {
@@ -3349,8 +3573,8 @@
      "role": "D",
      "imp": 0.6,
      "att": 0.27,
-     "goals": 0,
-     "minutes": 388,
+     "goals": 1,
+     "minutes": 478,
      "status": "disponible"
     },
     {
@@ -3366,9 +3590,9 @@
      "name": "Ifeanyi Ndukwe",
      "role": "D",
      "imp": 0.4,
-     "att": 0.15,
+     "att": 0.12,
      "goals": 1,
-     "minutes": 308,
+     "minutes": 398,
      "status": "disponible"
     },
     {
@@ -3384,18 +3608,18 @@
      "name": "Jon Ander Olasagasti",
      "role": "M",
      "imp": 0.9,
-     "att": 0.47,
+     "att": 0.42,
      "goals": 1,
-     "minutes": 715,
+     "minutes": 805,
      "status": "disponible"
     },
     {
      "name": "Roger Brugué",
      "role": "M",
      "imp": 0.9,
-     "att": 0.59,
+     "att": 0.55,
      "goals": 5,
-     "minutes": 704,
+     "minutes": 752,
      "status": "disponible"
     },
     {
@@ -3411,9 +3635,9 @@
      "name": "Thiago Fernandez",
      "role": "M",
      "imp": 0.7,
-     "att": 0.24,
+     "att": 0.27,
      "goals": 0,
-     "minutes": 512,
+     "minutes": 594,
      "status": "disponible"
     },
     {
@@ -3429,18 +3653,18 @@
      "name": "Dani Requena",
      "role": "M",
      "imp": 0.4,
-     "att": 0.23,
+     "att": 0.19,
      "goals": 1,
-     "minutes": 308,
+     "minutes": 390,
      "status": "disponible"
     },
     {
      "name": "Víctor García",
      "role": "M",
      "imp": 0.3,
-     "att": 0.31,
+     "att": 0.34,
      "goals": 0,
-     "minutes": 294,
+     "minutes": 336,
      "status": "disponible"
     },
     {
@@ -3458,7 +3682,7 @@
      "imp": 0.1,
      "att": null,
      "goals": 0,
-     "minutes": 65,
+     "minutes": 73,
      "status": "disponible"
     },
     {
@@ -3476,7 +3700,16 @@
      "imp": 0.0,
      "att": null,
      "goals": 1,
-     "minutes": 68,
+     "minutes": 94,
+     "status": "disponible"
+    },
+    {
+     "name": "Axel Tape",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": 0,
+     "minutes": 26,
      "status": "disponible"
     },
     {
@@ -3525,21 +3758,12 @@
      "status": "disponible"
     },
     {
-     "name": "Axel Tape",
-     "role": "M",
-     "imp": 0.0,
-     "att": null,
-     "goals": null,
-     "minutes": null,
-     "status": "disponible"
-    },
-    {
      "name": "Iván Romero",
      "role": "F",
      "imp": 0.9,
-     "att": 0.57,
+     "att": 0.55,
      "goals": 3,
-     "minutes": 644,
+     "minutes": 708,
      "status": "disponible"
     },
     {
@@ -3548,7 +3772,7 @@
      "imp": 0.3,
      "att": null,
      "goals": 0,
-     "minutes": 197,
+     "minutes": 261,
      "status": "disponible"
     },
     {
@@ -3557,7 +3781,7 @@
      "imp": 0.1,
      "att": null,
      "goals": 0,
-     "minutes": 108,
+     "minutes": 116,
      "status": "disponible"
     }
    ],
@@ -3632,7 +3856,8 @@
      "att": 0.2,
      "goals": 1,
      "minutes": 432,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Elongación en el aductor · Baja hasta finales de octubre"
     },
     {
      "name": "Robin Le Normand",
@@ -3731,7 +3956,8 @@
      "att": 0.19,
      "goals": 0,
      "minutes": 443,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el bíceps femoral · Baja hasta principios de noviembre"
     },
     {
      "name": "Johnny Cardoso",
@@ -3740,7 +3966,8 @@
      "att": 0.18,
      "goals": 0,
      "minutes": 307,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión muscular en el muslo · Baja hasta principios de noviembre"
     },
     {
      "name": "Rodrigo Mendoza",
@@ -3845,62 +4072,84 @@
   },
   "absence_impact": {
    "xg_full": [
-    1.28,
-    1.72
+    1.27,
+    1.71
    ],
    "xg_adj": [
-    1.28,
-    1.72
+    1.33,
+    1.63
    ],
    "p_full": [
-    0.2801,
-    0.2488,
-    0.4711
+    0.2782,
+    0.2492,
+    0.4726
    ],
    "p_adj": [
-    0.2801,
-    0.2488,
-    0.4711
+    0.3068,
+    0.2542,
+    0.439
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Levante",
+   "away": "Ath Madrid",
+   "date": "2026-10-31",
+   "from_ts": "2026-10-25T17:17:56.439065+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "p_from": [
+    0.2089,
+    0.2366,
+    0.5545
+   ],
+   "p_to": [
+    0.2209,
+    0.2384,
+    0.5407
+   ],
+   "delta_pts": [
+    1.2,
+    0.2,
+    -1.4
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T15:15:00+00:00",
   "home": "Vallecano",
   "away": "Celta",
-  "p_home": 0.4249,
-  "p_draw": 0.3109,
-  "p_away": 0.2642,
+  "p_home": 0.4381,
+  "p_draw": 0.3074,
+  "p_away": 0.2545,
   "model": "stacker",
   "dc": {
-   "p_home": 0.3381,
-   "p_draw": 0.3016,
-   "p_away": 0.3603,
-   "xg_home": 1.1023,
-   "xg_away": 1.1468,
-   "p_over25": 0.3904,
-   "p_btts": 0.4628,
+   "p_home": 0.3568,
+   "p_draw": 0.3026,
+   "p_away": 0.3406,
+   "xg_home": 1.1348,
+   "xg_away": 1.1023,
+   "p_over25": 0.3872,
+   "p_btts": 0.4603,
    "top_scores": [
     [
      "1-1",
-     0.14046372432716092
+     0.1406572467317975
     ],
     [
-     "0-1",
-     0.11387300625310597
+     "1-0",
+     0.11406444586333568
     ],
     [
      "0-0",
-     0.112601076398443
+     0.1138784522495394
     ]
    ]
   },
   "xg_base": [
-   1.183,
+   1.184,
    1.109
   ],
   "elo_diff": 33.1,
@@ -3914,12 +4163,12 @@
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
-   0.118,
-   0.0
+   0.156,
+   0.133
   ],
   "deficit_defence": [
-   0.096,
-   0.0
+   0.211,
+   0.146
   ],
   "context": {
    "stake_diff_late": -0.004,
@@ -3938,19 +4187,68 @@
   "absences": {
    "Vallecano": [
     {
-     "player": "Randy Nteka",
+     "player": "Luiz Felipe",
      "status": "out",
-     "reason": "news",
-     "source": "El Rayo repite la convocatoria ante el Elche con las bajas de Nteka y Ratiu - Unión Rayo"
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta agosto"
+    },
+    {
+     "player": "Augusto Batalla",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Fractura de tibia · Baja hasta enero"
+    },
+    {
+     "player": "Andrei Ratiu",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
+    },
+    {
+     "player": "Randy Nteka",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias lumbares · Duda para la jornada 11"
     },
     {
      "player": "Pathé Ciss",
      "status": "out",
      "reason": "suspension",
-     "source": "sanción por 5ª amarilla (24/10)"
+     "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)"
     }
    ],
-   "Celta": []
+   "Celta": [
+    {
+     "player": "Carl Starfelt",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el semimembranoso · Baja hasta mediados de noviembre"
+    },
+    {
+     "player": "Borja Iglesias",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre"
+    },
+    {
+     "player": "Miguel Román",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja hasta principios de noviembre"
+    },
+    {
+     "player": "Álvaro Núñez",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediados de noviembre"
+    },
+    {
+     "player": "Jones El-Abdellaoui",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja confirmada para la jornada 11"
+    }
+   ]
   },
   "lineups": null,
   "squads": {
@@ -4028,7 +4326,7 @@
       "role": "D",
       "imp": 0.67,
       "att": 0.27,
-      "absent": null,
+      "absent": "doubtful",
       "usual": true
      },
      {
@@ -4061,17 +4359,38 @@
     ],
     "out": [
      {
-      "name": "Randy Nteka",
+      "name": "Luiz Felipe",
       "status": "out",
-      "reason": "news",
-      "source": "El Rayo repite la convocatoria ante el Elche con las bajas de Nteka y Ratiu - Unión Rayo",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta agosto",
+      "imp": 0
+     },
+     {
+      "name": "Augusto Batalla",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Fractura de tibia · Baja hasta enero",
+      "imp": 0.22
+     },
+     {
+      "name": "Andrei Ratiu",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11",
+      "imp": 0.67
+     },
+     {
+      "name": "Randy Nteka",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias lumbares · Duda para la jornada 11",
       "imp": 0.11
      },
      {
       "name": "Pathé Ciss",
       "status": "out",
       "reason": "suspension",
-      "source": "sanción por 5ª amarilla (24/10)",
+      "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)",
       "imp": 1.0
      }
     ]
@@ -4135,13 +4454,14 @@
       "usual": true
      },
      {
-      "name": "Miguel Román",
-      "pos": "CM-L",
+      "name": "Aleix Febas",
+      "pos": "SUB",
       "role": "M",
-      "imp": 0.6,
-      "att": 0.19,
+      "imp": 0.4,
+      "att": 0.01,
       "absent": null,
-      "usual": true
+      "usual": false,
+      "replaces": "Miguel Román"
      },
      {
       "name": "Hugo Álvarez",
@@ -4180,16 +4500,52 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Carl Starfelt",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el semimembranoso · Baja hasta mediados de noviembre",
+      "imp": 0.2
+     },
+     {
+      "name": "Borja Iglesias",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre",
+      "imp": 0.0
+     },
+     {
+      "name": "Miguel Román",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja hasta principios de noviembre",
+      "imp": 0.6
+     },
+     {
+      "name": "Álvaro Núñez",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediados de noviembre",
+      "imp": 0.4
+     },
+     {
+      "name": "Jones El-Abdellaoui",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja confirmada para la jornada 11",
+      "imp": 0.2
+     }
+    ]
    }
   },
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.3904,
-   "p_over_model": 0.3904,
+   "p_over": 0.3872,
+   "p_over_model": 0.3872,
    "p_over_market": null,
-   "p_btts": 0.4628
+   "p_btts": 0.4603
   },
   "odds_market": null,
   "espn_id": "401882818",
@@ -4197,44 +4553,44 @@
    "home": [
     {
      "name": "Sergio Camello",
-     "p": 0.241,
+     "p": 0.248,
      "xg90": 0.47
     },
     {
      "name": "Álvaro García",
-     "p": 0.175,
+     "p": 0.18,
      "xg90": 0.32
     },
     {
      "name": "Jorge de Frutos",
-     "p": 0.175,
+     "p": 0.179,
      "xg90": 0.32
     },
     {
      "name": "Pedro Díaz",
-     "p": 0.062,
+     "p": 0.063,
      "xg90": 0.1
     },
     {
      "name": "Andrei Ratiu",
-     "p": 0.054,
+     "p": 0.056,
      "xg90": 0.08
     }
    ],
    "away": [
     {
      "name": "Hugo Gonzalez",
-     "p": 0.276,
+     "p": 0.275,
      "xg90": 0.43
     },
     {
      "name": "Williot Swedberg",
-     "p": 0.216,
+     "p": 0.215,
      "xg90": 0.33
     },
     {
      "name": "Ferran Jutglà",
-     "p": 0.177,
+     "p": 0.176,
      "xg90": 0.26
     },
     {
@@ -4244,7 +4600,7 @@
     },
     {
      "name": "Javi Rueda",
-     "p": 0.057,
+     "p": 0.056,
      "xg90": 0.07
     }
    ]
@@ -4276,7 +4632,8 @@
      "att": null,
      "goals": 0,
      "minutes": 153,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Fractura de tibia · Baja hasta enero"
     },
     {
      "name": "Florian Lejeune",
@@ -4303,7 +4660,8 @@
      "att": 0.23,
      "goals": 1,
      "minutes": 540,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
     },
     {
      "name": "Mujaid Sadick",
@@ -4349,7 +4707,7 @@
      "goals": 0,
      "minutes": 810,
      "status": "sancionado",
-     "source": "sanción por 5ª amarilla (24/10)"
+     "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)"
     },
     {
      "name": "Unai López",
@@ -4529,8 +4887,8 @@
      "att": null,
      "goals": 0,
      "minutes": 155,
-     "status": "baja",
-     "source": "El Rayo repite la convocatoria ante el Elche con las bajas de Nteka y Ratiu - Unión Rayo"
+     "status": "duda",
+     "source": "futbolfantasy: Molestias lumbares · Duda para la jornada 11"
     }
    ],
    "away": [
@@ -4613,7 +4971,8 @@
      "att": 0.02,
      "goals": 0,
      "minutes": 356,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediados de noviembre"
     },
     {
      "name": "Sebastián Cáceres",
@@ -4631,7 +4990,8 @@
      "att": null,
      "goals": 1,
      "minutes": 216,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el semimembranoso · Baja hasta mediados de noviembre"
     },
     {
      "name": "Abdoulaye Faye",
@@ -4658,7 +5018,8 @@
      "att": 0.13,
      "goals": 1,
      "minutes": 580,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja hasta principios de noviembre"
     },
     {
      "name": "Hugo Álvarez",
@@ -4694,7 +5055,8 @@
      "att": null,
      "goals": 0,
      "minutes": 160,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja confirmada para la jornada 11"
     },
     {
      "name": "Hugo Burcio",
@@ -4712,7 +5074,8 @@
      "att": null,
      "goals": 0,
      "minutes": 68,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre"
     },
     {
      "name": "Altay Bayindir",
@@ -4812,58 +5175,80 @@
     1.11
    ],
    "xg_adj": [
-    1.1,
-    1.15
+    1.13,
+    1.1
    ],
    "p_full": [
-    0.3692,
-    0.2982,
-    0.3326
+    0.3695,
+    0.2981,
+    0.3324
    ],
    "p_adj": [
-    0.3381,
-    0.3016,
-    0.3603
+    0.3568,
+    0.3026,
+    0.3406
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Vallecano",
+   "away": "Celta",
+   "date": "2026-10-31",
+   "from_ts": "2026-10-25T17:56:46.744205+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "p_from": [
+    0.4244,
+    0.3109,
+    0.2648
+   ],
+   "p_to": [
+    0.4381,
+    0.3074,
+    0.2545
+   ],
+   "delta_pts": [
+    1.4,
+    -0.4,
+    -1.0
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T17:30:00+00:00",
   "home": "Betis",
   "away": "Malaga",
-  "p_home": 0.7349,
-  "p_draw": 0.1615,
-  "p_away": 0.1035,
+  "p_home": 0.7376,
+  "p_draw": 0.1665,
+  "p_away": 0.0959,
   "model": "stacker",
   "dc": {
-   "p_home": 0.7339,
-   "p_draw": 0.1736,
-   "p_away": 0.0925,
-   "xg_home": 2.3491,
-   "xg_away": 0.7205,
-   "p_over25": 0.5922,
-   "p_btts": 0.4687,
+   "p_home": 0.7288,
+   "p_draw": 0.1851,
+   "p_away": 0.0861,
+   "xg_home": 2.1625,
+   "xg_away": 0.6075,
+   "p_over25": 0.5234,
+   "p_btts": 0.4073,
    "top_scores": [
     [
      "2-0",
-     0.12813551915874782
+     0.1465196201525088
     ],
     [
      "1-0",
-     0.10490584142550471
+     0.13113317969293936
     ],
     [
      "3-0",
-     0.10033304269586822
+     0.10561553312948803
     ]
    ]
   },
   "xg_base": [
-   2.363,
+   2.366,
    0.707
   ],
   "elo_diff": 210.6,
@@ -4877,12 +5262,12 @@
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
-   0.01,
-   0.0
+   0.199,
+   0.307
   ],
   "deficit_defence": [
-   0.056,
-   0.0
+   0.094,
+   0.085
   ],
   "context": {
    "stake_diff_late": -0.019,
@@ -4901,13 +5286,62 @@
   "absences": {
    "Betis": [
     {
+     "player": "Cucho Hernández",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre"
+    },
+    {
+     "player": "Junior Firpo",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta finales de octubre"
+    },
+    {
      "player": "Facundo Bernal",
      "status": "out",
      "reason": "suspension",
-     "source": "sancionado (le quedan 3 partidos): Bernal, del Betis, es sancionado con cuatro partidos por su expulsión ante el Barcelona - "
+     "source": "futbolfantasy: Sanción disciplinaria (3/4) (jornada 11)"
     }
    ],
-   "Malaga": []
+   "Malaga": [
+    {
+     "player": "Joaquín Muñoz",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el sóleo · Baja confirmada para la jornada 11"
+    },
+    {
+     "player": "Julen Lobete",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril"
+    },
+    {
+     "player": "Aarón Ochoa",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de menisco · Baja hasta enero"
+    },
+    {
+     "player": "Diego Murillo",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión de rodilla · Duda para la jornada 11"
+    },
+    {
+     "player": "Pablo Martínez",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Fascitis plantar · Duda para la jornada 11"
+    },
+    {
+     "player": "Juan Cruz",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias en el bíceps femoral · Duda para la jornada 11"
+    }
+   ]
   },
   "lineups": null,
   "squads": {
@@ -4961,13 +5395,14 @@
       "usual": true
      },
      {
-      "name": "Cucho Hernández",
-      "pos": "F",
+      "name": "Nelson Deossa",
+      "pos": "SUB",
       "role": "F",
-      "imp": 0.7,
-      "att": 0.5,
+      "imp": 0.4,
+      "att": 0.23,
       "absent": null,
-      "usual": true
+      "usual": false,
+      "replaces": "Cucho Hernández"
      },
      {
       "name": "Antony",
@@ -5018,10 +5453,24 @@
     ],
     "out": [
      {
+      "name": "Cucho Hernández",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre",
+      "imp": 0.7
+     },
+     {
+      "name": "Junior Firpo",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el aductor · Baja hasta finales de octubre",
+      "imp": 0.2
+     },
+     {
       "name": "Facundo Bernal",
       "status": "out",
       "reason": "suspension",
-      "source": "sancionado (le quedan 3 partidos): Bernal, del Betis, es sancionado con cuatro partidos por su expulsión ante el Barcelona - ",
+      "source": "futbolfantasy: Sanción disciplinaria (3/4) (jornada 11)",
       "imp": 0.6
      }
     ]
@@ -5112,13 +5561,14 @@
       "usual": true
      },
      {
-      "name": "Joaquín Muñoz",
-      "pos": "SUB",
+      "name": "Pablo Martínez",
+      "pos": "LM",
       "role": "M",
-      "imp": 0.6,
-      "att": 0.14,
-      "absent": null,
-      "usual": true
+      "imp": 0.5,
+      "att": 0.33,
+      "absent": "doubtful",
+      "usual": false,
+      "replaces": "Joaquín Muñoz"
      },
      {
       "name": "Carlos Puga",
@@ -5130,16 +5580,59 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Joaquín Muñoz",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el sóleo · Baja confirmada para la jornada 11",
+      "imp": 0.6
+     },
+     {
+      "name": "Julen Lobete",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril",
+      "imp": 0.0
+     },
+     {
+      "name": "Aarón Ochoa",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de menisco · Baja hasta enero",
+      "imp": 0
+     },
+     {
+      "name": "Diego Murillo",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión de rodilla · Duda para la jornada 11",
+      "imp": 0
+     },
+     {
+      "name": "Pablo Martínez",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Fascitis plantar · Duda para la jornada 11",
+      "imp": 0.5
+     },
+     {
+      "name": "Juan Cruz",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias en el bíceps femoral · Duda para la jornada 11",
+      "imp": 0.3
+     }
+    ]
    }
   },
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5922,
-   "p_over_model": 0.5922,
+   "p_over": 0.5234,
+   "p_over_model": 0.5234,
    "p_over_market": null,
-   "p_btts": 0.4687
+   "p_btts": 0.4073
   },
   "odds_market": null,
   "espn_id": "401882825",
@@ -5147,54 +5640,54 @@
    "home": [
     {
      "name": "Isco",
-     "p": 0.474,
+     "p": 0.447,
      "xg90": 0.56
     },
     {
      "name": "Antony",
-     "p": 0.327,
+     "p": 0.305,
      "xg90": 0.36
     },
     {
      "name": "Rodrigo Riquelme",
-     "p": 0.269,
+     "p": 0.251,
      "xg90": 0.27
     },
     {
      "name": "Pablo Fornals",
-     "p": 0.141,
+     "p": 0.131,
      "xg90": 0.13
     },
     {
-     "name": "Héctor Bellerín",
-     "p": 0.077,
-     "xg90": 0.06
+     "name": "Nelson Deossa",
+     "p": 0.128,
+     "xg90": 0.13
     }
    ],
    "away": [
     {
+     "name": "Pablo Martínez",
+     "p": 0.057,
+     "xg90": 0.1
+    },
+    {
      "name": "David Larrubia",
-     "p": 0.058,
+     "p": 0.049,
      "xg90": 0.09
     },
     {
      "name": "Daniel Lorenzo",
-     "p": 0.054,
+     "p": 0.046,
      "xg90": 0.08
     },
     {
      "name": "Carlos Dotor",
-     "p": 0.047,
+     "p": 0.04,
      "xg90": 0.07
     },
     {
-     "name": "Joaquín Muñoz",
-     "p": 0.038,
-     "xg90": 0.06
-    },
-    {
      "name": "Ángel Recio",
-     "p": 0.016,
+     "p": 0.014,
      "xg90": 0.02
     }
    ]
@@ -5280,7 +5773,8 @@
      "att": null,
      "goals": 0,
      "minutes": 153,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta finales de octubre"
     },
     {
      "name": "Aitor Ruibal",
@@ -5317,7 +5811,7 @@
      "goals": 0,
      "minutes": 480,
      "status": "sancionado",
-     "source": "sancionado (le quedan 3 partidos): Bernal, del Betis, es sancionado con cuatro partidos por su expulsión ante el Barcelona - "
+     "source": "futbolfantasy: Sanción disciplinaria (3/4) (jornada 11)"
     },
     {
      "name": "Isco",
@@ -5434,7 +5928,8 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre"
     },
     {
      "name": "Nelson Deossa",
@@ -5616,7 +6111,8 @@
      "att": 0.14,
      "goals": 0,
      "minutes": 479,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el sóleo · Baja confirmada para la jornada 11"
     },
     {
      "name": "Pablo Martínez",
@@ -5625,7 +6121,8 @@
      "att": 0.33,
      "goals": 1,
      "minutes": 475,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Fascitis plantar · Duda para la jornada 11"
     },
     {
      "name": "Rafa Rodríguez",
@@ -5670,7 +6167,8 @@
      "att": null,
      "goals": 0,
      "minutes": 4,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril"
     },
     {
      "name": "Jens Cajuste",
@@ -5724,7 +6222,8 @@
      "att": null,
      "goals": 0,
      "minutes": 244,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Molestias en el bíceps femoral · Duda para la jornada 11"
     },
     {
      "name": "Adrián Niño",
@@ -5766,62 +6265,84 @@
   },
   "absence_impact": {
    "xg_full": [
-    2.36,
+    2.37,
     0.71
    ],
    "xg_adj": [
-    2.35,
-    0.72
+    2.16,
+    0.61
    ],
    "p_full": [
-    0.7395,
-    0.1713,
-    0.0892
+    0.7398,
+    0.171,
+    0.0891
    ],
    "p_adj": [
-    0.7339,
-    0.1736,
-    0.0925
+    0.7288,
+    0.1851,
+    0.0861
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Betis",
+   "away": "Malaga",
+   "date": "2026-10-31",
+   "from_ts": "2026-10-25T17:56:46.744205+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "p_from": [
+    0.7356,
+    0.1612,
+    0.1031
+   ],
+   "p_to": [
+    0.7376,
+    0.1665,
+    0.0959
+   ],
+   "delta_pts": [
+    0.2,
+    0.5,
+    -0.7
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Alaves",
-  "p_home": 0.8843,
-  "p_draw": 0.0866,
-  "p_away": 0.0292,
+  "p_home": 0.8659,
+  "p_draw": 0.1002,
+  "p_away": 0.0339,
   "model": "stacker",
   "dc": {
-   "p_home": 0.8211,
-   "p_draw": 0.1177,
-   "p_away": 0.0612,
-   "xg_home": 3.0797,
-   "xg_away": 0.7899,
-   "p_over25": 0.7421,
-   "p_btts": 0.5237,
+   "p_home": 0.7909,
+   "p_draw": 0.1339,
+   "p_away": 0.0752,
+   "xg_home": 2.8967,
+   "xg_away": 0.832,
+   "p_over25": 0.7193,
+   "p_btts": 0.5367,
    "top_scores": [
     [
-     "3-0",
-     0.10162200067744868
-    ],
-    [
      "2-0",
-     0.09899288494350679
+     0.1008093310462099
     ],
     [
-     "3-1",
-     0.08027083275828896
+     "3-0",
+     0.09733879018463386
+    ],
+    [
+     "2-1",
+     0.08387674635067638
     ]
    ]
   },
   "xg_base": [
-   3.08,
+   3.082,
    0.79
   ],
   "elo_diff": 360.1,
@@ -5833,14 +6354,14 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "ninguna",
+  "availability_source": "noticias",
   "deficit": [
-   0.0,
-   0.0
+   0.111,
+   0.029
   ],
   "deficit_defence": [
-   0.0,
-   0.0
+   0.198,
+   0.013
   ],
   "context": {
    "stake_diff_late": -0.008,
@@ -5857,8 +6378,52 @@
    "post_break": 0.0
   },
   "absences": {
-   "Barcelona": [],
-   "Alaves": []
+   "Barcelona": [
+    {
+     "player": "Andreas Christensen",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura en el recto anterior · Baja hasta principios de noviembre"
+    },
+    {
+     "player": "Roony Bardghji",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta marzo"
+    },
+    {
+     "player": "Dani Olmo",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediadios de noviembre"
+    },
+    {
+     "player": "Jules Koundé",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Esguince de tobillo · Baja hasta finales de octubre"
+    },
+    {
+     "player": "Eric García",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias en el cuádriceps · Baja hasta principios de noviembre"
+    }
+   ],
+   "Alaves": [
+    {
+     "player": "Facundo Garcés",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril"
+    },
+    {
+     "player": "Mikel Rodriguez",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril"
+    }
+   ]
   },
   "lineups": null,
   "squads": {
@@ -5870,14 +6435,14 @@
       "name": "Joan García",
       "pos": "G",
       "role": "G",
-      "imp": 0.89,
+      "imp": 0.9,
       "att": 0.01,
       "absent": null,
       "usual": true
      },
      {
       "name": "Lamine Yamal",
-      "pos": "AM-R",
+      "pos": "RF",
       "role": "M",
       "imp": 1.0,
       "att": 1.16,
@@ -5886,37 +6451,10 @@
      },
      {
       "name": "Raphinha",
-      "pos": "SUB",
+      "pos": "F",
       "role": "F",
-      "imp": 0.78,
+      "imp": 0.8,
       "att": 1.3,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Pedri",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.78,
-      "att": 0.34,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Eric García",
-      "pos": "SUB",
-      "role": "D",
-      "imp": 0.78,
-      "att": 0.19,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Xavi Espart",
-      "pos": "LB",
-      "role": "D",
-      "imp": 0.78,
-      "att": 0.27,
       "absent": null,
       "usual": true
      },
@@ -5924,17 +6462,63 @@
       "name": "Gerard Martín",
       "pos": "CD-L",
       "role": "D",
-      "imp": 0.78,
+      "imp": 0.8,
       "att": 0.05,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Fermín López",
-      "pos": "AM",
+      "name": "Xavi Espart",
+      "pos": "RB",
+      "role": "D",
+      "imp": 0.8,
+      "att": 0.27,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Pedri",
+      "pos": "RM",
       "role": "M",
-      "imp": 0.67,
+      "imp": 0.8,
+      "att": 0.34,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Rodri",
+      "pos": "CM",
+      "role": "M",
+      "imp": 0.7,
+      "att": 0.51,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Fermín López",
+      "pos": "LM",
+      "role": "M",
+      "imp": 0.7,
       "att": 0.8,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "João Cancelo",
+      "pos": "LB",
+      "role": "D",
+      "imp": 0.3,
+      "att": 0.4,
+      "absent": null,
+      "usual": false,
+      "replaces": "Eric García"
+     },
+     {
+      "name": "Anthony Gordon",
+      "pos": "LF",
+      "role": "M",
+      "imp": 0.7,
+      "att": 0.87,
       "absent": null,
       "usual": true
      },
@@ -5942,31 +6526,49 @@
       "name": "Pau Cubarsí",
       "pos": "CD-R",
       "role": "D",
-      "imp": 0.67,
+      "imp": 0.7,
       "att": 0.06,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Anthony Gordon",
-      "pos": "SUB",
-      "role": "F",
-      "imp": 0.67,
-      "att": 0.87,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Rodri",
-      "pos": "RM",
-      "role": "M",
-      "imp": 0.67,
-      "att": 0.51,
       "absent": null,
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Andreas Christensen",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura en el recto anterior · Baja hasta principios de noviembre",
+      "imp": 0.4
+     },
+     {
+      "name": "Roony Bardghji",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta marzo",
+      "imp": 0
+     },
+     {
+      "name": "Dani Olmo",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediadios de noviembre",
+      "imp": 0.3
+     },
+     {
+      "name": "Jules Koundé",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Esguince de tobillo · Baja hasta finales de octubre",
+      "imp": 0.3
+     },
+     {
+      "name": "Eric García",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias en el cuádriceps · Baja hasta principios de noviembre",
+      "imp": 0.7
+     }
+    ]
    },
    "away": {
     "confirmed": false,
@@ -6072,16 +6674,31 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Facundo Garcés",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril",
+      "imp": 0
+     },
+     {
+      "name": "Mikel Rodriguez",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril",
+      "imp": 0.2
+     }
+    ]
    }
   },
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.7421,
-   "p_over_model": 0.7421,
+   "p_over": 0.7193,
+   "p_over_model": 0.7193,
    "p_over_market": null,
-   "p_btts": 0.5237
+   "p_btts": 0.5367
   },
   "odds_market": null,
   "espn_id": "401882822",
@@ -6089,54 +6706,54 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.546,
+     "p": 0.524,
      "xg90": 1.02
     },
     {
      "name": "Lamine Yamal",
-     "p": 0.411,
+     "p": 0.393,
      "xg90": 0.66
     },
     {
      "name": "Anthony Gordon",
-     "p": 0.349,
+     "p": 0.343,
      "xg90": 0.55
     },
     {
      "name": "Fermín López",
-     "p": 0.29,
+     "p": 0.275,
      "xg90": 0.42
     },
     {
      "name": "Rodri",
-     "p": 0.157,
+     "p": 0.148,
      "xg90": 0.21
     }
    ],
    "away": [
     {
      "name": "Lucas Boyé",
-     "p": 0.186,
+     "p": 0.195,
      "xg90": 0.46
     },
     {
      "name": "Toni Martínez",
-     "p": 0.174,
+     "p": 0.183,
      "xg90": 0.42
     },
     {
      "name": "Pablo Ibáñez",
-     "p": 0.066,
+     "p": 0.07,
      "xg90": 0.15
     },
     {
      "name": "Ángel Pérez",
-     "p": 0.064,
+     "p": 0.067,
      "xg90": 0.13
     },
     {
      "name": "Ville Koski",
-     "p": 0.048,
+     "p": 0.051,
      "xg90": 0.1
     }
    ]
@@ -6146,7 +6763,7 @@
     {
      "name": "Joan García",
      "role": "G",
-     "imp": 0.89,
+     "imp": 0.9,
      "att": 0.0,
      "goals": 0,
      "minutes": 681,
@@ -6155,7 +6772,7 @@
     {
      "name": "Dominik Livakovic",
      "role": "G",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 90,
@@ -6164,34 +6781,35 @@
     {
      "name": "Xavi Espart",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 0.27,
      "goals": 1,
      "minutes": 626,
      "status": "disponible"
     },
     {
-     "name": "Eric García",
-     "role": "D",
-     "imp": 0.78,
-     "att": 0.25,
-     "goals": 1,
-     "minutes": 599,
-     "status": "disponible"
-    },
-    {
      "name": "Gerard Martín",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 0.07,
      "goals": 0,
      "minutes": 582,
      "status": "disponible"
     },
     {
+     "name": "Eric García",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.25,
+     "goals": 1,
+     "minutes": 599,
+     "status": "baja",
+     "source": "futbolfantasy: Molestias en el cuádriceps · Baja hasta principios de noviembre"
+    },
+    {
      "name": "Pau Cubarsí",
      "role": "D",
-     "imp": 0.67,
+     "imp": 0.7,
      "att": 0.2,
      "goals": 0,
      "minutes": 519,
@@ -6200,25 +6818,27 @@
     {
      "name": "Andreas Christensen",
      "role": "D",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.22,
      "goals": 0,
      "minutes": 392,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Rotura en el recto anterior · Baja hasta principios de noviembre"
     },
     {
      "name": "Jules Koundé",
      "role": "D",
-     "imp": 0.33,
+     "imp": 0.3,
      "att": 0.23,
      "goals": 1,
      "minutes": 343,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Esguince de tobillo · Baja hasta finales de octubre"
     },
     {
      "name": "João Cancelo",
      "role": "D",
-     "imp": 0.22,
+     "imp": 0.3,
      "att": null,
      "goals": 1,
      "minutes": 192,
@@ -6245,7 +6865,7 @@
     {
      "name": "Pedri",
      "role": "M",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 0.29,
      "goals": 1,
      "minutes": 647,
@@ -6254,7 +6874,7 @@
     {
      "name": "Fermín López",
      "role": "M",
-     "imp": 0.67,
+     "imp": 0.7,
      "att": 0.91,
      "goals": 4,
      "minutes": 548,
@@ -6263,34 +6883,35 @@
     {
      "name": "Rodri",
      "role": "M",
-     "imp": 0.67,
+     "imp": 0.7,
      "att": 0.51,
      "goals": 1,
      "minutes": 525,
      "status": "disponible"
     },
     {
-     "name": "Dani Olmo",
+     "name": "Anthony Gordon",
      "role": "M",
-     "imp": 0.33,
-     "att": 1.29,
+     "imp": 0.7,
+     "att": 0.87,
      "goals": 1,
-     "minutes": 323,
+     "minutes": 513,
      "status": "disponible"
     },
     {
-     "name": "Karim Adeyemi",
+     "name": "Dani Olmo",
      "role": "M",
-     "imp": 0.33,
-     "att": 1.71,
-     "goals": 2,
-     "minutes": 306,
-     "status": "disponible"
+     "imp": 0.3,
+     "att": 1.29,
+     "goals": 1,
+     "minutes": 323,
+     "status": "baja",
+     "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediadios de noviembre"
     },
     {
      "name": "Marc Bernal",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.3,
      "att": 0.53,
      "goals": 0,
      "minutes": 299,
@@ -6299,7 +6920,7 @@
     {
      "name": "Gavi",
      "role": "M",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 137,
@@ -6369,7 +6990,25 @@
      "status": "disponible"
     },
     {
+     "name": "Orian Goren",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Jordi Pesquer",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Álex Campos",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -6380,25 +7019,25 @@
     {
      "name": "Raphinha",
      "role": "F",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 1.83,
      "goals": 12,
      "minutes": 590,
      "status": "disponible"
     },
     {
-     "name": "Anthony Gordon",
+     "name": "Karim Adeyemi",
      "role": "F",
-     "imp": 0.67,
-     "att": 0.87,
-     "goals": 1,
-     "minutes": 513,
+     "imp": 0.3,
+     "att": 1.71,
+     "goals": 2,
+     "minutes": 306,
      "status": "disponible"
     },
     {
      "name": "Gabriel Jesus",
      "role": "F",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 3,
      "minutes": 191,
@@ -6539,7 +7178,8 @@
      "att": null,
      "goals": 1,
      "minutes": 150,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril"
     },
     {
      "name": "Ander Guevara",
@@ -6602,7 +7242,8 @@
      "att": null,
      "goals": 0,
      "minutes": 5,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril"
     },
     {
      "name": "Selu Diallo",
@@ -6684,58 +7325,80 @@
     0.79
    ],
    "xg_adj": [
-    3.08,
-    0.79
+    2.9,
+    0.83
    ],
    "p_full": [
-    0.8211,
-    0.1177,
-    0.0612
+    0.8213,
+    0.1176,
+    0.0611
    ],
    "p_adj": [
-    0.8211,
-    0.1177,
-    0.0612
+    0.7909,
+    0.1339,
+    0.0752
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Barcelona",
+   "away": "Alaves",
+   "date": "2026-10-31",
+   "from_ts": "2026-10-25T18:01:26.218166+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "p_from": [
+    0.8843,
+    0.0866,
+    0.0292
+   ],
+   "p_to": [
+    0.8659,
+    0.1002,
+    0.0339
+   ],
+   "delta_pts": [
+    -1.8,
+    1.4,
+    0.5
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T13:00:00+00:00",
   "home": "Getafe",
   "away": "Sevilla",
-  "p_home": 0.3495,
-  "p_draw": 0.3271,
-  "p_away": 0.3234,
+  "p_home": 0.3652,
+  "p_draw": 0.3261,
+  "p_away": 0.3088,
   "model": "stacker",
   "dc": {
-   "p_home": 0.3298,
-   "p_draw": 0.3286,
-   "p_away": 0.3416,
-   "xg_home": 0.959,
-   "xg_away": 0.9812,
-   "p_over25": 0.3071,
-   "p_btts": 0.3927,
+   "p_home": 0.3517,
+   "p_draw": 0.3329,
+   "p_away": 0.3154,
+   "xg_home": 0.981,
+   "xg_away": 0.9131,
+   "p_over25": 0.2947,
+   "p_btts": 0.3814,
    "top_scores": [
     [
      "0-0",
-     0.1508760041220574
+     0.15761507673871702
     ],
     [
      "1-1",
-     0.1423989390933073
+     0.14193544710485279
     ],
     [
-     "0-1",
-     0.13376290625900886
+     "1-0",
+     0.14042301323182732
     ]
    ]
   },
   "xg_base": [
-   1.051,
+   1.052,
    0.927
   ],
   "elo_diff": 40.0,
@@ -6749,12 +7412,12 @@
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
-   0.153,
-   0.0
+   0.177,
+   0.161
   ],
   "deficit_defence": [
-   0.163,
-   0.0
+   0.234,
+   0.104
   ],
   "context": {
    "stake_diff_late": 0.012,
@@ -6773,19 +7436,62 @@
   "absences": {
    "Getafe": [
     {
-     "player": "Johan Mojica",
+     "player": "Juanmi Jiménez",
      "status": "out",
-     "reason": "suspension",
-     "source": "sanción por 5ª amarilla (25/10)"
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión de rodilla · Baja hasta noviembre"
+    },
+    {
+     "player": "Christantus Uche",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de ligamento cruzado y menisco · Baja hasta mayo 2027"
+    },
+    {
+     "player": "Orel Mangala",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias musculares · Duda para la jornada 11"
+    },
+    {
+     "player": "Zaid Romero",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias en el cuádriceps · Duda para la jornada 11"
     },
     {
      "player": "Mario Martín",
      "status": "out",
      "reason": "suspension",
-     "source": "sanción por roja (25/10)"
+     "source": "futbolfantasy: Roja directa (jornada 11)"
+    },
+    {
+     "player": "Johan Mojica",
+     "status": "out",
+     "reason": "suspension",
+     "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)"
     }
    ],
-   "Sevilla": []
+   "Sevilla": [
+    {
+     "player": "Marcão",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el recto anterior · Baja hasta principios de noviembre"
+    },
+    {
+     "player": "Miguel Sierra",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Luxación acromioclavicular · Baja hasta enero"
+    },
+    {
+     "player": "Jon Guridi",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre"
+    }
+   ]
   },
   "lineups": null,
   "squads": {
@@ -6854,7 +7560,7 @@
       "role": "D",
       "imp": 0.7,
       "att": 0.06,
-      "absent": null,
+      "absent": "doubtful",
       "usual": true
      },
      {
@@ -6863,7 +7569,7 @@
       "role": "M",
       "imp": 0.6,
       "att": 0.03,
-      "absent": null,
+      "absent": "doubtful",
       "usual": false,
       "replaces": "Mario Martín"
      },
@@ -6897,18 +7603,46 @@
     ],
     "out": [
      {
-      "name": "Johan Mojica",
+      "name": "Juanmi Jiménez",
       "status": "out",
-      "reason": "suspension",
-      "source": "sanción por 5ª amarilla (25/10)",
-      "imp": 0.8
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión de rodilla · Baja hasta noviembre",
+      "imp": 0
+     },
+     {
+      "name": "Christantus Uche",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de ligamento cruzado y menisco · Baja hasta mayo 2027",
+      "imp": 0
+     },
+     {
+      "name": "Orel Mangala",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias musculares · Duda para la jornada 11",
+      "imp": 0.6
+     },
+     {
+      "name": "Zaid Romero",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias en el cuádriceps · Duda para la jornada 11",
+      "imp": 0.7
      },
      {
       "name": "Mario Martín",
       "status": "out",
       "reason": "suspension",
-      "source": "sanción por roja (25/10)",
+      "source": "futbolfantasy: Roja directa (jornada 11)",
       "imp": 0.7
+     },
+     {
+      "name": "Johan Mojica",
+      "status": "out",
+      "reason": "suspension",
+      "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)",
+      "imp": 0.8
      }
     ]
    },
@@ -6953,13 +7687,14 @@
       "usual": true
      },
      {
-      "name": "Miguel Sierra",
-      "pos": "AM-R",
+      "name": "Giorgi Kochorashvili",
+      "pos": "RM",
       "role": "M",
-      "imp": 0.89,
-      "att": 0.13,
+      "imp": 0.33,
+      "att": 0.25,
       "absent": null,
-      "usual": true
+      "usual": false,
+      "replaces": "Miguel Sierra"
      },
      {
       "name": "Andrés Castrín",
@@ -6998,13 +7733,14 @@
       "usual": true
      },
      {
-      "name": "Jon Guridi",
-      "pos": "SUB",
+      "name": "Peque",
+      "pos": "AM",
       "role": "M",
-      "imp": 0.56,
-      "att": 0.28,
+      "imp": 0.33,
+      "att": 0.13,
       "absent": null,
-      "usual": true
+      "usual": false,
+      "replaces": "Jon Guridi"
      },
      {
       "name": "Felix Correia",
@@ -7016,16 +7752,38 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Marcão",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el recto anterior · Baja hasta principios de noviembre",
+      "imp": 0.0
+     },
+     {
+      "name": "Miguel Sierra",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Luxación acromioclavicular · Baja hasta enero",
+      "imp": 0.89
+     },
+     {
+      "name": "Jon Guridi",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre",
+      "imp": 0.56
+     }
+    ]
    }
   },
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.3071,
-   "p_over_model": 0.3071,
+   "p_over": 0.2947,
+   "p_over_model": 0.2947,
    "p_over_market": null,
-   "p_btts": 0.3927
+   "p_btts": 0.3814
   },
   "odds_market": null,
   "espn_id": "401882821",
@@ -7033,55 +7791,55 @@
    "home": [
     {
      "name": "Martín Satriano",
-     "p": 0.228,
+     "p": 0.232,
      "xg90": 0.27
     },
     {
      "name": "Ramón Terrats",
-     "p": 0.176,
+     "p": 0.179,
      "xg90": 0.2
     },
     {
      "name": "Enes Ünal",
-     "p": 0.15,
+     "p": 0.153,
      "xg90": 0.18
     },
     {
      "name": "Zaid Romero",
-     "p": 0.047,
+     "p": 0.048,
      "xg90": 0.05
     },
     {
      "name": "Nemanja Gudelj",
-     "p": 0.042,
+     "p": 0.043,
      "xg90": 0.04
     }
    ],
    "away": [
     {
      "name": "Robbie Ure",
-     "p": 0.206,
+     "p": 0.209,
      "xg90": 0.38
     },
     {
      "name": "Youssouf Fofana",
-     "p": 0.192,
+     "p": 0.195,
      "xg90": 0.33
     },
     {
      "name": "Felix Correia",
-     "p": 0.165,
+     "p": 0.168,
      "xg90": 0.28
     },
     {
-     "name": "Jon Guridi",
-     "p": 0.127,
-     "xg90": 0.21
+     "name": "Peque",
+     "p": 0.116,
+     "xg90": 0.19
     },
     {
-     "name": "Miguel Sierra",
-     "p": 0.063,
-     "xg90": 0.1
+     "name": "Juan Iglesias",
+     "p": 0.043,
+     "xg90": 0.06
     }
    ]
   },
@@ -7113,7 +7871,7 @@
      "goals": 0,
      "minutes": 724,
      "status": "sancionado",
-     "source": "sanción por 5ª amarilla (25/10)"
+     "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)"
     },
     {
      "name": "Nemanja Gudelj",
@@ -7131,7 +7889,8 @@
      "att": 0.03,
      "goals": 0,
      "minutes": 559,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Molestias en el cuádriceps · Duda para la jornada 11"
     },
     {
      "name": "Andrés García",
@@ -7231,7 +7990,7 @@
      "goals": 0,
      "minutes": 567,
      "status": "sancionado",
-     "source": "sanción por roja (25/10)"
+     "source": "futbolfantasy: Roja directa (jornada 11)"
     },
     {
      "name": "Orel Mangala",
@@ -7240,7 +7999,8 @@
      "att": 0.03,
      "goals": 0,
      "minutes": 553,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Molestias musculares · Duda para la jornada 11"
     },
     {
      "name": "Francho Serrano",
@@ -7449,7 +8209,8 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el recto anterior · Baja hasta principios de noviembre"
     },
     {
      "name": "Fábio Cardoso",
@@ -7476,7 +8237,8 @@
      "att": 0.13,
      "goals": 2,
      "minutes": 592,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Luxación acromioclavicular · Baja hasta enero"
     },
     {
      "name": "Youssouf Fofana",
@@ -7503,7 +8265,8 @@
      "att": 0.28,
      "goals": 1,
      "minutes": 360,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre"
     },
     {
      "name": "Giorgi Kochorashvili",
@@ -7693,77 +8456,99 @@
     0.93
    ],
    "xg_adj": [
-    0.96,
-    0.98
+    0.98,
+    0.91
    ],
    "p_full": [
-    0.3707,
-    0.3241,
-    0.3052
+    0.371,
+    0.324,
+    0.305
    ],
    "p_adj": [
-    0.3298,
-    0.3286,
-    0.3416
+    0.3517,
+    0.3329,
+    0.3154
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Getafe",
+   "away": "Sevilla",
+   "date": "2026-11-01",
+   "from_ts": "2026-10-25T17:56:46.744205+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "p_from": [
+    0.3498,
+    0.3271,
+    0.323
+   ],
+   "p_to": [
+    0.3652,
+    0.3261,
+    0.3088
+   ],
+   "delta_pts": [
+    1.5,
+    -0.1,
+    -1.4
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T15:15:00+00:00",
   "home": "Santander",
   "away": "Real Madrid",
-  "p_home": 0.114,
-  "p_draw": 0.1672,
-  "p_away": 0.7188,
+  "p_home": 0.1081,
+  "p_draw": 0.1668,
+  "p_away": 0.7251,
   "model": "stacker",
   "dc": {
-   "p_home": 0.1317,
-   "p_draw": 0.1602,
-   "p_away": 0.708,
-   "xg_home": 1.1962,
-   "xg_away": 2.8232,
-   "p_over25": 0.7647,
-   "p_btts": 0.6594,
+   "p_home": 0.1155,
+   "p_draw": 0.1537,
+   "p_away": 0.7308,
+   "xg_home": 1.1028,
+   "xg_away": 2.8499,
+   "p_over25": 0.7548,
+   "p_btts": 0.6326,
    "top_scores": [
     [
      "1-2",
-     0.08565028167266386
+     0.08601511588086097
     ],
     [
      "1-3",
-     0.08060262942636116
+     0.08171095354524839
     ],
     [
      "0-2",
-     0.07160085584222091
+     0.07799622327444879
     ]
    ]
   },
   "xg_base": [
    1.146,
-   2.97
+   2.969
   ],
   "elo_diff": -164.3,
   "referee": null,
   "weather": {
-   "temp_c": 14.9,
+   "temp_c": 15.1,
    "precip_mm": 0.0,
-   "wind_kmh": 12.2
+   "wind_kmh": 5.8
   },
   "market": null,
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
    0.095,
-   0.167
+   0.151
   ],
   "deficit_defence": [
    0.142,
-   0.286
+   0.054
   ],
   "context": {
    "stake_diff_late": 0.03,
@@ -7782,24 +8567,36 @@
   "absences": {
    "Santander": [
     {
+     "player": "Simon Eriksson",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Tendinopatía en el hombro · Duda para la jornada 11"
+    },
+    {
      "player": "Jorge Salinas",
      "status": "out",
      "reason": "suspension",
-     "source": "sanción por 5ª amarilla (24/10)"
+     "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)"
     }
    ],
    "Real Madrid": [
     {
-     "player": "Thibaut Courtois",
+     "player": "Raúl Asencio",
      "status": "out",
-     "reason": "news",
-     "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com"
+     "reason": "injury",
+     "source": "futbolfantasy: Operado de la tibia · Baja hasta diciembre"
+    },
+    {
+     "player": "Rodrygo Goes",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de ligamento cruzado y menisco · Baja hasta noviembre-diciembre"
     },
     {
      "player": "Vinícius Júnior",
      "status": "out",
      "reason": "suspension",
-     "source": "sancionado (le quedan 2 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
+     "source": "futbolfantasy: Sanción disciplinaria (3/4) (jornada 11)"
     }
    ]
   },
@@ -7912,10 +8709,17 @@
     ],
     "out": [
      {
+      "name": "Simon Eriksson",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Tendinopatía en el hombro · Duda para la jornada 11",
+      "imp": 0.0
+     },
+     {
       "name": "Jorge Salinas",
       "status": "out",
       "reason": "suspension",
-      "source": "sanción por 5ª amarilla (24/10)",
+      "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)",
       "imp": 0.9
      }
     ]
@@ -7925,18 +8729,17 @@
     "formation": null,
     "xi": [
      {
-      "name": "Andriy Lunin",
+      "name": "Thibaut Courtois",
       "pos": "G",
       "role": "G",
-      "imp": 0.0,
+      "imp": 0.9,
       "att": 0.01,
       "absent": null,
-      "usual": false,
-      "replaces": "Thibaut Courtois"
+      "usual": true
      },
      {
       "name": "Kylian Mbappé",
-      "pos": "F",
+      "pos": "CF-R",
       "role": "F",
       "imp": 1.0,
       "att": 1.2,
@@ -7956,35 +8759,25 @@
       "name": "Ibrahima Konaté",
       "pos": "CD-R",
       "role": "D",
-      "imp": 0.89,
+      "imp": 0.9,
       "att": 0.06,
       "absent": null,
       "usual": true
      },
      {
       "name": "Jude Bellingham",
-      "pos": "AM",
+      "pos": "LM",
       "role": "M",
-      "imp": 0.89,
+      "imp": 0.9,
       "att": 0.54,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Aurélien Tchouaméni",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.44,
-      "att": 0.17,
-      "absent": null,
-      "usual": false,
-      "replaces": "Vinícius Júnior"
-     },
-     {
       "name": "Arda Güler",
       "pos": "RM",
       "role": "M",
-      "imp": 0.78,
+      "imp": 0.8,
       "att": 0.69,
       "absent": null,
       "usual": true
@@ -7993,17 +8786,36 @@
       "name": "Dean Huijsen",
       "pos": "CD-L",
       "role": "D",
-      "imp": 0.78,
+      "imp": 0.8,
       "att": 0.14,
       "absent": null,
       "usual": true
      },
      {
+      "name": "Bernardo Silva",
+      "pos": "CM-L",
+      "role": "M",
+      "imp": 0.4,
+      "att": 0.11,
+      "absent": null,
+      "usual": false,
+      "replaces": "Vinícius Júnior"
+     },
+     {
       "name": "Marc Cucurella",
       "pos": "LB",
       "role": "D",
-      "imp": 0.56,
+      "imp": 0.6,
       "att": 0.03,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Aurélien Tchouaméni",
+      "pos": "CM-R",
+      "role": "M",
+      "imp": 0.5,
+      "att": 0.17,
       "absent": null,
       "usual": true
      },
@@ -8011,35 +8823,33 @@
       "name": "Denzel Dumfries",
       "pos": "SUB",
       "role": "D",
-      "imp": 0.56,
+      "imp": 0.5,
       "att": 0.18,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Álvaro Carreras",
-      "pos": "SUB",
-      "role": "M",
-      "imp": 0.44,
-      "att": 0.25,
       "absent": null,
       "usual": true
      }
     ],
     "out": [
      {
-      "name": "Thibaut Courtois",
+      "name": "Raúl Asencio",
       "status": "out",
-      "reason": "news",
-      "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com",
-      "imp": 1.0
+      "reason": "injury",
+      "source": "futbolfantasy: Operado de la tibia · Baja hasta diciembre",
+      "imp": 0.0
+     },
+     {
+      "name": "Rodrygo Goes",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de ligamento cruzado y menisco · Baja hasta noviembre-diciembre",
+      "imp": 0
      },
      {
       "name": "Vinícius Júnior",
       "status": "out",
       "reason": "suspension",
-      "source": "sancionado (le quedan 2 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció",
-      "imp": 0.78
+      "source": "futbolfantasy: Sanción disciplinaria (3/4) (jornada 11)",
+      "imp": 0.7
      }
     ]
    }
@@ -8047,10 +8857,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.7647,
-   "p_over_model": 0.7647,
+   "p_over": 0.7548,
+   "p_over_model": 0.7548,
    "p_over_market": null,
-   "p_btts": 0.6594
+   "p_btts": 0.6326
   },
   "odds_market": null,
   "espn_id": "401882819",
@@ -8058,54 +8868,54 @@
    "home": [
     {
      "name": "Yassir Zabiri",
-     "p": 0.4,
+     "p": 0.376,
      "xg90": 0.7
     },
     {
      "name": "Sergio Canales",
-     "p": 0.145,
+     "p": 0.134,
      "xg90": 0.21
     },
     {
      "name": "Alvaro Mantilla",
-     "p": 0.053,
+     "p": 0.049,
      "xg90": 0.07
     },
     {
      "name": "Jeanuël Belocian",
-     "p": 0.049,
+     "p": 0.046,
      "xg90": 0.06
     },
     {
      "name": "Iñigo Vicente",
-     "p": 0.033,
+     "p": 0.031,
      "xg90": 0.04
     }
    ],
    "away": [
     {
      "name": "Kylian Mbappé",
-     "p": 0.629,
+     "p": 0.632,
      "xg90": 1.01
     },
     {
      "name": "Jude Bellingham",
-     "p": 0.262,
+     "p": 0.264,
      "xg90": 0.3
     },
     {
      "name": "Arda Güler",
-     "p": 0.232,
+     "p": 0.234,
      "xg90": 0.26
     },
     {
      "name": "Denzel Dumfries",
-     "p": 0.136,
+     "p": 0.137,
      "xg90": 0.13
     },
     {
      "name": "Dean Huijsen",
-     "p": 0.098,
+     "p": 0.099,
      "xg90": 0.09
     }
    ]
@@ -8129,7 +8939,7 @@
      "goals": 0,
      "minutes": 808,
      "status": "sancionado",
-     "source": "sanción por 5ª amarilla (24/10)"
+     "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)"
     },
     {
      "name": "Alvaro Mantilla",
@@ -8354,7 +9164,8 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Tendinopatía en el hombro · Duda para la jornada 11"
     },
     {
      "name": "Andrés Vallecillo",
@@ -8415,17 +9226,16 @@
     {
      "name": "Thibaut Courtois",
      "role": "G",
-     "imp": 1.0,
+     "imp": 0.9,
      "att": 0.0,
      "goals": 0,
      "minutes": 810,
-     "status": "baja",
-     "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com"
+     "status": "disponible"
     },
     {
      "name": "Andriy Lunin",
      "role": "G",
-     "imp": 0.0,
+     "imp": 0.1,
      "att": null,
      "goals": null,
      "minutes": null,
@@ -8443,7 +9253,7 @@
     {
      "name": "Ibrahima Konaté",
      "role": "D",
-     "imp": 0.89,
+     "imp": 0.9,
      "att": 0.06,
      "goals": 0,
      "minutes": 720,
@@ -8452,7 +9262,7 @@
     {
      "name": "Dean Huijsen",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 0.11,
      "goals": 0,
      "minutes": 594,
@@ -8461,7 +9271,7 @@
     {
      "name": "Marc Cucurella",
      "role": "D",
-     "imp": 0.56,
+     "imp": 0.6,
      "att": 0.03,
      "goals": 0,
      "minutes": 560,
@@ -8470,7 +9280,7 @@
     {
      "name": "Denzel Dumfries",
      "role": "D",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.18,
      "goals": 0,
      "minutes": 428,
@@ -8479,7 +9289,7 @@
     {
      "name": "Antonio Rüdiger",
      "role": "D",
-     "imp": 0.33,
+     "imp": 0.3,
      "att": 0.08,
      "goals": 1,
      "minutes": 304,
@@ -8488,7 +9298,7 @@
     {
      "name": "Trent Alexander-Arnold",
      "role": "D",
-     "imp": 0.33,
+     "imp": 0.3,
      "att": null,
      "goals": 0,
      "minutes": 258,
@@ -8510,76 +9320,68 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Operado de la tibia · Baja hasta diciembre"
     },
     {
      "name": "Jude Bellingham",
      "role": "M",
-     "imp": 0.89,
+     "imp": 0.9,
      "att": 0.65,
      "goals": 3,
      "minutes": 700,
      "status": "disponible"
     },
     {
-     "name": "Vinícius Júnior",
-     "role": "M",
-     "imp": 0.78,
-     "att": 0.92,
-     "goals": 1,
-     "minutes": 592,
-     "status": "sancionado",
-     "source": "sancionado (le quedan 2 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
-    },
-    {
      "name": "Arda Güler",
      "role": "M",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 1.11,
      "goals": 2,
      "minutes": 517,
      "status": "disponible"
     },
     {
-     "name": "Yan Diomande",
+     "name": "Vinícius Júnior",
      "role": "M",
-     "imp": 0.44,
-     "att": 0.35,
-     "goals": 2,
-     "minutes": 444,
-     "status": "disponible"
+     "imp": 0.7,
+     "att": 0.92,
+     "goals": 1,
+     "minutes": 592,
+     "status": "sancionado",
+     "source": "futbolfantasy: Sanción disciplinaria (3/4) (jornada 11)"
     },
     {
      "name": "Aurélien Tchouaméni",
      "role": "M",
-     "imp": 0.44,
+     "imp": 0.5,
      "att": 0.11,
      "goals": 0,
      "minutes": 359,
      "status": "disponible"
     },
     {
-     "name": "Álvaro Carreras",
-     "role": "M",
-     "imp": 0.44,
-     "att": null,
-     "goals": null,
-     "minutes": null,
-     "status": "disponible"
-    },
-    {
      "name": "Bernardo Silva",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.4,
      "att": 0.11,
      "goals": 0,
      "minutes": 296,
      "status": "disponible"
     },
     {
+     "name": "Álvaro Carreras",
+     "role": "M",
+     "imp": 0.4,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Eduardo Camavinga",
      "role": "M",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 257,
@@ -8588,7 +9390,7 @@
     {
      "name": "Brahim Díaz",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 116,
@@ -8597,7 +9399,7 @@
     {
      "name": "Endrick",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 74,
@@ -8622,6 +9424,15 @@
      "status": "disponible"
     },
     {
+     "name": "Mario Rivas",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Alexis Ciria",
      "role": "M",
      "imp": 0.0,
@@ -8640,7 +9451,7 @@
      "status": "disponible"
     },
     {
-     "name": "Mario Rivas",
+     "name": "Illia Voloshyn",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -8692,6 +9503,15 @@
      "goals": 9,
      "minutes": 808,
      "status": "disponible"
+    },
+    {
+     "name": "Yan Diomande",
+     "role": "F",
+     "imp": 0.5,
+     "att": 0.35,
+     "goals": 2,
+     "minutes": 444,
+     "status": "disponible"
     }
    ]
   },
@@ -8701,80 +9521,80 @@
     2.97
    ],
    "xg_adj": [
-    1.2,
-    2.82
+    1.1,
+    2.85
    ],
    "p_full": [
-    0.1129,
-    0.1472,
-    0.7399
+    0.113,
+    0.1473,
+    0.7397
    ],
    "p_adj": [
-    0.1317,
-    0.1602,
-    0.708
+    0.1155,
+    0.1537,
+    0.7308
    ]
   },
   "movement": {
    "home": "Santander",
    "away": "Real Madrid",
    "date": "2026-11-01",
-   "from_ts": "2026-10-25T18:39:13.230230+00:00",
-   "to_ts": "2026-10-25T18:46:05.659526+00:00",
+   "from_ts": "2026-10-25T18:46:05.659526+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
    "p_from": [
     0.114,
     0.1672,
     0.7188
    ],
    "p_to": [
-    0.114,
-    0.1672,
-    0.7188
+    0.1081,
+    0.1668,
+    0.7251
    ],
    "delta_pts": [
-    0.0,
-    0.0,
-    0.0
+    -0.6,
+    -0.0,
+    0.6
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T17:30:00+00:00",
   "home": "Elche",
   "away": "Valencia",
-  "p_home": 0.5191,
-  "p_draw": 0.2558,
-  "p_away": 0.225,
+  "p_home": 0.5189,
+  "p_draw": 0.2568,
+  "p_away": 0.2243,
   "model": "stacker",
   "dc": {
-   "p_home": 0.5206,
-   "p_draw": 0.2609,
-   "p_away": 0.2185,
-   "xg_home": 1.6186,
-   "xg_away": 0.964,
-   "p_over25": 0.4772,
-   "p_btts": 0.5023,
+   "p_home": 0.5197,
+   "p_draw": 0.2622,
+   "p_away": 0.2181,
+   "xg_home": 1.6063,
+   "xg_away": 0.955,
+   "p_over25": 0.4718,
+   "p_btts": 0.4981,
    "top_scores": [
     [
      "1-1",
-     0.12420883390191356
+     0.12472990568934554
     ],
     [
      "1-0",
-     0.11604608211787937
+     0.11771046886896651
     ],
     [
      "2-0",
-     0.09900320088778448
+     0.09959731661323629
     ]
    ]
   },
   "xg_base": [
-   1.604,
+   1.605,
    1.036
   ],
   "elo_diff": 78.6,
@@ -8788,12 +9608,12 @@
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
-   0.0,
-   0.12
+   0.016,
+   0.162
   ],
   "deficit_defence": [
-   0.0,
-   0.026
+   0.046,
+   0.028
   ],
   "context": {
    "stake_diff_late": 0.008,
@@ -8810,19 +9630,56 @@
    "post_break": 0.0
   },
   "absences": {
-   "Elche": [],
+   "Elche": [
+    {
+     "player": "Marc Aguado",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión de tobillo · Baja hasta mediados de noviembre"
+    }
+   ],
    "Valencia": [
+    {
+     "player": "Sergi Canós",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta diciembre"
+    },
+    {
+     "player": "Diego López",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta diciembre"
+    },
     {
      "player": "David Otorbi",
      "status": "out",
-     "reason": "news",
-     "source": "Dramática lesión de David Otorbi en el Valencia CF- Villarreal CF: confirmada la rotura muscular - Superdeporte"
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en los isquiotibiales · Baja confirmada para la jornada 11"
+    },
+    {
+     "player": "José Manuel Copete",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de menisco · Duda para la jornada 11"
+    },
+    {
+     "player": "Umar Sadiq",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en los isquiotibiales · Baja hasta mediados de noviembre"
+    },
+    {
+     "player": "Dimitri Foulquier",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el aductor · Duda para la jornada 11"
     },
     {
      "player": "Harvey Elliott",
      "status": "out",
      "reason": "suspension",
-     "source": "sanción por roja (24/10)"
+     "source": "futbolfantasy: Doble amarilla (jornada 11)"
     }
    ]
   },
@@ -8887,13 +9744,14 @@
       "usual": true
      },
      {
-      "name": "Marc Aguado",
-      "pos": "CM-L",
+      "name": "Thomas Lemar",
+      "pos": "LM",
       "role": "M",
-      "imp": 0.6,
-      "att": 0.03,
+      "imp": 0.4,
+      "att": 0.21,
       "absent": null,
-      "usual": true
+      "usual": false,
+      "replaces": "Marc Aguado"
      },
      {
       "name": "Federico Redondo",
@@ -8932,7 +9790,15 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Marc Aguado",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión de tobillo · Baja hasta mediados de noviembre",
+      "imp": 0.6
+     }
+    ]
    },
    "away": {
     "confirmed": false,
@@ -9040,17 +9906,52 @@
     ],
     "out": [
      {
+      "name": "Sergi Canós",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta diciembre",
+      "imp": 0
+     },
+     {
+      "name": "Diego López",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta diciembre",
+      "imp": 0
+     },
+     {
       "name": "David Otorbi",
       "status": "out",
-      "reason": "news",
-      "source": "Dramática lesión de David Otorbi en el Valencia CF- Villarreal CF: confirmada la rotura muscular - Superdeporte",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en los isquiotibiales · Baja confirmada para la jornada 11",
       "imp": 0.3
+     },
+     {
+      "name": "José Manuel Copete",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de menisco · Duda para la jornada 11",
+      "imp": 0
+     },
+     {
+      "name": "Umar Sadiq",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en los isquiotibiales · Baja hasta mediados de noviembre",
+      "imp": 0.1
+     },
+     {
+      "name": "Dimitri Foulquier",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el aductor · Duda para la jornada 11",
+      "imp": 0.0
      },
      {
       "name": "Harvey Elliott",
       "status": "out",
       "reason": "suspension",
-      "source": "sanción por roja (24/10)",
+      "source": "futbolfantasy: Doble amarilla (jornada 11)",
       "imp": 0.0
      }
     ]
@@ -9059,10 +9960,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.4772,
-   "p_over_model": 0.4772,
+   "p_over": 0.4718,
+   "p_over_model": 0.4718,
    "p_over_market": null,
-   "p_btts": 0.5023
+   "p_btts": 0.4981
   },
   "odds_market": null,
   "espn_id": "401882823",
@@ -9070,44 +9971,44 @@
    "home": [
     {
      "name": "Federico Redondo",
-     "p": 0.147,
+     "p": 0.146,
      "xg90": 0.14
     },
     {
      "name": "Roy Revivo",
-     "p": 0.09,
+     "p": 0.089,
      "xg90": 0.08
     },
     {
      "name": "Germán Valera",
-     "p": 0.078,
+     "p": 0.077,
      "xg90": 0.08
+    },
+    {
+     "name": "Thomas Lemar",
+     "p": 0.066,
+     "xg90": 0.07
     },
     {
      "name": "Gonzalo Villar",
      "p": 0.042,
      "xg90": 0.04
-    },
-    {
-     "name": "Víctor Chust",
-     "p": 0.038,
-     "xg90": 0.03
     }
    ],
    "away": [
     {
      "name": "Hugo Duro",
-     "p": 0.21,
+     "p": 0.208,
      "xg90": 0.39
     },
     {
      "name": "Arnaut Danjuma",
-     "p": 0.13,
+     "p": 0.129,
      "xg90": 0.23
     },
     {
      "name": "Javier Guerra",
-     "p": 0.075,
+     "p": 0.074,
      "xg90": 0.13
     },
     {
@@ -9117,7 +10018,7 @@
     },
     {
      "name": "José Gayà",
-     "p": 0.033,
+     "p": 0.032,
      "xg90": 0.05
     }
    ]
@@ -9239,7 +10140,8 @@
      "att": 0.08,
      "goals": 1,
      "minutes": 385,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión de tobillo · Baja hasta mediados de noviembre"
     },
     {
      "name": "José Antonio Morente",
@@ -9493,7 +10395,8 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Lesión en el aductor · Duda para la jornada 11"
     },
     {
      "name": "Pepelu",
@@ -9539,7 +10442,7 @@
      "goals": 1,
      "minutes": 339,
      "status": "baja",
-     "source": "Dramática lesión de David Otorbi en el Valencia CF- Villarreal CF: confirmada la rotura muscular - Superdeporte"
+     "source": "futbolfantasy: Lesión en los isquiotibiales · Baja confirmada para la jornada 11"
     },
     {
      "name": "Luis Rioja",
@@ -9585,7 +10488,7 @@
      "goals": 0,
      "minutes": 130,
      "status": "sancionado",
-     "source": "sanción por roja (24/10)"
+     "source": "futbolfantasy: Doble amarilla (jornada 11)"
     },
     {
      "name": "Iker Córdoba",
@@ -9675,7 +10578,8 @@
      "att": null,
      "goals": 1,
      "minutes": 151,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en los isquiotibiales · Baja hasta mediados de noviembre"
     },
     {
      "name": "André Almeida",
@@ -9699,84 +10603,106 @@
   },
   "absence_impact": {
    "xg_full": [
-    1.6,
+    1.61,
     1.04
    ],
    "xg_adj": [
-    1.62,
+    1.61,
     0.96
    ],
    "p_full": [
-    0.4995,
-    0.2619,
-    0.2386
+    0.4998,
+    0.2618,
+    0.2384
    ],
    "p_adj": [
-    0.5206,
-    0.2609,
-    0.2185
+    0.5197,
+    0.2622,
+    0.2181
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Elche",
+   "away": "Valencia",
+   "date": "2026-11-01",
+   "from_ts": "2026-10-25T18:01:26.218166+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "p_from": [
+    0.5189,
+    0.256,
+    0.2251
+   ],
+   "p_to": [
+    0.5189,
+    0.2568,
+    0.2243
+   ],
+   "delta_pts": [
+    0.0,
+    0.1,
+    -0.1
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:39:16.261703+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T20:00:00+00:00",
   "home": "Ath Bilbao",
   "away": "Sociedad",
-  "p_home": 0.5431,
-  "p_draw": 0.2589,
-  "p_away": 0.198,
+  "p_home": 0.4895,
+  "p_draw": 0.2872,
+  "p_away": 0.2233,
   "model": "stacker",
   "dc": {
-   "p_home": 0.4854,
-   "p_draw": 0.2521,
-   "p_away": 0.2625,
-   "xg_home": 1.6914,
-   "xg_away": 1.1887,
-   "p_over25": 0.5494,
-   "p_btts": 0.5733,
+   "p_home": 0.4087,
+   "p_draw": 0.2722,
+   "p_away": 0.3191,
+   "xg_home": 1.4255,
+   "xg_away": 1.2322,
+   "p_over25": 0.496,
+   "p_btts": 0.5446,
    "top_scores": [
     [
      "1-1",
-     0.1188654728864623
-    ],
-    [
-     "2-1",
-     0.09543958335783072
+     0.12969490323776214
     ],
     [
      "1-0",
-     0.08892653454264027
+     0.09339540184700791
+    ],
+    [
+     "2-1",
+     0.08777440200493775
     ]
    ]
   },
   "xg_base": [
-   1.691,
-   1.189
+   1.682,
+   1.187
   ],
-  "elo_diff": 42.0,
+  "elo_diff": 34.5,
   "referee": null,
   "weather": {
-   "temp_c": 11.4,
+   "temp_c": 11.1,
    "precip_mm": 0.0,
-   "wind_kmh": 2.5
+   "wind_kmh": 3.4
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "ninguna",
+  "availability_source": "noticias",
   "deficit": [
-   0.0,
+   0.276,
    0.0
   ],
   "deficit_defence": [
-   0.0,
+   0.107,
    0.0
   ],
   "context": {
-   "stake_diff_late": 0.03,
+   "stake_diff_late": 0.054,
    "h2h_gd": -0.2,
    "derby": 1.0,
    "euro_prev_home": 1.0,
@@ -9790,7 +10716,32 @@
    "post_break": 0.0
   },
   "absences": {
-   "Ath Bilbao": [],
+   "Ath Bilbao": [
+    {
+     "player": "Gorka Guruzeta",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta mayo"
+    },
+    {
+     "player": "Unai Egiluz",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta enero 2027"
+    },
+    {
+     "player": "Oihan Sancet",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta principio de noviembre"
+    },
+    {
+     "player": "Iñigo Ruiz de Galarreta",
+     "status": "doubtful",
+     "reason": "injury",
+     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
+    }
+   ],
    "Sociedad": []
   },
   "lineups": null,
@@ -9823,7 +10774,7 @@
       "role": "M",
       "imp": 0.78,
       "att": 0.16,
-      "absent": null,
+      "absent": "doubtful",
       "usual": true
      },
      {
@@ -9854,13 +10805,14 @@
       "usual": true
      },
      {
-      "name": "Oihan Sancet",
-      "pos": "AM",
+      "name": "Nico Williams",
+      "pos": "AM-L",
       "role": "M",
-      "imp": 0.67,
-      "att": 0.47,
+      "imp": 0.56,
+      "att": 0.52,
       "absent": null,
-      "usual": true
+      "usual": false,
+      "replaces": "Oihan Sancet"
      },
      {
       "name": "Álex Berenguer",
@@ -9899,7 +10851,36 @@
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Gorka Guruzeta",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta mayo",
+      "imp": 0.22
+     },
+     {
+      "name": "Unai Egiluz",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta enero 2027",
+      "imp": 0
+     },
+     {
+      "name": "Oihan Sancet",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el sóleo · Baja hasta principio de noviembre",
+      "imp": 0.67
+     },
+     {
+      "name": "Iñigo Ruiz de Galarreta",
+      "status": "doubtful",
+      "reason": "injury",
+      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11",
+      "imp": 0.78
+     }
+    ]
    },
    "away": {
     "confirmed": false,
@@ -9928,7 +10909,7 @@
       "pos": "F",
       "role": "F",
       "imp": 0.8,
-      "att": 0.69,
+      "att": 0.68,
       "absent": null,
       "usual": true
      },
@@ -9937,7 +10918,7 @@
       "pos": "M",
       "role": "M",
       "imp": 0.8,
-      "att": 0.25,
+      "att": 0.26,
       "absent": null,
       "usual": true
      },
@@ -9973,7 +10954,7 @@
       "pos": "SUB",
       "role": "M",
       "imp": 0.6,
-      "att": 0.44,
+      "att": 0.45,
       "absent": null,
       "usual": true
      },
@@ -9991,7 +10972,7 @@
       "pos": "D",
       "role": "D",
       "imp": 0.5,
-      "att": 0.02,
+      "att": 0.01,
       "absent": null,
       "usual": true
      },
@@ -10000,7 +10981,7 @@
       "pos": "F",
       "role": "F",
       "imp": 0.5,
-      "att": 0.86,
+      "att": 0.92,
       "absent": null,
       "usual": true
      }
@@ -10011,56 +10992,56 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5494,
-   "p_over_model": 0.5494,
+   "p_over": 0.496,
+   "p_over_model": 0.496,
    "p_over_market": null,
-   "p_btts": 0.5733
+   "p_btts": 0.5446
   },
   "odds_market": null,
   "espn_id": "401882826",
   "scorers": {
    "home": [
     {
-     "name": "Oihan Sancet",
-     "p": 0.307,
-     "xg90": 0.39
-    },
-    {
      "name": "Iñaki Williams",
-     "p": 0.304,
+     "p": 0.263,
      "xg90": 0.38
     },
     {
+     "name": "Nico Williams",
+     "p": 0.22,
+     "xg90": 0.31
+    },
+    {
      "name": "Robert Navarro",
-     "p": 0.235,
+     "p": 0.203,
      "xg90": 0.28
     },
     {
      "name": "Álex Berenguer",
-     "p": 0.185,
+     "p": 0.158,
      "xg90": 0.22
     },
     {
      "name": "Aitor Paredes",
-     "p": 0.09,
+     "p": 0.077,
      "xg90": 0.09
     }
    ],
    "away": [
     {
      "name": "Orri Óskarsson",
-     "p": 0.367,
-     "xg90": 0.83
+     "p": 0.4,
+     "xg90": 0.92
     },
     {
      "name": "Mikel Oyarzabal",
-     "p": 0.229,
-     "xg90": 0.47
+     "p": 0.223,
+     "xg90": 0.45
     },
     {
      "name": "Ander Barrenetxea",
      "p": 0.086,
-     "xg90": 0.16
+     "xg90": 0.15
     },
     {
      "name": "Luka Sucic",
@@ -10069,7 +11050,7 @@
     },
     {
      "name": "Carlos Soler",
-     "p": 0.077,
+     "p": 0.078,
      "xg90": 0.14
     }
    ]
@@ -10182,7 +11163,8 @@
      "att": 0.19,
      "goals": 0,
      "minutes": 455,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
     },
     {
      "name": "Oihan Sancet",
@@ -10191,7 +11173,8 @@
      "att": 0.65,
      "goals": 1,
      "minutes": 517,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta principio de noviembre"
     },
     {
      "name": "Robert Navarro",
@@ -10344,7 +11327,8 @@
      "att": null,
      "goals": 0,
      "minutes": 183,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta mayo"
     }
    ],
    "away": [
@@ -10354,7 +11338,7 @@
      "imp": 0.9,
      "att": 0.01,
      "goals": 0,
-     "minutes": 720,
+     "minutes": 810,
      "status": "disponible"
     },
     {
@@ -10370,36 +11354,36 @@
      "name": "Sergio Gómez",
      "role": "D",
      "imp": 0.9,
-     "att": 0.13,
+     "att": 0.12,
      "goals": 0,
-     "minutes": 701,
+     "minutes": 791,
      "status": "disponible"
     },
     {
      "name": "Jon Martín",
      "role": "D",
      "imp": 0.8,
-     "att": 0.09,
+     "att": 0.08,
      "goals": 1,
-     "minutes": 636,
+     "minutes": 726,
      "status": "disponible"
     },
     {
      "name": "Jon Aramburu",
      "role": "D",
      "imp": 0.7,
-     "att": 0.02,
+     "att": 0.04,
      "goals": 0,
-     "minutes": 599,
+     "minutes": 625,
      "status": "disponible"
     },
     {
      "name": "Mamadou Sarr",
      "role": "D",
      "imp": 0.5,
-     "att": 0.02,
+     "att": 0.01,
      "goals": 0,
-     "minutes": 331,
+     "minutes": 421,
      "status": "disponible"
     },
     {
@@ -10426,7 +11410,7 @@
      "imp": 0.2,
      "att": null,
      "goals": 0,
-     "minutes": 70,
+     "minutes": 134,
      "status": "disponible"
     },
     {
@@ -10451,9 +11435,9 @@
      "name": "Luka Sucic",
      "role": "M",
      "imp": 0.8,
-     "att": 0.33,
+     "att": 0.35,
      "goals": 3,
-     "minutes": 644,
+     "minutes": 708,
      "status": "disponible"
     },
     {
@@ -10471,25 +11455,34 @@
      "imp": 0.6,
      "att": 0.1,
      "goals": 1,
-     "minutes": 499,
+     "minutes": 516,
      "status": "disponible"
     },
     {
      "name": "Ander Barrenetxea",
      "role": "M",
      "imp": 0.6,
-     "att": 0.26,
+     "att": 0.33,
      "goals": 2,
-     "minutes": 474,
+     "minutes": 500,
      "status": "disponible"
     },
     {
      "name": "Gonçalo Guedes",
      "role": "M",
      "imp": 0.5,
-     "att": 0.53,
+     "att": 0.73,
      "goals": 2,
-     "minutes": 349,
+     "minutes": 436,
+     "status": "disponible"
+    },
+    {
+     "name": "Beñat Turrientes",
+     "role": "M",
+     "imp": 0.4,
+     "att": 0.12,
+     "goals": 1,
+     "minutes": 333,
      "status": "disponible"
     },
     {
@@ -10502,30 +11495,21 @@
      "status": "disponible"
     },
     {
-     "name": "Beñat Turrientes",
+     "name": "Jon Gorrotxategi",
      "role": "M",
-     "imp": 0.4,
-     "att": null,
+     "imp": 0.3,
+     "att": 0.03,
      "goals": 0,
-     "minutes": 260,
+     "minutes": 307,
      "status": "disponible"
     },
     {
      "name": "Job Ochieng",
      "role": "M",
      "imp": 0.3,
-     "att": 0.33,
+     "att": 0.35,
      "goals": 1,
-     "minutes": 287,
-     "status": "disponible"
-    },
-    {
-     "name": "Jon Gorrotxategi",
-     "role": "M",
-     "imp": 0.3,
-     "att": null,
-     "goals": 0,
-     "minutes": 217,
+     "minutes": 290,
      "status": "disponible"
     },
     {
@@ -10586,18 +11570,18 @@
      "name": "Mikel Oyarzabal",
      "role": "F",
      "imp": 0.8,
-     "att": 0.55,
+     "att": 0.49,
      "goals": 2,
-     "minutes": 606,
+     "minutes": 696,
      "status": "disponible"
     },
     {
      "name": "Orri Óskarsson",
      "role": "F",
      "imp": 0.5,
-     "att": 0.87,
-     "goals": 2,
-     "minutes": 393,
+     "att": 1.03,
+     "goals": 3,
+     "minutes": 480,
      "status": "disponible"
     },
     {
@@ -10606,31 +11590,66 @@
      "imp": 0.1,
      "att": null,
      "goals": 1,
-     "minutes": 66,
+     "minutes": 69,
      "status": "disponible"
     }
    ]
   },
   "absence_impact": {
    "xg_full": [
-    1.69,
+    1.68,
     1.19
    ],
    "xg_adj": [
-    1.69,
-    1.19
+    1.43,
+    1.23
    ],
    "p_full": [
-    0.4854,
-    0.2521,
-    0.2625
+    0.4836,
+    0.2529,
+    0.2635
    ],
    "p_adj": [
-    0.4854,
-    0.2521,
-    0.2625
+    0.4087,
+    0.2722,
+    0.3191
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Ath Bilbao",
+   "away": "Sociedad",
+   "date": "2026-11-01",
+   "from_ts": "2026-10-25T15:18:31.108955+00:00",
+   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "p_from": [
+    0.5449,
+    0.2581,
+    0.197
+   ],
+   "p_to": [
+    0.4895,
+    0.2872,
+    0.2233
+   ],
+   "delta_pts": [
+    -5.5,
+    2.9,
+    2.6
+   ],
+   "important": true,
+   "focus": "1",
+   "reasons": [
+    {
+     "factor": "Bajas y alineaciones",
+     "key": "bajas",
+     "effect_pts": [
+      -5.1,
+      2.8,
+      2.3
+     ],
+     "detail": "Ath Bilbao: baja: Gorka Guruzeta, Unai Egiluz, Oihan Sancet; duda: Iñigo Ruiz de Galarreta; déficit ataque 0%→28%, defensa 0%→11%"
+    }
+   ]
+  }
  }
 ]

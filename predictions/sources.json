@@ -1,5 +1,5 @@
 {
- "at": "2026-10-25T19:14+00:00",
+ "at": "2026-10-25T19:39+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -28,7 +28,7 @@
   },
   "Understat (xG)": {
    "ok": true,
-   "rows": 4656,
+   "rows": 4657,
    "error": null
   },
   "Europa y Copa (calendario)": {
@@ -39,6 +39,21 @@
   "Wikidata (entrenadores)": {
    "ok": true,
    "rows": 214,
+   "error": null
+  },
+  "futbolfantasy (lesionados y sancionados)": {
+   "ok": true,
+   "rows": 76,
+   "error": null
+  },
+  "ESPN (alineaciones y árbitro del partido)": {
+   "ok": true,
+   "rows": 11,
+   "error": null
+  },
+  "Google News (bajas)": {
+   "ok": false,
+   "rows": 0,
    "error": null
   }
  }
