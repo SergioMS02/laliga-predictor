@@ -6,3 +6,4 @@ __pycache__/
 # regenerables en cada backtest (pesados)
 data/processed/oos_table.csv
 data/processed/backtest_predictions.csv
+site/data.json

@@ -78,6 +78,14 @@ Causas posibles: bajas y alineaciones (con nombres), resultados y forma (con los
 - `predictions/movements.jsonl`: los cambios importantes en formato máquina.
 - Con Telegram configurado, cada cambio importante llega como aviso con sus causas.
 
+## Web
+
+La carpeta `site/` es una web estática con forma de boleto de quiniela: casillas 1/X/2 rellenas según la probabilidad, evolución de cada partido, explicación de los cambios importantes, marcadores probables y cuánto acierta el modelo. Se publica gratis con GitHub Pages y se regenera sola cada vez que cambian las predicciones.
+
+Para activarla (una vez): *Settings → Pages → Build and deployment → Source:* **GitHub Actions**. Después, *Actions → Web → Run workflow*. Quedará en `https://<tu-usuario>.github.io/laliga-predictor/`.
+
+Para verla en local: `python site/build.py && python -m http.server -d site` y abre `http://localhost:8000`.
+
 ## Automatización gratis (GitHub Actions)
 
 1. Crea un repositorio en GitHub y sube el proyecto.
@@ -90,9 +98,10 @@ Causas posibles: bajas y alineaciones (con nombres), resultados y forma (con los
 | `predict.yml` | Diario 06:17 UTC | Actualiza datos y predice los próximos 8 días. Resumen por Telegram de las próximas 48 h. |
 | `predict.yml` | Vie-lun, cada 20 min (10-22 UTC) | Vigila partidos que empiezan en <100 min. Si ESPN ya publica la alineación, re-predice y avisa con el cambio. |
 | `weekly.yml` | Martes | Guarda alineaciones/árbitros de la jornada, rehace backtest, reentrena, recalibra bajas y mide el acierto real de lo predicho. |
+| `pages.yml` | Tras cada cambio de predicciones | Regenera y publica la web. |
 | `tests.yml` | Cada push | Ejecuta los tests. |
 
-Minutos: repo público = ilimitado. Repo privado = 2.000 min/mes gratis; este uso ronda 700-1.000.
+Minutos: repo público = ilimitado. Repo privado = 2.000 min/mes gratis; este uso ronda 500-700 (la vigilancia de alineaciones termina en segundos si no hay ningún partido a menos de 2 horas). GitHub Pages en repos privados requiere un plan de pago: para la web, mantén el repo público.
 
 ## Fuentes de datos (todas gratuitas)
 

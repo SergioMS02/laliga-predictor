@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiniela del modelo de LaLiga</title>
+<meta name="description" content="Probabilidades de cada partido de LaLiga, cómo han cambiado y por qué.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23D7182A'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='18' text-anchor='middle' fill='white'%3E1X2%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <div>
+      <h1 class="masthead__title">Quiniela del modelo</h1>
+      <p class="masthead__sub" id="updated">Cargando predicciones…</p>
+    </div>
+    <dl class="legend" aria-label="Leyenda">
+      <div><dt>1</dt><dd>gana el local</dd></div>
+      <div><dt>X</dt><dd>empate</dd></div>
+      <div><dt>2</dt><dd>gana el visitante</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="slip-title" class="slip-section">
+    <div class="section-head">
+      <h2 id="slip-title" class="section-title">Próximos partidos</h2>
+      <p class="section-note">Cada casilla se rellena según la probabilidad. El círculo marca el resultado más probable. Pulsa un partido para ver cómo ha cambiado y por qué.</p>
+    </div>
+    <div class="slip" role="list" id="slip"></div>
+    <p class="empty" id="empty" hidden>No hay partidos en los próximos días. La próxima jornada aparecerá en cuanto se publique el calendario.</p>
+  </section>
+
+  <section aria-labelledby="moves-title" class="moves-section" id="moves-section" hidden>
+    <div class="section-head">
+      <h2 id="moves-title" class="section-title">Últimos cambios importantes</h2>
+      <p class="section-note" id="moves-note"></p>
+    </div>
+    <ol class="moves" id="moves"></ol>
+  </section>
+
+  <section aria-labelledby="trust-title" class="trust-section">
+    <div class="section-head">
+      <h2 id="trust-title" class="section-title">¿Cuánto acierta?</h2>
+      <p class="section-note">Cada partido de las temporadas de prueba se predijo solo con lo que se sabía antes de jugarse.</p>
+    </div>
+    <div class="trust">
+      <div class="trust__table" id="bt-table"></div>
+      <figure class="trust__chart">
+        <div id="calib"></div>
+        <figcaption>Si el modelo dice 40 %, ese resultado debería ocurrir unas 40 de cada 100 veces. Cuanto más cerca de la diagonal, más fiable.</figcaption>
+      </figure>
+    </div>
+    <p class="live" id="live"></p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Se actualiza solo cada día y vuelve a calcular cuando salen las alineaciones. Datos públicos y gratuitos: football-data.co.uk, ESPN, Understat, openfootball, Open-Meteo y Google News.</p>
+    <p>Son probabilidades, no certezas. No es un consejo de apuesta.</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
