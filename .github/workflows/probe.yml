@@ -20,7 +20,8 @@ jobs:
           for off in range(0, 6000, 100):
               r = s.get(G + "/events", params={"series_id": "10193", "closed": "true", "limit": 100, "offset": off}, timeout=40)
               js = r.json()
-              if not js: break
+              if not isinstance(js, list) or not js:
+                  print("stop", off, str(js)[:200]); break
               for e in js:
                   if re.fullmatch(r"lal-[a-z0-9]+-[a-z0-9]+-\d{4}-\d{2}-\d{2}", e.get("slug","")):
                       evs.append(e)
