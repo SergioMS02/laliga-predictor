@@ -23,7 +23,7 @@ BASE = "https://understat.com"
 FIRST_SEASON = 2014
 HEADERS = {"X-Requested-With": "XMLHttpRequest", "Referer": BASE + "/league/La_liga"}
 MATCH_COLS = ["season", "home", "away", "h_xg", "a_xg"]
-PLAYER_COLS = ["season", "team", "player", "position", "games", "minutes", "xg", "xa"]
+PLAYER_COLS = ["season", "team", "player", "position", "games", "minutes", "xg", "xa", "goals", "assists", "shots"]
 
 
 def _f(x) -> float:
@@ -55,7 +55,8 @@ def parse_league(js: dict, season: int) -> tuple[pd.DataFrame, pd.DataFrame]:
             continue
         players.append({"season": season, "team": team, "player": p.get("player_name", ""),
                         "position": p.get("position", ""), "games": _f(p.get("games")),
-                        "minutes": _f(p.get("time")), "xg": _f(p.get("xG")), "xa": _f(p.get("xA"))})
+                        "minutes": _f(p.get("time")), "xg": _f(p.get("xG")), "xa": _f(p.get("xA")),
+                        "goals": _f(p.get("goals")), "assists": _f(p.get("assists")), "shots": _f(p.get("shots"))})
     return (pd.DataFrame(matches, columns=MATCH_COLS), pd.DataFrame(players, columns=PLAYER_COLS))
 
 

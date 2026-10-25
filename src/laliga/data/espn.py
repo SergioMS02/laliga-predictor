@@ -6,6 +6,7 @@ La API no es oficial: el parser es defensivo y cualquier fallo degrada a "sin da
 from __future__ import annotations
 
 import logging
+import re
 from dataclasses import dataclass, field
 from datetime import date, timedelta
 
@@ -28,6 +29,8 @@ class Player:
     name: str
     position: str
     starter: bool
+    jersey: str = ""
+    formation_place: int | None = None
 
 
 @dataclass
@@ -36,6 +39,7 @@ class MatchDetail:
     referee: str | None = None
     venue: str | None = None
     lineups: dict[str, list[Player]] = field(default_factory=dict)  # 'home'/'away'
+    formations: dict[str, str] = field(default_factory=dict)          # p. ej. {'home': '4-3-3'}
 
     @property
     def lineup_confirmed(self) -> bool:
@@ -122,13 +126,24 @@ def parse_summary(js: dict, event_id: str) -> MatchDetail:
         players = []
         for p in r.get("roster", []) or []:
             ath = p.get("athlete", {}) or {}
+            try:
+                fp = int(p.get("formationPlace")) if p.get("formationPlace") not in (None, "", "0") else None
+            except (TypeError, ValueError):
+                fp = None
             players.append(Player(
                 player_id=str(ath.get("id", "")),
                 name=ath.get("displayName") or ath.get("fullName") or "",
                 position=_g(p, "position", "abbreviation", default="") or _g(p, "position", "name", default="") or "",
                 starter=bool(p.get("starter", False)),
+                jersey=str(p.get("jersey") or ""),
+                formation_place=fp,
             ))
         det.lineups[side] = players
+        form = r.get("formation")
+        if isinstance(form, dict):
+            form = form.get("name") or form.get("summary")
+        if isinstance(form, str) and re.fullmatch(r"\d(-\d){2,4}", form.strip()):
+            det.formations[side] = form.strip()
     return det
 
 
@@ -137,22 +152,32 @@ def scoreboard(settings: Settings, d_from: date, d_to: date, only_known: bool = 
     url = BASE.format(league=league) + "/scoreboard"
     frames = []
     cur = d_from
+    errors = []
+
+    def fetch(params):
+        try:
+            return parse_scoreboard(http.get(url, params=params).json(), only_known)
+        except Exception as e:  # un día fallido no tumba todo el calendario
+            errors.append(f"{params.get('dates')}: {e}")
+            return pd.DataFrame()
+
     while cur <= d_to:  # trozos de 30 días
         end = min(cur + timedelta(days=30), d_to)
-        js = http.get(url, params={"dates": f"{cur:%Y%m%d}-{end:%Y%m%d}", "limit": 500}).json()
-        df = parse_scoreboard(js, only_known)
+        df = fetch({"dates": f"{cur:%Y%m%d}-{end:%Y%m%d}", "limit": 500})
         if df.empty and (end - cur).days > 0:
             # si el rango no está soportado, día a día (formato documentado ?dates=YYYYMMDD)
             day = cur
             while day <= end:
-                df_d = parse_scoreboard(http.get(url, params={"dates": f"{day:%Y%m%d}"}).json(), only_known)
-                if len(df_d):
-                    frames.append(df_d)
+                frames.append(fetch({"dates": f"{day:%Y%m%d}"}))
                 day += timedelta(days=1)
         else:
             frames.append(df)
         cur = end + timedelta(days=1)
     frames = [f for f in frames if len(f)]
+    if not frames and errors:
+        raise RuntimeError(f"ESPN sin datos ({len(errors)} errores; primero: {errors[0]})")
+    if errors:
+        log.warning("ESPN: %d peticiones fallidas (p. ej. %s)", len(errors), errors[0])
     return pd.concat(frames, ignore_index=True).drop_duplicates("event_id") if frames else pd.DataFrame()
 
 

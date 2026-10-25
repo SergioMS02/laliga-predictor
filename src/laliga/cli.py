@@ -9,6 +9,7 @@
   laliga backfill-espn          histórico de alineaciones y árbitros (ESPN)
   laliga calibrate-availability estima el efecto real de las bajas
   laliga evaluate-live          rendimiento de las predicciones ya emitidas
+  laliga export-site            datos de la web (clasificación, proyección, equipos, aciertos)
   laliga all                    update + backtest + train + predict
 """
 from __future__ import annotations
@@ -38,6 +39,23 @@ def _print_backtest(r: dict) -> None:
             print(f"{k:18s} {v['log_loss']:9.4f} {v['brier']:7.4f} {v['rps']:7.4f} {100 * v['accuracy']:7.1f}%")
 
 
+def _bets(s, matches, preds) -> None:
+    from . import betting
+    try:
+        betting.update(s, matches, preds)
+    except Exception as e:
+        log.warning("No se pudo actualizar la cartera simulada: %s", e)
+
+
+def _export_site(s, matches, projection: bool) -> None:
+    from . import site_export
+    try:
+        site_export.export(s, matches, with_projection=projection)
+    except Exception as e:  # la web nunca debe tumbar la predicción
+        log.warning("No se pudieron generar los datos de la web: %s", e)
+    pipeline.save_status(s)
+
+
 def _notify_moves(s, moves: list[dict], send: bool) -> None:
     from .movements import format_move
     if not moves:
@@ -51,7 +69,7 @@ def _notify_moves(s, moves: list[dict], send: bool) -> None:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="laliga", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("command", choices=["update", "tune", "backtest", "train", "predict", "watch-lineups",
-                                        "backfill-espn", "calibrate-availability", "evaluate-live", "all"])
+                                        "backfill-espn", "calibrate-availability", "evaluate-live", "export-site", "all"])
     ap.add_argument("--offline", action="store_true", help="no usar red (solo caché)")
     ap.add_argument("--days", type=int, default=None, help="horizonte de predicción en días")
     ap.add_argument("--weather", action="store_true", help="incluir clima histórico en tune/backtest (≈400 peticiones)")
@@ -87,6 +105,12 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if cmd in ("backtest", "all"):
         _print_backtest(pipeline.backtest(s, matches, with_weather=a.weather))
+        bp = s.predictions_dir / "betting_backtest.json"
+        bb = json.loads(bp.read_text(encoding="utf-8")) if bp.exists() else None
+        if bb:
+            print("\nApuestas simuladas en temporadas de prueba (Bet365, %s € por apuesta):" % bb["config"]["stake"])
+            for k, v in bb["strategies"].items():
+                print(f"  {k:9s} {v['bets']:5d} apuestas, aciertos {v['won']}, beneficio {v['profit']:+.0f} €, ROI {100 * v['roi']:+.1f} %")
     if cmd in ("train", "all"):
         if not (s.processed_dir / "oos_table.csv").exists():
             pipeline.backtest(s, matches, with_weather=a.weather)
@@ -98,6 +122,9 @@ def main(argv: list[str] | None = None) -> int:
             print(f"No se pudo calibrar: {e}")
             return 1
         return 0
+    if cmd == "export-site":
+        _export_site(s, matches, projection=True)
+        return 0
     if cmd == "evaluate-live":
         ev = json.dumps(history.evaluate_live(s, matches), indent=2)
         (s.predictions_dir / "live_eval.json").write_text(ev, encoding="utf-8")
@@ -108,6 +135,8 @@ def main(argv: list[str] | None = None) -> int:
         big = pred.save_predictions(s, preds, matches=matches)
         print((s.predictions_dir / "latest.md").read_text(encoding="utf-8"))
         _notify_moves(s, big, a.notify)
+        _bets(s, matches, preds)
+        _export_site(s, matches, projection=True)
         if a.notify and preds:
             soon = notify.upcoming_within(preds, int(s.get("notify", "summary_hours", 48)))
             if soon:
@@ -122,6 +151,9 @@ def main(argv: list[str] | None = None) -> int:
         fresh = [p for p in preds if p["lineup_confirmed"] and not prev.get((p["home"], p["away"]), {}).get("lineup_confirmed")]
         big = pred.save_predictions(s, preds, merge=True, matches=matches) if preds else []
         _notify_moves(s, big, a.notify)
+        if preds:
+            _bets(s, matches, preds)
+            _export_site(s, matches, projection=False)
         print(f"Partidos en ventana: {len(preds)}; con alineación nueva: {len(fresh)}")
         explained = {(m["home"], m["away"]) for m in big}
         for p in fresh:

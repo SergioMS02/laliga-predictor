@@ -82,6 +82,23 @@ Causas posibles: bajas y alineaciones (con nombres), resultados y forma (con los
 
 La carpeta `site/` es una web estática con forma de boleto de quiniela: casillas 1/X/2 rellenas según la probabilidad, evolución de cada partido, explicación de los cambios importantes, marcadores probables y cuánto acierta el modelo. Se publica gratis con GitHub Pages y se regenera sola cada vez que cambian las predicciones.
 
+Pestañas:
+
+- **Partidos**: boleto 1X2, evolución, por qué cambian, y en cada partido alineaciones dibujadas en el campo (oficiales o probables) y comparativa de estadísticas.
+- **Clasificación**: tabla actual y proyección de final de temporada (10.000 simulaciones Monte Carlo: título, Champions, Europa, descenso y probabilidad de cada puesto).
+- **Equipos**: ficha de cada equipo (forma, xG, Elo, jugadores clave, casa/fuera).
+- **Aciertos**: rendimiento real de las predicciones ya emitidas, comparación con las casas y estado de cada fuente de datos (`predictions/sources.json`).
+- **Apuestas simuladas**: ver abajo.
+
+### Apuestas simuladas (dinero ficticio)
+
+Cada vez que se predice, el bot "apuesta" 10 € ficticios por partido con las cuotas de **Bet365** (las de football-data.co.uk) siguiendo dos estrategias:
+
+- **Favorito**: al resultado más probable (como rellenar la quiniela).
+- **Valor**: solo cuando probabilidad del modelo × cuota ≥ 1,05 (y cuota ≤ 8).
+
+La apuesta se actualiza con la última cuota hasta que empieza el partido, se congela y se liquida con el resultado. Todo queda en `predictions/bets.csv` (historial completo), `predictions/bets_summary.json` (balance) y `predictions/betting_backtest.json` (lo que habría pasado en temporadas pasadas). Se configura en `config.yaml → betting`. **No es un consejo de apuesta**: las casas aciertan algo más que el modelo y cobran margen, así que lo esperable es perder a la larga.
+
 Para activarla (una vez): *Settings → Pages → Build and deployment → Source:* **GitHub Actions**. Después, *Actions → Web → Run workflow*. Quedará en `https://<tu-usuario>.github.io/laliga-predictor/`.
 
 Para verla en local: `python site/build.py && python -m http.server -d site` y abre `http://localhost:8000`.
@@ -182,6 +199,7 @@ Las noticias solo cuentan para jugadores que ya aparecen en el historial de alin
 | `laliga backfill-espn [--seasons 2016-2026]` | Historial de alineaciones, árbitros y calendario europeo/Copa |
 | `laliga calibrate-availability` | Estima el peso real de las bajas |
 | `laliga evaluate-live` | Rendimiento de las predicciones ya emitidas |
+| `laliga export-site` | Proyección de temporada, fichas de equipos y aciertos para la web |
 | `laliga all` | update + backtest + train + predict |
 
 Todos aceptan `--offline` (solo caché) y `-v` (registro detallado).

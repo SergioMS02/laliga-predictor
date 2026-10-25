@@ -23,17 +23,14 @@ FIXTURES_URL = "https://www.football-data.co.uk/fixtures.csv"
 
 
 def upcoming_odds(settings: Settings) -> pd.DataFrame:
-    """Cuotas de los próximos partidos (football-data.co.uk/fixtures.csv, gratis)."""
-    try:
-        raw = pd.read_csv(io.StringIO(http.get(FIXTURES_URL, timeout=20, retries=1).content.decode("utf-8-sig")))
-        raw = raw[raw.get("Div") == "SP1"]
-        if raw.empty:
-            return pd.DataFrame()
-        df = results.standardize_football_data(raw, "football-data-fixtures")
-        return df[["season", "home", "away", "odds_h", "odds_d", "odds_a"]]
-    except Exception as e:
-        log.warning("Cuotas de próximos partidos no disponibles: %s", e)
+    """Cuotas de los próximos partidos (football-data.co.uk/fixtures.csv, gratis; caché de load_matches)."""
+    df = results.fetch_fixtures(settings, online=False)
+    if df.empty:
+        df = results.fetch_fixtures(settings, online=True)
+    if df.empty:
         return pd.DataFrame()
+    cols = ["season", "home", "away", "odds_h", "odds_d", "odds_a"] + [c for c in ("b365_h", "b365_d", "b365_a") if c in df]
+    return df[cols].dropna(subset=["odds_h"])
 
 
 def record_odds_snapshot(settings: Settings, odds: pd.DataFrame, now: pd.Timestamp) -> None:
@@ -144,6 +141,7 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
     use_news = online and settings.get("news", "enabled", True)
     out_rows = []
     new_lineups = []
+    n_news = 0
     for idx, r in tab.iterrows():
         info = {"lineup_confirmed": False, "absences": {}, "d_home": (0.0, 0.0), "d_away": (0.0, 0.0),
                 "availability_source": "ninguna"}
@@ -155,6 +153,7 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             if players is not None and len(players):
                 pl = players[(players.team == team) & players.season.isin([season_now, season_now - 1])]
             imps[side] = av.attach_production(imp, pl)
+        squads = {}
         if det is not None and det.lineup_confirmed:
             info["lineup_confirmed"] = True
             info["availability_source"] = "alineación oficial"
@@ -162,6 +161,8 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                 starters = [p.player_id for p in det.lineups[side] if p.starter]
                 info[f"d_{side}"] = av.deficits_from_lineup(imps[side], starters)
                 info.setdefault("lineups", {})[side] = [p.name for p in det.lineups[side] if p.starter]
+                squads[side] = av.squad_view(imps[side], [p for p in det.lineups[side] if p.starter],
+                                             det.formations.get(side))
             new_lineups.append(espn.lineup_rows(det, r.date, r.home, r.away))
         elif use_news:
             for side, team in (("home", r.home), ("away", r.away)):
@@ -171,8 +172,19 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                 info["absences"][team] = ab[["player", "status", "reason"]].to_dict(orient="records")
                 info[f"d_{side}"] = av.deficits_from_absences(imps[side], ab, dw)
                 info.setdefault("news_count", {})[team] = len(items)
+                n_news += len(items)
             if any(info["absences"].values()):
                 info["availability_source"] = "noticias"
+        for side, team in (("home", r.home), ("away", r.away)):
+            if side not in squads:
+                sq = av.squad_view(imps[side], None, None, info["absences"].get(team))
+                if not sq["xi"] and players is not None and len(players):
+                    pl = players[(players.team == team) & (players.season == season_now)]
+                    if pl.minutes.sum() < 900:
+                        pl = players[(players.team == team) & (players.season == season_now - 1)]
+                    sq = av.squad_from_players(pl, info["absences"].get(team))
+                squads[side] = sq
+        info["squads"] = squads
         lam0, mu0 = dc.expected_goals(r.home, r.away)
         lam, mu = av.adjust_goals(lam0, mu0, info["d_home"], info["d_away"], a_coef, b_coef)
         dcp = summarize_matrix(dc.score_matrix(lam, mu), lam, mu)
@@ -190,6 +202,10 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                          "extra_base": extra_base, "expected_xi": expected_xi, **info})
     if new_lineups:
         espn.save_lineups(settings, pd.concat(new_lineups, ignore_index=True))
+    if online:
+        pipeline._status("ESPN (alineaciones y árbitro del partido)", len(details) > 0, len(details))
+        if use_news:
+            pipeline._status("Google News (bajas)", n_news > 0, n_news)
 
     for o in out_rows:
         i = o["idx"]
@@ -200,8 +216,12 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
 
     # 5) Mercado (y su movimiento desde la primera cuota vista) y clima
     odds = upcoming_odds(settings) if online else pd.DataFrame()
+    b365 = {}
     if len(odds):
-        record_odds_snapshot(settings, odds, now)
+        if "b365_h" in odds:
+            b365 = {(r.season, r.home, r.away): [r.b365_h, r.b365_d, r.b365_a] for r in odds.itertuples()
+                    if not pd.isna(r.b365_h)}
+        record_odds_snapshot(settings, odds[["season", "home", "away", "odds_h", "odds_d", "odds_a"]], now)
     snaps = odds_movement(settings)
     if len(snaps):
         tab = tab.drop(columns=["odds_h", "odds_d", "odds_a", "odds_close_h", "odds_close_d", "odds_close_a"],
@@ -261,6 +281,8 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                 if k in r.index},
             "absences": o["absences"],
             "lineups": o.get("lineups"),
+            "squads": o.get("squads"),
+            "b365": [float(x) for x in b365[(r.season, r.home, r.away)]] if (r.season, r.home, r.away) in b365 else None,
             "_snapshot": movements.make_snapshot(
                 r, o, rho=dc.params.rho, a=a_coef, b=b_coef, max_goals=dc.max_goals),
         })

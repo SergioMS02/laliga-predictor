@@ -74,6 +74,10 @@ def main() -> None:
         "recent_moves": recent,
         "backtest": {k: bt.get(k) for k in ("overall", "market_subset", "calibration", "test_seasons", "by_season")},
         "live": read_json(PRED / "live_eval.json", {}),
+        "extra": read_json(PRED / "site_extra.json", {}),
+        "sources": read_json(PRED / "sources.json", {}),
+        "bets": read_json(PRED / "bets_summary.json", {}),
+        "bets_backtest": read_json(PRED / "betting_backtest.json", {}),
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     print(f"{OUT}: {len(matches)} partidos, {len(recent)} cambios importantes")

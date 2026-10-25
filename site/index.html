@@ -27,7 +27,16 @@
   </div>
 </header>
 
+<nav class="tabs wrap" aria-label="Secciones">
+  <a href="#partidos" data-tab="partidos">Partidos</a>
+  <a href="#clasificacion" data-tab="clasificacion">Clasificación</a>
+  <a href="#equipos" data-tab="equipos">Equipos</a>
+  <a href="#aciertos" data-tab="aciertos">Aciertos</a>
+  <a href="#apuestas" data-tab="apuestas">Apuestas simuladas</a>
+</nav>
+
 <main class="wrap">
+ <div class="view" data-view="partidos">
   <section aria-labelledby="slip-title" class="slip-section">
     <div class="section-head">
       <h2 id="slip-title" class="section-title">Próximos partidos</h2>
@@ -45,10 +54,64 @@
     <ol class="moves" id="moves"></ol>
   </section>
 
+ </div>
+
+ <div class="view" data-view="clasificacion" hidden>
+  <section aria-labelledby="table-title">
+    <div class="section-head">
+      <h2 id="table-title" class="section-title">Clasificación y proyección</h2>
+      <p class="section-note" id="proj-note">El resto de la temporada simulado miles de veces con el modelo.</p>
+    </div>
+    <div id="standings"></div>
+  </section>
+  <section aria-labelledby="dist-title">
+    <div class="section-head">
+      <h2 id="dist-title" class="section-title">Dónde puede acabar cada equipo</h2>
+      <p class="section-note">Probabilidad de terminar en cada puesto. Cuanto más intenso el color, más probable.</p>
+    </div>
+    <div id="positions"></div>
+  </section>
+ </div>
+
+ <div class="view" data-view="equipos" hidden>
+  <section aria-labelledby="teams-title">
+    <div class="section-head">
+      <h2 id="teams-title" class="section-title">Equipos</h2>
+      <p class="section-note">Ordenados por su fuerza actual (Elo). Elige un equipo para ver sus números.</p>
+    </div>
+    <div class="teams" id="teams"></div>
+  </section>
+ </div>
+
+ <div class="view" data-view="apuestas" hidden>
+  <section aria-labelledby="bets-title">
+    <div class="section-head">
+      <h2 id="bets-title" class="section-title">Apuestas simuladas</h2>
+      <p class="section-note" id="bets-note">Dinero ficticio: el modelo apuesta solo, con las cuotas de Bet365, y aquí queda todo lo que habría ganado o perdido.</p>
+    </div>
+    <div id="bets"></div>
+  </section>
+  <section aria-labelledby="betsbt-title">
+    <div class="section-head">
+      <h2 id="betsbt-title" class="section-title">Si lo hubieras hecho en temporadas pasadas</h2>
+      <p class="section-note">Las mismas reglas aplicadas a cada partido de las temporadas de prueba, con la cuota de Bet365 que había antes del partido.</p>
+    </div>
+    <div id="bets-bt"></div>
+  </section>
+ </div>
+
+ <div class="view" data-view="aciertos" hidden>
+  <section aria-labelledby="track-title">
+    <div class="section-head">
+      <h2 id="track-title" class="section-title">Aciertos de esta temporada</h2>
+      <p class="section-note">Lo que dijo el modelo antes de cada partido frente a lo que pasó.</p>
+    </div>
+    <div id="track"></div>
+  </section>
   <section aria-labelledby="trust-title" class="trust-section">
     <div class="section-head">
-      <h2 id="trust-title" class="section-title">¿Cuánto acierta?</h2>
-      <p class="section-note">Cada partido de las temporadas de prueba se predijo solo con lo que se sabía antes de jugarse.</p>
+      <h2 id="trust-title" class="section-title">¿Cuánto acierta a largo plazo?</h2>
+      <p class="section-note">Prueba con temporadas pasadas: cada partido se predijo solo con lo que se sabía antes de jugarse.</p>
     </div>
     <div class="trust">
       <div class="trust__table" id="bt-table"></div>
@@ -59,6 +122,13 @@
     </div>
     <p class="live" id="live"></p>
   </section>
+  <section aria-labelledby="src-title">
+    <div class="section-head">
+      <h2 id="src-title" class="section-title">Fuentes de la última actualización</h2>
+    </div>
+    <ul class="sources" id="sources"></ul>
+  </section>
+ </div>
 </main>
 
 <footer class="footer">

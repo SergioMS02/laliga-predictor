@@ -84,6 +84,13 @@ movements:
   threshold_pts: 4          # cambio (en puntos porcentuales) que se considera importante y se explica
   min_store_pts: 0.5        # cambios menores no se guardan en el historial (salvo nueva info de bajas)
 
+# Cartera de apuestas SIMULADA (sin dinero real) con cuotas de Bet365
+betting:
+  stake: 10                 # euros por apuesta
+  min_edge: 0.05            # estrategia "valor": probabilidad × cuota ≥ 1,05
+  max_odds: 8.0             # no apostar a cuotas mayores
+  min_prob: 0.0
+
 predict:
   days_ahead: 8
   lineup_window_minutes: 100   # vigilar alineaciones de partidos que empiezan en este margen

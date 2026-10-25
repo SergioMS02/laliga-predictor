@@ -44,10 +44,20 @@ def load_matches(settings: Settings, online: bool = True, days_ahead: int | None
             espn_res = espn.to_results(sb)
         except Exception as e:
             log.warning("ESPN no disponible: %s", e)
+            _ESPN_ERR["e"] = str(e)[:200]
     of = openfootball.fetch_openfootball(settings, cur) if online else _cached_openfootball(settings, cur)
+    fx = results.fetch_fixtures(settings, online)
     hist_cur = hist[hist.season == cur]
     hist_old = hist[hist.season < cur]
-    cur_merged = results.merge_sources(hist_cur, espn_res, of)
+    # prioridad: resultados de football-data > ESPN > calendario+hora de fixtures.csv > openfootball
+    cur_merged = results.merge_sources(hist_cur, espn_res, fx, of)
+    if online:
+        _status("football-data (histórico)", len(hist_old) > 0, int((hist.source == "football-data").sum()))
+        _status("football-data (temporada actual)", len(hist_cur) > 0, len(hist_cur))
+        _status("football-data (próximos partidos y cuotas)", len(fx) > 0, len(fx))
+        _status("ESPN (calendario, horarios, alineaciones)", espn_res is not None and len(espn_res) > 0,
+                0 if espn_res is None else len(espn_res), None if espn_res is not None else _ESPN_ERR.get("e"))
+        _status("openfootball (calendario de respaldo)", len(of) > 0, len(of))
     matches = pd.concat([hist_old, cur_merged], ignore_index=True)
     matches = apply_referees(settings, matches)
     xg = load_extras(settings, online)["xg"]
@@ -57,6 +67,20 @@ def load_matches(settings: Settings, online: bool = True, days_ahead: int | None
 
 
 _EXTRAS: dict = {}
+_ESPN_ERR: dict = {}
+SOURCE_STATUS: dict = {}
+
+
+def _status(name: str, ok: bool, rows: int | None = None, error: str | None = None) -> None:
+    """Registra qué fuentes respondieron en esta ejecución (se guarda en predictions/sources.json)."""
+    SOURCE_STATUS[name] = {"ok": bool(ok), "rows": None if rows is None else int(rows), "error": error}
+
+
+def save_status(settings: Settings) -> None:
+    if SOURCE_STATUS:
+        out = {"at": pd.Timestamp.now(tz="UTC").isoformat(timespec="minutes"), "sources": SOURCE_STATUS}
+        (settings.predictions_dir / "sources.json").write_text(json.dumps(out, indent=1, ensure_ascii=False),
+                                                              encoding="utf-8")
 
 
 def load_extras(settings: Settings, online: bool = False) -> dict:
@@ -85,6 +109,10 @@ def load_extras(settings: Settings, online: bool = False) -> dict:
     except Exception as e:
         log.warning("Entrenadores: %s", e)
         ex["coaches"] = pd.DataFrame(columns=coaches.COLS)
+    if online:
+        _status("Understat (xG)", len(ex["xg"]) > 0, len(ex["xg"]))
+        _status("Europa y Copa (calendario)", len(ex["other"]) > 0, len(ex["other"]))
+        _status("Wikidata (entrenadores)", len(ex["coaches"]) > 0, len(ex["coaches"]))
     _EXTRAS[key] = ex
     if online:
         _EXTRAS[(str(settings.root), False)] = ex
@@ -268,6 +296,11 @@ def backtest(settings: Settings, matches: pd.DataFrame, with_weather: bool = Fal
     (settings.processed_dir / "backtest.json").write_text(json.dumps(report, indent=2, ensure_ascii=False))
     pd.DataFrame({"season": seasons, "y": y, **{f"{k}_{c}": P[k][:, i] for k in P for i, c in enumerate("HDA")}},
                  index=idx).to_csv(settings.processed_dir / "backtest_predictions.csv")
+    try:
+        from . import betting
+        betting.backtest_strategies(settings, matches)
+    except Exception as e:  # la simulación de apuestas nunca debe romper el backtest
+        log.warning("Simulación de apuestas no disponible: %s", e)
     return report
 
 

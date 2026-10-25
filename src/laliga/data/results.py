@@ -27,9 +27,10 @@ PRE_ODDS = [("PSH", "PSD", "PSA"), ("AvgH", "AvgD", "AvgA"), ("BbAvH", "BbAvD", 
             ("B365H", "B365D", "B365A"), ("WHH", "WHD", "WHA")]
 CLOSE_ODDS = [("PSCH", "PSCD", "PSCA"), ("AvgCH", "AvgCD", "AvgCA"), ("B365CH", "B365CD", "B365CA")]
 
+B365_COLS = ["b365_h", "b365_d", "b365_a", "b365c_h", "b365c_d", "b365c_a"]
 COLUMNS = ["season", "date", "kickoff", "home", "away", "hg", "ag", "result", "referee",
            *STAT_MAP.values(), "odds_h", "odds_d", "odds_a", "odds_close_h", "odds_close_d",
-           "odds_close_a", "source"]
+           "odds_close_a", *B365_COLS, "source"]
 
 
 def season_of(d: date | datetime | pd.Timestamp) -> int:
@@ -98,6 +99,11 @@ def standardize_football_data(raw: pd.DataFrame, source: str) -> pd.DataFrame:
     close = _pick_odds(raw, CLOSE_ODDS)
     df["odds_h"], df["odds_d"], df["odds_a"] = pre.T
     df["odds_close_h"], df["odds_close_d"], df["odds_close_a"] = close.T
+    # Bet365 por separado (para la cartera de apuestas simulada)
+    b = _pick_odds(raw, [("B365H", "B365D", "B365A")])
+    bc = _pick_odds(raw, [("B365CH", "B365CD", "B365CA")])
+    df["b365_h"], df["b365_d"], df["b365_a"] = b.T
+    df["b365c_h"], df["b365c_d"], df["b365c_a"] = bc.T
     df["season"] = df["date"].map(season_of)
     df["source"] = source
     return df[COLUMNS].reset_index(drop=True)
@@ -118,8 +124,9 @@ def fetch_season(settings: Settings, start_year: int, refresh: bool = False,
         return _read_cache(cache) if cache.exists() else None
     if cache.exists() and not (refresh or is_current):
         cached = _read_cache(cache)
-        # una copia del espejo no trae cuotas: se reintenta la fuente principal
-        if not (cached["source"] == "mirror").all():
+        # una copia del espejo no trae cuotas, y las cachés antiguas no traen Bet365:
+        # en ambos casos se reintenta la fuente principal
+        if not (cached["source"] == "mirror").all() and "b365_h" in cached.columns:
             return cached
     for url_key, source in (("football_data_url", "football-data"), ("mirror_url", "mirror")):
         url = settings.get("data", url_key).format(code=code)
@@ -179,3 +186,24 @@ def merge_sources(*frames: pd.DataFrame) -> pd.DataFrame:
         first[c] = lead[c]
     out = first.reset_index()[COLUMNS]
     return out.sort_values(["date", "home"]).reset_index(drop=True)
+
+
+FIXTURES_URL = "https://www.football-data.co.uk/fixtures.csv"
+
+
+def fetch_fixtures(settings: Settings, online: bool = True) -> pd.DataFrame:
+    """Próximos partidos de LaLiga con fecha, hora y cuotas (football-data.co.uk/fixtures.csv)."""
+    cache = settings.raw_dir / "fixtures_SP1.csv"
+    if online:
+        try:
+            text = http.get(FIXTURES_URL, timeout=20, retries=1).content.decode("utf-8-sig")
+            raw = pd.read_csv(io.StringIO(text))
+            raw = raw[raw.get("Div") == "SP1"] if "Div" in raw.columns else raw.iloc[0:0]
+            df = standardize_football_data(raw, "football-data-fixtures") if len(raw) else pd.DataFrame(columns=COLUMNS)
+            df.to_csv(cache, index=False)
+            return df
+        except Exception as e:
+            log.warning("fixtures.csv no disponible: %s", e)
+    if cache.exists():
+        return _read_cache(cache)
+    return pd.DataFrame(columns=COLUMNS)

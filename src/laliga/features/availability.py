@@ -181,3 +181,87 @@ def calibrate(df: pd.DataFrame, prior=(0.6, 0.35), prior_strength: float = 5.0) 
         return v + 0.5 * prior_strength * ((a - prior[0]) ** 2 + (b - prior[1]) ** 2)
     res = minimize(nll, np.array(prior), method="L-BFGS-B", bounds=[(0, 3), (0, 3)])
     return float(res.x[0]), float(res.x[1])
+
+
+# ---------------------------------------------------------------------------
+# Vista de plantilla para la web (once esperado u oficial)
+# ---------------------------------------------------------------------------
+def expected_xi(imp: pd.DataFrame) -> pd.DataFrame:
+    """Once tipo: el portero más habitual y los 10 jugadores de campo con más titularidades."""
+    if imp is None or imp.empty:
+        return imp if imp is not None else pd.DataFrame()
+    d = imp[imp.importance > 0].copy()
+    if d.empty:
+        return d
+    d["role"] = d["position"].map(role) if "position" in d else "M"
+    gk = d[d.role == "G"].sort_values("importance", ascending=False).head(1)
+    field = d[d.role != "G"].sort_values("importance", ascending=False).head(11 - len(gk))
+    return pd.concat([gk, field])
+
+
+def _pinfo(row, absent=None) -> dict:
+    return {"name": row.get("name", ""), "pos": row.get("position", "") or "", "role": role(row.get("position")),
+            "imp": round(float(row.get("importance", 0) or 0), 2),
+            "att": round(float(row.get("att_w", 0) or 0), 2), "absent": absent}
+
+
+def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str | None = None,
+               absences: pd.DataFrame | list | None = None) -> dict:
+    """Once para dibujar en la web.
+
+    starters: lista de espn.Player (alineación oficial) o None (se usa el once tipo)."""
+    imp = imp if imp is not None else pd.DataFrame(columns=["player_id", "name", "position", "importance"])
+    by_id = {str(r.player_id): r._asdict() for r in imp.itertuples(index=False)} if len(imp) else {}
+    exp = expected_xi(imp)
+    if starters:
+        xi = []
+        ids = set()
+        for p in starters:
+            r = by_id.get(str(p.player_id), {"name": p.name, "position": p.position, "importance": 0, "att_w": 0})
+            info = _pinfo({**r, "name": p.name, "position": p.position or r.get("position", "")})
+            info["jersey"] = getattr(p, "jersey", "")
+            info["usual"] = info["imp"] >= 0.5
+            xi.append(info)
+            ids.add(str(p.player_id))
+        out = [{"name": r["name"], "status": "no titular", "imp": round(float(r["importance"]), 2)}
+               for _, r in exp.iterrows() if str(r["player_id"]) not in ids]
+        return {"confirmed": True, "formation": formation, "xi": xi, "out": out}
+    ab = {}
+    if absences is not None:
+        rows = absences.to_dict(orient="records") if isinstance(absences, pd.DataFrame) else absences
+        ab = {a["player"]: a.get("status", "out") for a in rows}
+    xi = []
+    for _, r in exp.iterrows():
+        info = _pinfo(r, ab.get(r["name"]))
+        info["usual"] = True
+        xi.append(info)
+    out = [{"name": n, "status": s, "imp": round(float(imp[imp.name == n].importance.max()), 2) if (imp.name == n).any() else 0}
+           for n, s in ab.items()]
+    return {"confirmed": False, "formation": None, "xi": xi, "out": out}
+
+
+def squad_from_players(players: pd.DataFrame | None, absences: list | None = None) -> dict:
+    """Once probable por minutos jugados (Understat) cuando aún no hay historial de alineaciones."""
+    if players is None or players.empty:
+        return {"confirmed": False, "formation": None, "xi": [], "out": [], "source": None}
+    p = players.copy()
+    p["role"] = p["position"].fillna("").map(lambda s: {"GK": "G", "D": "D", "M": "M", "F": "F"}.get(str(s).split(" ")[0], "M"))
+    p = p.sort_values("minutes", ascending=False)
+    total = p.minutes.max() or 1
+    pick = pd.concat([p[p.role == "G"].head(1), p[p.role == "D"].head(4), p[p.role == "M"].head(3), p[p.role == "F"].head(3)])
+    if len(pick) < 11:
+        pick = pd.concat([pick, p[~p.index.isin(pick.index) & (p.role != "G")].head(11 - len(pick))])
+    ab = {a["player"]: a.get("status", "out") for a in (absences or [])}
+    names = list(ab)
+    xi = []
+    for r in pick.head(11).itertuples():
+        hit = None
+        if names:
+            from rapidfuzz import fuzz as _f, process as _p
+            best = _p.extractOne(r.player, names, scorer=_f.token_set_ratio)
+            hit = ab[best[0]] if best and best[1] >= 88 else None
+        per90 = (r.xg + r.xa) / r.minutes * 90 if r.minutes else 0
+        xi.append({"name": r.player, "pos": r.role, "role": r.role, "imp": round(float(r.minutes / total), 2),
+                   "att": round(float(per90), 2), "absent": hit, "usual": True})
+    return {"confirmed": False, "formation": None, "xi": xi,
+            "out": [{"name": n, "status": s, "imp": None} for n, s in ab.items()], "source": "minutos"}
