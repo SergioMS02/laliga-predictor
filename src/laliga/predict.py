@@ -4,14 +4,14 @@ from __future__ import annotations
 import io
 import json
 import logging
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 import numpy as np
 import pandas as pd
 
 from . import movements, pipeline
 from .config import Settings
-from .data import espn, http, news, results
+from .data import espn, http, news, results, suspensions
 from .features import availability as av
 from .features.sequential import build_sequential_features
 from .models.dixon_coles import DixonColes, summarize_matrix
@@ -141,6 +141,12 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
     lookback = int(settings.get("availability", "lookback_matches", 10))
     dw = float(settings.get("availability", "doubtful_weight", 0.5))
     use_news = online and settings.get("news", "enabled", True)
+    cards = None
+    if use_news:
+        try:
+            cards = suspensions.fetch_cards(settings, date(season_now, 8, 1), online=online)
+        except Exception as e:
+            log.warning("Tarjetas no disponibles: %s", e)
     out_rows = []
     new_lineups = []
     n_news = 0
@@ -169,8 +175,19 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
         elif use_news:
             for side, team in (("home", r.home), ("away", r.away)):
                 squad = list(imps[side].name)
+                if players is not None and len(players):  # también los que aún no tienen historial de titularidades
+                    extra = players[(players.team == team) & (players.season == season_now)].player
+                    squad += [x for x in extra if x not in squad]
                 items = news.fetch_team_news(settings, team)
                 ab = news.extract_absences(settings, team, items, squad)
+                try:  # sancionados (tarjetas de la temporada + noticias de sanciones de las últimas semanas)
+                    ko = pd.Timestamp(r.kickoff) if not pd.isna(r.get("kickoff")) else pd.Timestamp(r.date)
+                    ko = ko.tz_convert(None) if ko.tzinfo else ko
+                    sus = suspensions.for_match(settings, team, squad, matches, cards, ko, online)
+                    if len(sus):
+                        ab = pd.concat([ab[~ab.player.isin(sus.player)], sus], ignore_index=True)
+                except Exception as e:
+                    log.warning("Sanciones no disponibles para %s: %s", team, e)
                 info["absences"][team] = ab[["player", "status", "reason"]].to_dict(orient="records")
                 info[f"d_{side}"] = av.deficits_from_absences(imps[side], ab, dw)
                 info.setdefault("news_count", {})[team] = len(items)

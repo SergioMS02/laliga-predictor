@@ -123,9 +123,9 @@ def _match_to_squad(df: pd.DataFrame, squad: list[str], threshold: int = 85) -> 
         return df.iloc[0:0]
     keep = []
     for _, r in df.iterrows():
-        best = process.extractOne(r.player, squad, scorer=fuzz.token_set_ratio)
+        best = process.extractOne(_plain(r.player), [_plain(x) for x in squad], scorer=fuzz.token_set_ratio)
         if best and best[1] >= threshold:
-            keep.append({**r.to_dict(), "player": best[0]})
+            keep.append({**r.to_dict(), "player": squad[best[2]]})
     out = pd.DataFrame(keep, columns=df.columns)
     if out.empty:
         return out
@@ -206,3 +206,9 @@ def extract_absences(settings: Settings, team: str, items: list[NewsItem], squad
         except Exception as e:
             log.warning("LLM falló para %s (%s); uso reglas", team, e)
     return rule_based_absences(items, squad)
+
+
+def _plain(s) -> str:
+    import unicodedata as _u
+    s = _u.normalize("NFKD", str(s)).encode("ascii", "ignore").decode().lower()
+    return " ".join(s.replace("-", " ").replace(".", " ").split())

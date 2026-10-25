@@ -100,9 +100,10 @@ def attach_production(imp: pd.DataFrame, players: pd.DataFrame | None) -> pd.Dat
             per90 = ((agg.xg + agg.xa) / agg.minutes * 90).clip(0.01, 1.5)
             names = list(per90.index)
             for i, r in imp.iterrows():
-                best = process.extractOne(str(r["name"]), names, scorer=fuzz.token_set_ratio)
+                plain_names = [_plain(n) for n in names]
+                best = process.extractOne(_plain(r["name"]), plain_names, scorer=fuzz.token_set_ratio)
                 if best and best[1] >= 88:
-                    imp.at[i, "att_w"] = float(per90[best[0]])
+                    imp.at[i, "att_w"] = float(per90.iloc[best[2]])
     imp["att_imp"] = imp.importance * imp.att_w
     imp["def_imp"] = imp.importance * imp.def_w
     return imp
@@ -265,3 +266,9 @@ def squad_from_players(players: pd.DataFrame | None, absences: list | None = Non
                    "att": round(float(per90), 2), "absent": hit, "usual": True})
     return {"confirmed": False, "formation": None, "xi": xi,
             "out": [{"name": n, "status": s, "imp": None} for n, s in ab.items()], "source": "minutos"}
+
+
+def _plain(s) -> str:
+    import unicodedata as _u
+    s = _u.normalize("NFKD", str(s)).encode("ascii", "ignore").decode().lower()
+    return " ".join(s.replace("-", " ").replace(".", " ").split())

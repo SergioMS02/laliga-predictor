@@ -64,7 +64,7 @@ def scorer_probs(xi: list[dict], team_goals: float, players: pd.DataFrame | None
     for pl in xi:
         if pl.get("absent") == "out":
             continue
-        best = process.extractOne(str(pl.get("name", "")), names, scorer=fuzz.token_set_ratio)
+        best = process.extractOne(_plain(pl.get("name", "")), [_plain(n) for n in names], scorer=fuzz.token_set_ratio)
         if not best or best[1] < 85:
             continue
         r = rates.iloc[best[2]]
@@ -81,3 +81,9 @@ def scorer_probs(xi: list[dict], team_goals: float, players: pd.DataFrame | None
         out.append({"name": r["name"], "p": round(1 - math.exp(-lam), 3), "xg90": r["xg90"]})
     out.sort(key=lambda d: -d["p"])
     return out[:top]
+
+
+def _plain(s) -> str:
+    import unicodedata as _u
+    s = _u.normalize("NFKD", str(s)).encode("ascii", "ignore").decode().lower()
+    return " ".join(s.replace("-", " ").replace(".", " ").split())
