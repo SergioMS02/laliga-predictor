@@ -347,6 +347,7 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             ratio = (np.asarray(impact["p_adj"]) / np.clip(np.asarray(impact["p_full"]), 1e-6, None)) ** w
             f = final[k] * ratio
             final[k] = f / f.sum()
+            impact["market_weight"] = round(w, 3)
         preds.append({
             "generated_at": gen,
             "season": int(r.season), "date": str(pd.Timestamp(r.date).date()),

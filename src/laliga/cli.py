@@ -141,6 +141,14 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if cmd in ("backtest", "all"):
         _print_backtest(pipeline.backtest(s, matches, with_weather=a.weather))
+        try:  # tarjetas y córners en las tres últimas temporadas completas
+            from . import props
+            cur = results.current_season()
+            pe = props.evaluate(matches, [cur - 3, cur - 2, cur - 1])
+            (s.predictions_dir / "props_eval.json").write_text(json.dumps(pe), encoding="utf-8")
+            print("Tarjetas y córners:", pe)
+        except Exception as e:
+            log.warning("Evaluación de tarjetas y córners no disponible: %s", e)
         bp = s.predictions_dir / "betting_backtest.json"
         bb = json.loads(bp.read_text(encoding="utf-8")) if bp.exists() else None
         if bb:

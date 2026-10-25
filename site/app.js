@@ -154,6 +154,13 @@ function propsHtml(m) {
     <p class="quiet small">${refTxt}</p>
     ${(pl.home || []).length || (pl.away || []).length ? `<p class="quiet small">Más papeletas de ver amarilla — ${esc(name(m.home))}: ${plist("home")}${(pl.away || []).length ? `; ${esc(name(m.away))}: ${plist("away")}` : ""}.</p>` : ""}`;
 }
+function impactNote(m) {
+  const ev = (DATA.availability_eval || {}).market_weight_eval;
+  const w = (m.absence_impact || {}).market_weight;
+  if (m.model !== "stacker_mercado") return "Sin cuotas de las casas para este partido: el efecto se aplica entero a la predicción.";
+  if (ev && ev.previas && (w == null || w < 0.05)) return `Medido en ${ev.previas.n.toLocaleString("es-ES")} partidos de 2021 a 2025: las cuotas de las casas ya descuentan las bajas y los onces, así que sumar este efecto encima empeoraba la predicción (error ${dec(ev.previas.log_loss_w1, 3)} frente a ${dec(ev.previas.log_loss_casas, 3)}). Por eso la probabilidad final no lo vuelve a sumar; sí cambia los goles esperados, los goleadores y la predicción cuando no hay cuotas.`;
+  return `Con cuotas, el efecto se suma con un peso del ${Math.round(100 * (w || 0))} % (medido con alineaciones de temporadas pasadas).`;
+}
 function impactHtml(m) {
   const im = m.absence_impact;
   const outs = Object.entries(m.absences || {}).flatMap(([t, l]) => (l || []).filter((a) => a.status === "out").map((a) => `${a.player} (${name(t)})`));
@@ -165,7 +172,7 @@ function impactHtml(m) {
     <p>Goles esperados: ${esc(name(m.home))} ${dec(im.xg_full[0], 2)} → <b>${dec(im.xg_adj[0], 2)}</b>, ${esc(name(m.away))} ${dec(im.xg_full[1], 2)} → <b>${dec(im.xg_adj[1], 2)}</b>.
     En el modelo de goles: 1 ${sgn(d(0))} · X ${sgn(d(1))} · 2 ${sgn(d(2))} puntos.</p>
     ${outs.length ? `<p class="quiet small">Bajas: ${esc(outs.join(", "))}.</p>` : ""}
-    <p class="quiet small">Las cuotas de las casas ya descuentan las bajas que se conocen, así que en la probabilidad final este efecto se aplica a la mitad con noticias y completo con la alineación oficial.</p></div>`;
+    <p class="quiet small">${impactNote(m)}</p></div>`;
 }
 
 /* ---------- Goles y goleadores ---------- */
@@ -674,12 +681,15 @@ function trackHtml() {
 }
 function propsTrackHtml() {
   const t = (DATA.extra || {}).track_props || {};
-  if (!t.n) return '<p class="quiet">Se irá llenando a medida que se jueguen los partidos predichos desde ahora.</p>';
+  const pe0 = DATA.props_eval || {};
+  if (!t.n) return (pe0.cards ? `<p class="quiet small">En temporadas pasadas (${pe0.n} partidos), el modelo de tarjetas falla de media por ${dec(pe0.cards.mae_modelo, 2)} amarillas por partido (con la media de la liga: ${dec(pe0.cards.mae_media, 2)}) y el de córners por ${dec(pe0.corners.mae_modelo, 2)} (media: ${dec(pe0.corners.mae_media, 2)}).</p>` : "") + '<p class="quiet">El seguimiento en vivo se irá llenando a medida que se jueguen los partidos predichos desde ahora.</p>';
   const row = (lab, x, fmt) => x ? `<tr><th scope="row" class="l">${lab}</th><td>${fmt(x.pred_mean ?? x.pred)}</td><td>${fmt(x.obs)}</td><td>${x.n}</td><td>${x.brier != null ? dec(x.brier, 3) : x.mae != null ? `±${dec(x.mae, 2)}` : "–"}</td></tr>` : "";
   const pc = (v) => `${Math.round(100 * v)} %`, n2 = (v) => dec(v, 2);
   let sc = "";
   if (t.scorers) sc = `<p>Goleadores: el modelo esperaba <b>${dec(t.scorers.expected_goals, 1)}</b> partidos con gol entre los jugadores señalados y hubo <b>${t.scorers.actual}</b> (${t.scorers.n} predicciones).</p>${calibMini(t.scorers.bins, "Goleadores")}`;
-  return `<div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Mercado</th><th scope="col">Predicho (media)</th><th scope="col">Real</th><th scope="col">Partidos</th><th scope="col">Error</th></tr></thead><tbody>
+  const pe = DATA.props_eval || {};
+  const peTxt = pe.cards ? `<p class="quiet small">En temporadas pasadas (${pe.n} partidos), el modelo de tarjetas falla de media por ${dec(pe.cards.mae_modelo, 2)} amarillas (usar la media de la liga: ${dec(pe.cards.mae_media, 2)}) y el de córners por ${dec(pe.corners.mae_modelo, 2)} (media: ${dec(pe.corners.mae_media, 2)}). Mejora algo, sobre todo gracias al árbitro, pero son mercados con mucho azar.</p>` : "";
+  return peTxt + `<div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Mercado</th><th scope="col">Predicho (media)</th><th scope="col">Real</th><th scope="col">Partidos</th><th scope="col">Error</th></tr></thead><tbody>
     ${row("Más de 2,5 goles", t.over25, pc)}${row("Marcan los dos", t.btts, pc)}${row("Goles por partido", t.goals, n2)}${row("Amarillas por partido", t.cards, n2)}${row("Córners por partido", t.corners, n2)}
     </tbody></table></div>${sc}
     <p class="quiet small">Si el modelo está bien calibrado, lo predicho de media y lo que pasa deberían parecerse. Error: Brier en probabilidades (menos es mejor; 0,25 es tirar una moneda) y error medio en conteos.</p>`;
