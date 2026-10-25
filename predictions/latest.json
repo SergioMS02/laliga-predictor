@@ -1,6 +1,6 @@
 [
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-10-25",
   "kickoff_utc": "2026-10-25T20:00:00+00:00",
@@ -203,11 +203,11 @@
     "formation": null,
     "xi": [
      {
-      "name": "Aurélien Tchouaméni",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.44,
-      "att": 0.17,
+      "name": "Portero suplente",
+      "pos": "G",
+      "role": "G",
+      "imp": 0.0,
+      "att": 0.0,
       "absent": null,
       "usual": false,
       "replaces": "Thibaut Courtois"
@@ -974,32 +974,10 @@
     0.1595
    ]
   },
-  "movement": {
-   "home": "Barcelona",
-   "away": "Real Madrid",
-   "date": "2026-10-25",
-   "from_ts": "2026-10-25T18:01:26.218166+00:00",
-   "to_ts": "2026-10-25T18:19:14.530876+00:00",
-   "p_from": [
-    0.6545,
-    0.1781,
-    0.1674
-   ],
-   "p_to": [
-    0.69,
-    0.1662,
-    0.1438
-   ],
-   "delta_pts": [
-    3.5,
-    -1.2,
-    -2.4
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-10-26",
   "kickoff_utc": "2026-10-26T20:00:00+00:00",
@@ -1971,7 +1949,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-10-30",
   "kickoff_utc": "2026-10-30T20:00:00+00:00",
@@ -2884,7 +2862,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T13:00:00+00:00",
@@ -3825,7 +3803,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T15:15:00+00:00",
@@ -4788,7 +4766,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T17:30:00+00:00",
@@ -5746,7 +5724,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T20:00:00+00:00",
@@ -6660,7 +6638,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T13:00:00+00:00",
@@ -7669,7 +7647,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T15:15:00+00:00",
@@ -7884,11 +7862,11 @@
     "formation": null,
     "xi": [
      {
-      "name": "Aurélien Tchouaméni",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.44,
-      "att": 0.17,
+      "name": "Portero suplente",
+      "pos": "G",
+      "role": "G",
+      "imp": 0.0,
+      "att": 0.0,
       "absent": null,
       "usual": false,
       "replaces": "Thibaut Courtois"
@@ -8677,7 +8655,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T17:30:00+00:00",
@@ -9657,7 +9635,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:19:14.530876+00:00",
+  "generated_at": "2026-10-25T18:23:22.035693+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T20:00:00+00:00",
