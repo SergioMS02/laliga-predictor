@@ -160,58 +160,6 @@ Sp Gijon,2025-10-08,Borja Jiménez Sáez
 Sp Gijon,2025-10-08,Borja Jiménez Sáez
 Sp Gijon,2025-10-08,Borja Jiménez Sáez
 Villarreal,2026-06-01,Iñigo Pérez
-Elche,2023-03-21,Sebastián Beccacece
-Elche,2022-10-05,Alberto Gallego Lancuentra
-Elche,2021-11-25,Sergio Mantecón
-Elche,2021-02-14,Fran Escribá
-Elche,2022-11-07,Sergio Mantecón
-Elche,2018-02-27,José Rojo Martín
-Elche,2022-11-17,Pablo Machín
-Elche,2021-11-30,Francisco Javier Rodríguez Vílchez
-Elche,2024-07-01,Eder Sarabia
-Elche,2020-08-26,Jorge Almirón
-Elche,2021-11-25,Pablo Manusovich
-Elche,2022-10-12,Jorge Almirón
-Santander,2020-02-04,José Luis Oltra
-Santander,2018-07-01,Iván Ania
-Santander,2019-11-11,Cristóbal Parralo
-Santander,2020-08-03,Javi Rozada
-Santander,2022-12-13,José Alberto López Menéndez
-Santander,2020-12-21,Aritz Solabarrieta
-Santander,2021-07-01,Guillermo Fernández Romo
-Alaves,2024-12-02,Eduardo Coudet
-Alaves,2024-12-02,Eduardo Coudet
-Alaves,2021-12-28,José Luis Mendilibar
-Alaves,2021-12-28,José Luis Mendilibar
-Alaves,2021-01-12,Abelardo Fernández
-Alaves,2021-01-12,Abelardo Fernández
-Alaves,2019-07-01,Asier Garitano
-Alaves,2019-07-01,Asier Garitano
-Alaves,2022-07-01,Luis García Plaza
-Alaves,2022-07-01,Luis García Plaza
-Alaves,2020-08-05,Pablo Machín
-Alaves,2020-08-05,Pablo Machín
-Alaves,2022-04-05,Julio Velázquez
-Alaves,2022-04-05,Julio Velázquez
-Oviedo,2020-02-18,José Ángel Ziganda
-Oviedo,2024-07-06,Javier Calleja Revilla
-Oviedo,2017-06-23,Juan Antonio Anquela
-Oviedo,2025-03-26,Victor Veljko Paunović Ramírez
-Oviedo,2022-10-18,Álvaro Cervera
-Oviedo,2022-06-15,Jon Pérez Bolo
-Oviedo,2019-09-15,Javi Rozada
-Oviedo,2019-04-22,Sergio Egea
-Oviedo,2023-09-21,Luis Carrión
-Malaga,2023-01-26,Sergio Pellicer García
-Malaga,2022-04-03,Pablo Guede
-Malaga,2022-09-21,Pepe Mel
-Oviedo,2025-10-09,Luis Carrión
-Oviedo,2025-12-16,Guillermo Almada
-Alaves,2026-03-03,Quique Sánchez Flores
-Alaves,2026-03-03,Quique Sánchez Flores
-Elche,2026-06-13,Martín Anselmi
-Oviedo,2026-07-01,Julián Calero
-Malaga,2025-11-01,Juan Francisco Funes Arjona
 Vallecano,2024-02-14,Iñigo Pérez
 Vallecano,2024-02-14,Iñigo Pérez
 Vallecano,2017-02-21,Miguel Ángel Sánchez Muñoz
@@ -294,3 +242,55 @@ Girona,2026-07-01,Quique Álvarez
 Girona,2026-07-01,Quique Álvarez
 Valencia,2026-09-13,Óscar Sánchez Fuentes
 Valencia,2026-09-23,Javier Aguirre
+Elche,2023-03-21,Sebastián Beccacece
+Elche,2022-10-05,Alberto Gallego Lancuentra
+Elche,2021-11-25,Sergio Mantecón
+Elche,2021-02-14,Fran Escribá
+Elche,2022-11-07,Sergio Mantecón
+Elche,2018-02-27,José Rojo Martín
+Elche,2022-11-17,Pablo Machín
+Elche,2021-11-30,Francisco Javier Rodríguez Vílchez
+Elche,2024-07-01,Eder Sarabia
+Elche,2020-08-26,Jorge Almirón
+Elche,2021-11-25,Pablo Manusovich
+Elche,2022-10-12,Jorge Almirón
+Santander,2020-02-04,José Luis Oltra
+Santander,2018-07-01,Iván Ania
+Santander,2019-11-11,Cristóbal Parralo
+Santander,2020-08-03,Javi Rozada
+Santander,2022-12-13,José Alberto López Menéndez
+Santander,2020-12-21,Aritz Solabarrieta
+Santander,2021-07-01,Guillermo Fernández Romo
+Alaves,2024-12-02,Eduardo Coudet
+Alaves,2024-12-02,Eduardo Coudet
+Alaves,2021-12-28,José Luis Mendilibar
+Alaves,2021-12-28,José Luis Mendilibar
+Alaves,2021-01-12,Abelardo Fernández
+Alaves,2021-01-12,Abelardo Fernández
+Alaves,2019-07-01,Asier Garitano
+Alaves,2019-07-01,Asier Garitano
+Alaves,2022-07-01,Luis García Plaza
+Alaves,2022-07-01,Luis García Plaza
+Alaves,2020-08-05,Pablo Machín
+Alaves,2020-08-05,Pablo Machín
+Alaves,2022-04-05,Julio Velázquez
+Alaves,2022-04-05,Julio Velázquez
+Oviedo,2020-02-18,José Ángel Ziganda
+Oviedo,2024-07-06,Javier Calleja Revilla
+Oviedo,2017-06-23,Juan Antonio Anquela
+Oviedo,2025-03-26,Victor Veljko Paunović Ramírez
+Oviedo,2022-10-18,Álvaro Cervera
+Oviedo,2022-06-15,Jon Pérez Bolo
+Oviedo,2019-09-15,Javi Rozada
+Oviedo,2019-04-22,Sergio Egea
+Oviedo,2023-09-21,Luis Carrión
+Malaga,2023-01-26,Sergio Pellicer García
+Malaga,2022-04-03,Pablo Guede
+Malaga,2022-09-21,Pepe Mel
+Oviedo,2025-10-09,Luis Carrión
+Oviedo,2025-12-16,Guillermo Almada
+Alaves,2026-03-03,Quique Sánchez Flores
+Alaves,2026-03-03,Quique Sánchez Flores
+Elche,2026-06-13,Martín Anselmi
+Oviedo,2026-07-01,Julián Calero
+Malaga,2025-11-01,Juan Francisco Funes Arjona

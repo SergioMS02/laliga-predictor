@@ -1,15 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-25 15:18 UTC. Umbral de cambio importante: 4 puntos.
-
-## Celta – Betis (2026-10-25)
-
-1 ▃▃ · X ▃▃ · 2 ▃▃
-
-| Momento (Madrid) | 1 | X | 2 | Alineación |
-|---|---|---|---|---|
-| 25/10 15:08 | 35% | 28% | 37% |  |
-| 25/10 16:18 | 35% | 28% | 37% | ✅ |
+Actualizado: 2026-10-25 16:15 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Sociedad – Levante (2026-10-25)
 
@@ -21,11 +12,12 @@ Actualizado: 2026-10-25 15:18 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Barcelona – Real Madrid (2026-10-25)
 
-1 ▆ · X ▂ · 2 ▂
+1 ▆▆ · X ▂▂ · 2 ▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 63% | 19% | 18% |  |
+| 25/10 17:15 | 64% | 18% | 18% |  |
 
 ## Sevilla – Osasuna (2026-10-26)
 
@@ -46,30 +38,33 @@ Actualizado: 2026-10-25 15:18 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Levante – Ath Madrid (2026-10-31)
 
-1 ▂▂ · X ▂▂ · 2 ▅▅
+1 ▂▂▂ · X ▂▂▂ · 2 ▅▅▅
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 21% | 23% | 56% |  |
 | 25/10 16:18 | 21% | 24% | 55% |  |
+| 25/10 17:15 | 21% | 24% | 55% |  |
 
 ## Vallecano – Celta (2026-10-31)
 
-1 ▄▄ · X ▃▃ · 2 ▂▃
+1 ▄▄▄ · X ▃▃▃ · 2 ▂▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 48% | 28% | 24% |  |
 | 25/10 16:18 | 45% | 30% | 25% |  |
+| 25/10 17:15 | 44% | 30% | 26% |  |
 
 ## Betis – Malaga (2026-10-31)
 
-1 ▇▆ · X ▂▂ · 2 ▁▁
+1 ▇▆▆ · X ▂▂▂ · 2 ▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 77% | 14% | 9% |  |
 | 25/10 16:18 | 74% | 16% | 10% |  |
+| 25/10 17:15 | 74% | 16% | 10% |  |
 
 ## Barcelona – Alaves (2026-10-31)
 
@@ -91,21 +86,23 @@ Actualizado: 2026-10-25 15:18 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Santander – Real Madrid (2026-11-01)
 
-1 ▁▁ · X ▂▂ · 2 ▆▆
+1 ▁▁▁ · X ▂▂▂ · 2 ▆▆▆
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 10% | 15% | 75% |  |
 | 25/10 16:18 | 11% | 16% | 73% |  |
+| 25/10 17:15 | 11% | 16% | 73% |  |
 
 ## Elche – Valencia (2026-11-01)
 
-1 ▄▅ · X ▃▃ · 2 ▃▂
+1 ▄▅▅ · X ▃▃▃ · 2 ▃▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 48% | 26% | 26% |  |
 | 25/10 16:18 | 50% | 26% | 24% |  |
+| 25/10 17:15 | 52% | 26% | 22% |  |
 
 ## Ath Bilbao – Sociedad (2026-11-01)
 

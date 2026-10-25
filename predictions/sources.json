@@ -1,5 +1,5 @@
 {
- "at": "2026-10-25T15:18+00:00",
+ "at": "2026-10-25T16:15+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -28,7 +28,7 @@
   },
   "Understat (xG)": {
    "ok": true,
-   "rows": 4654,
+   "rows": 4655,
    "error": null
   },
   "Europa y Copa (calendario)": {
@@ -43,7 +43,7 @@
   },
   "ESPN (alineaciones y árbitro del partido)": {
    "ok": true,
-   "rows": 13,
+   "rows": 12,
    "error": null
   },
   "Google News (bajas)": {
