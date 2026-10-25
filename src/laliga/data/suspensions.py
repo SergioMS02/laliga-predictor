@@ -175,8 +175,20 @@ def parse_sanctions(items, squad: list[str]) -> list[dict]:
     return out
 
 
+def _had_red(cards: pd.DataFrame | None, team: str, player: str, around: pd.Timestamp) -> bool:
+    """¿Vio el jugador una roja en las semanas anteriores a la noticia? Las sanciones de varios
+    partidos casi siempre vienen de una expulsión: así se descartan los titulares que nombran al
+    agredido, a un rival con el mismo apellido o a quien "no fue sancionado"."""
+    if cards is None or cards.empty:
+        return False
+    from rapidfuzz import fuzz
+    c = cards[(cards.team == team) & (cards.card == "red") & (cards.date <= around + pd.Timedelta(days=2)) &
+              (cards.date >= around - pd.Timedelta(days=45))]
+    return any(fuzz.token_set_ratio(plain(player), plain(x)) >= 85 for x in c.player)
+
+
 def suspended_by_news(settings: Settings, team: str, squad: list[str], matches: pd.DataFrame,
-                      before: pd.Timestamp, online: bool = True) -> list[dict]:
+                      before: pd.Timestamp, online: bool = True, cards: pd.DataFrame | None = None) -> list[dict]:
     if not online or not squad:
         return []
     try:
@@ -189,7 +201,7 @@ def suspended_by_news(settings: Settings, team: str, squad: list[str], matches: 
     mine_dates = pd.to_datetime(mine.date).dt.normalize()
     best: dict[str, dict] = {}
     for f in found:
-        if f["date"] is None:
+        if f["date"] is None or not _had_red(cards, team, f["player"], pd.Timestamp(f["date"])):
             continue
         # partidos entre la noticia y este (jugados o programados antes): en ellos se va cumpliendo
         n_played = int(((mine_dates > pd.Timestamp(f["date"]).normalize()) &
@@ -211,8 +223,8 @@ def for_match(settings: Settings, team: str, squad: list[str], matches: pd.DataF
               kickoff: pd.Timestamp, online: bool = True) -> pd.DataFrame:
     """Sancionados de un equipo para un partido (nombres ya ajustados a la plantilla)."""
     from rapidfuzz import fuzz, process
-    rows = suspended_by_cards(cards, matches, team, kickoff) + suspended_by_news(settings, team, squad, matches,
-                                                                                 kickoff, online)
+    rows = suspended_by_news(settings, team, squad, matches, kickoff, online, cards) + \
+        suspended_by_cards(cards, matches, team, kickoff)
     out, seen = [], set()
     plain_sq = {p: plain(p) for p in squad}
     for r in rows:

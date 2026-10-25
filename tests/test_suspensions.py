@@ -25,8 +25,12 @@ def test_news_games_left(monkeypatch, settings):
     monkeypatch.setattr(sp, "parse_feed", lambda *a, **k: [
         _it("Vinícius Jr. se pierde el Clásico tras recibir cuatro partidos de sanción")])
     monkeypatch.setattr(sp.http, "get", lambda *a, **k: type("R", (), {"content": b""})())
-    out = sp.suspended_by_news(settings, "Real Madrid", SQUAD, m, pd.Timestamp("2026-10-25"))
+    cards = pd.DataFrame({"date": pd.to_datetime(["2026-10-10"]), "team": "Real Madrid",
+                          "player": ["Vinícius Júnior"], "card": ["red"]})
+    out = sp.suspended_by_news(settings, "Real Madrid", SQUAD, m, pd.Timestamp("2026-10-25"), cards=cards)
     assert out and out[0]["player"] == "Vinícius Júnior" and "le quedan 2" in out[0]["source"]
+    # sin roja previa no se cree al titular (agredido, rival con el mismo apellido...)
+    assert sp.suspended_by_news(settings, "Real Madrid", SQUAD, m, pd.Timestamp("2026-10-25"), cards=cards.iloc[0:0]) == []
 
 
 def test_cards():
