@@ -1,4 +1,23 @@
 team,date,coach
+Ath Bilbao,2021-01-04,Marcelino García Toral
+Ath Bilbao,2018-12-05,Gaizka Garitano
+Ath Bilbao,2017-07-01,José Ángel Ziganda
+Ath Madrid,2011-06-08,Gregorio Manzano
+Ath Madrid,1949-07-01,Helenio Herrera
+Ath Madrid,1999-07-01,Claudio Ranieri
+Ath Madrid,2009-10-23,Quique Sánchez Flores
+Ath Madrid,2009-02-04,Abel Resino
+Ath Madrid,1998-07-01,Arrigo Sacchi
+Ath Madrid,2006-07-01,Javier Aguirre
+Ath Madrid,2011-12-23,Diego Simeone
+Ath Madrid,1982-07-01,Q576614
+Betis,2020-08-01,Manuel Pellegrini
+Celta,2020-11-12,Eduardo Coudet
+Celta,2024-03-12,Claudio Giráldez González
+Celta,2023-07-01,Rafael Benítez
+Celta,2022-11-02,Carlos Augusto Soares da Costa Faria Carvalhal
+Getafe,2021-10-06,Quique Sánchez Flores
+Getafe,2023-04-29,José Bordalás
 Barcelona,2003-07-01,Frank Rijkaard
 Barcelona,1941-07-01,Ramon Guzmán
 Barcelona,1935-07-01,Patrick O'Connell
@@ -79,25 +98,88 @@ Ath Bilbao,2026-05-01,Edin Terzić
 Ath Bilbao,2013-07-01,Ernesto Valverde
 Real Madrid,2026-01-13,Álvaro Arbeloa
 Real Madrid,2026-01-01,José Mourinho
-Ath Bilbao,2021-01-04,Marcelino García Toral
-Ath Bilbao,2018-12-05,Gaizka Garitano
-Ath Bilbao,2017-07-01,José Ángel Ziganda
-Ath Madrid,2011-06-08,Gregorio Manzano
-Ath Madrid,1949-07-01,Helenio Herrera
-Ath Madrid,1999-07-01,Claudio Ranieri
-Ath Madrid,2009-10-23,Quique Sánchez Flores
-Ath Madrid,2009-02-04,Abel Resino
-Ath Madrid,1998-07-01,Arrigo Sacchi
-Ath Madrid,2006-07-01,Javier Aguirre
-Ath Madrid,2011-12-23,Diego Simeone
-Ath Madrid,1982-07-01,Q576614
-Betis,2020-08-01,Manuel Pellegrini
-Celta,2020-11-12,Eduardo Coudet
-Celta,2024-03-12,Claudio Giráldez González
-Celta,2023-07-01,Rafael Benítez
-Celta,2022-11-02,Carlos Augusto Soares da Costa Faria Carvalhal
-Getafe,2021-10-06,Quique Sánchez Flores
-Getafe,2023-04-29,José Bordalás
+Vallecano,2024-02-14,Iñigo Pérez
+Vallecano,2024-02-14,Iñigo Pérez
+Vallecano,2017-02-21,Miguel Ángel Sánchez Muñoz
+Vallecano,2017-02-21,Miguel Ángel Sánchez Muñoz
+Vallecano,2023-07-01,Francisco Javier Rodríguez Vílchez
+Vallecano,2023-07-01,Francisco Javier Rodríguez Vílchez
+Vallecano,2020-08-06,Andoni Iraola
+Vallecano,2020-08-06,Andoni Iraola
+Sociedad,2018-12-27,Imanol Alguacil
+Sociedad,2018-07-01,Asier Garitano
+Valladolid,2024-12-02,Álvaro Rubio
+Valladolid,2024-12-02,Álvaro Rubio
+Valladolid,2021-07-01,José Rojo Martín
+Valladolid,2021-07-01,José Rojo Martín
+Valladolid,2023-04-04,Paulo Pezzolano
+Valladolid,2023-04-04,Paulo Pezzolano
+Valladolid,2018-04-10,Sinergio González Soriano
+Valladolid,2018-04-10,Sinergio González Soriano
+Valladolid,2024-12-15,Diego Cocca
+Valladolid,2024-12-15,Diego Cocca
+Sevilla,2023-03-21,José Luis Mendilibar
+Sevilla,2023-12-18,Quique Sánchez Flores
+Sevilla,2013-01-01,Unai Emery
+Sevilla,2025-06-16,Matías Almeyda
+Sevilla,2019-03-01,Joaquín Caparrós
+Sevilla,2018-07-01,Pablo Machín
+Sevilla,2017-12-28,Vincenzo Montella
+Sevilla,2022-10-06,Jorge Sampaoli
+Sevilla,1954-01-01,Helenio Herrera
+Sevilla,2019-07-01,Julen Lopetegui
+Sevilla,2025-04-13,Joaquín Caparrós
+Sevilla,2023-10-10,Diego Alonso
+Sevilla,2024-07-01,Francisco Javier García Pimienta
+Valencia,2020-07-27,Javi Gracia
+Valencia,2019-09-11,Albert Celades
+Valencia,2023-02-14,Rubén Baraja
+Valencia,2017-07-01,Marcelino García Toral
+Valencia,2022-07-01,Gennaro Gattuso
+Valencia,2020-06-29,Salvador González Marco
+Valencia,1997-09-20,Claudio Ranieri
+Valencia,2021-05-27,José Bordalás
+Valencia,2024-12-24,Carlos Corberán
+Valencia,2004-07-01,Claudio Ranieri
+Valencia,2021-05-03,Salvador González Marco
+Valencia,2012-12-03,Ernesto Valverde
+Valencia,2023-01-31,Salvador González Marco
+Elche,2023-03-21,Sebastián Beccacece
+Elche,2022-10-05,Alberto Gallego Lancuentra
+Elche,2021-11-25,Sergio Mantecón
+Elche,2021-02-14,Fran Escribá
+Elche,2022-11-07,Sergio Mantecón
+Elche,2018-02-27,José Rojo Martín
+Elche,2022-11-17,Pablo Machín
+Elche,2021-11-30,Francisco Javier Rodríguez Vílchez
+Elche,2024-07-01,Eder Sarabia
+Elche,2020-08-26,Jorge Almirón
+Elche,2021-11-25,Pablo Manusovich
+Elche,2022-10-12,Jorge Almirón
+Girona,2018-07-01,Eusebio Sacristán
+Girona,2018-07-01,Eusebio Sacristán
+Girona,2019-07-01,Juan Carlos Unzué
+Girona,2019-07-01,Juan Carlos Unzué
+Girona,2019-10-28,José Luis Martí
+Girona,2019-10-28,José Luis Martí
+Girona,2019-10-21,Juan Carlos Moreno Rodríguez
+Girona,2019-10-21,Juan Carlos Moreno Rodríguez
+Girona,2021-07-09,Miguel Ángel Sánchez Muñoz
+Girona,2021-07-09,Miguel Ángel Sánchez Muñoz
+Girona,2020-07-01,Francisco Javier Rodríguez Vílchez
+Girona,2020-07-01,Francisco Javier Rodríguez Vílchez
+Sociedad,2025-07-01,Sergio Francisco Ramos
+Sociedad,2025-12-20,Pellegrino Matarazzo
+Valladolid,2026-02-16,Fran Escribá
+Valladolid,2026-02-16,Fran Escribá
+Sevilla,2026-03-25,Luis García Plaza
+Vallecano,2026-06-18,Beñat San José
+Vallecano,2026-06-18,Beñat San José
+Elche,2026-06-13,Martín Anselmi
+Girona,2026-07-01,Quique Álvarez
+Girona,2026-07-01,Quique Álvarez
+Valencia,2026-09-13,Óscar Sánchez Fuentes
+Valencia,2026-09-23,Javier Aguirre
 Sp Gijon,2022-02-23,José Luis Martí
 Sp Gijon,2022-02-23,José Luis Martí
 Sp Gijon,2022-02-23,José Luis Martí
@@ -212,85 +294,3 @@ Alaves,2026-03-03,Quique Sánchez Flores
 Elche,2026-06-13,Martín Anselmi
 Oviedo,2026-07-01,Julián Calero
 Malaga,2025-11-01,Juan Francisco Funes Arjona
-Vallecano,2024-02-14,Iñigo Pérez
-Vallecano,2024-02-14,Iñigo Pérez
-Vallecano,2017-02-21,Miguel Ángel Sánchez Muñoz
-Vallecano,2017-02-21,Miguel Ángel Sánchez Muñoz
-Vallecano,2023-07-01,Francisco Javier Rodríguez Vílchez
-Vallecano,2023-07-01,Francisco Javier Rodríguez Vílchez
-Vallecano,2020-08-06,Andoni Iraola
-Vallecano,2020-08-06,Andoni Iraola
-Sociedad,2018-12-27,Imanol Alguacil
-Sociedad,2018-07-01,Asier Garitano
-Valladolid,2024-12-02,Álvaro Rubio
-Valladolid,2024-12-02,Álvaro Rubio
-Valladolid,2021-07-01,José Rojo Martín
-Valladolid,2021-07-01,José Rojo Martín
-Valladolid,2023-04-04,Paulo Pezzolano
-Valladolid,2023-04-04,Paulo Pezzolano
-Valladolid,2018-04-10,Sinergio González Soriano
-Valladolid,2018-04-10,Sinergio González Soriano
-Valladolid,2024-12-15,Diego Cocca
-Valladolid,2024-12-15,Diego Cocca
-Sevilla,2023-03-21,José Luis Mendilibar
-Sevilla,2023-12-18,Quique Sánchez Flores
-Sevilla,2013-01-01,Unai Emery
-Sevilla,2025-06-16,Matías Almeyda
-Sevilla,2019-03-01,Joaquín Caparrós
-Sevilla,2018-07-01,Pablo Machín
-Sevilla,2017-12-28,Vincenzo Montella
-Sevilla,2022-10-06,Jorge Sampaoli
-Sevilla,1954-01-01,Helenio Herrera
-Sevilla,2019-07-01,Julen Lopetegui
-Sevilla,2025-04-13,Joaquín Caparrós
-Sevilla,2023-10-10,Diego Alonso
-Sevilla,2024-07-01,Francisco Javier García Pimienta
-Valencia,2020-07-27,Javi Gracia
-Valencia,2019-09-11,Albert Celades
-Valencia,2023-02-14,Rubén Baraja
-Valencia,2017-07-01,Marcelino García Toral
-Valencia,2022-07-01,Gennaro Gattuso
-Valencia,2020-06-29,Salvador González Marco
-Valencia,1997-09-20,Claudio Ranieri
-Valencia,2021-05-27,José Bordalás
-Valencia,2024-12-24,Carlos Corberán
-Valencia,2004-07-01,Claudio Ranieri
-Valencia,2021-05-03,Salvador González Marco
-Valencia,2012-12-03,Ernesto Valverde
-Valencia,2023-01-31,Salvador González Marco
-Elche,2023-03-21,Sebastián Beccacece
-Elche,2022-10-05,Alberto Gallego Lancuentra
-Elche,2021-11-25,Sergio Mantecón
-Elche,2021-02-14,Fran Escribá
-Elche,2022-11-07,Sergio Mantecón
-Elche,2018-02-27,José Rojo Martín
-Elche,2022-11-17,Pablo Machín
-Elche,2021-11-30,Francisco Javier Rodríguez Vílchez
-Elche,2024-07-01,Eder Sarabia
-Elche,2020-08-26,Jorge Almirón
-Elche,2021-11-25,Pablo Manusovich
-Elche,2022-10-12,Jorge Almirón
-Girona,2018-07-01,Eusebio Sacristán
-Girona,2018-07-01,Eusebio Sacristán
-Girona,2019-07-01,Juan Carlos Unzué
-Girona,2019-07-01,Juan Carlos Unzué
-Girona,2019-10-28,José Luis Martí
-Girona,2019-10-28,José Luis Martí
-Girona,2019-10-21,Juan Carlos Moreno Rodríguez
-Girona,2019-10-21,Juan Carlos Moreno Rodríguez
-Girona,2021-07-09,Miguel Ángel Sánchez Muñoz
-Girona,2021-07-09,Miguel Ángel Sánchez Muñoz
-Girona,2020-07-01,Francisco Javier Rodríguez Vílchez
-Girona,2020-07-01,Francisco Javier Rodríguez Vílchez
-Sociedad,2025-07-01,Sergio Francisco Ramos
-Sociedad,2025-12-20,Pellegrino Matarazzo
-Valladolid,2026-02-16,Fran Escribá
-Valladolid,2026-02-16,Fran Escribá
-Sevilla,2026-03-25,Luis García Plaza
-Vallecano,2026-06-18,Beñat San José
-Vallecano,2026-06-18,Beñat San José
-Elche,2026-06-13,Martín Anselmi
-Girona,2026-07-01,Quique Álvarez
-Girona,2026-07-01,Quique Álvarez
-Valencia,2026-09-13,Óscar Sánchez Fuentes
-Valencia,2026-09-23,Javier Aguirre
