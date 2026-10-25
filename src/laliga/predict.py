@@ -188,7 +188,8 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                         ab = pd.concat([ab[~ab.player.isin(sus.player)], sus], ignore_index=True)
                 except Exception as e:
                     log.warning("Sanciones no disponibles para %s: %s", team, e)
-                info["absences"][team] = ab[["player", "status", "reason"]].to_dict(orient="records")
+                cols = [c for c in ("player", "status", "reason", "source") if c in ab.columns]
+                info["absences"][team] = ab[cols].astype(object).where(ab[cols].notna(), None).to_dict(orient="records")
                 info[f"d_{side}"] = av.deficits_from_absences(imps[side], ab, dw)
                 info.setdefault("news_count", {})[team] = len(items)
                 n_news += len(items)
