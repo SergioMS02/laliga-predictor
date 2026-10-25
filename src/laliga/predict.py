@@ -11,7 +11,7 @@ import pandas as pd
 
 from . import movements, pipeline
 from .config import Settings
-from .data import espn, http, news, results, suspensions
+from .data import espn, fantasy, http, news, results, suspensions
 from .features import availability as av
 from .features.sequential import build_sequential_features
 from .models.dixon_coles import DixonColes, summarize_matrix
@@ -142,7 +142,14 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
     dw = float(settings.get("availability", "doubtful_weight", 0.5))
     use_news = online and settings.get("news", "enabled", True)
     cards = None
+    fantasy_av = None
     if use_news:
+        try:
+            fantasy_av = fantasy.fetch(settings, online=online)
+            pipeline._status("futbolfantasy (lesionados y sancionados)", fantasy_av is not None,
+                             0 if fantasy_av is None else len(fantasy_av))
+        except Exception as e:
+            log.warning("futbolfantasy no disponible: %s", e)
         try:
             cards = suspensions.fetch_cards(settings, date(season_now, 8, 1), online=online)
         except Exception as e:
@@ -178,14 +185,25 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                 if players is not None and len(players):  # también los que aún no tienen historial de titularidades
                     extra = players[(players.team == team) & (players.season == season_now)].player
                     squad += [x for x in extra if x not in squad]
-                items = news.fetch_team_news(settings, team)
-                ab = news.extract_absences(settings, team, items, squad)
-                try:  # sancionados (tarjetas de la temporada + noticias de sanciones de las últimas semanas)
-                    ko = pd.Timestamp(r.kickoff) if not pd.isna(r.get("kickoff")) else pd.Timestamp(r.date)
-                    ko = ko.tz_convert(None) if ko.tzinfo else ko
-                    sus = suspensions.for_match(settings, team, squad, matches, cards, ko, online)
-                    if len(sus):
-                        ab = pd.concat([ab[~ab.player.isin(sus.player)], sus], ignore_index=True)
+                ko = pd.Timestamp(r.kickoff) if not pd.isna(r.get("kickoff")) else pd.Timestamp(r.date)
+                ko = ko.tz_convert(None) if ko.tzinfo else ko
+                items = []
+                if fantasy_av is not None:
+                    # fuente principal: lesionados y sancionados de futbolfantasy.com
+                    ab = _match_fantasy(fantasy.for_match(fantasy_av, matches, team, season_now, ko), squad)
+                    jn = fantasy.team_jornada(matches, team, season_now, ko)
+                    pj = fantasy.page_jornada(fantasy_av)
+                    need_cards = jn is not None and pj is not None and jn < pj  # jornada anterior a la de la página
+                else:
+                    items = news.fetch_team_news(settings, team)
+                    ab = news.extract_absences(settings, team, items, squad)
+                    need_cards = True
+                try:  # respaldo: sanciones por tarjetas (y noticias de sanciones si no hay futbolfantasy)
+                    if need_cards:
+                        sus = suspensions.for_match(settings, team, squad, matches, cards, ko,
+                                                    online and fantasy_av is None)
+                        if len(sus):
+                            ab = pd.concat([ab[~ab.player.isin(sus.player)], sus], ignore_index=True)
                 except Exception as e:
                     log.warning("Sanciones no disponibles para %s: %s", team, e)
                 cols = [c for c in ("player", "status", "reason", "source") if c in ab.columns]
@@ -359,6 +377,21 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
         })
     preds.sort(key=lambda d: (d["kickoff_utc"] or d["date"], d["home"]))
     return preds
+
+
+def _match_fantasy(ab: pd.DataFrame, squad: list[str]) -> pd.DataFrame:
+    """Ajusta los nombres de futbolfantasy a los de la plantilla (sin acentos, apellidos compuestos)."""
+    from rapidfuzz import fuzz, process
+    if ab.empty or not squad:
+        return ab
+    plain_sq = [news._plain(x) for x in squad]
+    rows = []
+    for r in ab.to_dict(orient="records"):
+        best = process.extractOne(news._plain(r["player"]), plain_sq, scorer=fuzz.token_set_ratio)
+        if best and best[1] >= 80:
+            r["player"] = squad[best[2]]
+        rows.append(r)  # aunque no esté en la plantilla conocida, se muestra igualmente
+    return pd.DataFrame(rows, columns=ab.columns)
 
 
 def _impact(dc, o: dict) -> dict | None:

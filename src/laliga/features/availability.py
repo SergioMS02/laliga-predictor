@@ -149,6 +149,9 @@ def deficits_from_absences(imp: pd.DataFrame, absences: pd.DataFrame,
         a = a.copy()
         a["player"] = name
         w = 1.0 if a.status == "out" else doubtful_weight
+        sp = a.get("start_prob") if hasattr(a, "get") else None
+        if a.status != "out" and sp is not None and not pd.isna(sp):
+            w = float(np.clip(1 - float(sp) / 100, 0, 1))  # duda: pesa según su probabilidad de no jugar
         la += w * float(by_name.at[a.player, "att_imp"])
         ld += w * float(by_name.at[a.player, "def_imp"])
     return float(np.clip(la / ba, 0, MAX_NEWS_DEFICIT)), float(np.clip(ld / bd, 0, MAX_NEWS_DEFICIT))
