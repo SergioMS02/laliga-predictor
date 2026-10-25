@@ -1,0 +1,189 @@
+date,home,away,hg,ag,league
+2025-09-16 00:00:00,Athletic Club,Arsenal,0.0,2.0,UCL
+2025-09-16 00:00:00,PSV Eindhoven,Union St.-Gilloise,1.0,3.0,UCL
+2025-09-16 00:00:00,Benfica,FK Qarabag,2.0,3.0,UCL
+2025-09-16 00:00:00,Juventus,Borussia Dortmund,4.0,4.0,UCL
+2025-09-16 00:00:00,Real Madrid,Marseille,2.0,1.0,UCL
+2025-09-16 00:00:00,Tottenham Hotspur,Villarreal,1.0,0.0,UCL
+2025-09-17 00:00:00,Olympiacos,Pafos,0.0,0.0,UCL
+2025-09-17 00:00:00,Slavia Prague,Bodo/Glimt,2.0,2.0,UCL
+2025-09-17 00:00:00,Ajax Amsterdam,Internazionale,0.0,2.0,UCL
+2025-09-17 00:00:00,Bayern Munich,Chelsea,3.0,1.0,UCL
+2025-09-17 00:00:00,Liverpool,Atlético Madrid,3.0,2.0,UCL
+2025-09-17 00:00:00,Paris Saint-Germain,Atalanta,4.0,0.0,UCL
+2025-09-18 00:00:00,Club Brugge,AS Monaco,4.0,1.0,UCL
+2025-09-18 00:00:00,F.C. København,Bayer Leverkusen,2.0,2.0,UCL
+2025-09-18 00:00:00,Eintracht Frankfurt,Galatasaray,5.0,1.0,UCL
+2025-09-18 00:00:00,Manchester City,Napoli,2.0,0.0,UCL
+2025-09-18 00:00:00,Newcastle United,Barcelona,1.0,2.0,UCL
+2025-09-18 00:00:00,Sporting CP,Kairat Almaty,4.0,1.0,UCL
+2025-09-30 00:00:00,Atalanta,Club Brugge,2.0,1.0,UCL
+2025-09-30 00:00:00,Kairat Almaty,Real Madrid,0.0,5.0,UCL
+2025-09-30 00:00:00,Atlético Madrid,Eintracht Frankfurt,5.0,1.0,UCL
+2025-09-30 00:00:00,Bodo/Glimt,Tottenham Hotspur,2.0,2.0,UCL
+2025-09-30 00:00:00,Chelsea,Benfica,1.0,0.0,UCL
+2025-09-30 00:00:00,Galatasaray,Liverpool,1.0,0.0,UCL
+2025-09-30 00:00:00,Internazionale,Slavia Prague,3.0,0.0,UCL
+2025-09-30 00:00:00,Marseille,Ajax Amsterdam,4.0,0.0,UCL
+2025-09-30 00:00:00,Pafos,Bayern Munich,1.0,5.0,UCL
+2025-10-01 00:00:00,FK Qarabag,F.C. København,2.0,0.0,UCL
+2025-10-01 00:00:00,Union St.-Gilloise,Newcastle United,0.0,4.0,UCL
+2025-10-01 00:00:00,Arsenal,Olympiacos,2.0,0.0,UCL
+2025-10-01 00:00:00,AS Monaco,Manchester City,2.0,2.0,UCL
+2025-10-01 00:00:00,Barcelona,Paris Saint-Germain,1.0,2.0,UCL
+2025-10-01 00:00:00,Bayer Leverkusen,PSV Eindhoven,1.0,1.0,UCL
+2025-10-01 00:00:00,Borussia Dortmund,Athletic Club,4.0,1.0,UCL
+2025-10-01 00:00:00,Napoli,Sporting CP,2.0,1.0,UCL
+2025-10-01 00:00:00,Villarreal,Juventus,2.0,2.0,UCL
+2025-10-21 00:00:00,Barcelona,Olympiacos,6.0,1.0,UCL
+2025-10-21 00:00:00,Kairat Almaty,Pafos,0.0,0.0,UCL
+2025-10-21 00:00:00,Arsenal,Atlético Madrid,4.0,0.0,UCL
+2025-10-21 00:00:00,Bayer Leverkusen,Paris Saint-Germain,2.0,7.0,UCL
+2025-10-21 00:00:00,F.C. København,Borussia Dortmund,2.0,4.0,UCL
+2025-10-21 00:00:00,Newcastle United,Benfica,3.0,0.0,UCL
+2025-10-21 00:00:00,PSV Eindhoven,Napoli,6.0,2.0,UCL
+2025-10-21 00:00:00,Union St.-Gilloise,Internazionale,0.0,4.0,UCL
+2025-10-21 00:00:00,Villarreal,Manchester City,0.0,2.0,UCL
+2025-10-22 00:00:00,Athletic Club,FK Qarabag,3.0,1.0,UCL
+2025-10-22 00:00:00,Galatasaray,Bodo/Glimt,3.0,1.0,UCL
+2025-10-22 00:00:00,AS Monaco,Tottenham Hotspur,0.0,0.0,UCL
+2025-10-22 00:00:00,Atalanta,Slavia Prague,0.0,0.0,UCL
+2025-10-22 00:00:00,Bayern Munich,Club Brugge,4.0,0.0,UCL
+2025-10-22 00:00:00,Chelsea,Ajax Amsterdam,5.0,1.0,UCL
+2025-10-22 00:00:00,Eintracht Frankfurt,Liverpool,1.0,5.0,UCL
+2025-10-22 00:00:00,Real Madrid,Juventus,1.0,0.0,UCL
+2025-10-22 00:00:00,Sporting CP,Marseille,2.0,1.0,UCL
+2025-11-04 00:00:00,Napoli,Eintracht Frankfurt,0.0,0.0,UCL
+2025-11-04 00:00:00,Slavia Prague,Arsenal,0.0,3.0,UCL
+2025-11-04 00:00:00,Atlético Madrid,Union St.-Gilloise,3.0,1.0,UCL
+2025-11-04 00:00:00,Bodo/Glimt,AS Monaco,0.0,1.0,UCL
+2025-11-04 00:00:00,Juventus,Sporting CP,1.0,1.0,UCL
+2025-11-04 00:00:00,Liverpool,Real Madrid,1.0,0.0,UCL
+2025-11-04 00:00:00,Olympiacos,PSV Eindhoven,1.0,1.0,UCL
+2025-11-04 00:00:00,Paris Saint-Germain,Bayern Munich,1.0,2.0,UCL
+2025-11-04 00:00:00,Tottenham Hotspur,F.C. København,4.0,0.0,UCL
+2025-11-05 00:00:00,FK Qarabag,Chelsea,2.0,2.0,UCL
+2025-11-05 00:00:00,Pafos,Villarreal,1.0,0.0,UCL
+2025-11-05 00:00:00,Ajax Amsterdam,Galatasaray,0.0,3.0,UCL
+2025-11-05 00:00:00,Benfica,Bayer Leverkusen,0.0,1.0,UCL
+2025-11-05 00:00:00,Club Brugge,Barcelona,3.0,3.0,UCL
+2025-11-05 00:00:00,Internazionale,Kairat Almaty,2.0,1.0,UCL
+2025-11-05 00:00:00,Manchester City,Borussia Dortmund,4.0,1.0,UCL
+2025-11-05 00:00:00,Marseille,Atalanta,0.0,1.0,UCL
+2025-11-05 00:00:00,Newcastle United,Athletic Club,2.0,0.0,UCL
+2025-11-25 00:00:00,Ajax Amsterdam,Benfica,0.0,2.0,UCL
+2025-11-25 00:00:00,Galatasaray,Union St.-Gilloise,0.0,1.0,UCL
+2025-11-25 00:00:00,Bodo/Glimt,Juventus,2.0,3.0,UCL
+2025-11-25 00:00:00,Borussia Dortmund,Villarreal,4.0,0.0,UCL
+2025-11-25 00:00:00,Chelsea,Barcelona,3.0,0.0,UCL
+2025-11-25 00:00:00,Manchester City,Bayer Leverkusen,0.0,2.0,UCL
+2025-11-25 00:00:00,Marseille,Newcastle United,2.0,1.0,UCL
+2025-11-25 00:00:00,Napoli,FK Qarabag,2.0,0.0,UCL
+2025-11-25 00:00:00,Slavia Prague,Athletic Club,0.0,0.0,UCL
+2025-11-26 00:00:00,F.C. København,Kairat Almaty,3.0,2.0,UCL
+2025-11-26 00:00:00,Pafos,AS Monaco,2.0,2.0,UCL
+2025-11-26 00:00:00,Arsenal,Bayern Munich,3.0,1.0,UCL
+2025-11-26 00:00:00,Atlético Madrid,Internazionale,2.0,1.0,UCL
+2025-11-26 00:00:00,Eintracht Frankfurt,Atalanta,0.0,3.0,UCL
+2025-11-26 00:00:00,Liverpool,PSV Eindhoven,1.0,4.0,UCL
+2025-11-26 00:00:00,Olympiacos,Real Madrid,3.0,4.0,UCL
+2025-11-26 00:00:00,Paris Saint-Germain,Tottenham Hotspur,5.0,3.0,UCL
+2025-11-26 00:00:00,Sporting CP,Club Brugge,3.0,0.0,UCL
+2025-12-09 00:00:00,Kairat Almaty,Olympiacos,0.0,1.0,UCL
+2025-12-09 00:00:00,Bayern Munich,Sporting CP,3.0,1.0,UCL
+2025-12-09 00:00:00,AS Monaco,Galatasaray,1.0,0.0,UCL
+2025-12-09 00:00:00,Atalanta,Chelsea,2.0,1.0,UCL
+2025-12-09 00:00:00,Barcelona,Eintracht Frankfurt,2.0,1.0,UCL
+2025-12-09 00:00:00,Internazionale,Liverpool,0.0,1.0,UCL
+2025-12-09 00:00:00,PSV Eindhoven,Atlético Madrid,2.0,3.0,UCL
+2025-12-09 00:00:00,Tottenham Hotspur,Slavia Prague,3.0,0.0,UCL
+2025-12-09 00:00:00,Union St.-Gilloise,Marseille,2.0,3.0,UCL
+2025-12-10 00:00:00,FK Qarabag,Ajax Amsterdam,2.0,4.0,UCL
+2025-12-10 00:00:00,Villarreal,F.C. København,2.0,3.0,UCL
+2025-12-10 00:00:00,Athletic Club,Paris Saint-Germain,0.0,0.0,UCL
+2025-12-10 00:00:00,Bayer Leverkusen,Newcastle United,2.0,2.0,UCL
+2025-12-10 00:00:00,Benfica,Napoli,2.0,0.0,UCL
+2025-12-10 00:00:00,Borussia Dortmund,Bodo/Glimt,2.0,2.0,UCL
+2025-12-10 00:00:00,Club Brugge,Arsenal,0.0,3.0,UCL
+2025-12-10 00:00:00,Juventus,Pafos,2.0,0.0,UCL
+2025-12-10 00:00:00,Real Madrid,Manchester City,1.0,2.0,UCL
+2026-01-20 00:00:00,Kairat Almaty,Club Brugge,1.0,4.0,UCL
+2026-01-20 00:00:00,Bodo/Glimt,Manchester City,3.0,1.0,UCL
+2026-01-20 00:00:00,F.C. København,Napoli,1.0,1.0,UCL
+2026-01-20 00:00:00,Internazionale,Arsenal,1.0,3.0,UCL
+2026-01-20 00:00:00,Olympiacos,Bayer Leverkusen,2.0,0.0,UCL
+2026-01-20 00:00:00,Real Madrid,AS Monaco,6.0,1.0,UCL
+2026-01-20 00:00:00,Sporting CP,Paris Saint-Germain,2.0,1.0,UCL
+2026-01-20 00:00:00,Tottenham Hotspur,Borussia Dortmund,2.0,0.0,UCL
+2026-01-20 00:00:00,Villarreal,Ajax Amsterdam,1.0,2.0,UCL
+2026-01-21 00:00:00,FK Qarabag,Eintracht Frankfurt,3.0,2.0,UCL
+2026-01-21 00:00:00,Galatasaray,Atlético Madrid,1.0,1.0,UCL
+2026-01-21 00:00:00,Atalanta,Athletic Club,2.0,3.0,UCL
+2026-01-21 00:00:00,Bayern Munich,Union St.-Gilloise,2.0,0.0,UCL
+2026-01-21 00:00:00,Chelsea,Pafos,1.0,0.0,UCL
+2026-01-21 00:00:00,Juventus,Benfica,2.0,0.0,UCL
+2026-01-21 00:00:00,Marseille,Liverpool,0.0,3.0,UCL
+2026-01-21 00:00:00,Newcastle United,PSV Eindhoven,3.0,0.0,UCL
+2026-01-21 00:00:00,Slavia Prague,Barcelona,2.0,4.0,UCL
+2026-01-28 00:00:00,Ajax Amsterdam,Olympiacos,1.0,2.0,UCL
+2026-01-28 00:00:00,Arsenal,Kairat Almaty,3.0,2.0,UCL
+2026-01-28 00:00:00,AS Monaco,Juventus,0.0,0.0,UCL
+2026-01-28 00:00:00,Athletic Club,Sporting CP,2.0,3.0,UCL
+2026-01-28 00:00:00,Atlético Madrid,Bodo/Glimt,1.0,2.0,UCL
+2026-01-28 00:00:00,Barcelona,F.C. København,4.0,1.0,UCL
+2026-01-28 00:00:00,Bayer Leverkusen,Villarreal,3.0,0.0,UCL
+2026-01-28 00:00:00,Benfica,Real Madrid,4.0,2.0,UCL
+2026-01-28 00:00:00,Borussia Dortmund,Internazionale,0.0,2.0,UCL
+2026-01-28 00:00:00,Club Brugge,Marseille,3.0,0.0,UCL
+2026-01-28 00:00:00,Eintracht Frankfurt,Tottenham Hotspur,0.0,2.0,UCL
+2026-01-28 00:00:00,Liverpool,FK Qarabag,6.0,0.0,UCL
+2026-01-28 00:00:00,Manchester City,Galatasaray,2.0,0.0,UCL
+2026-01-28 00:00:00,Napoli,Chelsea,2.0,3.0,UCL
+2026-01-28 00:00:00,Pafos,Slavia Prague,4.0,1.0,UCL
+2026-01-28 00:00:00,Paris Saint-Germain,Newcastle United,1.0,1.0,UCL
+2026-01-28 00:00:00,PSV Eindhoven,Bayern Munich,1.0,2.0,UCL
+2026-01-28 00:00:00,Union St.-Gilloise,Atalanta,1.0,0.0,UCL
+2026-02-17 00:00:00,Galatasaray,Juventus,5.0,2.0,UCL
+2026-02-17 00:00:00,AS Monaco,Paris Saint-Germain,2.0,3.0,UCL
+2026-02-17 00:00:00,Benfica,Real Madrid,0.0,1.0,UCL
+2026-02-17 00:00:00,Borussia Dortmund,Atalanta,2.0,0.0,UCL
+2026-02-18 00:00:00,FK Qarabag,Newcastle United,1.0,6.0,UCL
+2026-02-18 00:00:00,Bodo/Glimt,Internazionale,3.0,1.0,UCL
+2026-02-18 00:00:00,Club Brugge,Atlético Madrid,3.0,3.0,UCL
+2026-02-18 00:00:00,Olympiacos,Bayer Leverkusen,0.0,2.0,UCL
+2026-02-24 00:00:00,Atlético Madrid,Club Brugge,4.0,1.0,UCL
+2026-02-24 00:00:00,Bayer Leverkusen,Olympiacos,0.0,0.0,UCL
+2026-02-24 00:00:00,Internazionale,Bodo/Glimt,1.0,2.0,UCL
+2026-02-24 00:00:00,Newcastle United,FK Qarabag,3.0,2.0,UCL
+2026-02-25 00:00:00,Atalanta,Borussia Dortmund,4.0,1.0,UCL
+2026-02-25 00:00:00,Juventus,Galatasaray,3.0,2.0,UCL
+2026-02-25 00:00:00,Paris Saint-Germain,AS Monaco,2.0,2.0,UCL
+2026-02-25 00:00:00,Real Madrid,Benfica,2.0,1.0,UCL
+2026-03-10 00:00:00,Galatasaray,Liverpool,1.0,0.0,UCL
+2026-03-10 00:00:00,Atalanta,Bayern Munich,1.0,6.0,UCL
+2026-03-10 00:00:00,Atlético Madrid,Tottenham Hotspur,5.0,2.0,UCL
+2026-03-10 00:00:00,Newcastle United,Barcelona,1.0,1.0,UCL
+2026-03-11 00:00:00,Bayer Leverkusen,Arsenal,1.0,1.0,UCL
+2026-03-11 00:00:00,Bodo/Glimt,Sporting CP,3.0,0.0,UCL
+2026-03-11 00:00:00,Paris Saint-Germain,Chelsea,5.0,2.0,UCL
+2026-03-11 00:00:00,Real Madrid,Manchester City,3.0,0.0,UCL
+2026-03-17 00:00:00,Sporting CP,Bodo/Glimt,5.0,0.0,UCL
+2026-03-17 00:00:00,Arsenal,Bayer Leverkusen,2.0,0.0,UCL
+2026-03-17 00:00:00,Chelsea,Paris Saint-Germain,0.0,3.0,UCL
+2026-03-17 00:00:00,Manchester City,Real Madrid,1.0,2.0,UCL
+2026-03-18 00:00:00,Barcelona,Newcastle United,7.0,2.0,UCL
+2026-03-18 00:00:00,Bayern Munich,Atalanta,4.0,1.0,UCL
+2026-03-18 00:00:00,Liverpool,Galatasaray,4.0,0.0,UCL
+2026-03-18 00:00:00,Tottenham Hotspur,Atlético Madrid,3.0,2.0,UCL
+2026-04-07 00:00:00,Real Madrid,Bayern Munich,1.0,2.0,UCL
+2026-04-07 00:00:00,Sporting CP,Arsenal,0.0,1.0,UCL
+2026-04-08 00:00:00,Barcelona,Atlético Madrid,0.0,2.0,UCL
+2026-04-08 00:00:00,Paris Saint-Germain,Liverpool,2.0,0.0,UCL
+2026-04-14 00:00:00,Atlético Madrid,Barcelona,1.0,2.0,UCL
+2026-04-14 00:00:00,Liverpool,Paris Saint-Germain,0.0,2.0,UCL
+2026-04-15 00:00:00,Arsenal,Sporting CP,0.0,0.0,UCL
+2026-04-15 00:00:00,Bayern Munich,Real Madrid,4.0,3.0,UCL
+2026-04-28 00:00:00,Paris Saint-Germain,Bayern Munich,5.0,4.0,UCL
+2026-04-29 00:00:00,Atlético Madrid,Arsenal,1.0,1.0,UCL
+2026-05-05 00:00:00,Arsenal,Atlético Madrid,1.0,0.0,UCL
+2026-05-06 00:00:00,Bayern Munich,Paris Saint-Germain,1.0,1.0,UCL

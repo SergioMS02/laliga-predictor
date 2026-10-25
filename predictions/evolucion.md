@@ -1,14 +1,15 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-25 16:15 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-10-25 17:18 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Sociedad – Levante (2026-10-25)
 
-1 ▅ · X ▂ · 2 ▂
+1 ▅▅ · X ▂▂ · 2 ▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 57% | 23% | 20% |  |
+| 25/10 18:17 | 56% | 24% | 21% | ✅ |
 
 ## Barcelona – Real Madrid (2026-10-25)
 
@@ -38,13 +39,14 @@ Actualizado: 2026-10-25 16:15 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Levante – Ath Madrid (2026-10-31)
 
-1 ▂▂▂ · X ▂▂▂ · 2 ▅▅▅
+1 ▂▂▂▂ · X ▂▂▂▂ · 2 ▅▅▅▅
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 21% | 23% | 56% |  |
 | 25/10 16:18 | 21% | 24% | 55% |  |
 | 25/10 17:15 | 21% | 24% | 55% |  |
+| 25/10 18:17 | 21% | 24% | 55% |  |
 
 ## Vallecano – Celta (2026-10-31)
 

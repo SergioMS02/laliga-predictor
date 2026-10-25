@@ -1,0 +1,229 @@
+date,home,away,hg,ag,league
+2025-08-30 00:00:00,Athletic Club,CD Tenerife,0.0,0.0,W
+2025-08-30 00:00:00,Levante,Granada,1.0,2.0,W
+2025-08-30 00:00:00,Deportivo,FC Badalona,0.0,0.0,W
+2025-08-30 00:00:00,Barcelona,Alhama,8.0,0.0,W
+2025-08-31 00:00:00,Eibar,Sevilla,0.0,1.0,W
+2025-08-31 00:00:00,Espanyol,Atlético Madrid,0.0,5.0,W
+2025-08-31 00:00:00,Madrid CFF,Real Sociedad,2.0,2.0,W
+2025-08-31 00:00:00,Dux Logroño,Real Madrid,2.0,2.0,W
+2025-09-05 00:00:00,Atlético Madrid,Real Madrid,2.0,1.0,W
+2025-09-06 00:00:00,Espanyol,Deportivo,1.0,1.0,W
+2025-09-06 00:00:00,Sevilla,CD Tenerife,0.0,4.0,W
+2025-09-06 00:00:00,Madrid CFF,Eibar,1.0,0.0,W
+2025-09-06 00:00:00,Dux Logroño,Real Sociedad,0.0,1.0,W
+2025-09-07 00:00:00,Athletic Club,Barcelona,1.0,8.0,W
+2025-09-07 00:00:00,Granada,FC Badalona,0.0,2.0,W
+2025-09-07 00:00:00,Levante,Alhama,0.0,0.0,W
+2025-09-12 00:00:00,Barcelona,Dux Logroño,4.0,0.0,W
+2025-09-13 00:00:00,Real Sociedad,Sevilla,3.0,0.0,W
+2025-09-13 00:00:00,CD Tenerife,Espanyol,0.0,0.0,W
+2025-09-13 00:00:00,Alhama,Granada,1.0,1.0,W
+2025-09-14 00:00:00,Deportivo,Athletic Club,1.0,0.0,W
+2025-09-14 00:00:00,Eibar,FC Badalona,0.0,0.0,W
+2025-09-14 00:00:00,Real Madrid,Madrid CFF,2.0,1.0,W
+2025-09-14 00:00:00,Atlético Madrid,Levante,4.0,0.0,W
+2025-09-20 00:00:00,Espanyol,Athletic Club,1.0,1.0,W
+2025-09-20 00:00:00,Granada,Eibar,3.0,1.0,W
+2025-09-20 00:00:00,FC Badalona,Dux Logroño,0.0,0.0,W
+2025-09-20 00:00:00,Real Sociedad,Levante,2.0,1.0,W
+2025-09-21 00:00:00,Alhama,CD Tenerife,0.0,4.0,W
+2025-09-21 00:00:00,Madrid CFF,Atlético Madrid,1.0,1.0,W
+2025-09-21 00:00:00,Sevilla,Barcelona,0.0,5.0,W
+2025-09-21 00:00:00,Real Madrid,Deportivo,4.0,0.0,W
+2025-09-27 00:00:00,Dux Logroño,Alhama,2.0,4.0,W
+2025-09-27 00:00:00,FC Badalona,Real Sociedad,0.0,2.0,W
+2025-09-27 00:00:00,Barcelona,Espanyol,2.0,0.0,W
+2025-09-28 00:00:00,Athletic Club,Sevilla,1.0,1.0,W
+2025-09-28 00:00:00,Granada,Atlético Madrid,0.0,4.0,W
+2025-09-28 00:00:00,Levante,Eibar,0.0,1.0,W
+2025-09-28 00:00:00,Deportivo,Madrid CFF,1.0,2.0,W
+2025-09-28 00:00:00,CD Tenerife,Real Madrid,0.0,0.0,W
+2025-10-04 00:00:00,Atlético Madrid,Athletic Club,1.0,1.0,W
+2025-10-04 00:00:00,Real Sociedad,CD Tenerife,1.0,2.0,W
+2025-10-04 00:00:00,Eibar,Barcelona,0.0,4.0,W
+2025-10-04 00:00:00,Real Madrid,FC Badalona,3.0,0.0,W
+2025-10-04 00:00:00,Sevilla,Espanyol,1.0,0.0,W
+2025-10-05 00:00:00,Alhama,Deportivo,3.0,1.0,W
+2025-10-05 00:00:00,Dux Logroño,Granada,1.0,1.0,W
+2025-10-05 00:00:00,Madrid CFF,Levante,2.0,0.0,W
+2025-10-11 00:00:00,FC Badalona,Madrid CFF,1.0,0.0,W
+2025-10-11 00:00:00,Granada,Real Sociedad,2.0,2.0,W
+2025-10-11 00:00:00,Espanyol,Alhama,3.0,0.0,W
+2025-10-11 00:00:00,Deportivo,Dux Logroño,2.0,2.0,W
+2025-10-12 00:00:00,Atlético Madrid,Barcelona,0.0,6.0,W
+2025-10-12 00:00:00,CD Tenerife,Eibar,0.0,1.0,W
+2025-10-12 00:00:00,Levante,Sevilla,0.0,1.0,W
+2025-10-12 00:00:00,Athletic Club,Real Madrid,1.0,4.0,W
+2025-10-18 00:00:00,Alhama,Athletic Club,0.0,0.0,W
+2025-10-18 00:00:00,Dux Logroño,Espanyol,0.0,2.0,W
+2025-10-19 00:00:00,Deportivo,Atlético Madrid,1.0,1.0,W
+2025-10-19 00:00:00,Eibar,Real Sociedad,0.0,3.0,W
+2025-10-19 00:00:00,Sevilla,Madrid CFF,1.0,3.0,W
+2025-10-19 00:00:00,Real Madrid,Levante,4.0,0.0,W
+2025-10-19 00:00:00,CD Tenerife,FC Badalona,2.0,2.0,W
+2025-10-19 00:00:00,Barcelona,Granada,2.0,0.0,W
+2025-11-01 00:00:00,Atlético Madrid,Alhama,4.0,0.0,W
+2025-11-01 00:00:00,FC Badalona,Sevilla,0.0,0.0,W
+2025-11-01 00:00:00,Levante,CD Tenerife,2.0,4.0,W
+2025-11-01 00:00:00,Eibar,Deportivo,1.0,0.0,W
+2025-11-01 00:00:00,Madrid CFF,Granada,0.0,1.0,W
+2025-11-01 00:00:00,Espanyol,Real Madrid,0.0,1.0,W
+2025-11-02 00:00:00,Athletic Club,Dux Logroño,0.0,0.0,W
+2025-11-02 00:00:00,Real Sociedad,Barcelona,1.0,0.0,W
+2025-11-08 00:00:00,Athletic Club,Eibar,2.0,0.0,W
+2025-11-08 00:00:00,Real Madrid,Alhama,5.0,0.0,W
+2025-11-09 00:00:00,Barcelona,Deportivo,8.0,0.0,W
+2025-11-09 00:00:00,Dux Logroño,Atlético Madrid,0.0,5.0,W
+2025-11-09 00:00:00,FC Badalona,Levante,1.0,1.0,W
+2025-11-09 00:00:00,Granada,Sevilla,0.0,2.0,W
+2025-11-09 00:00:00,Espanyol,Real Sociedad,2.0,3.0,W
+2025-11-09 00:00:00,Madrid CFF,CD Tenerife,0.0,2.0,W
+2025-11-14 00:00:00,Deportivo,Levante,1.0,0.0,W
+2025-11-15 00:00:00,Alhama,Madrid CFF,1.0,4.0,W
+2025-11-15 00:00:00,Barcelona,Real Madrid,4.0,0.0,W
+2025-11-16 00:00:00,Atlético Madrid,FC Badalona,2.0,0.0,W
+2025-11-16 00:00:00,Real Sociedad,Athletic Club,1.0,1.0,W
+2025-11-16 00:00:00,CD Tenerife,Granada,2.0,2.0,W
+2025-11-16 00:00:00,Sevilla,Dux Logroño,1.0,0.0,W
+2025-11-16 00:00:00,Eibar,Espanyol,1.0,2.0,W
+2025-11-22 00:00:00,Granada,Athletic Club,1.0,5.0,W
+2025-11-22 00:00:00,Sevilla,Deportivo,3.0,1.0,W
+2025-11-22 00:00:00,FC Badalona,Espanyol,1.0,1.0,W
+2025-11-22 00:00:00,Madrid CFF,Dux Logroño,1.0,0.0,W
+2025-11-23 00:00:00,Real Sociedad,Alhama,3.0,1.0,W
+2025-11-23 00:00:00,CD Tenerife,Atlético Madrid,2.0,1.0,W
+2025-11-23 00:00:00,Real Madrid,Eibar,3.0,0.0,W
+2025-11-23 00:00:00,Levante,Barcelona,0.0,4.0,W
+2025-12-06 00:00:00,Atlético Madrid,Sevilla,2.0,2.0,W
+2025-12-06 00:00:00,Deportivo,Granada,2.0,0.0,W
+2025-12-06 00:00:00,Barcelona,CD Tenerife,2.0,0.0,W
+2025-12-06 00:00:00,Espanyol,Madrid CFF,2.0,5.0,W
+2025-12-06 00:00:00,Real Madrid,Real Sociedad,1.0,0.0,W
+2025-12-07 00:00:00,Alhama,FC Badalona,0.0,1.0,W
+2025-12-07 00:00:00,Athletic Club,Levante,1.0,0.0,W
+2025-12-07 00:00:00,Dux Logroño,Eibar,0.0,1.0,W
+2025-12-13 00:00:00,Granada,Real Madrid,0.0,3.0,W
+2025-12-13 00:00:00,Levante,Espanyol,0.0,1.0,W
+2025-12-13 00:00:00,FC Badalona,Barcelona,1.0,5.0,W
+2025-12-13 00:00:00,Sevilla,Alhama,2.0,1.0,W
+2025-12-13 00:00:00,Madrid CFF,Athletic Club,0.0,2.0,W
+2025-12-14 00:00:00,CD Tenerife,Dux Logroño,1.0,1.0,W
+2025-12-14 00:00:00,Eibar,Atlético Madrid,2.0,2.0,W
+2025-12-14 00:00:00,Real Sociedad,Deportivo,3.0,0.0,W
+2026-01-10 00:00:00,Alhama,Eibar,0.0,1.0,W
+2026-01-10 00:00:00,Atlético Madrid,Real Sociedad,5.0,5.0,W
+2026-01-10 00:00:00,Athletic Club,FC Badalona,0.0,0.0,W
+2026-01-10 00:00:00,Real Madrid,Sevilla,2.0,0.0,W
+2026-01-10 00:00:00,Barcelona,Madrid CFF,12.0,1.0,W
+2026-01-11 00:00:00,Deportivo,CD Tenerife,1.0,1.0,W
+2026-01-11 00:00:00,Dux Logroño,Levante,2.0,3.0,W
+2026-01-11 00:00:00,Espanyol,Granada,0.0,2.0,W
+2026-01-17 00:00:00,Granada,Dux Logroño,1.0,0.0,W
+2026-01-17 00:00:00,Levante,Real Madrid,1.0,2.0,W
+2026-01-17 00:00:00,Atlético Madrid,Espanyol,0.0,1.0,W
+2026-01-17 00:00:00,Eibar,Madrid CFF,1.0,3.0,W
+2026-01-18 00:00:00,Alhama,Barcelona,0.0,2.0,W
+2026-01-18 00:00:00,CD Tenerife,Athletic Club,5.0,0.0,W
+2026-01-18 00:00:00,FC Badalona,Deportivo,1.0,0.0,W
+2026-01-18 00:00:00,Sevilla,Real Sociedad,0.0,2.0,W
+2026-01-25 00:00:00,Espanyol,CD Tenerife,0.0,0.0,W
+2026-01-25 00:00:00,Real Sociedad,Eibar,3.0,0.0,W
+2026-01-25 00:00:00,Sevilla,Levante,4.0,2.0,W
+2026-01-25 00:00:00,Dux Logroño,Deportivo,0.0,4.0,W
+2026-01-25 00:00:00,Madrid CFF,FC Badalona,0.0,1.0,W
+2026-01-25 00:00:00,Granada,Alhama,2.0,0.0,W
+2026-01-31 00:00:00,Atlético Madrid,Granada,1.0,1.0,W
+2026-01-31 00:00:00,Levante,Madrid CFF,2.0,1.0,W
+2026-01-31 00:00:00,Athletic Club,Espanyol,2.0,1.0,W
+2026-01-31 00:00:00,Alhama,Dux Logroño,0.0,4.0,W
+2026-02-01 00:00:00,Deportivo,Real Madrid,2.0,4.0,W
+2026-02-01 00:00:00,FC Badalona,Eibar,2.0,1.0,W
+2026-02-01 00:00:00,CD Tenerife,Real Sociedad,1.0,1.0,W
+2026-02-01 00:00:00,Barcelona,Sevilla,4.0,1.0,W
+2026-02-07 00:00:00,Eibar,Granada,0.0,2.0,W
+2026-02-08 00:00:00,CD Tenerife,Alhama,1.0,0.0,W
+2026-02-08 00:00:00,Levante,Atlético Madrid,0.0,1.0,W
+2026-02-08 00:00:00,Sevilla,Athletic Club,4.0,0.0,W
+2026-02-08 00:00:00,Madrid CFF,Deportivo,1.0,6.0,W
+2026-02-08 00:00:00,Real Madrid,Espanyol,3.0,0.0,W
+2026-02-08 00:00:00,Real Sociedad,FC Badalona,2.0,0.0,W
+2026-02-08 00:00:00,Dux Logroño,Barcelona,0.0,3.0,W
+2026-02-14 00:00:00,FC Badalona,CD Tenerife,0.0,2.0,W
+2026-02-14 00:00:00,Granada,Levante,1.0,0.0,W
+2026-02-14 00:00:00,Deportivo,Sevilla,0.0,4.0,W
+2026-02-14 00:00:00,Barcelona,Eibar,4.0,0.0,W
+2026-02-15 00:00:00,Alhama,Real Madrid,0.0,3.0,W
+2026-02-15 00:00:00,Athletic Club,Real Sociedad,0.0,2.0,W
+2026-02-15 00:00:00,Espanyol,Dux Logroño,1.0,1.0,W
+2026-02-15 00:00:00,Atlético Madrid,Madrid CFF,0.0,0.0,W
+2026-02-21 00:00:00,Levante,Deportivo,1.0,2.0,W
+2026-02-21 00:00:00,Madrid CFF,Alhama,5.0,0.0,W
+2026-02-21 00:00:00,Dux Logroño,FC Badalona,2.0,3.0,W
+2026-02-21 00:00:00,Granada,Barcelona,0.0,2.0,W
+2026-02-22 00:00:00,Eibar,Athletic Club,0.0,1.0,W
+2026-02-22 00:00:00,Real Madrid,CD Tenerife,2.0,0.0,W
+2026-02-22 00:00:00,Real Sociedad,Espanyol,2.0,1.0,W
+2026-02-22 00:00:00,Sevilla,Atlético Madrid,2.0,1.0,W
+2026-03-14 00:00:00,Atlético Madrid,Dux Logroño,5.0,0.0,W
+2026-03-14 00:00:00,CD Tenerife,Levante,4.0,0.0,W
+2026-03-14 00:00:00,Real Sociedad,Real Madrid,0.0,3.0,W
+2026-03-15 00:00:00,Alhama,Sevilla,0.0,1.0,W
+2026-03-15 00:00:00,Deportivo,Barcelona,0.0,2.0,W
+2026-03-15 00:00:00,FC Badalona,Granada,0.0,4.0,W
+2026-03-15 00:00:00,Athletic Club,Madrid CFF,4.0,1.0,W
+2026-03-16 00:00:00,Espanyol,Eibar,2.0,0.0,W
+2026-03-21 00:00:00,Levante,Real Sociedad,0.0,1.0,W
+2026-03-21 00:00:00,Madrid CFF,Espanyol,1.0,1.0,W
+2026-03-21 00:00:00,Barcelona,Athletic Club,7.0,1.0,W
+2026-03-22 00:00:00,Alhama,Atlético Madrid,1.0,2.0,W
+2026-03-22 00:00:00,Dux Logroño,CD Tenerife,0.0,1.0,W
+2026-03-22 00:00:00,Eibar,Real Madrid,0.0,1.0,W
+2026-03-22 00:00:00,Sevilla,FC Badalona,1.0,5.0,W
+2026-03-23 00:00:00,Granada,Deportivo,1.0,0.0,W
+2026-03-28 00:00:00,FC Badalona,Alhama,3.0,2.0,W
+2026-03-28 00:00:00,Espanyol,Levante,1.0,0.0,W
+2026-03-28 00:00:00,Deportivo,Eibar,2.0,1.0,W
+2026-03-28 00:00:00,Sevilla,Granada,0.0,1.0,W
+2026-03-29 00:00:00,Real Sociedad,Dux Logroño,1.0,1.0,W
+2026-03-29 00:00:00,CD Tenerife,Madrid CFF,2.0,0.0,W
+2026-03-29 00:00:00,Athletic Club,Atlético Madrid,1.0,2.0,W
+2026-03-29 00:00:00,Real Madrid,Barcelona,0.0,3.0,W
+2026-04-03 00:00:00,Eibar,CD Tenerife,0.0,0.0,W
+2026-04-04 00:00:00,Alhama,Real Sociedad,1.0,5.0,W
+2026-04-04 00:00:00,Dux Logroño,Sevilla,2.0,1.0,W
+2026-04-04 00:00:00,Granada,Espanyol,2.0,0.0,W
+2026-04-05 00:00:00,Atlético Madrid,Deportivo,2.0,0.0,W
+2026-04-05 00:00:00,Levante,Athletic Club,0.0,1.0,W
+2026-04-05 00:00:00,Madrid CFF,Real Madrid,0.0,2.0,W
+2026-04-06 00:00:00,Barcelona,FC Badalona,6.0,0.0,W
+2026-04-25 00:00:00,Athletic Club,Granada,1.0,2.0,W
+2026-04-25 00:00:00,FC Badalona,Atlético Madrid,2.0,4.0,W
+2026-04-25 00:00:00,Eibar,Levante,2.0,1.0,W
+2026-04-26 00:00:00,Deportivo,Alhama,2.0,2.0,W
+2026-04-26 00:00:00,CD Tenerife,Sevilla,3.0,0.0,W
+2026-04-26 00:00:00,Real Sociedad,Madrid CFF,2.0,0.0,W
+2026-04-26 00:00:00,Real Madrid,Dux Logroño,1.0,1.0,W
+2026-05-01 00:00:00,Alhama,Espanyol,3.0,1.0,W
+2026-05-01 00:00:00,Granada,CD Tenerife,1.0,1.0,W
+2026-05-02 00:00:00,FC Badalona,Athletic Club,0.0,1.0,W
+2026-05-02 00:00:00,Dux Logroño,Madrid CFF,3.0,0.0,W
+2026-05-02 00:00:00,Sevilla,Real Madrid,0.0,2.0,W
+2026-05-03 00:00:00,Atlético Madrid,Eibar,4.0,0.0,W
+2026-05-03 00:00:00,Deportivo,Real Sociedad,1.0,2.0,W
+2026-05-09 00:00:00,Espanyol,FC Badalona,1.0,1.0,W
+2026-05-09 00:00:00,Real Sociedad,Granada,3.0,0.0,W
+2026-05-09 00:00:00,Eibar,Alhama,2.0,0.0,W
+2026-05-09 00:00:00,Athletic Club,Deportivo,0.0,1.0,W
+2026-05-10 00:00:00,Levante,Dux Logroño,1.0,4.0,W
+2026-05-10 00:00:00,Real Madrid,Atlético Madrid,1.0,0.0,W
+2026-05-10 00:00:00,CD Tenerife,Barcelona,1.0,3.0,W
+2026-05-11 00:00:00,Madrid CFF,Sevilla,2.0,0.0,W
+2026-05-31 00:00:00,Eibar,Dux Logroño,2.0,1.0,W
+2026-05-31 00:00:00,Real Madrid,Granada,2.0,0.0,W
+2026-05-31 00:00:00,Real Sociedad,Atlético Madrid,2.0,0.0,W
+2026-05-31 00:00:00,CD Tenerife,Deportivo,2.0,0.0,W
+2026-05-31 00:00:00,Athletic Club,Alhama,4.0,1.0,W
+2026-05-31 00:00:00,Espanyol,Sevilla,0.0,0.0,W
+2026-05-31 00:00:00,Levante,FC Badalona,0.0,1.0,W
+2026-05-31 00:00:00,Madrid CFF,Barcelona,0.0,4.0,W

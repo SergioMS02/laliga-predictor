@@ -1,0 +1,55 @@
+date,home,away,hg,ag,league
+2026-09-08 00:00:00,AEK Athens,LASK Linz,1.0,0.0,UCL
+2026-09-08 00:00:00,Club Brugge,Aston Villa,2.0,3.0,UCL
+2026-09-08 00:00:00,Borussia Dortmund,Villarreal,3.0,2.0,UCL
+2026-09-08 00:00:00,FC Porto,Manchester City,0.0,2.0,UCL
+2026-09-08 00:00:00,Lille,Real Betis,2.0,3.0,UCL
+2026-09-08 00:00:00,Real Madrid,Internazionale,2.0,1.0,UCL
+2026-09-09 00:00:00,Barcelona,Feyenoord Rotterdam,5.0,1.0,UCL
+2026-09-09 00:00:00,VfB Stuttgart,Viking FK,3.0,1.0,UCL
+2026-09-09 00:00:00,Liverpool,Atlético Madrid,2.0,1.0,UCL
+2026-09-09 00:00:00,Napoli,Arsenal,0.0,1.0,UCL
+2026-09-09 00:00:00,Paris Saint-Germain,Slovan Bratislava,6.0,1.0,UCL
+2026-09-09 00:00:00,Sporting CP,Galatasaray,3.0,1.0,UCL
+2026-09-10 00:00:00,Fenerbahce,AS Roma,1.0,1.0,UCL
+2026-09-10 00:00:00,PSV Eindhoven,Shakhtar Donetsk,1.0,1.0,UCL
+2026-09-10 00:00:00,Bayern Munich,Bodo/Glimt,5.0,0.0,UCL
+2026-09-10 00:00:00,Como,RB Leipzig,4.0,1.0,UCL
+2026-09-10 00:00:00,Manchester United,Sabah FK,4.0,0.0,UCL
+2026-09-10 00:00:00,Slavia Prague,Lens,2.0,3.0,UCL
+2026-10-13 00:00:00,Lens,Sporting CP,0.0,2.0,UCL
+2026-10-13 00:00:00,Sabah FK,Slavia Prague,2.0,0.0,UCL
+2026-10-13 00:00:00,Arsenal,Lille,3.0,0.0,UCL
+2026-10-13 00:00:00,Atlético Madrid,Manchester United,2.0,0.0,UCL
+2026-10-13 00:00:00,Galatasaray,Barcelona,1.0,4.0,UCL
+2026-10-13 00:00:00,Internazionale,Club Brugge,3.0,4.0,UCL
+2026-10-13 00:00:00,RB Leipzig,PSV Eindhoven,1.0,0.0,UCL
+2026-10-13 00:00:00,Viking FK,Bayern Munich,3.0,3.0,UCL
+2026-10-13 00:00:00,Villarreal,Napoli,3.0,1.0,UCL
+2026-10-14 00:00:00,Feyenoord Rotterdam,Como,3.0,2.0,UCL
+2026-10-14 00:00:00,LASK Linz,Liverpool,3.0,6.0,UCL
+2026-10-14 00:00:00,AS Roma,Real Madrid,3.0,4.0,UCL
+2026-10-14 00:00:00,Aston Villa,Fenerbahce,6.0,0.0,UCL
+2026-10-14 00:00:00,Bodo/Glimt,Borussia Dortmund,1.0,0.0,UCL
+2026-10-14 00:00:00,Manchester City,Paris Saint-Germain,2.0,4.0,UCL
+2026-10-14 00:00:00,Real Betis,FC Porto,3.0,2.0,UCL
+2026-10-14 00:00:00,Shakhtar Donetsk,AEK Athens,3.0,1.0,UCL
+2026-10-14 00:00:00,Slovan Bratislava,VfB Stuttgart,0.0,3.0,UCL
+2026-10-20 00:00:00,Fenerbahce,Slavia Prague,2.0,2.0,UCL
+2026-10-20 00:00:00,Sabah FK,Borussia Dortmund,1.0,2.0,UCL
+2026-10-20 00:00:00,AS Roma,Slovan Bratislava,4.0,0.0,UCL
+2026-10-20 00:00:00,FC Porto,PSV Eindhoven,0.0,1.0,UCL
+2026-10-20 00:00:00,Liverpool,Villarreal,4.0,3.0,UCL
+2026-10-20 00:00:00,Manchester City,AEK Athens,5.0,1.0,UCL
+2026-10-20 00:00:00,Napoli,Bodo/Glimt,4.0,3.0,UCL
+2026-10-20 00:00:00,Paris Saint-Germain,Barcelona,4.0,2.0,UCL
+2026-10-20 00:00:00,VfB Stuttgart,Atlético Madrid,1.0,1.0,UCL
+2026-10-21 00:00:00,Como,Manchester United,4.0,1.0,UCL
+2026-10-21 00:00:00,Lille,Galatasaray,2.0,4.0,UCL
+2026-10-21 00:00:00,Aston Villa,Viking FK,3.0,1.0,UCL
+2026-10-21 00:00:00,Bayern Munich,Arsenal,2.0,2.0,UCL
+2026-10-21 00:00:00,Club Brugge,Lens,3.0,0.0,UCL
+2026-10-21 00:00:00,Internazionale,Shakhtar Donetsk,1.0,0.0,UCL
+2026-10-21 00:00:00,Real Betis,Feyenoord Rotterdam,1.0,0.0,UCL
+2026-10-21 00:00:00,Real Madrid,RB Leipzig,4.0,1.0,UCL
+2026-10-21 00:00:00,Sporting CP,LASK Linz,2.0,3.0,UCL

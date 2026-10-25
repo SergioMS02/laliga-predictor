@@ -1,0 +1,55 @@
+date,home,away,hg,ag,league
+2026-09-16 00:00:00,Ararat-Armenia,Sparta Prague,1.0,4.0,UEL
+2026-09-16 00:00:00,Omonia Nicosia,Celta Vigo,1.0,0.0,UEL
+2026-09-16 00:00:00,AC Milan,Benfica,0.0,2.0,UEL
+2026-09-16 00:00:00,Anderlecht,Lyon,1.0,2.0,UEL
+2026-09-16 00:00:00,Bayer Leverkusen,NK Celje,2.0,0.0,UEL
+2026-09-16 00:00:00,Hapoel Be'er,Dinamo Zagreb,0.0,0.0,UEL
+2026-09-16 00:00:00,Olympiacos,Jagiellonia Bialystok,2.0,1.0,UEL
+2026-09-16 00:00:00,SK Sturm Graz,Stade Rennais,0.0,0.0,UEL
+2026-09-16 00:00:00,Sunderland,AZ Alkmaar,1.0,0.0,UEL
+2026-09-17 00:00:00,Levski Sofia,RB Salzburg,0.0,1.0,UEL
+2026-09-17 00:00:00,OFI Crete,TSG Hoffenheim,2.0,0.0,UEL
+2026-09-17 00:00:00,Besiktas,Marseille,4.0,1.0,UEL
+2026-09-17 00:00:00,Celtic,Ferencvaros,1.0,3.0,UEL
+2026-09-17 00:00:00,Crystal Palace,Lech Poznan,4.0,0.0,UEL
+2026-09-17 00:00:00,Juventus,NEC Nijmegen,5.0,0.0,UEL
+2026-09-17 00:00:00,Lillestrom,Torreense,1.0,2.0,UEL
+2026-09-17 00:00:00,Real Sociedad,AFC Bournemouth,1.0,2.0,UEL
+2026-09-17 00:00:00,Viktoria Plzen,Union St.-Gilloise,0.0,3.0,UEL
+2026-10-15 00:00:00,AZ Alkmaar,Hapoel Be'er,2.0,1.0,UEL
+2026-10-15 00:00:00,Lech Poznan,Bayer Leverkusen,0.0,4.0,UEL
+2026-10-15 00:00:00,Lyon,Crystal Palace,3.0,2.0,UEL
+2026-10-15 00:00:00,NK Celje,Omonia Nicosia,0.0,3.0,UEL
+2026-10-15 00:00:00,RB Salzburg,AC Milan,0.0,4.0,UEL
+2026-10-15 00:00:00,Sparta Prague,Lillestrom,1.0,1.0,UEL
+2026-10-15 00:00:00,Torreense,Sunderland,1.0,2.0,UEL
+2026-10-15 00:00:00,Union St.-Gilloise,Real Sociedad,1.0,1.0,UEL
+2026-10-15 00:00:00,AFC Bournemouth,SK Sturm Graz,3.0,0.0,UEL
+2026-10-15 00:00:00,Benfica,Celtic,4.0,1.0,UEL
+2026-10-15 00:00:00,Celta Vigo,Juventus,1.0,2.0,UEL
+2026-10-15 00:00:00,Dinamo Zagreb,Anderlecht,1.0,0.0,UEL
+2026-10-15 00:00:00,Ferencvaros,Viktoria Plzen,2.0,1.0,UEL
+2026-10-15 00:00:00,Jagiellonia Bialystok,Ararat-Armenia,3.0,1.0,UEL
+2026-10-15 00:00:00,Marseille,Olympiacos,0.0,1.0,UEL
+2026-10-15 00:00:00,NEC Nijmegen,Levski Sofia,1.0,1.0,UEL
+2026-10-15 00:00:00,Stade Rennais,OFI Crete,2.0,1.0,UEL
+2026-10-15 00:00:00,TSG Hoffenheim,Besiktas,2.0,3.0,UEL
+2026-10-22 00:00:00,Ararat-Armenia,AZ Alkmaar,0.0,4.0,UEL
+2026-10-22 00:00:00,Dinamo Zagreb,NEC Nijmegen,2.0,4.0,UEL
+2026-10-22 00:00:00,Ferencvaros,Torreense,4.0,1.0,UEL
+2026-10-22 00:00:00,Juventus,Stade Rennais,2.0,2.0,UEL
+2026-10-22 00:00:00,Lech Poznan,Sunderland,1.0,1.0,UEL
+2026-10-22 00:00:00,OFI Crete,Bayer Leverkusen,0.0,2.0,UEL
+2026-10-22 00:00:00,SK Sturm Graz,Marseille,1.0,0.0,UEL
+2026-10-22 00:00:00,Union St.-Gilloise,Hapoel Be'er,4.0,0.0,UEL
+2026-10-22 00:00:00,AFC Bournemouth,AC Milan,3.0,0.0,UEL
+2026-10-22 00:00:00,Besiktas,Crystal Palace,2.0,2.0,UEL
+2026-10-22 00:00:00,Celtic,Celta Vigo,1.0,2.0,UEL
+2026-10-22 00:00:00,Jagiellonia Bialystok,Anderlecht,0.0,3.0,UEL
+2026-10-22 00:00:00,Lillestrom,Real Sociedad,0.0,6.0,UEL
+2026-10-22 00:00:00,NK Celje,RB Salzburg,2.0,2.0,UEL
+2026-10-22 00:00:00,Olympiacos,Sparta Prague,1.0,0.0,UEL
+2026-10-22 00:00:00,Omonia Nicosia,Benfica,1.0,4.0,UEL
+2026-10-22 00:00:00,TSG Hoffenheim,Lyon,3.0,0.0,UEL
+2026-10-22 00:00:00,Viktoria Plzen,Levski Sofia,1.0,2.0,UEL

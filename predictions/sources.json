@@ -1,5 +1,5 @@
 {
- "at": "2026-10-25T16:15+00:00",
+ "at": "2026-10-25T17:19+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -48,7 +48,7 @@
   },
   "Google News (bajas)": {
    "ok": true,
-   "rows": 360,
+   "rows": 330,
    "error": null
   }
  }
