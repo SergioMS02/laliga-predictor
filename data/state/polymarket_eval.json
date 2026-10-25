@@ -1,0 +1,108 @@
+{
+ "n": 424,
+ "n_all": 465,
+ "min_volume": 50000.0,
+ "since": "2025-08-15",
+ "logloss": {
+  "polymarket": 0.9531,
+  "cierre_casas": 0.9529,
+  "modelo": 0.9596,
+  "mezcla": 0.9534
+ },
+ "blend": [
+  {
+   "w_model": 0.0,
+   "logloss": 0.9531
+  },
+  {
+   "w_model": 0.05,
+   "logloss": 0.9532
+  },
+  {
+   "w_model": 0.1,
+   "logloss": 0.9534
+  },
+  {
+   "w_model": 0.15,
+   "logloss": 0.9535
+  },
+  {
+   "w_model": 0.2,
+   "logloss": 0.9537
+  },
+  {
+   "w_model": 0.25,
+   "logloss": 0.9539
+  },
+  {
+   "w_model": 0.3,
+   "logloss": 0.9541
+  },
+  {
+   "w_model": 0.35,
+   "logloss": 0.9544
+  },
+  {
+   "w_model": 0.4,
+   "logloss": 0.9546
+  },
+  {
+   "w_model": 0.45,
+   "logloss": 0.9549
+  },
+  {
+   "w_model": 0.5,
+   "logloss": 0.9553
+  },
+  {
+   "w_model": 0.55,
+   "logloss": 0.9556
+  },
+  {
+   "w_model": 0.6,
+   "logloss": 0.9559
+  },
+  {
+   "w_model": 0.65,
+   "logloss": 0.9563
+  },
+  {
+   "w_model": 0.7,
+   "logloss": 0.9567
+  },
+  {
+   "w_model": 0.75,
+   "logloss": 0.9571
+  },
+  {
+   "w_model": 0.8,
+   "logloss": 0.9576
+  },
+  {
+   "w_model": 0.85,
+   "logloss": 0.9581
+  },
+  {
+   "w_model": 0.9,
+   "logloss": 0.9586
+  },
+  {
+   "w_model": 0.95,
+   "logloss": 0.9591
+  },
+  {
+   "w_model": 1.0,
+   "logloss": 0.9596
+  }
+ ],
+ "best_model_weight": 0.0,
+ "model_weight_used": 0.1,
+ "diff_vs_close": {
+  "mean": 0.0002,
+  "ci95": [
+   -0.0021,
+   0.0025
+  ]
+ },
+ "updated": "2026-10-25"
+}
