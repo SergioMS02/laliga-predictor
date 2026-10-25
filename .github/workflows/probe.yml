@@ -10,32 +10,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p raw9
-          python3 - <<'PY' > raw9/out.txt 2>&1
+          mkdir -p raw10
+          python3 - <<'PY' > raw10/out.txt 2>&1
           import requests, json
           s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0"
           G = "https://gamma-api.polymarket.com"
-          for path, params in [("/sports", {}), ("/tags", {"limit": 500}),
-                               ("/events", {"limit": 50, "closed": "false", "tag_slug": "la-liga"}),
-                               ("/events", {"limit": 50, "closed": "false", "tag_slug": "laliga"}),
-                               ("/events", {"limit": 50, "closed": "false", "series_slug": "la-liga"}),
-                               ("/public-search", {"q": "Real Madrid", "limit_per_type": 20}),
-                               ("/events", {"limit": 50, "closed": "true", "tag_slug": "la-liga", "order": "endDate", "ascending": "false"})]:
-              try:
-                  r = s.get(G + path, params=params, timeout=30)
-                  print("==", path, params, r.status_code, len(r.content))
-                  js = r.json()
-                  open("raw9/" + (path.strip("/").replace("/", "_") + "_" + "_".join(f"{k}{v}" for k, v in params.items()))[:80] + ".json", "w").write(json.dumps(js)[:3000000])
-                  if isinstance(js, list):
-                      for e in js[:40]:
-                          print("  ", {k: e.get(k) for k in ("id", "slug", "title", "label", "sport", "series", "volume", "endDate") if k in e})
-                  elif isinstance(js, dict):
-                      print("  keys", list(js)[:10])
-                      for k in ("events", "markets"):
-                          for e in (js.get(k) or [])[:20]:
-                              print("   ", k, {kk: e.get(kk) for kk in ("slug", "title", "question", "volume", "endDate")})
-              except Exception as e:
-                  print("ERR", path, e)
+          r = s.get(G + "/events", params={"slug": "lal-bar-rea-2026-10-25"}, timeout=30); js = r.json()
+          json.dump(js, open("raw10/clasico.json", "w"))
+          r = s.get(G + "/events", params={"series_id": "10193", "closed": "false", "limit": 100}, timeout=30); js2 = r.json()
+          json.dump(js2, open("raw10/lal_open.json", "w"))
+          print("open lal", len(js2), [e.get("slug") for e in js2][:40])
+          r = s.get(G + "/events", params={"series_id": "10193", "closed": "true", "limit": 100, "order": "endDate", "ascending": "false"}, timeout=30); js3 = r.json()
+          json.dump(js3[:60], open("raw10/lal_closed.json", "w"))
+          print("closed lal", len(js3), [(e.get("slug"), round(e.get("volume") or 0)) for e in js3][:40])
+          for slug in ["laliga-2027-champion-20260701200737375", "laliga-top-goalscorer-2026-27", "laliga-teams-relegated-2026-27", "laliga-team-to-qualify-for-the-2027-28-uefa-champions-league"]:
+              r = s.get(G + "/events", params={"slug": slug}, timeout=30); json.dump(r.json(), open(f"raw10/{slug[:30]}.json", "w"))
+          for u in [G + "/events?slug=lal-bar-rea-2026-10-25", "https://clob.polymarket.com/prices-history?interval=1d&market=1"]:
+              r = s.get(u, headers={"Origin": "https://sergioms02.github.io"}, timeout=30)
+              print("CORS", u, r.status_code, r.headers.get("access-control-allow-origin"))
+          # clob price history for clasico first market token
+          try:
+              m = js[0]["markets"][0]; toks = json.loads(m["clobTokenIds"]); print("token", toks[0])
+              r = s.get("https://clob.polymarket.com/prices-history", params={"market": toks[0], "interval": "max", "fidelity": 60}, timeout=30)
+              print("hist", r.status_code, r.text[:500])
+          except Exception as e:
+              print("hist err", e)
           PY
           git config user.name probe; git config user.email probe@example.com
-          git add raw9; git commit -qm probe-out9; git push origin HEAD:probe
+          git add raw10; git commit -qm probe-out10; git push origin HEAD:probe
