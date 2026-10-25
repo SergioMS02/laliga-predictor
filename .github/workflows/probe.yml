@@ -9,17 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e . -q
       - run: |
-          mkdir -p raw4
-          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
-          curl -sS -A "$UA" -o raw4/sb.json "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard"
-          curl -sS -D - -o /dev/null -A "$UA" -H "Origin: https://sergioms02.github.io" "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard" | grep -i -E "^HTTP|access-control|content-type" >> raw4/cors.txt
-          EID=$(python3 -c "import json;d=json.load(open('raw4/sb.json'));print(d['events'][0]['id'])")
-          curl -sS -A "$UA" -o raw4/summary.json "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=$EID"
-          echo "--- summary" >> raw4/cors.txt
-          curl -sS -D - -o /dev/null -A "$UA" -H "Origin: https://sergioms02.github.io" "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=$EID" | grep -i -E "^HTTP|access-control" >> raw4/cors.txt
-          for u in "https://www.eduardolosilla.es/quiniela" "https://www.quinielista.es/" "https://www.eduardolosilla.es/quiniela/ayudas/porcentajes" "https://www.quinielista.es/porcentajes" "https://www.combinacionganadora.com/quiniela/probabilidades/"; do
-            n=$(echo $u | md5sum | cut -c1-6); curl -sS -L -A "$UA" -o raw4/p_$n.html -w "$n %{http_code} $u\n" "$u" >> raw4/pages.txt
-          done
+          python - <<'PY'
+          import logging; logging.basicConfig(level=logging.INFO)
+          from laliga.config import load_settings
+          from laliga import eurelo
+          from laliga.data import results
+          s = load_settings()
+          for y in range(2024, 2027):
+              results.fetch_season(s, y, online=True, div="SP2")
+          r = eurelo.build(s, online=True)
+          print(r.sort_values("rating", ascending=False).head(40).to_string())
+          print(r.league.value_counts().to_string())
+          PY
+      - run: |
           git config user.name probe; git config user.email probe@example.com
-          git add raw4; git commit -qm probe-out4; git push origin HEAD:probe
+          git add -f data/raw/euro data/processed/euro_elo.csv data/raw/SP2_*.csv; git commit -qm probe-out5; git push origin HEAD:probe

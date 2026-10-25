@@ -1,0 +1,682 @@
+{
+ "datosGeneralesQuiniela": {
+  "id": 1617,
+  "jornada": 17,
+  "temporada": 2027,
+  "fechaJornada": 1793055600,
+  "fechaFinApuestas": 1793124000,
+  "fechaFinPenas": 1793122200,
+  "fechaInicioEscrutinio": 0,
+  "fechaEscrutinio": 0,
+  "caducidadJornada": 1793142000,
+  "cierreParticulares": 1793124000,
+  "cierreDnp": 1793122200,
+  "season": {
+   "torneo": 36,
+   "temporada": 2022
+  },
+  "temporadas": [
+   {
+    "clave": 2027,
+    "valor": "2026/2027",
+    "numeroJornadas": 32,
+    "fechaInicioTemporada": 1786744800,
+    "jornada": "17",
+    "jornadasJugar": [
+     17
+    ]
+   }
+  ],
+  "porcentajes": {
+   "jornada": {
+    "porc14": 0.15,
+    "porc15": 0.085
+   },
+   "escrutador": {
+    "porc14": 0.16,
+    "porc15": 0.075
+   }
+  },
+  "forzarModo": 0,
+  "servidorJornadaEnvivo": 0,
+  "redesSociales": {
+   "sellarBoleto": {
+    "texto": "Sigue la quiniela que he jugado en la App del quinielista ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada",
+    "compartirTwitter": " via @QUINIELISTA1X2"
+   },
+   "sellarParticipacion": {
+    "texto": "He adquirido una participación de la Peña ",
+    "jornada": " para la jornada ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "https://www.quinielista.es/facebook/index.asp?fuseaction=fitxa&id_apuesta="
+   },
+   "sellarParticipacionPena1X2": {
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/"
+   },
+   "sellarParticipacionPrimipena": {
+    "texto": "He adquirido una participación de la Primipeña",
+    "sorteo": " para el sorteo del ",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " via @QUINIELISTA1X2",
+    "url": "https://www.quinielista.es/primitiva/primipenya"
+   },
+   "sellarParticipacionPenaQuinigol": {
+    "texto": "He adquirido una participación de la Peña Quinigol",
+    "jornada": " en EduardoLosilla.es para la jornada ",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " via @QUINIELISTA1X2",
+    "url": "https://www.eduardolosilla.es/quinigol/peña-quinigol"
+   },
+   "sellarParticipacionFondo1x2": {
+    "texto": "He adquirido una participación del Fondo 1X2",
+    "jornada": "para la jornada",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " via @QUINIELISTA1X2",
+    "url": "https://www.quinielista.es/fondo1x2"
+   },
+   "sellarPrimitiva": {
+    "texto": "Sigue la primitiva que he jugado en la App del quinielista",
+    "jornada": " para el sorteo ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/primitiva",
+    "compartirTwitter": " via @QUINIELISTA1X2"
+   },
+   "sellarQuinigol": {
+    "texto": "Sigue el quinigol que he jugado en la App del quinielista ",
+    "jornada": " para la jornada ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/quinigol",
+    "compartirTwitter": " via @QUINIELISTA1X2"
+   },
+   "sellarQuinigolEL": {
+    "texto": "Sigue el quinigol que he jugado en EduardoLosilla.es ",
+    "jornada": " para la jornada ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "     https://www.eduardolosilla.es/compartir/quinigol",
+    "compartirTwitter": " QUINIELISTA1X2"
+   },
+   "sellarPrimitivaEL": {
+    "texto": "Sigue la primitiva que he jugado en EduardoLosilla.es ",
+    "jornada": " para el sorteo ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "     https://www.eduardolosilla.es/compartir/primitiva",
+    "compartirTwitter": " QUINIELISTA1X2"
+   },
+   "sellarEurodreamsEL": {
+    "texto": "Sigue el Eurodreams que he jugado en EduardoLosilla.es ",
+    "jornada": " para el sorteo ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "     https://www.eduardolosilla.es/compartir/primitiva",
+    "compartirTwitter": " QUINIELISTA1X2"
+   },
+   "sellarBonolotoEL": {
+    "texto": "Sigue la bonoloto que he jugado en EduardoLosilla.es ",
+    "jornada": " para el sorteo ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "     https://www.eduardolosilla.es/compartir/bonoloto",
+    "compartirTwitter": " QUINIELISTA1X2"
+   },
+   "sellarGordoEL": {
+    "texto": "Sigue el Gordo de la Primitiva que he jugado en EduardoLosilla.es ",
+    "jornada": " para el sorteo ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "     https://www.eduardolosilla.es/compartir/gordo",
+    "compartirTwitter": " QUINIELISTA1X2"
+   },
+   "sellarEuromillonesEL": {
+    "texto": "Sigue el Euromillones que he jugado en EduardoLosilla.es ",
+    "jornada": " para el sorteo ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/euromillones",
+    "compartirTwitter": " via @QUINIELISTA1X2"
+   },
+   "sellarBoletoEL": {
+    "texto": "Sigue la quiniela que he jugado en EduardoLosilla.es ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "     https://www.eduardolosilla.es/compartir/quiniela",
+    "compartirTwitter": " QUINIELISTA1X2"
+   },
+   "sellarParticipacionEL": {
+    "texto": "He adquirido una participación de la Peña ",
+    "jornada": " en EduardoLosilla.es para la jornada ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "https://www.quinielista.es/facebook/index.asp?fuseaction=fitxa&id_apuesta=",
+    "url": "https://www.eduardolosilla.es/quiniela/dnp1x2"
+   },
+   "sellarParticipacionLotopenasEL": {
+    "texto": "He adquirido una participación de la Lotopeña ",
+    "jornada": " en EduardoLosilla.es para el sorteo del ",
+    "rutaImagen": "https://static.eduardolosilla.es/api/img/logo.png",
+    "rutaFichaApuesta": "https://www.quinielista.es/facebook/index.asp?fuseaction=fitxa&id_apuesta=",
+    "url": "https://www.eduardolosilla.es/primitiva/lotopenas"
+   },
+   "sellarParticipacionPrimipenaEL": {
+    "texto": "He adquirido una participación de la Primipeña",
+    "sorteo": " en EduardoLosilla.es para el sorteo del ",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " QUINIELISTA1X2",
+    "url": "https://www.eduardolosilla.es/primitiva/primipena"
+   },
+   "sellarParticipacionPenaQuinigolEL": {
+    "texto": "He adquirido una participación de la Peña Quinigol",
+    "jornada": " en EduardoLosilla.es para la jornada ",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " QUINIELISTA1X2",
+    "url": "https://www.eduardolosilla.es/quinigol/peña-quinigol"
+   },
+   "sellarParticipacionPenaEuromillonesEL": {
+    "texto": "He adquirido una participación de la Peña de Euromillones",
+    "jornada": " en EduardoLosilla.es para el sorteo ",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " QUINIELISTA1X2",
+    "url": "https://www.eduardolosilla.es/euromillones/peña-euromillones"
+   },
+   "sellarParticipacionPenaBonolotoEL": {
+    "texto": "He adquirido una participación de la Peña de Bonoloto",
+    "jornada": " en EduardoLosilla.es para el sorteo ",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " QUINIELISTA1X2",
+    "url": "https://www.eduardolosilla.es/bonoto/peña-bonoloto"
+   },
+   "sellarParticipacionPenaGordoEL": {
+    "texto": "He adquirido una participación de la Peña del Gordo de la Primitiva",
+    "jornada": " en EduardoLosilla.es para el sorteo ",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " QUINIELISTA1X2",
+    "url": "https://www.eduardolosilla.es/gordo-de-la-primitiva/peña-gordo-de-la-primitiva"
+   },
+   "sellarParticipacionFondo1x2EL": {
+    "texto": "He adquirido una participación del Fondo 1X2",
+    "jornada": " en EduardoLosilla.es para la jornada",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " QUINIELISTA1X2",
+    "url": "https://www.eduardolosilla.es/quiniela/fondo1X2"
+   },
+   "sellarParticipacionPena1X2EL": {
+    "texto": "He adquirido una participación de la Peña 1X2",
+    "jornada": " en EduardoLosilla.es para la jornada",
+    "rutaFichaApuesta": "https://php.quinielista.es/app/jugada/",
+    "compartirTwitter": " QUINIELISTA1X2",
+    "url": "https://www.eduardolosilla.es/quiniela/pena-1X2"
+   }
+  },
+  "penasConfig": {
+   "limit": 50
+  },
+  "registro": [
+   "alias",
+   "password",
+   "repeatPassword",
+   "nombre",
+   "apellido1",
+   "apellido2",
+   "email",
+   "email2",
+   "fechaNacimiento",
+   "tipoDocumento",
+   "numeroDocumento",
+   "region",
+   "provincia",
+   "condicionesLegales",
+   "telefono"
+  ],
+  "condicionesLegales": "Texto de las condiciones generales",
+  "textoBaja": "Si se da de baja de Quinielista.es perderá la magnífica oportunidad de jugar sus Quinielas en el portal líder de La Quiniela en internet",
+  "miPenaConfig": {
+   "msgAnular": "Si anula la jornada se devolverán todas las participaciones y su peña no jugará ninguna apuesta esta jornada",
+   "tituloMsgAnular": "IMPORTANTE"
+  },
+  "timeouts": {
+   "cellular": 17000,
+   "2g": 17000,
+   "3g": 17000,
+   "4g": 13000,
+   "none": 17000,
+   "unknown": 17000,
+   "wifi": 15000,
+   "ethernet": 15000
+  },
+  "costeApuesta": 0.75,
+  "participacionMinima": {
+   "pena": 1.5,
+   "pena1X2": 9
+  },
+  "jornada1": {
+   "total": 38,
+   "actual": 10
+  },
+  "jornada2": {
+   "total": 42,
+   "actual": 11
+  },
+  "jornadaEnVivo": 16,
+  "temporadaEnVivo": 2027,
+  "urlFilesRedus": "https://files.eduardolosilla.es/redus",
+  "urlDescargaAppEL": "https://www.quinielista.es/app/android",
+  "urlEscudos": "https://img.sportradar.com/ls/crest/medium/",
+  "maxApuestasEditor": 2000,
+  "urlJornadaEnVivo": "https://static.dataradar.es/partidos.json",
+  "urlBiografia": "https://static.dataradar.es",
+  "versionEL": "000.000.001",
+  "perfil": [
+   "alias",
+   "nombre",
+   "apellido1",
+   "email",
+   "fechaNacimiento",
+   "tipoDocumento",
+   "numeroDocumento",
+   "caducidadDocumento",
+   "caducidadDNI",
+   "region",
+   "provincia",
+   "condicionesLegales",
+   "direccion",
+   "poblacio",
+   "cp",
+   "telefono",
+   "dni_anverso_web",
+   "dni_dorso_web"
+  ],
+  "mensajesPerfil": {
+   "alias": "El campo alias es obligatorio",
+   "nombre": "El campo nombre es obligatorio",
+   "apellido1": "El campo Primer apellido es obligatorio",
+   "apellido2": "El campo Segundo apellido es obligatorio",
+   "email": "El campo email es obligatorio",
+   "email2": "Es obligatorio repetir el email",
+   "fechaNacimiento": "El campo fecha de nacimiento es obligatorio",
+   "tipoDocumento": "El campo tipo de documento es obligatorio",
+   "numeroDocumento": "El campo documento es obligatorio",
+   "caducidadDNI": "La caducidad del documento es obligatoria",
+   "region": "El campo región fiscal es obligatorio",
+   "provincia": "El campo provincia es obligatorio",
+   "direccion": "El campo dirección es obligatorio",
+   "poblacio": "El campo localidad es obligatorio",
+   "cp": "El campo código postal es obligatorio",
+   "telefono": "El campo teléfono es obligatorio",
+   "dni_anverso_web": "El campo Cara documento es obligatorio",
+   "dni_dorso_web": "El campo Dorso documento es obligatorio",
+   "condicionesLegales": "Debe aceptar las condiciones legales",
+   "password": "El campo contraseña es obligatorio",
+   "repeatPassword": "Es obligatorio repetir la contraseña"
+  },
+  "opcionesPronosticos": [
+   {
+    "valor": "Tipo de pronóstico Básico",
+    "clave": 0,
+    "seleccionable": true
+   },
+   {
+    "valor": "Tipo de pronóstico Medio",
+    "clave": 1,
+    "seleccionable": true
+   },
+   {
+    "valor": "Tipo de pronóstico Valiente",
+    "clave": 2,
+    "seleccionable": true
+   }
+  ],
+  "intervaloDnp": 31,
+  "intervaloClasificacion": 30,
+  "posicionBanners": "arriba",
+  "caducidad": 0,
+  "detalleEscrutadorTotalPenas": 0,
+  "versionInfoServidor": 0,
+  "versionNumber": "3.2.6",
+  "mostrarNuevaVersion": true,
+  "urlPing": "https://fonts.googleapis.com/css?family=Montserrat:100&text=.",
+  "topicLite": 11,
+  "tiempoRefresco": 20,
+  "urlDescargaPro": "https://www.quinielista.es/app/android",
+  "urlCondicionesLegales": "https://www.quinielista.es/informacion/index.asp?fuseaction=condiciones",
+  "infoSellarBoleto": "El pronóstico es enviado al Punto de venta 10.825 de Loterías y Apuestas del Estado para ser validado y puesto a su disposición.",
+  "intentosPagarSinSaldo": 5,
+  "mesesOperaciones": 1,
+  "urlBotes": [
+   "https://www.eduardolosilla.es/primitiva/",
+   "https://www.eduardolosilla.es/euromillones/",
+   "https://www.eduardolosilla.es/bonoloto/",
+   "https://www.eduardolosilla.es/gordo-de-la-primitiva/",
+   "https://www.eduardolosilla.es/loterias/loteria-nacional/",
+   "https://www.eduardolosilla.es/quinigol/"
+  ],
+  "urlMarcadoresEnVivoIos": "https://static.dataradar.es/marcador/json/partidos.json",
+  "urlMarcadoresEnVivoQuinigolIos": "https://static.dataradar.es/marcador/json/partidos_quinigol.json",
+  "imgHostname": "https://img.quinielista.es",
+  "filesHostname": "https://files.eduardolosilla.es",
+  "diasComprobarMayoriaEdad": 30,
+  "comprobarMayoriaEdad": true,
+  "premiosLibres": 40000,
+  "preu_ds_aposta": 0.0484,
+  "preu_ds_minim": 0.85,
+  "preu_ds_maxim": 1000000,
+  "ver_componente_botes_home": false,
+  "tiempo_cuenta_atras": 1,
+  "concurso": {
+   "jornada": 17,
+   "temporada": 2027,
+   "fechaFinApuestas": 1793124000
+  },
+  "ultimaJornadaEscrutada": {
+   "jornada": 15,
+   "temporada": 2027,
+   "fecha_escrutinio": 1792704437
+  },
+  "temporadas_micropenas": [
+   {
+    "clave": 2027,
+    "valor": "2026/2027"
+   },
+   {
+    "clave": 2026,
+    "valor": "2025/2026"
+   },
+   {
+    "clave": 2025,
+    "valor": "2024/2025"
+   },
+   {
+    "clave": 2024,
+    "valor": "2023/2024"
+   },
+   {
+    "clave": 2023,
+    "valor": "2022/2023"
+   },
+   {
+    "clave": 2022,
+    "valor": "2021/2022"
+   }
+  ],
+  "plantillaCuentaAtras": "<style>\n.custom-banner {\n\t/*box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.18);    \n\tborder-radius: 0px; \n\t-moz-border-radius: 0px; \n\t-webkit-border-radius: 0px; \n*/\n\tmargin-bottom: 30px;\n}\n.custom-banner img{\n\twidth: 100%;\n\tborder-radius: 0px;\n\t-moz-border-radius: 0px; \n\t-webkit-border-radius: 0px; \n}\n\n@media (max-width: 1000px) {\n  #bannerTop130 {\n    margin-top: 50px !important;\n  }\n  .logueado100 #bannerTop130 {\n    margin-bottom:  -40px !important;\n  }\n}\n\n\n</style>\n<div class=\"loging_msg\" style=\" background-color: #fff; width: 100%\">\n<div class=\"u-container\"  style=\"font-size: 14px;line-height: 20px; padding: 10px; color: red;text-align: center;\" id=\"banner_cuenta_atras_quiniela\">\n\t<strong>LA QUINIELA CIERRA EN <span style=\"font-size: 20px;\">XXXXX</span> MINUTOS <span class=\"menos_30\">(30 MINUTOS ANTES PARA PEÑAS DNP)</span></strong>\n\t<br>\n</div>\n</div>",
+  "plantillaCuentaAtrasCierre": "<style>.rojo {color: red}</style>\n<div class=\"rojo\" id=\"\">(FALTAN <span style=\"font-size: 18px;\">XXXXX</span> MINUTOS)</div>",
+  "verComprarEnUnClick": false,
+  "sistemistas": {
+   "concursoAbierto": false,
+   "mensajeConcursoCerrado": ""
+  },
+  "cicloSuper15": 1,
+  "temporadaSuper15": 2027,
+  "ocultarFondo": 1647385200,
+  "textoOpAnulada": "El importe de esta operación es de 0 euros debido a que la jugada / participación ha sido eliminada.",
+  "caduca": "Tue Oct 27 2026 19:00:00 GMT+0100 (CET)"
+ },
+ "jornada_17_2027": {
+  "temporada": 2027,
+  "jornada": 17,
+  "caducidad": 0,
+  "costeApuesta": 0.75,
+  "textoBote": "305500",
+  "bote": 0.001,
+  "boteEstimacion": "0,00",
+  "recaudacion": "1.300.000,00",
+  "partidos": [
+   {
+    "orden": 1,
+    "num": 1,
+    "local": "RSD.ALCALA",
+    "local_corto": "RSALC",
+    "visitante": "LAS PALMAS",
+    "visitante_corto": "LASP",
+    "dia": "MAR",
+    "hora": "20:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793127600,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "6577.png",
+    "id_match": 0,
+    "id_besoccer": 253568
+   },
+   {
+    "orden": 2,
+    "num": 2,
+    "local": "ALCOYANO",
+    "local_corto": "ACOY",
+    "visitante": "MALLORCA",
+    "visitante_corto": "MALL",
+    "dia": "MIE",
+    "hora": "20:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793214000,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "2826.png",
+    "id_match": 0,
+    "id_besoccer": 253555
+   },
+   {
+    "orden": 3,
+    "num": 3,
+    "local": "AROSA SC",
+    "local_corto": "ARS",
+    "visitante": "PONTEVEDRA",
+    "visitante_corto": "PONT",
+    "dia": "MAR",
+    "hora": "21:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793131200,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "4941.png",
+    "id_match": 0,
+    "id_besoccer": 253529
+   },
+   {
+    "orden": 4,
+    "num": 4,
+    "local": "AT.CALATAYUD",
+    "local_corto": "ATCA",
+    "visitante": "OSASUNA",
+    "visitante_corto": "OSA",
+    "dia": "JUE",
+    "hora": "19:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793296800,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "2820.png",
+    "id_match": 0,
+    "id_besoccer": 253535
+   },
+   {
+    "orden": 5,
+    "num": 5,
+    "local": "BADAJOZ",
+    "local_corto": "BAD",
+    "visitante": "TENERIFE",
+    "visitante_corto": "TEN",
+    "dia": "MIE",
+    "hora": "20:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793214000,
+    "escudo_local": "2853.png",
+    "escudo_visitante": "2822.png",
+    "id_match": 0,
+    "id_besoccer": 253569
+   },
+   {
+    "orden": 6,
+    "num": 6,
+    "local": "CD CIEZA",
+    "local_corto": "CDCI",
+    "visitante": "GRANADA",
+    "visitante_corto": "GRAN",
+    "dia": "MIE",
+    "hora": "20:30",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793215800,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "33779.png",
+    "id_match": 0,
+    "id_besoccer": 253559
+   },
+   {
+    "orden": 7,
+    "num": 7,
+    "local": "CONQUENSE",
+    "local_corto": "CONQ",
+    "visitante": "CASTELLÓN",
+    "visitante_corto": "CDC",
+    "dia": "JUE",
+    "hora": "20:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793300400,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "5067.png",
+    "id_match": 0,
+    "id_besoccer": 253556
+   },
+   {
+    "orden": 8,
+    "num": 8,
+    "local": "CD COVADONGA",
+    "local_corto": "CDCOV",
+    "visitante": "VALLADOLID",
+    "visitante_corto": "VALL",
+    "dia": "MIE",
+    "hora": "20:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793214000,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "2831.png",
+    "id_match": 0,
+    "id_besoccer": 253524
+   },
+   {
+    "orden": 9,
+    "num": 9,
+    "local": "CD MINERA",
+    "local_corto": "CDMIN",
+    "visitante": "CARTAGENA",
+    "visitante_corto": "CART",
+    "dia": "MIE",
+    "hora": "20:30",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793215800,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "24329.png",
+    "id_match": 0,
+    "id_besoccer": 253561
+   },
+   {
+    "orden": 10,
+    "num": 10,
+    "local": "DON BENITO",
+    "local_corto": "DBEN",
+    "visitante": "EXTREMADURA",
+    "visitante_corto": "EXT",
+    "dia": "MAR",
+    "hora": "20:30",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793129400,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "43758.png",
+    "id_match": 0,
+    "id_besoccer": 253573
+   },
+   {
+    "orden": 11,
+    "num": 11,
+    "local": "CD LAREDO",
+    "local_corto": "LARD",
+    "visitante": "BURGOS",
+    "visitante_corto": "BURG",
+    "dia": "JUE",
+    "hora": "20:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793300400,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "2854.png",
+    "id_match": 0,
+    "id_besoccer": 253526
+   },
+   {
+    "orden": 12,
+    "num": 12,
+    "local": "NUMANCIA",
+    "local_corto": "NUM",
+    "visitante": "R.OVIEDO",
+    "visitante_corto": "OVIE",
+    "dia": "MIE",
+    "hora": "20:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793214000,
+    "escudo_local": "2855.png",
+    "escudo_visitante": "2851.png",
+    "id_match": 0,
+    "id_besoccer": 253527
+   },
+   {
+    "orden": 13,
+    "num": 13,
+    "local": "CD TUDELANO",
+    "local_corto": "TUDL",
+    "visitante": "R.ZARAGOZA",
+    "visitante_corto": "ZAR",
+    "dia": "MAR",
+    "hora": "21:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793131200,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "2815.png",
+    "id_match": 0,
+    "id_besoccer": 253543
+   },
+   {
+    "orden": 14,
+    "num": 14,
+    "local": "XEREZ",
+    "local_corto": "XER",
+    "visitante": "CÁDIZ",
+    "visitante_corto": "CAD",
+    "dia": "MIE",
+    "hora": "21:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793217600,
+    "escudo_local": "-1.png",
+    "escudo_visitante": "4488.png",
+    "id_match": 0,
+    "id_besoccer": 253570
+   },
+   {
+    "orden": 15,
+    "num": 15,
+    "local": "REC.HUELVA",
+    "local_corto": "RECRE",
+    "visitante": "RAYO",
+    "visitante_corto": "RAYO",
+    "dia": "MAR",
+    "hora": "21:00",
+    "division": 0,
+    "resultado": "null-null",
+    "fecha": 1793131200,
+    "escudo_local": "216186.png",
+    "escudo_visitante": "2818.png",
+    "id_match": 0,
+    "id_besoccer": 253565
+   }
+  ],
+  "fechaFinApuestas": 1793124000,
+  "fechaFinPenas": 1793122200,
+  "boteData": {
+   "idQuiniela": 1617,
+   "unico_acertante": 305500,
+   "bote": 0.001
+  }
+ }
+}

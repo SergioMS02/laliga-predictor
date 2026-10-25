@@ -10,6 +10,8 @@
   laliga calibrate-availability estima el efecto real de las bajas
   laliga evaluate-live          rendimiento de las predicciones ya emitidas
   laliga export-site            datos de la web (clasificación, proyección, equipos, aciertos)
+  laliga settle                 liquida apuestas y quiniela en cuanto terminan los partidos
+  laliga quiniela               actualiza la quiniela oficial (boleto, probabilidades, resultados)
   laliga all                    update + backtest + train + predict
 """
 from __future__ import annotations
@@ -39,12 +41,44 @@ def _print_backtest(r: dict) -> None:
             print(f"{k:18s} {v['log_loss']:9.4f} {v['brier']:7.4f} {v['rps']:7.4f} {100 * v['accuracy']:7.1f}%")
 
 
-def _bets(s, matches, preds) -> None:
+def _bets(s, matches, preds, send: bool = False) -> dict | None:
     from . import betting
     try:
-        betting.update(s, matches, preds)
+        r = betting.update(s, matches, preds)
     except Exception as e:
         log.warning("No se pudo actualizar la cartera simulada: %s", e)
+        return None
+    txt = "\n\n".join(t for t in (betting.format_placed(r["placed"]),
+                                    betting.format_settled(r["settled"], betting.summarize(r["ledger"], betting.cfg(s))))
+                       if t)
+    if txt:
+        print(txt)
+        if send:
+            notify.send(s, txt)
+    return r
+
+
+def _quiniela(s, preds=None, online: bool = True, send: bool = False) -> None:
+    from . import quiniela
+    try:
+        before = quiniela.load(s)["jornadas"]
+        st = quiniela.update(s, preds, online=online)
+    except Exception as e:
+        log.warning("No se pudo actualizar la quiniela: %s", e)
+        return
+    msgs = []
+    for d, j in st["jornadas"].items():
+        old = before.get(d, {})
+        if j.get("frozen") and not old.get("frozen") and not j.get("late"):
+            msgs.append(quiniela.format_ticket(j))
+        if j.get("result") and not old.get("result"):
+            r = j["result"]
+            msgs.append(f"Quiniela {d}: sencilla {r['sencilla']['hits']} aciertos ({r['sencilla']['prize']:.2f} €), "
+                        f"reducida {r['reducida']['hits']} aciertos ({r['reducida']['prize']:.2f} € por {r['reducida']['cost']:.2f} €)")
+    for m in msgs:
+        print(m)
+        if send:
+            notify.send(s, m)
 
 
 def _export_site(s, matches, projection: bool) -> None:
@@ -69,7 +103,8 @@ def _notify_moves(s, moves: list[dict], send: bool) -> None:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="laliga", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("command", choices=["update", "tune", "backtest", "train", "predict", "watch-lineups",
-                                        "backfill-espn", "calibrate-availability", "evaluate-live", "export-site", "all"])
+                                        "backfill-espn", "calibrate-availability", "evaluate-live", "export-site",
+                                        "settle", "quiniela", "all"])
     ap.add_argument("--offline", action="store_true", help="no usar red (solo caché)")
     ap.add_argument("--days", type=int, default=None, help="horizonte de predicción en días")
     ap.add_argument("--weather", action="store_true", help="incluir clima histórico en tune/backtest (≈400 peticiones)")
@@ -125,6 +160,14 @@ def main(argv: list[str] | None = None) -> int:
     if cmd == "export-site":
         _export_site(s, matches, projection=True)
         return 0
+    if cmd == "quiniela":
+        _quiniela(s, online=online, send=a.notify)
+        return 0
+    if cmd == "settle":
+        _bets(s, matches, [], send=a.notify)
+        _quiniela(s, online=online, send=a.notify)
+        _export_site(s, matches, projection=True)
+        return 0
     if cmd == "evaluate-live":
         ev = json.dumps(history.evaluate_live(s, matches), indent=2)
         (s.predictions_dir / "live_eval.json").write_text(ev, encoding="utf-8")
@@ -135,7 +178,8 @@ def main(argv: list[str] | None = None) -> int:
         big = pred.save_predictions(s, preds, matches=matches)
         print((s.predictions_dir / "latest.md").read_text(encoding="utf-8"))
         _notify_moves(s, big, a.notify)
-        _bets(s, matches, preds)
+        _bets(s, matches, preds, send=a.notify)
+        _quiniela(s, preds, online=online, send=a.notify)
         _export_site(s, matches, projection=True)
         if a.notify and preds:
             soon = notify.upcoming_within(preds, int(s.get("notify", "summary_hours", 48)))
@@ -151,9 +195,10 @@ def main(argv: list[str] | None = None) -> int:
         fresh = [p for p in preds if p["lineup_confirmed"] and not prev.get((p["home"], p["away"]), {}).get("lineup_confirmed")]
         big = pred.save_predictions(s, preds, merge=True, matches=matches) if preds else []
         _notify_moves(s, big, a.notify)
+        _bets(s, matches, preds, send=a.notify)  # también liquida lo ya terminado
         if preds:
-            _bets(s, matches, preds)
-            _export_site(s, matches, projection=False)
+            _quiniela(s, online=online, send=a.notify)
+        _export_site(s, matches, projection=False)
         print(f"Partidos en ventana: {len(preds)}; con alineación nueva: {len(fresh)}")
         explained = {(m["home"], m["away"]) for m in big}
         for p in fresh:
