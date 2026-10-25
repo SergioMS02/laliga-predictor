@@ -1,0 +1,32 @@
+chrome 0515d1 202 2411 text/html; charset=UTF-8 https://www.transfermarkt.es/laliga/verletztespieler/wettbewerb/ES1
+chrome 7f4af1 202 2411 text/html; charset=UTF-8 https://www.transfermarkt.es/laliga/sperrenausfaelle/wettbewerb/ES1
+chrome 456f41 202 2411 text/html; charset=UTF-8 https://www.transfermarkt.com/laliga/verletztespieler/wettbewerb/ES1
+chrome 489d87 202 2411 text/html; charset=UTF-8 https://www.transfermarkt.es/real-madrid/sperrenundverletzungen/verein/418
+chrome f6af86 200 168 application/json;charset=UTF-8 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/injuries
+chrome 8b26c7 404 12  https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/injuries
+chrome b8c5bc 200 64 application/json;charset=utf-8 https://sports.core.api.espn.com/v2/sports/soccer/leagues/esp.1/teams/86/injuries
+chrome 556874 403 48 application/json https://api.sofascore.com/api/v1/team/2829/players
+chrome 06a405 403 48 application/json https://www.sofascore.com/api/v1/event/14083000/lineups
+chrome 033788 404 214393 text/html; charset=utf-8 https://www.fotmob.com/api/teams?id=8633
+chrome 810214 200 775502 application/json; charset=utf- https://www.fotmob.com/api/data/teams?id=8633
+chrome 36fbcd 404 144016 text/html; charset=UTF-8 https://www.jornadaperfecta.com/bajas/
+chrome eb54ef 200 519657 text/html; charset=UTF-8 https://www.futbolfantasy.com/laliga/lesionados
+chrome b9ea8e 200 213443 text/html; charset=UTF-8 https://www.futbolfantasy.com/laliga/sancionados
+chrome e448df 403 9 text/plain; charset=utf-8 https://www.besoccer.com/competition/injured/primera
+chrome 8842f6 200 88008 text/html; charset=UTF-8 https://www.comuniate.com/lesionados.php
+bot 5057b3 202 2411 text/html; charset=UTF-8 https://www.transfermarkt.es/laliga/verletztespieler/wettbewerb/ES1
+bot 3f1f73 202 2411 text/html; charset=UTF-8 https://www.transfermarkt.es/laliga/sperrenausfaelle/wettbewerb/ES1
+bot 1dfe90 202 2411 text/html; charset=UTF-8 https://www.transfermarkt.com/laliga/verletztespieler/wettbewerb/ES1
+bot 95722a 202 2411 text/html; charset=UTF-8 https://www.transfermarkt.es/real-madrid/sperrenundverletzungen/verein/418
+bot c97c18 200 168 application/json;charset=UTF-8 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/injuries
+bot af4103 404 12  https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/injuries
+bot b0df06 200 64 application/json;charset=utf-8 https://sports.core.api.espn.com/v2/sports/soccer/leagues/esp.1/teams/86/injuries
+bot f73a5c 403 48 application/json https://api.sofascore.com/api/v1/team/2829/players
+bot e5edf6 403 48 application/json https://www.sofascore.com/api/v1/event/14083000/lineups
+bot 20a785 404 214393 text/html; charset=utf-8 https://www.fotmob.com/api/teams?id=8633
+bot 2113fc 200 775502 application/json; charset=utf- https://www.fotmob.com/api/data/teams?id=8633
+bot 9d4354 404 144016 text/html; charset=UTF-8 https://www.jornadaperfecta.com/bajas/
+bot d7b199 200 519657 text/html; charset=UTF-8 https://www.futbolfantasy.com/laliga/lesionados
+bot b361d2 200 213443 text/html; charset=UTF-8 https://www.futbolfantasy.com/laliga/sancionados
+bot 7284c6 403 9 text/plain; charset=utf-8 https://www.besoccer.com/competition/injured/primera
+bot 151874 200 88008 text/html; charset=UTF-8 https://www.comuniate.com/lesionados.php

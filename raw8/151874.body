@@ -1,0 +1,1833 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+
+<!-- 🤕 META PRINCIPALES -->
+<title>🤕 Jugadores Lesionados de LaLiga EA Sports</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description" content="Listado actualizado de 🤕 jugadores lesionados de LaLiga EA Sports: molestias, lesiones musculares y problemas articulares. Incluye tiempo estimado de baja y evolución para Comunio, Biwenger, Mister, Futmondo y Fantasy Marca.">
+<meta name="keywords" content="jugadores lesionados, LaLiga EA Sports, tiempo de baja, partes médicos, lesiones musculares, molestias, Comunio, Biwenger, Mister, Futmondo, Fantasy Marca, lesionados jornada">
+
+<!-- ⚽️ OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Comuniate.com">
+<meta property="og:title" content="🤕 Jugadores Lesionados de LaLiga EA Sports | Comuniate Fantasy">
+<meta property="og:description" content="Consulta los jugadores lesionados, su diagnóstico y tiempo estimado de baja. Datos actualizados para Comunio, Biwenger, Mister y Futmondo.">
+<meta property="og:url" content="https://www.comuniate.com/lesionados/comunio">
+<meta property="og:image" content="https://www.comuniate.com/images/lesionados.jpg">
+<meta property="og:image:alt" content="Jugadores lesionados LaLiga EA Sports - Comuniate.com">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- 🐦 META PARA TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@comuniate">
+<meta name="twitter:creator" content="@comuniate">
+<meta name="twitter:title" content="🤕 Jugadores lesionados de LaLiga EA Sports | Comuniate Fantasy">
+<meta name="twitter:description" content="Lesionados, tocados y dudas con tiempo de baja estimado. Actualización diaria para Comunio, Biwenger, Mister y Futmondo.">
+<meta name="twitter:image" content="https://www.comuniate.com/images/lesionados.jpg">
+
+<!-- 📱 FAVICON -->
+<link rel="apple-touch-icon" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="/ico/favicon.png">
+
+<!-- 🔗 CANONICAL -->
+<link rel="canonical" href="https://www.comuniate.com/lesionados/comunio" />
+
+
+<!-- CSS FILES -->
+
+
+<link href="/css/icomoon.css?version=2023" rel="stylesheet">
+<link href="/css/bootstrap.css?cambios=25.26.11" rel="stylesheet">
+<link href="/css/plantilla-style.css?v=25.26.27.03" rel="stylesheet">
+<link href="/css/partidos-puntuaciones.css?v=1.z" rel="stylesheet">
+<link id="stylesheet" href="/css/style.css?v=27.28.lazy" rel="stylesheet">
+<!-- Navegación Comuniate: iconos Phosphor, menú y slider de escudos -->
+<link href="/css/menu.css?v=27.28" rel="stylesheet">
+
+
+<link href="/css/publicidad.css?cambios=26.27" rel="stylesheet">
+
+
+<style>
+
+/*.smarty-3609078_1675869867382{position:relative;padding-bottom:56.25%!important;height:0;overflow:hidden;max-width:100%!important;} 
+.smarty-3609078_1675869867382 iframe, .smarty-3609078_1675869867382 object, .smarty-3609078_1675869867382 embed {position:absolute;top:0;left:0;min-width:100%;width:1px;height:100%;}*/
+
+
+
+#HB_CLOSE_hbagency_space_5946 { width:40px !important;}
+#HB_CLOSE_hbagency_space_5946 img { width:40px !important;height:40px !important;}
+
+
+/*loading app*/
+.loader-app {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('/images/loading.svg') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+
+.ark_interact_nav_cont{
+    top: 10px !important;
+    left:5px !important;
+}
+
+  .is-hidden { display: none !important; }
+
+
+</style>
+
+<link href="https://www.comuniate.com/css/nav-area.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.comuniate.com/css/icon-font.min.css">
+
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<link rel="preload" href="/fonts/FiraSansCondensed-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/FiraSansCondensed-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/FiraSansCondensed-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://d3u598arehftfk.cloudfront.net" crossorigin>
+
+
+
+<!-- CMP primero: crea __tcfapi/__gpp de forma inmediata. El JS remoto de InMobi se inyecta async. -->
+<script src="/js/quantcast.js?v=2026"></script>
+
+<script defer src="https://d3u598arehftfk.cloudfront.net/prebid_hb_454_717.js?v=2026.262626"></script>
+
+<script src="/js/jquery-3.7.1.min.js"></script>
+<script defer src="/js/morris-loader.js?v=20260720"></script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4QE6VWRQFJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4QE6VWRQFJ');
+</script>
+
+
+      
+        <!-- Fix enlaces iOS: evita doble tap sin provocar doble navegación -->
+<script>
+(function () {
+    'use strict';
+
+    var ua = navigator.userAgent || '';
+
+    var isIOS =
+        /iPad|iPhone|iPod/.test(ua) ||
+        (
+            navigator.platform === 'MacIntel' &&
+            navigator.maxTouchPoints > 1
+        );
+
+    if (!isIOS || !('ontouchstart' in window)) {
+        return;
+    }
+
+    /*
+     * La app ya gestiona correctamente la navegación.
+     */
+    try {
+        if (window.Capacitor) {
+            if (
+                typeof window.Capacitor.isNativePlatform === 'function' &&
+                window.Capacitor.isNativePlatform()
+            ) {
+                return;
+            }
+
+            if (typeof window.Capacitor.getPlatform === 'function') {
+                var platform = window.Capacitor.getPlatform();
+
+                if (platform === 'ios' || platform === 'android') {
+                    return;
+                }
+            }
+        }
+    } catch (error) {
+        // Continúa como navegador web.
+    }
+
+    var MAX_DISTANCE = 10;
+    var MAX_DURATION = 700;
+
+    var gesture = {
+        active: false,
+        moved: false,
+        startX: 0,
+        startY: 0,
+        startScrollY: 0,
+        startTime: 0,
+        anchor: null
+    };
+
+    var suppressedHref = '';
+    var suppressedUntil = 0;
+
+    function findAnchor(target) {
+        if (!target || typeof target.closest !== 'function') {
+            return null;
+        }
+
+        return target.closest('a[href]');
+    }
+
+    function isUIAnchor(anchor) {
+        var href = (anchor.getAttribute('href') || '')
+            .trim()
+            .toLowerCase();
+
+        if (
+            !href ||
+            href === '#' ||
+            href.indexOf('javascript:') === 0
+        ) {
+            return true;
+        }
+
+        if (anchor.getAttribute('role') === 'button') {
+            return true;
+        }
+
+        if (
+            anchor.hasAttribute('download') ||
+            anchor.hasAttribute('data-toggle') ||
+            anchor.hasAttribute('data-bs-toggle') ||
+            anchor.hasAttribute('data-slide') ||
+            anchor.classList.contains('no-ios-fix')
+        ) {
+            return true;
+        }
+
+        var target = (anchor.getAttribute('target') || '').toLowerCase();
+
+        if (target && target !== '_self') {
+            return true;
+        }
+
+        if (
+            anchor.closest(
+                '.dropdown, ' +
+                '.modal, ' +
+                '.carousel, ' +
+                '.owl-carousel, ' +
+                '.swiper, ' +
+                '.slick-slider, ' +
+                '[data-carousel], ' +
+                '.slider'
+            )
+        ) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function cancelGesture() {
+        gesture.active = false;
+        gesture.moved = true;
+        gesture.anchor = null;
+    }
+
+    document.addEventListener('touchstart', function (event) {
+        if (!event.touches || event.touches.length !== 1) {
+            cancelGesture();
+            return;
+        }
+
+        var anchor = findAnchor(event.target);
+
+        if (!anchor || isUIAnchor(anchor)) {
+            cancelGesture();
+            return;
+        }
+
+        var touch = event.touches[0];
+
+        gesture.active = true;
+        gesture.moved = false;
+        gesture.startX = touch.clientX;
+        gesture.startY = touch.clientY;
+        gesture.startScrollY = window.scrollY;
+        gesture.startTime = Date.now();
+        gesture.anchor = anchor;
+    }, {
+        capture: true,
+        passive: true
+    });
+
+    document.addEventListener('touchmove', function (event) {
+        if (
+            !gesture.active ||
+            !event.touches ||
+            event.touches.length !== 1
+        ) {
+            return;
+        }
+
+        var touch = event.touches[0];
+
+        if (
+            Math.abs(touch.clientX - gesture.startX) > MAX_DISTANCE ||
+            Math.abs(touch.clientY - gesture.startY) > MAX_DISTANCE
+        ) {
+            gesture.moved = true;
+        }
+    }, {
+        capture: true,
+        passive: true
+    });
+
+    window.addEventListener('scroll', function () {
+        if (
+            gesture.active &&
+            Math.abs(window.scrollY - gesture.startScrollY) > 4
+        ) {
+            gesture.moved = true;
+        }
+    }, {
+        passive: true
+    });
+
+    document.addEventListener('touchcancel', function () {
+        cancelGesture();
+    }, {
+        capture: true,
+        passive: true
+    });
+
+    document.addEventListener('touchend', function (event) {
+        if (!gesture.active) {
+            return;
+        }
+
+        var anchor = gesture.anchor;
+        var touch = event.changedTouches && event.changedTouches[0];
+        var duration = Date.now() - gesture.startTime;
+
+        var moved = gesture.moved;
+
+        if (touch) {
+            moved =
+                moved ||
+                Math.abs(touch.clientX - gesture.startX) > MAX_DISTANCE ||
+                Math.abs(touch.clientY - gesture.startY) > MAX_DISTANCE;
+        }
+
+        if (
+            Math.abs(window.scrollY - gesture.startScrollY) > 4
+        ) {
+            moved = true;
+        }
+
+        gesture.active = false;
+        gesture.anchor = null;
+
+        if (
+            moved ||
+            !touch ||
+            !anchor ||
+            duration > MAX_DURATION ||
+            !document.documentElement.contains(anchor)
+        ) {
+            return;
+        }
+
+        var destination;
+
+        try {
+            destination = new URL(anchor.href, window.location.href);
+        } catch (error) {
+            return;
+        }
+
+        /*
+         * Los protocolos especiales conservan su funcionamiento normal.
+         */
+        if (
+            destination.protocol !== 'http:' &&
+            destination.protocol !== 'https:'
+        ) {
+            return;
+        }
+
+        suppressedHref = destination.href;
+        suppressedUntil = Date.now() + 800;
+
+        if (destination.href === window.location.href) {
+            event.preventDefault();
+
+            if (anchor.hasAttribute('data-reload-current')) {
+                window.location.reload();
+            }
+
+            return;
+        }
+
+        event.preventDefault();
+        window.location.assign(destination.href);
+    }, {
+        capture: true,
+        passive: false
+    });
+
+    /*
+     * Evita el segundo clic generado por iOS después de touchend.
+     */
+    document.addEventListener('click', function (event) {
+        if (Date.now() > suppressedUntil) {
+            return;
+        }
+
+        var anchor = findAnchor(event.target);
+
+        if (!anchor || anchor.href !== suppressedHref) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+    }, {
+        capture: true,
+        passive: false
+    });
+})();
+</script>
+        <!-- FIN Fix enlaces iOS -->
+
+
+
+<meta name="theme-color" content="#063b22" />
+<meta name="apple-itunes-app" content="app-id=1455536792">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+
+<!--<script language="JavaScript" type="text/JavaScript" src="/js/ajax.js"></script>	-->	
+
+
+
+<script language="javascript">
+function cerrarMenu()
+{
+        $('.sliding-menu-area').toggleClass('hide-menu');
+        $('#menu-toggler').toggleClass('lnr-menu');
+}
+</script>
+
+
+
+
+<script language="javascript">
+function muestra()
+{
+  $('#sumenu_mobile_escudos').hide();
+  $('#sumenu_mobile_noticias').hide();
+if ($('#sumenu_mobile').is(':visible')) {
+    $('#sumenu_mobile').hide();
+} else {
+    $('#sumenu_mobile').show();
+}
+}
+
+function muestra_noticias()
+{
+    $('#sumenu_mobile_escudos').hide();
+    $('#sumenu_mobile').hide();
+if ($('#sumenu_mobile_noticias').is(':visible')) {
+    $('#sumenu_mobile_noticias').hide();
+} else {
+    $('#sumenu_mobile_noticias').show();
+}
+}
+
+function muestra_escudos()
+{
+     $('#sumenu_mobile').hide();
+	  $('#sumenu_mobile_noticias').hide();
+  
+if ($('#sumenu_mobile_escudos').is(':visible')) {
+    $('#sumenu_mobile_escudos').hide();
+} else {
+    $('#sumenu_mobile_escudos').show();
+}
+}
+</script>
+
+
+<script>
+window.openNav = function () {
+    var sidenav = document.getElementById("mySidenav");
+    var boton = document.getElementById("boton-menu");
+    var abierto = sidenav ? sidenav.classList.toggle("sidenav_open") : false;
+
+    if (boton) {
+        boton.classList.toggle("is-open", abierto);
+        boton.setAttribute("aria-expanded", abierto ? "true" : "false");
+        boton.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+    }
+};
+</script>
+
+
+<!-- Organization sitewide (también en layout, 1 sola vez) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://www.comuniate.com/#organization",
+  "name":"Comuniate.com",
+  "url":"https://www.comuniate.com/",
+  "logo":{
+    "@type":"ImageObject",
+    "url":"https://www.comuniate.com/images/logo-512.png",
+    "width":512,
+    "height":512
+  },
+  "sameAs":[
+    "https://www.facebook.com/comuniate/",
+    "https://x.com/comuniateES",
+    "https://t.me/comuniate"
+  ]
+}
+</script>
+
+
+
+</head>
+<body>
+
+
+<script language="JavaScript" src="/js/ajax.js" type="text/javascript"></script>
+<script language="javascript">
+
+
+
+function ver_jugadores(limite=0){
+
+
+	var contenedor = document.getElementById('contenedor_jugadores'); 						
+
+	var id_equipo = document.getElementById('id_equipo').value; 						
+	var posicion = document.getElementById('posicion').value; 						
+				
+				
+		
+	ajax_docs=nuevoAjax(); 
+
+	ajax_docs.open("POST", "https://www.comuniate.com/ajax/contenido_jugadores_lesionados.php",true);
+
+	ajax_docs.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+
+	ajax_docs.send("operacion=1&id_equipo="+id_equipo+"&posicion="+posicion);
+
+
+
+	contenedor.innerHTML="<div class='col-md-12;' style='padding:10px;text-align:center' align='center' ><img src='https://www.comuniate.com/images/loading2.gif' style='width:30px;'> <br><span style='font-size:12px; color:#f8b26a'> Obteniendo Jugadores ...</div>";
+
+	ajax_docs.onreadystatechange=function() { 
+
+	
+	if (ajax_docs.readyState==4) {
+		contenedor.innerHTML = ajax_docs.responseText;
+
+		}
+	}
+	
+}
+
+
+</script>
+
+
+
+
+
+
+
+<header class="header">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid" id="vertical-sticky">
+      <div class="logosmall"><a href="/"  data-reload-current="1"><img src="/images/comuniate23-24.png" alt="Comuniate" /></a></div>
+      <ul class="nav navbar-nav hidden-xs cm-desktop-nav">
+        <li class="cm-desktop-nav__brand"><a href="/"  data-reload-current="1"><img src="/images/comuniate23-24.png" alt="Comuniate" title="Comuniate" height="44"></a></li>
+        <li class=""><a href="/puntos/comunio"><span>Puntos</span></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+            <span>Comunio</span><i class="fa fa-angle-down cm-desktop-nav__caret" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu cm-comunio-dropdown" role="menu" aria-label="Herramientas Comunio">
+            <li><a href="/dinero/comunio">Dinero Comunio</a></li>
+            <li><a href="/tuplantillaComunio.php">Análisis plantilla</a></li>
+            <li><a href="/mercado.php">Análisis mercado</a></li>
+            <li><a href="/jugadores_libres.php">Jugadores libres</a></li>
+            <li><a href="/comunidad.php">Análisis comunidad</a></li>
+            <li><a href="/comparar_jugadores.php">Comparar jugadores</a></li>
+            <li><a href="/ligas.php">Macro liga</a></li>
+            <li><a href="/copa.php?copa=copa-20260913-204546">Macro copa</a></li>
+            <li><a href="/once-ideal/comunio">11 ideal y rentable</a></li>
+            <li><a href="/abonos_primas.php">Abonos &amp; primas</a></li>
+            <li class="divider" role="separator"></li>
+            <li class="cm-comunio-dropdown__all"><a href="/herramientas/comunio">Todas las herramientas</a></li>
+          </ul>
+        </li>
+     	<li class="dropdown">
+         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span>Partidos</span><i class="fa fa-angle-down cm-desktop-nav__caret" aria-hidden="true"></i></a>
+             <ul class="dropdown-menu" role="menu">
+              <li><a href="/alineaciones/comunio">Alineaciones probables</a></li>
+              <li><a href="https://www.comuniate.com/calendario/laliga" title="Calendario de partidos de LaLiga">Calendario partidos</a></li>
+              <li><a href="/clasificacion/liga">Clasificación LaLiga</a></li>
+            </ul>
+         </li>
+
+       <li class="dropdown">
+         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span>Jugadores</span><i class="fa fa-angle-down cm-desktop-nav__caret" aria-hidden="true"></i></a>
+             <ul class="dropdown-menu" role="menu">
+                <li><a href="/jugadores/comunio" title="Jugadores Comunio">Jugadores</a></li>
+                <li><a href="/mejores/jugadores">Los mejores jugadores</a></li>
+   			        <li><a href="/once-ideal/comunio">11 ideal y 11 rentable</a></li>
+                <li><a href="/lesionados/comunio" title="Lesionados Comunio">Lesionados</a></li>
+                <li><a href="/sancionados/comunio" title="Sancionados Comunio">Sancionados</a></li>
+                <li><a href="/apercibidos/comunio" title="Apercibidos Comunio">Apercibidos</a></li>            
+                <li><a href="/balon/parado" title="Lanzadores Balón Parado">Balón parado</a></li>     
+                <li><a href="/lanzadores/penaltis" title="Lanzadores Penaltis">Lanzadores penaltis</a></li>                   
+                <li><a href="/jugadores_cambios_jornada.php" title="Parches Comunio">Parches jornada</a></li>
+                <li><a href="/mercado/comunio" title="Subidas y Bajadas Comunio">Subidas y bajadas mercado</a></li>
+                <li><a href="/comparar_jugadores.php" title="Comparar jugadores">Comparar jugadores</a></li>
+                <li><a href="/estadisticas/jugadores">Estadísticas jugadores</a></li>
+                <li><a href="/estadisticas/equipos">Estadísticas equipos</a></li>
+                <li><a href="/estadisticas/cronistas">Estadísticas cronistas AS</a></li>
+            </ul>
+         </li>
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span>Noticias</span><i class="fa fa-angle-down cm-desktop-nav__caret" aria-hidden="true"></i></a>
+		      <ul class="dropdown-menu" role="menu">
+              <li><a href="/noticias/comunio"><strong>Actualidad fantasy</strong></a></li>
+              <li><a href="/analisis/plantilla" title="Análisis Plantillas Fantasy" class="menu">Análisis equipos 26/27</a></li>
+              <li><a href="/analisis/jugadores" title="Análisis de jugadores fantasy">Análisis jugadores fantasy</a></li>
+		          <li><a href="/chollos/comunio" title="Chollos Comunio">Chollos Comunio</a></li>
+		          <li><a href="/fichajes/laliga" title="Fichajes LaLiga EASport">Fichajes y rumores LaLiga</a></li>        
+              <li><a href="/en/" title="English Version" hreflang="en">English version</a></li>
+              <li><a href="/de/" title="Deutsche Version" hreflang="de">Versión alemana</a></li>
+
+
+         </ul>
+        </li>
+                 
+           
+      </ul>
+      <div class="navbar-jugadores pull-left"> 
+	      <div class="dropdown cm-menu-trigger-dropdown">
+            <button type="button"
+                    id="boton-menu"
+                    class="cm-menu-toggle"
+                    aria-label="Abrir menú"
+                    aria-controls="mySidenav"
+                    aria-expanded="false">
+              <svg class="cm-menu-toggle__svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <line class="cm-menu-toggle__line cm-menu-toggle__line--1" x1="4" y1="7" x2="20" y2="7"></line>
+                <line class="cm-menu-toggle__line cm-menu-toggle__line--2" x1="4" y1="12" x2="20" y2="12"></line>
+                <line class="cm-menu-toggle__line cm-menu-toggle__line--3" x1="4" y1="17" x2="20" y2="17"></line>
+              </svg>
+            </button>
+	   	   </div><!-- div dropdown-->
+       	</div><!-- div navbar-->
+
+
+
+      <div class="navbar-competicion navbar-buscador-cabecera">
+        <div class="buscador-cabecera" id="buscador-cabecera">
+          <button type="button"
+                  class="competicion-switch-btn buscador-cabecera__boton"
+                  id="buscador-cabecera-boton"
+                  aria-label="Buscar jugador"
+                  aria-controls="buscador-cabecera-panel"
+                  aria-expanded="false"
+                  title="Buscar jugador">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.65" y2="16.65"/></svg>
+          </button>
+
+          <div class="buscador-cabecera__panel"
+               id="buscador-cabecera-panel"
+               aria-hidden="true">
+            <div class="buscador-cabecera__campo">
+              <input type="text"
+                     id="buscador-cabecera-input"
+                     class="buscador-cabecera__input"
+                     placeholder="Buscar jugador..."
+                     autocomplete="off"
+                     aria-label="Escribe el nombre de un jugador"
+                     aria-autocomplete="list"
+                     aria-controls="buscador-cabecera-resultados">
+              <button type="button"
+                      class="buscador-cabecera__cerrar"
+                      id="buscador-cabecera-cerrar"
+                      aria-label="Cerrar buscador">
+                <i class="fa fa-close" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div id="buscador-cabecera-resultados"
+                 class="buscador-cabecera__resultados"
+                 role="listbox"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-partidos pull-right "> 
+	      <button type="button" id="btn-calendario-partidos" class="cal-panel-toggle" aria-label="Abrir calendario de partidos con alineaciones confirmadas">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+  <line x1="8" y1="3" x2="8" y2="7"></line>
+  <line x1="16" y1="3" x2="16" y2="7"></line>
+  <line x1="3" y1="10" x2="21" y2="10"></line>
+  <circle cx="8" cy="14" r=".65" fill="#4caf50" stroke="none"></circle>
+  <circle cx="12" cy="14" r=".65" fill="#4caf50" stroke="none"></circle>
+  <circle cx="16" cy="14" r=".65" fill="#4caf50" stroke="none"></circle>
+  <circle cx="8" cy="17.5" r=".65" fill="#4caf50" stroke="none"></circle>
+  <circle cx="12" cy="17.5" r=".65" fill="#4caf50" stroke="none"></circle>
+  <circle cx="16" cy="17.5" r=".65" fill="#4caf50" stroke="none"></circle>
+</svg>
+                            <span class="menu-ball-dot menu-ball-dot--fixed" title="Alineaciones confirmadas"></span>
+                    </button>
+       	</div>
+
+    </div><!-- end container-fluid --> 
+</nav>
+
+
+
+
+<!-- Overlay debajo de la cabecera -->
+<div id="cal-panel-overlay"></div>
+
+<!-- Nuevo panel reutilizable de partidos -->
+<aside id="cal-panel" class="cal-view-list" aria-hidden="true" aria-label="Partidos del día">
+
+    <div class="cal-panel-toolbar">
+        <div class="cal-panel-date-nav">
+            <button type="button" id="cal-prev-day" class="cal-nav-btn" aria-label="Día anterior">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+
+            <button type="button"
+                    id="cal-open-datepicker"
+                    class="cal-current-date-btn"
+                    aria-haspopup="dialog"
+                    aria-expanded="false"
+                    aria-controls="cal-month-popover">
+                <svg class="cal-current-date-btn__calendar" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3.5" y="5.5" width="17" height="15" rx="2"/>
+                    <path d="M8 3.5v4M16 3.5v4M3.5 10h17"/>
+                </svg>
+                <span id="cal-current-date-label" class="cal-current-date-label">Hoy</span>
+                <svg class="cal-current-date-btn__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4"/></svg>
+            </button>
+
+            <button type="button" id="cal-next-day" class="cal-nav-btn" aria-label="Día siguiente">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+        </div>
+
+        <div class="cal-view-switch" role="group" aria-label="Vista de partidos">
+            <button type="button" class="cal-view-btn" data-cal-view="grid" aria-label="Vista cuadros" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="4" y="4" width="6" height="6" rx="1"/>
+                    <rect x="14" y="4" width="6" height="6" rx="1"/>
+                    <rect x="4" y="14" width="6" height="6" rx="1"/>
+                    <rect x="14" y="14" width="6" height="6" rx="1"/>
+                </svg>
+            </button>
+            <button type="button" class="cal-view-btn is-active" data-cal-view="list" aria-label="Vista lista" aria-pressed="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 7h12M8 12h12M8 17h12"/>
+                    <circle cx="4.5" cy="7" r="1"/>
+                    <circle cx="4.5" cy="12" r="1"/>
+                    <circle cx="4.5" cy="17" r="1"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="cal-days-strip" class="cal-days-strip" aria-label="Días cercanos"></div>
+
+    <input type="hidden" id="cal-date-picker" value="">
+
+    <div id="cal-month-popover" class="cal-month-popover" role="dialog" aria-modal="false" aria-hidden="true" aria-label="Elegir fecha">
+        <div class="cal-month-popover__header">
+            <button type="button" id="cal-month-prev" class="cal-month-nav-btn" aria-label="Mes anterior">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <strong id="cal-month-title" class="cal-month-title">Septiembre 2026</strong>
+            <button type="button" id="cal-month-next" class="cal-month-nav-btn" aria-label="Mes siguiente">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+        </div>
+
+        <div class="cal-month-weekdays" aria-hidden="true">
+            <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+        </div>
+        <div id="cal-month-grid" class="cal-month-grid"></div>
+
+        <div class="cal-month-popover__footer">
+            <span class="cal-month-legend"><span class="cal-month-legend__dot"></span>Partidos</span>
+            <button type="button" id="cal-go-today" class="cal-go-today">Ir a Hoy</button>
+        </div>
+    </div>
+
+    <div id="cal-panel-content" class="cal-panel-content">
+        <div class="cal-panel-loading">Cargando partidos...</div>
+    </div>
+
+    <div class="cal-panel-footer">
+        <button type="button" id="cal-panel-close" class="cal-panel-close" aria-label="Cerrar partidos">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 14 4-4 4 4"/></svg>
+            <span>Cerrar</span>
+        </button>
+    </div>
+</aside>
+
+   
+<div class="row">
+
+<section class="cm-sport-nav" aria-label="Navegación principal Comuniate">
+  <nav class="cm-sport-nav__primary">
+    <a href="/puntos/comunio" class="cm-sport-link " title="Puntos Comunio">
+      <span class="cm-sport-link__icon"><span class="cm-svg-icon cm-svg-icon--star" aria-hidden="true"></span></span><span>PUNTOS</span>
+    </a>
+    <a href="/herramientas/comunio" class="cm-sport-link " title="Herramientas Comunio">
+      <span class="cm-sport-link__icon cm-sport-link__icon--image"><img src="/images/menu/comunio.png" height="25" alt="Herramientas Comunio"></span><span>COMUNIO</span>
+    </a>
+    <a href="/noticias/comunio" class="cm-sport-link " title="Noticias Comunio">
+      <span class="cm-sport-link__icon"><span class="cm-svg-icon cm-svg-icon--newspaper" aria-hidden="true"></span></span><span>NOTICIAS</span>
+    </a>
+    <a href="/jugadores/comunio" class="cm-sport-link " title="Jugadores Comunio">
+      <span class="cm-sport-link__icon cm-sport-link__icon--image"><img src="/images/menu/jugadores.png" height="25" alt="Jugadores Comunio"></span><span>Jugadores</span>
+    </a>
+    <a href="/alineaciones/comunio" class="cm-sport-link " title="Alineaciones Probables">
+      <span class="cm-sport-link__icon"><span class="cm-svg-icon cm-svg-icon--strategy" aria-hidden="true"></span></span><span>ONCES</span>
+    </a>
+    <a href="/dudas/comunio" class="cm-sport-link " title="Dudas Fantasy">
+      <span class="cm-sport-link__icon cm-sport-link__icon--image"><img src="/images/menu/dudas.png" height="25" alt="Dudas Comunio"></span><span>DUDAS</span>
+    </a>
+  </nav>
+
+  <nav class="cm-sport-nav__secondary" aria-label="Accesos Fantasy">
+    
+    <a href="/mercado/comunio" class="cm-secondary-link cm-secondary-link--mercado"><span class="cm-svg-icon cm-svg-icon--chart-line-up" aria-hidden="true"></span><span>MERCADO</span></a>
+
+    <a href="/alineaciones/comunio" class="cm-secondary-link cm-secondary-link--onces cm-only-desktop" data-desktop-only="1">
+      <img src="/images/laliga.png" class="cm-secondary-logo" alt="LaLiga"><span>ONCES</span>
+    </a>
+
+          <a href="/sancionados/comunio" class="cm-secondary-link cm-secondary-link--sanciones "><span class="cm-svg-icon cm-svg-icon--cards" aria-hidden="true"></span><span>SANC.</span></a>
+      <a href="/lesionados/comunio" class="cm-secondary-link cm-secondary-link--lesiones "><span class="cm-svg-icon cm-svg-icon--first-aid-kit" aria-hidden="true"></span><span>LESION.</span></a>
+    
+    <a href="/tuplantilla.php" class="cm-secondary-link cm-secondary-link--ayuda"><span class="cm-svg-icon cm-svg-icon--magic-wand" aria-hidden="true"></span><span>AYUDA</span></a>
+    <a href="/dudas/comunio" class="cm-secondary-link cm-secondary-link--dudas cm-only-desktop" data-desktop-only="1"><span class="cm-svg-icon cm-svg-icon--question" aria-hidden="true"></span><span>DUDAS</span></a>
+  </nav>
+</section>
+
+
+<div class="col-xs-12 col-md-12 nav_escudos">
+  <div id="flecha-izquierda" class="flecha">&#x25C0;&#xFE0E;</div>
+
+  <div id="fila-escudos" class="fila-escudos">
+    <div class="escudo"><a href="/equipos/89/alaves-alineacion" class="item enlace-escudos" data-index="0" data-id-equipo="89"><img src="/images/escudos_laliga/89.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Alavés" title="Alineación y plantilla de Alavés"></a></div><div class="escudo"><a href="/equipos/1/athletic-club-alineacion" class="item enlace-escudos" data-index="1" data-id-equipo="1"><img src="/images/escudos_laliga/1.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Athletic Club" title="Alineación y plantilla de Athletic Club"></a></div><div class="escudo"><a href="/equipos/2/atletico-alineacion" class="item enlace-escudos" data-index="2" data-id-equipo="2"><img src="/images/escudos_laliga/2.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Atlético" title="Alineación y plantilla de Atlético"></a></div><div class="escudo"><a href="/equipos/3/barcelona-alineacion" class="item enlace-escudos" data-index="3" data-id-equipo="3"><img src="/images/escudos_laliga/3.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Barcelona" title="Alineación y plantilla de Barcelona"></a></div><div class="escudo"><a href="/equipos/4/betis-alineacion" class="item enlace-escudos" data-index="4" data-id-equipo="4"><img src="/images/escudos_laliga/4.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Betis" title="Alineación y plantilla de Betis"></a></div><div class="escudo"><a href="/equipos/5/celta-alineacion" class="item enlace-escudos" data-index="5" data-id-equipo="5"><img src="/images/escudos_laliga/5.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Celta" title="Alineación y plantilla de Celta"></a></div><div class="escudo"><a href="/equipos/6/deportivo-alineacion" class="item enlace-escudos" data-index="6" data-id-equipo="6"><img src="/images/escudos_laliga/6.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Deportivo" title="Alineación y plantilla de Deportivo"></a></div><div class="escudo"><a href="/equipos/75/elche-alineacion" class="item enlace-escudos" data-index="7" data-id-equipo="75"><img src="/images/escudos_laliga/75.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Elche" title="Alineación y plantilla de Elche"></a></div><div class="escudo"><a href="/equipos/7/espanyol-alineacion" class="item enlace-escudos" data-index="8" data-id-equipo="7"><img src="/images/escudos_laliga/7.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Espanyol" title="Alineación y plantilla de Espanyol"></a></div><div class="escudo"><a href="/equipos/8/getafe-alineacion" class="item enlace-escudos" data-index="9" data-id-equipo="8"><img src="/images/escudos_laliga/8.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Getafe" title="Alineación y plantilla de Getafe"></a></div><div class="escudo"><a href="/equipos/10/levante-alineacion" class="item enlace-escudos" data-index="10" data-id-equipo="10"><img src="/images/escudos_laliga/10.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Levante" title="Alineación y plantilla de Levante"></a></div><div class="escudo"><a href="/equipos/65/malaga-alineacion" class="item enlace-escudos" data-index="11" data-id-equipo="65"><img src="/images/escudos_laliga/65.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Málaga" title="Alineación y plantilla de Málaga"></a></div><div class="escudo"><a href="/equipos/12/osasuna-alineacion" class="item enlace-escudos" data-index="12" data-id-equipo="12"><img src="/images/escudos_laliga/12.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Osasuna" title="Alineación y plantilla de Osasuna"></a></div><div class="escudo"><a href="/equipos/14/racing-alineacion" class="item enlace-escudos" data-index="13" data-id-equipo="14"><img src="/images/escudos_laliga/14.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Racing" title="Alineación y plantilla de Racing"></a></div><div class="escudo"><a href="/equipos/70/rayo-vallecano-alineacion" class="item enlace-escudos" data-index="14" data-id-equipo="70"><img src="/images/escudos_laliga/70.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Rayo Vallecano" title="Alineación y plantilla de Rayo Vallecano"></a></div><div class="escudo"><a href="/equipos/15/real-madrid-alineacion" class="item enlace-escudos" data-index="15" data-id-equipo="15"><img src="/images/escudos_laliga/15.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Real Madrid" title="Alineación y plantilla de Real Madrid"></a></div><div class="escudo"><a href="/equipos/13/real-sociedad-alineacion" class="item enlace-escudos" data-index="16" data-id-equipo="13"><img src="/images/escudos_laliga/13.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Real Sociedad" title="Alineación y plantilla de Real Sociedad"></a></div><div class="escudo"><a href="/equipos/17/sevilla-alineacion" class="item enlace-escudos" data-index="17" data-id-equipo="17"><img src="/images/escudos_laliga/17.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Sevilla" title="Alineación y plantilla de Sevilla"></a></div><div class="escudo"><a href="/equipos/18/valencia-alineacion" class="item enlace-escudos" data-index="18" data-id-equipo="18"><img src="/images/escudos_laliga/18.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Valencia" title="Alineación y plantilla de Valencia"></a></div><div class="escudo"><a href="/equipos/19/villarreal-alineacion" class="item enlace-escudos" data-index="19" data-id-equipo="19"><img src="/images/escudos_laliga/19.png" class="escudo-header-img" width="48" height="48" loading="lazy" decoding="async" alt="Alineación y plantilla de Villarreal" title="Alineación y plantilla de Villarreal"></a></div>  </div>
+
+  <div id="flecha-derecha" class="flecha">&#x25B6;&#xFE0E;</div>
+</div></div>
+
+
+</header>
+<!-- end header -->
+
+
+<!-- Buscadores y calendario se cargan desde /js/menu-script.js -->
+
+
+
+<button id="cm-side-overlay" class="cm-side-overlay" type="button" aria-label="Cerrar menú" tabindex="-1" hidden></button>
+<div id="mySidenav" class="sidenav" role="dialog" aria-modal="true" aria-hidden="true" inert aria-label="Menú de herramientas Comuniate">
+  <div class="cm-side-inner">
+    <div class="cm-side-heading">
+      <a href="/" class="cm-side-brand"  data-reload-current="1"><img src="/images/comuniate23-24.png" alt="Comuniate"></a>
+      <button type="button" id="cm-side-close" class="cm-side-close" aria-label="Cerrar menú"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    </div>
+
+    <!-- Sprite SVG minimalista Comuniate: trazos homogéneos y geometría limpia -->
+    <svg class="cm-side-svg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="cm-i-book" viewBox="0 0 24 24">
+        <path d="M3.5 5.5A2.5 2.5 0 0 1 6 3h5v17H6a2.5 2.5 0 0 0-2.5 2V5.5Z"/>
+        <path d="M20.5 5.5A2.5 2.5 0 0 0 18 3h-5v17h5a2.5 2.5 0 0 1 2.5 2V5.5Z"/>
+      </symbol>
+      <symbol id="cm-i-chart" viewBox="0 0 24 24">
+        <path d="M4 4v16h16"/>
+        <path d="m7 15 4-4 3 2 5-6"/>
+        <path d="M16 7h3v3"/>
+      </symbol>
+      <symbol id="cm-i-sliders" viewBox="0 0 24 24">
+        <path d="M4 7h5M15 7h5M4 17h9M19 17h1"/>
+        <circle cx="12" cy="7" r="2.25"/>
+        <circle cx="16" cy="17" r="2.25"/>
+      </symbol>
+      <symbol id="cm-i-medical" viewBox="0 0 24 24">
+        <rect x="4" y="6" width="16" height="14" rx="2.5"/>
+        <path d="M9 6V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V6"/>
+        <path d="M12 10v6M9 13h6"/>
+      </symbol>
+      <symbol id="cm-i-cards" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="7" height="13" rx="1.5"/>
+        <rect x="13" y="7" width="7" height="13" rx="1.5"/>
+      </symbol>
+      <symbol id="cm-i-refresh" viewBox="0 0 24 24">
+        <path d="M20 6v5h-5"/>
+        <path d="M18.2 8.2A8 8 0 1 0 20 16"/>
+      </symbol>
+      <symbol id="cm-i-help" viewBox="0 0 24 24">
+        <path d="M7 4h10a2 2 0 0 1 2 2v15H5V6a2 2 0 0 1 2-2Z"/>
+        <path d="M9 4V2.5h6V4"/>
+        <path d="m9 13 2 2 4-5"/>
+      </symbol>
+      <symbol id="cm-i-star" viewBox="0 0 24 24">
+        <path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3.5Z"/>
+      </symbol>
+      <symbol id="cm-i-bars" viewBox="0 0 24 24">
+        <path d="M4 20h16"/>
+        <rect x="5" y="12" width="3" height="6" rx="1"/>
+        <rect x="10.5" y="7" width="3" height="11" rx="1"/>
+        <rect x="16" y="4" width="3" height="14" rx="1"/>
+      </symbol>
+      <symbol id="cm-i-users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3"/>
+        <path d="M3.5 19a5.5 5.5 0 0 1 11 0"/>
+        <path d="M16 6.2a3 3 0 0 1 0 5.6"/>
+        <path d="M17 14.5A5 5 0 0 1 20.5 19"/>
+      </symbol>
+      <symbol id="cm-i-news" viewBox="0 0 24 24">
+        <path d="M5 4h13a2 2 0 0 1 2 2v13H7a2 2 0 0 1-2-2V4Z"/>
+        <path d="M5 8H3v9a2 2 0 0 0 2 2"/>
+        <path d="M9 8h7M9 12h7M9 16h4"/>
+      </symbol>
+      <symbol id="cm-i-trend" viewBox="0 0 24 24">
+        <path d="m4 17 5.5-5.5 4 4L20 7"/>
+        <path d="M15.5 7H20v4.5"/>
+      </symbol>
+      <symbol id="cm-i-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8"/>
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 2v3M22 12h-3"/>
+      </symbol>
+      <symbol id="cm-i-penalty" viewBox="0 0 24 24">
+        <path d="M4 19V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12"/>
+        <path d="M4 10h3a5 5 0 0 1 10 0h3"/>
+        <circle cx="12" cy="14" r="1.5"/>
+      </symbol>
+      <symbol id="cm-i-swap" viewBox="0 0 24 24">
+        <path d="M4 7h14"/>
+        <path d="m15 4 3 3-3 3"/>
+        <path d="M20 17H6"/>
+        <path d="m9 14-3 3 3 3"/>
+      </symbol>
+      <symbol id="cm-i-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M3 12h18"/>
+        <path d="M12 3c2.2 2.5 3.4 5.5 3.4 9S14.2 18.5 12 21"/>
+        <path d="M12 3c-2.2 2.5-3.4 5.5-3.4 9s1.2 6.5 3.4 9"/>
+      </symbol>
+      <symbol id="cm-i-heart" viewBox="0 0 24 24">
+        <path d="M20.5 5.8a4.8 4.8 0 0 0-6.8 0L12 7.5l-1.7-1.7a4.8 4.8 0 0 0-6.8 6.8L12 20.5l8.5-7.9a4.8 4.8 0 0 0 0-6.8Z"/>
+      </symbol>
+      <!-- Juegos Comuniate: iconos integrados en el sprite lateral -->
+      <symbol id="cm-i-gamepad" viewBox="0 0 24 24">
+        <path d="M7 8h10a4 4 0 0 1 3.9 3.1l.7 4.2c.4 2.5-1.5 4.1-3.5 2.9L15 16H9l-3.1 2.2c-2 1.2-3.9-.4-3.5-2.9l.7-4.2A4 4 0 0 1 7 8Z"/>
+        <path d="M6.5 12v4M4.5 14h4"/>
+        <circle cx="15.3" cy="12.3" r=".8"/>
+        <circle cx="17.6" cy="14.5" r=".8"/>
+      </symbol>
+      <symbol id="cm-i-quiz" viewBox="0 0 24 24">
+        <rect x="4" y="3" width="16" height="18" rx="3"/>
+        <path d="M9.1 9a3 3 0 0 1 5.9.7c0 2-3 2.1-3 4.3"/>
+        <circle cx="12" cy="17" r=".8"/>
+      </symbol>
+      <symbol id="cm-i-search" viewBox="0 0 24 24">
+        <circle cx="10.8" cy="10.8" r="6.8"/>
+        <path d="m20 20-4.4-4.4"/>
+      </symbol>
+      <symbol id="cm-i-pitch" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="2"/>
+        <path d="M3 12h18M12 4v16"/>
+        <circle cx="12" cy="12" r="2.3"/>
+      </symbol>
+      <symbol id="cm-i-table" viewBox="0 0 24 24">
+        <path d="M5 20V11h3v9M10.5 20V6h3v14M16 20V3h3v17"/>
+        <path d="M3 20h18"/>
+      </symbol>
+      <symbol id="cm-i-calendar" viewBox="0 0 24 24">
+        <rect x="3.5" y="5" width="17" height="15" rx="2"/>
+        <path d="M8 3v4M16 3v4M3.5 9.5h17"/>
+        <path d="M8 13h2M12 13h2M16 13h1M8 16.5h2M12 16.5h2"/>
+      </symbol>
+      <symbol id="cm-i-mail" viewBox="0 0 24 24">
+        <rect x="3.5" y="5" width="17" height="14" rx="2.2"/>
+        <path d="m5 7 7 5.5L19 7"/>
+      </symbol>
+    </svg>
+
+    <div class="cm-side-scroll">
+    <form class="cm-side-search" role="search" onsubmit="return false;">
+      <svg class="cm-side-search__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#cm-i-search" xlink:href="#cm-i-search"></use></svg>
+      <input type="text" id="topic_title" placeholder="Buscar jugador..." class="form-control buscador-jugador buscador-cabecera__input" autocomplete="off" aria-label="Buscar jugador">
+      <div id="suggestions2" class="suggestions buscador-cabecera__resultados" role="listbox"></div>
+    </form>
+
+    <details class="cm-side-section cm-side-favorites" open>
+      <summary class="cm-side-section-title" id="cm-side-favorites-summary">Favoritos</summary>
+      <div id="cm-side-favorites-list"></div>
+      <p id="cm-side-favorites-status" class="cm-side-favorites-status" role="status" aria-live="polite"></p>
+    </details>
+
+    <div class="cm-side-tools-block">
+      <button type="button"
+              class="menu menu--featured cm-side-tools-toggle"
+              id="cm-side-tools-toggle"
+              aria-expanded="false"
+              aria-controls="cm-side-comunio-tools">
+        <svg class="cm-side-icon" aria-hidden="true"><use href="#cm-i-sliders" xlink:href="#cm-i-sliders"></use></svg>
+        <span>Herramientas Comunio</span>
+        <span class="cm-side-tools-toggle__caret" aria-hidden="true"></span>
+      </button>
+
+      <div class="cm-side-tools-list" id="cm-side-comunio-tools" aria-hidden="true">
+        <a href="/herramientas/comunio" class="cm-side-tools-list__all">Ver todas las herramientas</a>
+        <a href="/dinero/comunio">Dinero Comunio</a>
+        <a href="/tuplantillaComunio.php">Análisis Plantilla</a>
+        <a href="/mercado.php">Análisis Mercado</a>
+        <a href="/jugadores_libres.php">Jugadores Libres</a>
+        <a href="/comunidad.php">Análisis Comunidad</a>
+        <a href="/comparar_jugadores.php">Comparar Jugadores</a>
+        <a href="/ligas.php">Macro Liga</a>
+        <a href="/copa.php?copa=copa-20260913-204546">Macro Copa</a>
+        <a href="/once-ideal/comunio">11 ideal y rentable</a>
+        <a href="/abonos_primas.php">Abonos &amp; Primas</a>
+      </div>
+    </div>
+
+    <details class="cm-side-section cm-side-section--cards" name="cm-side-groups">
+      <summary class="cm-side-section-title">Consejos Fantasy</summary>
+
+      <div class="cm-side-card-grid">
+        <a href="/analisis/plantilla" title="Guías Fantasy 26/27" class="cm-side-card cm-side-card--green">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-book" xlink:href="#cm-i-book"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Guías Fantasy 26/27</span><span class="cm-side-card__meta">Análisis de plantillas, roles y recomendaciones</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/analisis/jugadores" title="Análisis de jugadores fantasy" class="cm-side-card cm-side-card--cyan">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-chart" xlink:href="#cm-i-chart"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Análisis jugadores</span><span class="cm-side-card__meta">Rendimiento, contexto y valor fantasy</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/chollos/comunio" title="Chollos Comunio" class="cm-side-card cm-side-card--gold">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-star" xlink:href="#cm-i-star"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Chollos Comunio</span><span class="cm-side-card__meta">Jugadores interesantes por precio y momento</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/fichajes/laliga" title="Fichajes y rumores LaLiga" class="cm-side-card cm-side-card--orange">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-swap" xlink:href="#cm-i-swap"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Fichajes/Rumores</span><span class="cm-side-card__meta">Altas, bajas y movimientos de LaLiga</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/en/" title="English Version" class="cm-side-card cm-side-card--blue">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-globe" xlink:href="#cm-i-globe"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Versión Inglés</span><span class="cm-side-card__meta">Fantasy news and LaLiga content in English</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+        
+        <a href="/de/" title="Deutsche Version" hreflang="de"
+          class="cm-side-card cm-side-card--blue">
+            <span class="cm-side-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                    <use href="#cm-i-globe" xlink:href="#cm-i-globe"></use>
+                </svg>
+            </span>
+
+            <span class="cm-side-card__body">
+                <span class="cm-side-card__title">Versión alemana</span>
+                <span class="cm-side-card__meta">
+                    Noticias de LaLiga y consejos fantasy en alemán
+                </span>
+            </span>
+
+            <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </details>
+
+    <details class="cm-side-section cm-side-section--matches" name="cm-side-groups">
+      <summary class="cm-side-section-title">Partidos</summary>
+
+      <div class="cm-side-match-grid">
+        <a href="/alineaciones/comunio" title="Onces probables" class="cm-side-match-card cm-side-match-card--lineups">
+          <span class="cm-side-match-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><use href="#cm-i-pitch" xlink:href="#cm-i-pitch"></use></svg>
+          </span>
+          <span class="cm-side-match-card__body">
+            <span class="cm-side-match-card__title">Onces probables</span>
+            <span class="cm-side-match-card__meta">Alineaciones previstas y pista fantasy</span>
+          </span>
+          <span class="cm-side-match-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/clasificacion/liga" title="Clasificación LaLiga" class="cm-side-match-card cm-side-match-card--standings">
+          <span class="cm-side-match-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><use href="#cm-i-table" xlink:href="#cm-i-table"></use></svg>
+          </span>
+          <span class="cm-side-match-card__body">
+            <span class="cm-side-match-card__title">Clasificación</span>
+            <span class="cm-side-match-card__meta">Tabla de LaLiga y situación de los equipos</span>
+          </span>
+          <span class="cm-side-match-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/calendario/laliga" title="Calendario de partidos de LaLiga" class="cm-side-match-card cm-side-match-card--calendar">
+          <span class="cm-side-match-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><use href="#cm-i-calendar" xlink:href="#cm-i-calendar"></use></svg>
+          </span>
+          <span class="cm-side-match-card__body">
+            <span class="cm-side-match-card__title">Calendario</span>
+            <span class="cm-side-match-card__meta">Próximas jornadas y partidos del día</span>
+          </span>
+          <span class="cm-side-match-card__arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </details>
+
+    <details class="cm-side-section cm-side-section--cards" name="cm-side-groups">
+      <summary class="cm-side-section-title">Jugadores</summary>
+
+      <div class="cm-side-card-grid">
+        <a href="/lesionados/comunio" title="Lesionados Comunio" class="cm-side-card cm-side-card--red">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-medical" xlink:href="#cm-i-medical"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Lesionados</span><span class="cm-side-card__meta">Estado físico y tiempos estimados de baja</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/sancionados/comunio" title="Sancionados Comunio" class="cm-side-card cm-side-card--gold">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-cards" xlink:href="#cm-i-cards"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Sancionados</span><span class="cm-side-card__meta">Bajas por sanción y cumplimiento de ciclos</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/jugadores_cambios_jornada.php" title="Parches Comunio" class="cm-side-card cm-side-card--cyan">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-refresh" xlink:href="#cm-i-refresh"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Parches</span><span class="cm-side-card__meta">Cambios útiles para completar tu jornada</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/tuplantilla.php" title="Ayuda Alineación" class="cm-side-card cm-side-card--green">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-help" xlink:href="#cm-i-help"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Ayuda alineación</span><span class="cm-side-card__meta">Resuelve dudas para elegir tu mejor once</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/mejores/jugadores" title="Los mejores Jugadores" class="cm-side-card cm-side-card--purple">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-star" xlink:href="#cm-i-star"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Los mejores jugadores</span><span class="cm-side-card__meta">Consulta los futbolistas más destacados</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </details>
+
+    <details class="cm-side-section cm-side-section--cards" name="cm-side-groups">
+      <summary class="cm-side-section-title">Datos y mercado</summary>
+
+      <div class="cm-side-card-grid">
+        <a href="/estadisticas/jugadores" title="Estadísticas Jugadores" class="cm-side-card cm-side-card--blue">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-bars" xlink:href="#cm-i-bars"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Estadísticas jugadores</span><span class="cm-side-card__meta">Datos individuales, rendimiento y comparativas</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/estadisticas/equipos" title="Estadísticas Equipos" class="cm-side-card cm-side-card--cyan">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-users" xlink:href="#cm-i-users"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Estadísticas equipos</span><span class="cm-side-card__meta">Rendimiento colectivo y datos por club</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/estadisticas/cronistas" title="Estadísticas cronistas" class="cm-side-card cm-side-card--purple">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-news" xlink:href="#cm-i-news"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Estadísticas cronistas AS</span><span class="cm-side-card__meta">Tendencias de puntuación de los cronistas</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/mercado/comunio" title="Mercado Fantasy" class="cm-side-card cm-side-card--green">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-trend" xlink:href="#cm-i-trend"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Mercado Fantasy</span><span class="cm-side-card__meta">Subidas, bajadas y evolución de valores</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/balon/parado" title="Balón Parado" class="cm-side-card cm-side-card--orange">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-target" xlink:href="#cm-i-target"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Balón parado</span><span class="cm-side-card__meta">Lanzadores de faltas, córners y penaltis</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/lanzadores/penaltis" title="Lanzadores Penaltis" class="cm-side-card cm-side-card--red">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-penalty" xlink:href="#cm-i-penalty"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Lanzadores penaltis</span><span class="cm-side-card__meta">Orden y candidatos a lanzar desde los once metros</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </details>
+
+    <!-- Juegos, justo debajo de Datos y mercado -->
+    <details class="cm-side-section cm-side-section--cards" name="cm-side-groups">
+      <summary class="cm-side-section-title">Juegos</summary>
+
+      <div class="cm-side-card-grid">
+        <a href="/quien-es-el-futbolista.php" title="¿Quién es el futbolista? Reto diario" class="cm-side-card cm-side-card--green">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-gamepad" xlink:href="#cm-i-gamepad"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">¿Quién es el futbolista?</span><span class="cm-side-card__meta">Adivina al jugador de LaLiga con cinco pistas</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+
+        <a href="/trivial-fantasy.php" title="Trivial Fantasy de fútbol" class="cm-side-card cm-side-card--cyan">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-quiz" xlink:href="#cm-i-quiz"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Trivial Fantasy</span><span class="cm-side-card__meta">Pon a prueba tus conocimientos de fútbol</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </details>
+
+    <details class="cm-side-section cm-side-section--cards" name="cm-side-groups">
+      <summary class="cm-side-section-title">Más</summary>
+
+      <div class="cm-side-card-grid">
+        <a href="https://mundial.comuniate.com/" title="Mundial 2026" class="cm-side-card cm-side-card--blue">
+          <span class="cm-side-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#cm-i-globe" xlink:href="#cm-i-globe"></use></svg></span>
+          <span class="cm-side-card__body"><span class="cm-side-card__title">Mundial 2026</span><span class="cm-side-card__meta">Toda la información de nuestro especial del Mundial</span></span>
+          <span class="cm-side-card__arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </details>
+
+    <div class="cm-side-bottom" aria-label="Accesos adicionales">
+      <div class="cm-side-bottom__links">
+        <a href="/noticias/1461/quieres-colaborar-con-nosotros" title="¿Quieres colaborar?" class="cm-side-bottom-link">
+          <svg class="cm-side-icon" aria-hidden="true"><use href="#cm-i-heart" xlink:href="#cm-i-heart"></use></svg>
+          <span>¿Quieres colaborar?</span>
+        </a>
+        <a href="/contacto.php" title="Contacto" class="cm-side-bottom-link">
+          <svg class="cm-side-icon" aria-hidden="true"><use href="#cm-i-mail" xlink:href="#cm-i-mail"></use></svg>
+          <span>Contacto</span>
+        </a>
+      </div>
+
+      <div class="cm-side-bottom__apps" aria-label="Descargar app Comuniate">
+        <a href="https://play.google.com/store/apps/details?id=com.comuniate.www" title="Play Store" target="_blank" rel="noopener">
+          <img src="/images/playstore.webp" alt="Play Store" loading="lazy">
+        </a>
+        <a href="https://itunes.apple.com/es/app/comuniate/id1455536792?mt=8" title="App Store" target="_blank" rel="noopener">
+          <img src="/images/ios.webp" alt="App Store" loading="lazy">
+        </a>
+      </div>
+    </div>
+
+    </div><!-- /.cm-side-scroll -->
+
+  </div>
+</div>
+
+
+
+<script>
+/* Ajustes de estados del panel de partidos.
+ * Se aplica también después de cada recarga AJAX del contenido. */
+(function () {
+    'use strict';
+
+    if (window.__cmCalPanelStatusEnhancer) return;
+    window.__cmCalPanelStatusEnhancer = true;
+
+    function normalizarTexto(valor) {
+        return String(valor || '')
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    function atributosTexto(elemento) {
+        if (!elemento || !elemento.attributes) return '';
+        var valores = [];
+        for (var i = 0; i < elemento.attributes.length; i++) {
+            valores.push(elemento.attributes[i].name + ' ' + elemento.attributes[i].value);
+        }
+        return normalizarTexto(valores.join(' '));
+    }
+
+    function esDescanso(partido, estado) {
+        var textoEstado = normalizarTexto(estado ? estado.textContent : '');
+        var textoPartido = normalizarTexto(partido ? partido.textContent : '');
+        var atributos = atributosTexto(partido) + ' ' + atributosTexto(estado);
+        var combinado = textoEstado + ' ' + textoPartido + ' ' + atributos;
+
+        return /(^|\b)(descanso|entretiempo|medio tiempo|half[ -]?time|halftime)(\b|$)/.test(combinado)
+            || /(^|\s)ht($|\s)/.test(combinado);
+    }
+
+    function ajustarPartido(partido) {
+        if (!partido) return;
+
+        /* Texto completo y explícito cuando ya hay alineaciones oficiales. */
+        var onces = partido.querySelector('.cm-cal-match__state--lineups');
+        if (onces && normalizarTexto(onces.textContent) !== 'onces confirmados') {
+            onces.textContent = 'ONCES CONFIRMADOS';
+            onces.setAttribute('aria-label', 'Onces confirmados');
+            onces.setAttribute('title', 'Onces confirmados');
+        }
+
+        /* El descanso no debe heredar el parpadeo de un partido en juego. */
+        var estadoLive = partido.querySelector('.cm-cal-match__state--live');
+        var descanso = !!estadoLive && esDescanso(partido, estadoLive);
+        partido.classList.toggle('is-halftime', descanso);
+
+        if (descanso) {
+            estadoLive.setAttribute('aria-label', 'Descanso');
+            estadoLive.setAttribute('title', 'Descanso');
+        }
+    }
+
+    function ajustarPanel() {
+        var contenido = document.getElementById('cal-panel-content');
+        if (!contenido) return;
+        var partidos = contenido.querySelectorAll('.cm-cal-match');
+        for (var i = 0; i < partidos.length; i++) {
+            ajustarPartido(partidos[i]);
+        }
+    }
+
+    function iniciar() {
+        var contenido = document.getElementById('cal-panel-content');
+        if (!contenido) return;
+
+        ajustarPanel();
+
+        var observer = new MutationObserver(function () {
+            ajustarPanel();
+        });
+        observer.observe(contenido, { childList: true, subtree: true, characterData: true });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', iniciar, { once: true });
+    } else {
+        iniciar();
+    }
+})();
+</script>
+
+<section class="main-content">
+<div id="content-banner-left">
+<div style="float: right">
+    <span class="publicidad_texto">Publicidad</span>
+    <div id="hbagency_space_6496" class="banner_lateral"></div>
+</div></div>
+<div id="content-banner-right">
+<span class="publicidad_texto">Publicidad</span>
+<div id="hbagency_space_11818" class="banner_lateral"></div></div>
+
+  <div class="container">
+  
+      <aside 
+    class="row publicidad_mega_banner" 
+    align="center" 
+    role="complementary" 
+    aria-label="Publicidad"
+    data-nosnippet>
+    <span class="publicidad_texto" aria-hidden="true">Publicidad</span>
+    <div class="hbagency_cls_static visible-xs" id='hbagency_space_91314' ></div>
+    <div class="hbagency_cls_static hidden-xs" id='hbagency_space_154532' ></div>
+     </aside>
+
+    <div class="row">
+      <div class="col-xs-12">
+
+ 
+      <h1 class="linea_titulo fuente_alternativa">Jugadores <strong>Lesionados</strong></h1>
+      <p>Jugadores <strong>lesionados</strong> o <strong>tocados</strong> de los equipos de LaLiga EASport.</p>      
+            
+
+            
+            <div class="row">
+           
+              <div class="col-md-12 col-xs-12" style="margin-bottom:10px;">     
+            
+              <div class="col-xs-6 col-md-6" align="right">
+              <a class="btn btn-success"  href="/sancionados/comunio" role="button"> <i class="fa fa-square" aria-hidden="true" style="color:#FF0000"></i> VER <strong>SANCIONADOS</strong></a>         
+			</div>
+            
+              <div class="col-xs-6 col-md-6">
+              <a class="btn btn-warning"  href="/apercibidos/comunio" role="button"><span style="background-color:#FFFF00; padding:2px 6px 2px 6px; color:#FF6600; border-radius:5px">4</span> VER <strong>APERCIBIDOS</strong></a>         
+			</div>
+           </div>
+           
+            <div class="col-md-12 col-xs-12">
+
+            <form class="form-horizontal" name="formulario_busqueda" id="formulario_busqueda">
+
+            <div class="col-md-6 col-xs-6">
+              <!-- /.form-group -->
+              <div class="form-group">
+                <label><small>Filtrar Equipo</small></label>
+               
+                              
+                <select name="id_equipo" id="id_equipo"  class="form-control select" style="width: 100%;border-color: #5cb85c;"  onChange="ver_jugadores();">
+       				<option value="0" >-TODOS-</option>
+				<option value='89'>Alavés</option><option value='1'>Athletic Club</option><option value='2'>Atlético</option><option value='3'>Barcelona</option><option value='4'>Betis</option><option value='5'>Celta</option><option value='6'>Deportivo</option><option value='75'>Elche</option><option value='7'>Espanyol</option><option value='8'>Getafe</option><option value='10'>Levante</option><option value='65'>Málaga </option><option value='12'>Osasuna</option><option value='14'>Racing</option><option value='70'>Rayo Vallecano</option><option value='15'>Real Madrid</option><option value='13'>Real Sociedad</option><option value='17'>Sevilla</option><option value='18'>Valencia</option><option value='19'>Villarreal</option>				</select>	
+              </div>
+              <!-- /.form-group -->
+            </div>
+            <!-- /.col -->
+ 			
+            
+            <div class="col-md-6 col-xs-6" style="padding:0px;">
+              <!-- /.form-group -->
+              <div class="form-group">
+                <label><small>Filtrar Posición</small></label>
+                
+                <select name="posicion" id="posicion"  class="form-control select" style="width: 100%;border-color: #5cb85c;"  onChange="ver_jugadores();">
+				<option value="0" >-TODOS-</option>
+				<option value="1" >PORTERO</option>
+                <option value="2" >DEFENSA</option>
+                <option value="3" >MEDIO</option>
+                <option value="4" >DELANTERO</option>
+				</select>	
+              </div>
+              <!-- /.form-group -->
+            </div>
+
+                 </form>
+            
+            </div>
+          </div></div>
+ 
+
+</div>
+
+            
+             
+
+          
+            
+ 	<div class="row" style="margin:0px; padding:0px;">
+	 <div class="col-md-12" style="margin:0px; padding:0px;">
+ 		 <div id="contenedor_jugadores">
+		 </div><!-- contenido-jugadores-->
+                            
+	</div>
+       </div>
+          <!-- /.row -->
+        
+        
+<div class="row" style="margin:20px 0px;">     
+    <div class="col-md-12 col-xs-12">
+          <section class="texto_noticia">
+  <h2>🩺 Información sobre lesionados de LaLiga</h2>
+  <p>
+    En esta sección recopilamos a los <strong>jugadores lesionados</strong> de <strong>LaLiga EA Sports</strong>,
+    con su <strong>diagnóstico médico</strong> estandarizado y una <strong>estimación del tiempo de baja</strong>.  
+    La información se actualiza 🕒 <strong>a diario</strong> con partes oficiales, declaraciones de los entrenadores
+    y observación de los entrenamientos.
+  </p>
+  <p>
+    Cuando no existe una fecha exacta de regreso, mostramos rangos orientativos como
+    <em>“1–2 semanas”</em> o <em>“vuelta prevista en la J10”</em>, basándonos en el tipo de lesión, evolución
+    y carga de partidos. Así podrás <strong>planificar tus alineaciones fantasy</strong> sin sorpresas ni bajas inesperadas.
+  </p>
+  <p>
+    💪 Además, diferenciamos entre <strong>molestias leves</strong>, <strong>lesiones musculares</strong> y
+    <strong>problemas articulares</strong>, e indicamos cuándo un jugador pasa a entrenar con el grupo o
+    recibe el alta.  
+    Usa los filtros por equipo y posición ⚙️ para localizar rápidamente a los futbolistas que te interesan.
+  </p>
+</section>
+	</div>
+       </div>
+           
+   <div class="row"> 
+    <div class="col-md-12 col-xs-12 text-center publicidad-bloque-final">
+        <span class="publicidad_texto">Publicidad</span>
+
+        <div 
+            id="hbagency_space_91313" 
+            class="hidden-xs" 
+            style="min-height:280px;" 
+            aria-label="Espacio publicitario" 
+            aria-live="off">
+        </div>
+
+        <div 
+            id="hbagency_space_91315" 
+            class="visible-xs" 
+            style="min-height:250px;" 
+            aria-label="Espacio publicitario" 
+            aria-live="off">
+        </div>
+    </div>
+</div>   
+   
+   
+            
+      </div>
+      <!-- end col-12 --> 
+    </div>
+    <!-- end row --> 
+  </div>
+  <!-- end container --> 
+</section>
+<!-- end main-content -->
+
+
+<script src="/js/script_escudos.js?v=2"></script>
+<script src="/js/sticky-menu.js?modo=24"></script>
+
+<script>
+function isIOS() {
+    return [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+    ].indexOf(navigator.platform) !== -1
+    || (navigator.userAgent.indexOf('Mac') !== -1 && 'ontouchend' in document);
+}
+</script>
+
+</div>
+
+
+<div class="row text-center">
+  <div class="col-md-12 col-xs-12" style="margin:30px 0; min-height:380px;">
+
+    <aside
+      class="publicidad_inarticle"
+      role="complementary"
+      aria-label="Publicidad"
+      data-nosnippet
+    >
+      <span class="publicidad_texto text-center" aria-hidden="true">
+        Publicidad Arkeero
+      </span>
+
+      <!-- PUBLICIDAD DESKTOP -->
+      <div class="hb-ad-inpage hidden-xs">
+        <div class="hb-ad-inner">
+          <div
+            class="hbagency_cls hbagency_space_224290"
+            aria-label="Espacio publicitario"
+            aria-live="off"
+          ></div>
+        </div>
+      </div>
+
+      <div class="hb-ad-inpage" style="min-height: 280px;">
+ <div class="hb-ad-inner">
+ <div class="hbagency_cls hbagency_space_224290"  aria-label="Espacio publicitario"
+            aria-live="off"></div>
+ </div></div>
+
+      </aside>
+  </div>
+</div>
+<div class="row" style="text-align:center">
+    <img src="/images/banner_apuestas/18.png" loading="lazy" decoding="async" alt="Solo mayores de 18 años"/>
+    <img src="/images/banner_apuestas/autoprohibicion.png" loading="lazy" alt="Ordenación Juego"/>
+    <a href="https://www.ordenacionjuego.es/en" target="_blank" rel="nofollow noopener noreferrer"><img src="/images/banner_apuestas/direccion_general_juego.png" loading="lazy" alt="Dirección General Juego"/></a>
+    <a href="http://www.juegoseguro.es/" target="_blank" rel="nofollow noopener noreferrer"><img src="/images/banner_apuestas/juego_seguro.png" loading="lazy" alt="Juego Seguro"/></a>
+    <img src="/images/banner_apuestas/jugarbien.jpg" loading="lazy" alt="Jugar Bien"/>
+  </div>
+<div class="row">
+<footer class="footer" style="margin-top:10px; padding:20px 5px; text-align:center">
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <img src="/images/logo_black.png" alt="Comuniate" style="width:200px; margin-bottom:20px" loading="lazy" decoding="async">
+                    <p>La web fantasy de referencia en España, dónde te damos toda la información para que <strong>ganes tu campeonato Comunio</strong>, Biwenger, Futmondo o de Liga Fantasy Relevo o Marca. Proporcionamos las <strong>alineaciones posibles</strong> de cada jornada más fiables del mundo fantasy, gracias al estudio de cada uno de los equipos de LaLiga de manera detallada y profesional.</p>
+                    <p><strong><a href="/mercado/fantasy">Mercado Fantasy</a>.</strong> Puedes consultar nuestra sección de mercado fantasy para ver todas las subidas fantasy y las bajadas fantasy de cada día.</p>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <h3><strong>Previas y Onces Jornada 10</strong></h3>
+
+                                                <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/4/10/alaves-malaga"
+                                   title="Alineaciones probables Alavés y Málaga  Jornada 10">
+                                    Alavés - Málaga                                 </a>
+                            </div>
+                                                        <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/6/10/rayo-vallecano-elche"
+                                   title="Alineaciones probables Rayo Vallecano y Elche Jornada 10">
+                                    Rayo Vallecano - Elche                                </a>
+                            </div>
+                                                        <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/7/10/racing-espanyol"
+                                   title="Alineaciones probables Racing y Espanyol Jornada 10">
+                                    Racing - Espanyol                                </a>
+                            </div>
+                                                        <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/10/10/valencia-villarreal"
+                                   title="Alineaciones probables Valencia y Villarreal Jornada 10">
+                                    Valencia - Villarreal                                </a>
+                            </div>
+                                                        <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/2/10/atletico-deportivo"
+                                   title="Alineaciones probables Atlético y Deportivo Jornada 10">
+                                    Atlético - Deportivo                                </a>
+                            </div>
+                                                        <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/1/10/athletic-club-getafe"
+                                   title="Alineaciones probables Athletic Club y Getafe Jornada 10">
+                                    Athletic Club - Getafe                                </a>
+                            </div>
+                                                        <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/3/10/celta-betis"
+                                   title="Alineaciones probables Celta y Betis Jornada 10">
+                                    Celta - Betis                                </a>
+                            </div>
+                                                        <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/8/10/real-sociedad-levante"
+                                   title="Alineaciones probables Real Sociedad y Levante Jornada 10">
+                                    Real Sociedad - Levante                                </a>
+                            </div>
+                                                        <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/5/10/barcelona-real-madrid"
+                                   title="Alineaciones probables Barcelona y Real Madrid Jornada 10">
+                                    Barcelona - Real Madrid                                </a>
+                            </div>
+                                                        <div>
+                                <a itemprop="url"
+                                   href="https://www.comuniate.com/partido/26/9/10/sevilla-osasuna"
+                                   title="Alineaciones probables Sevilla y Osasuna Jornada 10">
+                                    Sevilla - Osasuna                                </a>
+                            </div>
+                                            </div>
+            </div>
+
+            <div class="row" style="margin:20px 0">
+                <div class="col-xs-12 col-md-12 text-center">
+                   <a href="https://play.google.com/store/apps/details?id=com.comuniate.www" title="Play Store" target="_blank" rel="noopener">
+                        <img src="/images/playstore.webp" alt="Play Store" style="width:150px" loading="lazy" decoding="async">
+                    </a>
+
+                    <a href="https://itunes.apple.com/es/app/comuniate/id1455536792?mt=8" title="App Store" target="_blank" rel="noopener">
+                        <img src="/images/ios.webp" alt="App Store" style="width:150px" loading="lazy" decoding="async">
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-6" style="text-align:center">
+                    <h3 class="linea_titulo fuente_alternativa"><strong>Correo electrónico</strong></h3>
+                    <span style="font-size:20px"><a href="mailto:comuniate@gmail.com">comuniate@gmail.com</a></span>
+                </div>
+
+                <div class="col-xs-12 col-md-6" style="text-align:center">
+                    <h3 class="linea_titulo fuente_alternativa"><strong>Redes Sociales</strong></h3>
+
+                    <a href="https://whatsapp.com/channel/0029Va7kL4YFHWq2giAz0Y21" target="_blank" rel="noopener" aria-label="Canal de WhatsApp de Comuniate" title="Canal de WhatsApp de Comuniate" style="padding:3px;font-size:20px;">
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/comuniate" target="_blank" rel="noopener" aria-label="Facebook de Comuniate" title="Facebook de Comuniate" style="padding:3px;font-size:20px;">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://twitter.com/ComuniateEs" target="_blank" rel="noopener" aria-label="Twitter de Comuniate" title="Twitter de Comuniate" style="padding:3px;font-size:20px;">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/channel/UC5uMR48Ykb-6oacrp0DrKuQ" target="_blank" rel="noopener" aria-label="YouTube de Comuniate" title="YouTube de Comuniate" style="padding:3px;font-size:20px;">
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/comuniate" target="_blank" rel="noopener" aria-label="Instagram de Comuniate" title="Instagram de Comuniate" style="padding:3px;font-size:20px;">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row" style="text-align:center">
+                
+                
+                <a href="/aviso_legal.php">Aviso Legal</a> -
+                <a href="/politica_cookies.php">Política Cookies</a> -
+                <a href="/noticias_sitemap.php">Sitemap</a> -
+                <a href="/en/" lang="en" hreflang="en" title="English Version">English</a> -
+                <a href="/de/" lang="de" hreflang="de" title="Deutsche Version">Deutsch</a> -
+                <a href="/contacto.php">Contacto</a>
+
+                <div>
+                    Comuniate © 2017 - 2026 Todos los derechos reservados.<br>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!-- GA4 se inicializa en cabecera_head.php para registrar correctamente la landing/page_view. -->
+
+
+<script>
+(function () {
+    window.setStyleSheet = function (url) {
+        var stylesheet = document.getElementById("stylesheet");
+
+        if (stylesheet) {
+            stylesheet.setAttribute("href", url);
+        }
+    };
+
+    if (typeof window.openNav !== "function") {
+        window.openNav = function () {
+            var sidenav = document.getElementById("mySidenav");
+            var boton = document.getElementById("boton-menu");
+
+            if (sidenav) {
+                sidenav.classList.toggle("sidenav_open");
+            }
+
+            if (boton) {
+                boton.classList.toggle("rotar-menu");
+                boton.classList.toggle("fa-reorder");
+                boton.classList.toggle("fa-close");
+            }
+        };
+    }
+
+
+})();
+</script>
+
+
+
+<script src="/js/menu-script.js?v=26.27.28.29"></script>
+
+<script>console.info("[Comuniate Ads] Proveedor seleccionado", {"id":4,"nombre":"HB Agency","porcentaje":70,"modo":"aleatorio","sorteo":6467,"peso_total":10000,"pagina_puntuacion":false});</script><script>
+(function() {
+    if (document.getElementById("hbagency_space_5946")) return;
+    var wrapper = document.createElement("div");
+    wrapper.id = "HB_Footer_Close_hbagency_space_5946";
+    document.body.appendChild(wrapper);
+    var close = document.createElement("div");
+    close.id = "HB_CLOSE_hbagency_space_5946";
+    wrapper.appendChild(close);
+    var outer = document.createElement("div");
+    outer.id = "HB_OUTER_hbagency_space_5946";
+    wrapper.appendChild(outer);
+    var slot = document.createElement("div");
+    slot.id = "hbagency_space_5946";
+    outer.appendChild(slot);
+})();
+</script><script src="/app/js/device.js?v=1"></script>
+<script src="/app/js/push.js?v=20"></script>
+<script src="/app/js/app-ui.js?v=7"></script>
+<script src="/app/js/app.js?v=4"></script>
+
+<!-- JS FILES --> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/stickysidebar.js"></script> 
+
+<script src="https://www.comuniate.com/js/scripts.js?update=1"></script>
+
+<script type="application/javascript">
+
+ver_jugadores();
+
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"¿Con qué frecuencia se actualiza la lista de lesionados?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Actualizamos diariamente en función de partes médicos, declaraciones de técnicos y seguimiento de entrenamientos. Si hay alta, recaída o cambio de plazos, lo reflejamos de inmediato."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"¿Cómo calculáis el tiempo de baja estimado?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Cuando no hay fecha oficial, mostramos rangos orientativos (por ejemplo, 1–2 semanas o vuelta en la J10) basados en el tipo de lesión, evolución y carga de partidos."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"¿Qué diferencias hacéis entre molestias, lesiones musculares y problemas articulares?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Etiquetamos el diagnóstico para ofrecer contexto: molestias (generalmente leves), lesiones musculares (tiempos variables) y problemas articulares (suelen requerir plazos mayores)."
+      }
+    }
+  ]
+}
+</script>
+
+
+</body>
+
+</html>
