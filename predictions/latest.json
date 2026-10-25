@@ -1,35 +1,35 @@
 [
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-10-25",
   "kickoff_utc": "2026-10-25T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Real Madrid",
-  "p_home": 0.6511,
-  "p_draw": 0.1796,
-  "p_away": 0.1693,
+  "p_home": 0.6281,
+  "p_draw": 0.1953,
+  "p_away": 0.1766,
   "model": "stacker_mercado",
   "dc": {
-   "p_home": 0.6491,
-   "p_draw": 0.1846,
-   "p_away": 0.1663,
-   "xg_home": 2.5201,
-   "xg_away": 1.2358,
-   "p_over25": 0.7239,
-   "p_btts": 0.6562,
+   "p_home": 0.5701,
+   "p_draw": 0.2149,
+   "p_away": 0.215,
+   "xg_home": 2.1449,
+   "xg_away": 1.2657,
+   "p_over25": 0.6623,
+   "p_btts": 0.6387,
    "top_scores": [
     [
      "2-1",
-     0.09175208734902146
-    ],
-    [
-     "3-1",
-     0.07707440309112625
+     0.09614350038371346
     ],
     [
      "1-1",
-     0.07669702777404179
+     0.09442461034506658
+    ],
+    [
+     "2-0",
+     0.07596320735568592
     ]
    ]
   },
@@ -52,11 +52,11 @@
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
-   0.022,
+   0.291,
    0.171
   ],
   "deficit_defence": [
-   0.045,
+   0.114,
    0.304
   ],
   "context": {
@@ -77,6 +77,11 @@
    "Barcelona": [
     {
      "player": "Marc Bernal",
+     "status": "out",
+     "reason": "suspension"
+    },
+    {
+     "player": "Lamine Yamal",
      "status": "out",
      "reason": "suspension"
     }
@@ -115,7 +120,7 @@
       "role": "M",
       "imp": 1.0,
       "att": 1.16,
-      "absent": null,
+      "absent": "out",
       "usual": true
      },
      {
@@ -205,6 +210,11 @@
       "name": "Marc Bernal",
       "status": "out",
       "imp": 0.33
+     },
+     {
+      "name": "Lamine Yamal",
+      "status": "out",
+      "imp": 1.0
      }
     ]
    },
@@ -336,10 +346,10 @@
    4.5
   ],
   "ou": {
-   "p_over": 0.8208,
-   "p_over_model": 0.7239,
+   "p_over": 0.817,
+   "p_over_model": 0.6623,
    "p_over_market": 0.8047,
-   "p_btts": 0.6562
+   "p_btts": 0.6387
   },
   "odds_market": {
    "max": [
@@ -358,91 +368,113 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.519,
+     "p": 0.464,
      "xg90": 1.02
     },
     {
-     "name": "Lamine Yamal",
-     "p": 0.352,
-     "xg90": 0.66
-    },
-    {
      "name": "Anthony Gordon",
-     "p": 0.328,
+     "p": 0.287,
      "xg90": 0.55
     },
     {
      "name": "Fermín López",
-     "p": 0.244,
+     "p": 0.212,
      "xg90": 0.42
     },
     {
      "name": "Rodri",
-     "p": 0.13,
+     "p": 0.112,
      "xg90": 0.21
+    },
+    {
+     "name": "Eric García",
+     "p": 0.073,
+     "xg90": 0.12
     }
    ],
    "away": [
     {
      "name": "Kylian Mbappé",
-     "p": 0.352,
+     "p": 0.359,
      "xg90": 1.01
     },
     {
      "name": "Jude Bellingham",
-     "p": 0.124,
+     "p": 0.127,
      "xg90": 0.3
     },
     {
      "name": "Arda Güler",
-     "p": 0.109,
+     "p": 0.112,
      "xg90": 0.26
     },
     {
      "name": "Denzel Dumfries",
-     "p": 0.062,
+     "p": 0.064,
      "xg90": 0.13
     },
     {
      "name": "Dean Huijsen",
-     "p": 0.044,
+     "p": 0.045,
      "xg90": 0.09
     }
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Barcelona",
+   "away": "Real Madrid",
+   "date": "2026-10-25",
+   "from_ts": "2026-10-25T17:46:59.529096+00:00",
+   "to_ts": "2026-10-25T17:53:51.534712+00:00",
+   "p_from": [
+    0.6511,
+    0.1796,
+    0.1693
+   ],
+   "p_to": [
+    0.6281,
+    0.1953,
+    0.1766
+   ],
+   "delta_pts": [
+    -2.3,
+    1.6,
+    0.7
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-10-26",
   "kickoff_utc": "2026-10-26T20:00:00+00:00",
   "home": "Sevilla",
   "away": "Osasuna",
-  "p_home": 0.4877,
-  "p_draw": 0.2877,
-  "p_away": 0.2245,
+  "p_home": 0.4906,
+  "p_draw": 0.286,
+  "p_away": 0.2234,
   "model": "stacker_mercado",
   "dc": {
-   "p_home": 0.4789,
-   "p_draw": 0.2606,
-   "p_away": 0.2605,
-   "xg_home": 1.6056,
-   "xg_away": 1.1247,
-   "p_over25": 0.5138,
-   "p_btts": 0.5459,
+   "p_home": 0.4871,
+   "p_draw": 0.2585,
+   "p_away": 0.2543,
+   "xg_home": 1.6301,
+   "xg_away": 1.1156,
+   "p_over25": 0.5175,
+   "p_btts": 0.5468,
    "top_scores": [
     [
      "1-1",
-     0.1240154249516447
+     0.12297829163081822
     ],
     [
      "1-0",
-     0.09841190031252219
+     0.09843205771027712
     ],
     [
      "2-1",
-     0.09451977874604978
+     0.09516178562522105
     ]
    ]
   },
@@ -463,13 +495,13 @@
    0.2276
   ],
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "ninguna",
   "deficit": [
-   0.025,
+   0.0,
    0.0
   ],
   "deficit_defence": [
-   0.023,
+   0.0,
    0.0
   ],
   "context": {
@@ -487,13 +519,7 @@
    "post_break": 0.0
   },
   "absences": {
-   "Sevilla": [
-    {
-     "player": "Peque",
-     "status": "out",
-     "reason": "suspension"
-    }
-   ],
+   "Sevilla": [],
    "Osasuna": []
   },
   "lineups": null,
@@ -602,13 +628,7 @@
       "usual": true
      }
     ],
-    "out": [
-     {
-      "name": "Peque",
-      "status": "out",
-      "imp": 0.33
-     }
-    ]
+    "out": []
    },
    "away": {
     "confirmed": false,
@@ -727,10 +747,10 @@
    1.73
   ],
   "ou": {
-   "p_over": 0.444,
-   "p_over_model": 0.5138,
+   "p_over": 0.4444,
+   "p_over_model": 0.5175,
    "p_over_market": 0.443,
-   "p_btts": 0.5459
+   "p_btts": 0.5468
   },
   "odds_market": {
    "max": [
@@ -749,39 +769,39 @@
    "home": [
     {
      "name": "Robbie Ure",
-     "p": 0.311,
+     "p": 0.315,
      "xg90": 0.38
     },
     {
      "name": "Youssouf Fofana",
-     "p": 0.291,
+     "p": 0.295,
      "xg90": 0.33
     },
     {
      "name": "Felix Correia",
-     "p": 0.253,
+     "p": 0.256,
      "xg90": 0.28
     },
     {
      "name": "Jon Guridi",
-     "p": 0.212,
+     "p": 0.215,
      "xg90": 0.21
     },
     {
      "name": "Miguel Sierra",
-     "p": 0.1,
+     "p": 0.101,
      "xg90": 0.1
     }
    ],
    "away": [
     {
      "name": "Ante Budimir",
-     "p": 0.345,
+     "p": 0.343,
      "xg90": 0.64
     },
     {
      "name": "Raúl García",
-     "p": 0.315,
+     "p": 0.313,
      "xg90": 0.51
     },
     {
@@ -801,10 +821,32 @@
     }
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Sevilla",
+   "away": "Osasuna",
+   "date": "2026-10-26",
+   "from_ts": "2026-10-25T17:46:59.529096+00:00",
+   "to_ts": "2026-10-25T17:53:51.534712+00:00",
+   "p_from": [
+    0.4877,
+    0.2877,
+    0.2245
+   ],
+   "p_to": [
+    0.4906,
+    0.286,
+    0.2234
+   ],
+   "delta_pts": [
+    0.3,
+    -0.2,
+    -0.1
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-10-30",
   "kickoff_utc": "2026-10-30T20:00:00+00:00",
@@ -1173,7 +1215,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T13:00:00+00:00",
@@ -1530,7 +1572,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T15:15:00+00:00",
@@ -1909,7 +1951,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T17:30:00+00:00",
@@ -2278,36 +2320,36 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Alaves",
-  "p_home": 0.88,
-  "p_draw": 0.0897,
-  "p_away": 0.0303,
+  "p_home": 0.8417,
+  "p_draw": 0.1197,
+  "p_away": 0.0386,
   "model": "stacker",
   "dc": {
-   "p_home": 0.8141,
-   "p_draw": 0.1214,
-   "p_away": 0.0645,
-   "xg_home": 3.0395,
-   "xg_away": 0.8026,
-   "p_over25": 0.7377,
-   "p_btts": 0.5282,
+   "p_home": 0.7492,
+   "p_draw": 0.1584,
+   "p_away": 0.0923,
+   "xg_home": 2.587,
+   "xg_away": 0.8219,
+   "p_over25": 0.662,
+   "p_btts": 0.522,
    "top_scores": [
     [
-     "3-0",
-     0.10041762448940865
-    ],
-    [
      "2-0",
-     0.0991130897141545
+     0.11069092363439317
     ],
     [
-     "3-1",
-     0.0805914930160092
+     "3-0",
+     0.09545270698690682
+    ],
+    [
+     "2-1",
+     0.09098192366317417
     ]
    ]
   },
@@ -2326,11 +2368,11 @@
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
-   0.022,
+   0.291,
    0.0
   ],
   "deficit_defence": [
-   0.045,
+   0.114,
    0.0
   ],
   "context": {
@@ -2351,6 +2393,11 @@
    "Barcelona": [
     {
      "player": "Marc Bernal",
+     "status": "out",
+     "reason": "suspension"
+    },
+    {
+     "player": "Lamine Yamal",
      "status": "out",
      "reason": "suspension"
     }
@@ -2378,7 +2425,7 @@
       "role": "M",
       "imp": 1.0,
       "att": 1.16,
-      "absent": null,
+      "absent": "out",
       "usual": true
      },
      {
@@ -2468,6 +2515,11 @@
       "name": "Marc Bernal",
       "status": "out",
       "imp": 0.33
+     },
+     {
+      "name": "Lamine Yamal",
+      "status": "out",
+      "imp": 1.0
      }
     ]
    },
@@ -2581,10 +2633,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.7377,
-   "p_over_model": 0.7377,
+   "p_over": 0.662,
+   "p_over_model": 0.662,
    "p_over_market": null,
-   "p_btts": 0.5282
+   "p_btts": 0.522
   },
   "odds_market": null,
   "espn_id": "401882822",
@@ -2592,62 +2644,84 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.586,
+     "p": 0.528,
      "xg90": 1.02
     },
     {
-     "name": "Lamine Yamal",
-     "p": 0.407,
-     "xg90": 0.66
-    },
-    {
      "name": "Anthony Gordon",
-     "p": 0.381,
+     "p": 0.335,
      "xg90": 0.55
     },
     {
      "name": "Fermín López",
-     "p": 0.286,
+     "p": 0.25,
      "xg90": 0.42
     },
     {
      "name": "Rodri",
-     "p": 0.155,
+     "p": 0.133,
      "xg90": 0.21
+    },
+    {
+     "name": "Eric García",
+     "p": 0.087,
+     "xg90": 0.12
     }
    ],
    "away": [
     {
      "name": "Toni Martínez",
-     "p": 0.198,
+     "p": 0.202,
      "xg90": 0.42
     },
     {
      "name": "Lucas Boyé",
-     "p": 0.189,
+     "p": 0.193,
      "xg90": 0.46
     },
     {
      "name": "Pablo Ibáñez",
-     "p": 0.067,
+     "p": 0.069,
      "xg90": 0.15
     },
     {
      "name": "Ángel Pérez",
-     "p": 0.065,
+     "p": 0.067,
      "xg90": 0.13
     },
     {
      "name": "Ville Koski",
-     "p": 0.049,
+     "p": 0.05,
      "xg90": 0.1
     }
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Barcelona",
+   "away": "Alaves",
+   "date": "2026-10-31",
+   "from_ts": "2026-10-25T17:46:59.529096+00:00",
+   "to_ts": "2026-10-25T17:53:51.534712+00:00",
+   "p_from": [
+    0.88,
+    0.0897,
+    0.0303
+   ],
+   "p_to": [
+    0.8417,
+    0.1197,
+    0.0386
+   ],
+   "delta_pts": [
+    -3.8,
+    3.0,
+    0.8
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T13:00:00+00:00",
@@ -3026,7 +3100,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T15:15:00+00:00",
@@ -3417,7 +3491,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T17:30:00+00:00",
@@ -3808,7 +3882,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:50:09.289834+00:00",
+  "generated_at": "2026-10-25T17:53:51.534712+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T20:00:00+00:00",

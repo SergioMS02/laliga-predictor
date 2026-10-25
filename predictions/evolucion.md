@@ -1,25 +1,27 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-25 17:50 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-10-25 17:54 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Barcelona – Real Madrid (2026-10-25)
 
-1 ▆▆▆ · X ▂▂▂ · 2 ▂▂▂
+1 ▆▆▆▆ · X ▂▂▂▂ · 2 ▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 63% | 19% | 18% |  |
 | 25/10 17:15 | 64% | 18% | 18% |  |
 | 25/10 18:46 | 65% | 18% | 17% |  |
+| 25/10 18:53 | 63% | 20% | 18% |  |
 
 ## Sevilla – Osasuna (2026-10-26)
 
-1 ▄▄ · X ▃▃ · 2 ▂▂
+1 ▄▄▄ · X ▃▃▃ · 2 ▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 49% | 29% | 22% |  |
 | 25/10 18:46 | 49% | 29% | 22% |  |
+| 25/10 18:53 | 49% | 29% | 22% |  |
 
 ## Villarreal – Espanol (2026-10-30)
 
@@ -66,13 +68,14 @@ Actualizado: 2026-10-25 17:50 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Barcelona – Alaves (2026-10-31)
 
-1 ███ · X ▁▁▁ · 2 ▁▁▁
+1 ███▇ · X ▁▁▁▁ · 2 ▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 25/10 15:08 | 89% | 8% | 3% |  |
 | 25/10 16:18 | 88% | 9% | 3% |  |
 | 25/10 18:46 | 88% | 9% | 3% |  |
+| 25/10 18:53 | 84% | 12% | 4% |  |
 
 ## Getafe – Sevilla (2026-11-01)
 
