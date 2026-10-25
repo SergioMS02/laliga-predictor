@@ -137,10 +137,17 @@ def deficits_from_absences(imp: pd.DataFrame, absences: pd.DataFrame,
     if ba <= 0 or bd <= 0:
         return 0.0, 0.0
     by_name = imp.drop_duplicates("name").set_index("name")
+    plain_idx = {n: _plain(n) for n in by_name.index}
     la = ld = 0.0
     for _, a in absences.iterrows():
-        if a.player not in by_name.index:
-            continue
+        name = a.player
+        if name not in by_name.index:  # mismo jugador escrito distinto (acentos, apellidos compuestos)
+            best = process.extractOne(_plain(name), plain_idx, scorer=fuzz.token_set_ratio) if plain_idx else None
+            if not best or best[1] < 85:
+                continue
+            name = best[2]
+        a = a.copy()
+        a["player"] = name
         w = 1.0 if a.status == "out" else doubtful_weight
         la += w * float(by_name.at[a.player, "att_imp"])
         ld += w * float(by_name.at[a.player, "def_imp"])
@@ -227,18 +234,98 @@ def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str |
         out = [{"name": r["name"], "status": "no titular", "imp": round(float(r["importance"]), 2)}
                for _, r in exp.iterrows() if str(r["player_id"]) not in ids]
         return {"confirmed": True, "formation": formation, "xi": xi, "out": out}
-    ab = {}
+    ab, meta = {}, {}
     if absences is not None:
         rows = absences.to_dict(orient="records") if isinstance(absences, pd.DataFrame) else absences
-        ab = {a["player"]: a.get("status", "out") for a in rows}
-    xi = []
+        for a in rows:
+            ab[a["player"]] = a.get("status", "out")
+            meta[a["player"]] = a
+    is_out = lambda n: _status_of(n, ab) == "out"  # noqa: E731
+    # once probable: los habituales que no están de baja; cada baja la ocupa el siguiente más
+    # habitual de su misma demarcación (si no hay, el siguiente jugador de campo)
+    xi, used = [], set()
+    pool = imp[imp.importance > 0].copy() if len(imp) else imp
+    if len(pool):
+        pool["role"] = pool["position"].map(role) if "position" in pool else "M"
+        pool = pool.sort_values("importance", ascending=False)
     for _, r in exp.iterrows():
-        info = _pinfo(r, ab.get(r["name"]))
-        info["usual"] = True
-        xi.append(info)
-    out = [{"name": n, "status": s, "imp": round(float(imp[imp.name == n].importance.max()), 2) if (imp.name == n).any() else 0}
+        used.add(r["name"])
+    for _, r in exp.iterrows():
+        if not is_out(r["name"]):
+            info = _pinfo(r, _status_of(r["name"], ab))
+            info["usual"] = True
+            xi.append(info)
+            continue
+        rl = role(r.get("position"))
+        cand = pool[(~pool.name.isin(used)) & (pool.role == rl)] if len(pool) else pool
+        if cand is None or cand.empty:
+            cand = pool[(~pool.name.isin(used)) & (pool.role != "G")] if len(pool) else pool
+        cand = cand[[not is_out(n) for n in cand.name]] if cand is not None and len(cand) else cand
+        if cand is not None and len(cand):
+            rep = cand.iloc[0]
+            used.add(rep["name"])
+            info = _pinfo(rep, _status_of(rep["name"], ab))
+            info["usual"] = False
+            info["replaces"] = r["name"]
+            xi.append(info)
+    out = [{"name": n, "status": s, "reason": meta[n].get("reason"), "source": meta[n].get("source"),
+            "imp": round(float(imp[imp.name == n].importance.max()), 2) if len(imp) and (imp.name == n).any() else 0}
            for n, s in ab.items()]
     return {"confirmed": False, "formation": None, "xi": xi, "out": out}
+
+
+def _status_of(name: str, ab: dict) -> str | None:
+    if name in ab:
+        return ab[name]
+    if not ab:
+        return None
+    best = process.extractOne(_plain(name), {k: _plain(k) for k in ab}, scorer=fuzz.token_set_ratio)
+    return ab[best[2]] if best and best[1] >= 88 else None
+
+
+def roster(imp: pd.DataFrame | None, players: pd.DataFrame | None, absences: list | None = None,
+           starters: list[str] | None = None) -> list[dict]:
+    """Plantilla con su disponibilidad: titularidades recientes, xG+xA por 90, goles y estado."""
+    rows: dict[str, dict] = {}
+    if imp is not None and len(imp):
+        for _, r in imp.iterrows():
+            rows[r["name"]] = {"name": r["name"], "role": role(r.get("position")), "imp": round(float(r.get("importance", 0) or 0), 2),
+                               "att": round(float(r.get("att_w", 0) or 0), 2), "goals": None, "minutes": None}
+    if players is not None and len(players):
+        plain_rows = {k: _plain(k) for k in rows}
+        for r in players.itertuples():
+            best = process.extractOne(_plain(r.player), plain_rows, scorer=fuzz.token_set_ratio) if plain_rows else None
+            key = best[2] if best and best[1] >= 88 else None
+            pos = str(r.position or "").split(" ")[0]
+            rl = {"GK": "G", "D": "D", "M": "M", "F": "F"}.get(pos, "M")
+            if key is None:
+                if (r.minutes or 0) < 90:
+                    continue
+                key = r.player
+                rows[key] = {"name": r.player, "role": rl, "imp": 0.0, "att": None, "goals": None, "minutes": None}
+            rows[key]["goals"] = int(r.goals or 0)
+            rows[key]["minutes"] = int(r.minutes or 0)
+            if r.minutes and r.minutes >= MIN_MINUTES_XG:
+                rows[key]["att"] = round(float((r.xg + r.xa) / r.minutes * 90), 2)
+    ab = {a["player"]: a for a in (absences or [])}
+    st = set(starters or [])
+    out = []
+    for k, v in rows.items():
+        a = ab.get(k)
+        if a is None and ab:
+            best = process.extractOne(_plain(k), {n: _plain(n) for n in ab}, scorer=fuzz.token_set_ratio)
+            a = ab[best[2]] if best and best[1] >= 88 else None
+        if a is not None:
+            status = "duda" if a.get("status") == "doubtful" else ("sancionado" if a.get("reason") == "suspension" else "baja")
+            v.update(status=status, source=a.get("source"))
+        elif starters is not None:
+            v["status"] = "titular" if k in st else "suplente"
+        else:
+            v["status"] = "disponible"
+        out.append(v)
+    order = {"G": 0, "D": 1, "M": 2, "F": 3}
+    out.sort(key=lambda x: (order.get(x["role"], 2), -(x["imp"] or 0), -(x["minutes"] or 0)))
+    return out
 
 
 def squad_from_players(players: pd.DataFrame | None, absences: list | None = None) -> dict:

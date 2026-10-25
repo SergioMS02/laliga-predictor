@@ -139,6 +139,20 @@ function scoreGrid(m) {
   return html + "</table>";
 }
 
+function impactHtml(m) {
+  const im = m.absence_impact;
+  const outs = Object.entries(m.absences || {}).flatMap(([t, l]) => (l || []).filter((a) => a.status === "out").map((a) => `${a.player} (${name(t)})`));
+  if (!im || (!outs.length && !m.lineup_confirmed)) return "";
+  const d = (k) => Math.round(100 * (im.p_adj[k] - im.p_full[k]));
+  const sgn = (v) => (v > 0 ? `+${v}` : `${v}`);
+  if (Math.abs(d(0)) < 1 && Math.abs(d(2)) < 1 && Math.abs(im.xg_adj[0] - im.xg_full[0]) < 0.03 && Math.abs(im.xg_adj[1] - im.xg_full[1]) < 0.03) return "";
+  return `<div class="impact"><h4 class="mt0">Efecto de ${m.lineup_confirmed ? "las alineaciones" : "las bajas"}</h4>
+    <p>Goles esperados: ${esc(name(m.home))} ${dec(im.xg_full[0], 2)} → <b>${dec(im.xg_adj[0], 2)}</b>, ${esc(name(m.away))} ${dec(im.xg_full[1], 2)} → <b>${dec(im.xg_adj[1], 2)}</b>.
+    En el modelo de goles: 1 ${sgn(d(0))} · X ${sgn(d(1))} · 2 ${sgn(d(2))} puntos.</p>
+    ${outs.length ? `<p class="quiet small">Bajas: ${esc(outs.join(", "))}.</p>` : ""}
+    <p class="quiet small">Las cuotas de las casas ya descuentan las bajas que se conocen, así que en la probabilidad final este efecto se aplica a la mitad con noticias y completo con la alineación oficial.</p></div>`;
+}
+
 /* ---------- Goles y goleadores ---------- */
 function goalsFacts(m) {
   const ou = m.ou || {};
@@ -234,6 +248,7 @@ function probsHtml(m) {
     </div>
     <div>
       <h3>El partido en números</h3>
+      ${impactHtml(m)}
       ${goalsFacts(m)}
       <h4>Marcadores más probables (%)</h4>
       ${scoreGrid(m)}
@@ -323,18 +338,41 @@ function pitchHtml(m) {
     const kind = s.confirmed ? `Alineación oficial${s.formation ? ` (${s.formation})` : ""}`
       : s.source === "minutos" ? "Once probable según minutos jugados" : s.xi && s.xi.length ? "Once tipo según titularidades" : "Sin datos de alineación";
     const out = (s.out || []).filter((o) => o.name);
-    const outTxt = out.length ? `<p class="quiet">${s.confirmed ? "Habituales que no salen de inicio" : "Bajas y dudas"}: ${out.map((o) => esc(o.name) + (o.status === "doubtful" ? " (duda)" : "")).join(", ")}</p>` : "";
-    return `<div class="lineup__team lineup__team--${side}"><h4>${esc(name(team))}</h4><p class="quiet">${kind}</p>${outTxt}</div>`;
+    const outTxt = out.length ? `<p class="quiet">${s.confirmed ? "Habituales que no salen de inicio" : "Bajas y dudas"}: ${out.map((o) => esc(o.name) + (o.status === "doubtful" ? " (duda)" : o.reason === "suspension" ? " (sanción)" : "")).join(", ")}</p>` : "";
+    const reps = (s.xi || []).filter((p) => p.replaces);
+    const repTxt = reps.length ? `<p class="quiet">En el once probable: ${reps.map((p) => `${esc(p.name)} por ${esc(p.replaces)}`).join(", ")}</p>` : "";
+    return `<div class="lineup__team lineup__team--${side}"><h4>${esc(name(team))}</h4><p class="quiet">${kind}</p>${outTxt}${repTxt}</div>`;
   };
   if (!(sq.home && sq.home.xi && sq.home.xi.length) && !(sq.away && sq.away.xi && sq.away.xi.length)) {
     return `<p class="quiet">Todavía no hay datos de alineación para este partido. Aparecerán en cuanto se publiquen o haya historial de titulares.</p>`;
   }
-  return `<div class="lineup">
+  return `<div class="lineup-wrap"><div class="lineup">
     <div class="lineup__pitch"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Alineaciones dibujadas en el campo">${g}</svg></div>
     <div class="lineup__info">${head("away", m.away)}${head("home", m.home)}
       <p class="quiet small">El tamaño de cada círculo indica su aportación ofensiva (xG + xA por 90 minutos). Tachado: baja; borde discontinuo: titular poco habitual.</p>
       ${scorersHtml(m, 5)}</div>
+  </div>${rosterHtml(m)}
   </div>`;
+}
+
+const ROLE_ES = { G: "Porteros", D: "Defensas", M: "Centrocampistas", F: "Delanteros" };
+const STATUS_ES = { disponible: "Disponible", titular: "Titular", suplente: "Suplente", duda: "Duda", baja: "Baja", sancionado: "Sancionado" };
+function rosterHtml(m) {
+  const R = m.roster || {};
+  if (!(R.home || []).length && !(R.away || []).length) return "";
+  const col = (side, team) => {
+    const list = R[side] || [];
+    const groups = ["G", "D", "M", "F"].map((rl) => [rl, list.filter((p) => p.role === rl)]).filter(([, l]) => l.length);
+    const nOut = list.filter((p) => ["baja", "sancionado"].includes(p.status)).length, nDoubt = list.filter((p) => p.status === "duda").length;
+    return `<div class="roster__col"><h4>${esc(name(team))} <span class="quiet small">${list.length} jugadores${nOut ? ` · ${nOut} ${nOut === 1 ? "baja" : "bajas"}` : ""}${nDoubt ? ` · ${nDoubt} en duda` : ""}</span></h4>
+      ${groups.map(([rl, l]) => `<h5>${ROLE_ES[rl]}</h5><ul class="roster">${l.map((p) => `<li class="st st--${p.status}"${p.source ? ` title="${esc(p.source)}"` : ""}>
+        <span class="roster__n">${esc(p.name)}</span>
+        <span class="roster__s">${STATUS_ES[p.status] || p.status}</span>
+        <span class="roster__k" title="Titular en los últimos partidos · xG+xA por 90 · goles">${p.imp ? `${Math.round(100 * p.imp)} %` : "–"} · ${p.att != null ? dec(p.att, 2) : "–"} · ${p.goals ?? "–"}</span></li>`).join("")}</ul>`).join("")}</div>`;
+  };
+  return `<div class="roster-wrap"><h3>Plantilla y disponibilidad</h3>
+    <p class="quiet small">Para cada jugador: estado para este partido, porcentaje de titularidades recientes, xG + xA por 90 minutos y goles en liga esta temporada. Pasa el ratón por una baja para ver de dónde sale.</p>
+    <div class="roster__grid">${col("home", m.home)}${col("away", m.away)}</div></div>`;
 }
 
 /* ---------- Estadísticas comparadas ---------- */

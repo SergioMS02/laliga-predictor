@@ -204,6 +204,16 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                         pl = players[(players.team == team) & (players.season == season_now - 1)]
                     sq = av.squad_from_players(pl, info["absences"].get(team))
                 squads[side] = sq
+        rost = {}
+        for side, team in (("home", r.home), ("away", r.away)):
+            pl_t = players[(players.team == team) & (players.season == season_now)] if players is not None and len(players) else None
+            starters = info.get("lineups", {}).get(side) if info["lineup_confirmed"] else None
+            try:
+                rost[side] = av.roster(imps[side], pl_t, info["absences"].get(team), starters)
+            except Exception as e:
+                log.warning("Plantilla no disponible para %s: %s", team, e)
+                rost[side] = []
+        info["roster"] = rost
         info["squads"] = squads
         lam0, mu0 = dc.expected_goals(r.home, r.away)
         lam, mu = av.adjust_goals(lam0, mu0, info["d_home"], info["d_away"], a_coef, b_coef)
@@ -287,6 +297,16 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
     for k, (idx, r) in enumerate(tab.iterrows()):
         o = by_idx[idx]
         ko = r.get("kickoff")
+        impact = _impact(dc, o)
+        if model_used[k] == "stacker_mercado" and impact:
+            # Con cuotas, el meta-modelo se apoya sobre todo en el mercado, cuyas cuotas pueden ser de
+            # hace días (antes de la alineación o de la última noticia). Se aplica el efecto de bajas y
+            # alineaciones del modelo de goles: completo con alineación oficial, a la mitad con noticias
+            # (lo más probable es que el mercado ya las conozca en parte).
+            w = 1.0 if o["lineup_confirmed"] else 0.5
+            ratio = (np.asarray(impact["p_adj"]) / np.clip(np.asarray(impact["p_full"]), 1e-6, None)) ** w
+            f = final[k] * ratio
+            final[k] = f / f.sum()
         preds.append({
             "generated_at": gen,
             "season": int(r.season), "date": str(pd.Timestamp(r.date).date()),
@@ -319,11 +339,26 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             "odds_market": _clean_odds(best_odds.get((r.season, r.home, r.away))),
             "espn_id": str(events[(r.home, r.away)]) if (r.home, r.away) in events else None,
             "scorers": _scorers(o, players, r, season_now),
+            "roster": o.get("roster"),
+            "absence_impact": impact,
             "_snapshot": movements.make_snapshot(
                 r, o, rho=dc.params.rho, a=a_coef, b=b_coef, max_goals=dc.max_goals),
         })
     preds.sort(key=lambda d: (d["kickoff_utc"] or d["date"], d["home"]))
     return preds
+
+
+def _impact(dc, o: dict) -> dict | None:
+    """Cómo cambian goles esperados y 1X2 del modelo de goles por las bajas y alineaciones."""
+    try:
+        base = summarize_matrix(dc.score_matrix(o["lam0"], o["mu0"]), o["lam0"], o["mu0"])
+        adj = o["dc"]
+        return {"xg_full": [round(o["lam0"], 2), round(o["mu0"], 2)],
+                "xg_adj": [round(adj["xg_home"], 2), round(adj["xg_away"], 2)],
+                "p_full": [round(base["p_home"], 4), round(base["p_draw"], 4), round(base["p_away"], 4)],
+                "p_adj": [round(adj["p_home"], 4), round(adj["p_draw"], 4), round(adj["p_away"], 4)]}
+    except Exception:
+        return None
 
 
 def _clean_odds(d: dict | None) -> dict | None:
