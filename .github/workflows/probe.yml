@@ -10,31 +10,43 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p raw10
-          python3 - <<'PY' > raw10/out.txt 2>&1
-          import requests, json
+          mkdir -p raw11
+          python3 - <<'PY' > raw11/out.txt 2>&1
+          import requests, json, re, csv, time
+          from datetime import datetime, timezone
           s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0"
           G = "https://gamma-api.polymarket.com"
-          r = s.get(G + "/events", params={"slug": "lal-bar-rea-2026-10-25"}, timeout=30); js = r.json()
-          json.dump(js, open("raw10/clasico.json", "w"))
-          r = s.get(G + "/events", params={"series_id": "10193", "closed": "false", "limit": 100}, timeout=30); js2 = r.json()
-          json.dump(js2, open("raw10/lal_open.json", "w"))
-          print("open lal", len(js2), [e.get("slug") for e in js2][:40])
-          r = s.get(G + "/events", params={"series_id": "10193", "closed": "true", "limit": 100, "order": "endDate", "ascending": "false"}, timeout=30); js3 = r.json()
-          json.dump(js3[:60], open("raw10/lal_closed.json", "w"))
-          print("closed lal", len(js3), [(e.get("slug"), round(e.get("volume") or 0)) for e in js3][:40])
-          for slug in ["laliga-2027-champion-20260701200737375", "laliga-top-goalscorer-2026-27", "laliga-teams-relegated-2026-27", "laliga-team-to-qualify-for-the-2027-28-uefa-champions-league"]:
-              r = s.get(G + "/events", params={"slug": slug}, timeout=30); json.dump(r.json(), open(f"raw10/{slug[:30]}.json", "w"))
-          for u in [G + "/events?slug=lal-bar-rea-2026-10-25", "https://clob.polymarket.com/prices-history?interval=1d&market=1"]:
-              r = s.get(u, headers={"Origin": "https://sergioms02.github.io"}, timeout=30)
-              print("CORS", u, r.status_code, r.headers.get("access-control-allow-origin"))
-          # clob price history for clasico first market token
-          try:
-              m = js[0]["markets"][0]; toks = json.loads(m["clobTokenIds"]); print("token", toks[0])
-              r = s.get("https://clob.polymarket.com/prices-history", params={"market": toks[0], "interval": "max", "fidelity": 60}, timeout=30)
-              print("hist", r.status_code, r.text[:500])
-          except Exception as e:
-              print("hist err", e)
+          evs = []
+          for off in range(0, 6000, 100):
+              r = s.get(G + "/events", params={"series_id": "10193", "closed": "true", "limit": 100, "offset": off}, timeout=40)
+              js = r.json()
+              if not js: break
+              for e in js:
+                  if re.fullmatch(r"lal-[a-z0-9]+-[a-z0-9]+-\d{4}-\d{2}-\d{2}", e.get("slug","")):
+                      evs.append(e)
+          print("main closed events", len(evs))
+          w = csv.writer(open("raw11/hist.csv", "w"))
+          w.writerow(["slug","title","start","volume","outcome","p_close","p_6h","p_24h","last_trade","resolved"])
+          for e in evs:
+              st = e.get("startTime") or e.get("endDate")
+              try:
+                  t0 = int(datetime.fromisoformat(st.replace("Z","+00:00")).timestamp())
+              except Exception: continue
+              for m in e.get("markets", []):
+                  try: tok = json.loads(m["clobTokenIds"])[0]
+                  except Exception: continue
+                  pc = p6 = p24 = None
+                  try:
+                      h = s.get("https://clob.polymarket.com/prices-history", params={"market": tok, "startTs": t0-26*3600, "endTs": t0, "fidelity": 5}, timeout=30).json().get("history", [])
+                      pre = [x for x in h if x["t"] <= t0]
+                      if pre:
+                          pc = pre[-1]["p"]
+                          b6 = [x for x in pre if x["t"] <= t0-6*3600]; p6 = b6[-1]["p"] if b6 else None
+                          b24 = [x for x in pre if x["t"] <= t0-24*3600]; p24 = b24[-1]["p"] if b24 else None
+                  except Exception as ex:
+                      print("err", e["slug"], ex)
+                  w.writerow([e["slug"], e.get("title"), st, round(e.get("volume") or 0), m.get("groupItemTitle"), pc, p6, p24, m.get("lastTradePrice"), m.get("outcomePrices")])
+          print("done")
           PY
           git config user.name probe; git config user.email probe@example.com
-          git add raw10; git commit -qm probe-out10; git push origin HEAD:probe
+          git add raw11; git commit -qm probe-out11; git push origin HEAD:probe
