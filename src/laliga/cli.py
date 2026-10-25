@@ -110,6 +110,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--weather", action="store_true", help="incluir clima histórico en tune/backtest (≈400 peticiones)")
     ap.add_argument("--seasons", type=str, default=None, help="backfill-espn: p. ej. 2022-2026")
     ap.add_argument("--notify", action="store_true", help="enviar resumen por Telegram")
+    ap.add_argument("--no-other", action="store_true", help="backfill-espn: sin el calendario de otras competiciones")
     ap.add_argument("-v", "--verbose", action="store_true")
     a = ap.parse_args(argv)
     logging.basicConfig(level=logging.INFO if a.verbose else logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
@@ -125,7 +126,7 @@ def main(argv: list[str] | None = None) -> int:
         else:  # desde la primera temporada de validación: así tune puede usar alineaciones/árbitros/Europa
             cur = results.current_season()
             seasons = list(range(int(s.get("backtest", "first_val_season", cur - 3)), cur + 1))
-        print(json.dumps(history.backfill_espn(s, seasons)))
+        print(json.dumps(history.backfill_espn(s, seasons, other=not a.no_other)))
         return 0
 
     matches, sb = pipeline.load_matches(s, online=online, days_ahead=a.days)
@@ -156,6 +157,10 @@ def main(argv: list[str] | None = None) -> int:
         except (RuntimeError, FileNotFoundError) as e:
             print(f"No se pudo calibrar: {e}")
             return 1
+        try:
+            print(json.dumps(history.lineup_market_weight(load_settings(), matches), indent=2))
+        except (RuntimeError, FileNotFoundError) as e:
+            print(f"Peso del once frente al mercado no disponible: {e}")
         return 0
     if cmd == "export-site":
         _export_site(s, matches, projection=True)

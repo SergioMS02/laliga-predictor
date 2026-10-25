@@ -212,7 +212,7 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                 info.setdefault("news_count", {})[team] = len(items)
                 n_news += len(items)
             if any(info["absences"].values()):
-                info["availability_source"] = "noticias"
+                info["availability_source"] = "lesionados y sancionados" if fantasy_av is not None else "noticias"
         hints = {}
         for side, team in (("home", r.home), ("away", r.away)):
             hints[side] = {}
@@ -334,7 +334,8 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             # hace días (antes de la alineación o de la última noticia). Se aplica el efecto de bajas y
             # alineaciones del modelo de goles: completo con alineación oficial, a la mitad con noticias
             # (lo más probable es que el mercado ya las conozca en parte).
-            w = 1.0 if o["lineup_confirmed"] else 0.5
+            w_l = float(settings.get("availability", "market_weight_lineup", 1.0))  # medido con alineaciones históricas
+            w = w_l if o["lineup_confirmed"] else 0.5 * w_l
             ratio = (np.asarray(impact["p_adj"]) / np.clip(np.asarray(impact["p_full"]), 1e-6, None)) ** w
             f = final[k] * ratio
             final[k] = f / f.sum()
