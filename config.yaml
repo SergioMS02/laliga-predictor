@@ -1,0 +1,89 @@
+# Configuración del predictor de LaLiga. Todo funciona sin claves;
+# las claves (en .env o secrets de GitHub) solo activan extras.
+
+data:
+  first_season: 2005        # primera temporada histórica a descargar (año de inicio)
+  # Fuente principal de histórico con cuotas y estadísticas de tiro:
+  football_data_url: "https://www.football-data.co.uk/mmz4281/{code}/SP1.csv"
+  # Espejo sin cuotas (se usa si football-data.co.uk no responde):
+  mirror_url: "https://raw.githubusercontent.com/datasets/football-datasets/main/datasets/la-liga/season-{code}.csv"
+  # Calendario/resultados de la temporada en curso (respaldo):
+  openfootball_url: "https://raw.githubusercontent.com/openfootball/espana/master/{season_dir}/1-liga.txt"
+
+# Si existe data/state/tuned.json (generado por `laliga tune`), sus valores
+# sustituyen a los de dixon_coles/stacker de este fichero. Pon false para ignorarlo.
+use_tuned: true
+
+dixon_coles:
+  window_days: 1100         # ~3 temporadas
+  xi: 0.0012                # decaimiento temporal por día (vida media ~1,6 años)
+  ridge: 6.0                # regularización de ataque/defensa
+  new_team_attack: -0.20    # prior para equipos sin historial reciente (ascendidos)
+  new_team_defence: 0.15
+  max_goals: 10
+
+elo:
+  k: 20
+  home_adv: 60
+  season_regress: 0.25
+  init_new_team: 1420
+
+backtest:
+  first_oos_season: 2010    # desde aquí se generan predicciones fuera de muestra
+  first_val_season: 2016    # 2016-2020: validación (para `tune`); incluye la era con xG, horarios y Europa
+  first_test_season: 2021   # 2021-hoy: test (nunca se usa para elegir nada)
+  block_days: 7             # se reajusta Dixon-Coles cada bloque de N días
+
+stacker:
+  C: 0.005
+  groups: [sot_model, form_shots, rest, travel, promoted, referee, weather]
+  min_train_rows: 1000
+
+stacker_market:
+  C: 0.005
+  groups: [sot_model, form_shots]
+
+# Fuentes extra (todas gratuitas). Pon false para desactivar alguna.
+extras:
+  understat: true      # xG por partido y jugador (2014-hoy)
+  other_comps: true    # Champions/Europa/Conference/Copa (congestión y rotaciones)
+  coaches: true        # cambios de entrenador (Wikidata + data/coaches_manual.csv)
+
+availability:
+  # Ajuste de goles esperados por bajas/rotaciones:
+  # lambda_propio *= exp(-attack_coef * deficit); lambda_rival *= exp(defence_coef * deficit)
+  # Valores a priori; `laliga calibrate-availability` los reestima con tus datos.
+  attack_coef: 0.6
+  defence_coef: 0.35
+  lookback_matches: 10
+  doubtful_weight: 0.5
+
+news:
+  enabled: true
+  days: 3
+  max_items_per_team: 15
+  # backend: none | gemini | openai_compatible   (openai_compatible sirve para Groq, OpenRouter u Ollama /v1)
+  llm_backend: none
+  gemini_model: "gemini-flash-latest"
+  openai_base_url: "http://localhost:11434/v1"   # Ollama local por defecto
+  openai_model: "qwen2.5:7b-instruct"
+  extra_rss: []
+
+weather:
+  enabled: true
+
+espn:
+  enabled: true
+  league: "esp.1"
+
+notify:
+  telegram: auto            # auto = solo si existen TELEGRAM_BOT_TOKEN y TELEGRAM_CHAT_ID
+  summary_hours: 48         # el resumen diario incluye partidos de las próximas N horas
+
+movements:
+  threshold_pts: 4          # cambio (en puntos porcentuales) que se considera importante y se explica
+  min_store_pts: 0.5        # cambios menores no se guardan en el historial (salvo nueva info de bajas)
+
+predict:
+  days_ahead: 8
+  lineup_window_minutes: 100   # vigilar alineaciones de partidos que empiezan en este margen

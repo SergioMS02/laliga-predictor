@@ -1,0 +1,17 @@
+{"leagues":[{"id":"740","abbreviation":"esp.1"}],
+ "events":[
+  {"id":"9001","date":"2026-10-25T15:15Z","name":"Real Madrid at FC Barcelona",
+   "competitions":[{"id":"9001","date":"2026-10-25T15:15Z","venue":{"fullName":"Spotify Camp Nou","address":{"city":"Barcelona"}},
+     "competitors":[{"homeAway":"home","team":{"id":"83","displayName":"Barcelona"},"score":"0"},
+                    {"homeAway":"away","team":{"id":"86","displayName":"Real Madrid"},"score":"0"}],
+     "status":{"type":{"state":"pre","completed":false}}}]},
+  {"id":"9000","date":"2026-10-18T19:00Z","name":"Sevilla at Real Madrid",
+   "competitions":[{"id":"9000","venue":{"fullName":"Santiago Bernabéu"},
+     "competitors":[{"homeAway":"home","team":{"id":"86","displayName":"Real Madrid"},"score":"3"},
+                    {"homeAway":"away","team":{"id":"243","displayName":"Sevilla"},"score":"1"}],
+     "status":{"type":{"state":"post","completed":true}}}]},
+  {"id":"9002","date":"2026-10-25T13:00Z","name":"Unknown",
+   "competitions":[{"competitors":[{"homeAway":"home","team":{"displayName":"Equipo Inventado XYZ"},"score":"0"},
+                    {"homeAway":"away","team":{"displayName":"Celta Vigo"},"score":"0"}],
+     "status":{"type":{"state":"pre","completed":false}}}]}
+ ]}

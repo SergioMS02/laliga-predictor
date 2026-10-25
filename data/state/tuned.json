@@ -1,0 +1,25 @@
+{
+  "dixon_coles": {
+    "xi": 0.0028,
+    "ridge": 6.0,
+    "window_days": 1500
+  },
+  "stacker": {
+    "C": 0.03,
+    "groups": [
+      "timing",
+      "form_shots"
+    ]
+  },
+  "validation": {
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "dc_log_loss": 0.9810680785315247,
+    "stacker_log_loss": 0.9772107510138927
+  }
+}
