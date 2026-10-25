@@ -19,24 +19,35 @@
       <h1 class="masthead__title">Quiniela del modelo</h1>
       <p class="masthead__sub" id="updated">Cargando predicciones…</p>
     </div>
-    <dl class="legend" aria-label="Leyenda">
-      <div><dt>1</dt><dd>gana el local</dd></div>
-      <div><dt>X</dt><dd>empate</dd></div>
-      <div><dt>2</dt><dd>gana el visitante</dd></div>
-    </dl>
+    <div class="masthead__side">
+      <dl class="legend" aria-label="Leyenda">
+        <div><dt>1</dt><dd>gana el local</dd></div>
+        <div><dt>X</dt><dd>empate</dd></div>
+        <div><dt>2</dt><dd>gana el visitante</dd></div>
+      </dl>
+      <button class="theme" id="theme" type="button" aria-label="Cambiar entre modo claro y oscuro" title="Modo claro u oscuro">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
-<nav class="tabs wrap" aria-label="Secciones">
-  <a href="#partidos" data-tab="partidos">Partidos</a>
-  <a href="#clasificacion" data-tab="clasificacion">Clasificación</a>
-  <a href="#equipos" data-tab="equipos">Equipos</a>
-  <a href="#aciertos" data-tab="aciertos">Aciertos</a>
-  <a href="#apuestas" data-tab="apuestas">Apuestas simuladas</a>
-</nav>
+<div class="navbar" id="navbar">
+  <nav class="tabs wrap" aria-label="Secciones">
+    <a href="#partidos" data-tab="partidos">Partidos</a>
+    <a href="#quiniela" data-tab="quiniela">Quiniela</a>
+    <a href="#apuestas" data-tab="apuestas">Apuestas</a>
+    <a href="#clasificacion" data-tab="clasificacion">Clasificación</a>
+    <a href="#equipos" data-tab="equipos">Equipos</a>
+    <a href="#aciertos" data-tab="aciertos">Aciertos</a>
+  </nav>
+</div>
 
 <main class="wrap">
  <div class="view" data-view="partidos">
+  <section class="glance-section" aria-label="Resumen">
+    <div class="glance" id="glance"></div>
+  </section>
   <section aria-labelledby="slip-title" class="slip-section">
     <div class="section-head">
       <h2 id="slip-title" class="section-title">Próximos partidos</h2>
@@ -80,6 +91,23 @@
       <p class="section-note">Ordenados por su fuerza actual (Elo). Elige un equipo para ver sus números.</p>
     </div>
     <div class="teams" id="teams"></div>
+  </section>
+ </div>
+
+ <div class="view" data-view="quiniela" hidden>
+  <section aria-labelledby="q-title">
+    <div class="section-head">
+      <h2 id="q-title" class="section-title">Quiniela oficial</h2>
+      <p class="section-note">El boleto real de Loterías rellenado por el modelo: la apuesta sencilla (lápiz) y una reducida con dobles y triples (marcas suaves). Se cierra cuando empieza el primer partido.</p>
+    </div>
+    <div id="qboard"></div>
+  </section>
+  <section aria-labelledby="qh-title">
+    <div class="section-head">
+      <h2 id="qh-title" class="section-title">Historial de jornadas</h2>
+      <p class="section-note">Aciertos y premios reales de cada boleto, con la tabla oficial de premios de cada jornada.</p>
+    </div>
+    <div id="quiniela-hist"></div>
   </section>
  </div>
 
@@ -133,8 +161,8 @@
 
 <footer class="footer">
   <div class="wrap">
-    <p>Se actualiza solo cada día y vuelve a calcular cuando salen las alineaciones. Datos públicos y gratuitos: football-data.co.uk, ESPN, Understat, openfootball, Open-Meteo y Google News.</p>
-    <p>Son probabilidades, no certezas. No es un consejo de apuesta.</p>
+    <p>Se actualiza solo cada día y vuelve a calcular cuando salen las alineaciones. Datos públicos y gratuitos: football-data.co.uk, ESPN, Understat, openfootball, Open-Meteo, Google News y combinacionganadora.com (boleto de la quiniela).</p>
+    <p>Son probabilidades, no certezas. Las apuestas y la quiniela son simuladas: no es un consejo de apuesta. Juega con responsabilidad (+18).</p>
   </div>
 </footer>
 <script src="app.js"></script>

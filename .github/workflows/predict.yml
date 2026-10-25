@@ -4,12 +4,14 @@ on:
   schedule:
     # Todos los días 06:17 UTC: actualizar datos y predecir los próximos 8 días
     - cron: "17 6 * * *"
-    # Viernes a lunes, cada 20 min de 10:00 a 21:40 UTC: vigilar alineaciones oficiales
-    - cron: "*/20 10-21 * * 5,6,0,1"
+    # Cada 20 min de 10:00 a 21:40 UTC: vigilar alineaciones oficiales (solo sigue si hay partido en < 2 h)
+    - cron: "*/20 10-21 * * *"
+    # Cada 30 min de 13:00 a 23:30 UTC: liquidar apuestas y quiniela al acabar los partidos
+    - cron: "5,35 13-23 * * *"
   workflow_dispatch:
     inputs:
       command:
-        description: "Comando (predict | watch-lineups | all)"
+        description: "Comando (predict | watch-lineups | settle | quiniela | all)"
         default: "predict"
 
 permissions:
@@ -40,28 +42,41 @@ jobs:
             echo "c=${{ inputs.command }}" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event.schedule }}" = "17 6 * * *" ]; then
             echo "c=predict" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "5,35 13-23 * * *" ]; then
+            echo "c=settle" >> "$GITHUB_OUTPUT"
           else
             echo "c=watch-lineups" >> "$GITHUB_OUTPUT"
           fi
 
-      # Ahorro de minutos: la vigilancia de alineaciones solo sigue si algún partido
-      # empieza en menos de 2 horas y aún no tiene alineación (sin instalar nada).
-      - name: ¿Hay partidos a punto de empezar?
+      # Ahorro de tiempo: la vigilancia de alineaciones solo sigue si algún partido empieza en
+      # menos de 2 horas sin alineación, y la liquidación solo si algún partido con apuesta
+      # (o la quiniela) ya debería haber terminado. Sin instalar nada.
+      - name: ¿Hay algo que hacer?
         id: gate
         run: |
-          if [ "${{ steps.cmd.outputs.c }}" != "watch-lineups" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
-          python3 - <<'PY' >> "$GITHUB_OUTPUT"
-          import json, datetime as dt, pathlib
-          p = pathlib.Path("predictions/latest.json")
+          C="${{ steps.cmd.outputs.c }}"
+          if [ "$C" != "watch-lineups" ] && [ "$C" != "settle" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          C="$C" python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import csv, json, os, datetime as dt, pathlib
           now = dt.datetime.now(dt.timezone.utc)
           go = False
-          if p.exists():
-              for m in json.loads(p.read_text()):
+          if os.environ["C"] == "watch-lineups":
+              p = pathlib.Path("predictions/latest.json")
+              for m in json.loads(p.read_text()) if p.exists() else []:
                   ko = m.get("kickoff_utc")
                   if ko and not m.get("lineup_confirmed"):
                       mins = (dt.datetime.fromisoformat(ko) - now).total_seconds() / 60
-                      if -10 <= mins <= 120:
-                          go = True
+                      go |= -10 <= mins <= 120
+          else:
+              p = pathlib.Path("predictions/bets.csv")
+              for r in csv.DictReader(p.open()) if p.exists() else []:
+                  if r.get("status") == "pendiente" and r.get("kickoff_utc"):
+                      mins = (now - dt.datetime.fromisoformat(r["kickoff_utc"])).total_seconds() / 60
+                      go |= 110 <= mins <= 60 * 48
+              q = pathlib.Path("predictions/quiniela.json")
+              if q.exists():
+                  for d, j in json.loads(q.read_text()).get("jornadas", {}).items():
+                      go |= (not j.get("settled")) and d <= now.strftime("%Y-%m-%d") and now.hour >= 16
           print(f"go={'true' if go else 'false'}")
           PY
 

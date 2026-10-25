@@ -22,6 +22,7 @@ log = logging.getLogger(__name__)
 # Modelos de "fuerza" sobre otros conteos además de goles: tiros a puerta y xG
 COUNT_MODELS = {"sot": ("h_sot", "a_sot"), "xg": ("h_xg", "a_xg")}
 DC_COLS = ["dc_ph", "dc_pd", "dc_pa", "dc_lam", "dc_mu"] + [f"{k}_{s}" for k in COUNT_MODELS for s in ("lam", "mu")]
+DC_EXTRA = ["dc_po25", "dc_btts"]  # más de 2,5 goles y ambos marcan (para el mercado de goles)
 MIN_SOT_MATCHES = 200  # partidos mínimos con el dato en la ventana para ajustar un modelo de conteo
 
 
@@ -181,7 +182,7 @@ def walk_forward_dc(settings: Settings, matches: pd.DataFrame, start_season: int
     target = matches[matches.season >= start_season]
     if until is not None:
         target = target[target.date < until]
-    out = pd.DataFrame(index=target.index, columns=DC_COLS, dtype=float)
+    out = pd.DataFrame(index=target.index, columns=DC_COLS + DC_EXTRA, dtype=float)
     if target.empty:
         return out
     start = target.date.min().normalize()
@@ -206,6 +207,7 @@ def walk_forward_dc(settings: Settings, matches: pd.DataFrame, start_season: int
                 row = [p["p_home"], p["p_draw"], p["p_away"], lam, mu]
                 for k in COUNT_MODELS:
                     row += list(fitted[k].expected_goals(r.home, r.away)) if k in fitted else [np.nan, np.nan]
+                row += [p.get("p_over25", np.nan), p.get("p_btts", np.nan)]
                 out.loc[idx] = row
             b = b + pd.Timedelta(days=block)
         else:

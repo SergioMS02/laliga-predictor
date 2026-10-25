@@ -29,7 +29,8 @@ def upcoming_odds(settings: Settings) -> pd.DataFrame:
         df = results.fetch_fixtures(settings, online=True)
     if df.empty:
         return pd.DataFrame()
-    cols = ["season", "home", "away", "odds_h", "odds_d", "odds_a"] + [c for c in ("b365_h", "b365_d", "b365_a") if c in df]
+    cols = ["season", "home", "away", "odds_h", "odds_d", "odds_a"] + [
+        c for c in ("b365_h", "b365_d", "b365_a", "b365_o25", "b365_u25", "ou_o25", "ou_u25") if c in df]
     return df[cols].dropna(subset=["odds_h"])
 
 
@@ -216,11 +217,17 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
 
     # 5) Mercado (y su movimiento desde la primera cuota vista) y clima
     odds = upcoming_odds(settings) if online else pd.DataFrame()
-    b365 = {}
+    b365, b365_ou, mkt_ou = {}, {}, {}
     if len(odds):
         if "b365_h" in odds:
             b365 = {(r.season, r.home, r.away): [r.b365_h, r.b365_d, r.b365_a] for r in odds.itertuples()
                     if not pd.isna(r.b365_h)}
+        if "b365_o25" in odds:
+            b365_ou = {(r.season, r.home, r.away): [r.b365_o25, r.b365_u25] for r in odds.itertuples()
+                       if not pd.isna(r.b365_o25) and not pd.isna(r.b365_u25)}
+        if "ou_o25" in odds:
+            from .betting import devig2
+            mkt_ou = {(r.season, r.home, r.away): devig2(r.ou_o25, r.ou_u25) for r in odds.itertuples()}
         record_odds_snapshot(settings, odds[["season", "home", "away", "odds_h", "odds_d", "odds_a"]], now)
     snaps = odds_movement(settings)
     if len(snaps):
@@ -250,6 +257,8 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             model_used[hm] = "stacker_mercado"
 
     # 7) Salida
+    from .betting import blend_ou, load_ou_blend
+    ou_w = load_ou_blend(settings)
     gen = now.isoformat()
     preds = []
     by_idx = {o["idx"]: o for o in out_rows}
@@ -283,11 +292,34 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             "lineups": o.get("lineups"),
             "squads": o.get("squads"),
             "b365": [float(x) for x in b365[(r.season, r.home, r.away)]] if (r.season, r.home, r.away) in b365 else None,
+            "b365_ou": [float(x) for x in b365_ou[(r.season, r.home, r.away)]] if (r.season, r.home, r.away) in b365_ou else None,
+            "ou": _ou_block(o["dc"], mkt_ou.get((r.season, r.home, r.away)), ou_w, blend_ou),
+            "scorers": _scorers(o, players, r, season_now),
             "_snapshot": movements.make_snapshot(
                 r, o, rho=dc.params.rho, a=a_coef, b=b_coef, max_goals=dc.max_goals),
         })
     preds.sort(key=lambda d: (d["kickoff_utc"] or d["date"], d["home"]))
     return preds
+
+
+def _scorers(o: dict, players, r, season: int) -> dict:
+    from .scorers import scorer_probs
+    out = {}
+    try:
+        for side, team, goals in (("home", r.home, o["dc"]["xg_home"]), ("away", r.away, o["dc"]["xg_away"])):
+            xi = ((o.get("squads") or {}).get(side) or {}).get("xi") or []
+            out[side] = scorer_probs(xi, float(goals), players, team, season)
+    except Exception as e:  # nunca debe romper la predicción
+        log.warning("Goleadores no disponibles: %s", e)
+    return out
+
+
+def _ou_block(dcp: dict, p_mkt: float | None, w: dict, blend) -> dict:
+    """Goles: más de 2,5 (modelo combinado con el mercado) y ambos marcan (modelo)."""
+    pm = float(dcp["p_over25"])
+    return {"p_over": round(blend(pm, p_mkt, w), 4), "p_over_model": round(pm, 4),
+            "p_over_market": None if p_mkt is None else round(float(p_mkt), 4),
+            "p_btts": round(float(dcp["p_btts"]), 4)}
 
 
 # ---------------------------------------------------------------------------

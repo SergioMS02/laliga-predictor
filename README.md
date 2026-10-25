@@ -76,7 +76,9 @@ Causas posibles: bajas y alineaciones (con nombres), resultados y forma (con los
 - `predictions/latest.md`: columna *Evolución 1* (mini-gráfico de la victoria local) y sección *Cambios importantes*.
 - `predictions/evolucion.md`: por partido, todas las actualizaciones con hora, si ya había alineación y la explicación de cada cambio importante.
 - `predictions/movements.jsonl`: los cambios importantes en formato máquina.
-- Con Telegram configurado, cada cambio importante llega como aviso con sus causas.
+- Con Telegram configurado, cada cambio importante llega como aviso con sus causas, y también las apuestas nuevas, las liquidadas con el balance, el boleto de la quiniela al cerrarse y sus aciertos.
+
+**Activar Telegram (2 minutos, gratis):** en Telegram habla con `@BotFather` → `/newbot` → copia el token. Escribe cualquier cosa a tu bot y abre `https://api.telegram.org/bot<TOKEN>/getUpdates` para ver tu `chat.id`. En GitHub: *Settings → Secrets and variables → Actions → New repository secret*: `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`.
 
 ## Web
 
@@ -88,16 +90,29 @@ Pestañas:
 - **Clasificación**: tabla actual y proyección de final de temporada (10.000 simulaciones Monte Carlo: título, Champions, Europa, descenso y probabilidad de cada puesto).
 - **Equipos**: ficha de cada equipo (forma, xG, Elo, jugadores clave, casa/fuera).
 - **Aciertos**: rendimiento real de las predicciones ya emitidas, comparación con las casas y estado de cada fuente de datos (`predictions/sources.json`).
-- **Apuestas simuladas**: ver abajo.
+- **Quiniela** y **Apuestas**: ver abajo.
+- En cada partido: más/menos de 2,5 goles (modelo combinado con el mercado), ambos marcan, cuotas de Bet365 y **probables goleadores** (probabilidad de que marque cada titular, con su xG por 90 de Understat y los goles esperados de su equipo).
+
+### Quiniela oficial
+
+Cada jornada se lee el boleto real (14 partidos + Pleno al 15) de combinacionganadora.com (la web de Loterías bloquea las peticiones automáticas) y se rellena:
+
+- LaLiga: el modelo de esta web. Segunda: las cuotas del mercado (en Segunda el mercado acierta claramente más que un Dixon-Coles propio: log-loss 1,037 frente a 1,057 en 2016-2025) y, sin cuotas, un Dixon-Coles con el histórico de Segunda. Resto (Copa contra equipos de otras categorías, Europa, fútbol femenino): estimación aproximada por categoría, marcada como tal.
+- Dos boletos: **sencillo** (1 apuesta) y **reducido** (dobles y triples elegidos con programación dinámica para maximizar la probabilidad de 14 dentro de `quiniela.max_bets` apuestas). Pleno al 15 con la matriz de marcadores.
+- El boleto se congela al empezar el primer partido y se liquida con los resultados y la **tabla oficial de premios**. Historial, aciertos, premios y balance en `predictions/quiniela.json`. Un boleto rellenado con la jornada ya empezada queda fuera del balance.
 
 ### Apuestas simuladas (dinero ficticio)
 
-Cada vez que se predice, el bot "apuesta" 10 € ficticios por partido con las cuotas de **Bet365** (las de football-data.co.uk) siguiendo dos estrategias:
+Cada vez que se predice, el bot "apuesta" con las cuotas de **Bet365** (las de football-data.co.uk):
 
-- **Favorito**: al resultado más probable (como rellenar la quiniela).
-- **Valor**: solo cuando probabilidad del modelo × cuota ≥ 1,05 (y cuota ≤ 8).
+- **Favorito**: 10 € al resultado más probable.
+- **Valor**: 10 € solo cuando probabilidad del modelo × cuota ≥ 1,05 (y cuota ≤ 8).
+- **Goles**: 10 € a más/menos de 2,5 cuando esa cuota tiene valor (margen 2 %).
+- **Kelly**: las apuestas de valor, con importe = 1/4 de Kelly sobre un fondo que empieza en 100 € (máximo 5 % del fondo por apuesta).
 
-La apuesta se actualiza con la última cuota hasta que empieza el partido, se congela y se liquida con el resultado. Todo queda en `predictions/bets.csv` (historial completo), `predictions/bets_summary.json` (balance) y `predictions/betting_backtest.json` (lo que habría pasado en temporadas pasadas). Se configura en `config.yaml → betting`. **No es un consejo de apuesta**: las casas aciertan algo más que el modelo y cobran margen, así que lo esperable es perder a la larga.
+La apuesta se actualiza con la última cuota hasta que empieza el partido, se congela y se liquida **en cuanto termina** (una ejecución cada 30 minutos lo comprueba). Para cada apuesta se guarda la primera cuota a la que la vio el modelo y la de cierre: la métrica **«frente al cierre» (CLV)** dice si el modelo detecta algo antes que el mercado, y con pocas apuestas es mucho más fiable que el beneficio.
+
+Todo queda en `predictions/bets.csv` (historial completo), `predictions/bets_summary.json` (balance) y `predictions/betting_backtest.json` (lo que habría pasado en temporadas pasadas). Se configura en `config.yaml → betting`. Resultados en temporadas de prueba (2021-2026): favorito −1,2 % (1.989 apuestas), valor −6,6 % (387), Kelly −10,8 % (369), goles con muy pocas apuestas, porque en goles el modelo apenas añade nada al mercado. **No es un consejo de apuesta**: las casas aciertan algo más que el modelo y cobran margen, así que lo esperable es perder a la larga.
 
 Para activarla (una vez): *Settings → Pages → Build and deployment → Source:* **GitHub Actions**. Después, *Actions → Web → Run workflow*. Quedará en `https://<tu-usuario>.github.io/laliga-predictor/`.
 
@@ -113,7 +128,8 @@ Para verla en local: `python site/build.py && python -m http.server -d site` y a
 | Flujo | Cuándo | Qué |
 |---|---|---|
 | `predict.yml` | Diario 06:17 UTC | Actualiza datos y predice los próximos 8 días. Resumen por Telegram de las próximas 48 h. |
-| `predict.yml` | Vie-lun, cada 20 min (10-22 UTC) | Vigila partidos que empiezan en <100 min. Si ESPN ya publica la alineación, re-predice y avisa con el cambio. |
+| `predict.yml` | Cada 20 min (10-22 UTC) | Vigila partidos que empiezan en <100 min. Si ESPN ya publica la alineación, re-predice y avisa con el cambio. |
+| `predict.yml` | Cada 30 min (13-24 UTC) | `settle`: si algún partido con apuesta ya ha terminado (o la jornada de quiniela), liquida apuestas y quiniela, actualiza la web y avisa del balance. |
 | `weekly.yml` | Martes | Guarda alineaciones/árbitros de la jornada, rehace backtest, reentrena, recalibra bajas y mide el acierto real de lo predicho. |
 | `pages.yml` | Tras cada cambio de predicciones | Regenera y publica la web. |
 | `tests.yml` | Cada push | Ejecuta los tests. |
@@ -199,6 +215,8 @@ Las noticias solo cuentan para jugadores que ya aparecen en el historial de alin
 | `laliga backfill-espn [--seasons 2016-2026]` | Historial de alineaciones, árbitros y calendario europeo/Copa |
 | `laliga calibrate-availability` | Estima el peso real de las bajas |
 | `laliga evaluate-live` | Rendimiento de las predicciones ya emitidas |
+| `laliga settle` | Liquida apuestas y quiniela de los partidos terminados |
+| `laliga quiniela` | Lee el boleto de la quiniela, lo rellena y lo liquida |
 | `laliga export-site` | Proyección de temporada, fichas de equipos y aciertos para la web |
 | `laliga all` | update + backtest + train + predict |
 

@@ -90,6 +90,14 @@ betting:
   min_edge: 0.05            # estrategia "valor": probabilidad × cuota ≥ 1,05
   max_odds: 8.0             # no apostar a cuotas mayores
   min_prob: 0.0
+  ou_min_edge: 0.02         # estrategia "goles" (más/menos 2,5): margen mínimo
+  kelly_bankroll: 100       # estrategia "kelly": fondo inicial
+  kelly_fraction: 0.25      # fracción de Kelly (1/4: prudente)
+  kelly_max_frac: 0.05      # nunca más del 5 % del fondo en una apuesta
+
+quiniela:
+  price: 0.75               # euros por apuesta
+  max_bets: 16              # boleto reducido: como mucho 16 apuestas (12 €)
 
 predict:
   days_ahead: 8

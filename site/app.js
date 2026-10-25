@@ -139,6 +139,42 @@ function scoreGrid(m) {
   return html + "</table>";
 }
 
+/* ---------- Goles y goleadores ---------- */
+function goalsFacts(m) {
+  const ou = m.ou || {};
+  const pov = ou.p_over != null ? ou.p_over : m.dc.p_over25;
+  const btts = ou.p_btts != null ? ou.p_btts : m.dc.p_btts;
+  const note = ou.p_over_market != null
+    ? `Modelo ${pct(ou.p_over_model)} %, casas ${pct(ou.p_over_market)} %`
+    : "Solo modelo (sin cuotas todavía)";
+  return `<dl class="facts">
+      <div><dt>Goles esperados</dt><dd>${dec(m.dc.xg_home, 2)} – ${dec(m.dc.xg_away, 2)}</dd></div>
+      <div><dt>Más de 2,5 goles</dt><dd>${pct(pov)} %</dd><dd class="facts__note">${esc(note)}</dd></div>
+      <div><dt>Marcan los dos</dt><dd>${pct(btts)} %</dd></div>
+    </dl>`;
+}
+function scorersHtml(m, n = 5) {
+  const sc = m.scorers || {};
+  if (!(sc.home || []).length && !(sc.away || []).length) return "";
+  const col = (side, team) => {
+    const list = (sc[side] || []).slice(0, n);
+    if (!list.length) return `<div class="sc__col"><h5>${esc(name(team))}</h5><p class="quiet small">Sin datos suficientes.</p></div>`;
+    const max = Math.max(...list.map((x) => x.p), 0.01);
+    return `<div class="sc__col sc__col--${side}"><h5>${esc(name(team))}</h5><ol class="sc">${list.map((x) =>
+      `<li><span class="sc__name">${esc(x.name)}</span><span class="sc__bar"><i style="width:${(100 * x.p / max).toFixed(0)}%"></i></span><b>${pct(x.p)} %</b></li>`).join("")}</ol></div>`;
+  };
+  return `<h4>Probables goleadores</h4><div class="scorers">${col("home", m.home)}${col("away", m.away)}</div>
+    <p class="quiet small">Probabilidad de marcar al menos un gol si es titular, según su xG por 90 minutos y los goles esperados de su equipo.</p>`;
+}
+function oddsLine(m) {
+  const b = m.b365, o = m.b365_ou;
+  if (!b && !o) return "";
+  const parts = [];
+  if (b) parts.push(`1 ${dec(b[0], 2)} · X ${dec(b[1], 2)} · 2 ${dec(b[2], 2)}`);
+  if (o) parts.push(`+2,5 ${dec(o[0], 2)} · −2,5 ${dec(o[1], 2)}`);
+  return parts.join(" — ");
+}
+
 /* ---------- Bajas, árbitro, clima ---------- */
 function contextHtml(m) {
   let h = "";
@@ -160,6 +196,7 @@ function contextHtml(m) {
   const w = m.weather || {};
   if (w.temp_c != null) rows.push(["Clima", `${Math.round(w.temp_c)} °C, lluvia ${w.precip_mm ?? 0} mm, viento ${Math.round(w.wind_kmh ?? 0)} km/h`]);
   if (m.market) rows.push(["Mercado", `${pct(m.market[0])} / ${pct(m.market[1])} / ${pct(m.market[2])} %`]);
+  if (oddsLine(m)) rows.push(["Cuotas Bet365", esc(oddsLine(m))]);
   const c = m.context || {};
   const notes = [];
   if (c.derby) notes.push("derbi");
@@ -191,13 +228,10 @@ function probsHtml(m) {
     </div>
     <div>
       <h3>El partido en números</h3>
-      <dl class="facts">
-        <div><dt>Goles esperados</dt><dd>${dec(m.dc.xg_home, 2)} – ${dec(m.dc.xg_away, 2)}</dd></div>
-        <div><dt>Más de 2,5 goles</dt><dd>${pct(m.dc.p_over25)} %</dd></div>
-        <div><dt>Marcan los dos</dt><dd>${pct(m.dc.p_btts)} %</dd></div>
-      </dl>
+      ${goalsFacts(m)}
       <h4>Marcadores más probables (%)</h4>
       ${scoreGrid(m)}
+      ${scorersHtml(m, 3)}
       ${contextHtml(m)}
     </div>
   </div>`;
@@ -292,7 +326,8 @@ function pitchHtml(m) {
   return `<div class="lineup">
     <div class="lineup__pitch"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Alineaciones dibujadas en el campo">${g}</svg></div>
     <div class="lineup__info">${head("away", m.away)}${head("home", m.home)}
-      <p class="quiet small">El tamaño de cada círculo indica su aportación ofensiva (xG + xA por 90 minutos). Tachado: baja; borde discontinuo: titular poco habitual.</p></div>
+      <p class="quiet small">El tamaño de cada círculo indica su aportación ofensiva (xG + xA por 90 minutos). Tachado: baja; borde discontinuo: titular poco habitual.</p>
+      ${scorersHtml(m, 5)}</div>
   </div>`;
 }
 
@@ -568,7 +603,6 @@ function sourcesHtml() {
 
 /* ---------- Apuestas simuladas ---------- */
 const eur = (v) => `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v).toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
-const pickName = (b) => ({ "1": `gana ${name(b.home)}`, X: "empate", "2": `gana ${name(b.away)}` }[String(b.pick)] || b.pick);
 function multiLine(series, W = 620, H = 220) {
   const all = series.flatMap((s) => s.points.map((p) => p[1]));
   if (!all.length || series.every((s) => s.points.length < 2)) return "";
@@ -591,18 +625,51 @@ function multiLine(series, W = 620, H = 220) {
   for (const { s, ly } of labels) g += `<text class="end" x="${W - R + 6}" y="${ly}" fill="${s.color}">${esc(s.label)}</text>`;
   return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Beneficio acumulado">${g}</svg></div>`;
 }
+const STRATS = {
+  favorito: { title: "Favorito del modelo", short: "Favorito", color: "var(--slip)" },
+  valor: { title: "Apuesta de valor", short: "Valor", color: "var(--ink)", dash: true },
+  goles: { title: "Más/menos 2,5 goles", short: "Goles", color: "var(--c3)" },
+  kelly: { title: "Kelly (fondo de 100 €)", short: "Kelly", color: "var(--c4)", dash: true },
+};
+const pickName = (b) => (b.market === "ou25"
+  ? (String(b.pick) === "+2.5" ? "más de 2,5 goles" : "menos de 2,5 goles")
+  : ({ "1": `gana ${name(b.home)}`, X: "empate", "2": `gana ${name(b.away)}` }[String(b.pick)] || b.pick));
+const pctSigned = (v, n = 1) => (v == null ? "–" : `${v > 0 ? "+" : ""}${dec(100 * v, n)} %`);
 function stratCard(key, s, live) {
   if (!s) return "";
+  const meta = STRATS[key] || { title: key };
   const cls = s.profit > 0 ? "up" : s.profit < 0 ? "down" : "";
-  return `<div class="strat"><h3>${key === "favorito" ? "Favorito del modelo" : "Apuesta de valor"}</h3>
+  const big = key === "kelly" && s.bankroll != null
+    ? `<p class="strat__profit ${cls}">${dec(s.bankroll, 2)} €</p><p class="quiet small">de ${dec(s.bankroll_start || 100, 0)} € iniciales (${eur(s.profit)})</p>`
+    : `<p class="strat__profit ${cls}">${s.bets ? eur(s.profit) : "–"}</p>`;
+  return `<article class="strat" style="--accent:${meta.color}"><h3>${meta.title}</h3>
     <p class="quiet">${esc(s.label)}.</p>
-    <p class="strat__profit ${cls}">${s.bets ? eur(s.profit) : "–"}</p>
+    ${big}
     <dl class="strat__facts">
       <div><dt>Apuestas</dt><dd>${s.bets}${live && s.pending ? ` <small>+${s.pending} abiertas</small>` : ""}</dd></div>
-      <div><dt>Acertadas</dt><dd>${s.bets ? `${s.won} (${Math.round((100 * s.won) / s.bets)} %)` : "–"}</dd></div>
-      <div><dt>Rentabilidad</dt><dd class="${cls}">${s.roi != null ? `${s.roi > 0 ? "+" : ""}${dec(100 * s.roi, 1)} %` : "–"}</dd></div>
+      <div><dt>Acertadas</dt><dd>${s.bets ? `${s.won} <small>(${Math.round((100 * s.won) / s.bets)} %)</small>` : "–"}</dd></div>
+      <div><dt>Rentabilidad</dt><dd class="${cls}">${pctSigned(s.roi)}</dd></div>
       <div><dt>Cuota media</dt><dd>${s.avg_odds != null ? dec(s.avg_odds, 2) : "–"}</dd></div>
-    </dl></div>`;
+      <div><dt title="Cuota a la que lo vio primero frente a la cuota de cierre">Frente al cierre</dt><dd class="${s.clv > 0 ? "up" : s.clv < 0 ? "down" : ""}">${pctSigned(s.clv)}</dd></div>
+    </dl></article>`;
+}
+const seriesOf = (st) => Object.keys(STRATS).filter((k) => st[k]).map((k) => ({ label: STRATS[k].short, color: STRATS[k].color, dash: STRATS[k].dash, points: st[k].curve || [] }));
+let BET_FILTER = "todas";
+let BET_ALL = { open: false, done: false };
+const LIMIT = 20;
+const moreBtn = (k, n) => (n > LIMIT && !BET_ALL[k] ? `<button type="button" class="more" data-more="${k}">Ver las ${n} apuestas</button>` : "");
+function betRows(list, done) {
+  return list.map((x) => {
+    const meta = STRATS[x.strategy] || { short: x.strategy };
+    const when = done ? new Date(x.date).toLocaleDateString("es-ES", { day: "numeric", month: "short" }) : fmtWhen(x.kickoff_utc, x.date);
+    const clv = x.clv != null && isFinite(x.clv) ? `<td class="${x.clv > 0 ? "up" : x.clv < 0 ? "down" : ""}">${pctSigned(x.clv, 0)}</td>` : "<td>–</td>";
+    return `<tr><th scope="row" class="l">${esc(name(x.home))} – ${esc(name(x.away))} <span class="quiet small">${esc(when)}</span></th>
+      <td><span class="tag" style="--accent:${meta.color}">${meta.short}</span></td><td class="l">${esc(pickName(x))}</td>
+      <td>${dec(x.odds, 2)}${x.odds_first && Math.abs(x.odds_first - x.odds) > 0.005 ? ` <small>(vista a ${dec(x.odds_first, 2)})</small>` : ""}</td>
+      <td>${dec(x.stake, x.stake % 1 ? 1 : 0)} €</td>
+      ${done ? `<td><b>${esc(x.score || "")}</b></td>${clv}<td class="${x.profit > 0 ? "up" : "down"}">${eur(x.profit)}</td>`
+        : `<td>${pct(x.prob)} %</td><td class="${x.ev >= 0 ? "up" : "down"}">${x.ev >= 0 ? "+" : ""}${dec(100 * x.ev, 0)} %</td>`}</tr>`;
+  }).join("");
 }
 function betsHtml() {
   const b = DATA.bets || {};
@@ -610,51 +677,206 @@ function betsHtml() {
   if (!st) return '<p class="quiet">La cartera empezará a apostar en la próxima actualización, en cuanto haya cuotas de Bet365 para los partidos.</p>';
   const c = b.config || {};
   document.getElementById("bets-note").textContent =
-    `Dinero ficticio: ${c.stake} € por apuesta con las cuotas de Bet365, colocada con la última cuota antes del partido y liquidada al terminar. Nada de esto es dinero real.`;
-  const series = [
-    { label: "Favorito", color: "var(--slip)", points: (st.favorito || {}).curve || [] },
-    { label: "Valor", color: "var(--ink)", points: (st.valor || {}).curve || [], dash: true },
-  ];
-  const chart = multiLine(series);
+    `Dinero ficticio: ${c.stake} € por apuesta (Kelly: según la ventaja, sobre un fondo de ${c.kelly_bankroll} €) con las cuotas de Bet365. La apuesta se ajusta a la última cuota hasta que empieza el partido y se liquida al terminar.`;
+  const chart = multiLine(seriesOf(st));
   const bets = b.bets || [];
-  const open = bets.filter((x) => x.status === "pendiente");
-  const done = bets.filter((x) => x.status !== "pendiente");
-  const stratName = (k) => (k === "favorito" ? "Favorito" : "Valor");
-  const openT = open.length ? `<h4>Apuestas abiertas</h4><div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Partido</th><th scope="col">Estrategia</th><th scope="col" class="l">Apuesta</th><th scope="col">Cuota</th><th scope="col">Prob. del modelo</th><th scope="col">Valor esperado</th></tr></thead><tbody>
-    ${open.map((x) => `<tr><th scope="row" class="l">${esc(name(x.home))} – ${esc(name(x.away))} <span class="quiet small">${esc(fmtWhen(x.kickoff_utc, x.date))}</span></th><td>${stratName(x.strategy)}</td><td class="l">${esc(pickName(x))}</td><td>${dec(x.odds, 2)}</td><td>${pct(x.prob)} %</td><td class="${x.ev >= 0 ? "up" : "down"}">${x.ev >= 0 ? "+" : ""}${dec(100 * x.ev, 0)} %</td></tr>`).join("")}
-    </tbody></table></div>` : "";
-  const doneT = done.length ? `<h4>Historial</h4><div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Partido</th><th scope="col">Estrategia</th><th scope="col" class="l">Apuesta</th><th scope="col">Cuota</th><th scope="col">Resultado</th><th scope="col">Ganancia</th></tr></thead><tbody>
-    ${done.map((x) => `<tr><th scope="row" class="l">${esc(name(x.home))} – ${esc(name(x.away))} <span class="quiet small">${new Date(x.date).toLocaleDateString("es-ES", { day: "numeric", month: "short" })}</span></th><td>${stratName(x.strategy)}</td><td class="l">${esc(pickName(x))}</td><td>${dec(x.odds, 2)}</td><td><b>${esc(x.score || "")}</b></td><td class="${x.profit > 0 ? "up" : "down"}">${eur(x.profit)}</td></tr>`).join("")}
-    </tbody></table></div>` : '<p class="quiet">Aún no hay apuestas liquidadas: el primer balance llegará cuando terminen los partidos con apuesta.</p>';
-  return `<div class="strats">${stratCard("favorito", st.favorito, true)}${stratCard("valor", st.valor, true)}</div>
-    ${chart ? `<h4>Beneficio acumulado</h4>${chart}` : ""}${openT}${doneT}`;
+  const keep = (x) => BET_FILTER === "todas" || x.strategy === BET_FILTER;
+  const open = bets.filter((x) => x.status === "pendiente" && keep(x));
+  const done = bets.filter((x) => x.status !== "pendiente" && keep(x));
+  const chips = `<div class="chips-filter" role="group" aria-label="Filtrar por estrategia">${["todas", ...Object.keys(STRATS)].map((k) =>
+    `<button type="button" data-f="${k}" aria-pressed="${BET_FILTER === k}">${k === "todas" ? "Todas" : STRATS[k].short}</button>`).join("")}</div>`;
+  const openT = open.length ? `<h4>Apuestas abiertas</h4><div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Partido</th><th scope="col">Estrategia</th><th scope="col" class="l">Apuesta</th><th scope="col">Cuota</th><th scope="col">Importe</th><th scope="col">Prob. del modelo</th><th scope="col">Valor esperado</th></tr></thead><tbody>${betRows(BET_ALL.open ? open : open.slice(0, LIMIT), false)}</tbody></table></div>${moreBtn("open", open.length)}` : "";
+  const doneT = done.length ? `<h4>Historial</h4><div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Partido</th><th scope="col">Estrategia</th><th scope="col" class="l">Apuesta</th><th scope="col">Cuota</th><th scope="col">Importe</th><th scope="col">Resultado</th><th scope="col">Frente al cierre</th><th scope="col">Ganancia</th></tr></thead><tbody>${betRows(BET_ALL.done ? done : done.slice(0, LIMIT), true)}</tbody></table></div>${moreBtn("done", done.length)}`
+    : '<p class="quiet">Aún no hay apuestas liquidadas con este filtro: el balance se actualiza unos minutos después de que acabe cada partido.</p>';
+  return `<div class="strats">${Object.keys(STRATS).map((k) => stratCard(k, st[k], true)).join("")}</div>
+    ${chart ? `<h4>Beneficio acumulado</h4>${chart}` : ""}
+    ${chips}${openT}${doneT}
+    <details class="explain"><summary>¿Qué es «frente al cierre»?</summary>
+      <p>Compara la cuota a la que el modelo vio la apuesta por primera vez con la cuota final justo antes del partido. Si suele ser positiva, el modelo detecta cosas antes de que el mercado las corrija: es la mejor señal de que tiene ventaja real, y mucho menos ruidosa que el beneficio, que depende de la suerte de cada partido.</p></details>`;
 }
 function betsBtHtml() {
   const bb = DATA.bets_backtest || {};
   const st = bb.strategies;
   if (!st) return '<p class="quiet">Disponible tras el próximo reentrenamiento semanal, cuando se descarguen las cuotas históricas de Bet365.</p>';
-  const series = [
-    { label: "Favorito", color: "var(--slip)", points: (st.favorito || {}).curve || [] },
-    { label: "Valor", color: "var(--ink)", points: (st.valor || {}).curve || [], dash: true },
-  ];
-  const seasons = [...new Set(Object.values(st).flatMap((s) => s.by_season.map((r) => r.season)))].sort();
+  const keys = Object.keys(STRATS).filter((k) => st[k]);
+  const seasons = [...new Set(keys.flatMap((k) => st[k].by_season.map((r) => r.season)))].sort();
   const cell = (s, season) => {
     const r = s && s.by_season.find((x) => x.season === season);
-    return r ? `<td class="${r.profit >= 0 ? "up" : "down"}">${eur(r.profit)} <small>(${r.roi > 0 ? "+" : ""}${dec(100 * r.roi, 1)} %)</small></td>` : "<td>–</td>";
+    return r ? `<td class="${r.profit >= 0 ? "up" : "down"}">${eur(r.profit)} <small>(${pctSigned(r.roi)})</small></td>` : "<td>–</td>";
   };
-  return `<div class="strats">${stratCard("favorito", st.favorito, false)}${stratCard("valor", st.valor, false)}</div>
-    <h4>Beneficio acumulado apuesta a apuesta</h4>${multiLine(series)}
-    <div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Temporada</th><th scope="col">Favorito</th><th scope="col">Valor</th></tr></thead><tbody>
-      ${seasons.map((se) => `<tr><th scope="row" class="l">${se}/${String(se + 1).slice(2)}</th>${cell(st.favorito, se)}${cell(st.valor, se)}</tr>`).join("")}
+  const g = st.goles && st.goles.log_loss;
+  const ouNote = g ? `<p class="quiet small">En goles, el mercado acierta más que el modelo (error ${dec(g.mercado)} frente a ${dec(g.modelo)}), así que la probabilidad que se usa combina los dos y pesa sobre todo el mercado (${dec(g.combinado)}). Por eso casi nunca encuentra apuestas con valor.</p>` : "";
+  return `<div class="strats">${keys.map((k) => stratCard(k, st[k], false)).join("")}</div>
+    <h4>Beneficio acumulado apuesta a apuesta</h4>${multiLine(seriesOf(st))}
+    <div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Temporada</th>${keys.map((k) => `<th scope="col">${STRATS[k].short}</th>`).join("")}</tr></thead><tbody>
+      ${seasons.map((se) => `<tr><th scope="row" class="l">${se}/${String(se + 1).slice(2)}</th>${keys.map((k) => cell(st[k], se)).join("")}</tr>`).join("")}
     </tbody></table></div>
+    ${ouNote}
     <p class="quiet small">Las casas de apuestas aciertan algo más que el modelo (mira la pestaña Aciertos) y cobran un margen en cada cuota. Por eso lo esperable es perder dinero a la larga; este apartado sirve para comprobarlo con datos, no para apostar.</p>`;
+}
+
+/* ---------- Quiniela oficial ---------- */
+let Q_SEL = null;
+const qDate = (d) => new Date(d + "T12:00:00").toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" });
+const SRC_SHORT = { "modelo LaLiga": "Modelo", "mercado": "Casas", "modelo Segunda": "Modelo 2ª", "estimación por categoría": "Aprox.", "estimación genérica (femenino)": "Aprox." };
+function qOutcome(m) {
+  if (m == null || m.hg == null || m.ag == null) return null;
+  return m.hg > m.ag ? "1" : m.hg === m.ag ? "X" : "2";
+}
+function qJornadas() {
+  const js = Object.values((DATA.quiniela || {}).jornadas || {}).filter((j) => j.rows && j.tickets);
+  return js.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+function qDefault(js) {
+  // primero el próximo boleto aún abierto; si no hay, la jornada en juego; si no, la última
+  const asc = js.slice().sort((a, b) => (a.date < b.date ? -1 : 1));
+  const open = asc.filter((j) => !j.frozen);
+  const live = asc.filter((j) => j.frozen && !j.settled);
+  return ((open[0] || live[live.length - 1] || js[0]) || {}).date;
+}
+function pencilSmall(seed) { return `<svg class="qmark" viewBox="0 0 100 100" aria-hidden="true"><path d="${pencilPath(seed)}"/></svg>`; }
+function quinielaHtml() {
+  const js = qJornadas();
+  if (!js.length) return '<p class="quiet">El boleto aparecerá en cuanto se publique la próxima jornada de la quiniela.</p>';
+  if (!Q_SEL || !js.find((j) => j.date === Q_SEL)) Q_SEL = qDefault(js);
+  const j = js.find((x) => x.date === Q_SEL);
+  const sel = `<label class="qsel">Jornada <select id="qsel">${js.map((x) => `<option value="${x.date}" ${x.date === Q_SEL ? "selected" : ""}>${x.jornada ? `${x.jornada}ª · ` : ""}${qDate(x.date)}${x.settled ? " (terminada)" : x.frozen ? " (en juego)" : ""}</option>`).join("")}</select></label>`;
+  const single = j.tickets.sencilla, red = j.tickets.reducida;
+  const ms = j.matches || [];
+  const rows = j.rows.slice(0, 14).map((r, i) => {
+    const m = ms[i] || {};
+    const out = qOutcome(m);
+    const pick = single.picks[i][0], cov = red.picks[i];
+    const cells = OUT.map((o, k) => {
+      const isPick = o === pick, isCov = cov.includes(o) && !isPick, isOut = out === o;
+      return `<div class="qc${isPick ? " qc--pick" : ""}${isCov ? " qc--cov" : ""}${isOut ? " qc--out" : ""}" data-o="${o}">
+        <i class="qc__fill" style="height:${(100 * r.p[k]).toFixed(0)}%"></i><span>${pct(r.p[k])}</span>${isPick ? pencilSmall(i + 7) : ""}</div>`;
+    }).join("");
+    const res = m.hg != null ? `<b class="qres ${out === pick ? "ok" : "ko"}">${m.hg}-${m.ag}</b>${m.status === "live" ? '<span class="live-dot" title="En juego"></span>' : ""}` : `<span class="quiet small">${esc(m.when || r.when || "")}</span>`;
+    return `<div class="qrow"><span class="qn">${r.n}</span>
+      <span class="qm"><span class="qm__t">${esc(r.home)} – ${esc(r.away)}</span><span class="qm__s"><span class="src src--${(SRC_SHORT[r.source] || "x").replace(/[^a-z]/gi, "")}">${esc(SRC_SHORT[r.source] || r.source)}</span> ${res}</span></span>
+      ${cells}<span class="qred">${cov.length > 1 ? cov.join("") : ""}</span></div>`;
+  }).join("");
+  let pleno = "";
+  if (j.rows.length > 14 && j.pleno) {
+    const r = j.rows[14], m = ms[14] || {};
+    const res = m.hg != null ? [Math.min(m.hg, 3), Math.min(m.ag, 3)].map((g) => ["0", "1", "2", "M"][g]) : null;
+    const line = (team, idx) => `<div class="pl15__team"><span>${esc(team)}</span>${["0", "1", "2", "M"].map((c) =>
+      `<span class="pc15${j.pleno.pick[idx] === c ? " pc15--pick" : ""}${res && res[idx] === c ? " pc15--out" : ""}">${c}${j.pleno.pick[idx] === c ? pencilSmall(30 + idx) : ""}</span>`).join("")}</div>`;
+    pleno = `<div class="qrow qrow--pleno"><span class="qn">15</span><div class="pl15">${line(r.home, 0)}${line(r.away, 1)}</div>
+      <div class="pl15__info"><b>Pleno al 15</b><span class="quiet small">Más probable: ${j.pleno.pick.join("-")} (${pct(j.pleno.p)} %)${m.hg != null ? ` · Resultado ${m.hg}-${m.ag}` : ""}</span></div></div>`;
+  }
+  const res = j.result;
+  const tcard = (title, t, r, extra) => `<article class="qt"><h3>${title}</h3>
+    <dl class="qt__facts">
+      <div><dt>Apuestas</dt><dd>${t.bets} <small>(${dec(t.cost, 2)} €)</small></dd></div>
+      <div><dt>Aciertos esperados</dt><dd>${dec(t.expected_hits, 1)}</dd></div>
+      <div><dt>Premio (10 o más)</dt><dd>${dec(100 * t.p10plus, 1)} %</dd></div>
+      <div><dt>Pleno de 14</dt><dd>1 entre ${Math.round(1 / Math.max(t.p14, 1e-12)).toLocaleString("es-ES")}</dd></div>
+      ${r ? `<div><dt>Aciertos</dt><dd class="${r.hits >= 10 ? "up" : ""}">${r.hits}</dd></div><div><dt>Premio</dt><dd class="${r.prize > 0 ? "up" : ""}">${dec(r.prize, 2)} €</dd></div>` : ""}
+    </dl>${extra || ""}</article>`;
+  const status = j.settled ? "Jornada terminada" : j.frozen ? "Boleto cerrado: la jornada ya ha empezado" : `Boleto abierto: se actualiza hasta el primer partido${j.updated ? ` (última vez ${fmtTs(j.updated)})` : ""}`;
+  const late = j.late ? '<p class="quiet small warn">Este boleto se rellenó con la jornada ya empezada, así que no cuenta en el balance.</p>' : "";
+  return `<div class="qhead">${sel}<span class="qstatus">${status}</span></div>${late}
+    <div class="qgrid">
+      <div class="qslip" role="table" aria-label="Boleto de la quiniela">
+        <div class="qrow qrow--head" aria-hidden="true"><span class="qn">Nº</span><span class="qm">Partido</span><span class="qc">1</span><span class="qc">X</span><span class="qc">2</span><span class="qred">Red.</span></div>
+        ${rows}${pleno}
+      </div>
+      <div class="qside">
+        ${tcard("Apuesta sencilla", single, res && res.sencilla)}
+        ${tcard("Reducida", red, res && res.reducida, `<p class="quiet small">Dobles y triples donde el partido está más abierto, eligiendo la combinación con más probabilidad de 14 dentro de ${DATA.quiniela.config ? DATA.quiniela.config.max_bets : 16} apuestas.</p>`)}
+        <p class="quiet small">Fuentes de cada partido: <b>Modelo</b> (el de esta web), <b>Casas</b> (cuotas de Segunda, más fiables que cualquier modelo propio), <b>Aprox.</b> (Copa con equipos de otras categorías, Europa o fútbol femenino: estimación por categoría, poco fiable).</p>
+      </div>
+    </div>`;
+}
+function quinielaHistHtml() {
+  const q = DATA.quiniela || {};
+  const sm = q.summary || {};
+  const js = qJornadas().filter((j) => j.result);
+  if (!js.length) return '<p class="quiet">Todavía no ha terminado ninguna jornada con boleto del modelo.</p>';
+  const card = (k, t) => { const s = sm[k] || {}; const cls = s.balance > 0 ? "up" : s.balance < 0 ? "down" : "";
+    return `<article class="strat" style="--accent:${k === "sencilla" ? "var(--slip)" : "var(--ink)"}"><h3>${t}</h3>
+      <p class="strat__profit ${cls}">${eur(s.balance || 0)}</p>
+      <dl class="strat__facts"><div><dt>Jornadas</dt><dd>${s.jornadas || 0}</dd></div><div><dt>Gastado</dt><dd>${dec(s.cost || 0, 2)} €</dd></div>
+      <div><dt>Premios</dt><dd>${dec(s.prize || 0, 2)} €</dd></div><div><dt>Aciertos medios</dt><dd>${s.avg_hits != null ? dec(s.avg_hits, 1) : "–"}</dd></div>
+      <div><dt>Mejor</dt><dd>${s.best ?? "–"}</dd></div></dl></article>`; };
+  return `<div class="strats strats--2">${card("sencilla", "Sencilla")}${card("reducida", "Reducida")}</div>
+    <div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Jornada</th><th scope="col">Sencilla</th><th scope="col">Reducida</th><th scope="col">Pleno</th><th scope="col">Premios</th><th scope="col">Balance</th></tr></thead><tbody>
+    ${js.map((j) => { const r = j.result; const bal = r.sencilla.prize + r.reducida.prize - r.sencilla.cost - r.reducida.cost;
+      return `<tr${j.late ? ' class="is-late"' : ""}><th scope="row" class="l"><a href="#quiniela/${j.date}">${j.jornada ? `${j.jornada}ª · ` : ""}${new Date(j.date + "T12:00:00").toLocaleDateString("es-ES", { day: "numeric", month: "short" })}</a>${j.late ? ' <span class="quiet small">(fuera de balance)</span>' : ""}</th>
+      <td><b>${r.sencilla.hits}</b></td><td><b>${r.reducida.hits}</b></td><td>${r.sencilla.pleno_ok ? '<span class="ok">Sí</span>' : "No"}</td>
+      <td>${dec(r.sencilla.prize + r.reducida.prize, 2)} €</td><td class="${bal >= 0 ? "up" : "down"}">${eur(bal)}</td></tr>`; }).join("")}
+    </tbody></table></div>
+    <p class="quiet small">Coste: ${dec((q.config || {}).price || 0.75, 2)} € por apuesta. Premios: los oficiales de cada jornada (de 10 a 14 aciertos y Pleno al 15).</p>`;
+}
+
+/* ---------- Resumen de la jornada ---------- */
+function countdown(iso) {
+  const ms = new Date(iso) - Date.now();
+  if (ms <= 0) return "en juego";
+  const h = Math.floor(ms / 3.6e6), d = Math.floor(h / 24);
+  return d >= 1 ? `en ${d} ${d === 1 ? "día" : "días"}` : h >= 1 ? `en ${h} h ${Math.floor((ms % 3.6e6) / 6e4)} min` : `en ${Math.floor(ms / 6e4)} min`;
+}
+function glanceHtml() {
+  const ms = DATA.matches || [];
+  if (!ms.length) return "";
+  const cards = [];
+  const next = ms.find((m) => m.kickoff_utc && new Date(m.kickoff_utc) > Date.now()) || ms[0];
+  cards.push(`<a class="gl" href="#partidos"><span class="gl__k">Próximo partido</span><span class="gl__v">${esc(name(next.home))} – ${esc(name(next.away))}</span><span class="gl__s">${next.kickoff_utc ? esc(countdown(next.kickoff_utc)) : esc(fmtWhen(null, next.date))}</span></a>`);
+  const fav = ms.map((m) => ({ m, p: Math.max(m.p_home, m.p_away), side: m.p_home >= m.p_away ? m.home : m.away })).sort((a, b) => b.p - a.p)[0];
+  cards.push(`<div class="gl"><span class="gl__k">Favorito más claro</span><span class="gl__v">${esc(name(fav.side))}</span><span class="gl__s">${pct(fav.p)} % ante ${esc(name(fav.side === fav.m.home ? fav.m.away : fav.m.home))}</span></div>`);
+  const open = ms.map((m) => ({ m, p: Math.max(m.p_home, m.p_draw, m.p_away) })).sort((a, b) => a.p - b.p)[0];
+  cards.push(`<div class="gl"><span class="gl__k">Partido más abierto</span><span class="gl__v">${esc(name(open.m.home))} – ${esc(name(open.m.away))}</span><span class="gl__s">${pct(open.m.p_home)} / ${pct(open.m.p_draw)} / ${pct(open.m.p_away)} %</span></div>`);
+  const bets = ((DATA.bets || {}).bets || []).filter((x) => x.status === "pendiente");
+  const st = (DATA.bets || {}).strategies || {};
+  const tot = Object.values(st).reduce((a, x) => a + (x.profit || 0), 0);
+  cards.push(`<a class="gl" href="#apuestas"><span class="gl__k">Apuestas simuladas</span><span class="gl__v">${bets.length} abiertas</span><span class="gl__s">Balance total <b class="${tot >= 0 ? "up" : "down"}">${eur(tot)}</b></span></a>`);
+  const js = qJornadas();
+  const qd = qDefault(js);
+  const qj = js.find((j) => j.date === qd);
+  if (qj) cards.push(`<a class="gl" href="#quiniela"><span class="gl__k">Quiniela ${qj.jornada ? `${qj.jornada}ª` : ""}</span><span class="gl__v">${qj.tickets.sencilla.picks.map((p) => p[0]).join("")}</span><span class="gl__s">Premio ${dec(100 * qj.tickets.sencilla.p10plus, 0)} % · reducida ${dec(100 * qj.tickets.reducida.p10plus, 0)} %</span></a>`);
+  return cards.join("");
+}
+
+function renderBets() {
+  const el = document.getElementById("bets");
+  el.innerHTML = betsHtml();
+  el.querySelectorAll(".chips-filter button").forEach((btn) => btn.addEventListener("click", () => { BET_FILTER = btn.dataset.f; renderBets(); }));
+  el.querySelectorAll("button.more").forEach((btn) => btn.addEventListener("click", () => { BET_ALL[btn.dataset.more] = true; renderBets(); }));
+  document.getElementById("bets-bt").innerHTML = betsBtHtml();
+}
+function renderQuiniela() {
+  const el = document.getElementById("qboard");
+  el.innerHTML = quinielaHtml();
+  const s = el.querySelector("#qsel");
+  if (s) s.addEventListener("change", () => { Q_SEL = s.value; history.replaceState(null, "", `#quiniela/${Q_SEL}`); renderQuiniela(); });
+  el.querySelectorAll(".qmark path").forEach((p, i) => { p.style.setProperty("--len", 400); p.style.setProperty("--delay", `${0.1 + i * 0.05}s`); });
+  requestAnimationFrame(() => el.classList.add("drawing"));
+  document.getElementById("quiniela-hist").innerHTML = quinielaHistHtml();
+}
+
+/* ---------- Tema claro/oscuro ---------- */
+function setupTheme() {
+  const root = document.documentElement;
+  let saved = null;
+  try { saved = localStorage.getItem("theme"); } catch (e) { /* sin almacenamiento */ }
+  if (saved === "light" || saved === "dark") root.dataset.theme = saved;
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) { /* sin almacenamiento */ }
+  });
+  const nav = document.getElementById("navbar");
+  const onScroll = () => nav.classList.toggle("is-stuck", window.scrollY > nav.offsetTop - 1 && window.scrollY > 40);
+  window.addEventListener("scroll", onScroll, { passive: true });
 }
 
 /* ---------- Navegación ---------- */
 function route() {
   const h = decodeURIComponent(location.hash.slice(1) || "partidos");
   const [view, arg] = h.split("/");
-  const v = ["partidos", "clasificacion", "equipos", "aciertos", "apuestas", "equipo"].includes(view) ? view : "partidos";
+  const v = ["partidos", "quiniela", "clasificacion", "equipos", "aciertos", "apuestas", "equipo"].includes(view) ? view : "partidos";
   const tabv = v === "equipo" ? "equipos" : v;
   document.querySelectorAll(".view").forEach((el) => (el.hidden = el.dataset.view !== tabv));
   document.querySelectorAll(".tabs a").forEach((a) => a.setAttribute("aria-current", a.dataset.tab === tabv ? "page" : "false"));
@@ -666,9 +888,10 @@ function route() {
     const teams = Object.entries((DATA.extra || {}).teams || {}).sort((a, b) => (b[1].elo || 0) - (a[1].elo || 0));
     document.getElementById("teams").innerHTML = teamsHtml(arg || (teams[0] || [])[0]);
   }
-  if (tabv === "apuestas") {
-    document.getElementById("bets").innerHTML = betsHtml();
-    document.getElementById("bets-bt").innerHTML = betsBtHtml();
+  if (tabv === "apuestas") renderBets();
+  if (tabv === "quiniela") {
+    if (arg) Q_SEL = arg;
+    renderQuiniela();
   }
   if (tabv === "aciertos") {
     document.getElementById("track").innerHTML = trackHtml();
@@ -679,6 +902,7 @@ function route() {
 /* ---------- Arranque ---------- */
 let DATA = null;
 async function main() {
+  setupTheme();
   try {
     const r = await fetch("data.json", { cache: "no-store" });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -693,8 +917,11 @@ async function main() {
 
   const slip = document.getElementById("slip");
   if (!ms.length) { document.getElementById("empty").hidden = false; slip.hidden = true; }
+  const dayOf = (m) => (m.kickoff_utc ? new Date(m.kickoff_utc).toLocaleDateString("es-ES", { timeZone: tz, weekday: "long", day: "numeric", month: "long" })
+    : new Date(m.date + "T12:00:00").toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" }));
+  let lastDay = null;
   slip.innerHTML = `<div class="slip__head" aria-hidden="true"><span class="c">Nº</span><span>Partido</span><span class="c">1</span><span class="c">X</span><span class="c">2</span><span>Evolución local</span><span>Novedades</span></div>`
-    + ms.map((m, i) => rowHtml(m, i + 1)).join("");
+    + ms.map((m, i) => { const d = dayOf(m); const head = d !== lastDay ? `<div class="day" role="presentation">${esc(d.charAt(0).toUpperCase() + d.slice(1))}</div>` : ""; lastDay = d; return head + rowHtml(m, i + 1); }).join("");
 
   slip.querySelectorAll(".row").forEach((row, i) => {
     const btn = row.querySelector(".row__main");
@@ -722,6 +949,7 @@ async function main() {
   }
   document.getElementById("bt-table").innerHTML = trustHtml(DATA.backtest, DATA.live);
   document.getElementById("calib").innerHTML = calibChart((DATA.backtest || {}).calibration);
+  document.getElementById("glance").innerHTML = glanceHtml();
   window.addEventListener("hashchange", route);
   route();
   const lv = DATA.live || {};
