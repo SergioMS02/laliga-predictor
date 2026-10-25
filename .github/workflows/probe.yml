@@ -9,23 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install -e . -q
       - run: |
-          python - <<'PY'
-          import logging; logging.basicConfig(level=logging.INFO)
-          from laliga.config import load_settings
-          from laliga import eurelo
-          from laliga.data import results
-          s = load_settings()
-          for y in range(2024, 2027):
-              results.fetch_season(s, y, online=True, div="SP2")
-          r = eurelo.build(s, online=True)
-          print(r.sort_values("rating", ascending=False).head(40).to_string())
-          print(r.league.value_counts().to_string())
+          mkdir -p raw6
+          python3 - <<'PY' > raw6/out.txt 2>&1
+          import requests, json
+          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) laliga-predictor/0.1"
+          base = "https://site.api.espn.com/apis/site/v2/sports/soccer/{}/scoreboard"
+          for lg in ["uefa.champions", "esp.w.1", "esp.1"]:
+              for params in [{"dates": "20250901-20250930", "limit": 900}, {"dates": "20250901-20250930", "limit": 300}, {"dates": "20250916"}, {"dates": "20250901-20250930"}]:
+                  r = s.get(base.format(lg), params=params, timeout=30)
+                  try:
+                      js = r.json(); ev = js.get("events", [])
+                      print(lg, params, r.status_code, len(ev), ev[0]["competitions"][0]["status"]["type"]["completed"] if ev else None)
+                  except Exception as e:
+                      print(lg, params, r.status_code, "ERR", e, r.text[:200])
           PY
-      - run: |
           git config user.name probe; git config user.email probe@example.com
-          git add -f data/raw/euro data/processed/euro_elo.csv data/raw/SP2_*.csv; git commit -qm probe-out5; git push origin HEAD:probe
+          git add raw6; git commit -qm probe-out6; git push origin HEAD:probe
