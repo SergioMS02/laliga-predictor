@@ -101,7 +101,7 @@ Para verla en local: `python site/build.py && python -m http.server -d site` y a
 | `pages.yml` | Tras cada cambio de predicciones | Regenera y publica la web. |
 | `tests.yml` | Cada push | Ejecuta los tests. |
 
-Minutos: repo público = ilimitado. Repo privado = 2.000 min/mes gratis; este uso ronda 500-700 (la vigilancia de alineaciones termina en segundos si no hay ningún partido a menos de 2 horas). GitHub Pages en repos privados requiere un plan de pago: para la web, mantén el repo público.
+Minutos: repo público = ilimitado. Repo privado = 2.000 min/mes gratis; este uso ronda 1.000 (la vigilancia de alineaciones termina en segundos si no hay ningún partido a menos de 2 horas, pero GitHub cobra cada ejecución como mínimo 1 minuto). GitHub Pages en repos privados requiere un plan de pago: para la web, mantén el repo público.
 
 ## Fuentes de datos (todas gratuitas)
 
