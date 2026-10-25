@@ -9,23 +9,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install -e . -q
       - run: |
-          python - <<'PY'
-          import logging, time; logging.basicConfig(level=logging.INFO)
-          from laliga.config import load_settings
-          from laliga import eurelo
-          s = load_settings()
-          t = time.time()
-          r = eurelo.build(s, online=True)
-          print("time", time.time() - t)
-          print(r.league.value_counts().to_string())
-          print(r[r.league == "copa"].sort_values("n", ascending=False).head(40).to_string())
-          print(r[r.team.str.endswith("(F)")].sort_values("rating", ascending=False).to_string())
+          mkdir -p raw8
+          python3 - <<'PY' > raw8/index.txt 2>&1
+          import requests, hashlib, pathlib
+          out = pathlib.Path("raw8")
+          UAS = {"chrome": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+                 "bot": "Mozilla/5.0 (X11; Linux x86_64) laliga-predictor/0.1"}
+          urls = [
+            "https://www.transfermarkt.es/laliga/verletztespieler/wettbewerb/ES1",
+            "https://www.transfermarkt.es/laliga/sperrenausfaelle/wettbewerb/ES1",
+            "https://www.transfermarkt.com/laliga/verletztespieler/wettbewerb/ES1",
+            "https://www.transfermarkt.es/real-madrid/sperrenundverletzungen/verein/418",
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/injuries",
+            "https://site.web.api.espn.com/apis/v2/sports/soccer/esp.1/injuries",
+            "https://sports.core.api.espn.com/v2/sports/soccer/leagues/esp.1/teams/86/injuries",
+            "https://api.sofascore.com/api/v1/team/2829/players",
+            "https://www.sofascore.com/api/v1/event/14083000/lineups",
+            "https://www.fotmob.com/api/teams?id=8633",
+            "https://www.fotmob.com/api/data/teams?id=8633",
+            "https://www.jornadaperfecta.com/bajas/",
+            "https://www.futbolfantasy.com/laliga/lesionados",
+            "https://www.futbolfantasy.com/laliga/sancionados",
+            "https://www.besoccer.com/competition/injured/primera",
+            "https://www.comuniate.com/lesionados.php",
+          ]
+          for ua_name, ua in UAS.items():
+              for u in urls:
+                  try:
+                      r = requests.get(u, headers={"User-Agent": ua, "Accept-Language": "es-ES,es;q=0.9", "Accept": "text/html,application/json"}, timeout=25)
+                      h = hashlib.md5((ua_name + u).encode()).hexdigest()[:6]
+                      (out / f"{h}.body").write_bytes(r.content)
+                      print(ua_name, h, r.status_code, len(r.content), r.headers.get("content-type", "")[:30], u)
+                  except Exception as e:
+                      print(ua_name, "ERR", u, e)
           PY
-      - run: |
           git config user.name probe; git config user.email probe@example.com
-          git add -f data/raw/euro data/processed/euro_elo.csv; git commit -qm probe-out7; git push origin HEAD:probe
+          git add raw8; git commit -qm probe-out8; git push origin HEAD:probe
