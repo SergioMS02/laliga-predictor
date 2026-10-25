@@ -1,10 +1,10 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-25 18:46 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-10-25 19:07 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Barcelona – Real Madrid (2026-10-25)
 
-1 ▆▆▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂▂▂ · 2 ▂▂▂▂▂▂▂▂▂
+1 ▆▆▆▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂▂▂▂ · 2 ▂▂▂▂▂▂▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -17,6 +17,7 @@ Actualizado: 2026-10-25 18:46 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 19:19 | 69% | 17% | 14% |  |
 | 25/10 19:39 | 69% | 17% | 15% |  |
 | 25/10 19:46 | 69% | 17% | 15% |  |
+| 25/10 20:07 | 70% | 16% | 13% | ✅ |
 
 ## Sevilla – Osasuna (2026-10-26)
 

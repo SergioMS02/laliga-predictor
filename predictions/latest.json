@@ -1,35 +1,35 @@
 [
  {
-  "generated_at": "2026-10-25T18:46:05.659526+00:00",
+  "generated_at": "2026-10-25T19:07:29.988320+00:00",
   "season": 2026,
   "date": "2026-10-25",
   "kickoff_utc": "2026-10-25T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Real Madrid",
-  "p_home": 0.6874,
-  "p_draw": 0.1675,
-  "p_away": 0.1451,
+  "p_home": 0.7036,
+  "p_draw": 0.1616,
+  "p_away": 0.1349,
   "model": "stacker_mercado",
   "dc": {
-   "p_home": 0.6558,
-   "p_draw": 0.1827,
-   "p_away": 0.1615,
-   "xg_home": 2.5374,
-   "xg_away": 1.2187,
-   "p_over25": 0.7239,
-   "p_btts": 0.6526,
+   "p_home": 0.6428,
+   "p_draw": 0.1864,
+   "p_away": 0.1708,
+   "xg_home": 2.5035,
+   "xg_away": 1.2517,
+   "p_over25": 0.7238,
+   "p_btts": 0.6595,
    "top_scores": [
     [
      "2-1",
-     0.09170986937869424
-    ],
-    [
-     "3-1",
-     0.07756889843694917
+     0.09177659068706631
     ],
     [
      "1-1",
-     0.07613797527254285
+     0.07722670333808294
+    ],
+    [
+     "3-1",
+     0.07658666224016054
     ]
    ]
   },
@@ -49,15 +49,15 @@
    0.1693,
    0.227
   ],
-  "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "lineup_confirmed": true,
+  "availability_source": "alineación oficial",
   "deficit": [
-   0.0,
-   0.167
+   0.013,
+   0.149
   ],
   "deficit_defence": [
-   0.0,
-   0.286
+   0.045,
+   0.27
   ],
   "context": {
    "stake_diff_late": 0.029,
@@ -73,28 +73,39 @@
    "red_prev_away": 0.0,
    "post_break": 0.0
   },
-  "absences": {
-   "Barcelona": [],
-   "Real Madrid": [
-    {
-     "player": "Thibaut Courtois",
-     "status": "out",
-     "reason": "news",
-     "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com"
-    },
-    {
-     "player": "Vinícius Júnior",
-     "status": "out",
-     "reason": "suspension",
-     "source": "sancionado (le quedan 3 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
-    }
+  "absences": {},
+  "lineups": {
+   "home": [
+    "Joan García",
+    "Gerard Martín",
+    "Pau Cubarsí",
+    "João Cancelo",
+    "Xavi Espart",
+    "Rodri",
+    "Fermín López",
+    "Pedri",
+    "Raphinha",
+    "Anthony Gordon",
+    "Lamine Yamal"
+   ],
+   "away": [
+    "Andriy Lunin",
+    "Dean Huijsen",
+    "Ibrahima Konaté",
+    "Marc Cucurella",
+    "Federico Valverde",
+    "Bernardo Silva",
+    "Aurélien Tchouaméni",
+    "Jude Bellingham",
+    "Arda Güler",
+    "Yan Diomande",
+    "Kylian Mbappé"
    ]
   },
-  "lineups": null,
   "squads": {
    "home": {
-    "confirmed": false,
-    "formation": null,
+    "confirmed": true,
+    "formation": "4-3-3",
     "xi": [
      {
       "name": "Joan García",
@@ -103,51 +114,7 @@
       "imp": 0.89,
       "att": 0.01,
       "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Lamine Yamal",
-      "pos": "AM-R",
-      "role": "M",
-      "imp": 1.0,
-      "att": 1.16,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Raphinha",
-      "pos": "SUB",
-      "role": "F",
-      "imp": 0.78,
-      "att": 1.3,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Pedri",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.78,
-      "att": 0.34,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Eric García",
-      "pos": "SUB",
-      "role": "D",
-      "imp": 0.78,
-      "att": 0.19,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Xavi Espart",
-      "pos": "LB",
-      "role": "D",
-      "imp": 0.78,
-      "att": 0.27,
-      "absent": null,
+      "jersey": "1",
       "usual": true
      },
      {
@@ -157,15 +124,7 @@
       "imp": 0.78,
       "att": 0.05,
       "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Fermín López",
-      "pos": "AM",
-      "role": "M",
-      "imp": 0.67,
-      "att": 0.8,
-      "absent": null,
+      "jersey": "18",
       "usual": true
      },
      {
@@ -175,32 +134,101 @@
       "imp": 0.67,
       "att": 0.06,
       "absent": null,
+      "jersey": "5",
       "usual": true
      },
      {
-      "name": "Anthony Gordon",
-      "pos": "SUB",
-      "role": "F",
-      "imp": 0.67,
-      "att": 0.87,
+      "name": "João Cancelo",
+      "pos": "LB",
+      "role": "D",
+      "imp": 0.22,
+      "att": 0.4,
       "absent": null,
+      "jersey": "2",
+      "usual": false
+     },
+     {
+      "name": "Xavi Espart",
+      "pos": "RB",
+      "role": "D",
+      "imp": 0.78,
+      "att": 0.27,
+      "absent": null,
+      "jersey": "12",
       "usual": true
      },
      {
       "name": "Rodri",
-      "pos": "RM",
+      "pos": "CM",
       "role": "M",
       "imp": 0.67,
       "att": 0.51,
       "absent": null,
+      "jersey": "16",
+      "usual": true
+     },
+     {
+      "name": "Fermín López",
+      "pos": "LM",
+      "role": "M",
+      "imp": 0.67,
+      "att": 0.8,
+      "absent": null,
+      "jersey": "7",
+      "usual": true
+     },
+     {
+      "name": "Pedri",
+      "pos": "RM",
+      "role": "M",
+      "imp": 0.78,
+      "att": 0.34,
+      "absent": null,
+      "jersey": "8",
+      "usual": true
+     },
+     {
+      "name": "Raphinha",
+      "pos": "F",
+      "role": "F",
+      "imp": 0.78,
+      "att": 1.3,
+      "absent": null,
+      "jersey": "11",
+      "usual": true
+     },
+     {
+      "name": "Anthony Gordon",
+      "pos": "LF",
+      "role": "M",
+      "imp": 0.67,
+      "att": 0.87,
+      "absent": null,
+      "jersey": "17",
+      "usual": true
+     },
+     {
+      "name": "Lamine Yamal",
+      "pos": "RF",
+      "role": "M",
+      "imp": 1.0,
+      "att": 1.16,
+      "absent": null,
+      "jersey": "10",
       "usual": true
      }
     ],
-    "out": []
+    "out": [
+     {
+      "name": "Eric García",
+      "status": "no titular",
+      "imp": 0.78
+     }
+    ]
    },
    "away": {
-    "confirmed": false,
-    "formation": null,
+    "confirmed": true,
+    "formation": "4-4-2",
     "xi": [
      {
       "name": "Andriy Lunin",
@@ -209,25 +237,17 @@
       "imp": 0.0,
       "att": 0.01,
       "absent": null,
-      "usual": false,
-      "replaces": "Thibaut Courtois"
+      "jersey": "13",
+      "usual": false
      },
      {
-      "name": "Kylian Mbappé",
-      "pos": "F",
-      "role": "F",
-      "imp": 1.0,
-      "att": 1.2,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Federico Valverde",
-      "pos": "RB",
+      "name": "Dean Huijsen",
+      "pos": "CD-L",
       "role": "D",
-      "imp": 1.0,
-      "att": 0.22,
+      "imp": 0.78,
+      "att": 0.14,
       "absent": null,
+      "jersey": "4",
       "usual": true
      },
      {
@@ -237,43 +257,7 @@
       "imp": 0.89,
       "att": 0.06,
       "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Jude Bellingham",
-      "pos": "AM",
-      "role": "M",
-      "imp": 0.89,
-      "att": 0.54,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Aurélien Tchouaméni",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.44,
-      "att": 0.17,
-      "absent": null,
-      "usual": false,
-      "replaces": "Vinícius Júnior"
-     },
-     {
-      "name": "Arda Güler",
-      "pos": "RM",
-      "role": "M",
-      "imp": 0.78,
-      "att": 0.69,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Dean Huijsen",
-      "pos": "CD-L",
-      "role": "D",
-      "imp": 0.78,
-      "att": 0.14,
-      "absent": null,
+      "jersey": "16",
       "usual": true
      },
      {
@@ -283,41 +267,100 @@
       "imp": 0.56,
       "att": 0.03,
       "absent": null,
+      "jersey": "17",
       "usual": true
      },
      {
-      "name": "Denzel Dumfries",
-      "pos": "SUB",
+      "name": "Federico Valverde",
+      "pos": "RB",
       "role": "D",
-      "imp": 0.56,
-      "att": 0.18,
+      "imp": 1.0,
+      "att": 0.22,
       "absent": null,
+      "jersey": "8",
       "usual": true
      },
      {
-      "name": "Álvaro Carreras",
-      "pos": "SUB",
+      "name": "Bernardo Silva",
+      "pos": "CM-L",
+      "role": "M",
+      "imp": 0.33,
+      "att": 0.11,
+      "absent": null,
+      "jersey": "20",
+      "usual": false
+     },
+     {
+      "name": "Aurélien Tchouaméni",
+      "pos": "CM-R",
       "role": "M",
       "imp": 0.44,
-      "att": 0.25,
+      "att": 0.17,
       "absent": null,
+      "jersey": "14",
+      "usual": false
+     },
+     {
+      "name": "Jude Bellingham",
+      "pos": "LM",
+      "role": "M",
+      "imp": 0.89,
+      "att": 0.54,
+      "absent": null,
+      "jersey": "5",
+      "usual": true
+     },
+     {
+      "name": "Arda Güler",
+      "pos": "RM",
+      "role": "M",
+      "imp": 0.78,
+      "att": 0.69,
+      "absent": null,
+      "jersey": "15",
+      "usual": true
+     },
+     {
+      "name": "Yan Diomande",
+      "pos": "CF-L",
+      "role": "F",
+      "imp": 0.44,
+      "att": 0.35,
+      "absent": null,
+      "jersey": "25",
+      "usual": false
+     },
+     {
+      "name": "Kylian Mbappé",
+      "pos": "CF-R",
+      "role": "F",
+      "imp": 1.0,
+      "att": 1.2,
+      "absent": null,
+      "jersey": "10",
       "usual": true
      }
     ],
     "out": [
      {
       "name": "Thibaut Courtois",
-      "status": "out",
-      "reason": "news",
-      "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com",
+      "status": "no titular",
       "imp": 1.0
      },
      {
       "name": "Vinícius Júnior",
-      "status": "out",
-      "reason": "suspension",
-      "source": "sancionado (le quedan 3 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció",
+      "status": "no titular",
       "imp": 0.78
+     },
+     {
+      "name": "Denzel Dumfries",
+      "status": "no titular",
+      "imp": 0.56
+     },
+     {
+      "name": "Álvaro Carreras",
+      "status": "no titular",
+      "imp": 0.44
      }
     ]
    }
@@ -333,9 +376,9 @@
   ],
   "ou": {
    "p_over": 0.8208,
-   "p_over_model": 0.7239,
+   "p_over_model": 0.7238,
    "p_over_market": 0.8047,
-   "p_btts": 0.6526
+   "p_btts": 0.6595
   },
   "odds_market": {
    "max": [
@@ -354,54 +397,54 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.478,
+     "p": 0.473,
      "xg90": 1.02
     },
     {
      "name": "Lamine Yamal",
-     "p": 0.354,
+     "p": 0.35,
      "xg90": 0.66
     },
     {
      "name": "Anthony Gordon",
-     "p": 0.298,
+     "p": 0.304,
      "xg90": 0.55
     },
     {
      "name": "Fermín López",
-     "p": 0.246,
+     "p": 0.243,
      "xg90": 0.42
     },
     {
      "name": "Rodri",
-     "p": 0.131,
+     "p": 0.129,
      "xg90": 0.21
     }
    ],
    "away": [
     {
      "name": "Kylian Mbappé",
-     "p": 0.348,
+     "p": 0.356,
      "xg90": 1.01
     },
     {
      "name": "Jude Bellingham",
-     "p": 0.123,
+     "p": 0.126,
      "xg90": 0.3
     },
     {
      "name": "Arda Güler",
-     "p": 0.108,
+     "p": 0.11,
      "xg90": 0.26
     },
     {
-     "name": "Denzel Dumfries",
-     "p": 0.061,
-     "xg90": 0.13
+     "name": "Yan Diomande",
+     "p": 0.078,
+     "xg90": 0.19
     },
     {
      "name": "Dean Huijsen",
-     "p": 0.044,
+     "p": 0.045,
      "xg90": 0.09
     }
    ]
@@ -415,7 +458,7 @@
      "att": 0.0,
      "goals": 0,
      "minutes": 681,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Dominik Livakovic",
@@ -424,7 +467,7 @@
      "att": null,
      "goals": 0,
      "minutes": 90,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Xavi Espart",
@@ -433,7 +476,7 @@
      "att": 0.27,
      "goals": 1,
      "minutes": 626,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Eric García",
@@ -442,7 +485,7 @@
      "att": 0.25,
      "goals": 1,
      "minutes": 599,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Gerard Martín",
@@ -451,7 +494,7 @@
      "att": 0.07,
      "goals": 0,
      "minutes": 582,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Pau Cubarsí",
@@ -460,7 +503,7 @@
      "att": 0.2,
      "goals": 0,
      "minutes": 519,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Andreas Christensen",
@@ -469,7 +512,7 @@
      "att": 0.22,
      "goals": 0,
      "minutes": 392,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Jules Koundé",
@@ -478,7 +521,7 @@
      "att": 0.23,
      "goals": 1,
      "minutes": 343,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "João Cancelo",
@@ -487,7 +530,7 @@
      "att": null,
      "goals": 1,
      "minutes": 192,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Álvaro Cortés",
@@ -496,7 +539,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Lamine Yamal",
@@ -505,7 +548,7 @@
      "att": 1.44,
      "goals": 8,
      "minutes": 759,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Pedri",
@@ -514,7 +557,7 @@
      "att": 0.29,
      "goals": 1,
      "minutes": 647,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Fermín López",
@@ -523,7 +566,7 @@
      "att": 0.91,
      "goals": 4,
      "minutes": 548,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Rodri",
@@ -532,7 +575,7 @@
      "att": 0.51,
      "goals": 1,
      "minutes": 525,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Dani Olmo",
@@ -541,7 +584,7 @@
      "att": 1.29,
      "goals": 1,
      "minutes": 323,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Karim Adeyemi",
@@ -550,7 +593,7 @@
      "att": 1.71,
      "goals": 2,
      "minutes": 306,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Marc Bernal",
@@ -559,7 +602,7 @@
      "att": 0.53,
      "goals": 0,
      "minutes": 299,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Gavi",
@@ -568,7 +611,7 @@
      "att": null,
      "goals": 0,
      "minutes": 137,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Wojciech Szczesny",
@@ -577,7 +620,7 @@
      "att": null,
      "goals": 0,
      "minutes": 39,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Hamza Abdelkarim",
@@ -586,7 +629,7 @@
      "att": null,
      "goals": 0,
      "minutes": 5,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Frenkie de Jong",
@@ -595,7 +638,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Alejandro Balde",
@@ -604,7 +647,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Brian Fariñas",
@@ -613,7 +656,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Iker Rodríguez",
@@ -622,7 +665,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Eder Aller",
@@ -631,7 +674,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Jordi Pesquer",
@@ -640,7 +683,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Raphinha",
@@ -649,7 +692,7 @@
      "att": 1.83,
      "goals": 12,
      "minutes": 590,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Anthony Gordon",
@@ -658,7 +701,7 @@
      "att": 0.87,
      "goals": 1,
      "minutes": 513,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Gabriel Jesus",
@@ -667,7 +710,7 @@
      "att": null,
      "goals": 3,
      "minutes": 191,
-     "status": "disponible"
+     "status": "suplente"
     }
    ],
    "away": [
@@ -678,8 +721,7 @@
      "att": 0.0,
      "goals": 0,
      "minutes": 810,
-     "status": "baja",
-     "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com"
+     "status": "suplente"
     },
     {
      "name": "Andriy Lunin",
@@ -688,7 +730,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Federico Valverde",
@@ -697,7 +739,7 @@
      "att": 0.15,
      "goals": 0,
      "minutes": 755,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Ibrahima Konaté",
@@ -706,7 +748,7 @@
      "att": 0.06,
      "goals": 0,
      "minutes": 720,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Dean Huijsen",
@@ -715,7 +757,7 @@
      "att": 0.11,
      "goals": 0,
      "minutes": 594,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Marc Cucurella",
@@ -724,7 +766,7 @@
      "att": 0.03,
      "goals": 0,
      "minutes": 560,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Denzel Dumfries",
@@ -733,7 +775,7 @@
      "att": 0.18,
      "goals": 0,
      "minutes": 428,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Antonio Rüdiger",
@@ -742,7 +784,7 @@
      "att": 0.08,
      "goals": 1,
      "minutes": 304,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Trent Alexander-Arnold",
@@ -751,7 +793,7 @@
      "att": null,
      "goals": 0,
      "minutes": 258,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Álvaro Fernández",
@@ -760,7 +802,7 @@
      "att": null,
      "goals": 1,
      "minutes": 252,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Raúl Asencio",
@@ -769,7 +811,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Jude Bellingham",
@@ -778,7 +820,7 @@
      "att": 0.65,
      "goals": 3,
      "minutes": 700,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Vinícius Júnior",
@@ -787,8 +829,7 @@
      "att": 0.92,
      "goals": 1,
      "minutes": 592,
-     "status": "sancionado",
-     "source": "sancionado (le quedan 3 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
+     "status": "suplente"
     },
     {
      "name": "Arda Güler",
@@ -797,7 +838,7 @@
      "att": 1.11,
      "goals": 2,
      "minutes": 517,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Yan Diomande",
@@ -806,7 +847,7 @@
      "att": 0.35,
      "goals": 2,
      "minutes": 444,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Aurélien Tchouaméni",
@@ -815,7 +856,7 @@
      "att": 0.11,
      "goals": 0,
      "minutes": 359,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Álvaro Carreras",
@@ -824,7 +865,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Bernardo Silva",
@@ -833,7 +874,7 @@
      "att": 0.11,
      "goals": 0,
      "minutes": 296,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Eduardo Camavinga",
@@ -842,7 +883,7 @@
      "att": null,
      "goals": 0,
      "minutes": 257,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Brahim Díaz",
@@ -851,7 +892,7 @@
      "att": null,
      "goals": 0,
      "minutes": 116,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Endrick",
@@ -860,7 +901,7 @@
      "att": null,
      "goals": 0,
      "minutes": 74,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Carlos Espí",
@@ -869,7 +910,7 @@
      "att": null,
      "goals": 2,
      "minutes": 14,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Éder Militão",
@@ -878,7 +919,7 @@
      "att": null,
      "goals": 0,
      "minutes": 2,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Alexis Ciria",
@@ -887,7 +928,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Sergio Mestre",
@@ -896,7 +937,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Mario Rivas",
@@ -905,7 +946,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Thiago Pitarch",
@@ -914,7 +955,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Sergio Martínez",
@@ -923,7 +964,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Jorge Cestero",
@@ -932,7 +973,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Javier Navarro",
@@ -941,7 +982,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Kylian Mbappé",
@@ -950,7 +991,7 @@
      "att": 1.43,
      "goals": 9,
      "minutes": 808,
-     "status": "disponible"
+     "status": "titular"
     }
    ]
   },
@@ -960,8 +1001,8 @@
     1.35
    ],
    "xg_adj": [
-    2.54,
-    1.22
+    2.5,
+    1.25
    ],
    "p_full": [
     0.5828,
@@ -969,31 +1010,31 @@
     0.2125
    ],
    "p_adj": [
-    0.6558,
-    0.1827,
-    0.1615
+    0.6428,
+    0.1864,
+    0.1708
    ]
   },
   "movement": {
    "home": "Barcelona",
    "away": "Real Madrid",
    "date": "2026-10-25",
-   "from_ts": "2026-10-25T18:39:13.230230+00:00",
-   "to_ts": "2026-10-25T18:46:05.659526+00:00",
+   "from_ts": "2026-10-25T18:46:05.659526+00:00",
+   "to_ts": "2026-10-25T19:07:29.988320+00:00",
    "p_from": [
     0.6874,
     0.1675,
     0.1451
    ],
    "p_to": [
-    0.6874,
-    0.1675,
-    0.1451
+    0.7036,
+    0.1616,
+    0.1349
    ],
    "delta_pts": [
-    0.0,
-    0.0,
-    0.0
+    1.6,
+    -0.6,
+    -1.0
    ],
    "important": false
   }

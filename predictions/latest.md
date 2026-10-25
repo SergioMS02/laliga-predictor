@@ -1,10 +1,10 @@
 # Predicciones LaLiga
 
-Generado: 2026-10-25 18:46 UTC
+Generado: 2026-10-25 19:07 UTC
 
 | Fecha | Partido | 1 | X | 2 | Evolución 1 | xG | Marcador más probable | +2.5 | Ambos marcan | Info |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 25/10 21:00 | Barcelona – Real Madrid | 69% | 17% | 15% | ▆▆▆▆▆▆▆▆▆ 63→69% ▲ | 2.54–1.22 | 2-1 (9%) | 72% | 65% | 🚑 Thibaut Courtois, Vinícius Júnior |
+| 25/10 21:00 | Barcelona – Real Madrid | 70% | 16% | 13% | ▆▆▆▆▆▆▆▆▆▆ 63→70% ▲ | 2.50–1.25 | 2-1 (9%) | 72% | 66% | ✅ alineaciones |
 | 26/10 21:00 | Sevilla – Osasuna | 49% | 29% | 22% | ▄▄▄▄▄ 49→49% = | 1.63–1.12 | 1-1 (12%) | 52% | 55% |  |
 | 30/10 21:00 | Villarreal – Espanol | 69% | 21% | 11% | ▆▆▆▆▆ 71→69% ▼ | 1.90–0.96 | 1-1 (11%) | 54% | 53% | 🚑 Pape Gueye |
 | 31/10 14:00 | Levante – Ath Madrid | 21% | 24% | 55% | ▂▂▂▂ 21→21% = | 1.28–1.72 | 1-1 (12%) | 58% | 60% |  |

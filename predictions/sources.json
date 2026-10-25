@@ -1,5 +1,5 @@
 {
- "at": "2026-10-25T18:46+00:00",
+ "at": "2026-10-25T19:07+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -43,12 +43,12 @@
   },
   "ESPN (alineaciones y árbitro del partido)": {
    "ok": true,
-   "rows": 11,
+   "rows": 1,
    "error": null
   },
   "Google News (bajas)": {
-   "ok": true,
-   "rows": 330,
+   "ok": false,
+   "rows": 0,
    "error": null
   }
  }

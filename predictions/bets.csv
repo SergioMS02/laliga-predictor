@@ -1,7 +1,7 @@
 strategy,market,season,date,kickoff_utc,home,away,pick,prob,odds,odds_first,odds_close,close_src,clv,ev,stake,placed_at,status,score,profit,settled_at
-favorito,1x2,2026,2026-10-25,2026-10-25T20:00:00+00:00,Barcelona,Real Madrid,1,0.6874,1.62,1.62,,,,0.1136,10.0,2026-10-25T15:18+00:00,pendiente,,0.0,
-kelly,1x2,2026,2026-10-25,2026-10-25T20:00:00+00:00,Barcelona,Real Madrid,1,0.6874,1.62,1.62,,,,0.1136,4.5,2026-10-25T18:01+00:00,pendiente,,0.0,
-valor,1x2,2026,2026-10-25,2026-10-25T20:00:00+00:00,Barcelona,Real Madrid,1,0.6874,1.62,1.62,,,,0.1136,10.0,2026-10-25T18:01+00:00,pendiente,,0.0,
+favorito,1x2,2026,2026-10-25,2026-10-25T20:00:00+00:00,Barcelona,Real Madrid,1,0.7036,1.62,1.62,,,,0.1398,10.0,2026-10-25T15:18+00:00,pendiente,,0.0,
+kelly,1x2,2026,2026-10-25,2026-10-25T20:00:00+00:00,Barcelona,Real Madrid,1,0.7036,1.62,1.62,,,,0.1398,5.0,2026-10-25T18:01+00:00,pendiente,,0.0,
+valor,1x2,2026,2026-10-25,2026-10-25T20:00:00+00:00,Barcelona,Real Madrid,1,0.7036,1.62,1.62,,,,0.1398,10.0,2026-10-25T18:01+00:00,pendiente,,0.0,
 favorito,1x2,2026,2026-10-25,2026-10-25T17:30:00+00:00,Sociedad,Levante,1,0.5572,1.65,1.65,,,,-0.0806,10.0,2026-10-25T15:18+00:00,pendiente,,0.0,
 kelly,1x2,2026,2026-10-25,2026-10-25T17:30:00+00:00,Sociedad,Levante,2,0.2063,5.25,5.25,,,,0.0831,0.5,2026-10-25T16:15+00:00,pendiente,,0.0,
 valor,1x2,2026,2026-10-25,2026-10-25T17:30:00+00:00,Sociedad,Levante,2,0.2063,5.25,5.25,,,,0.0831,10.0,2026-10-25T15:18+00:00,pendiente,,0.0,
