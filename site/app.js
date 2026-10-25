@@ -186,9 +186,9 @@ function contextHtml(m) {
     }
   }
   if (abs.length) {
-    h += `<h4>Bajas y dudas en las noticias</h4>`;
+    h += `<h4>Bajas, sanciones y dudas</h4>`;
     for (const [team, list] of abs) {
-      h += `<p class="quiet">${esc(name(team))}</p><ul class="chips">${list.map((a) => `<li class="${a.status === "doubtful" ? "doubt" : ""}">${esc(a.player)}${a.status === "doubtful" ? " (duda)" : ""}</li>`).join("")}</ul>`;
+      h += `<p class="quiet">${esc(name(team))}</p><ul class="chips">${list.map((a) => `<li class="${a.status === "doubtful" ? "doubt" : ""}"${a.source ? ` title="${esc(a.source)}"` : ""}>${esc(a.player)}${a.status === "doubtful" ? " (duda)" : a.reason === "suspension" ? " (sanción)" : ""}</li>`).join("")}</ul>`;
     }
   }
   const rows = [];
