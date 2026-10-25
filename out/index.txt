@@ -1,0 +1,8 @@
+1 403 text/html https://www.loteriasyapuestas.es/servicios/proximosv3?game_id=LAQU&num=2
+2 403 text/html https://www.loteriasyapuestas.es/servicios/buscadorSorteos?game_id=LAQU&celebrados=false&fechaInicioInclusiva=20261020&fechaFinInclusiva=20261110
+3 403 text/html https://www.loteriasyapuestas.es/servicios/buscadorSorteos?game_id=LAQU&celebrados=true&fechaInicioInclusiva=20260901&fechaFinInclusiva=20261025
+4 403 text/html https://www.loteriasyapuestas.es/es/la-quiniela
+5 200 text/html; charset=utf-8 https://www.eduardolosilla.es/quiniela
+6 200 text/html; charset=utf-8 https://www.quinielista.es/
+7 200 text/html; charset=UTF-8 https://www.combinacionganadora.com/quiniela/
+8 200 application/json;charset=UTF-8 https://site.api.espn.com/apis/site/v2/sports/soccer/esp.2/scoreboard
