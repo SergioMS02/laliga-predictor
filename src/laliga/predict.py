@@ -292,6 +292,12 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             from .betting import devig2
             mkt_ou = {(r.season, r.home, r.away): devig2(r.ou_o25, r.ou_u25) for r in odds.itertuples()}
         record_odds_snapshot(settings, odds[["season", "home", "away", "odds_h", "odds_d", "odds_a"]], now)
+    from .data import polymarket as pmk
+    poly_cfg = pmk.cfg(settings)
+    poly_mkts = pmk.fetch_matches(settings, online)
+    poly_w = pmk.model_weight(settings)
+    if online and poly_cfg["enabled"]:
+        pipeline._status("Polymarket (precios de partidos)", len(poly_mkts) > 0, len(poly_mkts))
     snaps = odds_movement(settings)
     if len(snaps):
         tab = tab.drop(columns=["odds_h", "odds_d", "odds_a", "odds_close_h", "odds_close_d", "odds_close_a"],
@@ -348,6 +354,15 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             f = final[k] * ratio
             final[k] = f / f.sum()
             impact["market_weight"] = round(w, 3)
+        p_model = final[k].copy()
+        pm_m = pmk.for_match(poly_mkts, r.home, r.away, ko if not pd.isna(ko) else r.date)
+        pm_ok, pm_why = pmk.usable(pm_m, poly_cfg, now)
+        poly = None
+        if pm_m:
+            poly = {k2: pm_m[k2] for k2 in ("p", "volume", "liquidity", "url", "slug", "overround")}
+            poly.update(used=pm_ok, reason=pm_why, model_weight=round(poly_w, 2) if pm_ok else None)
+            if pm_ok:
+                final[k] = pmk.blend(p_model, pm_m["p"], poly_w)
         preds.append({
             "generated_at": gen,
             "season": int(r.season), "date": str(pd.Timestamp(r.date).date()),
@@ -355,6 +370,8 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             "home": r.home, "away": r.away,
             "p_home": round(float(final[k, 0]), 4), "p_draw": round(float(final[k, 1]), 4),
             "p_away": round(float(final[k, 2]), 4), "model": model_used[k],
+            "p_model": [round(float(x), 4) for x in p_model],
+            "polymarket": poly,
             "dc": {kk: (round(v, 4) if isinstance(v, float) else v) for kk, v in o["dc"].items()},
             "xg_base": [round(o["lam0"], 3), round(o["mu0"], 3)],
             "elo_diff": round(float(r.elo_diff), 1),
@@ -386,6 +403,7 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             "_snapshot": movements.make_snapshot(
                 r, o, rho=dc.params.rho, a=a_coef, b=b_coef, max_goals=dc.max_goals),
         })
+        preds[-1]["_snapshot"]["poly"] = {"p": pm_m["p"], "w": round(poly_w, 3)} if pm_ok else None
     preds.sort(key=lambda d: (d["kickoff_utc"] or d["date"], d["home"]))
     return preds
 
@@ -519,6 +537,22 @@ def save_props_log(settings: Settings, preds: list[dict]) -> None:
         pd.DataFrame(rows).to_csv(p, mode="a", header=not p.exists(), index=False)
 
 
+def xg_for_probs(p: list[float], total: float) -> list[float]:
+    """Goles esperados (Poisson independientes) que reproducen un 1X2, cerca del total dado."""
+    from scipy.stats import poisson
+    k = np.arange(11)
+    best, err = [total / 2, total / 2], 9.0
+    for t in total * np.linspace(0.8, 1.2, 9):
+        for s in np.linspace(0.15, 0.85, 71):
+            ph, pa = poisson.pmf(k, t * s), poisson.pmf(k, t * (1 - s))
+            m = np.outer(ph, pa)
+            q = [np.tril(m, -1).sum(), np.trace(m), np.triu(m, 1).sum()]
+            e = sum((a - b) ** 2 for a, b in zip(q, p)) + 0.0005 * (t / total - 1) ** 2
+            if e < err:
+                best, err = [round(float(t * s), 3), round(float(t * (1 - s)), 3)], e
+    return best
+
+
 def save_prematch(settings: Settings, preds: list[dict], keep_days: int = 3) -> None:
     """Última predicción antes de empezar de cada partido (para la probabilidad en directo de la web)."""
     p = settings.predictions_dir / "prematch.json"
@@ -528,10 +562,14 @@ def save_prematch(settings: Settings, preds: list[dict], keep_days: int = 3) -> 
         old = {}
     now = pd.Timestamp.now(tz="UTC")
     for x in preds:
+        xg = [x["dc"]["xg_home"], x["dc"]["xg_away"]]
+        pm = x.get("polymarket") or {}
+        if pm.get("used"):  # goles esperados coherentes con la probabilidad final (para el directo)
+            xg = xg_for_probs([x["p_home"], x["p_draw"], x["p_away"]], xg[0] + xg[1])
         old[f"{x['home']}|{x['away']}"] = {
             "home": x["home"], "away": x["away"], "date": x["date"], "kickoff_utc": x.get("kickoff_utc"),
             "espn_id": x.get("espn_id"), "p": [x["p_home"], x["p_draw"], x["p_away"]],
-            "xg": [x["dc"]["xg_home"], x["dc"]["xg_away"]]}
+            "xg": xg, "poly_slug": pm.get("slug")}
     keep = {}
     for k, v in old.items():
         t = pd.Timestamp(v["kickoff_utc"]) if v.get("kickoff_utc") else pd.Timestamp(v["date"], tz="Europe/Madrid")

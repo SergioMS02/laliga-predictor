@@ -211,6 +211,17 @@ function oddsLine(m) {
   return parts.join(" — ");
 }
 
+const money = (v) => (v >= 1e6 ? `${dec(v / 1e6, 1)} M$` : v >= 1e3 ? `${Math.round(v / 1e3)} mil $` : `${Math.round(v)} $`);
+function polyLine(m) {
+  const pm = m.polymarket;
+  const base = `${pct(pm.p[0])} / ${pct(pm.p[1])} / ${pct(pm.p[2])} % <span class="quiet">(${money(pm.volume)} negociados)</span>`;
+  if (pm.used) {
+    const pmod = m.p_model;
+    return `${base} — <b>usado en la predicción</b>: ${Math.round(100 * (1 - pm.model_weight))} % Polymarket y ${Math.round(100 * pm.model_weight)} % modelo${pmod ? ` <span class="quiet">(solo el modelo: ${pct(pmod[0])} / ${pct(pmod[1])} / ${pct(pmod[2])} %)</span>` : ""}`;
+  }
+  return `${base} — <span class="quiet">no se usa: ${esc(pm.reason)}</span>`;
+}
+
 /* ---------- Bajas, árbitro, clima ---------- */
 function contextHtml(m) {
   let h = "";
@@ -232,6 +243,7 @@ function contextHtml(m) {
   const w = m.weather || {};
   if (w.temp_c != null) rows.push(["Clima", `${Math.round(w.temp_c)} °C, lluvia ${w.precip_mm ?? 0} mm, viento ${Math.round(w.wind_kmh ?? 0)} km/h`]);
   if (m.market) rows.push(["Mercado", `${pct(m.market[0])} / ${pct(m.market[1])} / ${pct(m.market[2])} %`]);
+  if (m.polymarket) rows.push(["Polymarket", polyLine(m)]);
   if (oddsLine(m)) rows.push(["Cuotas Bet365", esc(oddsLine(m))]);
   const om = m.odds_market;
   if (om && om.max && om.max[0] != null) {
@@ -573,6 +585,49 @@ function standingsHtml() {
     }).join("")}</tbody></table></div>
     <p class="quiet small">Champions: 4 primeros. Europa: 7 primeros (incluye Champions). Entre paréntesis, el rango de puntos en 8 de cada 10 simulaciones.</p>`;
 }
+const pctTxt = (v) => (v >= 0.995 ? ">99" : v > 0 && v < 0.005 ? "<1" : String(Math.round(100 * v)));
+const plainName = (n) => String(n || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim();
+const PM_TITLES = { champion: "Campeón", top2: "Acabar entre los 2 primeros", ucl: "Jugar la Champions", releg: "Descender", pichichi: "Pichichi" };
+const PM_NOTES = {
+  ucl: "Ojo: en Polymarket cuenta cualquier vía de clasificación (incluida una 5.ª plaza por el coeficiente UEFA o ganar la Europa League); el modelo solo mide acabar entre los 4 primeros.",
+  releg: "",
+};
+function polySeasonHtml() {
+  const pm = (DATA.extra || {}).polymarket;
+  if (!pm || !pm.markets || !Object.keys(pm.markets).length) return '<p class="quiet">Los precios de Polymarket aparecerán tras la próxima actualización.</p>';
+  const cards = ["champion", "top2", "ucl", "releg", "pichichi"].filter((k) => pm.markets[k]).map((k) => {
+    const mk = pm.markets[k];
+    let rows = mk.rows.filter((r) => r.volume > 0 && (r.poly >= 0.01 || (r.model || 0) >= 0.01));
+    rows.sort((a, b) => (a.thin - b.thin) || (Math.max(b.poly, b.model || 0) - Math.max(a.poly, a.model || 0)));
+    rows = rows.slice(0, k === "releg" || k === "ucl" ? 10 : 6);
+    const body = rows.map((r) => {
+      const d = r.model == null ? null : r.model - r.poly;
+      const big = d != null && Math.abs(d) >= 0.1 && !r.thin;
+      return `<tr class="${r.thin ? "thin" : ""}" title="${esc(`${money(r.volume)} negociados en este contrato`)}"><th scope="row" class="l">${esc(k === "pichichi" ? r.name : name(r.team))}</th>
+        <td>${r.model == null ? "–" : `${pctTxt(r.model)} %`}</td><td>${pctTxt(r.poly)} %</td>
+        <td class="${big ? (d > 0 ? "up" : "down") : "quiet"}">${d == null ? "" : `${d > 0 ? "+" : d < 0 ? "−" : ""}${Math.round(Math.abs(100 * d))}`}</td></tr>`;
+    }).join("");
+    return `<div class="pm-card"><h4>${PM_TITLES[k]} <span class="quiet small">${money(mk.volume)} negociados</span></h4>
+      <div class="tbl-wrap"><table class="track pm"><thead><tr><th scope="col" class="l">${k === "pichichi" ? "Jugador" : "Equipo"}</th><th scope="col">Modelo</th><th scope="col">Polymarket</th><th scope="col">Dif.</th></tr></thead><tbody>${body}</tbody></table></div>
+      ${PM_NOTES[k] ? `<p class="quiet small">${PM_NOTES[k]}</p>` : ""}</div>`;
+  }).join("");
+  return `<div class="pm-grid">${cards}</div>
+    <p class="quiet small">Dif.: puntos que el modelo da de más (+) o de menos (−) que Polymarket; resaltado si son 10 o más. En gris (y al final), contratos con menos de ${money(pm.min_volume)} negociados: su precio puede salir de una sola orden y no dice mucho; pasa el ratón por una fila para ver su volumen. ${pm.fetched_at ? `Precios del ${esc(fmtTs(pm.fetched_at))}.` : ""}
+    Si el modelo da al favorito mucho más que el mercado, suele ser porque la simulación trata la fuerza de cada equipo como fija y conocida; el mercado incorpora además fichajes, lesiones largas y la duda sobre esa fuerza.</p>`;
+}
+function polyEvalHtml() {
+  const e = DATA.polymarket_eval || {};
+  if (!e.logloss) return `<p class="quiet">${e.n_all ? `Aún hay pocos partidos con volumen suficiente (${e.n}).` : "La comparación aparecerá tras el próximo reentrenamiento semanal."}</p>`;
+  const L = e.logloss;
+  const rows = [["Polymarket (antes del inicio)", L.polymarket], ["Cierre de las casas (Pinnacle o media)", L.cierre_casas], ["Nuestro modelo (con cuotas de apertura)", L.modelo], ["Mezcla elegida", L.mezcla]].filter((r) => r[1] != null);
+  const best = Math.min(...rows.map((r) => r[1]));
+  const d = e.diff_vs_close || {};
+  const w = e.model_weight_used ?? Math.max(0.1, e.best_model_weight ?? 0.25);
+  return `<div class="tbl-wrap"><table class="track pe"><thead><tr><th scope="col" class="l">Fuente</th><th scope="col">Log-loss</th></tr></thead><tbody>
+    ${rows.map((r) => `<tr><th scope="row" class="l">${r[0]}</th><td class="${r[1] === best ? "is-pick" : ""}">${dec(r[1], 4)}</td></tr>`).join("")}</tbody></table></div>
+    <p class="quiet small">${e.n} partidos desde el ${esc(e.since)} con al menos ${money(e.min_volume)} negociados (menos es mejor). Polymarket − cierre: ${d.mean != null ? `${dec(d.mean, 4)} (intervalo del 95 %: ${dec(d.ci95[0], 4)} a ${dec(d.ci95[1], 4)})` : "–"}: ${d.ci95 && d.ci95[0] < 0 && d.ci95[1] > 0 ? "en la práctica, igual de bueno que el cierre de las casas" : d.mean < 0 ? "mejor que el cierre" : "peor que el cierre"}, pero disponible al momento y para todos los partidos.
+    Por eso, cuando un partido tiene volumen y liquidez suficientes, la predicción final mezcla ${Math.round(100 * (1 - w))} % Polymarket y ${Math.round(100 * w)} % modelo (el peso que mejor funciona en estos partidos, con un mínimo del 10 % para el modelo). Se vuelve a medir cada semana.</p>`;
+}
 function pichichiEvo() {
   const h = (DATA.extra || {}).scorers_history || [];
   if (h.length < 2) return "";
@@ -584,10 +639,13 @@ function pichichiHtml() {
   const sc = (DATA.extra || {}).scorers;
   if (!sc || !sc.players || !sc.players.length) return '<p class="quiet">Aparecerá tras la próxima actualización.</p>';
   const max = Math.max(...sc.players.map((p) => p.p), 0.01);
-  return `<div class="tbl-wrap"><table class="track pichichi"><thead><tr><th scope="col" class="l">Jugador</th><th scope="col">Goles</th><th scope="col">Al final</th><th scope="col" class="l">Pichichi</th></tr></thead><tbody>
-    ${sc.players.map((p) => `<tr><th scope="row" class="l">${esc(p.name)} <span class="quiet small">${esc(name(p.team))}</span></th><td><b>${p.goals}</b></td>
+  const pmRows = ((((DATA.extra || {}).polymarket || {}).markets || {}).pichichi || {}).rows || [];
+  const pmOf = (n) => pmRows.find((r) => r.model != null && plainName(r.name) && (plainName(r.name) === plainName(n) || plainName(n).includes(plainName(r.name)) || plainName(r.name).includes(plainName(n))));
+  const hasPm = pmRows.length > 0;
+  return `<div class="tbl-wrap"><table class="track pichichi"><thead><tr><th scope="col" class="l">Jugador</th><th scope="col">Goles</th><th scope="col">Al final</th><th scope="col" class="l">Pichichi</th>${hasPm ? '<th scope="col">Polymarket</th>' : ""}</tr></thead><tbody>
+    ${sc.players.map((p) => { const q = hasPm ? pmOf(p.name) : null; return `<tr><th scope="row" class="l">${esc(p.name)} <span class="quiet small">${esc(name(p.team))}</span></th><td><b>${p.goals}</b></td>
       <td>${dec(p.exp, 0)} <small>(${p.range[0]}–${p.range[1]})</small></td>
-      <td class="l"><span class="pbar"><i style="width:${(100 * p.p / max).toFixed(0)}%"></i></span> ${p.p >= 0.995 ? ">99" : p.p > 0 && p.p < 0.005 ? "<1" : Math.round(100 * p.p)} %</td></tr>`).join("")}
+      <td class="l"><span class="pbar"><i style="width:${(100 * p.p / max).toFixed(0)}%"></i></span> ${pctTxt(p.p)} %</td>${hasPm ? `<td class="${q && q.thin ? "quiet" : ""}">${q ? `${pctTxt(q.poly)} %` : "–"}</td>` : ""}</tr>`; }).join("")}
     </tbody></table></div>
     ${pichichiEvo()}
     <p class="quiet small">Goles que le quedan = goles esperados de su equipo en los partidos que faltan × la parte del xG del equipo que genera él. No tiene en cuenta lesiones futuras. ${sc.n_sims.toLocaleString("es-ES")} simulaciones; entre paréntesis, el rango en 8 de cada 10.</p>`;
@@ -1008,6 +1066,7 @@ function route() {
     document.getElementById("standings").innerHTML = standingsHtml();
     document.getElementById("positions").innerHTML = positionsHtml();
     document.getElementById("pichichi").innerHTML = pichichiHtml();
+    document.getElementById("poly-season").innerHTML = polySeasonHtml();
   }
   if (tabv === "equipos") {
     const teams = Object.entries((DATA.extra || {}).teams || {}).sort((a, b) => (b[1].elo || 0) - (a[1].elo || 0));
@@ -1022,6 +1081,7 @@ function route() {
   if (tabv === "aciertos") {
     document.getElementById("track").innerHTML = trackHtml();
     document.getElementById("track-props").innerHTML = propsTrackHtml();
+    document.getElementById("poly-eval").innerHTML = polyEvalHtml();
     document.getElementById("sources").innerHTML = sourcesHtml();
   }
 }

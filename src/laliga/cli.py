@@ -81,10 +81,10 @@ def _quiniela(s, preds=None, online: bool = True, send: bool = False) -> None:
             notify.send(s, m)
 
 
-def _export_site(s, matches, projection: bool) -> None:
+def _export_site(s, matches, projection: bool, online: bool = True) -> None:
     from . import site_export
     try:
-        site_export.export(s, matches, with_projection=projection)
+        site_export.export(s, matches, with_projection=projection, online=online)
     except Exception as e:  # la web nunca debe tumbar la predicción
         log.warning("No se pudieron generar los datos de la web: %s", e)
     pipeline.save_status(s)
@@ -149,6 +149,11 @@ def main(argv: list[str] | None = None) -> int:
             print("Tarjetas y córners:", pe)
         except Exception as e:
             log.warning("Evaluación de tarjetas y córners no disponible: %s", e)
+        try:  # Polymarket frente al cierre de las casas y al modelo (y peso del modelo en la mezcla)
+            from .data import polymarket
+            print("Polymarket:", polymarket.run_evaluation(s, matches, online=online))
+        except Exception as e:
+            log.warning("Evaluación de Polymarket no disponible: %s", e)
         bp = s.predictions_dir / "betting_backtest.json"
         bb = json.loads(bp.read_text(encoding="utf-8")) if bp.exists() else None
         if bb:
@@ -171,7 +176,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"Peso del once frente al mercado no disponible: {e}")
         return 0
     if cmd == "export-site":
-        _export_site(s, matches, projection=True)
+        _export_site(s, matches, projection=True, online=online)
         return 0
     if cmd == "quiniela":
         _quiniela(s, online=online, send=a.notify)
@@ -179,7 +184,7 @@ def main(argv: list[str] | None = None) -> int:
     if cmd == "settle":
         _bets(s, matches, [], send=a.notify)
         _quiniela(s, online=online, send=a.notify)
-        _export_site(s, matches, projection=True)
+        _export_site(s, matches, projection=True, online=online)
         return 0
     if cmd == "evaluate-live":
         ev = json.dumps(history.evaluate_live(s, matches), indent=2)
@@ -193,7 +198,7 @@ def main(argv: list[str] | None = None) -> int:
         _notify_moves(s, big, a.notify)
         _bets(s, matches, preds, send=a.notify)
         _quiniela(s, preds, online=online, send=a.notify)
-        _export_site(s, matches, projection=True)
+        _export_site(s, matches, projection=True, online=online)
         if a.notify and preds:
             soon = notify.upcoming_within(preds, int(s.get("notify", "summary_hours", 48)))
             if soon:
@@ -211,7 +216,7 @@ def main(argv: list[str] | None = None) -> int:
         _bets(s, matches, preds, send=a.notify)  # también liquida lo ya terminado
         if preds:
             _quiniela(s, online=online, send=a.notify)
-        _export_site(s, matches, projection=False)
+        _export_site(s, matches, projection=False, online=online)
         print(f"Partidos en ventana: {len(preds)}; con alineación nueva: {len(fresh)}")
         explained = {(m["home"], m["away"]) for m in big}
         for p in fresh:

@@ -12,7 +12,7 @@ const LEAGUES = [
   ["uefa.champions", "Champions League"], ["uefa.europa", "Europa League"], ["uefa.europa.conf", "Conference League"],
   ["esp.w.1", "Liga F"], ["eng.1", "Premier League"], ["ita.1", "Serie A"], ["ger.1", "Bundesliga"], ["fra.1", "Ligue 1"],
 ];
-const LIVE = { events: [], at: null, open: null, summary: {}, probHist: {}, timer: null, dtimer: null, day: 0, error: null };
+const LIVE = { events: [], at: null, open: null, summary: {}, probHist: {}, poly: {}, polyHist: {}, timer: null, dtimer: null, day: 0, error: null };
 
 const ymd = (d) => d.toLocaleDateString("en-CA", { timeZone: tz }).replace(/-/g, "");
 function liveDay(offset) { const d = new Date(); d.setDate(d.getDate() + offset); return d; }
@@ -79,7 +79,7 @@ function prematchFor(e) {
   if (!hit) hit = pm.find((x) => sameTeam(name(x.home), e.home.full) && sameTeam(name(x.away), e.away.full));
   if (!hit) hit = (DATA.matches || []).map((m) => ({ home: m.home, away: m.away, p: [m.p_home, m.p_draw, m.p_away], xg: [m.dc.xg_home, m.dc.xg_away] }))
     .find((x) => sameTeam(name(x.home), e.home.full) && sameTeam(name(x.away), e.away.full));
-  if (hit) return { p: hit.p, xg: hit.xg, src: "modelo" };
+  if (hit) return { p: hit.p, xg: hit.xg, src: "modelo", slug: hit.poly_slug || ((DATA.matches || []).find((m) => m.home === hit.home && m.away === hit.away && m.polymarket) || { polymarket: {} }).polymarket.slug };
   for (const j of Object.values((DATA.quiniela || {}).jornadas || {})) {
     for (const r of j.rows || []) {
       if (sameTeam(r.home, e.home.full) && sameTeam(r.away, e.away.full)) return { p: r.p, xg: [r.lam, r.mu], src: r.source };
@@ -106,6 +106,44 @@ function liveProbFor(e) {
   return { now, pre: pm.p, src: pm.src };
 }
 
+/* ---------- Polymarket en directo (solo lectura del precio) ---------- */
+const GAMMA = "https://gamma-api.polymarket.com";
+function parsePoly(ev) {
+  if (!ev || !ev.title || !ev.markets) return null;
+  const [hn, an] = ev.title.split(" vs. ");
+  let h = null, d = null, a = null;
+  for (const m of ev.markets) {
+    let p = null;
+    try { p = Number(JSON.parse(m.outcomePrices)[0]); } catch (err) { p = null; }
+    const t = m.groupItemTitle || "";
+    if (/^Draw/.test(t)) d = p; else if (t === hn) h = p; else if (t === an) a = p;
+  }
+  if (h == null || d == null || a == null || !(h + d + a > 0)) return null;
+  const s = h + d + a;
+  return { p: [h / s, d / s, a / s], volume: Number(ev.volume || 0), live: !!ev.live, closed: !!ev.closed };
+}
+async function fetchPoly(e) {
+  const pm = prematchFor(e);
+  if (!pm || !pm.slug) return;
+  try {
+    const r = await fetch(`${GAMMA}/events?slug=${encodeURIComponent(pm.slug)}`, { cache: "no-store" });
+    if (!r.ok) return;
+    const js = await r.json();
+    const q = parsePoly(js[0]);
+    if (!q) return;
+    LIVE.poly[e.id] = q;
+    if (e.state === "in") {
+      const h = (LIVE.polyHist[e.id] = LIVE.polyHist[e.id] || []);
+      const mm = minuteOf(e);
+      if (!h.length || h[h.length - 1].m !== mm) h.push({ m: mm, p: q.p });
+    }
+  } catch (err) { /* sin conexión o API caída: se queda el último precio */ }
+}
+async function fetchPolyAll() {
+  const want = LIVE.events.filter((e) => e.state === "in" || (LIVE.open === e.id && e.state === "pre"));
+  await Promise.all(want.map(fetchPoly));
+}
+
 /* ---------- Listado ---------- */
 function statusLabel(e) {
   if (e.state === "in") return /half/i.test(e.detail) || e.detail === "HT" ? "Descanso" : `${esc(e.clock || "")}`;
@@ -121,7 +159,8 @@ function liveRow(e) {
   const reds = (tid) => e.details.filter((d) => d.red && d.team === tid).length;
   const rc = (n) => (n ? `<span class="rc" title="${n} roja${n > 1 ? "s" : ""}">${n > 1 ? n : ""}</span>` : "");
   const pr = liveProbFor(e);
-  const bar = pr ? `<span class="lv__bar" title="Probabilidad: local ${pct(pr.now[0])} %, empate ${pct(pr.now[1])} %, visitante ${pct(pr.now[2])} %">
+  const pq = LIVE.poly[e.id];
+  const bar = pr ? `<span class="lv__bar" title="Probabilidad: local ${pct(pr.now[0])} %, empate ${pct(pr.now[1])} %, visitante ${pct(pr.now[2])} %${pq ? ` · Polymarket: ${pct(pq.p[0])} / ${pct(pq.p[1])} / ${pct(pq.p[2])} %` : ""}">
       <i style="width:${(100 * pr.now[0]).toFixed(1)}%"></i><i style="width:${(100 * pr.now[1]).toFixed(1)}%"></i><i style="width:${(100 * pr.now[2]).toFixed(1)}%"></i></span>` : "";
   const sc = (t) => (t.score == null || e.state === "pre" ? "" : t.score);
   return `<button class="lv${live ? " lv--live" : ""}${LIVE.open === e.id ? " is-open" : ""}" data-id="${e.id}" aria-expanded="${LIVE.open === e.id}">
@@ -199,7 +238,8 @@ function detailLive(e) {
     prob = `<div class="lvd__prob"><h4>Probabilidad ${e.state === "post" ? "final" : "en directo"}</h4>
       <div class="lvd__pb"><span style="width:${(100 * pr.now[0]).toFixed(1)}%">${pct(pr.now[0])} %</span><span style="width:${(100 * pr.now[1]).toFixed(1)}%">${pct(pr.now[1])} %</span><span style="width:${(100 * pr.now[2]).toFixed(1)}%">${pct(pr.now[2])} %</span></div>
       <p class="quiet small">Antes del partido: ${pct(pr.pre[0])} / ${pct(pr.pre[1])} / ${pct(pr.pre[2])} % (${esc(pr.src)}). Se recalcula con el marcador, el minuto y las expulsiones a partir de los goles esperados del modelo.</p>
-      ${h.length > 2 ? probChart(h) : ""}</div>`;
+      ${polyLive(e)}
+      ${h.length > 2 ? probChart(h, LIVE.polyHist[e.id] || []) : ""}</div>`;
   }
   if (!s) return sum + prob + '<p class="quiet small">Cargando detalles…</p>';
   // cronología
@@ -245,13 +285,20 @@ function detailLive(e) {
       <div><h4>Estadísticas</h4>${stats}${lineup ? `<h4>Alineaciones</h4><div class="lvd__xis">${lineup}</div>` : ""}</div>
     </div>`;
 }
-function probChart(h) {
+function polyLive(e) {
+  const q = LIVE.poly[e.id];
+  if (!q) return "";
+  const vol = q.volume >= 1e6 ? `${(q.volume / 1e6).toLocaleString("es-ES", { maximumFractionDigits: 1 })} M$` : `${Math.round(q.volume / 1e3)} mil $`;
+  return `<p class="lvd__poly"><span class="pm-tag">Polymarket ${q.live || e.state === "in" ? "ahora" : "antes del partido"}</span> ${pct(q.p[0])} / ${pct(q.p[1])} / ${pct(q.p[2])} % <span class="quiet small">(${vol} negociados; precio del mercado de predicción${(LIVE.polyHist[e.id] || []).length > 1 && (LIVE.probHist[e.id] || []).length > 2 ? ", en el gráfico con línea discontinua" : ""})</span></p>`;
+}
+function probChart(h, ph = []) {
   const W = 520, H = 120, L = 30, R = 10, T = 8, B = 18;
   const x = (m) => L + (m / 95) * (W - L - R), y = (p) => T + (1 - p) * (H - T - B);
   let g = "";
   for (const p of [0, 0.5, 1]) g += `<line class="axis" x1="${L}" x2="${W - R}" y1="${y(p)}" y2="${y(p)}"/><text class="lbl" x="${L - 4}" y="${y(p) + 4}" text-anchor="end">${p * 100}%</text>`;
   [["l1", 0], ["lX", 1], ["l2", 2]].forEach(([c, k]) => {
     g += `<path class="line ${c}" d="${h.map((q, i) => `${i ? "L" : "M"}${x(q.m).toFixed(1)} ${y(q.p[k]).toFixed(1)}`).join(" ")}"/>`;
+    if (ph.length > 1) g += `<path class="line ${c} pmline" d="${ph.map((q, i) => `${i ? "L" : "M"}${x(q.m).toFixed(1)} ${y(q.p[k]).toFixed(1)}`).join(" ")}"/>`;
   });
   g += `<text class="lbl" x="${L}" y="${H - 4}">0'</text><text class="lbl" x="${x(45)}" y="${H - 4}" text-anchor="middle">45'</text><text class="lbl" x="${W - R}" y="${H - 4}" text-anchor="end">90'</text>`;
   return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Evolución de la probabilidad durante el partido">${g}</svg></div>`;
@@ -277,7 +324,7 @@ function renderLive() {
     renderLive();
     if (LIVE.open) {
       const e = LIVE.events.find((x) => x.id === id);
-      await loadSummary(e);
+      await Promise.all([loadSummary(e), fetchPoly(e)]);
       renderLive();
     }
   }));
@@ -312,6 +359,7 @@ async function tick() {
     const e = LIVE.events.find((x) => x.id === LIVE.open);
     if (e) await loadSummary(e);
   }
+  if (onTab) await fetchPolyAll();
   updateBadge();
   if (onTab) renderLive();
 }

@@ -91,7 +91,7 @@ def probs_from_snapshot(snap: dict, model: str, stackers: dict, a: float, b: flo
     dc = np.array([m[i > j].sum(), m[i == j].sum(), m[i < j].sum()])
     st = stackers.get(model)
     if st is None:
-        return dc
+        return _with_poly(dc, snap)
     row = {k: (np.nan if v is None else v) for k, v in snap["raw"].items()}
     row.update({"dc_ph": dc[0], "dc_pd": dc[1], "dc_pa": dc[2], "dc_lam": lam, "dc_mu": mu})
     for k in ("sot", "xg"):
@@ -100,7 +100,16 @@ def probs_from_snapshot(snap: dict, model: str, stackers: dict, a: float, b: flo
             row[f"{k}_lam"], row[f"{k}_mu"] = np.nan, np.nan
         else:
             row[f"{k}_lam"], row[f"{k}_mu"] = av.adjust_goals(l0, m0, snap["d_home"], snap["d_away"], a, b)
-    return st.predict_proba(pd.DataFrame([row]))[0]
+    return _with_poly(st.predict_proba(pd.DataFrame([row]))[0], snap)
+
+
+def _with_poly(p: np.ndarray, snap: dict) -> np.ndarray:
+    """Mezcla con el precio de Polymarket si esa predicción lo usó."""
+    pm = snap.get("poly")
+    if not pm:
+        return p
+    q = (1 - pm["w"]) * np.asarray(pm["p"], float) + pm["w"] * np.asarray(p, float)
+    return q / q.sum()
 
 
 def load_stackers(settings: Settings) -> dict:
@@ -226,6 +235,15 @@ def _detail_clima(old: dict, new: dict) -> str:
     return " · ".join(parts) or "cambio en la previsión"
 
 
+def _detail_poly(old: dict | None, new: dict | None) -> str:
+    f = lambda x: " / ".join(f"{100 * v:.0f}" for v in x["p"])  # noqa: E731
+    if old and new:
+        return f"{f(old)} % → {f(new)} %"
+    if new:
+        return f"empieza a usarse ({f(new)} %, {100 * (1 - new['w']):.0f} % del peso)"
+    return "deja de usarse (poco volumen o ya empezado)"
+
+
 def explain(prev: dict, new: dict, stackers: dict, matches: pd.DataFrame | None = None,
             min_effect: float = 0.005) -> dict:
     """Atribuye el cambio de probabilidades entre dos registros del historial."""
@@ -249,6 +267,11 @@ def explain(prev: dict, new: dict, stackers: dict, matches: pd.DataFrame | None 
         "clima": lambda: _detail_clima(so, sn),
     }
     explained = d_model.copy()
+    if so.get("poly") != sn.get("poly"):
+        d = probs_from_snapshot({**so, "poly": sn.get("poly")}, model, stackers, a, b) - p_old_now
+        explained += d
+        if np.abs(d).max() >= min_effect:
+            contrib.append(("polymarket", "Precio de Polymarket", d, _detail_poly(so.get("poly"), sn.get("poly"))))
     for key, label, top, raw in EXPL_GROUPS:
         swapped = _swap(so, sn, top, raw)
         if swapped == so:

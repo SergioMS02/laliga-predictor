@@ -95,6 +95,13 @@ betting:
   kelly_fraction: 0.25      # fracción de Kelly (1/4: prudente)
   kelly_max_frac: 0.05      # nunca más del 5 % del fondo en una apuesta
 
+polymarket:                 # precios de Polymarket (solo lectura; el proyecto no opera allí)
+  enabled: true
+  min_volume: 50000         # $ negociados en el partido para usar su precio en la predicción
+  min_liquidity: 10000      # $ de liquidez en el libro de órdenes
+  max_overround: 0.06       # si los tres "Sí" suman más de 1,06 (o menos de 0,94), no se usa
+  # model_weight: 0.1       # peso fijo del modelo en la mezcla; si no se pone, se mide cada semana
+
 quiniela:
   price: 0.75               # euros por apuesta
   max_bets: 16              # boleto reducido: como mucho 16 apuestas (12 €)

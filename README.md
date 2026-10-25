@@ -97,8 +97,17 @@ Pestañas:
 - **Tarjetas y córners** (`props.py`): esperadas por equipo, según lo que ve cada equipo, lo que provoca el rival y el árbitro (historial de árbitros de ESPN); probabilidad de más de 4,5 tarjetas y 9,5 córners, de alguna roja, y jugadores con más papeletas de ver amarilla. En 2023-2025 falla de media por 1,81 amarillas (la media de la liga, 1,87) y 2,57 córners (2,62).
 - **Seguimiento de mercados secundarios** (pestaña Aciertos): +2,5 goles, ambos marcan, goleadores, tarjetas y córners predichos frente a lo que pasó (`predictions/props_log.csv`).
 - **Pichichi** (en Clasificación): probabilidad de cada jugador de acabar máximo goleador (goles actuales + goles esperados de su equipo en lo que queda × su parte del xG del equipo).
+- **Polymarket** (`data/polymarket.py`, solo lectura de precios; el proyecto no opera allí): ver abajo.
 - **Quiniela** y **Apuestas**: ver abajo.
 - En cada partido: más/menos de 2,5 goles (modelo combinado con el mercado), ambos marcan, cuotas de Bet365 y **probables goleadores** (probabilidad de que marque cada titular, con su xG por 90 de Understat y los goles esperados de su equipo).
+
+### Polymarket
+
+Polymarket es un mercado de predicción: el precio del «Sí» de cada contrato es la probabilidad que le asigna el dinero, casi sin margen. Su API pública (`gamma-api.polymarket.com`, `clob.polymarket.com`) no necesita clave y permite peticiones desde el navegador. Se usa para tres cosas:
+
+- **Partidos**: precio 1X2 al momento. Medido con 424 partidos de LaLiga desde agosto de 2025 (precio justo antes del inicio, partidos con ≥ 50.000 $ negociados): log-loss 0,9531, igual que el cierre de las casas (0,9529; diferencia dentro del ruido) y mejor que el modelo (0,9596). La ventaja es que está disponible al momento y para todos los partidos, mientras que las cuotas de football-data se actualizan pocas veces por semana. Por eso, si el partido tiene **volumen ≥ 50.000 $ y liquidez ≥ 10.000 $** (`config.yaml → polymarket`), la predicción final es una mezcla de Polymarket y modelo. El peso del modelo se mide cada semana en el reentrenamiento (`laliga backtest` → `data/state/polymarket_eval.json`, con el histórico en `data/processed/polymarket_history.csv`); hoy la medida dice 0 y se deja un mínimo del 10 %. Con poco volumen se ignora. En cada partido se ve el precio, si se usa y la probabilidad del modelo solo; los cambios de probabilidad se atribuyen a «Precio de Polymarket» cuando es el motivo.
+- **Temporada** (en Clasificación): campeón, top 2, Champions, descenso y Pichichi del modelo frente a Polymarket, con el volumen de cada contrato (los de menos de 1.000 $ salen en gris: su precio puede ser de una sola orden). En la columna de Pichichi también aparece el precio.
+- **En directo**: la web lee el precio del partido cada 30 segundos y lo muestra junto a la probabilidad en directo del modelo (línea discontinua en el gráfico).
 
 ### Quiniela oficial
 
@@ -152,6 +161,7 @@ Minutos: repo público = ilimitado. Repo privado = 2.000 min/mes gratis; este us
 |---|---|---|
 | Resultados, tiros, córners, tarjetas, cuotas (2005-hoy) | football-data.co.uk | Cuotas previas (Pinnacle > media > Bet365) y de cierre. Respaldo sin cuotas en GitHub. |
 | Cuotas de los próximos partidos | football-data.co.uk/fixtures.csv | |
+| Precios de mercados de predicción (partidos y temporada) | Polymarket (API pública Gamma y CLOB) | Solo lectura. Se usan en la predicción solo con volumen y liquidez suficientes. |
 | Calendario, horarios, resultados recientes | ESPN (API pública) + openfootball | ESPN es la fuente principal en la temporada en curso. |
 | Alineaciones oficiales y árbitro | ESPN `summary` | API no documentada: el parser es defensivo y si falla el modelo sigue sin ese dato. |
 | Clima a la hora del partido | Open-Meteo (previsión y archivo ERA5) | Sin clave. |

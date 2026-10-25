@@ -410,7 +410,7 @@ def _json_default(o):
 
 # ---------------------------------------------------------------------------
 def export(settings: Settings, matches: pd.DataFrame, preds: list[dict] | None = None,
-           with_projection: bool = True) -> dict:
+           with_projection: bool = True, online: bool = True) -> dict:
     season = results.current_season()
     matches = matches.reset_index(drop=True)
     table = standings(matches, season)
@@ -439,6 +439,13 @@ def export(settings: Settings, matches: pd.DataFrame, preds: list[dict] | None =
         out["projection"] = old.get("projection")
         out["scorers"] = old.get("scorers")
         out["projection_history"] = old.get("projection_history", [])
+    try:  # mercados de temporada de Polymarket frente a la proyección
+        from .data import polymarket
+        mk = polymarket.fetch_season(settings, season, online=online and with_projection)
+        out["polymarket"] = polymarket.compare_season(mk, out.get("projection"), out.get("scorers")) or old.get("polymarket")
+    except Exception as e:
+        log.warning("Polymarket (temporada) no disponible: %s", e)
+        out["polymarket"] = old.get("polymarket")
     if preds is None:
         lp = settings.predictions_dir / "latest.json"
         preds = json.loads(lp.read_text(encoding="utf-8")) if lp.exists() else []
