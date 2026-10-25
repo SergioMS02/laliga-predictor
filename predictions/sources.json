@@ -1,5 +1,5 @@
 {
- "at": "2026-10-25T19:07+00:00",
+ "at": "2026-10-25T19:14+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -39,16 +39,6 @@
   "Wikidata (entrenadores)": {
    "ok": true,
    "rows": 214,
-   "error": null
-  },
-  "ESPN (alineaciones y árbitro del partido)": {
-   "ok": true,
-   "rows": 1,
-   "error": null
-  },
-  "Google News (bajas)": {
-   "ok": false,
-   "rows": 0,
    "error": null
   }
  }
