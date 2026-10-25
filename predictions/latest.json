@@ -1,14 +1,14 @@
 [
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-10-25",
   "kickoff_utc": "2026-10-25T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Real Madrid",
-  "p_home": 0.6545,
-  "p_draw": 0.1781,
-  "p_away": 0.1674,
+  "p_home": 0.69,
+  "p_draw": 0.1662,
+  "p_away": 0.1438,
   "model": "stacker_mercado",
   "dc": {
    "p_home": 0.6592,
@@ -21,15 +21,15 @@
    "top_scores": [
     [
      "2-1",
-     0.09143644039694164
+     0.09143644039694178
     ],
     [
      "3-1",
-     0.07782486191672468
+     0.07782486191672452
     ],
     [
      "1-1",
-     0.07543572356952802
+     0.07543572356952843
     ]
    ]
   },
@@ -203,13 +203,14 @@
     "formation": null,
     "xi": [
      {
-      "name": "Thibaut Courtois",
-      "pos": "G",
-      "role": "G",
-      "imp": 1.0,
-      "att": 0.01,
-      "absent": "out",
-      "usual": true
+      "name": "Aurélien Tchouaméni",
+      "pos": "LM",
+      "role": "M",
+      "imp": 0.44,
+      "att": 0.17,
+      "absent": null,
+      "usual": false,
+      "replaces": "Thibaut Courtois"
      },
      {
       "name": "Kylian Mbappé",
@@ -248,13 +249,14 @@
       "usual": true
      },
      {
-      "name": "Vinícius Júnior",
+      "name": "Bernardo Silva",
       "pos": "SUB",
       "role": "D",
-      "imp": 0.78,
-      "att": 0.72,
-      "absent": "out",
-      "usual": true
+      "imp": 0.33,
+      "att": 0.11,
+      "absent": null,
+      "usual": false,
+      "replaces": "Vinícius Júnior"
      },
      {
       "name": "Arda Güler",
@@ -306,11 +308,15 @@
      {
       "name": "Thibaut Courtois",
       "status": "out",
+      "reason": "news",
+      "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com",
       "imp": 1.0
      },
      {
       "name": "Vinícius Júnior",
       "status": "out",
+      "reason": "suspension",
+      "source": "sancionado (le quedan 3 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció",
       "imp": 0.78
      }
     ]
@@ -400,32 +406,600 @@
     }
    ]
   },
+  "roster": {
+   "home": [
+    {
+     "name": "Joan García",
+     "role": "G",
+     "imp": 0.89,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 681,
+     "status": "disponible"
+    },
+    {
+     "name": "Xavi Espart",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.27,
+     "goals": 1,
+     "minutes": 626,
+     "status": "disponible"
+    },
+    {
+     "name": "Eric García",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.25,
+     "goals": 1,
+     "minutes": 599,
+     "status": "disponible"
+    },
+    {
+     "name": "Raphinha",
+     "role": "D",
+     "imp": 0.78,
+     "att": 1.83,
+     "goals": 12,
+     "minutes": 590,
+     "status": "disponible"
+    },
+    {
+     "name": "Gerard Martín",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.07,
+     "goals": 0,
+     "minutes": 582,
+     "status": "disponible"
+    },
+    {
+     "name": "Pau Cubarsí",
+     "role": "D",
+     "imp": 0.67,
+     "att": 0.2,
+     "goals": 0,
+     "minutes": 519,
+     "status": "disponible"
+    },
+    {
+     "name": "Anthony Gordon",
+     "role": "D",
+     "imp": 0.67,
+     "att": 0.87,
+     "goals": 1,
+     "minutes": 513,
+     "status": "disponible"
+    },
+    {
+     "name": "Andreas Christensen",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.22,
+     "goals": 0,
+     "minutes": 392,
+     "status": "disponible"
+    },
+    {
+     "name": "Jules Koundé",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.23,
+     "goals": 1,
+     "minutes": 343,
+     "status": "disponible"
+    },
+    {
+     "name": "Dani Olmo",
+     "role": "D",
+     "imp": 0.33,
+     "att": 1.29,
+     "goals": 1,
+     "minutes": 323,
+     "status": "disponible"
+    },
+    {
+     "name": "Marc Bernal",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.53,
+     "goals": 0,
+     "minutes": 299,
+     "status": "disponible"
+    },
+    {
+     "name": "João Cancelo",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.4,
+     "goals": 1,
+     "minutes": 192,
+     "status": "disponible"
+    },
+    {
+     "name": "Gavi",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 137,
+     "status": "disponible"
+    },
+    {
+     "name": "Dominik Livakovic",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 90,
+     "status": "disponible"
+    },
+    {
+     "name": "Wojciech Szczesny",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 39,
+     "status": "disponible"
+    },
+    {
+     "name": "Hamza Abdelkarim",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 5,
+     "status": "disponible"
+    },
+    {
+     "name": "Frenkie de Jong",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.35,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Cortés",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alejandro Balde",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Brian Fariñas",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Iker Rodríguez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Eder Aller",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jordi Pesquer",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Lamine Yamal",
+     "role": "M",
+     "imp": 1.0,
+     "att": 1.44,
+     "goals": 8,
+     "minutes": 759,
+     "status": "disponible"
+    },
+    {
+     "name": "Pedri",
+     "role": "M",
+     "imp": 0.78,
+     "att": 0.29,
+     "goals": 1,
+     "minutes": 647,
+     "status": "disponible"
+    },
+    {
+     "name": "Fermín López",
+     "role": "M",
+     "imp": 0.67,
+     "att": 0.91,
+     "goals": 4,
+     "minutes": 548,
+     "status": "disponible"
+    },
+    {
+     "name": "Rodri",
+     "role": "M",
+     "imp": 0.67,
+     "att": 0.51,
+     "goals": 1,
+     "minutes": 525,
+     "status": "disponible"
+    },
+    {
+     "name": "Karim Adeyemi",
+     "role": "M",
+     "imp": 0.33,
+     "att": 1.71,
+     "goals": 2,
+     "minutes": 306,
+     "status": "disponible"
+    },
+    {
+     "name": "Gabriel Jesus",
+     "role": "F",
+     "imp": 0.22,
+     "att": 0.5,
+     "goals": 3,
+     "minutes": 191,
+     "status": "disponible"
+    }
+   ],
+   "away": [
+    {
+     "name": "Thibaut Courtois",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 810,
+     "status": "baja",
+     "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com"
+    },
+    {
+     "name": "Federico Valverde",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.15,
+     "goals": 0,
+     "minutes": 755,
+     "status": "disponible"
+    },
+    {
+     "name": "Ibrahima Konaté",
+     "role": "D",
+     "imp": 0.89,
+     "att": 0.06,
+     "goals": 0,
+     "minutes": 720,
+     "status": "disponible"
+    },
+    {
+     "name": "Dean Huijsen",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 594,
+     "status": "disponible"
+    },
+    {
+     "name": "Vinícius Júnior",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.92,
+     "goals": 1,
+     "minutes": 592,
+     "status": "sancionado",
+     "source": "sancionado (le quedan 3 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
+    },
+    {
+     "name": "Marc Cucurella",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 560,
+     "status": "disponible"
+    },
+    {
+     "name": "Denzel Dumfries",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.18,
+     "goals": 0,
+     "minutes": 428,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Carreras",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Antonio Rüdiger",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.08,
+     "goals": 1,
+     "minutes": 304,
+     "status": "disponible"
+    },
+    {
+     "name": "Bernardo Silva",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 296,
+     "status": "disponible"
+    },
+    {
+     "name": "Trent Alexander-Arnold",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.19,
+     "goals": 0,
+     "minutes": 258,
+     "status": "disponible"
+    },
+    {
+     "name": "Eduardo Camavinga",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.18,
+     "goals": 0,
+     "minutes": 257,
+     "status": "disponible"
+    },
+    {
+     "name": "Brahim Díaz",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.39,
+     "goals": 0,
+     "minutes": 116,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Fernández",
+     "role": "D",
+     "imp": 0.0,
+     "att": null,
+     "goals": 1,
+     "minutes": 252,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Espí",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 2,
+     "minutes": 14,
+     "status": "disponible"
+    },
+    {
+     "name": "Éder Militão",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.24,
+     "goals": 0,
+     "minutes": 2,
+     "status": "disponible"
+    },
+    {
+     "name": "Andriy Lunin",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.01,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alexis Ciria",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Mestre",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Mario Rivas",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Raúl Asencio",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.11,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Thiago Pitarch",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.18,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Martínez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jorge Cestero",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Javier Navarro",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jude Bellingham",
+     "role": "M",
+     "imp": 0.89,
+     "att": 0.65,
+     "goals": 3,
+     "minutes": 700,
+     "status": "disponible"
+    },
+    {
+     "name": "Arda Güler",
+     "role": "M",
+     "imp": 0.78,
+     "att": 1.11,
+     "goals": 2,
+     "minutes": 517,
+     "status": "disponible"
+    },
+    {
+     "name": "Yan Diomande",
+     "role": "M",
+     "imp": 0.44,
+     "att": 0.35,
+     "goals": 2,
+     "minutes": 444,
+     "status": "disponible"
+    },
+    {
+     "name": "Aurélien Tchouaméni",
+     "role": "M",
+     "imp": 0.44,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 359,
+     "status": "disponible"
+    },
+    {
+     "name": "Endrick",
+     "role": "M",
+     "imp": 0.11,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 74,
+     "status": "disponible"
+    },
+    {
+     "name": "Kylian Mbappé",
+     "role": "F",
+     "imp": 1.0,
+     "att": 1.43,
+     "goals": 9,
+     "minutes": 808,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    2.3,
+    1.35
+   ],
+   "xg_adj": [
+    2.55,
+    1.22
+   ],
+   "p_full": [
+    0.5828,
+    0.2046,
+    0.2125
+   ],
+   "p_adj": [
+    0.6592,
+    0.1813,
+    0.1595
+   ]
+  },
   "movement": {
    "home": "Barcelona",
    "away": "Real Madrid",
    "date": "2026-10-25",
-   "from_ts": "2026-10-25T17:56:46.744205+00:00",
-   "to_ts": "2026-10-25T18:01:26.218166+00:00",
+   "from_ts": "2026-10-25T18:01:26.218166+00:00",
+   "to_ts": "2026-10-25T18:19:14.530876+00:00",
    "p_from": [
-    0.6281,
-    0.1953,
-    0.1766
-   ],
-   "p_to": [
     0.6545,
     0.1781,
     0.1674
    ],
+   "p_to": [
+    0.69,
+    0.1662,
+    0.1438
+   ],
    "delta_pts": [
-    2.6,
-    -1.7,
-    -0.9
+    3.5,
+    -1.2,
+    -2.4
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-10-26",
   "kickoff_utc": "2026-10-26T20:00:00+00:00",
@@ -446,15 +1020,15 @@
    "top_scores": [
     [
      "1-1",
-     0.12297829163081822
+     0.12297829163081837
     ],
     [
      "1-0",
-     0.09843205771027712
+     0.09843205771027727
     ],
     [
      "2-1",
-     0.09516178562522105
+     0.09516178562522112
     ]
    ]
   },
@@ -801,32 +1375,603 @@
     }
    ]
   },
-  "movement": {
-   "home": "Sevilla",
-   "away": "Osasuna",
-   "date": "2026-10-26",
-   "from_ts": "2026-10-25T17:56:46.744205+00:00",
-   "to_ts": "2026-10-25T18:01:26.218166+00:00",
-   "p_from": [
-    0.4877,
-    0.2877,
-    0.2245
+  "roster": {
+   "home": [
+    {
+     "name": "Odisseas Vlachodimos",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Gabriel Suazo",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.08,
+     "goals": 0,
+     "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Juan Iglesias",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.11,
+     "goals": 1,
+     "minutes": 795,
+     "status": "disponible"
+    },
+    {
+     "name": "Andrés Castrín",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.09,
+     "goals": 0,
+     "minutes": 659,
+     "status": "disponible"
+    },
+    {
+     "name": "Enrique Salas",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jon Guridi",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.28,
+     "goals": 1,
+     "minutes": 360,
+     "status": "disponible"
+    },
+    {
+     "name": "Arouna Sangante",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 290,
+     "status": "disponible"
+    },
+    {
+     "name": "Lucas Stassin",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 231,
+     "status": "disponible"
+    },
+    {
+     "name": "Isaac Romero",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.4,
+     "goals": 2,
+     "minutes": 230,
+     "status": "disponible"
+    },
+    {
+     "name": "Chidera Ejuke",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.3,
+     "goals": 1,
+     "minutes": 227,
+     "status": "disponible"
+    },
+    {
+     "name": "Julio Díaz",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 97,
+     "status": "disponible"
+    },
+    {
+     "name": "Nico Guillén",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 92,
+     "status": "disponible"
+    },
+    {
+     "name": "Kike Salas",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.06,
+     "goals": 0,
+     "minutes": 630,
+     "status": "disponible"
+    },
+    {
+     "name": "José Ángel Carmona",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 70,
+     "status": "disponible"
+    },
+    {
+     "name": "Manu Bueno",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 52,
+     "status": "disponible"
+    },
+    {
+     "name": "Rafael Romero",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Marcão",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.09,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Fábio Cardoso",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.01,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Manuel Ángel Castillo Rodríguez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alfonso González",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Fran González",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ibrahima Sow",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Edu Altozano",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Iker Ortín",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jesús Cruz Morales",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Lucien Agoumé",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.08,
+     "goals": 0,
+     "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Miguel Sierra",
+     "role": "M",
+     "imp": 0.89,
+     "att": 0.13,
+     "goals": 2,
+     "minutes": 592,
+     "status": "disponible"
+    },
+    {
+     "name": "Youssouf Fofana",
+     "role": "M",
+     "imp": 0.56,
+     "att": 0.53,
+     "goals": 1,
+     "minutes": 465,
+     "status": "disponible"
+    },
+    {
+     "name": "Felix Correia",
+     "role": "M",
+     "imp": 0.56,
+     "att": 0.49,
+     "goals": 1,
+     "minutes": 382,
+     "status": "disponible"
+    },
+    {
+     "name": "Giorgi Kochorashvili",
+     "role": "M",
+     "imp": 0.33,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 267,
+     "status": "disponible"
+    },
+    {
+     "name": "Peque",
+     "role": "M",
+     "imp": 0.33,
+     "att": 0.13,
+     "goals": 1,
+     "minutes": 221,
+     "status": "disponible"
+    },
+    {
+     "name": "Oso",
+     "role": "M",
+     "imp": 0.22,
+     "att": 0.23,
+     "goals": 1,
+     "minutes": 164,
+     "status": "disponible"
+    },
+    {
+     "name": "Rubén Vargas",
+     "role": "M",
+     "imp": 0.11,
+     "att": 0.35,
+     "goals": 0,
+     "minutes": 64,
+     "status": "disponible"
+    },
+    {
+     "name": "Robbie Ure",
+     "role": "F",
+     "imp": 0.67,
+     "att": 0.59,
+     "goals": 1,
+     "minutes": 514,
+     "status": "disponible"
+    }
    ],
-   "p_to": [
-    0.4906,
-    0.286,
-    0.2234
+   "away": [
+    {
+     "name": "Aitor Fernández",
+     "role": "G",
+     "imp": 0.44,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 360,
+     "status": "disponible"
+    },
+    {
+     "name": "Alejandro Catena",
+     "role": "D",
+     "imp": 0.89,
+     "att": 0.08,
+     "goals": 0,
+     "minutes": 720,
+     "status": "disponible"
+    },
+    {
+     "name": "Iñigo Arguibide",
+     "role": "D",
+     "imp": 0.89,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 649,
+     "status": "disponible"
+    },
+    {
+     "name": "Abel Bretones",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 705,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Herrera",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 450,
+     "status": "disponible"
+    },
+    {
+     "name": "Raúl García",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.47,
+     "goals": 1,
+     "minutes": 437,
+     "status": "disponible"
+    },
+    {
+     "name": "Asier Osambela",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.22,
+     "goals": 1,
+     "minutes": 346,
+     "status": "disponible"
+    },
+    {
+     "name": "Lucas Torró",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 330,
+     "status": "disponible"
+    },
+    {
+     "name": "Enzo Boyomo",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 296,
+     "status": "disponible"
+    },
+    {
+     "name": "Unai Santos",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 213,
+     "status": "disponible"
+    },
+    {
+     "name": "Jorge Herrando",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.05,
+     "goals": 0,
+     "minutes": 188,
+     "status": "disponible"
+    },
+    {
+     "name": "Enrique Barja",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Rockson Yeboah",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 206,
+     "status": "disponible"
+    },
+    {
+     "name": "Diego Rico",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 105,
+     "status": "disponible"
+    },
+    {
+     "name": "Raúl Moro",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.28,
+     "goals": 0,
+     "minutes": 175,
+     "status": "disponible"
+    },
+    {
+     "name": "Valentin Rosier",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 104,
+     "status": "disponible"
+    },
+    {
+     "name": "Romain Del Castillo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 31,
+     "status": "disponible"
+    },
+    {
+     "name": "Mauro Echegoyen",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 24,
+     "status": "disponible"
+    },
+    {
+     "name": "Mikel Bermejo Sola",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Asier Bonel Aicua",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Rafa Fernández",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jon Moncayola",
+     "role": "M",
+     "imp": 0.89,
+     "att": 0.04,
+     "goals": 0,
+     "minutes": 652,
+     "status": "disponible"
+    },
+    {
+     "name": "Rubén García",
+     "role": "M",
+     "imp": 0.78,
+     "att": 0.39,
+     "goals": 0,
+     "minutes": 548,
+     "status": "disponible"
+    },
+    {
+     "name": "Iker Muñoz",
+     "role": "M",
+     "imp": 0.67,
+     "att": 0.07,
+     "goals": 0,
+     "minutes": 559,
+     "status": "disponible"
+    },
+    {
+     "name": "Moi Gómez",
+     "role": "M",
+     "imp": 0.56,
+     "att": 0.2,
+     "goals": 0,
+     "minutes": 410,
+     "status": "disponible"
+    },
+    {
+     "name": "Jonathan Dubasin",
+     "role": "M",
+     "imp": 0.33,
+     "att": 0.61,
+     "goals": 0,
+     "minutes": 334,
+     "status": "disponible"
+    },
+    {
+     "name": "Aimar Oroz",
+     "role": "M",
+     "imp": 0.22,
+     "att": 0.22,
+     "goals": 0,
+     "minutes": 156,
+     "status": "disponible"
+    },
+    {
+     "name": "Kike Barja",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": 1,
+     "minutes": 234,
+     "status": "disponible"
+    },
+    {
+     "name": "Ante Budimir",
+     "role": "F",
+     "imp": 0.78,
+     "att": 0.81,
+     "goals": 7,
+     "minutes": 679,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    1.63,
+    1.12
    ],
-   "delta_pts": [
-    0.3,
-    -0.2,
-    -0.1
+   "xg_adj": [
+    1.63,
+    1.12
    ],
-   "important": false
-  }
+   "p_full": [
+    0.4871,
+    0.2585,
+    0.2543
+   ],
+   "p_adj": [
+    0.4871,
+    0.2585,
+    0.2543
+   ]
+  },
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-10-30",
   "kickoff_utc": "2026-10-30T20:00:00+00:00",
@@ -847,15 +1992,15 @@
    "top_scores": [
     [
      "1-1",
-     0.110227683537189
+     0.11022768353718891
     ],
     [
      "1-0",
-     0.10427670926145084
+     0.10427670926145068
     ],
     [
      "2-0",
-     0.10410855222449154
+     0.10410855222449168
     ]
    ]
   },
@@ -940,13 +2085,14 @@
       "usual": true
      },
      {
-      "name": "Pape Gueye",
-      "pos": "CM-L",
+      "name": "Carlos Macià",
+      "pos": "CM-R",
       "role": "M",
-      "imp": 0.8,
-      "att": 0.28,
-      "absent": "out",
-      "usual": true
+      "imp": 0.2,
+      "att": 0.25,
+      "absent": null,
+      "usual": false,
+      "replaces": "Pape Gueye"
      },
      {
       "name": "Santi Comesaña",
@@ -1016,6 +2162,8 @@
      {
       "name": "Pape Gueye",
       "status": "out",
+      "reason": "suspension",
+      "source": "sanción por roja (24/10)",
       "imp": 0.8
      }
     ]
@@ -1193,10 +2341,550 @@
     }
    ]
   },
+  "roster": {
+   "home": [
+    {
+     "name": "Péter Gulácsi",
+     "role": "G",
+     "imp": 0.6,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 540,
+     "status": "disponible"
+    },
+    {
+     "name": "Renato Veiga",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Alberto Moleiro",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.9,
+     "goals": 2,
+     "minutes": 684,
+     "status": "disponible"
+    },
+    {
+     "name": "Santi Comesaña",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.14,
+     "goals": 0,
+     "minutes": 519,
+     "status": "disponible"
+    },
+    {
+     "name": "Juan Foyth",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 486,
+     "status": "disponible"
+    },
+    {
+     "name": "Alex Freeman",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergi Cardona",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.27,
+     "goals": 0,
+     "minutes": 537,
+     "status": "disponible"
+    },
+    {
+     "name": "Nicolas Pépé",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.37,
+     "goals": 3,
+     "minutes": 526,
+     "status": "disponible"
+    },
+    {
+     "name": "Santiago Mouriño",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.22,
+     "goals": 0,
+     "minutes": 426,
+     "status": "disponible"
+    },
+    {
+     "name": "Georges Mikautadze",
+     "role": "D",
+     "imp": 0.4,
+     "att": 1.0,
+     "goals": 3,
+     "minutes": 507,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Romero",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 416,
+     "status": "disponible"
+    },
+    {
+     "name": "Luiz Júnior",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 360,
+     "status": "disponible"
+    },
+    {
+     "name": "Pau Navarro",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 353,
+     "status": "disponible"
+    },
+    {
+     "name": "Nathan Saliba",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 444,
+     "status": "disponible"
+    },
+    {
+     "name": "Logan Costa",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 175,
+     "status": "disponible"
+    },
+    {
+     "name": "Tani Oluwaseyi",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.54,
+     "goals": 0,
+     "minutes": 121,
+     "status": "disponible"
+    },
+    {
+     "name": "Alexander Freeman",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.18,
+     "goals": 1,
+     "minutes": 578,
+     "status": "disponible"
+    },
+    {
+     "name": "Nizar El Jmili Ben Hamou",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 9,
+     "status": "disponible"
+    },
+    {
+     "name": "Cheikh Ahmad Tidiane Thiam",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Rubén Gómez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Willy Kambwala",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Joselillo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alassane Diatta",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Pape Gueye",
+     "role": "M",
+     "imp": 0.8,
+     "att": 0.25,
+     "goals": 3,
+     "minutes": 796,
+     "status": "sancionado",
+     "source": "sanción por roja (24/10)"
+    },
+    {
+     "name": "Tajon Buchanan",
+     "role": "M",
+     "imp": 0.5,
+     "att": 0.47,
+     "goals": 0,
+     "minutes": 488,
+     "status": "disponible"
+    },
+    {
+     "name": "Ilias Akhomach",
+     "role": "M",
+     "imp": 0.5,
+     "att": 0.55,
+     "goals": 0,
+     "minutes": 392,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Macià",
+     "role": "M",
+     "imp": 0.2,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 197,
+     "status": "disponible"
+    },
+    {
+     "name": "Ayoze Pérez",
+     "role": "F",
+     "imp": 0.8,
+     "att": 0.8,
+     "goals": 1,
+     "minutes": 676,
+     "status": "disponible"
+    },
+    {
+     "name": "Gerard Moreno",
+     "role": "F",
+     "imp": 0.4,
+     "att": 0.88,
+     "goals": 2,
+     "minutes": 492,
+     "status": "disponible"
+    }
+   ],
+   "away": [
+    {
+     "name": "Ángel Fortuño",
+     "role": "G",
+     "imp": 0.3,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 270,
+     "status": "disponible"
+    },
+    {
+     "name": "Omar El Hilali",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 796,
+     "status": "disponible"
+    },
+    {
+     "name": "Roger Hinojo",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 646,
+     "status": "disponible"
+    },
+    {
+     "name": "Leandro Cabrera",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.05,
+     "goals": 0,
+     "minutes": 630,
+     "status": "disponible"
+    },
+    {
+     "name": "Marko Dmitrovic",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 630,
+     "status": "disponible"
+    },
+    {
+     "name": "Clemens Riedel",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 538,
+     "status": "disponible"
+    },
+    {
+     "name": "Tyrhys Dolan",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.12,
+     "goals": 1,
+     "minutes": 531,
+     "status": "disponible"
+    },
+    {
+     "name": "Urko Gonzalez",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 498,
+     "status": "disponible"
+    },
+    {
+     "name": "Unai Núñez",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.04,
+     "goals": 0,
+     "minutes": 458,
+     "status": "disponible"
+    },
+    {
+     "name": "Quilindschy Hartman",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.18,
+     "goals": 0,
+     "minutes": 310,
+     "status": "disponible"
+    },
+    {
+     "name": "Vanja Drkusic",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 266,
+     "status": "disponible"
+    },
+    {
+     "name": "Gabriel Moscardo",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 190,
+     "status": "disponible"
+    },
+    {
+     "name": "Marcos Fernández",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 213,
+     "status": "disponible"
+    },
+    {
+     "name": "Rafael Bauza",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 101,
+     "status": "disponible"
+    },
+    {
+     "name": "José Ángel López",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 90,
+     "status": "disponible"
+    },
+    {
+     "name": "Pere Milla",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.53,
+     "goals": 0,
+     "minutes": 57,
+     "status": "disponible"
+    },
+    {
+     "name": "Javier Puado",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.76,
+     "goals": 0,
+     "minutes": 20,
+     "status": "disponible"
+    },
+    {
+     "name": "Jofre Carreras",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.36,
+     "goals": 0,
+     "minutes": 9,
+     "status": "disponible"
+    },
+    {
+     "name": "Andoni Gorosabel",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Víctor Mullerat Tomas",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Llorenç Serred",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Adama Timera",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Javi Hernandez",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.37,
+     "goals": 0,
+     "minutes": 785,
+     "status": "disponible"
+    },
+    {
+     "name": "Edu Expósito",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.28,
+     "goals": 1,
+     "minutes": 809,
+     "status": "disponible"
+    },
+    {
+     "name": "Cala",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.3,
+     "goals": 1,
+     "minutes": 519,
+     "status": "disponible"
+    },
+    {
+     "name": "Bryan Zaragoza",
+     "role": "M",
+     "imp": 0.4,
+     "att": 0.18,
+     "goals": 1,
+     "minutes": 371,
+     "status": "disponible"
+    },
+    {
+     "name": "Pol Lozano",
+     "role": "M",
+     "imp": 0.3,
+     "att": 0.09,
+     "goals": 0,
+     "minutes": 295,
+     "status": "disponible"
+    },
+    {
+     "name": "Roberto Fernández",
+     "role": "F",
+     "imp": 1.0,
+     "att": 0.58,
+     "goals": 6,
+     "minutes": 872,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    2.03,
+    0.93
+   ],
+   "xg_adj": [
+    1.9,
+    0.95
+   ],
+   "p_full": [
+    0.6239,
+    0.217,
+    0.1591
+   ],
+   "p_adj": [
+    0.5889,
+    0.2316,
+    0.1794
+   ]
+  },
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T13:00:00+00:00",
@@ -1217,15 +2905,15 @@
    "top_scores": [
     [
      "1-1",
-     0.1157139952520985
+     0.11571399525209831
     ],
     [
      "1-2",
-     0.09422979476351208
+     0.094229794763512
     ],
     [
      "0-1",
-     0.0800852361063079
+     0.0800852361063072
     ]
    ]
   },
@@ -1550,10 +3238,594 @@
     }
    ]
   },
+  "roster": {
+   "home": [
+    {
+     "name": "Mathew Ryan",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.01,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Mat Ryan",
+     "role": "G",
+     "imp": 0.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Manu Sánchez",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.06,
+     "goals": 0,
+     "minutes": 797,
+     "status": "disponible"
+    },
+    {
+     "name": "Adrián de la Fuente",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.22,
+     "goals": 2,
+     "minutes": 707,
+     "status": "disponible"
+    },
+    {
+     "name": "Aïssa Mandi",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.04,
+     "goals": 0,
+     "minutes": 605,
+     "status": "disponible"
+    },
+    {
+     "name": "Orio Rey",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 625,
+     "status": "disponible"
+    },
+    {
+     "name": "Nacho Pérez",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.27,
+     "goals": 0,
+     "minutes": 388,
+     "status": "disponible"
+    },
+    {
+     "name": "Jeremy Toljan",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.06,
+     "goals": 0,
+     "minutes": 436,
+     "status": "disponible"
+    },
+    {
+     "name": "Ifeanyi Ndukwe",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.15,
+     "goals": 1,
+     "minutes": 308,
+     "status": "disponible"
+    },
+    {
+     "name": "Víctor García",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.31,
+     "goals": 0,
+     "minutes": 294,
+     "status": "disponible"
+    },
+    {
+     "name": "Yanis Kasonga Musuayi",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 108,
+     "status": "disponible"
+    },
+    {
+     "name": "Hugo Sotelo",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 95,
+     "status": "disponible"
+    },
+    {
+     "name": "Paco Cortés",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.31,
+     "goals": 0,
+     "minutes": 65,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Álvarez",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.34,
+     "goals": 0,
+     "minutes": 51,
+     "status": "disponible"
+    },
+    {
+     "name": "Etta Eyong",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 68,
+     "status": "disponible"
+    },
+    {
+     "name": "Marc Santos Gavilán",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 21,
+     "status": "disponible"
+    },
+    {
+     "name": "Kareem Tunde",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.15,
+     "goals": 0,
+     "minutes": 9,
+     "status": "disponible"
+    },
+    {
+     "name": "Manel Usedo Domingo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alberto Calatrava Ragull",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ihor Galdin",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo Cuñat",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alejandro Primo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jorge Cabello",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.01,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Axel Tape",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jon Ander Olasagasti",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.47,
+     "goals": 1,
+     "minutes": 715,
+     "status": "disponible"
+    },
+    {
+     "name": "Roger Brugué",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.59,
+     "goals": 5,
+     "minutes": 704,
+     "status": "disponible"
+    },
+    {
+     "name": "Thiago Fernandez",
+     "role": "M",
+     "imp": 0.7,
+     "att": 0.24,
+     "goals": 0,
+     "minutes": 512,
+     "status": "disponible"
+    },
+    {
+     "name": "Enzo Bardeli",
+     "role": "M",
+     "imp": 0.5,
+     "att": 0.16,
+     "goals": 1,
+     "minutes": 450,
+     "status": "disponible"
+    },
+    {
+     "name": "Dani Requena",
+     "role": "M",
+     "imp": 0.4,
+     "att": 0.23,
+     "goals": 1,
+     "minutes": 308,
+     "status": "disponible"
+    },
+    {
+     "name": "Iván Romero",
+     "role": "F",
+     "imp": 0.9,
+     "att": 0.57,
+     "goals": 3,
+     "minutes": 644,
+     "status": "disponible"
+    },
+    {
+     "name": "Petar Ratkov",
+     "role": "F",
+     "imp": 0.3,
+     "att": 0.5,
+     "goals": 0,
+     "minutes": 197,
+     "status": "disponible"
+    }
+   ],
+   "away": [
+    {
+     "name": "Jan Oblak",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Dávid Hancko",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.13,
+     "goals": 0,
+     "minutes": 746,
+     "status": "disponible"
+    },
+    {
+     "name": "Alejandro Grimaldo",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Giuliano Simeone",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.31,
+     "goals": 2,
+     "minutes": 686,
+     "status": "disponible"
+    },
+    {
+     "name": "Marcos Llorente",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.09,
+     "goals": 0,
+     "minutes": 676,
+     "status": "disponible"
+    },
+    {
+     "name": "Marc Pubill",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.03,
+     "goals": 1,
+     "minutes": 590,
+     "status": "disponible"
+    },
+    {
+     "name": "Cristian Romero",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.2,
+     "goals": 1,
+     "minutes": 432,
+     "status": "disponible"
+    },
+    {
+     "name": "Robin Le Normand",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.01,
+     "goals": 1,
+     "minutes": 373,
+     "status": "disponible"
+    },
+    {
+     "name": "Jonathan David",
+     "role": "D",
+     "imp": 0.4,
+     "att": 1.62,
+     "goals": 3,
+     "minutes": 305,
+     "status": "disponible"
+    },
+    {
+     "name": "Rodrigo Mendoza",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 145,
+     "status": "disponible"
+    },
+    {
+     "name": "Daniel Martinez",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 136,
+     "status": "disponible"
+    },
+    {
+     "name": "Arnau Ortiz",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 139,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Martín",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 61,
+     "status": "disponible"
+    },
+    {
+     "name": "Jorge Domínguez",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 50,
+     "status": "disponible"
+    },
+    {
+     "name": "Álex Grimaldo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.52,
+     "goals": 3,
+     "minutes": 760,
+     "status": "disponible"
+    },
+    {
+     "name": "Alexander Sørloth",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.7,
+     "goals": 0,
+     "minutes": 33,
+     "status": "disponible"
+    },
+    {
+     "name": "José María Giménez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.16,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Juan Musso",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.01,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jorge Castillo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Obed Vargas",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.05,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Javier Gil",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Miguel Cubo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Salvi Esquivel",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ademola Lookman",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.45,
+     "goals": 1,
+     "minutes": 622,
+     "status": "disponible"
+    },
+    {
+     "name": "Lee Kang-In",
+     "role": "M",
+     "imp": 0.8,
+     "att": 0.51,
+     "goals": 2,
+     "minutes": 639,
+     "status": "disponible"
+    },
+    {
+     "name": "Álex Baena",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.68,
+     "goals": 5,
+     "minutes": 613,
+     "status": "disponible"
+    },
+    {
+     "name": "Morten Hjulmand",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 518,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo Barrios",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.16,
+     "goals": 0,
+     "minutes": 454,
+     "status": "disponible"
+    },
+    {
+     "name": "Koke",
+     "role": "M",
+     "imp": 0.4,
+     "att": 0.19,
+     "goals": 0,
+     "minutes": 443,
+     "status": "disponible"
+    },
+    {
+     "name": "Johnny Cardoso",
+     "role": "M",
+     "imp": 0.3,
+     "att": 0.18,
+     "goals": 0,
+     "minutes": 307,
+     "status": "disponible"
+    },
+    {
+     "name": "Julián Álvarez",
+     "role": "F",
+     "imp": 0.1,
+     "att": 0.71,
+     "goals": 1,
+     "minutes": 243,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    1.28,
+    1.72
+   ],
+   "xg_adj": [
+    1.28,
+    1.72
+   ],
+   "p_full": [
+    0.2801,
+    0.2488,
+    0.4711
+   ],
+   "p_adj": [
+    0.2801,
+    0.2488,
+    0.4711
+   ]
+  },
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T15:15:00+00:00",
@@ -1574,15 +3846,15 @@
    "top_scores": [
     [
      "1-1",
-     0.14039371336024364
+     0.14039371336024375
     ],
     [
      "0-1",
-     0.1138162488282854
+     0.11381624882828517
     ],
     [
      "0-0",
-     0.11219205197642362
+     0.11219205197642376
     ]
    ]
   },
@@ -1673,13 +3945,14 @@
       "usual": true
      },
      {
-      "name": "Pathé Ciss",
-      "pos": "RM",
-      "role": "M",
-      "imp": 1.0,
-      "att": 0.18,
-      "absent": "out",
-      "usual": true
+      "name": "Mujaid Sadick",
+      "pos": "CD-L",
+      "role": "D",
+      "imp": 0.44,
+      "att": 0.01,
+      "absent": null,
+      "usual": false,
+      "replaces": "Pathé Ciss"
      },
      {
       "name": "Sergio Camello",
@@ -1749,11 +4022,15 @@
      {
       "name": "Randy Nteka",
       "status": "out",
+      "reason": "news",
+      "source": "El Rayo repite la convocatoria ante el Elche con las bajas de Nteka y Ratiu - Unión Rayo",
       "imp": 0.11
      },
      {
       "name": "Pathé Ciss",
       "status": "out",
+      "reason": "suspension",
+      "source": "sanción por 5ª amarilla (24/10)",
       "imp": 1.0
      }
     ]
@@ -1931,10 +4208,587 @@
     }
    ]
   },
+  "roster": {
+   "home": [
+    {
+     "name": "Emil Audero",
+     "role": "G",
+     "imp": 0.56,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 450,
+     "status": "disponible"
+    },
+    {
+     "name": "Augusto Batalla",
+     "role": "G",
+     "imp": 0.22,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 153,
+     "status": "disponible"
+    },
+    {
+     "name": "Florian Lejeune",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.09,
+     "goals": 0,
+     "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Adrià Pedrosa",
+     "role": "D",
+     "imp": 0.67,
+     "att": 0.29,
+     "goals": 1,
+     "minutes": 566,
+     "status": "disponible"
+    },
+    {
+     "name": "Andrei Ratiu",
+     "role": "D",
+     "imp": 0.67,
+     "att": 0.23,
+     "goals": 1,
+     "minutes": 540,
+     "status": "disponible"
+    },
+    {
+     "name": "Óscar Valentín",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.15,
+     "goals": 0,
+     "minutes": 403,
+     "status": "disponible"
+    },
+    {
+     "name": "Mujaid Sadick",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 346,
+     "status": "disponible"
+    },
+    {
+     "name": "Iván Balliu",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 340,
+     "status": "disponible"
+    },
+    {
+     "name": "Isi Palazón",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.35,
+     "goals": 0,
+     "minutes": 170,
+     "status": "disponible"
+    },
+    {
+     "name": "Giorgi Tsitaishvili",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 255,
+     "status": "disponible"
+    },
+    {
+     "name": "Daniel Cárdenas",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 207,
+     "status": "disponible"
+    },
+    {
+     "name": "Gnangoro Bouare Samake",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 193,
+     "status": "disponible"
+    },
+    {
+     "name": "Jozhua Vertrouwd",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 144,
+     "status": "disponible"
+    },
+    {
+     "name": "Randy Nteka",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.93,
+     "goals": 0,
+     "minutes": 155,
+     "status": "baja",
+     "source": "El Rayo repite la convocatoria ante el Elche con las bajas de Nteka y Ratiu - Unión Rayo"
+    },
+    {
+     "name": "Fran Pérez",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.31,
+     "goals": 0,
+     "minutes": 139,
+     "status": "disponible"
+    },
+    {
+     "name": "Pelayo Fernández",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 65,
+     "status": "disponible"
+    },
+    {
+     "name": "Alexandre Alemão",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.36,
+     "goals": 0,
+     "minutes": 143,
+     "status": "disponible"
+    },
+    {
+     "name": "Rayane Belaid",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 20,
+     "status": "disponible"
+    },
+    {
+     "name": "Marash Kumbulla",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Lozano",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Adrián Molina",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Iván Alonso Martín",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Marco de las Sias",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Samu Becerra",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Marco Román",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Pathé Ciss",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 810,
+     "status": "sancionado",
+     "source": "sanción por 5ª amarilla (24/10)"
+    },
+    {
+     "name": "Unai López",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.18,
+     "goals": 0,
+     "minutes": 745,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro García",
+     "role": "M",
+     "imp": 0.89,
+     "att": 0.46,
+     "goals": 3,
+     "minutes": 716,
+     "status": "disponible"
+    },
+    {
+     "name": "Jorge de Frutos",
+     "role": "M",
+     "imp": 0.78,
+     "att": 0.21,
+     "goals": 0,
+     "minutes": 505,
+     "status": "disponible"
+    },
+    {
+     "name": "Pedro Díaz",
+     "role": "M",
+     "imp": 0.44,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 410,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Camello",
+     "role": "F",
+     "imp": 0.89,
+     "att": 0.57,
+     "goals": 7,
+     "minutes": 625,
+     "status": "disponible"
+    }
+   ],
+   "away": [
+    {
+     "name": "Andrei Radu",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.01,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ionut Radu",
+     "role": "G",
+     "imp": 0.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Yoel Lago",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 852,
+     "status": "disponible"
+    },
+    {
+     "name": "Marcos Alonso",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.05,
+     "goals": 0,
+     "minutes": 606,
+     "status": "disponible"
+    },
+    {
+     "name": "Javi Rueda",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.14,
+     "goals": 0,
+     "minutes": 576,
+     "status": "disponible"
+    },
+    {
+     "name": "Javi Rodríguez",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.13,
+     "goals": 1,
+     "minutes": 412,
+     "status": "disponible"
+    },
+    {
+     "name": "Javi Galán",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.14,
+     "goals": 0,
+     "minutes": 395,
+     "status": "disponible"
+    },
+    {
+     "name": "Hugo Gonzalez",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.7,
+     "goals": 1,
+     "minutes": 309,
+     "status": "disponible"
+    },
+    {
+     "name": "Aleix Febas",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 378,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Núñez",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 356,
+     "status": "disponible"
+    },
+    {
+     "name": "Sebastián Cáceres",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 257,
+     "status": "disponible"
+    },
+    {
+     "name": "Iago Aspas",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.74,
+     "goals": 1,
+     "minutes": 260,
+     "status": "disponible"
+    },
+    {
+     "name": "Carl Starfelt",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.03,
+     "goals": 1,
+     "minutes": 216,
+     "status": "disponible"
+    },
+    {
+     "name": "Andrés Antañón",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 85,
+     "status": "disponible"
+    },
+    {
+     "name": "Abdoulaye Faye",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 48,
+     "status": "disponible"
+    },
+    {
+     "name": "Borja Iglesias",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.63,
+     "goals": 0,
+     "minutes": 68,
+     "status": "disponible"
+    },
+    {
+     "name": "Iván Villar",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Altay Bayindir",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Enrique Ribes",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ángel Arcos",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ilaix Moriba",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.06,
+     "goals": 1,
+     "minutes": 720,
+     "status": "disponible"
+    },
+    {
+     "name": "Miguel Román",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.13,
+     "goals": 1,
+     "minutes": 580,
+     "status": "disponible"
+    },
+    {
+     "name": "Hugo Álvarez",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.31,
+     "goals": 0,
+     "minutes": 498,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Carreira",
+     "role": "M",
+     "imp": 0.5,
+     "att": 0.16,
+     "goals": 0,
+     "minutes": 574,
+     "status": "disponible"
+    },
+    {
+     "name": "Jones El-Abdellaoui",
+     "role": "M",
+     "imp": 0.2,
+     "att": 0.42,
+     "goals": 0,
+     "minutes": 160,
+     "status": "disponible"
+    },
+    {
+     "name": "Hugo Burcio",
+     "role": "M",
+     "imp": 0.1,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 102,
+     "status": "disponible"
+    },
+    {
+     "name": "Ferran Jutglà",
+     "role": "F",
+     "imp": 0.7,
+     "att": 0.22,
+     "goals": 2,
+     "minutes": 585,
+     "status": "disponible"
+    },
+    {
+     "name": "Williot Swedberg",
+     "role": "F",
+     "imp": 0.5,
+     "att": 0.38,
+     "goals": 0,
+     "minutes": 412,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo Durán",
+     "role": "F",
+     "imp": 0.4,
+     "att": 0.39,
+     "goals": 2,
+     "minutes": 372,
+     "status": "disponible"
+    },
+    {
+     "name": "Couhaib Driouech",
+     "role": "F",
+     "imp": 0.1,
+     "att": 0.5,
+     "goals": 0,
+     "minutes": 142,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    1.18,
+    1.11
+   ],
+   "xg_adj": [
+    1.1,
+    1.15
+   ],
+   "p_full": [
+    0.3692,
+    0.2982,
+    0.3326
+   ],
+   "p_adj": [
+    0.3373,
+    0.3013,
+    0.3614
+   ]
+  },
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T17:30:00+00:00",
@@ -1955,15 +4809,15 @@
    "top_scores": [
     [
      "2-0",
-     0.12851049501282766
+     0.1285104950128273
     ],
     [
      "1-0",
-     0.10522987597602916
+     0.1052298759760279
     ],
     [
      "3-0",
-     0.1006266573674613
+     0.10062665736746185
     ]
    ]
   },
@@ -2093,13 +4947,14 @@
       "usual": true
      },
      {
-      "name": "Facundo Bernal",
-      "pos": "RM",
+      "name": "Dani Ceballos",
+      "pos": "LM",
       "role": "M",
-      "imp": 0.6,
-      "att": 0.03,
-      "absent": "out",
-      "usual": true
+      "imp": 0.2,
+      "att": 0.25,
+      "absent": null,
+      "usual": false,
+      "replaces": "Facundo Bernal"
      },
      {
       "name": "Abde Ezzalzouli",
@@ -2124,6 +4979,8 @@
      {
       "name": "Facundo Bernal",
       "status": "out",
+      "reason": "suspension",
+      "source": "sancionado (le quedan 3 partidos): Bernal, del Betis, es sancionado con cuatro partidos por su expulsión ante el Barcelona - ",
       "imp": 0.6
      }
     ]
@@ -2301,10 +5158,595 @@
     }
    ]
   },
+  "roster": {
+   "home": [
+    {
+     "name": "Álvaro Valles",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Natan",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.13,
+     "goals": 1,
+     "minutes": 720,
+     "status": "disponible"
+    },
+    {
+     "name": "Héctor Bellerín",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.23,
+     "goals": 0,
+     "minutes": 673,
+     "status": "disponible"
+    },
+    {
+     "name": "Fran García",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 657,
+     "status": "disponible"
+    },
+    {
+     "name": "Marc Roca",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.23,
+     "goals": 0,
+     "minutes": 607,
+     "status": "disponible"
+    },
+    {
+     "name": "Antony",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.5,
+     "goals": 0,
+     "minutes": 605,
+     "status": "disponible"
+    },
+    {
+     "name": "Isco",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.75,
+     "goals": 2,
+     "minutes": 480,
+     "status": "disponible"
+    },
+    {
+     "name": "Rodrigo Riquelme",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.41,
+     "goals": 2,
+     "minutes": 405,
+     "status": "disponible"
+    },
+    {
+     "name": "Diego Llorente",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 376,
+     "status": "disponible"
+    },
+    {
+     "name": "Valentín Gómez",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.18,
+     "goals": 1,
+     "minutes": 439,
+     "status": "disponible"
+    },
+    {
+     "name": "Nelson Deossa",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.38,
+     "goals": 0,
+     "minutes": 410,
+     "status": "disponible"
+    },
+    {
+     "name": "Marc Bartra",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.08,
+     "goals": 1,
+     "minutes": 355,
+     "status": "disponible"
+    },
+    {
+     "name": "Ángel Ortiz",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.14,
+     "goals": 0,
+     "minutes": 227,
+     "status": "disponible"
+    },
+    {
+     "name": "Troy Parrott",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 223,
+     "status": "disponible"
+    },
+    {
+     "name": "Junior Firpo",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.15,
+     "goals": 0,
+     "minutes": 153,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo García",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.39,
+     "goals": 2,
+     "minutes": 312,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Fidalgo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 53,
+     "status": "disponible"
+    },
+    {
+     "name": "José Morante",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 1,
+     "status": "disponible"
+    },
+    {
+     "name": "Diego Conde",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Aitor Ruibal",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.31,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Iker Losada",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro De Pablo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Manu González",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo Fornals",
+     "role": "M",
+     "imp": 0.7,
+     "att": 0.28,
+     "goals": 0,
+     "minutes": 652,
+     "status": "disponible"
+    },
+    {
+     "name": "Facundo Bernal",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 480,
+     "status": "sancionado",
+     "source": "sancionado (le quedan 3 partidos): Bernal, del Betis, es sancionado con cuatro partidos por su expulsión ante el Barcelona - "
+    },
+    {
+     "name": "Abde Ezzalzouli",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.25,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Dani Ceballos",
+     "role": "M",
+     "imp": 0.2,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 202,
+     "status": "disponible"
+    },
+    {
+     "name": "Giovani Lo Celso",
+     "role": "M",
+     "imp": 0.1,
+     "att": 0.37,
+     "goals": 0,
+     "minutes": 95,
+     "status": "disponible"
+    },
+    {
+     "name": "Cucho Hernández",
+     "role": "F",
+     "imp": 0.7,
+     "att": 0.5,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Juan Camilo Hernández",
+     "role": "F",
+     "imp": 0.0,
+     "att": 0.59,
+     "goals": 2,
+     "minutes": 606,
+     "status": "disponible"
+    },
+    {
+     "name": "Abdessamad Ezzalzouli",
+     "role": "F",
+     "imp": 0.0,
+     "att": 0.54,
+     "goals": 3,
+     "minutes": 515,
+     "status": "disponible"
+    }
+   ],
+   "away": [
+    {
+     "name": "Alfonso Herrero",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Ángel Recio",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Rafa Garrido",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Chupete",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Einar Galilea",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 569,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Puga",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.04,
+     "goals": 0,
+     "minutes": 497,
+     "status": "disponible"
+    },
+    {
+     "name": "Izan Merino",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 491,
+     "status": "disponible"
+    },
+    {
+     "name": "Joaquín Muñoz",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.14,
+     "goals": 0,
+     "minutes": 479,
+     "status": "disponible"
+    },
+    {
+     "name": "José Salinas",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 429,
+     "status": "disponible"
+    },
+    {
+     "name": "Rafa Rodríguez",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 248,
+     "status": "disponible"
+    },
+    {
+     "name": "Juan Cruz",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 244,
+     "status": "disponible"
+    },
+    {
+     "name": "Fernando Calero",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 165,
+     "status": "disponible"
+    },
+    {
+     "name": "Juan Berrocal",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 103,
+     "status": "disponible"
+    },
+    {
+     "name": "Eneko Jauregui",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 58,
+     "status": "disponible"
+    },
+    {
+     "name": "Rafita",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 830,
+     "status": "disponible"
+    },
+    {
+     "name": "Haitam Abaida",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 35,
+     "status": "disponible"
+    },
+    {
+     "name": "Julen Lobete",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 4,
+     "status": "disponible"
+    },
+    {
+     "name": "Jens Cajuste",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 3,
+     "status": "disponible"
+    },
+    {
+     "name": "Otu Junior",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Álex Pastor",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Juani",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos López",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Andres Cespedes",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "David Larrubia",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.2,
+     "goals": 0,
+     "minutes": 823,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Dotor",
+     "role": "M",
+     "imp": 0.8,
+     "att": 0.11,
+     "goals": 1,
+     "minutes": 662,
+     "status": "disponible"
+    },
+    {
+     "name": "Daniel Lorenzo",
+     "role": "M",
+     "imp": 0.7,
+     "att": 0.13,
+     "goals": 0,
+     "minutes": 626,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo Martínez",
+     "role": "M",
+     "imp": 0.5,
+     "att": 0.33,
+     "goals": 1,
+     "minutes": 475,
+     "status": "disponible"
+    },
+    {
+     "name": "Ramón Enríquez",
+     "role": "M",
+     "imp": 0.1,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 203,
+     "status": "disponible"
+    },
+    {
+     "name": "Adam Aznou",
+     "role": "M",
+     "imp": 0.1,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 138,
+     "status": "disponible"
+    },
+    {
+     "name": "Adrián Niño",
+     "role": "F",
+     "imp": 0.2,
+     "att": 0.62,
+     "goals": 4,
+     "minutes": 272,
+     "status": "disponible"
+    },
+    {
+     "name": "Chupe",
+     "role": "F",
+     "imp": 0.0,
+     "att": 0.4,
+     "goals": 1,
+     "minutes": 749,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    2.36,
+    0.71
+   ],
+   "xg_adj": [
+    2.35,
+    0.72
+   ],
+   "p_full": [
+    0.7395,
+    0.1713,
+    0.0892
+   ],
+   "p_adj": [
+    0.7346,
+    0.1734,
+    0.092
+   ]
+  },
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T20:00:00+00:00",
@@ -2325,15 +5767,15 @@
    "top_scores": [
     [
      "3-0",
-     0.10162200067744855
+     0.10162200067744868
     ],
     [
      "2-0",
-     0.09899288494350622
+     0.09899288494350679
     ],
     [
      "3-1",
-     0.08027083275828899
+     0.08027083275828896
     ]
    ]
   },
@@ -2658,45 +6100,567 @@
     }
    ]
   },
-  "movement": {
-   "home": "Barcelona",
-   "away": "Alaves",
-   "date": "2026-10-31",
-   "from_ts": "2026-10-25T17:56:46.744205+00:00",
-   "to_ts": "2026-10-25T18:01:26.218166+00:00",
-   "p_from": [
-    0.8417,
-    0.1197,
-    0.0386
-   ],
-   "p_to": [
-    0.8843,
-    0.0866,
-    0.0292
-   ],
-   "delta_pts": [
-    4.3,
-    -3.3,
-    -0.9
-   ],
-   "important": true,
-   "focus": "X",
-   "reasons": [
+  "roster": {
+   "home": [
     {
-     "factor": "Bajas y alineaciones",
-     "key": "bajas",
-     "effect_pts": [
-      4.3,
-      -3.3,
-      -0.9
-     ],
-     "detail": "Barcelona: recupera: Marc Bernal, Lamine Yamal; déficit ataque 29%→0%, defensa 11%→0%"
+     "name": "Joan García",
+     "role": "G",
+     "imp": 0.89,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 681,
+     "status": "disponible"
+    },
+    {
+     "name": "Xavi Espart",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.27,
+     "goals": 1,
+     "minutes": 626,
+     "status": "disponible"
+    },
+    {
+     "name": "Eric García",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.25,
+     "goals": 1,
+     "minutes": 599,
+     "status": "disponible"
+    },
+    {
+     "name": "Raphinha",
+     "role": "D",
+     "imp": 0.78,
+     "att": 1.83,
+     "goals": 12,
+     "minutes": 590,
+     "status": "disponible"
+    },
+    {
+     "name": "Gerard Martín",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.07,
+     "goals": 0,
+     "minutes": 582,
+     "status": "disponible"
+    },
+    {
+     "name": "Pau Cubarsí",
+     "role": "D",
+     "imp": 0.67,
+     "att": 0.2,
+     "goals": 0,
+     "minutes": 519,
+     "status": "disponible"
+    },
+    {
+     "name": "Anthony Gordon",
+     "role": "D",
+     "imp": 0.67,
+     "att": 0.87,
+     "goals": 1,
+     "minutes": 513,
+     "status": "disponible"
+    },
+    {
+     "name": "Andreas Christensen",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.22,
+     "goals": 0,
+     "minutes": 392,
+     "status": "disponible"
+    },
+    {
+     "name": "Jules Koundé",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.23,
+     "goals": 1,
+     "minutes": 343,
+     "status": "disponible"
+    },
+    {
+     "name": "Dani Olmo",
+     "role": "D",
+     "imp": 0.33,
+     "att": 1.29,
+     "goals": 1,
+     "minutes": 323,
+     "status": "disponible"
+    },
+    {
+     "name": "Marc Bernal",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.53,
+     "goals": 0,
+     "minutes": 299,
+     "status": "disponible"
+    },
+    {
+     "name": "João Cancelo",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.4,
+     "goals": 1,
+     "minutes": 192,
+     "status": "disponible"
+    },
+    {
+     "name": "Gavi",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 137,
+     "status": "disponible"
+    },
+    {
+     "name": "Dominik Livakovic",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 90,
+     "status": "disponible"
+    },
+    {
+     "name": "Wojciech Szczesny",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 39,
+     "status": "disponible"
+    },
+    {
+     "name": "Hamza Abdelkarim",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 5,
+     "status": "disponible"
+    },
+    {
+     "name": "Frenkie de Jong",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.35,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Cortés",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alejandro Balde",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Brian Fariñas",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Iker Rodríguez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Eder Aller",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jordi Pesquer",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Lamine Yamal",
+     "role": "M",
+     "imp": 1.0,
+     "att": 1.44,
+     "goals": 8,
+     "minutes": 759,
+     "status": "disponible"
+    },
+    {
+     "name": "Pedri",
+     "role": "M",
+     "imp": 0.78,
+     "att": 0.29,
+     "goals": 1,
+     "minutes": 647,
+     "status": "disponible"
+    },
+    {
+     "name": "Fermín López",
+     "role": "M",
+     "imp": 0.67,
+     "att": 0.91,
+     "goals": 4,
+     "minutes": 548,
+     "status": "disponible"
+    },
+    {
+     "name": "Rodri",
+     "role": "M",
+     "imp": 0.67,
+     "att": 0.51,
+     "goals": 1,
+     "minutes": 525,
+     "status": "disponible"
+    },
+    {
+     "name": "Karim Adeyemi",
+     "role": "M",
+     "imp": 0.33,
+     "att": 1.71,
+     "goals": 2,
+     "minutes": 306,
+     "status": "disponible"
+    },
+    {
+     "name": "Gabriel Jesus",
+     "role": "F",
+     "imp": 0.22,
+     "att": 0.5,
+     "goals": 3,
+     "minutes": 191,
+     "status": "disponible"
+    }
+   ],
+   "away": [
+    {
+     "name": "Antonio Sivera",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Nahuel Tenaglia",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.13,
+     "goals": 1,
+     "minutes": 857,
+     "status": "disponible"
+    },
+    {
+     "name": "Abde Rebbach",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ville Koski",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.11,
+     "goals": 1,
+     "minutes": 816,
+     "status": "disponible"
+    },
+    {
+     "name": "Jonny",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 669,
+     "status": "disponible"
+    },
+    {
+     "name": "Ángel Pérez",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.59,
+     "goals": 0,
+     "minutes": 659,
+     "status": "disponible"
+    },
+    {
+     "name": "Toni Martínez",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.66,
+     "goals": 0,
+     "minutes": 506,
+     "status": "disponible"
+    },
+    {
+     "name": "Nicolás Valentini",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 453,
+     "status": "disponible"
+    },
+    {
+     "name": "Denis Suárez",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.27,
+     "goals": 0,
+     "minutes": 424,
+     "status": "disponible"
+    },
+    {
+     "name": "Ander Guevara",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.24,
+     "goals": 0,
+     "minutes": 116,
+     "status": "disponible"
+    },
+    {
+     "name": "Aitor Mañas",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 106,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Protesoni",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Abderrahmane Rebbach",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 804,
+     "status": "disponible"
+    },
+    {
+     "name": "Youssef Lekhedim",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.24,
+     "goals": 0,
+     "minutes": 168,
+     "status": "disponible"
+    },
+    {
+     "name": "Hugo Novoa",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 71,
+     "status": "disponible"
+    },
+    {
+     "name": "Xanet Oláiz",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 6,
+     "status": "disponible"
+    },
+    {
+     "name": "Miguel Rodríguez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 5,
+     "status": "disponible"
+    },
+    {
+     "name": "Moussa Diarra",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Adrián Rodríguez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Selu Diallo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Grégoire Swiderski",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Rúben Montero",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Izei Hernandez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo Ibáñez",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.15,
+     "goals": 1,
+     "minutes": 852,
+     "status": "disponible"
+    },
+    {
+     "name": "Antonio Blanco",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 764,
+     "status": "disponible"
+    },
+    {
+     "name": "Carles Aleñá",
+     "role": "M",
+     "imp": 0.3,
+     "att": 0.28,
+     "goals": 0,
+     "minutes": 222,
+     "status": "disponible"
+    },
+    {
+     "name": "Mikel Rodriguez",
+     "role": "M",
+     "imp": 0.2,
+     "att": 0.25,
+     "goals": 1,
+     "minutes": 150,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Benavídez",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": 0,
+     "minutes": 156,
+     "status": "disponible"
+    },
+    {
+     "name": "Lucas Boyé",
+     "role": "F",
+     "imp": 0.9,
+     "att": 0.47,
+     "goals": 5,
+     "minutes": 742,
+     "status": "disponible"
+    },
+    {
+     "name": "Mariano Díaz",
+     "role": "F",
+     "imp": 0.4,
+     "att": 0.51,
+     "goals": 3,
+     "minutes": 434,
+     "status": "disponible"
     }
    ]
-  }
+  },
+  "absence_impact": {
+   "xg_full": [
+    3.08,
+    0.79
+   ],
+   "xg_adj": [
+    3.08,
+    0.79
+   ],
+   "p_full": [
+    0.8211,
+    0.1177,
+    0.0612
+   ],
+   "p_adj": [
+    0.8211,
+    0.1177,
+    0.0612
+   ]
+  },
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T13:00:00+00:00",
@@ -2717,15 +6681,15 @@
    "top_scores": [
     [
      "0-0",
-     0.15120415702109347
+     0.1512041570210952
     ],
     [
      "1-1",
-     0.1423923148173628
+     0.1423923148173629
     ],
     [
      "0-1",
-     0.1337566837238693
+     0.13375668372387045
     ]
    ]
   },
@@ -2825,13 +6789,14 @@
       "usual": true
      },
      {
-      "name": "Johan Mojica",
-      "pos": "LB",
+      "name": "Andrés García",
+      "pos": "SUB",
       "role": "D",
-      "imp": 0.8,
-      "att": 0.09,
-      "absent": "out",
-      "usual": true
+      "imp": 0.6,
+      "att": 0.07,
+      "absent": null,
+      "usual": false,
+      "replaces": "Johan Mojica"
      },
      {
       "name": "Nemanja Gudelj",
@@ -2852,13 +6817,14 @@
       "usual": true
      },
      {
-      "name": "Mario Martín",
-      "pos": "CM-L",
-      "role": "M",
-      "imp": 0.7,
-      "att": 0.15,
-      "absent": "out",
-      "usual": true
+      "name": "Orel Mangala",
+      "pos": "SUB",
+      "role": "D",
+      "imp": 0.6,
+      "att": 0.03,
+      "absent": null,
+      "usual": false,
+      "replaces": "Mario Martín"
      },
      {
       "name": "Francho Serrano",
@@ -2892,11 +6858,15 @@
      {
       "name": "Johan Mojica",
       "status": "out",
+      "reason": "suspension",
+      "source": "sanción por 5ª amarilla (25/10)",
       "imp": 0.8
      },
      {
       "name": "Mario Martín",
       "status": "out",
+      "reason": "suspension",
+      "source": "sanción por roja (25/10)",
       "imp": 0.7
      }
     ]
@@ -3074,10 +7044,632 @@
     }
    ]
   },
+  "roster": {
+   "home": [
+    {
+     "name": "David Soria",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Djené",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 722,
+     "status": "disponible"
+    },
+    {
+     "name": "Johan Mojica",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.09,
+     "goals": 0,
+     "minutes": 724,
+     "status": "sancionado",
+     "source": "sanción por 5ª amarilla (25/10)"
+    },
+    {
+     "name": "Nemanja Gudelj",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 637,
+     "status": "disponible"
+    },
+    {
+     "name": "Zaid Romero",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 559,
+     "status": "disponible"
+    },
+    {
+     "name": "Andrés García",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.07,
+     "goals": 0,
+     "minutes": 639,
+     "status": "disponible"
+    },
+    {
+     "name": "Enes Ünal",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.2,
+     "goals": 1,
+     "minutes": 638,
+     "status": "disponible"
+    },
+    {
+     "name": "Orel Mangala",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 553,
+     "status": "disponible"
+    },
+    {
+     "name": "Kiko Femenía",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 325,
+     "status": "disponible"
+    },
+    {
+     "name": "Jean Ives Valou",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 194,
+     "status": "disponible"
+    },
+    {
+     "name": "Dani Carvajal",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 173,
+     "status": "disponible"
+    },
+    {
+     "name": "Davinchi",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 137,
+     "status": "disponible"
+    },
+    {
+     "name": "Sebastián Boselli",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.17,
+     "goals": 0,
+     "minutes": 143,
+     "status": "disponible"
+    },
+    {
+     "name": "Saba Sazonov",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 142,
+     "status": "disponible"
+    },
+    {
+     "name": "Abdel Abqar",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Abdelkabir Abqar",
+     "role": "D",
+     "imp": 0.0,
+     "att": null,
+     "goals": 0,
+     "minutes": 204,
+     "status": "disponible"
+    },
+    {
+     "name": "Alberto Risco",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 46,
+     "status": "disponible"
+    },
+    {
+     "name": "Borja Mayoral",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.34,
+     "goals": 0,
+     "minutes": 19,
+     "status": "disponible"
+    },
+    {
+     "name": "Óscar López",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 7,
+     "status": "disponible"
+    },
+    {
+     "name": "Joselu Pérez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 3,
+     "status": "disponible"
+    },
+    {
+     "name": "Jirí Letácek",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Moha Achraf",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Mohamed Hamdoune",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ibra Drammeh",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Diego Ferrer",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jesús Martínez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Curro Burgos",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Martín Satriano",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.38,
+     "goals": 2,
+     "minutes": 765,
+     "status": "disponible"
+    },
+    {
+     "name": "Ramón Terrats",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.28,
+     "goals": 1,
+     "minutes": 732,
+     "status": "disponible"
+    },
+    {
+     "name": "Mario Martín",
+     "role": "M",
+     "imp": 0.7,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 567,
+     "status": "sancionado",
+     "source": "sanción por roja (25/10)"
+    },
+    {
+     "name": "Francho Serrano",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 538,
+     "status": "disponible"
+    },
+    {
+     "name": "Ivan Azón",
+     "role": "F",
+     "imp": 0.5,
+     "att": 0.23,
+     "goals": 1,
+     "minutes": 413,
+     "status": "disponible"
+    }
+   ],
+   "away": [
+    {
+     "name": "Odisseas Vlachodimos",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Gabriel Suazo",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.08,
+     "goals": 0,
+     "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Juan Iglesias",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.11,
+     "goals": 1,
+     "minutes": 795,
+     "status": "disponible"
+    },
+    {
+     "name": "Andrés Castrín",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.09,
+     "goals": 0,
+     "minutes": 659,
+     "status": "disponible"
+    },
+    {
+     "name": "Enrique Salas",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jon Guridi",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.28,
+     "goals": 1,
+     "minutes": 360,
+     "status": "disponible"
+    },
+    {
+     "name": "Arouna Sangante",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 290,
+     "status": "disponible"
+    },
+    {
+     "name": "Lucas Stassin",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 231,
+     "status": "disponible"
+    },
+    {
+     "name": "Isaac Romero",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.4,
+     "goals": 2,
+     "minutes": 230,
+     "status": "disponible"
+    },
+    {
+     "name": "Chidera Ejuke",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.3,
+     "goals": 1,
+     "minutes": 227,
+     "status": "disponible"
+    },
+    {
+     "name": "Julio Díaz",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 97,
+     "status": "disponible"
+    },
+    {
+     "name": "Nico Guillén",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 92,
+     "status": "disponible"
+    },
+    {
+     "name": "Kike Salas",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.06,
+     "goals": 0,
+     "minutes": 630,
+     "status": "disponible"
+    },
+    {
+     "name": "José Ángel Carmona",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 70,
+     "status": "disponible"
+    },
+    {
+     "name": "Manu Bueno",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 52,
+     "status": "disponible"
+    },
+    {
+     "name": "Rafael Romero",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Marcão",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.09,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Fábio Cardoso",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.01,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Manuel Ángel Castillo Rodríguez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alfonso González",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Fran González",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ibrahima Sow",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Edu Altozano",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Iker Ortín",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jesús Cruz Morales",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Lucien Agoumé",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.08,
+     "goals": 0,
+     "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Miguel Sierra",
+     "role": "M",
+     "imp": 0.89,
+     "att": 0.13,
+     "goals": 2,
+     "minutes": 592,
+     "status": "disponible"
+    },
+    {
+     "name": "Youssouf Fofana",
+     "role": "M",
+     "imp": 0.56,
+     "att": 0.53,
+     "goals": 1,
+     "minutes": 465,
+     "status": "disponible"
+    },
+    {
+     "name": "Felix Correia",
+     "role": "M",
+     "imp": 0.56,
+     "att": 0.49,
+     "goals": 1,
+     "minutes": 382,
+     "status": "disponible"
+    },
+    {
+     "name": "Giorgi Kochorashvili",
+     "role": "M",
+     "imp": 0.33,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 267,
+     "status": "disponible"
+    },
+    {
+     "name": "Peque",
+     "role": "M",
+     "imp": 0.33,
+     "att": 0.13,
+     "goals": 1,
+     "minutes": 221,
+     "status": "disponible"
+    },
+    {
+     "name": "Oso",
+     "role": "M",
+     "imp": 0.22,
+     "att": 0.23,
+     "goals": 1,
+     "minutes": 164,
+     "status": "disponible"
+    },
+    {
+     "name": "Rubén Vargas",
+     "role": "M",
+     "imp": 0.11,
+     "att": 0.35,
+     "goals": 0,
+     "minutes": 64,
+     "status": "disponible"
+    },
+    {
+     "name": "Robbie Ure",
+     "role": "F",
+     "imp": 0.67,
+     "att": 0.59,
+     "goals": 1,
+     "minutes": 514,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    1.05,
+    0.93
+   ],
+   "xg_adj": [
+    0.96,
+    0.98
+   ],
+   "p_full": [
+    0.3707,
+    0.3241,
+    0.3052
+   ],
+   "p_adj": [
+    0.3303,
+    0.3288,
+    0.3408
+   ]
+  },
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T15:15:00+00:00",
@@ -3098,15 +7690,15 @@
    "top_scores": [
     [
      "1-2",
-     0.08578866858114263
+     0.08578866858114105
     ],
     [
      "1-3",
-     0.08044964338340627
+     0.0804496433834065
     ],
     [
      "0-2",
-     0.07126755288991347
+     0.07126755288991184
     ]
    ]
   },
@@ -3213,13 +7805,14 @@
       "usual": true
      },
      {
-      "name": "Jorge Salinas",
-      "pos": "LB",
+      "name": "André Almeida",
+      "pos": "SUB",
       "role": "D",
-      "imp": 0.9,
-      "att": 0.16,
-      "absent": "out",
-      "usual": true
+      "imp": 0.3,
+      "att": 0.1,
+      "absent": null,
+      "usual": false,
+      "replaces": "Jorge Salinas"
      },
      {
       "name": "Pablo Ramon",
@@ -3280,6 +7873,8 @@
      {
       "name": "Jorge Salinas",
       "status": "out",
+      "reason": "suspension",
+      "source": "sanción por 5ª amarilla (24/10)",
       "imp": 0.9
      }
     ]
@@ -3289,13 +7884,14 @@
     "formation": null,
     "xi": [
      {
-      "name": "Thibaut Courtois",
-      "pos": "G",
-      "role": "G",
-      "imp": 1.0,
-      "att": 0.01,
-      "absent": "out",
-      "usual": true
+      "name": "Aurélien Tchouaméni",
+      "pos": "LM",
+      "role": "M",
+      "imp": 0.44,
+      "att": 0.17,
+      "absent": null,
+      "usual": false,
+      "replaces": "Thibaut Courtois"
      },
      {
       "name": "Kylian Mbappé",
@@ -3334,13 +7930,14 @@
       "usual": true
      },
      {
-      "name": "Vinícius Júnior",
+      "name": "Bernardo Silva",
       "pos": "SUB",
       "role": "D",
-      "imp": 0.78,
-      "att": 0.72,
-      "absent": "out",
-      "usual": true
+      "imp": 0.33,
+      "att": 0.11,
+      "absent": null,
+      "usual": false,
+      "replaces": "Vinícius Júnior"
      },
      {
       "name": "Arda Güler",
@@ -3392,11 +7989,15 @@
      {
       "name": "Thibaut Courtois",
       "status": "out",
+      "reason": "news",
+      "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com",
       "imp": 1.0
      },
      {
       "name": "Vinícius Júnior",
       "status": "out",
+      "reason": "suspension",
+      "source": "sancionado (le quedan 2 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció",
       "imp": 0.78
      }
     ]
@@ -3468,10 +8069,615 @@
     }
    ]
   },
+  "roster": {
+   "home": [
+    {
+     "name": "Julen Agirrezabala",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Jorge Salinas",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.16,
+     "goals": 0,
+     "minutes": 808,
+     "status": "sancionado",
+     "source": "sanción por 5ª amarilla (24/10)"
+    },
+    {
+     "name": "Alvaro Mantilla",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.15,
+     "goals": 0,
+     "minutes": 787,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo Ramon",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 620,
+     "status": "disponible"
+    },
+    {
+     "name": "Jeanuël Belocian",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.06,
+     "goals": 1,
+     "minutes": 479,
+     "status": "disponible"
+    },
+    {
+     "name": "Manu",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 406,
+     "status": "disponible"
+    },
+    {
+     "name": "Asier Villalibre",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 255,
+     "status": "disponible"
+    },
+    {
+     "name": "Facundo González",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 249,
+     "status": "disponible"
+    },
+    {
+     "name": "André Almeida",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 240,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo García",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Martínez",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 123,
+     "status": "disponible"
+    },
+    {
+     "name": "Pedro Felipe",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 86,
+     "status": "disponible"
+    },
+    {
+     "name": "Iker Luque",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 152,
+     "status": "disponible"
+    },
+    {
+     "name": "Aarón Martín",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 143,
+     "status": "disponible"
+    },
+    {
+     "name": "Maguette Gueye",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 138,
+     "status": "disponible"
+    },
+    {
+     "name": "Íñigo Sainz",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 85,
+     "status": "disponible"
+    },
+    {
+     "name": "Juan Carlos Arana",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 66,
+     "status": "disponible"
+    },
+    {
+     "name": "Giorgi Guliashvili",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 52,
+     "status": "disponible"
+    },
+    {
+     "name": "Diego Diaz",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 7,
+     "status": "disponible"
+    },
+    {
+     "name": "Jorge Castellanos Del Olmo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Hugo Pérez Sañudo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Laro Gómez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Simon Eriksson",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Andrés Vallecillo",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Hugo Martín",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Sánchez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Iñigo Vicente",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.38,
+     "goals": 0,
+     "minutes": 813,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Canales",
+     "role": "M",
+     "imp": 0.9,
+     "att": 0.26,
+     "goals": 1,
+     "minutes": 750,
+     "status": "disponible"
+    },
+    {
+     "name": "Iván Martín",
+     "role": "M",
+     "imp": 0.7,
+     "att": 0.09,
+     "goals": 1,
+     "minutes": 667,
+     "status": "disponible"
+    },
+    {
+     "name": "Matteo Prati",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.04,
+     "goals": 0,
+     "minutes": 513,
+     "status": "disponible"
+    },
+    {
+     "name": "Andrés Martín",
+     "role": "M",
+     "imp": 0.4,
+     "att": 0.91,
+     "goals": 1,
+     "minutes": 377,
+     "status": "disponible"
+    },
+    {
+     "name": "Gustavo Puerta",
+     "role": "M",
+     "imp": 0.3,
+     "att": 0.2,
+     "goals": 0,
+     "minutes": 270,
+     "status": "disponible"
+    },
+    {
+     "name": "Yassir Zabiri",
+     "role": "F",
+     "imp": 0.7,
+     "att": 0.73,
+     "goals": 8,
+     "minutes": 651,
+     "status": "disponible"
+    }
+   ],
+   "away": [
+    {
+     "name": "Thibaut Courtois",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 810,
+     "status": "baja",
+     "source": "El Real Madrid sufre un duro revés por la lesión de Thibaut Courtois a pocas horas del Clásico contra el Barcelona - Goal.com"
+    },
+    {
+     "name": "Federico Valverde",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.15,
+     "goals": 0,
+     "minutes": 755,
+     "status": "disponible"
+    },
+    {
+     "name": "Ibrahima Konaté",
+     "role": "D",
+     "imp": 0.89,
+     "att": 0.06,
+     "goals": 0,
+     "minutes": 720,
+     "status": "disponible"
+    },
+    {
+     "name": "Dean Huijsen",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 594,
+     "status": "disponible"
+    },
+    {
+     "name": "Vinícius Júnior",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.92,
+     "goals": 1,
+     "minutes": 592,
+     "status": "sancionado",
+     "source": "sancionado (le quedan 2 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
+    },
+    {
+     "name": "Marc Cucurella",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 560,
+     "status": "disponible"
+    },
+    {
+     "name": "Denzel Dumfries",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.18,
+     "goals": 0,
+     "minutes": 428,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Carreras",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Antonio Rüdiger",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.08,
+     "goals": 1,
+     "minutes": 304,
+     "status": "disponible"
+    },
+    {
+     "name": "Bernardo Silva",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 296,
+     "status": "disponible"
+    },
+    {
+     "name": "Trent Alexander-Arnold",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.19,
+     "goals": 0,
+     "minutes": 258,
+     "status": "disponible"
+    },
+    {
+     "name": "Eduardo Camavinga",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.18,
+     "goals": 0,
+     "minutes": 257,
+     "status": "disponible"
+    },
+    {
+     "name": "Brahim Díaz",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.39,
+     "goals": 0,
+     "minutes": 116,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Fernández",
+     "role": "D",
+     "imp": 0.0,
+     "att": null,
+     "goals": 1,
+     "minutes": 252,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Espí",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 2,
+     "minutes": 14,
+     "status": "disponible"
+    },
+    {
+     "name": "Éder Militão",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.24,
+     "goals": 0,
+     "minutes": 2,
+     "status": "disponible"
+    },
+    {
+     "name": "Andriy Lunin",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.01,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alexis Ciria",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Mestre",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Mario Rivas",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Raúl Asencio",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.11,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Thiago Pitarch",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.18,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Martínez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jorge Cestero",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Javier Navarro",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jude Bellingham",
+     "role": "M",
+     "imp": 0.89,
+     "att": 0.65,
+     "goals": 3,
+     "minutes": 700,
+     "status": "disponible"
+    },
+    {
+     "name": "Arda Güler",
+     "role": "M",
+     "imp": 0.78,
+     "att": 1.11,
+     "goals": 2,
+     "minutes": 517,
+     "status": "disponible"
+    },
+    {
+     "name": "Yan Diomande",
+     "role": "M",
+     "imp": 0.44,
+     "att": 0.35,
+     "goals": 2,
+     "minutes": 444,
+     "status": "disponible"
+    },
+    {
+     "name": "Aurélien Tchouaméni",
+     "role": "M",
+     "imp": 0.44,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 359,
+     "status": "disponible"
+    },
+    {
+     "name": "Endrick",
+     "role": "M",
+     "imp": 0.11,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 74,
+     "status": "disponible"
+    },
+    {
+     "name": "Kylian Mbappé",
+     "role": "F",
+     "imp": 1.0,
+     "att": 1.43,
+     "goals": 9,
+     "minutes": 808,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    1.15,
+    2.97
+   ],
+   "xg_adj": [
+    1.2,
+    2.81
+   ],
+   "p_full": [
+    0.1129,
+    0.1472,
+    0.7399
+   ],
+   "p_adj": [
+    0.1337,
+    0.1613,
+    0.705
+   ]
+  },
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T17:30:00+00:00",
@@ -3492,15 +8698,15 @@
    "top_scores": [
     [
      "1-1",
-     0.12427355650800999
+     0.12427355650800993
     ],
     [
      "1-0",
-     0.11610655128602161
+     0.1161065512860214
     ],
     [
      "2-0",
-     0.09897131657242979
+     0.09897131657242995
     ]
    ]
   },
@@ -3773,11 +8979,15 @@
      {
       "name": "David Otorbi",
       "status": "out",
+      "reason": "news",
+      "source": "Dramática lesión de David Otorbi en el Valencia CF- Villarreal CF: confirmada la rotura muscular - Superdeporte",
       "imp": 0.3
      },
      {
       "name": "Harvey Elliott",
       "status": "out",
+      "reason": "suspension",
+      "source": "sanción por roja (24/10)",
       "imp": 0.0
      }
     ]
@@ -3849,32 +9059,605 @@
     }
    ]
   },
-  "movement": {
-   "home": "Elche",
-   "away": "Valencia",
-   "date": "2026-11-01",
-   "from_ts": "2026-10-25T17:56:46.744205+00:00",
-   "to_ts": "2026-10-25T18:01:26.218166+00:00",
-   "p_from": [
-    0.5116,
-    0.2589,
-    0.2295
+  "roster": {
+   "home": [
+    {
+     "name": "Matías Dituro",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Víctor Chust",
+     "role": "D",
+     "imp": 1.0,
+     "att": 0.08,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "Buba Sangaré",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.01,
+     "goals": 1,
+     "minutes": 721,
+     "status": "disponible"
+    },
+    {
+     "name": "Roy Revivo",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.23,
+     "goals": 0,
+     "minutes": 540,
+     "status": "disponible"
+    },
+    {
+     "name": "Federico Redondo",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.29,
+     "goals": 1,
+     "minutes": 485,
+     "status": "disponible"
+    },
+    {
+     "name": "José Antonio Morente",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "David Affengruber",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.2,
+     "goals": 0,
+     "minutes": 270,
+     "status": "disponible"
+    },
+    {
+     "name": "Facundo Buonanotte",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 260,
+     "status": "disponible"
+    },
+    {
+     "name": "Ali Houary",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 200,
+     "status": "disponible"
+    },
+    {
+     "name": "Abiel Osorio",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.54,
+     "goals": 1,
+     "minutes": 284,
+     "status": "disponible"
+    },
+    {
+     "name": "Martim Neto",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.25,
+     "goals": 0,
+     "minutes": 213,
+     "status": "disponible"
+    },
+    {
+     "name": "Pedro Bigas",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 183,
+     "status": "disponible"
+    },
+    {
+     "name": "Rubén Sánchez",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 184,
+     "status": "disponible"
+    },
+    {
+     "name": "Ezequiel Ponce",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 115,
+     "status": "disponible"
+    },
+    {
+     "name": "Tete Morente",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.31,
+     "goals": 0,
+     "minutes": 487,
+     "status": "disponible"
+    },
+    {
+     "name": "Umaru",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 20,
+     "status": "disponible"
+    },
+    {
+     "name": "Josan",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.55,
+     "goals": 0,
+     "minutes": 17,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Padilla Escribá",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 8,
+     "status": "disponible"
+    },
+    {
+     "name": "Matia Barzic",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 6,
+     "status": "disponible"
+    },
+    {
+     "name": "Kevin Lomónaco",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Grady Diangana",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.23,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alejandro Iturbe",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Nordin Al Lal",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Germán Valera",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.14,
+     "goals": 2,
+     "minutes": 848,
+     "status": "disponible"
+    },
+    {
+     "name": "Gonzalo Villar",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.2,
+     "goals": 0,
+     "minutes": 797,
+     "status": "disponible"
+    },
+    {
+     "name": "Javier Morcillo",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.04,
+     "goals": 0,
+     "minutes": 573,
+     "status": "disponible"
+    },
+    {
+     "name": "Marc Aguado",
+     "role": "M",
+     "imp": 0.6,
+     "att": 0.08,
+     "goals": 1,
+     "minutes": 385,
+     "status": "disponible"
+    },
+    {
+     "name": "Thomas Lemar",
+     "role": "M",
+     "imp": 0.4,
+     "att": 0.21,
+     "goals": 1,
+     "minutes": 399,
+     "status": "disponible"
+    },
+    {
+     "name": "Lucas Cepeda",
+     "role": "M",
+     "imp": 0.3,
+     "att": 0.41,
+     "goals": 0,
+     "minutes": 377,
+     "status": "disponible"
+    },
+    {
+     "name": "Fer Niño",
+     "role": "F",
+     "imp": 0.8,
+     "att": 0.5,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Fernando Niño",
+     "role": "F",
+     "imp": 0.0,
+     "att": 0.59,
+     "goals": 6,
+     "minutes": 644,
+     "status": "disponible"
+    }
    ],
-   "p_to": [
-    0.5189,
-    0.256,
-    0.2251
+   "away": [
+    {
+     "name": "Stole Dimitrievski",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 900,
+     "status": "disponible"
+    },
+    {
+     "name": "José Gayà",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.18,
+     "goals": 0,
+     "minutes": 629,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo Maffeo",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.05,
+     "goals": 0,
+     "minutes": 595,
+     "status": "disponible"
+    },
+    {
+     "name": "Filip Ugrinic",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.09,
+     "goals": 0,
+     "minutes": 582,
+     "status": "disponible"
+    },
+    {
+     "name": "César Tárrega",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.07,
+     "goals": 0,
+     "minutes": 502,
+     "status": "disponible"
+    },
+    {
+     "name": "Justin de Haas",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.14,
+     "goals": 0,
+     "minutes": 470,
+     "status": "disponible"
+    },
+    {
+     "name": "Hugo Duro",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.26,
+     "goals": 0,
+     "minutes": 399,
+     "status": "disponible"
+    },
+    {
+     "name": "Jesús Vázquez",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.04,
+     "goals": 0,
+     "minutes": 349,
+     "status": "disponible"
+    },
+    {
+     "name": "Mouctar Diakhaby",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.05,
+     "goals": 0,
+     "minutes": 339,
+     "status": "disponible"
+    },
+    {
+     "name": "Ryunosuke Sato",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 302,
+     "status": "disponible"
+    },
+    {
+     "name": "Arnau Martínez",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 265,
+     "status": "disponible"
+    },
+    {
+     "name": "Aliou Dieng",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 222,
+     "status": "disponible"
+    },
+    {
+     "name": "Dani Raba",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 183,
+     "status": "disponible"
+    },
+    {
+     "name": "Aaron Mayol",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 180,
+     "status": "disponible"
+    },
+    {
+     "name": "Harvey Elliott",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 130,
+     "status": "sancionado",
+     "source": "sanción por roja (24/10)"
+    },
+    {
+     "name": "Iker Córdoba",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 94,
+     "status": "disponible"
+    },
+    {
+     "name": "Aimar Blázquez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 7,
+     "status": "disponible"
+    },
+    {
+     "name": "Dimitri Foulquier",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.05,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "André Almeida",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.27,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Kayne Van Oevelen",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Jaume Durá I Soler",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Rodrigo Gamón Martín",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Marcos Navarro",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alex Panach",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Cristian Rivero",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Pepelu",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.17,
+     "goals": 1,
+     "minutes": 850,
+     "status": "disponible"
+    },
+    {
+     "name": "Guido Rodríguez",
+     "role": "M",
+     "imp": 0.7,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 589,
+     "status": "disponible"
+    },
+    {
+     "name": "David Otorbi",
+     "role": "M",
+     "imp": 0.3,
+     "att": 0.59,
+     "goals": 1,
+     "minutes": 339,
+     "status": "baja",
+     "source": "Dramática lesión de David Otorbi en el Valencia CF- Villarreal CF: confirmada la rotura muscular - Superdeporte"
+    },
+    {
+     "name": "Luis Rioja",
+     "role": "M",
+     "imp": 0.2,
+     "att": 0.23,
+     "goals": 1,
+     "minutes": 239,
+     "status": "disponible"
+    },
+    {
+     "name": "Javier Guerra",
+     "role": "F",
+     "imp": 1.0,
+     "att": 0.31,
+     "goals": 0,
+     "minutes": 834,
+     "status": "disponible"
+    },
+    {
+     "name": "Arnaut Danjuma",
+     "role": "F",
+     "imp": 0.8,
+     "att": 0.23,
+     "goals": 0,
+     "minutes": 752,
+     "status": "disponible"
+    },
+    {
+     "name": "Umar Sadiq",
+     "role": "F",
+     "imp": 0.1,
+     "att": 0.63,
+     "goals": 1,
+     "minutes": 151,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    1.6,
+    1.04
    ],
-   "delta_pts": [
-    0.7,
-    -0.3,
-    -0.4
+   "xg_adj": [
+    1.62,
+    0.96
    ],
-   "important": false
-  }
+   "p_full": [
+    0.4995,
+    0.2619,
+    0.2386
+   ],
+   "p_adj": [
+    0.5203,
+    0.261,
+    0.2187
+   ]
+  },
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:01:26.218166+00:00",
+  "generated_at": "2026-10-25T18:19:14.530876+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T20:00:00+00:00",
@@ -3895,7 +9678,7 @@
    "top_scores": [
     [
      "1-1",
-     0.11886547288646225
+     0.1188654728864623
     ],
     [
      "2-1",
@@ -3903,7 +9686,7 @@
     ],
     [
      "1-0",
-     0.08892653454264045
+     0.08892653454264027
     ]
    ]
   },
@@ -4226,6 +10009,563 @@
      "p": 0.082,
      "xg90": 0.14
     }
+   ]
+  },
+  "roster": {
+   "home": [
+    {
+     "name": "Unai Simón",
+     "role": "G",
+     "imp": 1.0,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Aymeric Laporte",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 644,
+     "status": "disponible"
+    },
+    {
+     "name": "Yuri Berchiche",
+     "role": "D",
+     "imp": 0.78,
+     "att": 0.21,
+     "goals": 1,
+     "minutes": 546,
+     "status": "disponible"
+    },
+    {
+     "name": "Robert Navarro",
+     "role": "D",
+     "imp": 0.67,
+     "att": 0.43,
+     "goals": 2,
+     "minutes": 493,
+     "status": "disponible"
+    },
+    {
+     "name": "Beñat Gerenabarrena",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.03,
+     "goals": 0,
+     "minutes": 492,
+     "status": "disponible"
+    },
+    {
+     "name": "Aitor Paredes",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.13,
+     "goals": 2,
+     "minutes": 483,
+     "status": "disponible"
+    },
+    {
+     "name": "Yeray",
+     "role": "D",
+     "imp": 0.56,
+     "att": 0.21,
+     "goals": 0,
+     "minutes": 411,
+     "status": "disponible"
+    },
+    {
+     "name": "Jesús Areso",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 374,
+     "status": "disponible"
+    },
+    {
+     "name": "Hugo Rincón",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 366,
+     "status": "disponible"
+    },
+    {
+     "name": "Johaneko Louis Jean",
+     "role": "D",
+     "imp": 0.44,
+     "att": 0.07,
+     "goals": 0,
+     "minutes": 278,
+     "status": "disponible"
+    },
+    {
+     "name": "Mikel Jauregizar",
+     "role": "D",
+     "imp": 0.33,
+     "att": 0.04,
+     "goals": 0,
+     "minutes": 300,
+     "status": "disponible"
+    },
+    {
+     "name": "Gorka Guruzeta",
+     "role": "D",
+     "imp": 0.22,
+     "att": 0.57,
+     "goals": 0,
+     "minutes": 183,
+     "status": "disponible"
+    },
+    {
+     "name": "Dani Vivian",
+     "role": "D",
+     "imp": 0.11,
+     "att": 0.11,
+     "goals": 0,
+     "minutes": 90,
+     "status": "disponible"
+    },
+    {
+     "name": "Alejandro Rego",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 52,
+     "status": "disponible"
+    },
+    {
+     "name": "Christian Imga",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 19,
+     "status": "disponible"
+    },
+    {
+     "name": "Adama Boiro",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 16,
+     "status": "disponible"
+    },
+    {
+     "name": "Álvaro Djaló",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 5,
+     "status": "disponible"
+    },
+    {
+     "name": "Nico Serrano",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.33,
+     "goals": 0,
+     "minutes": 4,
+     "status": "disponible"
+    },
+    {
+     "name": "Beñat Prados",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 2,
+     "status": "disponible"
+    },
+    {
+     "name": "Jesús Vizcay Hurtado",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Álex Padilla",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Iker Monreal",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Selton Sánchez",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Iñaki Williams",
+     "role": "M",
+     "imp": 0.89,
+     "att": 0.53,
+     "goals": 2,
+     "minutes": 600,
+     "status": "disponible"
+    },
+    {
+     "name": "Iñigo Ruiz de Galarreta",
+     "role": "M",
+     "imp": 0.78,
+     "att": 0.19,
+     "goals": 0,
+     "minutes": 455,
+     "status": "disponible"
+    },
+    {
+     "name": "Oihan Sancet",
+     "role": "M",
+     "imp": 0.67,
+     "att": 0.65,
+     "goals": 1,
+     "minutes": 517,
+     "status": "disponible"
+    },
+    {
+     "name": "Álex Berenguer",
+     "role": "M",
+     "imp": 0.56,
+     "att": 0.57,
+     "goals": 3,
+     "minutes": 541,
+     "status": "disponible"
+    },
+    {
+     "name": "Nico Williams",
+     "role": "M",
+     "imp": 0.56,
+     "att": 0.52,
+     "goals": 1,
+     "minutes": 446,
+     "status": "disponible"
+    },
+    {
+     "name": "Peio Canales",
+     "role": "M",
+     "imp": 0.44,
+     "att": 0.15,
+     "goals": 0,
+     "minutes": 438,
+     "status": "disponible"
+    },
+    {
+     "name": "Maroan Sannadi",
+     "role": "F",
+     "imp": 0.22,
+     "att": 0.5,
+     "goals": 0,
+     "minutes": 248,
+     "status": "disponible"
+    }
+   ],
+   "away": [
+    {
+     "name": "Álex Remiro",
+     "role": "G",
+     "imp": 0.9,
+     "att": 0.01,
+     "goals": 0,
+     "minutes": 720,
+     "status": "disponible"
+    },
+    {
+     "name": "Sergio Gómez",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.13,
+     "goals": 0,
+     "minutes": 701,
+     "status": "disponible"
+    },
+    {
+     "name": "Jon Martín",
+     "role": "D",
+     "imp": 0.8,
+     "att": 0.09,
+     "goals": 1,
+     "minutes": 636,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Soler",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.36,
+     "goals": 1,
+     "minutes": 622,
+     "status": "disponible"
+    },
+    {
+     "name": "Jon Aramburu",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 599,
+     "status": "disponible"
+    },
+    {
+     "name": "Yangel Herrera",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.1,
+     "goals": 1,
+     "minutes": 499,
+     "status": "disponible"
+    },
+    {
+     "name": "Ander Barrenetxea",
+     "role": "D",
+     "imp": 0.6,
+     "att": 0.26,
+     "goals": 2,
+     "minutes": 474,
+     "status": "disponible"
+    },
+    {
+     "name": "Mamadou Sarr",
+     "role": "D",
+     "imp": 0.5,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 331,
+     "status": "disponible"
+    },
+    {
+     "name": "Igor Zubeldia",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.02,
+     "goals": 0,
+     "minutes": 437,
+     "status": "disponible"
+    },
+    {
+     "name": "Takefusa Kubo",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.26,
+     "goals": 1,
+     "minutes": 300,
+     "status": "disponible"
+    },
+    {
+     "name": "Job Ochieng",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.33,
+     "goals": 1,
+     "minutes": 287,
+     "status": "disponible"
+    },
+    {
+     "name": "Luken Beitia",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.21,
+     "goals": 0,
+     "minutes": 270,
+     "status": "disponible"
+    },
+    {
+     "name": "Héctor Fort",
+     "role": "D",
+     "imp": 0.2,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 70,
+     "status": "disponible"
+    },
+    {
+     "name": "Aihen Muñoz",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 109,
+     "status": "disponible"
+    },
+    {
+     "name": "Unai Marrero",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 90,
+     "status": "disponible"
+    },
+    {
+     "name": "Pablo Marín",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.19,
+     "goals": 0,
+     "minutes": 68,
+     "status": "disponible"
+    },
+    {
+     "name": "Arsen Zakharyan",
+     "role": "D",
+     "imp": 0.1,
+     "att": 0.47,
+     "goals": 1,
+     "minutes": 66,
+     "status": "disponible"
+    },
+    {
+     "name": "Alex Marchal",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 103,
+     "status": "disponible"
+    },
+    {
+     "name": "Jon Pacheco",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": 0,
+     "minutes": 17,
+     "status": "disponible"
+    },
+    {
+     "name": "Alex Lebarbier",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Mikel Goti",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Gorka Carrera",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Ibai Aguirre",
+     "role": "D",
+     "imp": 0.0,
+     "att": 0.1,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Luka Sucic",
+     "role": "M",
+     "imp": 0.8,
+     "att": 0.33,
+     "goals": 3,
+     "minutes": 644,
+     "status": "disponible"
+    },
+    {
+     "name": "Gonçalo Guedes",
+     "role": "M",
+     "imp": 0.5,
+     "att": 0.53,
+     "goals": 2,
+     "minutes": 349,
+     "status": "disponible"
+    },
+    {
+     "name": "Beñat Turrientes",
+     "role": "M",
+     "imp": 0.4,
+     "att": 0.14,
+     "goals": 0,
+     "minutes": 260,
+     "status": "disponible"
+    },
+    {
+     "name": "Jon Gorrotxategi",
+     "role": "M",
+     "imp": 0.3,
+     "att": 0.08,
+     "goals": 0,
+     "minutes": 217,
+     "status": "disponible"
+    },
+    {
+     "name": "Mikel Oyarzabal",
+     "role": "F",
+     "imp": 0.8,
+     "att": 0.55,
+     "goals": 2,
+     "minutes": 606,
+     "status": "disponible"
+    },
+    {
+     "name": "Orri Óskarsson",
+     "role": "F",
+     "imp": 0.5,
+     "att": 0.87,
+     "goals": 2,
+     "minutes": 393,
+     "status": "disponible"
+    }
+   ]
+  },
+  "absence_impact": {
+   "xg_full": [
+    1.69,
+    1.19
+   ],
+   "xg_adj": [
+    1.69,
+    1.19
+   ],
+   "p_full": [
+    0.4854,
+    0.2521,
+    0.2625
+   ],
+   "p_adj": [
+    0.4854,
+    0.2521,
+    0.2625
    ]
   },
   "movement": null
