@@ -1,0 +1,1582 @@
+[
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Alaves",
+  "away": "Malaga",
+  "p_home": 0.6286,
+  "p_draw": 0.2134,
+  "p_away": 0.158,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.6524,
+   "p_draw": 0.2192,
+   "p_away": 0.1284,
+   "xg_home": 1.9155,
+   "xg_away": 0.7211,
+   "p_over25": 0.4907,
+   "p_btts": 0.4425,
+   "top_scores": [
+    [
+     "1-0",
+     0.1327576808187148
+    ],
+    [
+     "2-0",
+     0.13136917580376553
+    ],
+    [
+     "1-1",
+     0.10331046324825362
+    ]
+   ]
+  },
+  "xg_base": [
+   1.915,
+   0.721
+  ],
+  "elo_diff": 109.5,
+  "referee": null,
+  "weather": {
+   "temp_c": 14.5,
+   "precip_mm": 0.0,
+   "wind_kmh": 2.9
+  },
+  "market": [
+   0.5983,
+   0.2434,
+   0.1582
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.026,
+   "h2h_gd": 0.0,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Alaves": [],
+   "Malaga": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Ath Bilbao",
+  "away": "Getafe",
+  "p_home": 0.6357,
+  "p_draw": 0.2423,
+  "p_away": 0.122,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.4552,
+   "p_draw": 0.3322,
+   "p_away": 0.2126,
+   "xg_home": 1.1035,
+   "xg_away": 0.6588,
+   "p_over25": 0.2593,
+   "p_btts": 0.328,
+   "top_scores": [
+    [
+     "1-0",
+     0.18385198692774118
+    ],
+    [
+     "0-0",
+     0.1772130159979839
+    ],
+    [
+     "1-1",
+     0.13034875555621145
+    ]
+   ]
+  },
+  "xg_base": [
+   1.103,
+   0.659
+  ],
+  "elo_diff": 70.7,
+  "referee": null,
+  "weather": {
+   "temp_c": 18.5,
+   "precip_mm": 0.0,
+   "wind_kmh": 9.8
+  },
+  "market": [
+   0.6199,
+   0.2373,
+   0.1428
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.0,
+   "h2h_gd": 0.1,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 1.0,
+   "red_prev_away": 1.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Ath Bilbao": [],
+   "Getafe": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Ath Madrid",
+  "away": "La Coruna",
+  "p_home": 0.7866,
+  "p_draw": 0.1367,
+  "p_away": 0.0766,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.6809,
+   "p_draw": 0.1943,
+   "p_away": 0.1248,
+   "xg_home": 2.1974,
+   "xg_away": 0.8334,
+   "p_over25": 0.5837,
+   "p_btts": 0.5066,
+   "top_scores": [
+    [
+     "2-0",
+     0.11655071898070317
+    ],
+    [
+     "1-0",
+     0.1021406271109999
+    ],
+    [
+     "2-1",
+     0.09713915305138561
+    ]
+   ]
+  },
+  "xg_base": [
+   2.197,
+   0.833
+  ],
+  "elo_diff": 201.7,
+  "referee": null,
+  "weather": {
+   "temp_c": 18.3,
+   "precip_mm": 0.0,
+   "wind_kmh": 3.2
+  },
+  "market": [
+   0.7773,
+   0.1469,
+   0.0757
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": -0.019,
+   "h2h_gd": 0.0,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Ath Madrid": [],
+   "La Coruna": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Barcelona",
+  "away": "Real Madrid",
+  "p_home": 0.6298,
+  "p_draw": 0.19,
+  "p_away": 0.1802,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.5842,
+   "p_draw": 0.203,
+   "p_away": 0.2128,
+   "xg_home": 2.2984,
+   "xg_away": 1.3472,
+   "p_over25": 0.7052,
+   "p_btts": 0.6693,
+   "top_scores": [
+    [
+     "2-1",
+     0.09289774688791189
+    ],
+    [
+     "1-1",
+     0.0844401213412234
+    ],
+    [
+     "3-1",
+     0.07117081737847292
+    ]
+   ]
+  },
+  "xg_base": [
+   2.298,
+   1.347
+  ],
+  "elo_diff": 145.4,
+  "referee": null,
+  "weather": {
+   "temp_c": 18.1,
+   "precip_mm": 0.0,
+   "wind_kmh": 4.4
+  },
+  "market": [
+   0.6037,
+   0.1693,
+   0.227
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.007,
+   "h2h_gd": 0.4,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Barcelona": [],
+   "Real Madrid": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Celta",
+  "away": "Betis",
+  "p_home": 0.3474,
+  "p_draw": 0.2835,
+  "p_away": 0.3691,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.4222,
+   "p_draw": 0.2659,
+   "p_away": 0.3119,
+   "xg_home": 1.4788,
+   "xg_away": 1.2382,
+   "p_over25": 0.5105,
+   "p_btts": 0.5536,
+   "top_scores": [
+    [
+     "1-1",
+     0.1263728296288648
+    ],
+    [
+     "1-0",
+     0.09231829715269224
+    ],
+    [
+     "2-1",
+     0.08945475057450476
+    ]
+   ]
+  },
+  "xg_base": [
+   1.479,
+   1.238
+  ],
+  "elo_diff": -5.4,
+  "referee": null,
+  "weather": {
+   "temp_c": 16.3,
+   "precip_mm": 0.0,
+   "wind_kmh": 3.4
+  },
+  "market": [
+   0.3231,
+   0.2743,
+   0.4026
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.04,
+   "h2h_gd": 0.1,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 1.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Celta": [],
+   "Betis": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Santander",
+  "away": "Espanol",
+  "p_home": 0.3956,
+  "p_draw": 0.2639,
+  "p_away": 0.3405,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.3442,
+   "p_draw": 0.2402,
+   "p_away": 0.4156,
+   "xg_home": 1.544,
+   "xg_away": 1.7128,
+   "p_over25": 0.6318,
+   "p_btts": 0.6492,
+   "top_scores": [
+    [
+     "1-1",
+     0.10638386722459119
+    ],
+    [
+     "1-2",
+     0.08722021960195316
+    ],
+    [
+     "2-1",
+     0.07862623100202117
+    ]
+   ]
+  },
+  "xg_base": [
+   1.544,
+   1.713
+  ],
+  "elo_diff": 66.4,
+  "referee": null,
+  "weather": {
+   "temp_c": 18.7,
+   "precip_mm": 0.0,
+   "wind_kmh": 11.1
+  },
+  "market": [
+   0.4011,
+   0.2576,
+   0.3413
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.0,
+   "h2h_gd": 0.0,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Santander": [],
+   "Espanol": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Sevilla",
+  "away": "Osasuna",
+  "p_home": 0.49,
+  "p_draw": 0.2867,
+  "p_away": 0.2233,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.4874,
+   "p_draw": 0.2569,
+   "p_away": 0.2557,
+   "xg_home": 1.626,
+   "xg_away": 1.1146,
+   "p_over25": 0.5163,
+   "p_btts": 0.545,
+   "top_scores": [
+    [
+     "1-1",
+     0.12216500466359397
+    ],
+    [
+     "1-0",
+     0.09971928098828457
+    ],
+    [
+     "2-1",
+     0.09508293896378253
+    ]
+   ]
+  },
+  "xg_base": [
+   1.626,
+   1.115
+  ],
+  "elo_diff": 83.8,
+  "referee": null,
+  "weather": {
+   "temp_c": 24.3,
+   "precip_mm": 0.0,
+   "wind_kmh": 1.8
+  },
+  "market": [
+   0.4983,
+   0.2741,
+   0.2276
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": -0.023,
+   "h2h_gd": -0.1,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Sevilla": [],
+   "Osasuna": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Sociedad",
+  "away": "Levante",
+  "p_home": 0.5706,
+  "p_draw": 0.228,
+  "p_away": 0.2014,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.535,
+   "p_draw": 0.2191,
+   "p_away": 0.2459,
+   "xg_home": 2.081,
+   "xg_away": 1.3683,
+   "p_over25": 0.6697,
+   "p_btts": 0.6565,
+   "top_scores": [
+    [
+     "1-1",
+     0.09448607637463434
+    ],
+    [
+     "2-1",
+     0.09412110642981497
+    ],
+    [
+     "2-0",
+     0.06878642649594505
+    ]
+   ]
+  },
+  "xg_base": [
+   2.081,
+   1.368
+  ],
+  "elo_diff": 90.6,
+  "referee": null,
+  "weather": {
+   "temp_c": 16.3,
+   "precip_mm": 1.2,
+   "wind_kmh": 8.8
+  },
+  "market": [
+   0.5889,
+   0.222,
+   0.1891
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": -0.029,
+   "h2h_gd": 0.2,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Sociedad": [],
+   "Levante": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Valencia",
+  "away": "Villarreal",
+  "p_home": 0.2765,
+  "p_draw": 0.297,
+  "p_away": 0.4265,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.3119,
+   "p_draw": 0.2649,
+   "p_away": 0.4232,
+   "xg_home": 1.2449,
+   "xg_away": 1.4883,
+   "p_over25": 0.5145,
+   "p_btts": 0.5567,
+   "top_scores": [
+    [
+     "1-1",
+     0.12581689227685394
+    ],
+    [
+     "0-1",
+     0.0913869179480483
+    ],
+    [
+     "1-2",
+     0.0896342228099348
+    ]
+   ]
+  },
+  "xg_base": [
+   1.245,
+   1.488
+  ],
+  "elo_diff": -29.1,
+  "referee": null,
+  "weather": {
+   "temp_c": 21.0,
+   "precip_mm": 0.0,
+   "wind_kmh": 7.2
+  },
+  "market": [
+   0.2956,
+   0.2598,
+   0.4445
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.0,
+   "h2h_gd": -0.2,
+   "derby": 1.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 1.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Valencia": [],
+   "Villarreal": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-10-25",
+  "kickoff_utc": null,
+  "home": "Vallecano",
+  "away": "Elche",
+  "p_home": 0.5441,
+  "p_draw": 0.2532,
+  "p_away": 0.2027,
+  "model": "stacker_mercado",
+  "dc": {
+   "p_home": 0.4737,
+   "p_draw": 0.2669,
+   "p_away": 0.2594,
+   "xg_home": 1.5268,
+   "xg_away": 1.0657,
+   "p_over25": 0.4797,
+   "p_btts": 0.5186,
+   "top_scores": [
+    [
+     "1-1",
+     0.12718404282282633
+    ],
+    [
+     "1-0",
+     0.10882268795138741
+    ],
+    [
+     "2-1",
+     0.09295356871727355
+    ]
+   ]
+  },
+  "xg_base": [
+   1.527,
+   1.066
+  ],
+  "elo_diff": 109.4,
+  "referee": null,
+  "weather": {
+   "temp_c": 18.6,
+   "precip_mm": 0.0,
+   "wind_kmh": 3.4
+  },
+  "market": [
+   0.5445,
+   0.2469,
+   0.2085
+  ],
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": -0.007,
+   "h2h_gd": -0.6,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Vallecano": [],
+   "Elche": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "Ath Bilbao",
+  "away": "Sociedad",
+  "p_home": 0.5346,
+  "p_draw": 0.2485,
+  "p_away": 0.2169,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.4607,
+   "p_draw": 0.2582,
+   "p_away": 0.2811,
+   "xg_home": 1.5929,
+   "xg_away": 1.1951,
+   "p_over25": 0.5277,
+   "p_btts": 0.5608,
+   "top_scores": [
+    [
+     "1-1",
+     0.12237928732491515
+    ],
+    [
+     "2-1",
+     0.09331163334247897
+    ],
+    [
+     "1-0",
+     0.09280891710856874
+    ]
+   ]
+  },
+  "xg_base": [
+   1.593,
+   1.195
+  ],
+  "elo_diff": 27.0,
+  "referee": null,
+  "weather": {
+   "temp_c": 12.1,
+   "precip_mm": 0.0,
+   "wind_kmh": 1.5
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.024,
+   "h2h_gd": -0.2,
+   "derby": 1.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 1.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Ath Bilbao": [],
+   "Sociedad": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "Barcelona",
+  "away": "Alaves",
+  "p_home": 0.8879,
+  "p_draw": 0.081,
+  "p_away": 0.0311,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.8179,
+   "p_draw": 0.1184,
+   "p_away": 0.0637,
+   "xg_home": 3.073,
+   "xg_away": 0.8056,
+   "p_over25": 0.7435,
+   "p_btts": 0.5298,
+   "top_scores": [
+    [
+     "3-0",
+     0.10005652249775898
+    ],
+    [
+     "2-0",
+     0.09767964386435433
+    ],
+    [
+     "3-1",
+     0.08060355495489233
+    ]
+   ]
+  },
+  "xg_base": [
+   3.073,
+   0.806
+  ],
+  "elo_diff": 357.1,
+  "referee": null,
+  "weather": {
+   "temp_c": 15.8,
+   "precip_mm": 0.1,
+   "wind_kmh": 5.6
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": -0.019,
+   "h2h_gd": 0.8,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Barcelona": [],
+   "Alaves": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "Betis",
+  "away": "Malaga",
+  "p_home": 0.7677,
+  "p_draw": 0.1389,
+  "p_away": 0.0934,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.7604,
+   "p_draw": 0.1578,
+   "p_away": 0.0818,
+   "xg_home": 2.4919,
+   "xg_away": 0.7076,
+   "p_over25": 0.62,
+   "p_btts": 0.4684,
+   "top_scores": [
+    [
+     "2-0",
+     0.12663218866837642
+    ],
+    [
+     "3-0",
+     0.10518362741971056
+    ],
+    [
+     "1-0",
+     0.098432026647626
+    ]
+   ]
+  },
+  "xg_base": [
+   2.492,
+   0.708
+  ],
+  "elo_diff": 213.8,
+  "referee": null,
+  "weather": {
+   "temp_c": 25.2,
+   "precip_mm": 0.0,
+   "wind_kmh": 0.9
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": -0.014,
+   "h2h_gd": 0.0,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 1.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Betis": [],
+   "Malaga": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "Elche",
+  "away": "Valencia",
+  "p_home": 0.4819,
+  "p_draw": 0.2556,
+  "p_away": 0.2626,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.4701,
+   "p_draw": 0.268,
+   "p_away": 0.2619,
+   "xg_home": 1.515,
+   "xg_away": 1.0682,
+   "p_over25": 0.4773,
+   "p_btts": 0.5175,
+   "top_scores": [
+    [
+     "1-1",
+     0.12768276890978766
+    ],
+    [
+     "1-0",
+     0.10898780000241147
+    ],
+    [
+     "2-1",
+     0.09259238552252236
+    ]
+   ]
+  },
+  "xg_base": [
+   1.515,
+   1.068
+  ],
+  "elo_diff": 46.6,
+  "referee": null,
+  "weather": {
+   "temp_c": 19.7,
+   "precip_mm": 0.3,
+   "wind_kmh": 11.6
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.008,
+   "h2h_gd": -0.3,
+   "derby": 1.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 1.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Elche": [],
+   "Valencia": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "Getafe",
+  "away": "Sevilla",
+  "p_home": 0.3944,
+  "p_draw": 0.315,
+  "p_away": 0.2906,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.3893,
+   "p_draw": 0.3243,
+   "p_away": 0.2864,
+   "xg_home": 1.0659,
+   "xg_away": 0.8715,
+   "p_over25": 0.3064,
+   "p_btts": 0.3873,
+   "top_scores": [
+    [
+     "0-0",
+     0.1500450585201648
+    ],
+    [
+     "1-0",
+     0.14761217303932325
+    ],
+    [
+     "1-1",
+     0.13980174735288864
+    ]
+   ]
+  },
+  "xg_base": [
+   1.066,
+   0.871
+  ],
+  "elo_diff": 55.0,
+  "referee": null,
+  "weather": {
+   "temp_c": 16.2,
+   "precip_mm": 0.0,
+   "wind_kmh": 13.9
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.011,
+   "h2h_gd": 0.1,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 1.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Getafe": [],
+   "Sevilla": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "La Coruna",
+  "away": "Osasuna",
+  "p_home": 0.5063,
+  "p_draw": 0.2686,
+  "p_away": 0.2251,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.4602,
+   "p_draw": 0.2656,
+   "p_away": 0.2743,
+   "xg_home": 1.5269,
+   "xg_away": 1.124,
+   "p_over25": 0.4943,
+   "p_btts": 0.5338,
+   "top_scores": [
+    [
+     "1-1",
+     0.12654051527872637
+    ],
+    [
+     "1-0",
+     0.10237647447246487
+    ],
+    [
+     "2-1",
+     0.09248893224601434
+    ]
+   ]
+  },
+  "xg_base": [
+   1.527,
+   1.124
+  ],
+  "elo_diff": 93.4,
+  "referee": null,
+  "weather": {
+   "temp_c": 13.6,
+   "precip_mm": 0.0,
+   "wind_kmh": 14.3
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.0,
+   "h2h_gd": 0.0,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "La Coruna": [],
+   "Osasuna": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "Levante",
+  "away": "Ath Madrid",
+  "p_home": 0.2091,
+  "p_draw": 0.2313,
+  "p_away": 0.5596,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.2822,
+   "p_draw": 0.2446,
+   "p_away": 0.4732,
+   "xg_home": 1.3005,
+   "xg_away": 1.7406,
+   "p_over25": 0.586,
+   "p_btts": 0.6048,
+   "top_scores": [
+    [
+     "1-1",
+     0.11297960031067293
+    ],
+    [
+     "1-2",
+     0.09413434330175778
+    ],
+    [
+     "0-1",
+     0.07834842848826043
+    ]
+   ]
+  },
+  "xg_base": [
+   1.301,
+   1.741
+  ],
+  "elo_diff": -83.1,
+  "referee": null,
+  "weather": {
+   "temp_c": 18.6,
+   "precip_mm": 0.1,
+   "wind_kmh": 6.5
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.011,
+   "h2h_gd": 0.1,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Levante": [],
+   "Ath Madrid": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "Santander",
+  "away": "Real Madrid",
+  "p_home": 0.1031,
+  "p_draw": 0.1503,
+  "p_away": 0.7466,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.1053,
+   "p_draw": 0.1405,
+   "p_away": 0.7542,
+   "xg_home": 1.1212,
+   "xg_away": 3.0351,
+   "p_over25": 0.7838,
+   "p_btts": 0.6441,
+   "top_scores": [
+    [
+     "1-3",
+     0.08187149425947089
+    ],
+    [
+     "1-2",
+     0.08092501343927692
+    ],
+    [
+     "0-3",
+     0.07302144620030988
+    ]
+   ]
+  },
+  "xg_base": [
+   1.121,
+   3.035
+  ],
+  "elo_diff": -172.4,
+  "referee": null,
+  "weather": {
+   "temp_c": 13.4,
+   "precip_mm": 0.0,
+   "wind_kmh": 8.7
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": 0.022,
+   "h2h_gd": 0.0,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Santander": [],
+   "Real Madrid": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "Vallecano",
+  "away": "Celta",
+  "p_home": 0.4798,
+  "p_draw": 0.2848,
+  "p_away": 0.2354,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.3929,
+   "p_draw": 0.2906,
+   "p_away": 0.3165,
+   "xg_home": 1.2536,
+   "xg_away": 1.0973,
+   "p_over25": 0.4174,
+   "p_btts": 0.4819,
+   "top_scores": [
+    [
+     "1-1",
+     0.13690894724308517
+    ],
+    [
+     "1-0",
+     0.11360718736065759
+    ],
+    [
+     "0-0",
+     0.10112189129422798
+    ]
+   ]
+  },
+  "xg_base": [
+   1.254,
+   1.097
+  ],
+  "elo_diff": 56.1,
+  "referee": null,
+  "weather": {
+   "temp_c": 16.3,
+   "precip_mm": 0.0,
+   "wind_kmh": 12.9
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": -0.011,
+   "h2h_gd": -0.1,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Vallecano": [],
+   "Celta": []
+  },
+  "lineups": null,
+  "movement": null
+ },
+ {
+  "generated_at": "2026-10-25T14:08:15.381588+00:00",
+  "season": 2026,
+  "date": "2026-11-01",
+  "kickoff_utc": null,
+  "home": "Villarreal",
+  "away": "Espanol",
+  "p_home": 0.7125,
+  "p_draw": 0.1798,
+  "p_away": 0.1077,
+  "model": "stacker",
+  "dc": {
+   "p_home": 0.6131,
+   "p_draw": 0.2195,
+   "p_away": 0.1674,
+   "xg_home": 1.9953,
+   "xg_away": 0.9464,
+   "p_over25": 0.5636,
+   "p_btts": 0.5331,
+   "top_scores": [
+    [
+     "2-0",
+     0.10505686175231613
+    ],
+    [
+     "1-1",
+     0.10410226026312205
+    ],
+    [
+     "1-0",
+     0.10086526448029866
+    ]
+   ]
+  },
+  "xg_base": [
+   1.995,
+   0.946
+  ],
+  "elo_diff": 175.2,
+  "referee": null,
+  "weather": {
+   "temp_c": 15.7,
+   "precip_mm": 0.0,
+   "wind_kmh": 4.8
+  },
+  "market": null,
+  "lineup_confirmed": false,
+  "availability_source": "ninguna",
+  "deficit": [
+   0.0,
+   0.0
+  ],
+  "deficit_defence": [
+   0.0,
+   0.0
+  ],
+  "context": {
+   "stake_diff_late": -0.008,
+   "h2h_gd": 1.0,
+   "derby": 0.0,
+   "euro_prev_home": null,
+   "euro_prev_away": null,
+   "euro_next_home": null,
+   "euro_next_away": null,
+   "new_coach_home": 0.0,
+   "new_coach_away": 0.0,
+   "red_prev_home": 0.0,
+   "red_prev_away": 0.0,
+   "post_break": 0.0
+  },
+  "absences": {
+   "Villarreal": [],
+   "Espanol": []
+  },
+  "lineups": null,
+  "movement": null
+ }
+]
