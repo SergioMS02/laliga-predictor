@@ -1,70 +1,70 @@
 date,team,comp
-2026-09-08 00:00:00,Villarreal,cl
-2026-09-08 00:00:00,Betis,cl
-2026-09-08 00:00:00,Real Madrid,cl
-2026-09-09 00:00:00,Barcelona,cl
-2026-09-09 00:00:00,Ath Madrid,cl
-2026-10-13 00:00:00,Ath Madrid,cl
-2026-10-13 00:00:00,Barcelona,cl
-2026-10-13 00:00:00,Villarreal,cl
-2026-10-14 00:00:00,Real Madrid,cl
-2026-10-14 00:00:00,Betis,cl
-2026-10-20 00:00:00,Villarreal,cl
-2026-10-20 00:00:00,Barcelona,cl
-2026-10-20 00:00:00,Ath Madrid,cl
-2026-10-21 00:00:00,Betis,cl
-2026-10-21 00:00:00,Real Madrid,cl
-2026-11-03 00:00:00,Ath Madrid,cl
-2026-11-03 00:00:00,Barcelona,cl
-2026-11-03 00:00:00,Villarreal,cl
-2026-11-04 00:00:00,Real Madrid,cl
-2026-11-04 00:00:00,Betis,cl
-2026-09-16 00:00:00,Celta,el
-2026-09-17 00:00:00,Sociedad,el
-2026-10-15 00:00:00,Sociedad,el
-2026-10-15 00:00:00,Celta,el
-2026-10-22 00:00:00,Celta,el
-2026-10-22 00:00:00,Sociedad,el
-2026-11-05 00:00:00,Sociedad,el
-2026-11-05 00:00:00,Celta,el
-2026-10-15 00:00:00,Getafe,conf
-2026-10-22 00:00:00,Getafe,conf
-2026-11-05 00:00:00,Getafe,conf
-2026-10-27 00:00:00,Girona,cup
-2026-10-27 00:00:00,Elche,cup
-2026-10-27 00:00:00,Espanol,cup
-2026-10-27 00:00:00,Almeria,cup
-2026-10-27 00:00:00,Las Palmas,cup
-2026-10-27 00:00:00,Mirandes,cup
-2026-10-27 00:00:00,Cordoba,cup
-2026-10-27 00:00:00,Zaragoza,cup
-2026-10-27 00:00:00,Villarreal,cup
-2026-10-27 00:00:00,Recreativo,cup
-2026-10-27 00:00:00,Vallecano,cup
-2026-10-27 00:00:00,Malaga,cup
-2026-10-28 00:00:00,Alaves,cup
-2026-10-28 00:00:00,Eibar,cup
-2026-10-28 00:00:00,Levante,cup
-2026-10-28 00:00:00,Huesca,cup
-2026-10-28 00:00:00,Mallorca,cup
-2026-10-28 00:00:00,Tenerife,cup
-2026-10-28 00:00:00,Albacete,cup
-2026-10-28 00:00:00,Valladolid,cup
-2026-10-28 00:00:00,Numancia,cup
-2026-10-28 00:00:00,Oviedo,cup
-2026-10-28 00:00:00,Leganes,cup
-2026-10-28 00:00:00,Granada,cup
-2026-10-28 00:00:00,Betis,cup
-2026-10-28 00:00:00,Celta,cup
-2026-10-28 00:00:00,Valencia,cup
-2026-10-28 00:00:00,Xerez,cup
-2026-10-28 00:00:00,Cadiz,cup
-2026-10-29 00:00:00,Osasuna,cup
-2026-10-29 00:00:00,Getafe,cup
-2026-10-29 00:00:00,Burgos,cup
-2026-10-29 00:00:00,Castellon,cup
-2026-10-29 00:00:00,Sp Gijon,cup
-2026-10-29 00:00:00,Ath Bilbao,cup
-2026-10-29 00:00:00,La Coruna,cup
-2026-10-29 00:00:00,Santander,cup
-2026-10-29 00:00:00,Sevilla,cup
+2026-09-08,Villarreal,cl
+2026-09-08,Betis,cl
+2026-09-08,Real Madrid,cl
+2026-09-09,Barcelona,cl
+2026-09-09,Ath Madrid,cl
+2026-10-13,Ath Madrid,cl
+2026-10-13,Barcelona,cl
+2026-10-13,Villarreal,cl
+2026-10-14,Real Madrid,cl
+2026-10-14,Betis,cl
+2026-10-20,Villarreal,cl
+2026-10-20,Barcelona,cl
+2026-10-20,Ath Madrid,cl
+2026-10-21,Betis,cl
+2026-10-21,Real Madrid,cl
+2026-11-03,Ath Madrid,cl
+2026-11-03,Barcelona,cl
+2026-11-03,Villarreal,cl
+2026-11-04,Real Madrid,cl
+2026-11-04,Betis,cl
+2026-09-16,Celta,el
+2026-09-17,Sociedad,el
+2026-10-15,Sociedad,el
+2026-10-15,Celta,el
+2026-10-22,Celta,el
+2026-10-22,Sociedad,el
+2026-11-05,Sociedad,el
+2026-11-05,Celta,el
+2026-10-15,Getafe,conf
+2026-10-22,Getafe,conf
+2026-11-05,Getafe,conf
+2026-10-27,Girona,cup
+2026-10-27,Elche,cup
+2026-10-27,Espanol,cup
+2026-10-27,Almeria,cup
+2026-10-27,Las Palmas,cup
+2026-10-27,Mirandes,cup
+2026-10-27,Cordoba,cup
+2026-10-27,Zaragoza,cup
+2026-10-27,Villarreal,cup
+2026-10-27,Recreativo,cup
+2026-10-27,Vallecano,cup
+2026-10-27,Malaga,cup
+2026-10-28,Alaves,cup
+2026-10-28,Eibar,cup
+2026-10-28,Levante,cup
+2026-10-28,Huesca,cup
+2026-10-28,Mallorca,cup
+2026-10-28,Tenerife,cup
+2026-10-28,Albacete,cup
+2026-10-28,Valladolid,cup
+2026-10-28,Numancia,cup
+2026-10-28,Oviedo,cup
+2026-10-28,Leganes,cup
+2026-10-28,Granada,cup
+2026-10-28,Betis,cup
+2026-10-28,Celta,cup
+2026-10-28,Valencia,cup
+2026-10-28,Xerez,cup
+2026-10-28,Cadiz,cup
+2026-10-29,Osasuna,cup
+2026-10-29,Getafe,cup
+2026-10-29,Burgos,cup
+2026-10-29,Castellon,cup
+2026-10-29,Sp Gijon,cup
+2026-10-29,Ath Bilbao,cup
+2026-10-29,La Coruna,cup
+2026-10-29,Santander,cup
+2026-10-29,Sevilla,cup
