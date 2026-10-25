@@ -1,0 +1,12 @@
+uefa.champions {'dates': '20250901-20250930', 'limit': 900} 400 0 None
+uefa.champions {'dates': '20250901-20250930', 'limit': 300} 400 0 None
+uefa.champions {'dates': '20250916'} 200 6 True
+uefa.champions {'dates': '20250901-20250930'} 400 0 None
+esp.w.1 {'dates': '20250901-20250930', 'limit': 900} 400 0 None
+esp.w.1 {'dates': '20250901-20250930', 'limit': 300} 400 0 None
+esp.w.1 {'dates': '20250916'} 200 0 None
+esp.w.1 {'dates': '20250901-20250930'} 400 0 None
+esp.1 {'dates': '20250901-20250930', 'limit': 900} 400 0 None
+esp.1 {'dates': '20250901-20250930', 'limit': 300} 400 0 None
+esp.1 {'dates': '20250916'} 200 0 None
+esp.1 {'dates': '20250901-20250930'} 400 0 None
