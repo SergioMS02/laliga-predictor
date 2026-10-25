@@ -1,35 +1,35 @@
 [
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-10-25",
   "kickoff_utc": "2026-10-25T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Real Madrid",
-  "p_home": 0.7036,
-  "p_draw": 0.1616,
-  "p_away": 0.1349,
+  "p_home": 0.6401,
+  "p_draw": 0.1801,
+  "p_away": 0.1799,
   "model": "stacker_mercado",
   "dc": {
-   "p_home": 0.643,
-   "p_draw": 0.1863,
-   "p_away": 0.1707,
-   "xg_home": 2.505,
-   "xg_away": 1.2518,
-   "p_over25": 0.724,
-   "p_btts": 0.6596,
+   "p_home": 0.623,
+   "p_draw": 0.1871,
+   "p_away": 0.1899,
+   "xg_home": 2.5476,
+   "xg_away": 1.3843,
+   "p_over25": 0.7517,
+   "p_btts": 0.6945,
    "top_scores": [
     [
      "2-1",
-     0.09174662495333138
-    ],
-    [
-     "1-1",
-     0.07714657970059115
+     0.08808440291677203
     ],
     [
      "3-1",
-     0.07660750777916313
+     0.07480006290976907
+    ],
+    [
+     "1-1",
+     0.07282892219030361
     ]
    ]
   },
@@ -52,12 +52,12 @@
   "lineup_confirmed": true,
   "availability_source": "alineación oficial",
   "deficit": [
-   0.013,
-   0.149
+   0.017,
+   0.127
   ],
   "deficit_defence": [
-   0.045,
-   0.27
+   0.149,
+   0.36
   ],
   "context": {
    "stake_diff_late": 0.029,
@@ -94,12 +94,12 @@
     "Ibrahima Konaté",
     "Marc Cucurella",
     "Federico Valverde",
-    "Bernardo Silva",
-    "Aurélien Tchouaméni",
     "Jude Bellingham",
-    "Arda Güler",
+    "Aurélien Tchouaméni",
+    "Bernardo Silva",
+    "Kylian Mbappé",
     "Yan Diomande",
-    "Kylian Mbappé"
+    "Arda Güler"
    ]
   },
   "squads": {
@@ -111,7 +111,7 @@
       "name": "Joan García",
       "pos": "G",
       "role": "G",
-      "imp": 0.89,
+      "imp": 0.8,
       "att": 0.01,
       "absent": null,
       "jersey": "1",
@@ -121,7 +121,7 @@
       "name": "Gerard Martín",
       "pos": "CD-L",
       "role": "D",
-      "imp": 0.78,
+      "imp": 0.8,
       "att": 0.05,
       "absent": null,
       "jersey": "18",
@@ -131,7 +131,7 @@
       "name": "Pau Cubarsí",
       "pos": "CD-R",
       "role": "D",
-      "imp": 0.67,
+      "imp": 0.6,
       "att": 0.06,
       "absent": null,
       "jersey": "5",
@@ -141,7 +141,7 @@
       "name": "João Cancelo",
       "pos": "LB",
       "role": "D",
-      "imp": 0.22,
+      "imp": 0.2,
       "att": 0.4,
       "absent": null,
       "jersey": "2",
@@ -151,7 +151,7 @@
       "name": "Xavi Espart",
       "pos": "RB",
       "role": "D",
-      "imp": 0.78,
+      "imp": 0.7,
       "att": 0.27,
       "absent": null,
       "jersey": "12",
@@ -161,7 +161,7 @@
       "name": "Rodri",
       "pos": "CM",
       "role": "M",
-      "imp": 0.67,
+      "imp": 0.6,
       "att": 0.51,
       "absent": null,
       "jersey": "16",
@@ -171,7 +171,7 @@
       "name": "Fermín López",
       "pos": "LM",
       "role": "M",
-      "imp": 0.67,
+      "imp": 0.6,
       "att": 0.8,
       "absent": null,
       "jersey": "7",
@@ -181,7 +181,7 @@
       "name": "Pedri",
       "pos": "RM",
       "role": "M",
-      "imp": 0.78,
+      "imp": 0.7,
       "att": 0.34,
       "absent": null,
       "jersey": "8",
@@ -191,7 +191,7 @@
       "name": "Raphinha",
       "pos": "F",
       "role": "F",
-      "imp": 0.78,
+      "imp": 0.7,
       "att": 1.3,
       "absent": null,
       "jersey": "11",
@@ -201,7 +201,7 @@
       "name": "Anthony Gordon",
       "pos": "LF",
       "role": "M",
-      "imp": 0.67,
+      "imp": 0.6,
       "att": 0.87,
       "absent": null,
       "jersey": "17",
@@ -211,7 +211,7 @@
       "name": "Lamine Yamal",
       "pos": "RF",
       "role": "M",
-      "imp": 1.0,
+      "imp": 0.9,
       "att": 1.16,
       "absent": null,
       "jersey": "10",
@@ -220,15 +220,20 @@
     ],
     "out": [
      {
+      "name": "Wojciech Szczesny",
+      "status": "no titular",
+      "imp": 0.1
+     },
+     {
       "name": "Eric García",
       "status": "no titular",
-      "imp": 0.78
+      "imp": 0.8
      }
     ]
    },
    "away": {
     "confirmed": true,
-    "formation": "4-4-2",
+    "formation": "4-2-3-1",
     "xi": [
      {
       "name": "Andriy Lunin",
@@ -244,7 +249,7 @@
       "name": "Dean Huijsen",
       "pos": "CD-L",
       "role": "D",
-      "imp": 0.78,
+      "imp": 0.7,
       "att": 0.14,
       "absent": null,
       "jersey": "4",
@@ -254,7 +259,7 @@
       "name": "Ibrahima Konaté",
       "pos": "CD-R",
       "role": "D",
-      "imp": 0.89,
+      "imp": 0.8,
       "att": 0.06,
       "absent": null,
       "jersey": "16",
@@ -264,7 +269,7 @@
       "name": "Marc Cucurella",
       "pos": "LB",
       "role": "D",
-      "imp": 0.56,
+      "imp": 0.5,
       "att": 0.03,
       "absent": null,
       "jersey": "17",
@@ -281,63 +286,63 @@
       "usual": true
      },
      {
-      "name": "Bernardo Silva",
-      "pos": "CM-L",
-      "role": "M",
-      "imp": 0.33,
-      "att": 0.11,
-      "absent": null,
-      "jersey": "20",
-      "usual": false
-     },
-     {
-      "name": "Aurélien Tchouaméni",
-      "pos": "CM-R",
-      "role": "M",
-      "imp": 0.44,
-      "att": 0.17,
-      "absent": null,
-      "jersey": "14",
-      "usual": false
-     },
-     {
       "name": "Jude Bellingham",
-      "pos": "LM",
+      "pos": "AM",
       "role": "M",
-      "imp": 0.89,
+      "imp": 0.9,
       "att": 0.54,
       "absent": null,
       "jersey": "5",
       "usual": true
      },
      {
-      "name": "Arda Güler",
+      "name": "Aurélien Tchouaméni",
+      "pos": "LM",
+      "role": "M",
+      "imp": 0.4,
+      "att": 0.17,
+      "absent": null,
+      "jersey": "14",
+      "usual": false
+     },
+     {
+      "name": "Bernardo Silva",
       "pos": "RM",
       "role": "M",
-      "imp": 0.78,
-      "att": 0.69,
+      "imp": 0.3,
+      "att": 0.11,
       "absent": null,
-      "jersey": "15",
+      "jersey": "20",
+      "usual": false
+     },
+     {
+      "name": "Kylian Mbappé",
+      "pos": "F",
+      "role": "F",
+      "imp": 1.0,
+      "att": 1.2,
+      "absent": null,
+      "jersey": "10",
       "usual": true
      },
      {
       "name": "Yan Diomande",
-      "pos": "CF-L",
-      "role": "F",
-      "imp": 0.44,
+      "pos": "AM-L",
+      "role": "M",
+      "imp": 0.4,
       "att": 0.35,
       "absent": null,
       "jersey": "25",
       "usual": false
      },
      {
-      "name": "Kylian Mbappé",
-      "pos": "CF-R",
-      "role": "F",
-      "imp": 1.0,
-      "att": 1.2,
+      "name": "Arda Güler",
+      "pos": "AM-R",
+      "role": "M",
+      "imp": 0.7,
+      "att": 0.69,
       "absent": null,
-      "jersey": "10",
+      "jersey": "15",
       "usual": true
      }
     ],
@@ -350,17 +355,17 @@
      {
       "name": "Vinícius Júnior",
       "status": "no titular",
-      "imp": 0.78
-     },
-     {
-      "name": "Denzel Dumfries",
-      "status": "no titular",
-      "imp": 0.56
+      "imp": 0.7
      },
      {
       "name": "Álvaro Carreras",
       "status": "no titular",
-      "imp": 0.44
+      "imp": 0.5
+     },
+     {
+      "name": "Denzel Dumfries",
+      "status": "no titular",
+      "imp": 0.5
      }
     ]
    }
@@ -375,10 +380,10 @@
    4.5
   ],
   "ou": {
-   "p_over": 0.8208,
-   "p_over_model": 0.724,
+   "p_over": 0.8226,
+   "p_over_model": 0.7517,
    "p_over_market": 0.8047,
-   "p_btts": 0.6596
+   "p_btts": 0.6945
   },
   "odds_market": {
    "max": [
@@ -397,54 +402,54 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.474,
+     "p": 0.479,
      "xg90": 1.02
     },
     {
      "name": "Lamine Yamal",
-     "p": 0.35,
+     "p": 0.355,
      "xg90": 0.66
     },
     {
      "name": "Anthony Gordon",
-     "p": 0.304,
+     "p": 0.309,
      "xg90": 0.55
     },
     {
      "name": "Fermín López",
-     "p": 0.243,
+     "p": 0.246,
      "xg90": 0.42
     },
     {
      "name": "Rodri",
-     "p": 0.129,
+     "p": 0.131,
      "xg90": 0.21
     }
    ],
    "away": [
     {
      "name": "Kylian Mbappé",
-     "p": 0.356,
+     "p": 0.385,
      "xg90": 1.01
     },
     {
      "name": "Jude Bellingham",
-     "p": 0.126,
+     "p": 0.138,
      "xg90": 0.3
     },
     {
      "name": "Arda Güler",
-     "p": 0.11,
+     "p": 0.121,
      "xg90": 0.26
     },
     {
      "name": "Yan Diomande",
-     "p": 0.078,
+     "p": 0.09,
      "xg90": 0.19
     },
     {
      "name": "Dean Huijsen",
-     "p": 0.045,
+     "p": 0.05,
      "xg90": 0.09
     }
    ]
@@ -454,7 +459,7 @@
     {
      "name": "Joan García",
      "role": "G",
-     "imp": 0.89,
+     "imp": 0.8,
      "att": 0.0,
      "goals": 0,
      "minutes": 681,
@@ -463,25 +468,25 @@
     {
      "name": "Dominik Livakovic",
      "role": "G",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 90,
      "status": "suplente"
     },
     {
-     "name": "Xavi Espart",
-     "role": "D",
-     "imp": 0.78,
-     "att": 0.27,
-     "goals": 1,
-     "minutes": 626,
-     "status": "titular"
+     "name": "Wojciech Szczesny",
+     "role": "G",
+     "imp": 0.1,
+     "att": null,
+     "goals": 0,
+     "minutes": 39,
+     "status": "suplente"
     },
     {
      "name": "Eric García",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 0.25,
      "goals": 1,
      "minutes": 599,
@@ -490,7 +495,7 @@
     {
      "name": "Gerard Martín",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 0.07,
      "goals": 0,
      "minutes": 582,
@@ -499,7 +504,7 @@
     {
      "name": "Pau Cubarsí",
      "role": "D",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.2,
      "goals": 0,
      "minutes": 519,
@@ -508,7 +513,7 @@
     {
      "name": "Andreas Christensen",
      "role": "D",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.22,
      "goals": 0,
      "minutes": 392,
@@ -517,7 +522,7 @@
     {
      "name": "Jules Koundé",
      "role": "D",
-     "imp": 0.33,
+     "imp": 0.3,
      "att": 0.23,
      "goals": 1,
      "minutes": 343,
@@ -526,11 +531,29 @@
     {
      "name": "João Cancelo",
      "role": "D",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 1,
      "minutes": 192,
      "status": "titular"
+    },
+    {
+     "name": "Ronald Araujo",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
+     "name": "Alejandro Balde",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
     },
     {
      "name": "Álvaro Cortés",
@@ -544,7 +567,7 @@
     {
      "name": "Lamine Yamal",
      "role": "M",
-     "imp": 1.0,
+     "imp": 0.9,
      "att": 1.44,
      "goals": 8,
      "minutes": 759,
@@ -553,16 +576,25 @@
     {
      "name": "Pedri",
      "role": "M",
-     "imp": 0.78,
+     "imp": 0.7,
      "att": 0.29,
      "goals": 1,
      "minutes": 647,
      "status": "titular"
     },
     {
+     "name": "Xavi Espart",
+     "role": "M",
+     "imp": 0.7,
+     "att": 0.27,
+     "goals": 1,
+     "minutes": 626,
+     "status": "titular"
+    },
+    {
      "name": "Fermín López",
      "role": "M",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.91,
      "goals": 4,
      "minutes": 548,
@@ -571,7 +603,7 @@
     {
      "name": "Rodri",
      "role": "M",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.51,
      "goals": 1,
      "minutes": 525,
@@ -580,46 +612,55 @@
     {
      "name": "Dani Olmo",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.4,
      "att": 1.29,
      "goals": 1,
      "minutes": 323,
      "status": "suplente"
     },
     {
-     "name": "Karim Adeyemi",
-     "role": "M",
-     "imp": 0.33,
-     "att": 1.71,
-     "goals": 2,
-     "minutes": 306,
-     "status": "suplente"
-    },
-    {
      "name": "Marc Bernal",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.4,
      "att": 0.53,
      "goals": 0,
      "minutes": 299,
      "status": "suplente"
     },
     {
+     "name": "Karim Adeyemi",
+     "role": "M",
+     "imp": 0.3,
+     "att": 1.71,
+     "goals": 2,
+     "minutes": 306,
+     "status": "suplente"
+    },
+    {
      "name": "Gavi",
      "role": "M",
-     "imp": 0.22,
+     "imp": 0.3,
      "att": null,
      "goals": 0,
      "minutes": 137,
      "status": "suplente"
     },
     {
-     "name": "Wojciech Szczesny",
+     "name": "Marcus Rashford",
      "role": "M",
-     "imp": 0.0,
+     "imp": 0.1,
      "att": null,
-     "goals": 0,
-     "minutes": 39,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
+     "name": "Ferran Torres",
+     "role": "M",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "suplente"
     },
     {
@@ -641,7 +682,16 @@
      "status": "suplente"
     },
     {
-     "name": "Alejandro Balde",
+     "name": "Diego Kochen",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
+     "name": "Marc Casadó",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -677,6 +727,15 @@
      "status": "suplente"
     },
     {
+     "name": "Tomás Marqués",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
      "name": "Jordi Pesquer",
      "role": "M",
      "imp": 0.0,
@@ -688,7 +747,7 @@
     {
      "name": "Raphinha",
      "role": "F",
-     "imp": 0.78,
+     "imp": 0.7,
      "att": 1.83,
      "goals": 12,
      "minutes": 590,
@@ -697,7 +756,7 @@
     {
      "name": "Anthony Gordon",
      "role": "F",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.87,
      "goals": 1,
      "minutes": 513,
@@ -706,10 +765,28 @@
     {
      "name": "Gabriel Jesus",
      "role": "F",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 3,
      "minutes": 191,
+     "status": "suplente"
+    },
+    {
+     "name": "Robert Lewandowski",
+     "role": "F",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
+     "name": "Roony Bardghji",
+     "role": "F",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "suplente"
     }
    ],
@@ -733,18 +810,9 @@
      "status": "titular"
     },
     {
-     "name": "Federico Valverde",
-     "role": "D",
-     "imp": 1.0,
-     "att": 0.15,
-     "goals": 0,
-     "minutes": 755,
-     "status": "titular"
-    },
-    {
      "name": "Ibrahima Konaté",
      "role": "D",
-     "imp": 0.89,
+     "imp": 0.8,
      "att": 0.06,
      "goals": 0,
      "minutes": 720,
@@ -753,7 +821,7 @@
     {
      "name": "Dean Huijsen",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.7,
      "att": 0.11,
      "goals": 0,
      "minutes": 594,
@@ -762,7 +830,7 @@
     {
      "name": "Marc Cucurella",
      "role": "D",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.03,
      "goals": 0,
      "minutes": 560,
@@ -771,16 +839,25 @@
     {
      "name": "Denzel Dumfries",
      "role": "D",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.18,
      "goals": 0,
      "minutes": 428,
      "status": "suplente"
     },
     {
+     "name": "Álvaro Carreras",
+     "role": "D",
+     "imp": 0.5,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
      "name": "Antonio Rüdiger",
      "role": "D",
-     "imp": 0.33,
+     "imp": 0.3,
      "att": 0.08,
      "goals": 1,
      "minutes": 304,
@@ -789,10 +866,37 @@
     {
      "name": "Trent Alexander-Arnold",
      "role": "D",
-     "imp": 0.33,
+     "imp": 0.3,
      "att": null,
      "goals": 0,
      "minutes": 258,
+     "status": "suplente"
+    },
+    {
+     "name": "David Alaba",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
+     "name": "Dani Carvajal",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
+     "name": "Raúl Asencio",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "suplente"
     },
     {
@@ -805,7 +909,7 @@
      "status": "suplente"
     },
     {
-     "name": "Raúl Asencio",
+     "name": "Fran García",
      "role": "D",
      "imp": 0.0,
      "att": null,
@@ -814,9 +918,18 @@
      "status": "suplente"
     },
     {
+     "name": "Federico Valverde",
+     "role": "M",
+     "imp": 1.0,
+     "att": 0.15,
+     "goals": 0,
+     "minutes": 755,
+     "status": "titular"
+    },
+    {
      "name": "Jude Bellingham",
      "role": "M",
-     "imp": 0.89,
+     "imp": 0.9,
      "att": 0.65,
      "goals": 3,
      "minutes": 700,
@@ -825,7 +938,7 @@
     {
      "name": "Vinícius Júnior",
      "role": "M",
-     "imp": 0.78,
+     "imp": 0.7,
      "att": 0.92,
      "goals": 1,
      "minutes": 592,
@@ -834,7 +947,7 @@
     {
      "name": "Arda Güler",
      "role": "M",
-     "imp": 0.78,
+     "imp": 0.7,
      "att": 1.11,
      "goals": 2,
      "minutes": 517,
@@ -843,7 +956,7 @@
     {
      "name": "Yan Diomande",
      "role": "M",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.35,
      "goals": 2,
      "minutes": 444,
@@ -852,25 +965,16 @@
     {
      "name": "Aurélien Tchouaméni",
      "role": "M",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.11,
      "goals": 0,
      "minutes": 359,
      "status": "titular"
     },
     {
-     "name": "Álvaro Carreras",
-     "role": "M",
-     "imp": 0.44,
-     "att": null,
-     "goals": null,
-     "minutes": null,
-     "status": "suplente"
-    },
-    {
      "name": "Bernardo Silva",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.3,
      "att": 0.11,
      "goals": 0,
      "minutes": 296,
@@ -879,7 +983,7 @@
     {
      "name": "Eduardo Camavinga",
      "role": "M",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 257,
@@ -888,7 +992,7 @@
     {
      "name": "Brahim Díaz",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 116,
@@ -897,10 +1001,28 @@
     {
      "name": "Endrick",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 74,
+     "status": "suplente"
+    },
+    {
+     "name": "Franco Mastantuono",
+     "role": "M",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
+     "name": "Thiago Pitarch",
+     "role": "M",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "suplente"
     },
     {
@@ -922,7 +1044,25 @@
      "status": "suplente"
     },
     {
-     "name": "Alexis Ciria",
+     "name": "Dani Ceballos",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
+     "name": "Manuel Serrano",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
+    },
+    {
+     "name": "Álvaro González",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -940,7 +1080,7 @@
      "status": "suplente"
     },
     {
-     "name": "Mario Rivas",
+     "name": "Alexis Ciria",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -949,7 +1089,7 @@
      "status": "suplente"
     },
     {
-     "name": "Thiago Pitarch",
+     "name": "Mario Rivas",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -992,8 +1132,88 @@
      "goals": 9,
      "minutes": 808,
      "status": "titular"
+    },
+    {
+     "name": "Gonzalo García",
+     "role": "F",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "suplente"
     }
    ]
+  },
+  "props": {
+   "yellow": [
+    1.73,
+    2.12
+   ],
+   "yellow_total": 3.85,
+   "p_cards_over": {
+    "3.5": 0.537,
+    "4.5": 0.342,
+    "5.5": 0.192
+   },
+   "corners": [
+    5.94,
+    4.49
+   ],
+   "corners_total": 10.43,
+   "p_corners_over": {
+    "8.5": 0.713,
+    "9.5": 0.595,
+    "10.5": 0.471
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Fermín López",
+      "p": 0.271,
+      "yellows": 3
+     },
+     {
+      "name": "João Cancelo",
+      "p": 0.207,
+      "yellows": 1
+     },
+     {
+      "name": "Lamine Yamal",
+      "p": 0.154,
+      "yellows": 2
+     },
+     {
+      "name": "Pau Cubarsí",
+      "p": 0.121,
+      "yellows": 1
+     }
+    ],
+    "away": [
+     {
+      "name": "Ibrahima Konaté",
+      "p": 0.308,
+      "yellows": 4
+     },
+     {
+      "name": "Jude Bellingham",
+      "p": 0.183,
+      "yellows": 2
+     },
+     {
+      "name": "Aurélien Tchouaméni",
+      "p": 0.17,
+      "yellows": 1
+     },
+     {
+      "name": "Yan Diomande",
+      "p": 0.17,
+      "yellows": 1
+     }
+    ]
+   }
   },
   "absence_impact": {
    "xg_full": [
@@ -1001,8 +1221,8 @@
     1.35
    ],
    "xg_adj": [
-    2.5,
-    1.25
+    2.55,
+    1.38
    ],
    "p_full": [
     0.5831,
@@ -1010,44 +1230,79 @@
     0.2124
    ],
    "p_adj": [
-    0.643,
-    0.1863,
-    0.1707
+    0.623,
+    0.1871,
+    0.1899
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Barcelona",
+   "away": "Real Madrid",
+   "date": "2026-10-25",
+   "from_ts": "2026-10-25T19:07:29.988320+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
+   "p_from": [
+    0.7036,
+    0.1616,
+    0.1349
+   ],
+   "p_to": [
+    0.6401,
+    0.1801,
+    0.1799
+   ],
+   "delta_pts": [
+    -6.4,
+    1.9,
+    4.5
+   ],
+   "important": true,
+   "focus": "1",
+   "reasons": [
+    {
+     "factor": "Modelo",
+     "key": "modelo",
+     "effect_pts": [
+      -6.3,
+      2.1,
+      4.2
+     ],
+     "detail": "modelo reentrenado o recalibrado"
+    }
+   ]
+  }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-10-26",
   "kickoff_utc": "2026-10-26T20:00:00+00:00",
   "home": "Sevilla",
   "away": "Osasuna",
-  "p_home": 0.4663,
-  "p_draw": 0.2983,
-  "p_away": 0.2354,
+  "p_home": 0.4898,
+  "p_draw": 0.2845,
+  "p_away": 0.2258,
   "model": "stacker_mercado",
   "dc": {
-   "p_home": 0.458,
-   "p_draw": 0.2673,
-   "p_away": 0.2748,
-   "xg_home": 1.529,
-   "xg_away": 1.1315,
-   "p_over25": 0.4967,
-   "p_btts": 0.5371,
+   "p_home": 0.4869,
+   "p_draw": 0.2555,
+   "p_away": 0.2576,
+   "xg_home": 1.6586,
+   "xg_away": 1.1473,
+   "p_over25": 0.532,
+   "p_btts": 0.5587,
    "top_scores": [
     [
      "1-1",
-     0.127384023193292
-    ],
-    [
-     "1-0",
-     0.10046179029339022
+     0.12115049869434251
     ],
     [
      "2-1",
-     0.09247018550381947
+     0.09539989233086646
+    ],
+    [
+     "1-0",
+     0.09414899513107593
     ]
    ]
   },
@@ -1068,14 +1323,14 @@
    0.2276
   ],
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
-   0.161,
-   0.037
+   0.158,
+   0.048
   ],
   "deficit_defence": [
-   0.104,
-   0.091
+   0.116,
+   0.128
   ],
   "context": {
    "stake_diff_late": -0.008,
@@ -1140,20 +1395,11 @@
     "formation": null,
     "xi": [
      {
-      "name": "Odisseas Vlachodimos",
+      "name": "Ørjan Nyland",
       "pos": "G",
       "role": "G",
-      "imp": 1.0,
+      "imp": 0.1,
       "att": 0.01,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Lucien Agoumé",
-      "pos": "RM",
-      "role": "M",
-      "imp": 1.0,
-      "att": 0.12,
       "absent": null,
       "usual": true
      },
@@ -1167,20 +1413,47 @@
       "usual": true
      },
      {
+      "name": "Lucien Agoumé",
+      "pos": "CM",
+      "role": "M",
+      "imp": 1.0,
+      "att": 0.12,
+      "absent": null,
+      "usual": true
+     },
+     {
       "name": "Juan Iglesias",
       "pos": "RB",
       "role": "D",
-      "imp": 1.0,
+      "imp": 0.9,
       "att": 0.11,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Giorgi Kochorashvili",
-      "pos": "RM",
+      "name": "Odisseas Vlachodimos",
+      "pos": "SUB",
+      "role": "G",
+      "imp": 0.9,
+      "att": 0.01,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Enrique Salas",
+      "pos": "CD-L",
+      "role": "D",
+      "imp": 0.8,
+      "att": 0.1,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Felix Correia",
+      "pos": "AM-L",
       "role": "M",
-      "imp": 0.33,
-      "att": 0.25,
+      "imp": 0.5,
+      "att": 0.49,
       "absent": null,
       "usual": false,
       "replaces": "Miguel Sierra"
@@ -1189,17 +1462,8 @@
       "name": "Andrés Castrín",
       "pos": "CD-R",
       "role": "D",
-      "imp": 0.78,
+      "imp": 0.7,
       "att": 0.06,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Enrique Salas",
-      "pos": "CD-L",
-      "role": "D",
-      "imp": 0.78,
-      "att": 0.1,
       "absent": null,
       "usual": true
      },
@@ -1207,36 +1471,27 @@
       "name": "Robbie Ure",
       "pos": "F",
       "role": "F",
-      "imp": 0.67,
+      "imp": 0.6,
       "att": 0.59,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Youssouf Fofana",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.56,
-      "att": 0.53,
-      "absent": null,
-      "usual": true
-     },
-     {
       "name": "Peque",
-      "pos": "AM",
+      "pos": "RM",
       "role": "M",
-      "imp": 0.33,
+      "imp": 0.4,
       "att": 0.13,
       "absent": null,
       "usual": false,
       "replaces": "Jon Guridi"
      },
      {
-      "name": "Felix Correia",
-      "pos": "AM-L",
+      "name": "Youssouf Fofana",
+      "pos": "LM",
       "role": "M",
-      "imp": 0.56,
-      "att": 0.49,
+      "imp": 0.5,
+      "att": 0.53,
       "absent": null,
       "usual": true
      }
@@ -1254,14 +1509,14 @@
       "status": "out",
       "reason": "injury",
       "source": "futbolfantasy: Luxación acromioclavicular · Baja hasta enero",
-      "imp": 0.89
+      "imp": 0.8
      },
      {
       "name": "Jon Guridi",
       "status": "out",
       "reason": "injury",
       "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre",
-      "imp": 0.56
+      "imp": 0.5
      }
     ]
    },
@@ -1270,29 +1525,38 @@
     "formation": null,
     "xi": [
      {
-      "name": "Aitor Fernández",
+      "name": "Sergio Herrera",
       "pos": "G",
       "role": "G",
-      "imp": 0.44,
+      "imp": 0.6,
       "att": 0.01,
       "absent": null,
       "usual": true
      },
      {
+      "name": "Alejandro Catena",
+      "pos": "CD",
+      "role": "D",
+      "imp": 0.9,
+      "att": 0.11,
+      "absent": null,
+      "usual": true
+     },
+     {
       "name": "Jon Moncayola",
-      "pos": "RM",
+      "pos": "CM-R",
       "role": "M",
-      "imp": 0.89,
+      "imp": 0.9,
       "att": 0.18,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Alejandro Catena",
-      "pos": "CD-R",
-      "role": "D",
-      "imp": 0.89,
-      "att": 0.11,
+      "name": "Ante Budimir",
+      "pos": "CF-L",
+      "role": "F",
+      "imp": 0.8,
+      "att": 0.66,
       "absent": null,
       "usual": true
      },
@@ -1300,35 +1564,35 @@
       "name": "Iñigo Arguibide",
       "pos": "SUB",
       "role": "D",
-      "imp": 0.89,
+      "imp": 0.8,
+      "att": 0.11,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Abel Bretones",
+      "pos": "SUB",
+      "role": "D",
+      "imp": 0.7,
       "att": 0.11,
       "absent": null,
       "usual": true
      },
      {
       "name": "Rubén García",
-      "pos": "RF",
-      "role": "M",
-      "imp": 0.78,
+      "pos": "SUB",
+      "role": "F",
+      "imp": 0.7,
       "att": 0.34,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Abel Bretones",
-      "pos": "LB",
-      "role": "D",
-      "imp": 0.78,
-      "att": 0.11,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Ante Budimir",
-      "pos": "F",
+      "name": "Raúl García",
+      "pos": "CF-R",
       "role": "F",
-      "imp": 0.78,
-      "att": 0.66,
+      "imp": 0.6,
+      "att": 0.68,
       "absent": null,
       "usual": true
      },
@@ -1336,35 +1600,26 @@
       "name": "Iker Muñoz",
       "pos": "CM",
       "role": "M",
-      "imp": 0.67,
+      "imp": 0.6,
       "att": 0.06,
       "absent": null,
       "usual": true
      },
      {
       "name": "Moi Gómez",
-      "pos": "LM",
+      "pos": "SUB",
       "role": "M",
-      "imp": 0.56,
+      "imp": 0.5,
       "att": 0.18,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Raúl García",
-      "pos": "SUB",
-      "role": "F",
-      "imp": 0.56,
-      "att": 0.68,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Sergio Herrera",
-      "pos": "SUB",
-      "role": "G",
-      "imp": 0.56,
-      "att": 0.01,
+      "name": "Lucas Torró",
+      "pos": "CM",
+      "role": "M",
+      "imp": 0.4,
+      "att": 0.12,
       "absent": null,
       "usual": true
      }
@@ -1375,14 +1630,14 @@
       "status": "out",
       "reason": "injury",
       "source": "futbolfantasy: Lesión en el aductor · Baja hasta noviembre",
-      "imp": 0.33
+      "imp": 0.4
      },
      {
       "name": "Aimar Oroz",
       "status": "out",
       "reason": "injury",
       "source": "futbolfantasy: Lesión en los isquiotibiales · Baja hasta mediados de noviembre",
-      "imp": 0.22
+      "imp": 0.3
      },
      {
       "name": "Romain Del Castillo",
@@ -1404,10 +1659,10 @@
    1.73
   ],
   "ou": {
-   "p_over": 0.4426,
-   "p_over_model": 0.4967,
+   "p_over": 0.4456,
+   "p_over_model": 0.532,
    "p_over_market": 0.443,
-   "p_btts": 0.5371
+   "p_btts": 0.5587
   },
   "odds_market": {
    "max": [
@@ -1426,55 +1681,55 @@
    "home": [
     {
      "name": "Robbie Ure",
-     "p": 0.325,
+     "p": 0.347,
      "xg90": 0.38
     },
     {
      "name": "Youssouf Fofana",
-     "p": 0.304,
+     "p": 0.325,
      "xg90": 0.33
     },
     {
      "name": "Felix Correia",
-     "p": 0.265,
+     "p": 0.284,
      "xg90": 0.28
     },
     {
      "name": "Peque",
-     "p": 0.186,
+     "p": 0.2,
      "xg90": 0.19
     },
     {
      "name": "Juan Iglesias",
-     "p": 0.071,
+     "p": 0.077,
      "xg90": 0.06
     }
    ],
    "away": [
     {
      "name": "Ante Budimir",
-     "p": 0.347,
+     "p": 0.351,
      "xg90": 0.64
     },
     {
      "name": "Raúl García",
-     "p": 0.285,
+     "p": 0.289,
      "xg90": 0.51
     },
     {
      "name": "Rubén García",
-     "p": 0.064,
+     "p": 0.063,
      "xg90": 0.1
     },
     {
-     "name": "Alejandro Catena",
-     "p": 0.045,
-     "xg90": 0.06
+     "name": "Lucas Torró",
+     "p": 0.049,
+     "xg90": 0.07
     },
     {
-     "name": "Jon Moncayola",
-     "p": 0.035,
-     "xg90": 0.05
+     "name": "Alejandro Catena",
+     "p": 0.046,
+     "xg90": 0.06
     }
    ]
   },
@@ -1483,10 +1738,19 @@
     {
      "name": "Odisseas Vlachodimos",
      "role": "G",
-     "imp": 1.0,
+     "imp": 0.9,
      "att": 0.0,
      "goals": 0,
      "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Ørjan Nyland",
+     "role": "G",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -1501,37 +1765,55 @@
     {
      "name": "Juan Iglesias",
      "role": "D",
-     "imp": 1.0,
+     "imp": 0.9,
      "att": 0.11,
      "goals": 1,
      "minutes": 795,
      "status": "disponible"
     },
     {
-     "name": "Andrés Castrín",
-     "role": "D",
-     "imp": 0.78,
-     "att": 0.09,
-     "goals": 0,
-     "minutes": 659,
-     "status": "disponible"
-    },
-    {
      "name": "Enrique Salas",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": null,
      "goals": null,
      "minutes": null,
      "status": "disponible"
     },
     {
+     "name": "Andrés Castrín",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.09,
+     "goals": 0,
+     "minutes": 659,
+     "status": "disponible"
+    },
+    {
      "name": "Arouna Sangante",
      "role": "D",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.01,
      "goals": 0,
      "minutes": 290,
+     "status": "disponible"
+    },
+    {
+     "name": "José Ángel Carmona",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": 0,
+     "minutes": 70,
+     "status": "disponible"
+    },
+    {
+     "name": "César Azpilicueta",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -1541,6 +1823,15 @@
      "att": 0.06,
      "goals": 0,
      "minutes": 630,
+     "status": "disponible"
+    },
+    {
+     "name": "Fábio Cardoso",
+     "role": "D",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -1554,7 +1845,7 @@
      "source": "futbolfantasy: Lesión en el recto anterior · Baja hasta principios de noviembre"
     },
     {
-     "name": "Fábio Cardoso",
+     "name": "Nemanja Gudelj",
      "role": "D",
      "imp": 0.0,
      "att": null,
@@ -1574,7 +1865,7 @@
     {
      "name": "Miguel Sierra",
      "role": "M",
-     "imp": 0.89,
+     "imp": 0.8,
      "att": 0.13,
      "goals": 2,
      "minutes": 592,
@@ -1584,7 +1875,7 @@
     {
      "name": "Youssouf Fofana",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.53,
      "goals": 1,
      "minutes": 465,
@@ -1593,7 +1884,7 @@
     {
      "name": "Felix Correia",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.49,
      "goals": 1,
      "minutes": 382,
@@ -1602,7 +1893,7 @@
     {
      "name": "Jon Guridi",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.28,
      "goals": 1,
      "minutes": 360,
@@ -1610,27 +1901,27 @@
      "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre"
     },
     {
-     "name": "Giorgi Kochorashvili",
-     "role": "M",
-     "imp": 0.33,
-     "att": null,
-     "goals": 0,
-     "minutes": 267,
-     "status": "disponible"
-    },
-    {
      "name": "Peque",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.4,
      "att": null,
      "goals": 1,
      "minutes": 221,
      "status": "disponible"
     },
     {
+     "name": "Giorgi Kochorashvili",
+     "role": "M",
+     "imp": 0.3,
+     "att": null,
+     "goals": 0,
+     "minutes": 267,
+     "status": "disponible"
+    },
+    {
      "name": "Oso",
      "role": "M",
-     "imp": 0.22,
+     "imp": 0.3,
      "att": null,
      "goals": 1,
      "minutes": 164,
@@ -1639,7 +1930,7 @@
     {
      "name": "Julio Díaz",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 97,
@@ -1648,7 +1939,7 @@
     {
      "name": "Nico Guillén",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 92,
@@ -1657,19 +1948,28 @@
     {
      "name": "Rubén Vargas",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 64,
      "status": "disponible"
     },
     {
-     "name": "José Ángel Carmona",
+     "name": "Djibril Sow",
      "role": "M",
-     "imp": 0.0,
+     "imp": 0.1,
      "att": null,
-     "goals": 0,
-     "minutes": 70,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alexis Sánchez",
+     "role": "M",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -1691,7 +1991,25 @@
      "status": "disponible"
     },
     {
-     "name": "Manuel Ángel Castillo Rodríguez",
+     "name": "Alberto Flores",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Joan Jordán",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Federico Gattoni",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -1701,6 +2019,24 @@
     },
     {
      "name": "Alfonso González",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Manuel Ángel Castillo Rodríguez",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Tanguy Nianzou",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -1756,37 +2092,55 @@
     {
      "name": "Robbie Ure",
      "role": "F",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.59,
      "goals": 1,
      "minutes": 514,
      "status": "disponible"
     },
     {
-     "name": "Lucas Stassin",
-     "role": "F",
-     "imp": 0.22,
-     "att": null,
-     "goals": 1,
-     "minutes": 231,
-     "status": "disponible"
-    },
-    {
      "name": "Isaac Romero",
      "role": "F",
-     "imp": 0.22,
+     "imp": 0.3,
      "att": null,
      "goals": 2,
      "minutes": 230,
      "status": "disponible"
     },
     {
+     "name": "Lucas Stassin",
+     "role": "F",
+     "imp": 0.2,
+     "att": null,
+     "goals": 1,
+     "minutes": 231,
+     "status": "disponible"
+    },
+    {
      "name": "Chidera Ejuke",
      "role": "F",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 1,
      "minutes": 227,
+     "status": "disponible"
+    },
+    {
+     "name": "Neal Maupay",
+     "role": "F",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Akor Adams",
+     "role": "F",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     }
    ],
@@ -1794,7 +2148,7 @@
     {
      "name": "Sergio Herrera",
      "role": "G",
-     "imp": 0.56,
+     "imp": 0.6,
      "att": 0.02,
      "goals": 0,
      "minutes": 450,
@@ -1803,7 +2157,7 @@
     {
      "name": "Aitor Fernández",
      "role": "G",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.0,
      "goals": 0,
      "minutes": 360,
@@ -1812,7 +2166,7 @@
     {
      "name": "Alejandro Catena",
      "role": "D",
-     "imp": 0.89,
+     "imp": 0.9,
      "att": 0.08,
      "goals": 0,
      "minutes": 720,
@@ -1821,7 +2175,7 @@
     {
      "name": "Iñigo Arguibide",
      "role": "D",
-     "imp": 0.89,
+     "imp": 0.8,
      "att": 0.11,
      "goals": 0,
      "minutes": 649,
@@ -1830,43 +2184,25 @@
     {
      "name": "Abel Bretones",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.7,
      "att": 0.1,
      "goals": 0,
      "minutes": 705,
      "status": "disponible"
     },
     {
-     "name": "Asier Osambela",
-     "role": "D",
-     "imp": 0.33,
-     "att": 0.22,
-     "goals": 1,
-     "minutes": 346,
-     "status": "disponible"
-    },
-    {
      "name": "Enzo Boyomo",
      "role": "D",
-     "imp": 0.33,
+     "imp": 0.4,
      "att": 0.02,
      "goals": 0,
      "minutes": 296,
      "status": "disponible"
     },
     {
-     "name": "Unai Santos",
-     "role": "D",
-     "imp": 0.33,
-     "att": null,
-     "goals": 0,
-     "minutes": 213,
-     "status": "disponible"
-    },
-    {
      "name": "Jorge Herrando",
      "role": "D",
-     "imp": 0.33,
+     "imp": 0.4,
      "att": null,
      "goals": 0,
      "minutes": 188,
@@ -1874,9 +2210,27 @@
      "source": "futbolfantasy: Lesión en el aductor · Baja hasta noviembre"
     },
     {
+     "name": "Asier Osambela",
+     "role": "D",
+     "imp": 0.3,
+     "att": 0.22,
+     "goals": 1,
+     "minutes": 346,
+     "status": "disponible"
+    },
+    {
+     "name": "Unai Santos",
+     "role": "D",
+     "imp": 0.3,
+     "att": null,
+     "goals": 0,
+     "minutes": 213,
+     "status": "disponible"
+    },
+    {
      "name": "Rockson Yeboah",
      "role": "D",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 206,
@@ -1885,7 +2239,7 @@
     {
      "name": "Diego Rico",
      "role": "D",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 105,
@@ -1894,34 +2248,43 @@
     {
      "name": "Valentin Rosier",
      "role": "D",
-     "imp": 0.11,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 104,
      "status": "disponible"
     },
     {
+     "name": "Javi Galán",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Juan Cruz",
+     "role": "D",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Jon Moncayola",
      "role": "M",
-     "imp": 0.89,
+     "imp": 0.9,
      "att": 0.04,
      "goals": 0,
      "minutes": 652,
      "status": "disponible"
     },
     {
-     "name": "Rubén García",
-     "role": "M",
-     "imp": 0.78,
-     "att": 0.39,
-     "goals": 0,
-     "minutes": 548,
-     "status": "disponible"
-    },
-    {
      "name": "Iker Muñoz",
      "role": "M",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.07,
      "goals": 0,
      "minutes": 559,
@@ -1930,43 +2293,34 @@
     {
      "name": "Moi Gómez",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.2,
      "goals": 0,
      "minutes": 410,
      "status": "disponible"
     },
     {
-     "name": "Jonathan Dubasin",
-     "role": "M",
-     "imp": 0.33,
-     "att": 0.61,
-     "goals": 0,
-     "minutes": 334,
-     "status": "disponible"
-    },
-    {
      "name": "Lucas Torró",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.4,
      "att": 0.03,
      "goals": 0,
      "minutes": 330,
      "status": "disponible"
     },
     {
-     "name": "Enrique Barja",
+     "name": "Jonathan Dubasin",
      "role": "M",
-     "imp": 0.33,
-     "att": null,
-     "goals": null,
-     "minutes": null,
+     "imp": 0.3,
+     "att": 0.61,
+     "goals": 0,
+     "minutes": 334,
      "status": "disponible"
     },
     {
      "name": "Aimar Oroz",
      "role": "M",
-     "imp": 0.22,
+     "imp": 0.3,
      "att": null,
      "goals": 0,
      "minutes": 156,
@@ -1974,9 +2328,18 @@
      "source": "futbolfantasy: Lesión en los isquiotibiales · Baja hasta mediados de noviembre"
     },
     {
+     "name": "Enrique Barja",
+     "role": "M",
+     "imp": 0.3,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Raúl Moro",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 175,
@@ -2029,6 +2392,24 @@
      "status": "disponible"
     },
     {
+     "name": "Iker Benito",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Dimitrios Stamatakis",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Rafa Fernández",
      "role": "M",
      "imp": 0.0,
@@ -2040,16 +2421,25 @@
     {
      "name": "Ante Budimir",
      "role": "F",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 0.81,
      "goals": 7,
      "minutes": 679,
      "status": "disponible"
     },
     {
+     "name": "Rubén García",
+     "role": "F",
+     "imp": 0.7,
+     "att": 0.39,
+     "goals": 0,
+     "minutes": 548,
+     "status": "disponible"
+    },
+    {
      "name": "Raúl García",
      "role": "F",
-     "imp": 0.56,
+     "imp": 0.6,
      "att": 0.47,
      "goals": 1,
      "minutes": 437,
@@ -2057,14 +2447,85 @@
     }
    ]
   },
+  "props": {
+   "yellow": [
+    2.58,
+    2.48
+   ],
+   "yellow_total": 5.07,
+   "p_cards_over": {
+    "3.5": 0.744,
+    "4.5": 0.571,
+    "5.5": 0.395
+   },
+   "corners": [
+    4.88,
+    3.19
+   ],
+   "corners_total": 8.07,
+   "p_corners_over": {
+    "8.5": 0.417,
+    "9.5": 0.292,
+    "10.5": 0.191
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Felix Correia",
+      "p": 0.347,
+      "yellows": 2
+     },
+     {
+      "name": "Juan Iglesias",
+      "p": 0.32,
+      "yellows": 3
+     },
+     {
+      "name": "Peque",
+      "p": 0.292,
+      "yellows": 1
+     },
+     {
+      "name": "Gabriel Suazo",
+      "p": 0.238,
+      "yellows": 2
+     }
+    ],
+    "away": [
+     {
+      "name": "Sergio Herrera",
+      "p": 0.408,
+      "yellows": 3
+     },
+     {
+      "name": "Jon Moncayola",
+      "p": 0.378,
+      "yellows": 4
+     },
+     {
+      "name": "Lucas Torró",
+      "p": 0.263,
+      "yellows": 1
+     },
+     {
+      "name": "Abel Bretones",
+      "p": 0.251,
+      "yellows": 2
+     }
+    ]
+   }
+  },
   "absence_impact": {
    "xg_full": [
     1.63,
     1.12
    ],
    "xg_adj": [
-    1.53,
-    1.13
+    1.66,
+    1.15
    ],
    "p_full": [
     0.4874,
@@ -2072,66 +2533,66 @@
     0.2542
    ],
    "p_adj": [
-    0.458,
-    0.2673,
-    0.2748
+    0.4869,
+    0.2555,
+    0.2576
    ]
   },
   "movement": {
    "home": "Sevilla",
    "away": "Osasuna",
    "date": "2026-10-26",
-   "from_ts": "2026-10-25T18:01:26.218166+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.4906,
-    0.286,
-    0.2234
-   ],
-   "p_to": [
     0.4663,
     0.2983,
     0.2354
    ],
+   "p_to": [
+    0.4898,
+    0.2845,
+    0.2258
+   ],
    "delta_pts": [
-    -2.4,
-    1.2,
-    1.2
+    2.4,
+    -1.4,
+    -1.0
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-10-30",
   "kickoff_utc": "2026-10-30T20:00:00+00:00",
   "home": "Villarreal",
   "away": "Espanol",
-  "p_home": 0.6549,
-  "p_draw": 0.2278,
-  "p_away": 0.1173,
+  "p_home": 0.694,
+  "p_draw": 0.2007,
+  "p_away": 0.1053,
   "model": "stacker",
   "dc": {
-   "p_home": 0.5376,
-   "p_draw": 0.2513,
-   "p_away": 0.2111,
-   "xg_home": 1.7097,
-   "xg_away": 0.9863,
-   "p_over25": 0.5054,
-   "p_btts": 0.5196,
+   "p_home": 0.5965,
+   "p_draw": 0.226,
+   "p_away": 0.1775,
+   "xg_home": 1.9568,
+   "xg_away": 0.9772,
+   "p_over25": 0.5619,
+   "p_btts": 0.5409,
    "top_scores": [
     [
      "1-1",
-     0.11983178899631806
-    ],
-    [
-     "1-0",
-     0.10931723167910974
+     0.10710506411701354
     ],
     [
      "2-0",
-     0.09862119649338179
+     0.10181994021123124
+    ],
+    [
+     "2-1",
+     0.09950151464241103
     ]
    ]
   },
@@ -2148,7 +2609,7 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
    0.29,
    0.0
@@ -2476,10 +2937,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5054,
-   "p_over_model": 0.5054,
+   "p_over": 0.5619,
+   "p_over_model": 0.5619,
    "p_over_market": null,
-   "p_btts": 0.5196
+   "p_btts": 0.5409
   },
   "odds_market": null,
   "espn_id": "401882817",
@@ -2487,39 +2948,39 @@
    "home": [
     {
      "name": "Ayoze Pérez",
-     "p": 0.3,
+     "p": 0.336,
      "xg90": 0.55
     },
     {
      "name": "Alberto Moleiro",
-     "p": 0.175,
+     "p": 0.197,
      "xg90": 0.29
     },
     {
      "name": "Ilias Akhomach",
-     "p": 0.12,
+     "p": 0.136,
      "xg90": 0.19
     },
     {
      "name": "Tajon Buchanan",
-     "p": 0.113,
+     "p": 0.128,
      "xg90": 0.18
     },
     {
      "name": "Santi Comesaña",
-     "p": 0.104,
+     "p": 0.118,
      "xg90": 0.16
     }
    ],
    "away": [
     {
      "name": "Roberto Fernández",
-     "p": 0.236,
+     "p": 0.235,
      "xg90": 0.43
     },
     {
      "name": "Cala",
-     "p": 0.152,
+     "p": 0.151,
      "xg90": 0.26
     },
     {
@@ -2529,7 +2990,7 @@
     },
     {
      "name": "Edu Expósito",
-     "p": 0.06,
+     "p": 0.059,
      "xg90": 0.1
     },
     {
@@ -3063,14 +3524,85 @@
     }
    ]
   },
+  "props": {
+   "yellow": [
+    2.06,
+    2.61
+   ],
+   "yellow_total": 4.67,
+   "p_cards_over": {
+    "3.5": 0.685,
+    "4.5": 0.499,
+    "5.5": 0.326
+   },
+   "corners": [
+    5.86,
+    3.88
+   ],
+   "corners_total": 9.74,
+   "p_corners_over": {
+    "8.5": 0.637,
+    "9.5": 0.509,
+    "10.5": 0.384
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Tajon Buchanan",
+      "p": 0.384,
+      "yellows": 3
+     },
+     {
+      "name": "Juan Foyth",
+      "p": 0.345,
+      "yellows": 3
+     },
+     {
+      "name": "Renato Veiga",
+      "p": 0.329,
+      "yellows": 4
+     },
+     {
+      "name": "Ilias Akhomach",
+      "p": 0.179,
+      "yellows": 1
+     }
+    ],
+    "away": [
+     {
+      "name": "Clemens Riedel",
+      "p": 0.464,
+      "yellows": 4
+     },
+     {
+      "name": "Roger Hinojo",
+      "p": 0.393,
+      "yellows": 4
+     },
+     {
+      "name": "Cala",
+      "p": 0.383,
+      "yellows": 3
+     },
+     {
+      "name": "Urko Gonzalez",
+      "p": 0.383,
+      "yellows": 3
+     }
+    ]
+   }
+  },
   "absence_impact": {
    "xg_full": [
     2.03,
     0.93
    ],
    "xg_adj": [
-    1.71,
-    0.99
+    1.96,
+    0.98
    ],
    "p_full": [
     0.6243,
@@ -3078,66 +3610,66 @@
     0.159
    ],
    "p_adj": [
-    0.5376,
-    0.2513,
-    0.2111
+    0.5965,
+    0.226,
+    0.1775
    ]
   },
   "movement": {
    "home": "Villarreal",
    "away": "Espanol",
    "date": "2026-10-30",
-   "from_ts": "2026-10-25T17:56:46.744205+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.6896,
-    0.2051,
-    0.1053
-   ],
-   "p_to": [
     0.6549,
     0.2278,
     0.1173
    ],
+   "p_to": [
+    0.694,
+    0.2007,
+    0.1053
+   ],
    "delta_pts": [
-    -3.5,
-    2.3,
-    1.2
+    3.9,
+    -2.7,
+    -1.2
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T13:00:00+00:00",
   "home": "Levante",
   "away": "Ath Madrid",
-  "p_home": 0.2209,
-  "p_draw": 0.2384,
-  "p_away": 0.5407,
+  "p_home": 0.2132,
+  "p_draw": 0.2349,
+  "p_away": 0.5519,
   "model": "stacker",
   "dc": {
-   "p_home": 0.3068,
-   "p_draw": 0.2542,
-   "p_away": 0.439,
-   "xg_home": 1.3263,
-   "xg_away": 1.6257,
-   "p_over25": 0.566,
-   "p_btts": 0.596,
+   "p_home": 0.2931,
+   "p_draw": 0.2497,
+   "p_away": 0.4572,
+   "xg_home": 1.3169,
+   "xg_away": 1.6924,
+   "p_over25": 0.5789,
+   "p_btts": 0.6031,
    "top_scores": [
     [
      "1-1",
-     0.11861781138537209
+     0.11578235432231332
     ],
     [
      "1-2",
-     0.09154840035030899
+     0.0930263582008059
     ],
     [
      "0-1",
-     0.07893045613184524
+     0.07763720790104232
     ]
    ]
   },
@@ -3154,7 +3686,7 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
    0.0,
    0.086
@@ -3440,10 +3972,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.566,
-   "p_over_model": 0.566,
+   "p_over": 0.5789,
+   "p_over_model": 0.5789,
    "p_over_market": null,
-   "p_btts": 0.596
+   "p_btts": 0.6031
   },
   "odds_market": null,
   "espn_id": "401882820",
@@ -3451,54 +3983,54 @@
    "home": [
     {
      "name": "Roger Brugué",
-     "p": 0.312,
+     "p": 0.31,
      "xg90": 0.47
     },
     {
      "name": "Iván Romero",
-     "p": 0.259,
+     "p": 0.257,
      "xg90": 0.39
     },
     {
      "name": "Nacho Pérez",
-     "p": 0.168,
+     "p": 0.167,
      "xg90": 0.21
     },
     {
      "name": "Thiago Fernandez",
-     "p": 0.126,
+     "p": 0.125,
      "xg90": 0.17
     },
     {
      "name": "Adrián de la Fuente",
-     "p": 0.114,
+     "p": 0.113,
      "xg90": 0.14
     }
    ],
    "away": [
     {
      "name": "Ademola Lookman",
-     "p": 0.254,
+     "p": 0.263,
      "xg90": 0.41
     },
     {
      "name": "Lee Kang-In",
-     "p": 0.157,
+     "p": 0.163,
      "xg90": 0.24
     },
     {
      "name": "Giuliano Simeone",
-     "p": 0.15,
+     "p": 0.156,
      "xg90": 0.21
     },
     {
      "name": "Álex Baena",
-     "p": 0.109,
+     "p": 0.113,
      "xg90": 0.16
     },
     {
      "name": "Marcos Llorente",
-     "p": 0.052,
+     "p": 0.054,
      "xg90": 0.07
     }
    ]
@@ -4070,14 +4602,85 @@
     }
    ]
   },
+  "props": {
+   "yellow": [
+    1.65,
+    2.33
+   ],
+   "yellow_total": 3.98,
+   "p_cards_over": {
+    "3.5": 0.562,
+    "4.5": 0.367,
+    "5.5": 0.211
+   },
+   "corners": [
+    4.04,
+    5.96
+   ],
+   "corners_total": 10.0,
+   "p_corners_over": {
+    "8.5": 0.668,
+    "9.5": 0.542,
+    "10.5": 0.417
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Adrián de la Fuente",
+      "p": 0.238,
+      "yellows": 3
+     },
+     {
+      "name": "Aïssa Mandi",
+      "p": 0.174,
+      "yellows": 2
+     },
+     {
+      "name": "Iván Romero",
+      "p": 0.159,
+      "yellows": 2
+     },
+     {
+      "name": "Manu Sánchez",
+      "p": 0.088,
+      "yellows": 1
+     }
+    ],
+    "away": [
+     {
+      "name": "Álex Baena",
+      "p": 0.35,
+      "yellows": 3
+     },
+     {
+      "name": "Marc Pubill",
+      "p": 0.318,
+      "yellows": 3
+     },
+     {
+      "name": "Morten Hjulmand",
+      "p": 0.263,
+      "yellows": 2
+     },
+     {
+      "name": "Lee Kang-In",
+      "p": 0.217,
+      "yellows": 2
+     }
+    ]
+   }
+  },
   "absence_impact": {
    "xg_full": [
     1.27,
     1.71
    ],
    "xg_adj": [
-    1.33,
-    1.63
+    1.32,
+    1.69
    ],
    "p_full": [
     0.2782,
@@ -4085,66 +4688,66 @@
     0.4726
    ],
    "p_adj": [
-    0.3068,
-    0.2542,
-    0.439
+    0.2931,
+    0.2497,
+    0.4572
    ]
   },
   "movement": {
    "home": "Levante",
    "away": "Ath Madrid",
    "date": "2026-10-31",
-   "from_ts": "2026-10-25T17:17:56.439065+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.2089,
-    0.2366,
-    0.5545
-   ],
-   "p_to": [
     0.2209,
     0.2384,
     0.5407
    ],
+   "p_to": [
+    0.2132,
+    0.2349,
+    0.5519
+   ],
    "delta_pts": [
-    1.2,
-    0.2,
-    -1.4
+    -0.8,
+    -0.4,
+    1.1
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T15:15:00+00:00",
   "home": "Vallecano",
   "away": "Celta",
-  "p_home": 0.4381,
-  "p_draw": 0.3074,
-  "p_away": 0.2545,
+  "p_home": 0.4453,
+  "p_draw": 0.3,
+  "p_away": 0.2547,
   "model": "stacker",
   "dc": {
-   "p_home": 0.3568,
-   "p_draw": 0.3026,
-   "p_away": 0.3406,
-   "xg_home": 1.1348,
-   "xg_away": 1.1023,
-   "p_over25": 0.3872,
-   "p_btts": 0.4603,
+   "p_home": 0.3686,
+   "p_draw": 0.2943,
+   "p_away": 0.3371,
+   "xg_home": 1.2045,
+   "xg_away": 1.1403,
+   "p_over25": 0.4158,
+   "p_btts": 0.4833,
    "top_scores": [
     [
      "1-1",
-     0.1406572467317975
+     0.1386733281571306
     ],
     [
      "1-0",
-     0.11406444586333568
+     0.1084744283558613
     ],
     [
      "0-0",
-     0.1138784522495394
+     0.10287073044293277
     ]
    ]
   },
@@ -4161,13 +4764,13 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
-   0.156,
+   0.192,
    0.133
   ],
   "deficit_defence": [
-   0.211,
+   0.155,
    0.146
   ],
   "context": {
@@ -4260,16 +4863,25 @@
       "name": "Emil Audero",
       "pos": "G",
       "role": "G",
-      "imp": 0.56,
+      "imp": 0.5,
       "att": 0.01,
       "absent": null,
       "usual": true
      },
      {
+      "name": "Álvaro García",
+      "pos": "AM-L",
+      "role": "M",
+      "imp": 0.9,
+      "att": 0.57,
+      "absent": null,
+      "usual": true
+     },
+     {
       "name": "Florian Lejeune",
-      "pos": "CD-R",
+      "pos": "SUB",
       "role": "D",
-      "imp": 1.0,
+      "imp": 0.9,
       "att": 0.1,
       "absent": null,
       "usual": true
@@ -4278,53 +4890,44 @@
       "name": "Unai López",
       "pos": "LM",
       "role": "M",
-      "imp": 1.0,
+      "imp": 0.9,
       "att": 0.19,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Óscar Valentín",
-      "pos": "SUB",
-      "role": "M",
-      "imp": 0.44,
-      "att": 0.11,
+      "name": "Iván Balliu",
+      "pos": "RB",
+      "role": "D",
+      "imp": 0.5,
+      "att": 0.14,
       "absent": null,
       "usual": false,
       "replaces": "Pathé Ciss"
      },
      {
       "name": "Sergio Camello",
-      "pos": "F",
+      "pos": "SUB",
       "role": "F",
-      "imp": 0.89,
+      "imp": 0.8,
       "att": 0.59,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Álvaro García",
-      "pos": "AM-L",
-      "role": "M",
-      "imp": 0.89,
-      "att": 0.57,
-      "absent": null,
-      "usual": true
-     },
-     {
       "name": "Jorge de Frutos",
-      "pos": "AM-R",
-      "role": "M",
-      "imp": 0.78,
+      "pos": "SUB",
+      "role": "F",
+      "imp": 0.7,
       "att": 0.49,
       "absent": null,
       "usual": true
      },
      {
       "name": "Andrei Ratiu",
-      "pos": "RB",
+      "pos": "SUB",
       "role": "D",
-      "imp": 0.67,
+      "imp": 0.6,
       "att": 0.27,
       "absent": "doubtful",
       "usual": true
@@ -4333,8 +4936,17 @@
       "name": "Adrià Pedrosa",
       "pos": "LB",
       "role": "D",
-      "imp": 0.67,
+      "imp": 0.6,
       "att": 0.29,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Óscar Valentín",
+      "pos": "RM",
+      "role": "M",
+      "imp": 0.5,
+      "att": 0.11,
       "absent": null,
       "usual": true
      },
@@ -4342,17 +4954,8 @@
       "name": "Pedro Díaz",
       "pos": "AM",
       "role": "M",
-      "imp": 0.44,
+      "imp": 0.5,
       "att": 0.18,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Iván Balliu",
-      "pos": "RB",
-      "role": "D",
-      "imp": 0.44,
-      "att": 0.14,
       "absent": null,
       "usual": true
      }
@@ -4370,28 +4973,28 @@
       "status": "out",
       "reason": "injury",
       "source": "futbolfantasy: Fractura de tibia · Baja hasta enero",
-      "imp": 0.22
+      "imp": 0.2
      },
      {
       "name": "Andrei Ratiu",
       "status": "doubtful",
       "reason": "injury",
       "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11",
-      "imp": 0.67
+      "imp": 0.6
      },
      {
       "name": "Randy Nteka",
       "status": "doubtful",
       "reason": "injury",
       "source": "futbolfantasy: Molestias lumbares · Duda para la jornada 11",
-      "imp": 0.11
+      "imp": 0.2
      },
      {
       "name": "Pathé Ciss",
       "status": "out",
       "reason": "suspension",
       "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)",
-      "imp": 1.0
+      "imp": 0.9
      }
     ]
    },
@@ -4542,10 +5145,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.3872,
-   "p_over_model": 0.3872,
+   "p_over": 0.4158,
+   "p_over_model": 0.4158,
    "p_over_market": null,
-   "p_btts": 0.4603
+   "p_btts": 0.4833
   },
   "odds_market": null,
   "espn_id": "401882818",
@@ -4553,54 +5156,54 @@
    "home": [
     {
      "name": "Sergio Camello",
-     "p": 0.248,
+     "p": 0.261,
      "xg90": 0.47
     },
     {
      "name": "Álvaro García",
-     "p": 0.18,
+     "p": 0.19,
      "xg90": 0.32
     },
     {
      "name": "Jorge de Frutos",
-     "p": 0.179,
+     "p": 0.183,
      "xg90": 0.32
     },
     {
      "name": "Pedro Díaz",
-     "p": 0.063,
+     "p": 0.067,
      "xg90": 0.1
     },
     {
      "name": "Andrei Ratiu",
-     "p": 0.056,
+     "p": 0.059,
      "xg90": 0.08
     }
    ],
    "away": [
     {
      "name": "Hugo Gonzalez",
-     "p": 0.275,
+     "p": 0.283,
      "xg90": 0.43
     },
     {
      "name": "Williot Swedberg",
-     "p": 0.215,
+     "p": 0.221,
      "xg90": 0.33
     },
     {
      "name": "Ferran Jutglà",
-     "p": 0.176,
+     "p": 0.182,
      "xg90": 0.26
     },
     {
      "name": "Hugo Álvarez",
-     "p": 0.074,
+     "p": 0.076,
      "xg90": 0.1
     },
     {
      "name": "Javi Rueda",
-     "p": 0.056,
+     "p": 0.058,
      "xg90": 0.07
     }
    ]
@@ -4610,7 +5213,7 @@
     {
      "name": "Emil Audero",
      "role": "G",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.0,
      "goals": 0,
      "minutes": 450,
@@ -4619,7 +5222,7 @@
     {
      "name": "Daniel Cárdenas",
      "role": "G",
-     "imp": 0.22,
+     "imp": 0.3,
      "att": null,
      "goals": 0,
      "minutes": 207,
@@ -4628,7 +5231,7 @@
     {
      "name": "Augusto Batalla",
      "role": "G",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 153,
@@ -4638,16 +5241,26 @@
     {
      "name": "Florian Lejeune",
      "role": "D",
-     "imp": 1.0,
+     "imp": 0.9,
      "att": 0.09,
      "goals": 0,
      "minutes": 810,
      "status": "disponible"
     },
     {
+     "name": "Pathé Ciss",
+     "role": "D",
+     "imp": 0.9,
+     "att": 0.12,
+     "goals": 0,
+     "minutes": 810,
+     "status": "sancionado",
+     "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)"
+    },
+    {
      "name": "Adrià Pedrosa",
      "role": "D",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.29,
      "goals": 1,
      "minutes": 566,
@@ -4656,7 +5269,7 @@
     {
      "name": "Andrei Ratiu",
      "role": "D",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.23,
      "goals": 1,
      "minutes": 540,
@@ -4664,27 +5277,27 @@
      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
     },
     {
-     "name": "Mujaid Sadick",
-     "role": "D",
-     "imp": 0.44,
-     "att": 0.0,
-     "goals": 0,
-     "minutes": 346,
-     "status": "disponible"
-    },
-    {
      "name": "Iván Balliu",
      "role": "D",
-     "imp": 0.44,
+     "imp": 0.5,
      "att": 0.11,
      "goals": 0,
      "minutes": 340,
      "status": "disponible"
     },
     {
+     "name": "Mujaid Sadick",
+     "role": "D",
+     "imp": 0.4,
+     "att": 0.0,
+     "goals": 0,
+     "minutes": 346,
+     "status": "disponible"
+    },
+    {
      "name": "Jozhua Vertrouwd",
      "role": "D",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 144,
@@ -4693,26 +5306,52 @@
     {
      "name": "Pelayo Fernández",
      "role": "D",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 65,
      "status": "disponible"
     },
     {
-     "name": "Pathé Ciss",
-     "role": "M",
-     "imp": 1.0,
-     "att": 0.12,
-     "goals": 0,
-     "minutes": 810,
-     "status": "sancionado",
-     "source": "futbolfantasy: Acumulación de tarjetas (jornada 11)"
+     "name": "Pacha Espino",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Abdul Mumin",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Nobel Mendy",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Pep Chavarría",
+     "role": "D",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
     },
     {
      "name": "Unai López",
      "role": "M",
-     "imp": 1.0,
+     "imp": 0.9,
      "att": 0.18,
      "goals": 0,
      "minutes": 745,
@@ -4721,25 +5360,16 @@
     {
      "name": "Álvaro García",
      "role": "M",
-     "imp": 0.89,
+     "imp": 0.9,
      "att": 0.46,
      "goals": 3,
      "minutes": 716,
      "status": "disponible"
     },
     {
-     "name": "Jorge de Frutos",
-     "role": "M",
-     "imp": 0.78,
-     "att": 0.21,
-     "goals": 0,
-     "minutes": 505,
-     "status": "disponible"
-    },
-    {
      "name": "Pedro Díaz",
      "role": "M",
-     "imp": 0.44,
+     "imp": 0.5,
      "att": 0.25,
      "goals": 0,
      "minutes": 410,
@@ -4748,7 +5378,7 @@
     {
      "name": "Óscar Valentín",
      "role": "M",
-     "imp": 0.44,
+     "imp": 0.5,
      "att": 0.15,
      "goals": 0,
      "minutes": 403,
@@ -4757,7 +5387,7 @@
     {
      "name": "Isi Palazón",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.3,
      "att": null,
      "goals": 0,
      "minutes": 170,
@@ -4766,7 +5396,7 @@
     {
      "name": "Giorgi Tsitaishvili",
      "role": "M",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 255,
@@ -4775,7 +5405,7 @@
     {
      "name": "Gnangoro Bouare Samake",
      "role": "M",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 193,
@@ -4784,10 +5414,28 @@
     {
      "name": "Fran Pérez",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 139,
+     "status": "disponible"
+    },
+    {
+     "name": "Gerard Gumbau",
+     "role": "M",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Carlos Martín",
+     "role": "M",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -4809,6 +5457,15 @@
      "status": "disponible"
     },
     {
+     "name": "Sergio Lozano",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Marash Kumbulla",
      "role": "M",
      "imp": 0.0,
@@ -4818,7 +5475,7 @@
      "status": "disponible"
     },
     {
-     "name": "Sergio Lozano",
+     "name": "Iván Alonso Martín",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -4836,7 +5493,7 @@
      "status": "disponible"
     },
     {
-     "name": "Iván Alonso Martín",
+     "name": "Juanpe",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -4872,18 +5529,36 @@
      "status": "disponible"
     },
     {
+     "name": "Óscar Trejo",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Sergio Camello",
      "role": "F",
-     "imp": 0.89,
+     "imp": 0.8,
      "att": 0.57,
      "goals": 7,
      "minutes": 625,
      "status": "disponible"
     },
     {
+     "name": "Jorge de Frutos",
+     "role": "F",
+     "imp": 0.7,
+     "att": 0.21,
+     "goals": 0,
+     "minutes": 505,
+     "status": "disponible"
+    },
+    {
      "name": "Randy Nteka",
      "role": "F",
-     "imp": 0.11,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 155,
@@ -5169,14 +5844,85 @@
     }
    ]
   },
+  "props": {
+   "yellow": [
+    2.38,
+    2.11
+   ],
+   "yellow_total": 4.49,
+   "p_cards_over": {
+    "3.5": 0.656,
+    "4.5": 0.466,
+    "5.5": 0.295
+   },
+   "corners": [
+    5.84,
+    3.72
+   ],
+   "corners_total": 9.56,
+   "p_corners_over": {
+    "8.5": 0.616,
+    "9.5": 0.486,
+    "10.5": 0.362
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Sergio Camello",
+      "p": 0.324,
+      "yellows": 3
+     },
+     {
+      "name": "Adrià Pedrosa",
+      "p": 0.291,
+      "yellows": 2
+     },
+     {
+      "name": "Álvaro García",
+      "p": 0.241,
+      "yellows": 2
+     },
+     {
+      "name": "Iván Balliu",
+      "p": 0.233,
+      "yellows": 1
+     }
+    ],
+    "away": [
+     {
+      "name": "Javi Rueda",
+      "p": 0.323,
+      "yellows": 3
+     },
+     {
+      "name": "Yoel Lago",
+      "p": 0.307,
+      "yellows": 4
+     },
+     {
+      "name": "Sergio Carreira",
+      "p": 0.271,
+      "yellows": 2
+     },
+     {
+      "name": "Marcos Alonso",
+      "p": 0.218,
+      "yellows": 2
+     }
+    ]
+   }
+  },
   "absence_impact": {
    "xg_full": [
     1.18,
     1.11
    ],
    "xg_adj": [
-    1.13,
-    1.1
+    1.2,
+    1.14
    ],
    "p_full": [
     0.3695,
@@ -5184,66 +5930,66 @@
     0.3324
    ],
    "p_adj": [
-    0.3568,
-    0.3026,
-    0.3406
+    0.3686,
+    0.2943,
+    0.3371
    ]
   },
   "movement": {
    "home": "Vallecano",
    "away": "Celta",
    "date": "2026-10-31",
-   "from_ts": "2026-10-25T17:56:46.744205+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.4244,
-    0.3109,
-    0.2648
-   ],
-   "p_to": [
     0.4381,
     0.3074,
     0.2545
    ],
+   "p_to": [
+    0.4453,
+    0.3,
+    0.2547
+   ],
    "delta_pts": [
-    1.4,
-    -0.4,
-    -1.0
+    0.7,
+    -0.7,
+    0.0
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T17:30:00+00:00",
   "home": "Betis",
   "away": "Malaga",
-  "p_home": 0.7376,
-  "p_draw": 0.1665,
-  "p_away": 0.0959,
+  "p_home": 0.7423,
+  "p_draw": 0.158,
+  "p_away": 0.0997,
   "model": "stacker",
   "dc": {
-   "p_home": 0.7288,
-   "p_draw": 0.1851,
-   "p_away": 0.0861,
-   "xg_home": 2.1625,
-   "xg_away": 0.6075,
-   "p_over25": 0.5234,
-   "p_btts": 0.4073,
+   "p_home": 0.7414,
+   "p_draw": 0.1707,
+   "p_away": 0.0879,
+   "xg_home": 2.3617,
+   "xg_away": 0.6974,
+   "p_over25": 0.5899,
+   "p_btts": 0.4589,
    "top_scores": [
     [
      "2-0",
-     0.1465196201525088
+     0.13088578582682758
     ],
     [
      "1-0",
-     0.13113317969293936
+     0.10673152231241607
     ],
     [
      "3-0",
-     0.10561553312948803
+     0.103036406215928
     ]
    ]
   },
@@ -5260,7 +6006,7 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
    0.199,
    0.307
@@ -5629,10 +6375,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5234,
-   "p_over_model": 0.5234,
+   "p_over": 0.5899,
+   "p_over_model": 0.5899,
    "p_over_market": null,
-   "p_btts": 0.4073
+   "p_btts": 0.4589
   },
   "odds_market": null,
   "espn_id": "401882825",
@@ -5640,54 +6386,54 @@
    "home": [
     {
      "name": "Isco",
-     "p": 0.447,
+     "p": 0.476,
      "xg90": 0.56
     },
     {
      "name": "Antony",
-     "p": 0.305,
+     "p": 0.328,
      "xg90": 0.36
     },
     {
      "name": "Rodrigo Riquelme",
-     "p": 0.251,
+     "p": 0.27,
      "xg90": 0.27
     },
     {
      "name": "Pablo Fornals",
-     "p": 0.131,
+     "p": 0.142,
      "xg90": 0.13
     },
     {
      "name": "Nelson Deossa",
-     "p": 0.128,
+     "p": 0.139,
      "xg90": 0.13
     }
    ],
    "away": [
     {
      "name": "Pablo Martínez",
-     "p": 0.057,
+     "p": 0.065,
      "xg90": 0.1
     },
     {
      "name": "David Larrubia",
-     "p": 0.049,
+     "p": 0.056,
      "xg90": 0.09
     },
     {
      "name": "Daniel Lorenzo",
-     "p": 0.046,
+     "p": 0.053,
      "xg90": 0.08
     },
     {
      "name": "Carlos Dotor",
-     "p": 0.04,
+     "p": 0.046,
      "xg90": 0.07
     },
     {
      "name": "Ángel Recio",
-     "p": 0.014,
+     "p": 0.016,
      "xg90": 0.02
     }
    ]
@@ -6263,14 +7009,85 @@
     }
    ]
   },
+  "props": {
+   "yellow": [
+    1.79,
+    2.26
+   ],
+   "yellow_total": 4.05,
+   "p_cards_over": {
+    "3.5": 0.576,
+    "4.5": 0.38,
+    "5.5": 0.222
+   },
+   "corners": [
+    5.22,
+    5.09
+   ],
+   "corners_total": 10.31,
+   "p_corners_over": {
+    "8.5": 0.701,
+    "9.5": 0.58,
+    "10.5": 0.455
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Marc Roca",
+      "p": 0.206,
+      "yellows": 2
+     },
+     {
+      "name": "Héctor Bellerín",
+      "p": 0.206,
+      "yellows": 2
+     },
+     {
+      "name": "Natan",
+      "p": 0.187,
+      "yellows": 2
+     },
+     {
+      "name": "Fran García",
+      "p": 0.125,
+      "yellows": 1
+     }
+    ],
+    "away": [
+     {
+      "name": "Carlos Puga",
+      "p": 0.342,
+      "yellows": 3
+     },
+     {
+      "name": "David Larrubia",
+      "p": 0.262,
+      "yellows": 3
+     },
+     {
+      "name": "Einar Galilea",
+      "p": 0.231,
+      "yellows": 2
+     },
+     {
+      "name": "Chupete",
+      "p": 0.211,
+      "yellows": 2
+     }
+    ]
+   }
+  },
   "absence_impact": {
    "xg_full": [
     2.37,
     0.71
    ],
    "xg_adj": [
-    2.16,
-    0.61
+    2.36,
+    0.7
    ],
    "p_full": [
     0.7398,
@@ -6278,66 +7095,66 @@
     0.0891
    ],
    "p_adj": [
-    0.7288,
-    0.1851,
-    0.0861
+    0.7414,
+    0.1707,
+    0.0879
    ]
   },
   "movement": {
    "home": "Betis",
    "away": "Malaga",
    "date": "2026-10-31",
-   "from_ts": "2026-10-25T17:56:46.744205+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.7356,
-    0.1612,
-    0.1031
-   ],
-   "p_to": [
     0.7376,
     0.1665,
     0.0959
    ],
+   "p_to": [
+    0.7423,
+    0.158,
+    0.0997
+   ],
    "delta_pts": [
-    0.2,
     0.5,
-    -0.7
+    -0.9,
+    0.4
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Alaves",
-  "p_home": 0.8659,
-  "p_draw": 0.1002,
-  "p_away": 0.0339,
+  "p_home": 0.8766,
+  "p_draw": 0.0917,
+  "p_away": 0.0317,
   "model": "stacker",
   "dc": {
-   "p_home": 0.7909,
-   "p_draw": 0.1339,
-   "p_away": 0.0752,
-   "xg_home": 2.8967,
-   "xg_away": 0.832,
-   "p_over25": 0.7193,
-   "p_btts": 0.5367,
+   "p_home": 0.8093,
+   "p_draw": 0.123,
+   "p_away": 0.0677,
+   "xg_home": 3.0482,
+   "xg_away": 0.8341,
+   "p_over25": 0.7441,
+   "p_btts": 0.5417,
    "top_scores": [
     [
-     "2-0",
-     0.1008093310462099
-    ],
-    [
      "3-0",
-     0.09733879018463386
+     0.09729194101245073
     ],
     [
-     "2-1",
-     0.08387674635067638
+     "2-0",
+     0.09575254260533288
+    ],
+    [
+     "3-1",
+     0.08114796412548442
     ]
    ]
   },
@@ -6354,7 +7171,7 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
    0.111,
    0.029
@@ -6695,10 +7512,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.7193,
-   "p_over_model": 0.7193,
+   "p_over": 0.7441,
+   "p_over_model": 0.7441,
    "p_over_market": null,
-   "p_btts": 0.5367
+   "p_btts": 0.5417
   },
   "odds_market": null,
   "espn_id": "401882822",
@@ -6706,34 +7523,34 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.524,
+     "p": 0.542,
      "xg90": 1.02
     },
     {
      "name": "Lamine Yamal",
-     "p": 0.393,
+     "p": 0.408,
      "xg90": 0.66
     },
     {
      "name": "Anthony Gordon",
-     "p": 0.343,
+     "p": 0.357,
      "xg90": 0.55
     },
     {
      "name": "Fermín López",
-     "p": 0.275,
+     "p": 0.287,
      "xg90": 0.42
     },
     {
      "name": "Rodri",
-     "p": 0.148,
+     "p": 0.155,
      "xg90": 0.21
     }
    ],
    "away": [
     {
      "name": "Lucas Boyé",
-     "p": 0.195,
+     "p": 0.196,
      "xg90": 0.46
     },
     {
@@ -6748,7 +7565,7 @@
     },
     {
      "name": "Ángel Pérez",
-     "p": 0.067,
+     "p": 0.068,
      "xg90": 0.13
     },
     {
@@ -7319,13 +8136,84 @@
     }
    ]
   },
+  "props": {
+   "yellow": [
+    1.55,
+    2.38
+   ],
+   "yellow_total": 3.93,
+   "p_cards_over": {
+    "3.5": 0.552,
+    "4.5": 0.357,
+    "5.5": 0.204
+   },
+   "corners": [
+    7.54,
+    3.47
+   ],
+   "corners_total": 11.0,
+   "p_corners_over": {
+    "8.5": 0.768,
+    "9.5": 0.66,
+    "10.5": 0.541
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Fermín López",
+      "p": 0.247,
+      "yellows": 3
+     },
+     {
+      "name": "João Cancelo",
+      "p": 0.187,
+      "yellows": 1
+     },
+     {
+      "name": "Lamine Yamal",
+      "p": 0.139,
+      "yellows": 2
+     },
+     {
+      "name": "Rodri",
+      "p": 0.109,
+      "yellows": 1
+     }
+    ],
+    "away": [
+     {
+      "name": "Antonio Blanco",
+      "p": 0.274,
+      "yellows": 3
+     },
+     {
+      "name": "Abde Rebbach",
+      "p": 0.254,
+      "yellows": 3
+     },
+     {
+      "name": "Nahuel Tenaglia",
+      "p": 0.254,
+      "yellows": 3
+     },
+     {
+      "name": "Nicolás Valentini",
+      "p": 0.189,
+      "yellows": 1
+     }
+    ]
+   }
+  },
   "absence_impact": {
    "xg_full": [
     3.08,
     0.79
    ],
    "xg_adj": [
-    2.9,
+    3.05,
     0.83
    ],
    "p_full": [
@@ -7334,66 +8222,66 @@
     0.0611
    ],
    "p_adj": [
-    0.7909,
-    0.1339,
-    0.0752
+    0.8093,
+    0.123,
+    0.0677
    ]
   },
   "movement": {
    "home": "Barcelona",
    "away": "Alaves",
    "date": "2026-10-31",
-   "from_ts": "2026-10-25T18:01:26.218166+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.8843,
-    0.0866,
-    0.0292
-   ],
-   "p_to": [
     0.8659,
     0.1002,
     0.0339
    ],
+   "p_to": [
+    0.8766,
+    0.0917,
+    0.0317
+   ],
    "delta_pts": [
-    -1.8,
-    1.4,
-    0.5
+    1.1,
+    -0.8,
+    -0.2
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T13:00:00+00:00",
   "home": "Getafe",
   "away": "Sevilla",
-  "p_home": 0.3652,
-  "p_draw": 0.3261,
-  "p_away": 0.3088,
+  "p_home": 0.3718,
+  "p_draw": 0.3167,
+  "p_away": 0.3115,
   "model": "stacker",
   "dc": {
-   "p_home": 0.3517,
-   "p_draw": 0.3329,
-   "p_away": 0.3154,
-   "xg_home": 0.981,
-   "xg_away": 0.9131,
-   "p_over25": 0.2947,
-   "p_btts": 0.3814,
+   "p_home": 0.3641,
+   "p_draw": 0.3192,
+   "p_away": 0.3167,
+   "xg_home": 1.0632,
+   "xg_away": 0.9721,
+   "p_over25": 0.3329,
+   "p_btts": 0.4142,
    "top_scores": [
     [
-     "0-0",
-     0.15761507673871702
+     "1-1",
+     0.14220167828392197
     ],
     [
-     "1-1",
-     0.14193544710485279
+     "0-0",
+     0.13781355679079837
     ],
     [
      "1-0",
-     0.14042301323182732
+     0.1317157182773652
     ]
    ]
   },
@@ -7410,14 +8298,14 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
    0.177,
-   0.161
+   0.158
   ],
   "deficit_defence": [
    0.234,
-   0.104
+   0.116
   ],
   "context": {
    "stake_diff_late": 0.012,
@@ -7651,20 +8539,11 @@
     "formation": null,
     "xi": [
      {
-      "name": "Odisseas Vlachodimos",
+      "name": "Ørjan Nyland",
       "pos": "G",
       "role": "G",
-      "imp": 1.0,
+      "imp": 0.1,
       "att": 0.01,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Lucien Agoumé",
-      "pos": "RM",
-      "role": "M",
-      "imp": 1.0,
-      "att": 0.12,
       "absent": null,
       "usual": true
      },
@@ -7678,20 +8557,47 @@
       "usual": true
      },
      {
+      "name": "Lucien Agoumé",
+      "pos": "CM",
+      "role": "M",
+      "imp": 1.0,
+      "att": 0.12,
+      "absent": null,
+      "usual": true
+     },
+     {
       "name": "Juan Iglesias",
       "pos": "RB",
       "role": "D",
-      "imp": 1.0,
+      "imp": 0.9,
       "att": 0.11,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Giorgi Kochorashvili",
-      "pos": "RM",
+      "name": "Odisseas Vlachodimos",
+      "pos": "SUB",
+      "role": "G",
+      "imp": 0.9,
+      "att": 0.01,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Enrique Salas",
+      "pos": "CD-L",
+      "role": "D",
+      "imp": 0.8,
+      "att": 0.1,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Felix Correia",
+      "pos": "AM-L",
       "role": "M",
-      "imp": 0.33,
-      "att": 0.25,
+      "imp": 0.5,
+      "att": 0.49,
       "absent": null,
       "usual": false,
       "replaces": "Miguel Sierra"
@@ -7700,17 +8606,8 @@
       "name": "Andrés Castrín",
       "pos": "CD-R",
       "role": "D",
-      "imp": 0.78,
+      "imp": 0.7,
       "att": 0.06,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Enrique Salas",
-      "pos": "CD-L",
-      "role": "D",
-      "imp": 0.78,
-      "att": 0.1,
       "absent": null,
       "usual": true
      },
@@ -7718,36 +8615,27 @@
       "name": "Robbie Ure",
       "pos": "F",
       "role": "F",
-      "imp": 0.67,
+      "imp": 0.6,
       "att": 0.59,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Youssouf Fofana",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.56,
-      "att": 0.53,
-      "absent": null,
-      "usual": true
-     },
-     {
       "name": "Peque",
-      "pos": "AM",
+      "pos": "RM",
       "role": "M",
-      "imp": 0.33,
+      "imp": 0.4,
       "att": 0.13,
       "absent": null,
       "usual": false,
       "replaces": "Jon Guridi"
      },
      {
-      "name": "Felix Correia",
-      "pos": "AM-L",
+      "name": "Youssouf Fofana",
+      "pos": "LM",
       "role": "M",
-      "imp": 0.56,
-      "att": 0.49,
+      "imp": 0.5,
+      "att": 0.53,
       "absent": null,
       "usual": true
      }
@@ -7765,14 +8653,14 @@
       "status": "out",
       "reason": "injury",
       "source": "futbolfantasy: Luxación acromioclavicular · Baja hasta enero",
-      "imp": 0.89
+      "imp": 0.8
      },
      {
       "name": "Jon Guridi",
       "status": "out",
       "reason": "injury",
       "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre",
-      "imp": 0.56
+      "imp": 0.5
      }
     ]
    }
@@ -7780,10 +8668,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.2947,
-   "p_over_model": 0.2947,
+   "p_over": 0.3329,
+   "p_over_model": 0.3329,
    "p_over_market": null,
-   "p_btts": 0.3814
+   "p_btts": 0.4142
   },
   "odds_market": null,
   "espn_id": "401882821",
@@ -7791,54 +8679,54 @@
    "home": [
     {
      "name": "Martín Satriano",
-     "p": 0.232,
+     "p": 0.249,
      "xg90": 0.27
     },
     {
      "name": "Ramón Terrats",
-     "p": 0.179,
+     "p": 0.193,
      "xg90": 0.2
     },
     {
      "name": "Enes Ünal",
-     "p": 0.153,
+     "p": 0.165,
      "xg90": 0.18
     },
     {
      "name": "Zaid Romero",
-     "p": 0.048,
+     "p": 0.052,
      "xg90": 0.05
     },
     {
      "name": "Nemanja Gudelj",
-     "p": 0.043,
+     "p": 0.047,
      "xg90": 0.04
     }
    ],
    "away": [
     {
      "name": "Robbie Ure",
-     "p": 0.209,
+     "p": 0.221,
      "xg90": 0.38
     },
     {
      "name": "Youssouf Fofana",
-     "p": 0.195,
+     "p": 0.206,
      "xg90": 0.33
     },
     {
      "name": "Felix Correia",
-     "p": 0.168,
+     "p": 0.178,
      "xg90": 0.28
     },
     {
      "name": "Peque",
-     "p": 0.116,
+     "p": 0.123,
      "xg90": 0.19
     },
     {
      "name": "Juan Iglesias",
-     "p": 0.043,
+     "p": 0.046,
      "xg90": 0.06
     }
    ]
@@ -8142,10 +9030,19 @@
     {
      "name": "Odisseas Vlachodimos",
      "role": "G",
-     "imp": 1.0,
+     "imp": 0.9,
      "att": 0.0,
      "goals": 0,
      "minutes": 810,
+     "status": "disponible"
+    },
+    {
+     "name": "Ørjan Nyland",
+     "role": "G",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -8160,37 +9057,55 @@
     {
      "name": "Juan Iglesias",
      "role": "D",
-     "imp": 1.0,
+     "imp": 0.9,
      "att": 0.11,
      "goals": 1,
      "minutes": 795,
      "status": "disponible"
     },
     {
-     "name": "Andrés Castrín",
-     "role": "D",
-     "imp": 0.78,
-     "att": 0.09,
-     "goals": 0,
-     "minutes": 659,
-     "status": "disponible"
-    },
-    {
      "name": "Enrique Salas",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": null,
      "goals": null,
      "minutes": null,
      "status": "disponible"
     },
     {
+     "name": "Andrés Castrín",
+     "role": "D",
+     "imp": 0.7,
+     "att": 0.09,
+     "goals": 0,
+     "minutes": 659,
+     "status": "disponible"
+    },
+    {
      "name": "Arouna Sangante",
      "role": "D",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.01,
      "goals": 0,
      "minutes": 290,
+     "status": "disponible"
+    },
+    {
+     "name": "José Ángel Carmona",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": 0,
+     "minutes": 70,
+     "status": "disponible"
+    },
+    {
+     "name": "César Azpilicueta",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -8200,6 +9115,15 @@
      "att": 0.06,
      "goals": 0,
      "minutes": 630,
+     "status": "disponible"
+    },
+    {
+     "name": "Fábio Cardoso",
+     "role": "D",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -8213,7 +9137,7 @@
      "source": "futbolfantasy: Lesión en el recto anterior · Baja hasta principios de noviembre"
     },
     {
-     "name": "Fábio Cardoso",
+     "name": "Nemanja Gudelj",
      "role": "D",
      "imp": 0.0,
      "att": null,
@@ -8233,7 +9157,7 @@
     {
      "name": "Miguel Sierra",
      "role": "M",
-     "imp": 0.89,
+     "imp": 0.8,
      "att": 0.13,
      "goals": 2,
      "minutes": 592,
@@ -8243,7 +9167,7 @@
     {
      "name": "Youssouf Fofana",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.53,
      "goals": 1,
      "minutes": 465,
@@ -8252,7 +9176,7 @@
     {
      "name": "Felix Correia",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.49,
      "goals": 1,
      "minutes": 382,
@@ -8261,7 +9185,7 @@
     {
      "name": "Jon Guridi",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.28,
      "goals": 1,
      "minutes": 360,
@@ -8269,27 +9193,27 @@
      "source": "futbolfantasy: Lesión en el aductor · Baja hasta principios de noviembre"
     },
     {
-     "name": "Giorgi Kochorashvili",
-     "role": "M",
-     "imp": 0.33,
-     "att": null,
-     "goals": 0,
-     "minutes": 267,
-     "status": "disponible"
-    },
-    {
      "name": "Peque",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.4,
      "att": null,
      "goals": 1,
      "minutes": 221,
      "status": "disponible"
     },
     {
+     "name": "Giorgi Kochorashvili",
+     "role": "M",
+     "imp": 0.3,
+     "att": null,
+     "goals": 0,
+     "minutes": 267,
+     "status": "disponible"
+    },
+    {
      "name": "Oso",
      "role": "M",
-     "imp": 0.22,
+     "imp": 0.3,
      "att": null,
      "goals": 1,
      "minutes": 164,
@@ -8298,7 +9222,7 @@
     {
      "name": "Julio Díaz",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 97,
@@ -8307,7 +9231,7 @@
     {
      "name": "Nico Guillén",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 92,
@@ -8316,19 +9240,28 @@
     {
      "name": "Rubén Vargas",
      "role": "M",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 0,
      "minutes": 64,
      "status": "disponible"
     },
     {
-     "name": "José Ángel Carmona",
+     "name": "Djibril Sow",
      "role": "M",
-     "imp": 0.0,
+     "imp": 0.1,
      "att": null,
-     "goals": 0,
-     "minutes": 70,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Alexis Sánchez",
+     "role": "M",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -8350,7 +9283,25 @@
      "status": "disponible"
     },
     {
-     "name": "Manuel Ángel Castillo Rodríguez",
+     "name": "Alberto Flores",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Joan Jordán",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Federico Gattoni",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -8360,6 +9311,24 @@
     },
     {
      "name": "Alfonso González",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Manuel Ángel Castillo Rodríguez",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Tanguy Nianzou",
      "role": "M",
      "imp": 0.0,
      "att": null,
@@ -8415,40 +9384,129 @@
     {
      "name": "Robbie Ure",
      "role": "F",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.59,
      "goals": 1,
      "minutes": 514,
      "status": "disponible"
     },
     {
-     "name": "Lucas Stassin",
-     "role": "F",
-     "imp": 0.22,
-     "att": null,
-     "goals": 1,
-     "minutes": 231,
-     "status": "disponible"
-    },
-    {
      "name": "Isaac Romero",
      "role": "F",
-     "imp": 0.22,
+     "imp": 0.3,
      "att": null,
      "goals": 2,
      "minutes": 230,
      "status": "disponible"
     },
     {
+     "name": "Lucas Stassin",
+     "role": "F",
+     "imp": 0.2,
+     "att": null,
+     "goals": 1,
+     "minutes": 231,
+     "status": "disponible"
+    },
+    {
      "name": "Chidera Ejuke",
      "role": "F",
-     "imp": 0.11,
+     "imp": 0.1,
      "att": null,
      "goals": 1,
      "minutes": 227,
      "status": "disponible"
+    },
+    {
+     "name": "Neal Maupay",
+     "role": "F",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Akor Adams",
+     "role": "F",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
     }
    ]
+  },
+  "props": {
+   "yellow": [
+    2.61,
+    3.05
+   ],
+   "yellow_total": 5.65,
+   "p_cards_over": {
+    "3.5": 0.815,
+    "4.5": 0.666,
+    "5.5": 0.497
+   },
+   "corners": [
+    4.18,
+    4.11
+   ],
+   "corners_total": 8.29,
+   "p_corners_over": {
+    "8.5": 0.448,
+    "9.5": 0.32,
+    "10.5": 0.214
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Enes Ünal",
+      "p": 0.415,
+      "yellows": 3
+     },
+     {
+      "name": "Ramón Terrats",
+      "p": 0.397,
+      "yellows": 4
+     },
+     {
+      "name": "Nemanja Gudelj",
+      "p": 0.379,
+      "yellows": 3
+     },
+     {
+      "name": "Djené",
+      "p": 0.323,
+      "yellows": 3
+     }
+    ],
+    "away": [
+     {
+      "name": "Felix Correia",
+      "p": 0.366,
+      "yellows": 2
+     },
+     {
+      "name": "Juan Iglesias",
+      "p": 0.337,
+      "yellows": 3
+     },
+     {
+      "name": "Peque",
+      "p": 0.313,
+      "yellows": 1
+     },
+     {
+      "name": "Gabriel Suazo",
+      "p": 0.252,
+      "yellows": 2
+     }
+    ]
+   }
   },
   "absence_impact": {
    "xg_full": [
@@ -8456,8 +9514,8 @@
     0.93
    ],
    "xg_adj": [
-    0.98,
-    0.91
+    1.06,
+    0.97
    ],
    "p_full": [
     0.371,
@@ -8465,66 +9523,66 @@
     0.305
    ],
    "p_adj": [
-    0.3517,
-    0.3329,
-    0.3154
+    0.3641,
+    0.3192,
+    0.3167
    ]
   },
   "movement": {
    "home": "Getafe",
    "away": "Sevilla",
    "date": "2026-11-01",
-   "from_ts": "2026-10-25T17:56:46.744205+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.3498,
-    0.3271,
-    0.323
-   ],
-   "p_to": [
     0.3652,
     0.3261,
     0.3088
    ],
+   "p_to": [
+    0.3718,
+    0.3167,
+    0.3115
+   ],
    "delta_pts": [
-    1.5,
-    -0.1,
-    -1.4
+    0.7,
+    -0.9,
+    0.3
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T15:15:00+00:00",
   "home": "Santander",
   "away": "Real Madrid",
-  "p_home": 0.1081,
-  "p_draw": 0.1668,
-  "p_away": 0.7251,
+  "p_home": 0.1028,
+  "p_draw": 0.156,
+  "p_away": 0.7412,
   "model": "stacker",
   "dc": {
-   "p_home": 0.1155,
-   "p_draw": 0.1537,
-   "p_away": 0.7308,
-   "xg_home": 1.1028,
-   "xg_away": 2.8499,
-   "p_over25": 0.7548,
-   "p_btts": 0.6326,
+   "p_home": 0.1089,
+   "p_draw": 0.143,
+   "p_away": 0.7481,
+   "xg_home": 1.1495,
+   "xg_away": 3.0334,
+   "p_over25": 0.7874,
+   "p_btts": 0.6531,
    "top_scores": [
     [
-     "1-2",
-     0.08601511588086097
-    ],
-    [
      "1-3",
-     0.08171095354524839
+     0.08159681891400175
     ],
     [
-     "0-2",
-     0.07799622327444879
+     "1-2",
+     0.08069771637516217
+    ],
+    [
+     "0-3",
+     0.07098214115245524
     ]
    ]
   },
@@ -8535,13 +9593,13 @@
   "elo_diff": -164.3,
   "referee": null,
   "weather": {
-   "temp_c": 15.1,
+   "temp_c": 14.9,
    "precip_mm": 0.0,
-   "wind_kmh": 5.8
+   "wind_kmh": 12.2
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
    0.095,
    0.151
@@ -8857,10 +9915,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.7548,
-   "p_over_model": 0.7548,
+   "p_over": 0.7874,
+   "p_over_model": 0.7874,
    "p_over_market": null,
-   "p_btts": 0.6326
+   "p_btts": 0.6531
   },
   "odds_market": null,
   "espn_id": "401882819",
@@ -8868,54 +9926,54 @@
    "home": [
     {
      "name": "Yassir Zabiri",
-     "p": 0.376,
+     "p": 0.388,
      "xg90": 0.7
     },
     {
      "name": "Sergio Canales",
-     "p": 0.134,
+     "p": 0.14,
      "xg90": 0.21
     },
     {
      "name": "Alvaro Mantilla",
-     "p": 0.049,
+     "p": 0.051,
      "xg90": 0.07
     },
     {
      "name": "Jeanuël Belocian",
-     "p": 0.046,
+     "p": 0.048,
      "xg90": 0.06
     },
     {
      "name": "Iñigo Vicente",
-     "p": 0.031,
+     "p": 0.032,
      "xg90": 0.04
     }
    ],
    "away": [
     {
      "name": "Kylian Mbappé",
-     "p": 0.632,
+     "p": 0.655,
      "xg90": 1.01
     },
     {
      "name": "Jude Bellingham",
-     "p": 0.264,
+     "p": 0.278,
      "xg90": 0.3
     },
     {
      "name": "Arda Güler",
-     "p": 0.234,
+     "p": 0.247,
      "xg90": 0.26
     },
     {
      "name": "Denzel Dumfries",
-     "p": 0.137,
+     "p": 0.146,
      "xg90": 0.13
     },
     {
      "name": "Dean Huijsen",
-     "p": 0.099,
+     "p": 0.105,
      "xg90": 0.09
     }
    ]
@@ -9515,14 +10573,85 @@
     }
    ]
   },
+  "props": {
+   "yellow": [
+    2.48,
+    2.25
+   ],
+   "yellow_total": 4.73,
+   "p_cards_over": {
+    "3.5": 0.695,
+    "4.5": 0.511,
+    "5.5": 0.337
+   },
+   "corners": [
+    4.39,
+    7.15
+   ],
+   "corners_total": 11.54,
+   "p_corners_over": {
+    "8.5": 0.812,
+    "9.5": 0.715,
+    "10.5": 0.603
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Pablo Ramon",
+      "p": 0.444,
+      "yellows": 4
+     },
+     {
+      "name": "Yassir Zabiri",
+      "p": 0.444,
+      "yellows": 4
+     },
+     {
+      "name": "Alvaro Mantilla",
+      "p": 0.31,
+      "yellows": 3
+     },
+     {
+      "name": "Iñigo Vicente",
+      "p": 0.31,
+      "yellows": 3
+     }
+    ],
+    "away": [
+     {
+      "name": "Ibrahima Konaté",
+      "p": 0.324,
+      "yellows": 4
+     },
+     {
+      "name": "Jude Bellingham",
+      "p": 0.193,
+      "yellows": 2
+     },
+     {
+      "name": "Aurélien Tchouaméni",
+      "p": 0.179,
+      "yellows": 1
+     },
+     {
+      "name": "Denzel Dumfries",
+      "p": 0.179,
+      "yellows": 1
+     }
+    ]
+   }
+  },
   "absence_impact": {
    "xg_full": [
     1.15,
     2.97
    ],
    "xg_adj": [
-    1.1,
-    2.85
+    1.15,
+    3.03
    ],
    "p_full": [
     0.113,
@@ -9530,66 +10659,66 @@
     0.7397
    ],
    "p_adj": [
-    0.1155,
-    0.1537,
-    0.7308
+    0.1089,
+    0.143,
+    0.7481
    ]
   },
   "movement": {
    "home": "Santander",
    "away": "Real Madrid",
    "date": "2026-11-01",
-   "from_ts": "2026-10-25T18:46:05.659526+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.114,
-    0.1672,
-    0.7188
-   ],
-   "p_to": [
     0.1081,
     0.1668,
     0.7251
    ],
+   "p_to": [
+    0.1028,
+    0.156,
+    0.7412
+   ],
    "delta_pts": [
-    -0.6,
-    -0.0,
-    0.6
+    -0.5,
+    -1.1,
+    1.6
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T17:30:00+00:00",
   "home": "Elche",
   "away": "Valencia",
-  "p_home": 0.5189,
-  "p_draw": 0.2568,
-  "p_away": 0.2243,
+  "p_home": 0.5051,
+  "p_draw": 0.2584,
+  "p_away": 0.2365,
   "model": "stacker",
   "dc": {
-   "p_home": 0.5197,
-   "p_draw": 0.2622,
-   "p_away": 0.2181,
-   "xg_home": 1.6063,
-   "xg_away": 0.955,
-   "p_over25": 0.4718,
-   "p_btts": 0.4981,
+   "p_home": 0.5044,
+   "p_draw": 0.2609,
+   "p_away": 0.2348,
+   "xg_home": 1.6154,
+   "xg_away": 1.0274,
+   "p_over25": 0.4923,
+   "p_btts": 0.5207,
    "top_scores": [
     [
      "1-1",
-     0.12472990568934554
+     0.12438232339649531
     ],
     [
      "1-0",
-     0.11771046886896651
+     0.10866866151929623
     ],
     [
-     "2-0",
-     0.09959731661323629
+     "2-1",
+     0.09539385906036071
     ]
    ]
   },
@@ -9606,7 +10735,7 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
    0.016,
    0.162
@@ -9960,10 +11089,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.4718,
-   "p_over_model": 0.4718,
+   "p_over": 0.4923,
+   "p_over_model": 0.4923,
    "p_over_market": null,
-   "p_btts": 0.4981
+   "p_btts": 0.5207
   },
   "odds_market": null,
   "espn_id": "401882823",
@@ -9971,17 +11100,17 @@
    "home": [
     {
      "name": "Federico Redondo",
-     "p": 0.146,
+     "p": 0.147,
      "xg90": 0.14
     },
     {
      "name": "Roy Revivo",
-     "p": 0.089,
+     "p": 0.09,
      "xg90": 0.08
     },
     {
      "name": "Germán Valera",
-     "p": 0.077,
+     "p": 0.078,
      "xg90": 0.08
     },
     {
@@ -9998,27 +11127,27 @@
    "away": [
     {
      "name": "Hugo Duro",
-     "p": 0.208,
+     "p": 0.222,
      "xg90": 0.39
     },
     {
      "name": "Arnaut Danjuma",
-     "p": 0.129,
+     "p": 0.138,
      "xg90": 0.23
     },
     {
      "name": "Javier Guerra",
-     "p": 0.074,
+     "p": 0.079,
      "xg90": 0.13
     },
     {
      "name": "Pepelu",
-     "p": 0.068,
+     "p": 0.073,
      "xg90": 0.11
     },
     {
      "name": "José Gayà",
-     "p": 0.032,
+     "p": 0.035,
      "xg90": 0.05
     }
    ]
@@ -10601,14 +11730,85 @@
     }
    ]
   },
+  "props": {
+   "yellow": [
+    2.42,
+    2.41
+   ],
+   "yellow_total": 4.83,
+   "p_cards_over": {
+    "3.5": 0.71,
+    "4.5": 0.529,
+    "5.5": 0.354
+   },
+   "corners": [
+    4.67,
+    3.94
+   ],
+   "corners_total": 8.61,
+   "p_corners_over": {
+    "8.5": 0.492,
+    "9.5": 0.362,
+    "10.5": 0.249
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Gonzalo Villar",
+      "p": 0.349,
+      "yellows": 4
+     },
+     {
+      "name": "José Antonio Morente",
+      "p": 0.33,
+      "yellows": 2
+     },
+     {
+      "name": "Federico Redondo",
+      "p": 0.295,
+      "yellows": 2
+     },
+     {
+      "name": "Thomas Lemar",
+      "p": 0.237,
+      "yellows": 1
+     }
+    ],
+    "away": [
+     {
+      "name": "Guido Rodríguez",
+      "p": 0.327,
+      "yellows": 3
+     },
+     {
+      "name": "Pablo Maffeo",
+      "p": 0.327,
+      "yellows": 3
+     },
+     {
+      "name": "Justin de Haas",
+      "p": 0.271,
+      "yellows": 2
+     },
+     {
+      "name": "Pepelu",
+      "p": 0.19,
+      "yellows": 2
+     }
+    ]
+   }
+  },
   "absence_impact": {
    "xg_full": [
     1.61,
     1.04
    ],
    "xg_adj": [
-    1.61,
-    0.96
+    1.62,
+    1.03
    ],
    "p_full": [
     0.4998,
@@ -10616,66 +11816,66 @@
     0.2384
    ],
    "p_adj": [
-    0.5197,
-    0.2622,
-    0.2181
+    0.5044,
+    0.2609,
+    0.2348
    ]
   },
   "movement": {
    "home": "Elche",
    "away": "Valencia",
    "date": "2026-11-01",
-   "from_ts": "2026-10-25T18:01:26.218166+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.5189,
-    0.256,
-    0.2251
-   ],
-   "p_to": [
     0.5189,
     0.2568,
     0.2243
    ],
+   "p_to": [
+    0.5051,
+    0.2584,
+    0.2365
+   ],
    "delta_pts": [
-    0.0,
-    0.1,
-    -0.1
+    -1.4,
+    0.2,
+    1.2
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T19:39:16.261703+00:00",
+  "generated_at": "2026-10-25T20:05:46.256661+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T20:00:00+00:00",
   "home": "Ath Bilbao",
   "away": "Sociedad",
-  "p_home": 0.4895,
-  "p_draw": 0.2872,
-  "p_away": 0.2233,
+  "p_home": 0.5237,
+  "p_draw": 0.2664,
+  "p_away": 0.2099,
   "model": "stacker",
   "dc": {
-   "p_home": 0.4087,
-   "p_draw": 0.2722,
-   "p_away": 0.3191,
-   "xg_home": 1.4255,
-   "xg_away": 1.2322,
-   "p_over25": 0.496,
-   "p_btts": 0.5446,
+   "p_home": 0.4605,
+   "p_draw": 0.2568,
+   "p_away": 0.2827,
+   "xg_home": 1.6256,
+   "xg_away": 1.2279,
+   "p_over25": 0.5432,
+   "p_btts": 0.5741,
    "top_scores": [
     [
      "1-1",
-     0.12969490323776214
-    ],
-    [
-     "1-0",
-     0.09339540184700791
+     0.12117550198793382
     ],
     [
      "2-1",
-     0.08777440200493775
+     0.09351916976470108
+    ],
+    [
+     "1-0",
+     0.08758369376025107
     ]
    ]
   },
@@ -10686,19 +11886,19 @@
   "elo_diff": 34.5,
   "referee": null,
   "weather": {
-   "temp_c": 11.1,
+   "temp_c": 11.4,
    "precip_mm": 0.0,
-   "wind_kmh": 3.4
+   "wind_kmh": 2.5
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "lesionados y sancionados",
   "deficit": [
-   0.276,
+   0.256,
    0.0
   ],
   "deficit_defence": [
-   0.107,
+   0.116,
    0.0
   ],
   "context": {
@@ -10751,10 +11951,19 @@
     "formation": null,
     "xi": [
      {
-      "name": "Unai Simón",
+      "name": "Álex Padilla",
       "pos": "G",
       "role": "G",
-      "imp": 1.0,
+      "imp": 0.1,
+      "att": 0.01,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Unai Simón",
+      "pos": "SUB",
+      "role": "G",
+      "imp": 0.9,
       "att": 0.01,
       "absent": null,
       "usual": true
@@ -10763,7 +11972,7 @@
       "name": "Iñaki Williams",
       "pos": "AM-R",
       "role": "M",
-      "imp": 0.89,
+      "imp": 0.9,
       "att": 0.53,
       "absent": null,
       "usual": true
@@ -10772,35 +11981,35 @@
       "name": "Iñigo Ruiz de Galarreta",
       "pos": "RM",
       "role": "M",
-      "imp": 0.78,
+      "imp": 0.8,
       "att": 0.16,
       "absent": "doubtful",
-      "usual": true
-     },
-     {
-      "name": "Aymeric Laporte",
-      "pos": "CD-L",
-      "role": "D",
-      "imp": 0.78,
-      "att": 0.1,
-      "absent": null,
       "usual": true
      },
      {
       "name": "Yuri Berchiche",
       "pos": "LB",
       "role": "D",
-      "imp": 0.78,
+      "imp": 0.7,
       "att": 0.19,
       "absent": null,
       "usual": true
      },
      {
       "name": "Robert Navarro",
-      "pos": "SUB",
+      "pos": "AM-L",
       "role": "M",
-      "imp": 0.67,
+      "imp": 0.7,
       "att": 0.4,
+      "absent": null,
+      "usual": true
+     },
+     {
+      "name": "Aymeric Laporte",
+      "pos": "SUB",
+      "role": "D",
+      "imp": 0.7,
+      "att": 0.1,
       "absent": null,
       "usual": true
      },
@@ -10808,26 +12017,17 @@
       "name": "Nico Williams",
       "pos": "AM-L",
       "role": "M",
-      "imp": 0.56,
+      "imp": 0.5,
       "att": 0.52,
       "absent": null,
       "usual": false,
       "replaces": "Oihan Sancet"
      },
      {
-      "name": "Álex Berenguer",
-      "pos": "AM",
-      "role": "M",
-      "imp": 0.56,
-      "att": 0.47,
-      "absent": null,
-      "usual": true
-     },
-     {
       "name": "Yeray",
-      "pos": "SUB",
+      "pos": "CD-R",
       "role": "D",
-      "imp": 0.56,
+      "imp": 0.6,
       "att": 0.12,
       "absent": null,
       "usual": true
@@ -10836,17 +12036,17 @@
       "name": "Aitor Paredes",
       "pos": "CD-L",
       "role": "D",
-      "imp": 0.56,
+      "imp": 0.6,
       "att": 0.13,
       "absent": null,
       "usual": true
      },
      {
-      "name": "Beñat Gerenabarrena",
-      "pos": "SUB",
+      "name": "Álex Berenguer",
+      "pos": "AM",
       "role": "M",
-      "imp": 0.56,
-      "att": 0.03,
+      "imp": 0.5,
+      "att": 0.47,
       "absent": null,
       "usual": true
      }
@@ -10857,7 +12057,7 @@
       "status": "out",
       "reason": "injury",
       "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta mayo",
-      "imp": 0.22
+      "imp": 0.3
      },
      {
       "name": "Unai Egiluz",
@@ -10871,14 +12071,14 @@
       "status": "out",
       "reason": "injury",
       "source": "futbolfantasy: Lesión en el sóleo · Baja hasta principio de noviembre",
-      "imp": 0.67
+      "imp": 0.6
      },
      {
       "name": "Iñigo Ruiz de Galarreta",
       "status": "doubtful",
       "reason": "injury",
       "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11",
-      "imp": 0.78
+      "imp": 0.8
      }
     ]
    },
@@ -10992,10 +12192,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.496,
-   "p_over_model": 0.496,
+   "p_over": 0.5432,
+   "p_over_model": 0.5432,
    "p_over_market": null,
-   "p_btts": 0.5446
+   "p_btts": 0.5741
   },
   "odds_market": null,
   "espn_id": "401882826",
@@ -11003,49 +12203,49 @@
    "home": [
     {
      "name": "Iñaki Williams",
-     "p": 0.263,
+     "p": 0.294,
      "xg90": 0.38
     },
     {
      "name": "Nico Williams",
-     "p": 0.22,
+     "p": 0.247,
      "xg90": 0.31
     },
     {
      "name": "Robert Navarro",
-     "p": 0.203,
+     "p": 0.227,
      "xg90": 0.28
     },
     {
      "name": "Álex Berenguer",
-     "p": 0.158,
+     "p": 0.178,
      "xg90": 0.22
     },
     {
      "name": "Aitor Paredes",
-     "p": 0.077,
+     "p": 0.087,
      "xg90": 0.09
     }
    ],
    "away": [
     {
      "name": "Orri Óskarsson",
-     "p": 0.4,
+     "p": 0.399,
      "xg90": 0.92
     },
     {
      "name": "Mikel Oyarzabal",
-     "p": 0.223,
+     "p": 0.222,
      "xg90": 0.45
     },
     {
      "name": "Ander Barrenetxea",
-     "p": 0.086,
+     "p": 0.085,
      "xg90": 0.15
     },
     {
      "name": "Luka Sucic",
-     "p": 0.083,
+     "p": 0.082,
      "xg90": 0.15
     },
     {
@@ -11060,7 +12260,7 @@
     {
      "name": "Unai Simón",
      "role": "G",
-     "imp": 1.0,
+     "imp": 0.9,
      "att": 0.0,
      "goals": 0,
      "minutes": 810,
@@ -11069,7 +12269,7 @@
     {
      "name": "Álex Padilla",
      "role": "G",
-     "imp": 0.0,
+     "imp": 0.1,
      "att": null,
      "goals": null,
      "minutes": null,
@@ -11078,7 +12278,7 @@
     {
      "name": "Aymeric Laporte",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.7,
      "att": 0.1,
      "goals": 0,
      "minutes": 644,
@@ -11087,7 +12287,7 @@
     {
      "name": "Yuri Berchiche",
      "role": "D",
-     "imp": 0.78,
+     "imp": 0.7,
      "att": 0.21,
      "goals": 1,
      "minutes": 546,
@@ -11096,7 +12296,7 @@
     {
      "name": "Aitor Paredes",
      "role": "D",
-     "imp": 0.56,
+     "imp": 0.6,
      "att": 0.13,
      "goals": 2,
      "minutes": 483,
@@ -11105,7 +12305,7 @@
     {
      "name": "Yeray",
      "role": "D",
-     "imp": 0.56,
+     "imp": 0.6,
      "att": 0.21,
      "goals": 0,
      "minutes": 411,
@@ -11114,7 +12314,7 @@
     {
      "name": "Jesús Areso",
      "role": "D",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.1,
      "goals": 0,
      "minutes": 374,
@@ -11123,7 +12323,7 @@
     {
      "name": "Hugo Rincón",
      "role": "D",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.1,
      "goals": 0,
      "minutes": 366,
@@ -11132,7 +12332,7 @@
     {
      "name": "Johaneko Louis Jean",
      "role": "D",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.07,
      "goals": 0,
      "minutes": 278,
@@ -11141,16 +12341,43 @@
     {
      "name": "Dani Vivian",
      "role": "D",
-     "imp": 0.11,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 90,
      "status": "disponible"
     },
     {
+     "name": "Adama Boiro",
+     "role": "D",
+     "imp": 0.1,
+     "att": null,
+     "goals": 0,
+     "minutes": 16,
+     "status": "disponible"
+    },
+    {
+     "name": "Iñigo Lekue",
+     "role": "D",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Andoni Gorosabel",
+     "role": "D",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Iñaki Williams",
      "role": "M",
-     "imp": 0.89,
+     "imp": 0.9,
      "att": 0.53,
      "goals": 2,
      "minutes": 600,
@@ -11159,7 +12386,7 @@
     {
      "name": "Iñigo Ruiz de Galarreta",
      "role": "M",
-     "imp": 0.78,
+     "imp": 0.8,
      "att": 0.19,
      "goals": 0,
      "minutes": 455,
@@ -11167,9 +12394,18 @@
      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
     },
     {
+     "name": "Robert Navarro",
+     "role": "M",
+     "imp": 0.7,
+     "att": 0.43,
+     "goals": 2,
+     "minutes": 493,
+     "status": "disponible"
+    },
+    {
      "name": "Oihan Sancet",
      "role": "M",
-     "imp": 0.67,
+     "imp": 0.6,
      "att": 0.65,
      "goals": 1,
      "minutes": 517,
@@ -11177,18 +12413,9 @@
      "source": "futbolfantasy: Lesión en el sóleo · Baja hasta principio de noviembre"
     },
     {
-     "name": "Robert Navarro",
-     "role": "M",
-     "imp": 0.67,
-     "att": 0.43,
-     "goals": 2,
-     "minutes": 493,
-     "status": "disponible"
-    },
-    {
      "name": "Álex Berenguer",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.57,
      "goals": 3,
      "minutes": 541,
@@ -11197,7 +12424,7 @@
     {
      "name": "Beñat Gerenabarrena",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.03,
      "goals": 0,
      "minutes": 492,
@@ -11206,7 +12433,7 @@
     {
      "name": "Nico Williams",
      "role": "M",
-     "imp": 0.56,
+     "imp": 0.5,
      "att": 0.52,
      "goals": 1,
      "minutes": 446,
@@ -11215,7 +12442,7 @@
     {
      "name": "Peio Canales",
      "role": "M",
-     "imp": 0.44,
+     "imp": 0.4,
      "att": 0.15,
      "goals": 0,
      "minutes": 438,
@@ -11224,10 +12451,19 @@
     {
      "name": "Mikel Jauregizar",
      "role": "M",
-     "imp": 0.33,
+     "imp": 0.4,
      "att": 0.04,
      "goals": 0,
      "minutes": 300,
+     "status": "disponible"
+    },
+    {
+     "name": "Unai Gómez",
+     "role": "M",
+     "imp": 0.1,
+     "att": null,
+     "goals": null,
+     "minutes": null,
      "status": "disponible"
     },
     {
@@ -11246,15 +12482,6 @@
      "att": null,
      "goals": 0,
      "minutes": 19,
-     "status": "disponible"
-    },
-    {
-     "name": "Adama Boiro",
-     "role": "M",
-     "imp": 0.0,
-     "att": null,
-     "goals": 0,
-     "minutes": 16,
      "status": "disponible"
     },
     {
@@ -11285,6 +12512,15 @@
      "status": "disponible"
     },
     {
+     "name": "Mikel Vesga",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
      "name": "Jesús Vizcay Hurtado",
      "role": "M",
      "imp": 0.0,
@@ -11312,23 +12548,41 @@
      "status": "disponible"
     },
     {
+     "name": "Elijah Gift",
+     "role": "M",
+     "imp": 0.0,
+     "att": null,
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
+    },
+    {
+     "name": "Gorka Guruzeta",
+     "role": "F",
+     "imp": 0.3,
+     "att": null,
+     "goals": 0,
+     "minutes": 183,
+     "status": "baja",
+     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta mayo"
+    },
+    {
      "name": "Maroan Sannadi",
      "role": "F",
-     "imp": 0.22,
+     "imp": 0.2,
      "att": null,
      "goals": 0,
      "minutes": 248,
      "status": "disponible"
     },
     {
-     "name": "Gorka Guruzeta",
+     "name": "Urko Izeta",
      "role": "F",
-     "imp": 0.22,
+     "imp": 0.0,
      "att": null,
-     "goals": 0,
-     "minutes": 183,
-     "status": "baja",
-     "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta mayo"
+     "goals": null,
+     "minutes": null,
+     "status": "disponible"
     }
    ],
    "away": [
@@ -11595,13 +12849,84 @@
     }
    ]
   },
+  "props": {
+   "yellow": [
+    2.34,
+    2.36
+   ],
+   "yellow_total": 4.7,
+   "p_cards_over": {
+    "3.5": 0.69,
+    "4.5": 0.505,
+    "5.5": 0.331
+   },
+   "corners": [
+    6.13,
+    4.29
+   ],
+   "corners_total": 10.43,
+   "p_corners_over": {
+    "8.5": 0.713,
+    "9.5": 0.594,
+    "10.5": 0.47
+   },
+   "p_red": 0.233,
+   "referee_factor": 1.0,
+   "referee_matches": 0,
+   "players": {
+    "home": [
+     {
+      "name": "Iñigo Ruiz de Galarreta",
+      "p": 0.348,
+      "yellows": 3
+     },
+     {
+      "name": "Yuri Berchiche",
+      "p": 0.348,
+      "yellows": 3
+     },
+     {
+      "name": "Álex Berenguer",
+      "p": 0.201,
+      "yellows": 1
+     },
+     {
+      "name": "Álex Padilla",
+      "p": 0.192,
+      "yellows": 0
+     }
+    ],
+    "away": [
+     {
+      "name": "Yangel Herrera",
+      "p": 0.431,
+      "yellows": 4
+     },
+     {
+      "name": "Jon Aramburu",
+      "p": 0.322,
+      "yellows": 3
+     },
+     {
+      "name": "Luka Sucic",
+      "p": 0.219,
+      "yellows": 2
+     },
+     {
+      "name": "Jon Martín",
+      "p": 0.219,
+      "yellows": 2
+     }
+    ]
+   }
+  },
   "absence_impact": {
    "xg_full": [
     1.68,
     1.19
    ],
    "xg_adj": [
-    1.43,
+    1.63,
     1.23
    ],
    "p_full": [
@@ -11610,46 +12935,33 @@
     0.2635
    ],
    "p_adj": [
-    0.4087,
-    0.2722,
-    0.3191
+    0.4605,
+    0.2568,
+    0.2827
    ]
   },
   "movement": {
    "home": "Ath Bilbao",
    "away": "Sociedad",
    "date": "2026-11-01",
-   "from_ts": "2026-10-25T15:18:31.108955+00:00",
-   "to_ts": "2026-10-25T19:39:16.261703+00:00",
+   "from_ts": "2026-10-25T19:39:16.261703+00:00",
+   "to_ts": "2026-10-25T20:05:46.256661+00:00",
    "p_from": [
-    0.5449,
-    0.2581,
-    0.197
-   ],
-   "p_to": [
     0.4895,
     0.2872,
     0.2233
    ],
-   "delta_pts": [
-    -5.5,
-    2.9,
-    2.6
+   "p_to": [
+    0.5237,
+    0.2664,
+    0.2099
    ],
-   "important": true,
-   "focus": "1",
-   "reasons": [
-    {
-     "factor": "Bajas y alineaciones",
-     "key": "bajas",
-     "effect_pts": [
-      -5.1,
-      2.8,
-      2.3
-     ],
-     "detail": "Ath Bilbao: baja: Gorka Guruzeta, Unai Egiluz, Oihan Sancet; duda: Iñigo Ruiz de Galarreta; déficit ataque 0%→28%, defensa 0%→11%"
-    }
-   ]
+   "delta_pts": [
+    3.4,
+    -2.1,
+    -1.3
+   ],
+   "important": false
   }
  }
 ]
