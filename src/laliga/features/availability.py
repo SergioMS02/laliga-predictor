@@ -244,7 +244,7 @@ def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str |
     # once probable: los habituales que no están de baja; cada baja la ocupa el siguiente más
     # habitual de su misma demarcación (si no hay, el siguiente jugador de campo)
     xi, used = [], set()
-    pool = imp[imp.importance > 0].copy() if len(imp) else imp
+    pool = imp.copy() if len(imp) else imp  # también suplentes sin titularidades (p. ej. el segundo portero)
     if len(pool):
         pool["role"] = pool["position"].map(role) if "position" in pool else "M"
         pool = pool.sort_values("importance", ascending=False)
@@ -258,7 +258,7 @@ def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str |
             continue
         rl = role(r.get("position"))
         cand = pool[(~pool.name.isin(used)) & (pool.role == rl)] if len(pool) else pool
-        if cand is None or cand.empty:
+        if (cand is None or cand.empty) and rl != "G":
             cand = pool[(~pool.name.isin(used)) & (pool.role != "G")] if len(pool) else pool
         cand = cand[[not is_out(n) for n in cand.name]] if cand is not None and len(cand) else cand
         if cand is not None and len(cand):
@@ -268,6 +268,9 @@ def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str |
             info["usual"] = False
             info["replaces"] = r["name"]
             xi.append(info)
+        elif rl == "G":
+            xi.append({"name": "Portero suplente", "pos": "G", "role": "G", "imp": 0.0, "att": 0.0, "absent": None,
+                       "usual": False, "replaces": r["name"]})
     out = [{"name": n, "status": s, "reason": meta[n].get("reason"), "source": meta[n].get("source"),
             "imp": round(float(imp[imp.name == n].importance.max()), 2) if len(imp) and (imp.name == n).any() else 0}
            for n, s in ab.items()]
