@@ -208,8 +208,12 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
         for side, team in (("home", r.home), ("away", r.away)):
             pl_t = players[(players.team == team) & (players.season == season_now)] if players is not None and len(players) else None
             starters = info.get("lineups", {}).get(side) if info["lineup_confirmed"] else None
+            hint = {}
+            if players is not None and len(players):
+                for x in players[players.team == team].sort_values("season").itertuples():
+                    hint[x.player] = {"GK": "G", "D": "D", "M": "M", "F": "F"}.get(str(x.position or "").split(" ")[0], "M")
             try:
-                rost[side] = av.roster(imps[side], pl_t, info["absences"].get(team), starters)
+                rost[side] = av.roster(imps[side], pl_t, info["absences"].get(team), starters, hint)
             except Exception as e:
                 log.warning("Plantilla no disponible para %s: %s", team, e)
                 rost[side] = []

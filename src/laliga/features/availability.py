@@ -25,7 +25,7 @@ MIN_MINUTES_XG = 270
 
 def role(position: str | None) -> str:
     p = (position or "").upper().replace("-", "").replace(" ", "")
-    if not p:
+    if not p or p in ("SUB", "SUBSTITUTE", "S", "BENCH"):
         return "M"
     if p in ("G", "GK", "GOALKEEPER", "POR", "PORTERO") or p.startswith("GOAL"):
         return "G"
@@ -287,7 +287,7 @@ def _status_of(name: str, ab: dict) -> str | None:
 
 
 def roster(imp: pd.DataFrame | None, players: pd.DataFrame | None, absences: list | None = None,
-           starters: list[str] | None = None) -> list[dict]:
+           starters: list[str] | None = None, role_hint: dict | None = None) -> list[dict]:
     """Plantilla con su disponibilidad: titularidades recientes, xG+xA por 90, goles y estado."""
     rows: dict[str, dict] = {}
     if imp is not None and len(imp):
@@ -310,6 +310,12 @@ def roster(imp: pd.DataFrame | None, players: pd.DataFrame | None, absences: lis
             rows[key]["minutes"] = int(r.minutes or 0)
             if r.minutes and r.minutes >= MIN_MINUTES_XG:
                 rows[key]["att"] = round(float((r.xg + r.xa) / r.minutes * 90), 2)
+    if role_hint:  # demarcación de Understat (más fiable que la de ESPN para los suplentes)
+        hp = {k: _plain(k) for k in role_hint}
+        for k, v in rows.items():
+            best = process.extractOne(_plain(k), hp, scorer=fuzz.token_set_ratio)
+            if best and best[1] >= 88:
+                v["role"] = role_hint[best[2]]
     ab = {a["player"]: a for a in (absences or [])}
     st = set(starters or [])
     out = []
