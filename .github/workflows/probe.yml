@@ -10,18 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p raw
-          python3 - <<'PY'
-          import requests, pathlib
-          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) laliga-predictor/0.1"
-          out = pathlib.Path("raw2"); out.mkdir(exist_ok=True)
-          for n, u in {"clubelo_fixtures.csv": "http://api.clubelo.com/Fixtures", "clubelo_day.csv": "http://api.clubelo.com/2026-10-25",
-                       "clubelo_barca.csv": "http://api.clubelo.com/Barcelona",
-                       "espn_w.json": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.w.1/scoreboard",
-                       "espn_copa.json": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20261028"}.items():
-              try:
-                  r = s.get(u, timeout=30); print(n, r.status_code, len(r.content)); (out / n).write_bytes(r.content)
-              except Exception as e: print(n, e)
-          PY
+          mkdir -p raw4
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
+          curl -sS -A "$UA" -o raw4/sb.json "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard"
+          curl -sS -D - -o /dev/null -A "$UA" -H "Origin: https://sergioms02.github.io" "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard" | grep -i -E "^HTTP|access-control|content-type" >> raw4/cors.txt
+          EID=$(python3 -c "import json;d=json.load(open('raw4/sb.json'));print(d['events'][0]['id'])")
+          curl -sS -A "$UA" -o raw4/summary.json "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=$EID"
+          echo "--- summary" >> raw4/cors.txt
+          curl -sS -D - -o /dev/null -A "$UA" -H "Origin: https://sergioms02.github.io" "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=$EID" | grep -i -E "^HTTP|access-control" >> raw4/cors.txt
+          for u in "https://www.eduardolosilla.es/quiniela" "https://www.quinielista.es/" "https://www.eduardolosilla.es/quiniela/ayudas/porcentajes" "https://www.quinielista.es/porcentajes" "https://www.combinacionganadora.com/quiniela/probabilidades/"; do
+            n=$(echo $u | md5sum | cut -c1-6); curl -sS -L -A "$UA" -o raw4/p_$n.html -w "$n %{http_code} $u\n" "$u" >> raw4/pages.txt
+          done
           git config user.name probe; git config user.email probe@example.com
-          git add raw2; git commit -qm probe-out3; git push
+          git add raw4; git commit -qm probe-out4; git push origin HEAD:probe
