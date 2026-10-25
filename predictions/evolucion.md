@@ -1,10 +1,10 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-25 18:39 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-10-25 18:46 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Barcelona – Real Madrid (2026-10-25)
 
-1 ▆▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂▂ · 2 ▂▂▂▂▂▂▂▂
+1 ▆▆▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂▂▂ · 2 ▂▂▂▂▂▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -16,6 +16,7 @@ Actualizado: 2026-10-25 18:39 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 19:01 | 65% | 18% | 17% |  |
 | 25/10 19:19 | 69% | 17% | 14% |  |
 | 25/10 19:39 | 69% | 17% | 15% |  |
+| 25/10 19:46 | 69% | 17% | 15% |  |
 
 ## Sevilla – Osasuna (2026-10-26)
 
@@ -106,7 +107,7 @@ Actualizado: 2026-10-25 18:39 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Santander – Real Madrid (2026-11-01)
 
-1 ▁▁▁▁▁▁ · X ▂▂▂▂▂▂ · 2 ▆▆▆▆▆▆
+1 ▁▁▁▁▁▁▁ · X ▂▂▂▂▂▂▂ · 2 ▆▆▆▆▆▆▆
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -116,6 +117,7 @@ Actualizado: 2026-10-25 18:39 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 18:46 | 11% | 17% | 72% |  |
 | 25/10 18:56 | 11% | 17% | 72% |  |
 | 25/10 19:39 | 11% | 17% | 72% |  |
+| 25/10 19:46 | 11% | 17% | 72% |  |
 
 ## Elche – Valencia (2026-11-01)
 
