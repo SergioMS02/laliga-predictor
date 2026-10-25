@@ -12,20 +12,16 @@ jobs:
       - run: |
           mkdir -p raw
           python3 - <<'PY'
-          import requests, time, pathlib
-          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) laliga-predictor/0.1 (+uso personal, no comercial)"
-          out = pathlib.Path("raw")
-          urls = {f"{d}_{y:02d}{y+1:02d}.csv": f"https://www.football-data.co.uk/mmz4281/{y:02d}{y+1:02d}/{d}.csv" for d in ("SP1","SP2") for y in range(5, 27)}
-          urls["fixtures.csv"] = "https://www.football-data.co.uk/fixtures.csv"
-          for k in range(0, 9):
-              d = f"2026-{10 + (k // 5)}-{1 + (k % 5) * 7:02d}"
-          for n, u in urls.items():
+          import requests, pathlib
+          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) laliga-predictor/0.1"
+          out = pathlib.Path("raw2"); out.mkdir(exist_ok=True)
+          for n, u in {"clubelo_fixtures.csv": "http://api.clubelo.com/Fixtures", "clubelo_day.csv": "http://api.clubelo.com/2026-10-25",
+                       "clubelo_barca.csv": "http://api.clubelo.com/Barcelona",
+                       "espn_w.json": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.w.1/scoreboard",
+                       "espn_copa.json": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.copa_del_rey/scoreboard?dates=20261028"}.items():
               try:
                   r = s.get(u, timeout=30); print(n, r.status_code, len(r.content)); (out / n).write_bytes(r.content)
               except Exception as e: print(n, e)
-          for d in ["2026-10-21", "2026-10-28", "2026-10-18", "2026-10-11", "2026-10-04"]:
-              r = s.get(f"https://www.combinacionganadora.com/quiniela/resultados/{d}/", timeout=30, headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"})
-              print(d, r.status_code, len(r.content)); (out / f"cg_{d}.html").write_bytes(r.content)
           PY
           git config user.name probe; git config user.email probe@example.com
-          git add raw; git commit -qm probe-out2; git push
+          git add raw2; git commit -qm probe-out3; git push
