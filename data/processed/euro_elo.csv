@@ -1,507 +1,567 @@
 team,rating,league,n
-Sandefjord,1282.9,NOR,71
-Tromso,1362.3,NOR,71
-Sligo Rovers,1050.6,IRL,84
-Derry City,1208.8,IRL,82
-Waterford,1177.0,IRL,84
-St. Patricks,1257.0,IRL,82
-Shamrock Rovers,1268.7,IRL,84
-Dundalk,1120.5,IRL,48
-Drogheda,1147.8,IRL,85
-Shelbourne,1211.2,IRL,83
-Galway,1165.9,IRL,85
-Bohemians,1270.0,IRL,86
-Elfsborg,1332.1,SWE,71
-Brommapojkarna,1250.5,SWE,72
-VPS,1172.8,FIN,69
-Ekenas,1155.4,FIN,14
-Ilves,1269.9,FIN,72
-HJK,1301.4,FIN,72
-Mjallby,1287.3,SWE,71
-Sirius,1398.4,SWE,72
-Malmo FF,1320.5,SWE,71
-Halmstad,1157.0,SWE,72
-GAIS,1315.6,SWE,72
-Hammarby,1423.1,SWE,72
-Molde,1367.2,NOR,70
-Lillestrom,1294.6,NOR,41
-Varnamo,1193.8,SWE,50
-Goteborg,1327.7,SWE,72
-KuPS,1324.2,FIN,73
-Gnistan,1222.7,FIN,75
-Mariehamn,1119.4,FIN,68
-Haka,1102.4,FIN,45
-AIK,1292.9,SWE,72
-Kalmar,1217.2,SWE,42
-Bodo/Glimt,1518.7,NOR,70
-Brann,1323.2,NOR,69
-HamKam,1253.9,NOR,70
-Haugesund,1157.8,NOR,51
-Sarpsborg 08,1288.9,NOR,71
-KFUM Oslo,1280.6,NOR,71
-Viking,1503.3,NOR,71
-Rosenborg,1393.7,NOR,71
-Odd,1238.5,NOR,17
-Stromsgodset,1200.9,NOR,48
-Kristiansund,1203.8,NOR,70
-Fredrikstad,1305.4,NOR,71
-AC Oulu,1167.9,FIN,69
-SJK,1199.6,FIN,74
-Norrkoping,1222.2,SWE,48
-Djurgarden,1433.3,SWE,72
-Inter Turku,1313.8,FIN,74
-Lahti,1228.1,FIN,43
-Vasteras SK,1322.0,SWE,42
-Hacken,1347.5,SWE,71
-Farul Constanta,1269.1,ROU,92
-Unirea Slobozia,1181.4,ROU,78
-FC Hermannstadt,1229.9,ROU,80
-Univ. Craiova,1425.7,ROU,92
-Sepsi Sf. Gheorghe,1237.5,ROU,51
-Poli Iasi,1236.6,ROU,39
-UTA Arad,1278.0,ROU,90
-FC Rapid Bucuresti,1367.3,ROU,92
-FCSB,1309.1,ROU,93
-U. Cluj,1360.6,ROU,92
-CFR Cluj,1322.1,ROU,92
-Din. Bucuresti,1331.4,ROU,68
-FC Botosani,1257.4,ROU,91
-Otelul,1242.8,ROU,90
-Petrolul,1253.8,ROU,90
-Gloria Buzau,1181.0,ROU,39
-Jagiellonia,1318.3,POL,78
-Puszcza,1241.7,POL,34
-Slask Wroclaw,1226.3,POL,45
-Lechia Gdansk,1272.9,POL,68
-Nordsjaelland,1407.4,DNK,75
-Aalborg,1258.9,DNK,32
-Aarhus,1395.8,DNK,75
-Midtjylland,1497.5,DNK,75
-Lugano,1494.4,SWZ,86
-Grasshoppers,1236.7,SWZ,86
-Yverdon,1293.9,SWZ,38
-Zurich,1282.4,SWZ,86
-Winterthur,1206.5,SWZ,76
-St. Gallen,1396.3,SWZ,86
-Legia,1398.5,POL,79
-Zaglebie,1302.1,POL,79
-GKS Katowice,1346.8,POL,79
-Radomiak Radom,1230.4,POL,79
-Pogon Szczecin,1369.5,POL,78
-Korona Kielce,1293.2,POL,79
-Viborg,1397.1,DNK,75
-Brondby,1352.3,DNK,75
-Luzern,1344.9,SWZ,86
-Servette,1379.9,SWZ,86
-Lausanne,1239.8,SWZ,86
-Basel,1334.7,SWZ,86
-Young Boys,1450.8,SWZ,86
-Sion,1432.6,SWZ,86
-Vejle,1251.4,DNK,64
-Randers FC,1281.3,DNK,75
-Silkeborg,1294.1,DNK,75
-Sonderjyske,1293.4,DNK,75
-Cracovia,1272.3,POL,79
-Piast Gliwice,1315.5,POL,79
-Lech Poznan,1446.2,POL,78
-Gornik Zabrze,1407.4,POL,79
-Motor Lublin,1270.4,POL,79
-Rakow,1277.3,POL,79
-Lyngby,1259.9,DNK,43
-FC Copenhagen,1459.4,DNK,75
-Stal Mielec,1254.0,POL,34
-Widzew Lodz,1280.5,POL,79
-Club Brugge,1596.1,B1,88
-Mechelen,1329.1,B1,88
-Dender,1272.9,B1,75
-St. Gilloise,1591.3,B1,88
-Anderlecht,1426.3,B1,88
-St Truiden,1401.7,B1,84
-Beerschot VA,1319.6,B1,36
-Oud-Heverlee Leuven,1302.3,B1,88
-Westerlo,1409.9,B1,88
-Cercle Brugge,1312.9,B1,80
-Genk,1440.7,B1,88
-Standard,1389.6,B1,88
-Kortrijk,1283.3,B1,44
-Gent,1460.5,B1,88
-Charleroi,1461.0,B1,88
+Sandefjord,1284.2,NOR,71
+Tromso,1363.3,NOR,71
+Sligo Rovers,1044.8,IRL,84
+Derry City,1202.9,IRL,82
+Shamrock Rovers,1257.3,IRL,90
+Dundalk,1115.1,IRL,48
+Waterford,1171.7,IRL,84
+St. Patricks,1251.2,IRL,82
+Galway,1160.0,IRL,85
+Bohemians,1264.4,IRL,86
+Drogheda,1142.0,IRL,85
+Shelbourne,1198.0,IRL,89
+VPS,1169.2,FIN,69
+Ekenas,1153.5,FIN,14
+Ilves,1267.3,FIN,72
+HJK,1298.6,FIN,72
+Mjallby,1322.2,SWE,73
+Sirius,1392.3,SWE,72
+Elfsborg,1327.5,SWE,71
+Brommapojkarna,1245.9,SWE,72
+HamKam,1255.9,NOR,70
+Varnamo,1190.8,SWE,50
+Goteborg,1322.4,SWE,72
+GAIS,1309.4,SWE,72
+Hammarby,1417.6,SWE,72
+Malmo FF,1290.3,SWE,79
+Halmstad,1151.9,SWE,72
+Mariehamn,1116.9,FIN,68
+Haka,1100.5,FIN,45
+KuPS,1284.1,FIN,83
+Gnistan,1220.0,FIN,75
+AIK,1287.7,SWE,72
+Kalmar,1211.7,SWE,42
+Haugesund,1157.3,NOR,51
+Sarpsborg 08,1289.6,NOR,71
+Bodo/Glimt,1546.0,NOR,85
+Brann,1360.0,NOR,81
+Molde,1367.5,NOR,70
+Lillestrom,1270.1,NOR,44
+Rosenborg,1395.2,NOR,71
+Odd,1237.9,NOR,17
+KFUM Oslo,1281.7,NOR,71
+Viking,1491.2,NOR,74
+AC Oulu,1165.2,FIN,69
+SJK,1197.0,FIN,74
+Inter Turku,1311.0,FIN,74
+Lahti,1225.6,FIN,43
+Kristiansund,1204.8,NOR,70
+Fredrikstad,1306.0,NOR,71
+Norrkoping,1218.4,SWE,48
+Djurgarden,1427.5,SWE,72
+Vasteras SK,1317.2,SWE,42
+Hacken,1337.2,SWE,77
+Stromsgodset,1200.4,NOR,48
+FC Hermannstadt,1227.2,ROU,80
+Univ. Craiova,1422.9,ROU,92
+Farul Constanta,1266.3,ROU,92
+Unirea Slobozia,1178.9,ROU,78
+Sepsi Sf. Gheorghe,1235.2,ROU,51
+Poli Iasi,1234.8,ROU,39
+FCSB,1300.1,ROU,101
+U. Cluj,1358.0,ROU,92
+UTA Arad,1274.9,ROU,90
+FC Rapid Bucuresti,1365.0,ROU,92
+CFR Cluj,1319.3,ROU,92
+Din. Bucuresti,1329.0,ROU,68
+FC Botosani,1254.5,ROU,91
+Otelul,1239.8,ROU,90
+Petrolul,1251.0,ROU,90
+Gloria Buzau,1179.2,ROU,39
+Aarhus,1399.2,DNK,75
+Midtjylland,1493.2,DNK,87
+Nordsjaelland,1404.9,DNK,77
+Aalborg,1258.7,DNK,32
+Jagiellonia,1312.2,POL,89
+Puszcza,1241.6,POL,34
+Slask Wroclaw,1227.4,POL,45
+Lechia Gdansk,1274.9,POL,68
+GKS Katowice,1349.4,POL,79
+Radomiak Radom,1232.7,POL,79
+Pogon Szczecin,1372.1,POL,78
+Korona Kielce,1295.2,POL,79
+Legia,1400.8,POL,85
+Zaglebie,1305.2,POL,79
+Yverdon,1291.6,SWZ,38
+Zurich,1278.9,SWZ,86
+Lugano,1526.3,SWZ,88
+Grasshoppers,1233.8,SWZ,86
+Winterthur,1203.5,SWZ,76
+St. Gallen,1391.9,SWZ,86
+Lech Poznan,1432.3,POL,91
+Gornik Zabrze,1410.2,POL,79
+Cracovia,1274.7,POL,79
+Piast Gliwice,1318.1,POL,79
+Motor Lublin,1273.0,POL,79
+Rakow,1287.5,POL,87
+Viborg,1400.0,DNK,75
+Brondby,1355.4,DNK,75
+Silkeborg,1296.4,DNK,75
+Sonderjyske,1296.3,DNK,75
+Vejle,1252.3,DNK,64
+Randers FC,1283.4,DNK,75
+Young Boys,1444.3,SWZ,94
+Sion,1428.1,SWZ,86
+Lausanne,1237.4,SWZ,94
+Basel,1319.9,SWZ,94
+Luzern,1341.4,SWZ,86
+Servette,1376.8,SWZ,86
+Lyngby,1261.0,DNK,43
+FC Copenhagen,1461.7,DNK,75
+Stal Mielec,1253.9,POL,34
+Widzew Lodz,1283.4,POL,79
+Club Brugge,1617.3,B1,101
+Mechelen,1327.3,B1,88
+Anderlecht,1425.5,B1,91
+St Truiden,1399.8,B1,84
+Dender,1271.3,B1,75
+St. Gilloise,1598.9,B1,99
+Beerschot VA,1318.3,B1,36
+Oud-Heverlee Leuven,1302.1,B1,88
+Westerlo,1409.6,B1,88
+Cercle Brugge,1311.2,B1,80
+Kortrijk,1282.5,B1,44
+Gent,1449.1,B1,90
+Genk,1453.0,B1,100
+Standard,1390.1,B1,88
+Charleroi,1460.4,B1,88
 Antwerp,1341.5,B1,88
-FC Koln,1395.6,D1,74
-Hamburg,1432.6,D1,74
-Grazer AK,1297.8,AUT,73
-Salzburg,1450.3,AUT,73
-Hearts,1438.4,SC0,85
-Rangers,1474.1,SC0,85
-Motherwell,1330.5,SC0,85
-Ross County,1274.1,SC0,38
-Altach,1274.8,AUT,73
-Tirol,1298.3,AUT,73
-Hartberg,1334.4,AUT,73
-LASK,1468.7,AUT,73
-Wolfsberger AC,1267.5,AUT,73
-A. Klagenfurt,1262.2,AUT,32
-Schalke 04,1396.7,D1,74
-Braunschweig,1262.4,D2,76
-Magdeburg,1346.3,D2,76
-Elversberg,1426.5,D1,74
-Karlsruhe,1294.3,D2,76
-Nurnberg,1402.5,D2,76
-Hertha,1418.1,D2,76
-Paderborn,1395.0,D1,74
-Hannover,1361.5,D2,76
-Regensburg,1261.2,D2,34
-Celtic,1528.8,SC0,85
-Kilmarnock,1275.4,SC0,85
-BW Linz,1277.4,AUT,64
-Austria Vienna,1312.4,AUT,73
-St Mirren,1242.9,SC0,85
-Hibernian,1326.0,SC0,85
-Dundee United,1313.4,SC0,85
-Dundee,1317.4,SC0,85
-SK Rapid,1426.5,AUT,73
-Sturm Graz,1443.1,AUT,73
-Ulm,1292.0,D2,34
-Kaiserslautern,1370.2,D2,76
-Greuther Furth,1291.3,D2,76
-Preußen Münster,1257.5,D2,68
-Darmstadt,1300.2,D2,76
-Fortuna Dusseldorf,1283.0,D2,68
-St Johnstone,1276.0,SC0,47
-Aberdeen,1285.5,SC0,85
-Groningen,1450.9,N1,77
-NAC Breda,1341.3,N1,68
-Sp Lisbon,1631.9,P1,76
-Rio Ave,1346.3,P1,76
-Preston,1243.1,E1,103
-Sheffield United,1364.4,E1,103
-Galatasaray,1557.7,T1,78
-Hatayspor,1319.9,T1,36
-Blackburn,1343.7,E1,103
-Derby,1304.2,E1,103
-Kasimpasa,1382.5,T1,78
-Konyaspor,1338.6,T1,78
-Feyenoord,1585.1,N1,77
-Willem II,1279.8,N1,43
-Nijmegen,1458.3,N1,77
-Twente,1517.1,N1,77
-Almere City,1346.4,N1,34
-AZ Alkmaar,1508.3,N1,77
-PSV Eindhoven,1624.2,N1,77
-Waalwijk,1366.2,N1,34
-Fenerbahce,1553.2,T1,78
-Ad. Demirspor,1263.6,T1,36
-Antalyaspor,1307.3,T1,70
-Goztep,1411.5,T1,78
-Cardiff,1309.7,E1,57
-Sunderland,1463.2,E0,91
-Oxford,1306.8,E1,92
-Norwich,1344.5,E1,103
-Millwall,1405.1,E1,103
-Watford,1270.2,E1,103
-Middlesbrough,1442.8,E1,103
-Swansea,1423.1,E1,103
-Leeds,1549.4,E0,91
-Portsmouth,1351.0,E1,103
-Hull,1398.5,E0,99
-Bristol City,1328.4,E1,103
-QPR,1350.0,E1,103
-West Brom,1369.2,E1,103
-Porto,1645.5,P1,76
-Gil Vicente,1437.6,P1,76
-Casa Pia,1312.1,P1,76
-Boavista,1341.3,P1,34
-AVS,1325.0,P1,68
-Nacional,1319.2,P1,76
-Stoke,1335.2,E1,103
-Coventry,1456.7,E0,99
-Sheffield Weds,1193.3,E1,92
-Plymouth,1316.4,E1,46
-Sivasspor,1335.8,T1,36
-Trabzonspor,1510.1,T1,78
-Alanyaspor,1376.8,T1,78
-Eyupspor,1276.1,T1,78
-Samsunspor,1347.0,T1,78
-Besiktas,1473.1,T1,78
-Go Ahead Eagles,1401.4,N1,77
-For Sittard,1400.7,N1,77
-Sparta Rotterdam,1366.9,N1,77
-Heracles,1281.1,N1,68
-Sp Braga,1483.1,P1,76
-Estrela,1354.0,P1,76
-Farense,1368.4,P1,34
-Moreirense,1373.2,P1,76
-Famalicao,1443.2,P1,76
-Benfica,1630.1,P1,76
-Estoril,1342.9,P1,76
-Santa Clara,1452.4,P1,76
-Utrecht,1458.8,N1,77
-Zwolle,1346.2,N1,77
-Ajax,1545.9,N1,77
-Heerenveen,1449.5,N1,77
-Bodrumspor,1348.0,T1,36
-Gaziantep,1319.9,T1,78
-Rizespor,1365.1,T1,78
-Buyuksehyr,1442.5,T1,78
-Luton,1327.2,E1,46
-Burnley,1359.7,E1,95
-Arouca,1433.5,P1,76
-Guimaraes,1365.0,P1,76
-Granada,1355.9,SP2,94
-Albacete,1274.0,SP2,94
-Betis,1565.9,SP1,85
-Girona,1468.9,SP2,86
-Ath Bilbao,1471.8,SP1,84
-Getafe,1462.9,SP1,85
-Ajaccio,1270.3,F2,34
-Rodez,1289.8,F2,77
-Amiens,1175.8,F2,68
-Red Star,1337.8,F2,76
-Cadiz,1255.8,SP2,94
-Zaragoza,1258.0,SP2,84
-Mirandes,1297.8,SP2,84
-Cordoba,1316.7,SP2,94
-Brescia,1293.3,I2,38
-Palermo,1451.7,I2,83
-Le Havre,1365.0,F1,75
-Paris SG,1625.0,F1,75
-Man United,1583.8,E0,83
-Fulham,1499.3,E0,83
-Clermont,1238.5,F2,77
-Pau FC,1273.0,F2,77
-Dunkerque,1279.2,F2,77
-Annecy,1320.0,F2,77
-Grenoble,1247.8,F2,77
-Laval,1216.4,F2,77
-Guingamp,1235.3,F2,77
-Troyes,1333.2,F1,75
-Celta,1502.0,SP1,85
-Alaves,1465.4,SP1,85
-Las Palmas,1375.4,SP2,90
-Sevilla,1467.0,SP1,85
-Brest,1435.3,F1,75
-Marseille,1505.9,F1,75
-Parma,1411.6,I1,83
-Fiorentina,1450.2,I1,83
-Reims,1404.8,F2,77
-Lille,1535.4,F1,75
-Monaco,1526.2,F1,75
-St Etienne,1415.6,F2,77
-Empoli,1286.3,I2,83
-Monza,1420.5,I1,83
-Milan,1587.5,I1,83
-Torino,1475.3,I1,83
-Caen,1211.9,F2,34
-Paris FC,1484.6,F1,75
-Volos NFC,1229.4,G1,74
-Olympiakos,1502.3,G1,71
-Sudtirol,1300.8,I2,83
-Modena,1352.0,I2,83
-Salernitana,1289.7,I2,38
-Cittadella,1262.9,I2,38
-Bari,1271.4,I2,76
-Juve Stabia,1320.2,I2,83
-Kayserispor,1311.5,T1,70
-Eibar,1437.0,SP2,94
-Castellon,1467.6,SP2,94
-Ferrol,1252.1,SP2,42
-Malaga,1381.4,SP1,93
-La Coruna,1427.8,SP1,93
-Oviedo,1401.0,SP2,90
-Genoa,1421.0,I1,83
-Inter,1702.2,I1,83
-Pisa,1359.0,I2,83
-Spezia,1271.3,I2,76
-PAOK,1467.8,G1,71
-Panserraikos,1231.9,G1,71
-Ipswich,1453.9,E0,91
-Liverpool,1597.8,E0,83
-Nott'm Forest,1508.2,E0,83
-Bournemouth,1554.9,E0,83
-Arsenal,1700.9,E0,83
-Wolves,1419.6,E1,87
-Osasuna,1444.7,SP1,85
-Leganes,1292.1,SP2,90
-West Ham,1529.9,E1,87
-Aston Villa,1556.2,E0,83
-Valencia,1461.1,SP1,85
-Barcelona,1755.4,SP1,85
-Everton,1521.4,E0,83
-Brighton,1621.4,E0,83
-Newcastle,1509.8,E0,83
-Southampton,1475.1,E1,95
-Cosenza,1247.6,I2,38
-Cremonese,1349.6,I2,83
-Sp Gijon,1377.1,SP2,94
-Levante,1468.8,SP1,89
-Burgos,1407.4,SP2,94
-Cartagena,1238.7,SP2,42
-Elche,1444.8,SP1,89
-Huesca,1271.3,SP2,84
-Bologna,1478.4,I1,83
-Udinese,1440.2,I1,83
-Santander,1409.0,SP1,93
-Almeria,1459.7,SP2,94
-Verona,1344.3,I2,83
-Napoli,1586.6,I1,83
-Rennes,1515.9,F1,75
-Lyon,1540.8,F1,75
-Toulouse,1464.1,F1,75
-Nantes,1320.6,F2,77
-Montpellier,1366.6,F2,77
-Strasbourg,1478.7,F1,75
-Angers,1368.5,F1,75
-Lens,1536.8,F1,75
-Cagliari,1466.2,I1,83
-Roma,1646.0,I1,83
-Lazio,1584.2,I1,83
-Venezia,1411.4,I1,83
-Cesena,1271.4,I2,83
-Carrarese,1281.7,I2,83
-Catanzaro,1302.6,I2,83
-Sassuolo,1458.9,I1,83
-Frosinone,1483.3,I1,83
-Sampdoria,1239.3,I2,83
-Reggiana,1243.3,I2,76
-Mantova,1337.3,I2,83
-Mallorca,1474.3,SP2,86
-Real Madrid,1666.6,SP1,85
-Sociedad,1502.9,SP1,85
-Vallecano,1501.4,SP1,84
-Auxerre,1426.3,F1,75
-Nice,1409.3,F1,75
-Atromitos,1312.1,G1,74
-Aris,1386.6,G1,71
-AEK,1507.7,G1,70
-OFI Crete,1323.5,G1,71
-Chelsea,1568.7,E0,83
-Man City,1717.8,E0,83
-Brentford,1563.3,E0,83
-Crystal Palace,1491.8,E0,83
-Levadeiakos,1303.3,G1,74
-Athens Kallithea,1295.3,G1,35
-Panathinaikos,1469.2,G1,71
-Asteras Tripolis,1276.9,G1,75
-Villarreal,1547.2,SP1,85
-Ath Madrid,1615.8,SP1,85
-Panetolikos,1286.1,G1,78
-Lamia,1239.9,G1,35
-Valladolid,1303.8,SP2,90
-Espanol,1438.0,SP1,85
-Juventus,1567.0,I1,83
-Como,1612.0,I1,83
-Eldense,1326.3,SP2,52
-Tenerife,1317.2,SP2,52
-Lecce,1437.3,I1,83
-Atalanta,1536.9,I1,83
-Leicester,1317.7,E1,84
-Tottenham,1465.5,E0,83
-Martigues,1249.8,F2,34
-Lorient,1455.9,F1,75
-Metz,1322.3,F2,77
-Bastia,1246.9,F2,67
-M'gladbach,1396.5,D1,74
-Leverkusen,1586.0,D1,74
-Augsburg,1480.3,D1,74
-Werder Bremen,1442.8,D1,74
-Hoffenheim,1486.3,D1,74
-Holstein Kiel,1305.4,D2,76
-Mainz,1495.3,D1,74
-Union Berlin,1418.4,D1,74
-RB Leipzig,1542.5,D1,74
-Bochum,1317.8,D2,76
-Dortmund,1629.8,D1,74
-Ein Frankfurt,1474.4,D1,74
-Freiburg,1521.4,D1,74
-Stuttgart,1543.2,D1,74
-Wolfsburg,1450.8,D2,76
-Bayern Munich,1720.8,D1,74
-St Pauli,1379.6,D2,76
-Heidenheim,1391.0,D2,76
-Jaro,1116.6,FIN,57
-Bray,1169.0,IRL,1
-Landskrona,1282.4,SWE,2
-Moss,1289.7,NOR,2
-Cork City,1101.9,IRL,36
-Valerenga,1269.0,NOR,53
-Oster,1233.0,SWE,30
-Bryne,1257.7,NOR,30
-Degerfors,1202.7,SWE,54
-KTP,1131.5,FIN,27
-FC Arges,1251.3,ROU,52
-Metaloglobus Bucharest,1157.8,ROU,39
-Csikszereda M. Ciuc,1165.1,ROU,51
-Termalica B-B.,1241.9,POL,34
-Wisla Plock,1278.0,POL,44
-Fredericia,1283.3,DNK,32
-Odense,1319.9,DNK,43
-Arka Gdynia,1245.2,POL,34
-RAAL La Louviere,1290.9,B1,43
-Waregem,1387.3,B1,44
-Thun,1334.4,SWZ,48
-Ried,1337.0,AUT,41
-Livingston,1223.9,SC0,38
-Bielefeld,1328.1,D2,42
-Dresden,1315.8,D2,42
-Falkirk,1300.0,SC0,47
-Birmingham,1407.6,E1,57
-Volendam,1363.2,N1,34
-Excelsior,1399.3,N1,43
-Charlton,1297.6,E1,57
-Wrexham,1382.6,E1,57
-Nancy,1286.2,F2,43
-Genclerbirligi,1333.4,T1,42
-Le Mans,1358.9,F1,41
-Tondela,1352.1,P1,34
-Alverca,1418.6,P1,42
-Telstar,1374.5,N1,43
-Kocaelispor,1361.5,T1,42
-Ceuta,1285.8,SP2,52
-Karagumruk,1329.4,T1,34
-Cultural Leonesa,1254.1,SP2,42
-Boulogne,1255.7,F2,43
-Andorra,1327.6,SP2,52
-Sociedad B,1277.3,SP2,52
-Pescara,1271.2,I2,38
-Virtus Entella,1297.7,I2,45
-Padova,1263.7,I2,45
-Avellino,1320.8,I2,45
-Larisa,1264.0,G1,36
-Kifisia,1305.1,G1,43
-Dinamo Bucuresti,1383.5,ROU,25
-Start,1212.5,NOR,23
-Aalesund,1274.9,NOR,23
-TPS,1163.9,FIN,27
-Orgryte,1221.6,SWE,24
-Chindia Targoviste,1267.1,ROU,2
-FC Voluntari,1206.4,ROU,14
-Corvinul,1272.7,ROU,12
-Wieczysta Krakow,1261.9,POL,11
-Vaduz,1319.2,SWZ,10
-Horsens,1333.7,DNK,11
-Wisla,1327.4,POL,11
-A. Lustenau,1296.1,AUT,9
-Cambuur,1391.4,N1,9
-Lommel SK,1404.0,B1,8
-Osnabruck,1302.0,D2,8
-Maritimo,1398.3,P1,8
-Den Haag,1381.3,N1,9
-Dijon,1297.3,F2,9
-Sochaux,1282.7,F2,9
-Beveren,1359.8,B1,8
-Academico Viseu,1445.0,P1,8
-Cottbus,1326.2,D2,8
-Corum,1411.6,T1,8
-Lincoln,1330.2,E1,11
-Bolton,1361.5,E1,11
-Celta B,1332.6,SP2,10
-Amedspor,1426.2,T1,8
-Erzurumspor,1373.5,T1,8
-Sabadell,1368.2,SP2,10
-Vicenza,1278.7,I2,7
-Kalamata,1350.0,G1,7
-Iraklis,1351.5,G1,7
-Benevento,1321.8,I2,7
-Arezzo,1299.0,I2,7
-Ascoli,1328.3,I2,7
-PK-35,1194.9,FIN,1
+Grazer AK,1287.5,AUT,73
+Salzburg,1422.5,AUT,84
+FC Koln,1396.4,D1,74
+Hamburg,1434.2,D1,74
+Hearts,1427.2,SC0,85
+Rangers,1449.3,SC0,93
+Karlsruhe,1293.1,D2,76
+Nurnberg,1401.1,D2,76
+Magdeburg,1344.8,D2,76
+Elversberg,1426.4,D1,74
+Schalke 04,1397.2,D1,74
+Braunschweig,1260.9,D2,76
+Motherwell,1319.8,SC0,85
+Ross County,1270.4,SC0,38
+Wolfsberger AC,1257.6,AUT,73
+A. Klagenfurt,1257.7,AUT,32
+Hartberg,1321.3,AUT,73
+LASK,1455.5,AUT,76
+Altach,1264.9,AUT,73
+Tirol,1288.6,AUT,73
+Hertha,1416.8,D2,76
+Paderborn,1394.1,D1,74
+Hannover,1360.2,D2,76
+Regensburg,1259.7,D2,34
+St Mirren,1233.7,SC0,85
+Hibernian,1316.3,SC0,85
+Dundee United,1304.2,SC0,85
+Dundee,1307.9,SC0,85
+BW Linz,1269.7,AUT,64
+Austria Vienna,1299.2,AUT,73
+SK Rapid,1396.0,AUT,79
+Sturm Graz,1418.4,AUT,84
+Ulm,1290.5,D2,34
+Kaiserslautern,1369.0,D2,76
+Greuther Furth,1290.0,D2,76
+Preußen Münster,1256.0,D2,68
+Darmstadt,1298.8,D2,76
+Fortuna Dusseldorf,1281.5,D2,68
+Celtic,1461.6,SC0,98
+Kilmarnock,1265.6,SC0,85
+St Johnstone,1270.8,SC0,47
+Aberdeen,1266.8,SC0,91
+Sp Lisbon,1641.9,P1,91
+Rio Ave,1345.6,P1,76
+Groningen,1434.7,N1,77
+NAC Breda,1328.8,N1,68
+Galatasaray,1545.0,T1,93
+Hatayspor,1318.1,T1,36
+Preston,1241.2,E1,103
+Sheffield United,1361.6,E1,103
+Blackburn,1341.5,E1,103
+Derby,1303.5,E1,103
+Feyenoord,1543.7,N1,88
+Willem II,1270.0,N1,43
+Nijmegen,1446.8,N1,80
+Twente,1522.0,N1,79
+Almere City,1340.9,N1,34
+AZ Alkmaar,1507.3,N1,92
+PSV Eindhoven,1594.1,N1,88
+Waalwijk,1360.6,N1,34
+Kasimpasa,1379.7,T1,78
+Konyaspor,1336.1,T1,78
+Antalyaspor,1304.3,T1,70
+Goztep,1409.8,T1,78
+Fenerbahce,1513.3,T1,91
+Ad. Demirspor,1261.7,T1,36
+Cardiff,1308.2,E1,57
+Sunderland,1503.2,E0,94
+Hull,1401.2,E0,99
+Bristol City,1326.2,E1,103
+Middlesbrough,1441.2,E1,103
+Swansea,1421.4,E1,103
+Millwall,1402.9,E1,103
+Watford,1269.6,E1,103
+Oxford,1305.2,E1,92
+Norwich,1343.5,E1,103
+QPR,1348.7,E1,103
+West Brom,1368.5,E1,103
+Stoke,1334.1,E1,103
+Coventry,1462.5,E0,99
+Leeds,1566.8,E0,91
+Portsmouth,1348.4,E1,103
+Porto,1593.5,P1,91
+Gil Vicente,1435.4,P1,76
+Casa Pia,1310.0,P1,76
+Boavista,1340.0,P1,34
+AVS,1323.9,P1,68
+Nacional,1318.2,P1,76
+Sivasspor,1334.0,T1,36
+Trabzonspor,1531.7,T1,80
+Alanyaspor,1374.2,T1,78
+Eyupspor,1274.0,T1,78
+Samsunspor,1354.7,T1,88
+Besiktas,1503.4,T1,81
+Famalicao,1442.9,P1,76
+Benfica,1660.4,P1,89
+Estoril,1342.6,P1,76
+Santa Clara,1452.3,P1,76
+Ajax,1519.0,N1,87
+Heerenveen,1435.8,N1,77
+Sheffield Weds,1191.8,E1,92
+Plymouth,1314.9,E1,46
+Farense,1367.1,P1,34
+Moreirense,1371.9,P1,76
+Utrecht,1416.2,N1,85
+Zwolle,1329.0,N1,77
+Go Ahead Eagles,1374.4,N1,85
+For Sittard,1387.2,N1,77
+Sparta Rotterdam,1351.5,N1,77
+Heracles,1268.5,N1,68
+Sp Braga,1481.7,P1,92
+Estrela,1353.6,P1,76
+Luton,1325.7,E1,46
+Burnley,1369.1,E1,95
+Rizespor,1363.2,T1,78
+Buyuksehyr,1440.3,T1,78
+Bodrumspor,1346.2,T1,36
+Gaziantep,1317.5,T1,78
+Arouca,1432.5,P1,76
+Guimaraes,1363.7,P1,76
+Granada,1354.3,SP2,94
+Albacete,1272.4,SP2,94
+Ath Bilbao,1466.0,SP1,92
+Getafe,1430.6,SP1,87
+Betis,1599.0,SP1,100
+Girona,1467.3,SP2,86
+Le Havre,1365.1,F1,75
+Paris SG,1742.5,F1,94
+Cadiz,1254.3,SP2,94
+Zaragoza,1256.5,SP2,84
+Mirandes,1296.3,SP2,84
+Cordoba,1315.2,SP2,94
+Brescia,1291.8,I2,38
+Palermo,1450.2,I2,83
+Guingamp,1236.7,F2,77
+Troyes,1330.8,F1,75
+Grenoble,1248.4,F2,77
+Laval,1217.3,F2,77
+Dunkerque,1279.6,F2,77
+Annecy,1320.7,F2,77
+Clermont,1239.8,F2,77
+Pau FC,1273.7,F2,77
+Amiens,1176.6,F2,68
+Red Star,1351.5,F2,88
+Ajaccio,1269.6,F2,34
+Rodez,1290.3,F2,77
+Celta,1487.0,SP1,102
+Alaves,1460.9,SP1,85
+Las Palmas,1373.9,SP2,90
+Sevilla,1466.7,SP1,85
+Man United,1567.3,E0,86
+Fulham,1515.1,E0,83
+La Coruna,1425.2,SP1,93
+Oviedo,1398.9,SP2,90
+Parma,1408.0,I1,83
+Fiorentina,1450.0,I1,95
+Ferrol,1250.6,SP2,42
+Malaga,1378.2,SP1,93
+Milan,1565.7,I1,86
+Torino,1472.8,I1,83
+Genoa,1417.2,I1,83
+Inter,1579.7,I1,98
+Eibar,1435.5,SP2,94
+Castellon,1466.1,SP2,94
+Kayserispor,1308.9,T1,70
+Volos NFC,1230.2,G1,74
+Olympiakos,1532.7,G1,84
+PAOK,1465.3,G1,81
+Panserraikos,1233.1,G1,71
+Sudtirol,1299.3,I2,83
+Modena,1350.4,I2,83
+Salernitana,1288.2,I2,38
+Cittadella,1261.4,I2,38
+Pisa,1357.2,I2,83
+Spezia,1269.8,I2,76
+Bari,1269.9,I2,76
+Juve Stabia,1318.7,I2,83
+Empoli,1284.7,I2,83
+Monza,1418.3,I1,83
+Caen,1211.3,F2,34
+Paris FC,1484.2,F1,75
+Monaco,1562.8,F1,87
+St Etienne,1416.6,F2,77
+Reims,1406.8,F2,77
+Lille,1474.3,F1,90
+Brest,1436.7,F1,75
+Marseille,1447.6,F1,86
+West Ham,1538.2,E1,87
+Aston Villa,1675.4,E0,101
+Nott'm Forest,1554.5,E0,99
+Bournemouth,1613.2,E0,86
+Newcastle,1549.2,E0,95
+Southampton,1472.8,E1,95
+Everton,1536.4,E0,83
+Brighton,1639.8,E0,85
+Ipswich,1456.1,E0,91
+Liverpool,1652.6,E0,98
+Valencia,1458.7,SP1,85
+Barcelona,1751.0,SP1,100
+Osasuna,1442.3,SP1,85
+Leganes,1290.6,SP2,90
+Arsenal,1775.8,E0,100
+Wolves,1428.9,E1,87
+Montpellier,1367.1,F2,77
+Strasbourg,1480.1,F1,87
+Bologna,1479.6,I1,97
+Udinese,1435.8,I1,83
+Verona,1342.4,I2,83
+Napoli,1545.5,I1,94
+Cagliari,1463.3,I1,83
+Roma,1629.7,I1,96
+Lazio,1582.5,I1,83
+Venezia,1408.1,I1,83
+Reggiana,1241.8,I2,76
+Mantova,1335.8,I2,83
+Rennes,1518.0,F1,75
+Lyon,1543.1,F1,88
+Toulouse,1463.3,F1,75
+Nantes,1321.8,F2,77
+Angers,1365.8,F1,75
+Lens,1511.3,F1,78
+Auxerre,1425.9,F1,75
+Nice,1389.6,F1,83
+Sp Gijon,1375.6,SP2,94
+Levante,1462.4,SP1,89
+Burgos,1405.9,SP2,94
+Cartagena,1237.2,SP2,42
+Elche,1440.1,SP1,89
+Huesca,1269.8,SP2,84
+Santander,1405.6,SP1,93
+Almeria,1458.2,SP2,94
+Frosinone,1481.1,I1,83
+Sampdoria,1237.8,I2,83
+Cosenza,1246.1,I2,38
+Cremonese,1347.2,I2,83
+Catanzaro,1301.0,I2,83
+Sassuolo,1456.9,I1,83
+Chelsea,1574.9,E0,93
+Man City,1720.9,E0,96
+Brentford,1580.5,E0,83
+Crystal Palace,1537.1,E0,101
+AEK,1486.5,G1,91
+OFI Crete,1329.3,G1,74
+Atromitos,1313.1,G1,74
+Aris,1387.7,G1,71
+Panathinaikos,1504.1,G1,85
+Asteras Tripolis,1279.1,G1,75
+Levadeiakos,1305.2,G1,74
+Athens Kallithea,1294.5,G1,35
+Cesena,1269.9,I2,83
+Carrarese,1280.2,I2,83
+Sociedad,1514.7,SP1,88
+Vallecano,1513.1,SP1,97
+Mallorca,1472.3,SP2,86
+Real Madrid,1712.0,SP1,102
+Lecce,1434.2,I1,83
+Atalanta,1514.5,I1,97
+Juventus,1582.1,I1,96
+Como,1627.8,I1,86
+Eldense,1324.8,SP2,52
+Tenerife,1315.7,SP2,52
+Villarreal,1518.2,SP1,96
+Ath Madrid,1633.8,SP1,104
+Metz,1322.9,F2,77
+Bastia,1247.2,F2,67
+Valladolid,1302.2,SP2,90
+Espanol,1434.5,SP1,85
+Panetolikos,1288.4,G1,78
+Lamia,1239.0,G1,35
+Leicester,1316.2,E1,84
+Tottenham,1510.2,E0,93
+Martigues,1249.1,F2,34
+Lorient,1455.8,F1,75
+M'gladbach,1397.9,D1,74
+Leverkusen,1634.9,D1,89
+Augsburg,1480.2,D1,74
+Werder Bremen,1445.5,D1,74
+Dortmund,1614.9,D1,87
+Ein Frankfurt,1447.1,D1,82
+Freiburg,1537.7,D1,91
+Stuttgart,1563.0,D1,89
+RB Leipzig,1535.0,D1,77
+Bochum,1316.4,D2,76
+Mainz,1507.2,D1,84
+Union Berlin,1419.9,D1,74
+Hoffenheim,1477.2,D1,77
+Holstein Kiel,1304.0,D2,76
+St Pauli,1381.4,D2,76
+Heidenheim,1392.9,D2,76
+Wolfsburg,1452.1,D2,76
+Bayern Munich,1757.2,D1,91
+Jaro,1114.1,FIN,57
+Bray,1166.3,IRL,1
+Landskrona,1279.7,SWE,2
+Moss,1289.1,NOR,2
+Cork City,1099.1,IRL,36
+Oster,1230.3,SWE,30
+Degerfors,1197.5,SWE,54
+Valerenga,1269.8,NOR,53
+Bryne,1256.9,NOR,30
+KTP,1129.6,FIN,27
+Metaloglobus Bucharest,1155.2,ROU,39
+FC Arges,1248.8,ROU,52
+Csikszereda M. Ciuc,1162.3,ROU,51
+Termalica B-B.,1244.1,POL,34
+Wisla Plock,1280.2,POL,44
+Fredericia,1284.7,DNK,32
+Arka Gdynia,1248.0,POL,34
+Odense,1322.4,DNK,43
+RAAL La Louviere,1289.1,B1,43
+Waregem,1385.0,B1,44
+Thun,1307.8,SWZ,50
+Bielefeld,1326.8,D2,42
+Ried,1327.5,AUT,41
+Livingston,1215.6,SC0,38
+Falkirk,1290.3,SC0,47
+Dresden,1314.4,D2,42
+Birmingham,1406.4,E1,57
+Genclerbirligi,1329.8,T1,42
+Volendam,1351.8,N1,34
+Wrexham,1382.0,E1,57
+Excelsior,1385.5,N1,43
+Charlton,1296.6,E1,57
+Nancy,1286.7,F2,43
+Le Mans,1360.6,F1,41
+Alverca,1418.8,P1,42
+Tondela,1351.1,P1,34
+Telstar,1359.6,N1,43
+Kocaelispor,1359.6,T1,42
+Boulogne,1256.7,F2,43
+Karagumruk,1327.0,T1,34
+Ceuta,1284.2,SP2,52
+Cultural Leonesa,1252.6,SP2,42
+Sociedad B,1275.8,SP2,52
+Andorra,1326.1,SP2,52
+Pescara,1269.6,I2,38
+Virtus Entella,1296.2,I2,45
+Padova,1262.2,I2,45
+Larisa,1264.6,G1,36
+Avellino,1319.3,I2,45
+Kifisia,1305.9,G1,43
+FK Qarabag,1345.1,copa,10
+Slavia Prague,1305.5,copa,11
+Pafos,1357.1,copa,10
+Kairat Almaty,1284.7,copa,10
+F.C. København,1388.5,copa,10
+Maccabi Tel-Aviv,1281.0,copa,8
+Ludogorets Razgrad,1349.6,copa,10
+Dinamo Zagreb,1343.7,copa,13
+Ferencvaros,1459.6,copa,15
+Viktoria Plzen,1361.7,copa,13
+Shakhtar Donetsk,1421.1,copa,15
+Breidablik,1321.9,copa,6
+Sparta Prague,1379.5,copa,10
+Slovan Bratislava,1304.3,copa,9
+Drita Gjilan,1315.9,copa,8
+Hamrun Spartans,1295.5,copa,6
+FC Noah,1335.9,copa,8
+Rijeka,1384.5,copa,9
+Dynamo Kyiv,1344.7,copa,6
+Sigma Olomouc,1346.3,copa,10
+CSU Craiova,1383.1,copa,8
+Zrinjski Mostar,1329.1,copa,8
+Lincoln,1273.0,E1,19
+NK Celje,1342.6,copa,13
+KF Shkëndija,1318.3,copa,8
+Omonia Nicosia,1370.0,copa,11
+Dinamo Bucuresti,1380.9,ROU,25
+Start,1214.0,NOR,23
+Aalesund,1275.5,NOR,23
+TPS,1161.4,FIN,27
+Orgryte,1215.7,SWE,24
+Chindia Targoviste,1265.2,ROU,2
+FC Voluntari,1204.0,ROU,14
+Corvinul,1270.8,ROU,12
+Wieczysta Krakow,1262.2,POL,11
+Wisla,1327.3,POL,11
+Horsens,1333.8,DNK,11
+Vaduz,1316.5,SWZ,10
+A. Lustenau,1290.5,AUT,9
+Cambuur,1385.0,N1,9
+Lommel SK,1402.2,B1,8
+Osnabruck,1300.6,D2,8
+Sochaux,1282.4,F2,9
+Dijon,1296.4,F2,9
+Den Haag,1375.0,N1,9
+Maritimo,1395.7,P1,8
+Academico Viseu,1443.5,P1,8
+Beveren,1359.0,B1,8
+Cottbus,1324.9,D2,8
+Corum,1410.3,T1,8
+Celta B,1331.1,SP2,10
+Bolton,1359.9,E1,11
+Amedspor,1425.0,T1,8
+Erzurumspor,1371.6,T1,8
+Sabadell,1366.7,SP2,10
+Vicenza,1277.2,I2,7
+Iraklis,1350.5,G1,7
+Kalamata,1349.6,G1,7
+Arezzo,1297.5,I2,7
+Benevento,1320.2,I2,7
+Ascoli,1326.7,I2,7
+Sabah FK,1349.1,copa,3
+Hapoel Be'er,1329.9,copa,3
+Stade Rennais,1375.5,copa,3
+Ararat-Armenia,1281.6,copa,3
+Torreense,1335.7,copa,3
+Levski Sofia,1358.7,copa,3
+Sint-Truidense,1389.1,copa,2
+Iberia 1999,1326.0,copa,2
+Jablonec,1351.5,copa,2
+CSKA Sofia,1343.5,copa,2
+Egnatia,1354.0,copa,2
+Kauno Zalgiris,1308.8,copa,2
+Riga FC,1346.3,copa,2
+Borac Banja Luka,1355.8,copa,2
+AGF,1337.3,copa,2
+Hajduk Split,1382.1,copa,2
+Heart of Midlothian,1338.5,copa,2
+PK-35,1193.4,FIN,1
+Athletic Club (F),1414.1,W,36
+CD Tenerife (F),1466.4,W,37
+Levante (F),1259.0,W,28
+Granada (F),1398.0,W,37
+Deportivo (F),1373.2,W,37
+FC Badalona (F),1362.0,W,37
+Barcelona (F),1656.7,W,34
+Alhama (F),1264.0,W,29
+Eibar (F),1338.2,W,36
+Sevilla (F),1375.2,W,37
+Espanyol (F),1365.7,W,36
+Atlético Madrid (F),1477.8,W,36
+Madrid CFF (F),1371.8,W,36
+Real Sociedad (F),1477.7,W,37
+Dux Logroño (F),1341.2,W,37
+Real Madrid (F),1565.0,W,36
+Alavés (F),1372.4,W,8
+Valencia (F),1321.7,W,8
