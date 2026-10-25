@@ -43,7 +43,7 @@ def plain(s: str) -> str:
 # 1) Tarjetas
 # ---------------------------------------------------------------------------
 def fetch_cards(settings: Settings, season_start: date, online: bool = True, league: str = "esp.1") -> pd.DataFrame:
-    cache = settings.raw_dir / f"cards_{league}_{season_start.year}.csv"
+    cache = settings.raw_dir / f"events_{league}_{season_start.year}.csv"  # tarjetas y goles
     seen_f = cache.with_suffix(".days.json")
     df = pd.read_csv(cache, parse_dates=["date"]) if cache.exists() else pd.DataFrame(columns=CARD_COLS)
     seen = set(json.loads(seen_f.read_text())) if seen_f.exists() else set()
@@ -63,12 +63,15 @@ def fetch_cards(settings: Settings, season_start: date, online: bool = True, lea
                         continue
                     names = {c["team"]["id"]: c["team"]["displayName"] for c in comp["competitors"]}
                     for d in comp.get("details", []):
-                        if not (d.get("yellowCard") or d.get("redCard")):
+                        is_goal = bool(d.get("scoringPlay")) and not d.get("shootout")
+                        if not (d.get("yellowCard") or d.get("redCard") or is_goal):
                             continue
                         ath = (d.get("athletesInvolved") or [{}])[0]
                         team = canonical(names.get((d.get("team") or {}).get("id"), ""), strict=False)
+                        kind = "red" if d.get("redCard") else "yellow" if d.get("yellowCard") else \
+                            ("own_goal" if d.get("ownGoal") else "goal")
                         rows.append({"date": pd.Timestamp(day), "team": team, "player": ath.get("displayName", ""),
-                                     "card": "red" if d.get("redCard") else "yellow"})
+                                     "card": kind})
                 if done and (today - day).days > 2:
                     seen.add(key)
             except Exception as e:

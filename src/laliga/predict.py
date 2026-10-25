@@ -319,6 +319,14 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             final[hm] = stm.predict_proba(tab[hm])
             model_used[hm] = "stacker_mercado"
 
+    # 6b) Tarjetas y córners
+    from . import props as props_mod
+    try:
+        props_model = props_mod.PropsModel(matches, ref)
+    except Exception as e:
+        log.warning("Modelo de tarjetas y córners no disponible: %s", e)
+        props_model = None
+
     # 7) Salida
     from .betting import blend_ou, load_ou_blend
     ou_w = load_ou_blend(settings)
@@ -372,12 +380,35 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             "espn_id": str(events[(r.home, r.away)]) if (r.home, r.away) in events else None,
             "scorers": _scorers(o, players, r, season_now),
             "roster": o.get("roster"),
+            "props": _props(props_model, r, o, cards, lineups_hist, season_now),
             "absence_impact": impact,
             "_snapshot": movements.make_snapshot(
                 r, o, rho=dc.params.rho, a=a_coef, b=b_coef, max_goals=dc.max_goals),
         })
     preds.sort(key=lambda d: (d["kickoff_utc"] or d["date"], d["home"]))
     return preds
+
+
+def _props(pm, r, o: dict, cards, lineups, season: int) -> dict | None:
+    if pm is None or not getattr(pm, "ok", False):
+        return None
+    try:
+        from . import props as props_mod
+        from .teams import is_derby
+        ref = r.referee if isinstance(r.referee, str) else None
+        out = pm.predict(r.home, r.away, ref, derby=is_derby(r.home, r.away))
+        if out is None:
+            return None
+        start = pd.Timestamp(f"{season}-08-01")
+        out["players"] = {}
+        for k, (side, team) in enumerate((("home", r.home), ("away", r.away))):
+            xi = [p["name"] for p in ((o.get("squads") or {}).get(side) or {}).get("xi", []) if p.get("absent") != "out"]
+            avg = pm.avg["hy"] if side == "home" else pm.avg["ay"]
+            out["players"][side] = props_mod.player_card_probs(cards, lineups, team, start, xi, out["yellow"][k], avg)
+        return out
+    except Exception as e:
+        log.warning("Tarjetas y córners no disponibles para %s-%s: %s", r.home, r.away, e)
+        return None
 
 
 def _match_fantasy(ab: pd.DataFrame, squad: list[str]) -> pd.DataFrame:
@@ -462,7 +493,29 @@ def save_predictions(settings: Settings, preds: list[dict], merge: bool = False,
                                               "p_away", "model", "lineup_confirmed")} for p in preds])
     rows.to_csv(log_p, mode="a", header=not log_p.exists(), index=False)
     save_prematch(settings, preds)
+    save_props_log(settings, preds)
     return [m for m in moves.values() if m and m.get("important")]
+
+
+def save_props_log(settings: Settings, preds: list[dict]) -> None:
+    """Registro de goles, goleadores, tarjetas y córners predichos (para medir después si aciertan)."""
+    rows = []
+    for x in preds:
+        ou, pr, sc = x.get("ou") or {}, x.get("props") or {}, x.get("scorers") or {}
+        rows.append({
+            "generated_at": x["generated_at"], "season": x["season"], "date": x["date"], "home": x["home"],
+            "away": x["away"], "kickoff_utc": x.get("kickoff_utc"), "lineup_confirmed": x.get("lineup_confirmed"),
+            "xg_home": x["dc"]["xg_home"], "xg_away": x["dc"]["xg_away"],
+            "p_over25": ou.get("p_over", x["dc"].get("p_over25")), "p_btts": ou.get("p_btts", x["dc"].get("p_btts")),
+            "yellow_total": pr.get("yellow_total"), "corners_total": pr.get("corners_total"),
+            "p_cards_over45": (pr.get("p_cards_over") or {}).get("4.5"),
+            "p_corners_over95": (pr.get("p_corners_over") or {}).get("9.5"),
+            "scorers": json.dumps([[side, s["name"], s["p"]] for side in ("home", "away") for s in sc.get(side, [])],
+                                  ensure_ascii=False),
+        })
+    if rows:
+        p = settings.predictions_dir / "props_log.csv"
+        pd.DataFrame(rows).to_csv(p, mode="a", header=not p.exists(), index=False)
 
 
 def save_prematch(settings: Settings, preds: list[dict], keep_days: int = 3) -> None:

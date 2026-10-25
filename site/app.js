@@ -139,6 +139,21 @@ function scoreGrid(m) {
   return html + "</table>";
 }
 
+function propsHtml(m) {
+  const p = m.props;
+  if (!p) return "";
+  const pl = p.players || {};
+  const plist = (side, team) => (pl[side] || []).slice(0, 3).map((x) => `${esc(x.name)} ${pct(x.p)} %`).join(" · ");
+  const refTxt = m.referee ? (p.referee_matches ? `Árbitro: ${esc(m.referee)} saca ${p.referee_factor >= 1 ? "un " + Math.round(100 * (p.referee_factor - 1)) + " % más" : "un " + Math.round(100 * (1 - p.referee_factor)) + " % menos"} tarjetas que la media (${p.referee_matches} partidos).` : `Árbitro: ${esc(m.referee)} (sin historial suficiente).`) : "Árbitro aún sin designar.";
+  return `<h4>Tarjetas y córners</h4>
+    <dl class="facts">
+      <div><dt>Amarillas esperadas</dt><dd>${dec(p.yellow[0], 1)} – ${dec(p.yellow[1], 1)}</dd><dd class="facts__note">Más de 4,5: ${pct(p.p_cards_over["4.5"])} %</dd></div>
+      <div><dt>Córners esperados</dt><dd>${dec(p.corners[0], 1)} – ${dec(p.corners[1], 1)}</dd><dd class="facts__note">Más de 9,5: ${pct(p.p_corners_over["9.5"])} %</dd></div>
+      <div><dt>Alguna roja</dt><dd>${pct(p.p_red)} %</dd></div>
+    </dl>
+    <p class="quiet small">${refTxt}</p>
+    ${(pl.home || []).length || (pl.away || []).length ? `<p class="quiet small">Más papeletas de ver amarilla — ${esc(name(m.home))}: ${plist("home")}${(pl.away || []).length ? `; ${esc(name(m.away))}: ${plist("away")}` : ""}.</p>` : ""}`;
+}
 function impactHtml(m) {
   const im = m.absence_impact;
   const outs = Object.entries(m.absences || {}).flatMap(([t, l]) => (l || []).filter((a) => a.status === "out").map((a) => `${a.player} (${name(t)})`));
@@ -253,6 +268,7 @@ function probsHtml(m) {
       <h4>Marcadores más probables (%)</h4>
       ${scoreGrid(m)}
       ${scorersHtml(m, 3)}
+      ${propsHtml(m)}
       ${contextHtml(m)}
     </div>
   </div>`;
@@ -550,6 +566,13 @@ function standingsHtml() {
     }).join("")}</tbody></table></div>
     <p class="quiet small">Champions: 4 primeros. Europa: 7 primeros (incluye Champions). Entre paréntesis, el rango de puntos en 8 de cada 10 simulaciones.</p>`;
 }
+function pichichiEvo() {
+  const h = (DATA.extra || {}).scorers_history || [];
+  if (h.length < 2) return "";
+  const names = [...new Set(h.flatMap((x) => Object.keys(x.p)))].slice(0, 4);
+  const cols = ["var(--slip)", "var(--ink)", "var(--c3)", "var(--c4)"];
+  return `<h4>Evolución</h4>${multiLine(names.map((n, i) => ({ label: n.split(" ").slice(-1)[0], color: cols[i], points: h.map((x) => [x.date, 100 * (x.p[n] || 0)]) })), 620, 200).replace(/ €/g, " %")}`;
+}
 function pichichiHtml() {
   const sc = (DATA.extra || {}).scorers;
   if (!sc || !sc.players || !sc.players.length) return '<p class="quiet">Aparecerá tras la próxima actualización.</p>';
@@ -559,6 +582,7 @@ function pichichiHtml() {
       <td>${dec(p.exp, 0)} <small>(${p.range[0]}–${p.range[1]})</small></td>
       <td class="l"><span class="pbar"><i style="width:${(100 * p.p / max).toFixed(0)}%"></i></span> ${p.p >= 0.995 ? ">99" : p.p > 0 && p.p < 0.005 ? "<1" : Math.round(100 * p.p)} %</td></tr>`).join("")}
     </tbody></table></div>
+    ${pichichiEvo()}
     <p class="quiet small">Goles que le quedan = goles esperados de su equipo en los partidos que faltan × la parte del xG del equipo que genera él. No tiene en cuenta lesiones futuras. ${sc.n_sims.toLocaleString("es-ES")} simulaciones; entre paréntesis, el rango en 8 de cada 10.</p>`;
 }
 function positionsHtml() {
@@ -647,6 +671,23 @@ function trackHtml() {
       <td><b>${g.score}</b></td>${g.p.map((v, i) => `<td class="${["1", "X", "2"][i] === g.result ? "is-real" : ""}${["1", "X", "2"][i] === g.pick ? " is-pick" : ""}">${pct(v)} %</td>`).join("")}
       <td>${g.correct ? '<span class="ok">Sí</span>' : '<span class="ko">No</span>'}</td></tr>`).join("")}</tbody></table></div>
     <p class="quiet small">Subrayado: lo que predijo como más probable. En rojo: lo que pasó.</p>`;
+}
+function propsTrackHtml() {
+  const t = (DATA.extra || {}).track_props || {};
+  if (!t.n) return '<p class="quiet">Se irá llenando a medida que se jueguen los partidos predichos desde ahora.</p>';
+  const row = (lab, x, fmt) => x ? `<tr><th scope="row" class="l">${lab}</th><td>${fmt(x.pred_mean ?? x.pred)}</td><td>${fmt(x.obs)}</td><td>${x.n}</td><td>${x.brier != null ? dec(x.brier, 3) : x.mae != null ? `±${dec(x.mae, 2)}` : "–"}</td></tr>` : "";
+  const pc = (v) => `${Math.round(100 * v)} %`, n2 = (v) => dec(v, 2);
+  let sc = "";
+  if (t.scorers) sc = `<p>Goleadores: el modelo esperaba <b>${dec(t.scorers.expected_goals, 1)}</b> partidos con gol entre los jugadores señalados y hubo <b>${t.scorers.actual}</b> (${t.scorers.n} predicciones).</p>${calibMini(t.scorers.bins, "Goleadores")}`;
+  return `<div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Mercado</th><th scope="col">Predicho (media)</th><th scope="col">Real</th><th scope="col">Partidos</th><th scope="col">Error</th></tr></thead><tbody>
+    ${row("Más de 2,5 goles", t.over25, pc)}${row("Marcan los dos", t.btts, pc)}${row("Goles por partido", t.goals, n2)}${row("Amarillas por partido", t.cards, n2)}${row("Córners por partido", t.corners, n2)}
+    </tbody></table></div>${sc}
+    <p class="quiet small">Si el modelo está bien calibrado, lo predicho de media y lo que pasa deberían parecerse. Error: Brier en probabilidades (menos es mejor; 0,25 es tirar una moneda) y error medio en conteos.</p>`;
+}
+function calibMini(bins, label) {
+  if (!bins || !bins.length) return "";
+  return `<div class="calib-mini" aria-label="Calibración ${esc(label)}">${bins.map((b) => `<div class="cm"><span class="cm__bar"><i style="height:${(100 * b.pred).toFixed(0)}%"></i><b style="height:${(100 * b.obs).toFixed(0)}%"></b></span><span class="cm__l">${Math.round(100 * b.pred)} %<br><small>${b.n}</small></span></div>`).join("")}</div>
+    <p class="quiet small">Barra clara: probabilidad que dio el modelo; barra roja: cuántas veces pasó. Debajo, nº de casos.</p>`;
 }
 function sourcesHtml() {
   const s = DATA.sources || {};
@@ -970,6 +1011,7 @@ function route() {
   }
   if (tabv === "aciertos") {
     document.getElementById("track").innerHTML = trackHtml();
+    document.getElementById("track-props").innerHTML = propsTrackHtml();
     document.getElementById("sources").innerHTML = sourcesHtml();
   }
 }

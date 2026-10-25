@@ -287,6 +287,79 @@ def head_to_head(matches: pd.DataFrame, home: str, away: str, n: int = 6) -> lis
 # ---------------------------------------------------------------------------
 # Aciertos del modelo
 # ---------------------------------------------------------------------------
+def _bins(p: np.ndarray, y: np.ndarray, edges=(0, .1, .2, .3, .4, .5, .6, .7, .8, 1.01)) -> list[dict]:
+    out = []
+    for lo, hi in zip(edges[:-1], edges[1:]):
+        m = (p >= lo) & (p < hi)
+        if m.sum() >= 5:
+            out.append({"pred": _r(p[m].mean(), 3), "obs": _r(y[m].mean(), 3), "n": int(m.sum())})
+    return out
+
+
+def track_props(settings: Settings, matches: pd.DataFrame) -> dict:
+    """¿Aciertan los mercados secundarios? Goles (+2,5, ambos marcan), goleadores, tarjetas y córners.
+
+    Se usa la última predicción antes de cada partido ya jugado."""
+    p = settings.predictions_dir / "props_log.csv"
+    if not p.exists():
+        return {}
+    lg = pd.read_csv(p)
+    lg = lg.sort_values("generated_at").drop_duplicates(["season", "home", "away"], keep="last")
+    res = matches[matches.hg.notna()][["season", "home", "away", "date", "hg", "ag", "h_yellow", "a_yellow",
+                                       "h_corners", "a_corners"]]
+    j = lg.merge(res, on=["season", "home", "away"], suffixes=("", "_m"))
+    if j.empty:
+        return {"n": 0}
+    out = {"n": int(len(j))}
+    tot = (j.hg + j.ag).to_numpy(float)
+    for key, pcol, yv in (("over25", "p_over25", (tot > 2.5).astype(float)),
+                          ("btts", "p_btts", ((j.hg > 0) & (j.ag > 0)).astype(float).to_numpy())):
+        ok = j[pcol].notna().to_numpy()
+        if ok.sum():
+            pp = np.clip(j[pcol].to_numpy(float)[ok], 1e-6, 1 - 1e-6)
+            yy = np.asarray(yv)[ok]
+            base = yy.mean()
+            out[key] = {"n": int(ok.sum()), "pred_mean": _r(pp.mean(), 3), "obs": _r(base, 3),
+                        "brier": _r(float(np.mean((pp - yy) ** 2)), 4),
+                        "acierto": _r(float(np.mean((pp > 0.5) == (yy > 0.5))), 3), "bins": _bins(pp, yy)}
+    out["goals"] = {"pred": _r(float((j.xg_home + j.xg_away).mean()), 2), "obs": _r(float(tot.mean()), 2),
+                    "mae": _r(float(np.abs(j.xg_home + j.xg_away - tot).mean()), 2)}
+    for key, col, a, b in (("cards", "yellow_total", "h_yellow", "a_yellow"), ("corners", "corners_total", "h_corners", "a_corners")):
+        ok = j[col].notna() & j[a].notna() & j[b].notna()
+        if ok.sum():
+            real = (j.loc[ok, a] + j.loc[ok, b]).to_numpy(float)
+            pr = j.loc[ok, col].to_numpy(float)
+            out[key] = {"n": int(ok.sum()), "pred": _r(pr.mean(), 2), "obs": _r(real.mean(), 2),
+                        "mae": _r(float(np.abs(pr - real).mean()), 2)}
+    # goleadores: ¿marcó cada jugador al que se le dio una probabilidad?
+    try:
+        from .data.suspensions import plain
+        cur = results.current_season()
+        evf = settings.raw_dir / f"events_esp.1_{cur}.csv"
+        ev = pd.read_csv(evf, parse_dates=["date"]) if evf.exists() else pd.DataFrame()
+        pts, ys, tops = [], [], []
+        if len(ev):
+            goals = ev[ev.card == "goal"]
+            for r in j.itertuples():
+                d = pd.Timestamp(r.date_m if hasattr(r, "date_m") else r.date)
+                g = goals[((goals.date - d).abs() <= pd.Timedelta(days=1)) & goals.team.isin([r.home, r.away])]
+                if (r.hg + r.ag) > 0 and g.empty:
+                    continue  # aún sin datos de goleadores de este partido
+                scorers = {plain(x) for x in g.player}
+                for side, name, pr in json.loads(r.scorers or "[]"):
+                    hit = any(set(plain(name).split()) & set(s.split()) and
+                              (plain(name).split()[-1] in s or s.split()[-1] in plain(name)) for s in scorers)
+                    pts.append(pr)
+                    ys.append(float(hit))
+        if pts:
+            pp, yy = np.array(pts), np.array(ys)
+            out["scorers"] = {"n": int(len(pp)), "pred_mean": _r(pp.mean(), 3), "obs": _r(yy.mean(), 3),
+                              "expected_goals": _r(pp.sum(), 1), "actual": int(yy.sum()), "bins": _bins(pp, yy)}
+    except Exception as e:
+        log.warning("Seguimiento de goleadores no disponible: %s", e)
+    return out
+
+
 def track_record(settings: Settings, matches: pd.DataFrame) -> dict:
     p = settings.predictions_dir / "log.csv"
     if not p.exists():
@@ -371,5 +444,17 @@ def export(settings: Settings, matches: pd.DataFrame, preds: list[dict] | None =
         preds = json.loads(lp.read_text(encoding="utf-8")) if lp.exists() else []
     out["h2h"] = {f"{p['home']}|{p['away']}": head_to_head(matches, p["home"], p["away"]) for p in preds}
     out["track"] = track_record(settings, matches)
+    try:
+        out["track_props"] = track_props(settings, matches)
+    except Exception as e:
+        log.warning("Seguimiento de mercados secundarios no disponible: %s", e)
+    if out.get("scorers"):  # evolución del Pichichi día a día
+        hist = old.get("scorers_history", [])
+        today = datetime.now(timezone.utc).date().isoformat()
+        snap = {"date": today, "p": {x["name"]: x["p"] for x in out["scorers"]["players"][:6]}}
+        hist = [h for h in hist if h["date"] != today] + [snap]
+        out["scorers_history"] = hist[-120:]
+    else:
+        out["scorers_history"] = old.get("scorers_history", [])
     path.write_text(json.dumps(out, ensure_ascii=False, default=_json_default), encoding="utf-8")
     return out

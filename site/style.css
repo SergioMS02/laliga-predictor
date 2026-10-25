@@ -670,3 +670,11 @@ main h4 { font: 600 1.15rem/1.2 var(--font-cond); margin: 22px 0 8px; }
   .roster__grid { grid-template-columns: minmax(0, 1fr); }
   .roster li { grid-template-columns: minmax(0, 1fr) 76px 90px; }
 }
+
+.calib-mini { display: flex; gap: 8px; align-items: end; height: 130px; margin-top: 10px; }
+.cm { display: grid; justify-items: center; gap: 4px; }
+.cm__bar { position: relative; width: 26px; height: 90px; }
+.cm__bar i, .cm__bar b { position: absolute; bottom: 0; border-radius: 3px 3px 0 0; }
+.cm__bar i { left: 0; width: 12px; background: var(--rule); }
+.cm__bar b { right: 0; width: 12px; background: var(--slip); }
+.cm__l { font-size: 0.72rem; color: var(--ink-soft); text-align: center; line-height: 1.1; }
