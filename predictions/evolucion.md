@@ -1,6 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-25 17:47 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-10-25 17:50 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Barcelona – Real Madrid (2026-10-25)
 
