@@ -195,9 +195,15 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                 n_news += len(items)
             if any(info["absences"].values()):
                 info["availability_source"] = "noticias"
+        hints = {}
+        for side, team in (("home", r.home), ("away", r.away)):
+            hints[side] = {}
+            if players is not None and len(players):
+                for x in players[players.team == team].sort_values("season").itertuples():
+                    hints[side][x.player] = {"GK": "G", "D": "D", "M": "M", "F": "F"}.get(str(x.position or "").split(" ")[0], "M")
         for side, team in (("home", r.home), ("away", r.away)):
             if side not in squads:
-                sq = av.squad_view(imps[side], None, None, info["absences"].get(team))
+                sq = av.squad_view(imps[side], None, None, info["absences"].get(team), hints[side])
                 if not sq["xi"] and players is not None and len(players):
                     pl = players[(players.team == team) & (players.season == season_now)]
                     if pl.minutes.sum() < 900:
@@ -208,12 +214,8 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
         for side, team in (("home", r.home), ("away", r.away)):
             pl_t = players[(players.team == team) & (players.season == season_now)] if players is not None and len(players) else None
             starters = info.get("lineups", {}).get(side) if info["lineup_confirmed"] else None
-            hint = {}
-            if players is not None and len(players):
-                for x in players[players.team == team].sort_values("season").itertuples():
-                    hint[x.player] = {"GK": "G", "D": "D", "M": "M", "F": "F"}.get(str(x.position or "").split(" ")[0], "M")
             try:
-                rost[side] = av.roster(imps[side], pl_t, info["absences"].get(team), starters, hint)
+                rost[side] = av.roster(imps[side], pl_t, info["absences"].get(team), starters, hints[side])
             except Exception as e:
                 log.warning("Plantilla no disponible para %s: %s", team, e)
                 rost[side] = []

@@ -214,7 +214,7 @@ def _pinfo(row, absent=None) -> dict:
 
 
 def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str | None = None,
-               absences: pd.DataFrame | list | None = None) -> dict:
+               absences: pd.DataFrame | list | None = None, role_hint: dict | None = None) -> dict:
     """Once para dibujar en la web.
 
     starters: lista de espn.Player (alineación oficial) o None (se usa el once tipo)."""
@@ -245,8 +245,16 @@ def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str |
     # habitual de su misma demarcación (si no hay, el siguiente jugador de campo)
     xi, used = [], set()
     pool = imp.copy() if len(imp) else imp  # también suplentes sin titularidades (p. ej. el segundo portero)
+    hp = {k: _plain(k) for k in (role_hint or {})}
+
+    def role_of(name, pos):
+        if hp:
+            best = process.extractOne(_plain(name), hp, scorer=fuzz.token_set_ratio)
+            if best and best[1] >= 88:
+                return role_hint[best[2]]
+        return role(pos)
     if len(pool):
-        pool["role"] = pool["position"].map(role) if "position" in pool else "M"
+        pool["role"] = [role_of(n, p) for n, p in zip(pool["name"], pool["position"] if "position" in pool else [""] * len(pool))]
         pool = pool.sort_values("importance", ascending=False)
     for _, r in exp.iterrows():
         used.add(r["name"])
@@ -256,7 +264,7 @@ def squad_view(imp: pd.DataFrame, starters: list | None = None, formation: str |
             info["usual"] = True
             xi.append(info)
             continue
-        rl = role(r.get("position"))
+        rl = role_of(r["name"], r.get("position"))
         cand = pool[(~pool.name.isin(used)) & (pool.role == rl)] if len(pool) else pool
         if (cand is None or cand.empty) and rl != "G":
             cand = pool[(~pool.name.isin(used)) & (pool.role != "G")] if len(pool) else pool
