@@ -34,6 +34,8 @@ jobs:
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main  # lo último de main (no el commit del disparo): evita conflictos con otra ejecución
 
       - name: Elegir comando
         id: cmd
@@ -105,7 +107,7 @@ jobs:
           git add data predictions
           if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git commit -m "Predicciones $(date -u '+%Y-%m-%d %H:%M') [${{ steps.cmd.outputs.c }}]"
-          git pull --rebase --autostash
+          git pull --rebase --autostash -X theirs
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
