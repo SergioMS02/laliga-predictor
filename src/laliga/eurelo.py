@@ -124,34 +124,48 @@ def _get(url: str, cache_file, online: bool, max_age_days: float | None) -> str 
         return cache_file.read_text(encoding="utf-8", errors="replace") if cache_file.exists() else None
 
 
-def _espn_matches(lg: str, start: date, end: date, cache_file, online: bool, max_age: float | None) -> pd.DataFrame:
-    if cache_file.exists() and (not online or max_age is None or
-                                (pd.Timestamp.now() - pd.Timestamp(cache_file.stat().st_mtime, unit="s")).days <= max_age):
-        return pd.read_csv(cache_file, parse_dates=["date"])
+def _espn_matches(lg: str, start: date, end: date, cache_file, online: bool, weekdays: tuple[int, ...]) -> pd.DataFrame:
+    """Partidos terminados de una competición de ESPN, día a día (ESPN ya no acepta rangos de fechas).
+
+    Solo se consultan los días de la semana en que se juega y cada día se pide una sola vez
+    (se guarda la lista de días consultados); los tres últimos días se vuelven a pedir."""
+    seen_file = cache_file.with_suffix(".days.json")
+    df = pd.read_csv(cache_file, parse_dates=["date"]) if cache_file.exists() else pd.DataFrame(columns=COLS)
+    seen = set(json.loads(seen_file.read_text())) if seen_file.exists() else set()
     if not online:
-        return pd.DataFrame(columns=COLS)
-    rows = []
-    cur = start
-    while cur <= end:
-        stop = min(cur + timedelta(days=30), end)
-        try:
-            js = http.get(ESPN_SB.format(lg=lg), params={"dates": f"{cur:%Y%m%d}-{stop:%Y%m%d}", "limit": 900},
-                          timeout=25, retries=1).json()
-            for ev in js.get("events", []):
-                comp = ev["competitions"][0]
-                if not comp.get("status", {}).get("type", {}).get("completed"):
-                    continue
-                side = {c["homeAway"]: c for c in comp["competitors"]}
-                rows.append({"date": pd.Timestamp(ev["date"]).tz_convert(None).normalize(),
-                             "home": side["home"]["team"]["displayName"], "away": side["away"]["team"]["displayName"],
-                             "hg": float(side["home"].get("score") or 0), "ag": float(side["away"].get("score") or 0),
-                             "league": CUPS.get(lg, "W" if lg == WOMEN else lg)})
-        except Exception as e:
-            log.warning("Elo europeo: ESPN %s %s: %s", lg, cur, e)
-        cur = stop + timedelta(days=1)
-    df = pd.DataFrame(rows, columns=COLS)
-    if len(df) or not cache_file.exists():
-        df.to_csv(cache_file, index=False)
+        return df
+    today = date.today()
+    rows, day, n_req = [], start, 0
+    while day <= min(end, today):
+        key = day.isoformat()
+        recent = (today - day).days <= 3
+        if day.weekday() in weekdays and (key not in seen or recent):
+            try:
+                js = http.get(ESPN_SB.format(lg=lg), params={"dates": f"{day:%Y%m%d}"}, timeout=20, retries=1).json()
+                n_req += 1
+                for ev in js.get("events", []):
+                    comp = ev["competitions"][0]
+                    if not comp.get("status", {}).get("type", {}).get("completed"):
+                        continue
+                    side = {c["homeAway"]: c for c in comp["competitors"]}
+                    rows.append({"date": pd.Timestamp(day), "home": side["home"]["team"]["displayName"],
+                                 "away": side["away"]["team"]["displayName"],
+                                 "hg": float(side["home"].get("score") or 0), "ag": float(side["away"].get("score") or 0),
+                                 "league": CUPS.get(lg, "W" if lg == WOMEN else lg)})
+                if not recent:
+                    seen.add(key)
+            except Exception as e:
+                log.warning("Elo europeo: ESPN %s %s: %s", lg, day, e)
+                if isinstance(e, http.HostUnavailable):
+                    break
+        day += timedelta(days=1)
+    if rows:
+        new = pd.DataFrame(rows, columns=COLS)
+        df = pd.concat([df, new], ignore_index=True).drop_duplicates(["date", "home", "away"], keep="last")
+    df.to_csv(cache_file, index=False)
+    seen_file.write_text(json.dumps(sorted(seen)))
+    if n_req:
+        log.info("Elo europeo: %s, %d consultas a ESPN", lg, n_req)
     return df
 
 
@@ -178,13 +192,13 @@ def load_matches(settings: Settings, online: bool = True, seasons: int = 3) -> t
         if text:
             f = _fd_frame(text, c)
             frames.append(f[f.date >= pd.Timestamp(f"{cur - seasons + 1}-07-01")])
-    for lg in CUPS:
-        for y in range(cur - seasons + 1, cur + 1):
-            frames.append(_espn_matches(lg, date(y, 7, 1), min(date(y + 1, 6, 30), date.today()),
-                                        cdir / f"{CUPS[lg]}_{y}.csv", online, 0.5 if y == cur else None))
+    for lg in CUPS:  # martes, miércoles y jueves; dos temporadas bastan para enlazar las ligas
+        for y in range(cur - 1, cur + 1):
+            frames.append(_espn_matches(lg, date(y, 7, 1), date(y + 1, 6, 30), cdir / f"{CUPS[lg]}_{y}.csv",
+                                        online, weekdays=(1, 2, 3)))
     men = pd.concat([f for f in frames if len(f)], ignore_index=True) if frames else pd.DataFrame(columns=COLS)
-    women = pd.concat([_espn_matches(WOMEN, date(y, 7, 1), min(date(y + 1, 6, 30), date.today()),
-                                     cdir / f"W_{y}.csv", online, 0.5 if y == cur else None)
+    women = pd.concat([_espn_matches(WOMEN, date(y, 8, 15), date(y + 1, 6, 15), cdir / f"W_{y}.csv",
+                                     online, weekdays=(4, 5, 6, 0))
                        for y in range(cur - 1, cur + 1)], ignore_index=True)
     return men, women
 
