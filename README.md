@@ -92,6 +92,8 @@ Pestañas:
 - **Clasificación**: tabla actual y proyección de final de temporada (10.000 simulaciones Monte Carlo: título, Champions, Europa, descenso y probabilidad de cada puesto).
 - **Equipos**: ficha de cada equipo (forma, xG, Elo, jugadores clave, casa/fuera).
 - **Aciertos**: rendimiento real de las predicciones ya emitidas, comparación con las casas y estado de cada fuente de datos (`predictions/sources.json`).
+- **En directo**: todos los partidos del día de LaLiga, Segunda, Copa, Champions, Europa League, Conference, Liga F y las grandes ligas europeas, con marcador, minuto, goles, tarjetas, cambios, estadísticas y alineaciones. La web los pide directamente a la API pública de ESPN cada 30 segundos (no gasta minutos de GitHub). Para los partidos con predicción, **probabilidad en directo**: se recalcula con el marcador, el minuto y las expulsiones a partir de los goles esperados del modelo.
+- **Pichichi** (en Clasificación): probabilidad de cada jugador de acabar máximo goleador (goles actuales + goles esperados de su equipo en lo que queda × su parte del xG del equipo).
 - **Quiniela** y **Apuestas**: ver abajo.
 - En cada partido: más/menos de 2,5 goles (modelo combinado con el mercado), ambos marcan, cuotas de Bet365 y **probables goleadores** (probabilidad de que marque cada titular, con su xG por 90 de Understat y los goles esperados de su equipo).
 
@@ -99,7 +101,8 @@ Pestañas:
 
 Cada jornada se lee el boleto real (14 partidos + Pleno al 15) de combinacionganadora.com (la web de Loterías bloquea las peticiones automáticas) y se rellena:
 
-- LaLiga: el modelo de esta web. Segunda: las cuotas del mercado (en Segunda el mercado acierta claramente más que un Dixon-Coles propio: log-loss 1,037 frente a 1,057 en 2016-2025) y, sin cuotas, un Dixon-Coles con el histórico de Segunda. Resto (Copa contra equipos de otras categorías, Europa, fútbol femenino): estimación aproximada por categoría, marcada como tal.
+- LaLiga: el modelo de esta web. El resto, por orden: probabilidades del mercado de Betfair que publica eduardolosilla.es para todos los partidos del boleto; cuotas de Segunda (en Segunda el mercado acierta claramente más que un Dixon-Coles propio: log-loss 1,037 frente a 1,057 en 2016-2025) o un Dixon-Coles de Segunda; un **Elo europeo** (`eurelo.py`: ligas de football-data.co.uk de 25 países y cruces de Champions/Europa/Conference de ESPN, escala con LaLiga = 1500) y un **Elo de la Liga F** (resultados de ESPN); y, para equipos sin datos (regionales), una estimación por categoría, marcada como tal.
+- **Contra la mayoría**: con los porcentajes de lo que juega la gente en Loterías (también de eduardolosilla.es) se calcula el premio esperado de cada boleto (los premios se reparten entre los acertantes) y se busca el reducido con más premio esperado. La estimación se valida con una simulación independiente para no sobreajustar al ruido, pero es muy incierta: casi todo el valor viene de plenos muy improbables.
 - Dos boletos: **sencillo** (1 apuesta) y **reducido** (dobles y triples elegidos con programación dinámica para maximizar la probabilidad de 14 dentro de `quiniela.max_bets` apuestas). Pleno al 15 con la matriz de marcadores.
 - El boleto se congela al empezar el primer partido y se liquida con los resultados y la **tabla oficial de premios**. Historial, aciertos, premios y balance en `predictions/quiniela.json`. Un boleto rellenado con la jornada ya empezada queda fuera del balance.
 
@@ -113,6 +116,8 @@ Cada vez que se predice, el bot "apuesta" con las cuotas de **Bet365** (las de f
 - **Kelly**: las apuestas de valor, con importe = 1/4 de Kelly sobre un fondo que empieza en 100 € (máximo 5 % del fondo por apuesta).
 
 La apuesta se actualiza con la última cuota hasta que empieza el partido, se congela y se liquida **en cuanto termina** (una ejecución cada 30 minutos lo comprueba). Para cada apuesta se guarda la primera cuota a la que la vio el modelo y la de cierre: la métrica **«frente al cierre» (CLV)** dice si el modelo detecta algo antes que el mercado, y con pocas apuestas es mucho más fiable que el beneficio.
+
+La simulación de temporadas pasadas también compara casas: la misma estrategia con la cuota de Bet365, la media del mercado y la mejor cuota disponible (en 2021-2026 el favorito pasa de −1,2 % con Bet365 a +2,6 % con la mejor cuota; Bet365 solo ofrece la mejor cuota en el 8 % de los casos). En cada partido se muestran la mejor cuota y la media.
 
 Todo queda en `predictions/bets.csv` (historial completo), `predictions/bets_summary.json` (balance) y `predictions/betting_backtest.json` (lo que habría pasado en temporadas pasadas). Se configura en `config.yaml → betting`. Resultados en temporadas de prueba (2021-2026): favorito −1,2 % (1.989 apuestas), valor −6,6 % (387), Kelly −10,8 % (369), goles con muy pocas apuestas, porque en goles el modelo apenas añade nada al mercado. **No es un consejo de apuesta**: las casas aciertan algo más que el modelo y cobran margen, así que lo esperable es perder a la larga.
 

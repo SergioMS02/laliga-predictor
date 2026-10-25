@@ -150,3 +150,21 @@ def test_ou_backtest(settings):
     assert r is None or r["roi"] < 0.05
     w = json.loads((settings.state_dir / "ou_blend.json").read_text())
     assert w["n"] > 1000
+
+
+def test_odds_compare_in_backtest(settings):
+    rng = np.random.default_rng(2)
+    n = 800
+    p = rng.dirichlet([5, 3, 3], n)
+    y = np.array([rng.choice(3, p=pp) for pp in p])
+    b = 0.93 / p
+    m = pd.DataFrame({"season": 2024, "date": pd.date_range("2024-08-01", periods=n), "home": "A", "away": "B",
+                      "hg": 1.0, "ag": 0.0, "b365_h": b[:, 0], "b365_d": b[:, 1], "b365_a": b[:, 2],
+                      "max_h": b[:, 0] * 1.06, "max_d": b[:, 1] * 1.06, "max_a": b[:, 2] * 1.06,
+                      "avg_h": b[:, 0] * 1.01, "avg_d": b[:, 1] * 1.01, "avg_a": b[:, 2] * 1.01})
+    pd.DataFrame({"season": m.season, "y": y, "stacker_H": p[:, 0], "stacker_D": p[:, 1], "stacker_A": p[:, 2]},
+                 index=m.index).to_csv(settings.processed_dir / "backtest_predictions.csv")
+    res = betting.backtest_strategies(settings, m)
+    oc = res["odds_compare"]["favorito"]
+    assert oc["mejor"]["roi"] > oc["bet365"]["roi"]
+    assert res["odds_quality"]["b365_is_best"] < 0.5

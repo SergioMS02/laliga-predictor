@@ -79,6 +79,7 @@ def main() -> None:
         "bets": read_json(PRED / "bets_summary.json", {}),
         "bets_backtest": read_json(PRED / "betting_backtest.json", {}),
         "quiniela": read_json(PRED / "quiniela.json", {}),
+        "prematch": read_json(PRED / "prematch.json", {}),
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     print(f"{OUT}: {len(matches)} partidos, {len(recent)} cambios importantes")

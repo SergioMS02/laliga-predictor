@@ -420,6 +420,33 @@ def backtest_strategies(settings: Settings, matches: pd.DataFrame) -> dict | Non
         if rows:
             extra = {"bankroll_start": c["kelly_bankroll"], "bankroll": round(bank, 2)} if strat == "kelly" else None
             res["strategies"][strat] = _strategy_result(rows, STRATEGIES[strat]["label"], extra=extra)
+    # ¿Y si se apostara siempre a la mejor cuota del mercado, o a la media?
+    res["odds_compare"] = {}
+    for label, cols in (("bet365", ("b365_h", "b365_d", "b365_a")), ("mejor", ("max_h", "max_d", "max_a")),
+                        ("media", ("avg_h", "avg_d", "avg_a"))):
+        if not set(cols) <= set(m.columns):
+            continue
+        od = m[list(cols)].to_numpy(float)
+        for strat in ("favorito", "valor"):
+            prof, n = 0.0, 0
+            for k in range(len(m)):
+                d = decide(probs[k], od[k], strat, c)
+                if d is None:
+                    continue
+                i, o, _ = d
+                prof += c["stake"] * (o - 1) if i == y[k] else -c["stake"]
+                n += 1
+            res["odds_compare"].setdefault(strat, {})[label] = {
+                "bets": n, "profit": round(prof, 2), "roi": round(prof / (n * c["stake"]), 4) if n else None}
+    if {"b365_h", "max_h", "avg_h"} <= set(m.columns):
+        b, mx, av = (m[[f"{x}_h", f"{x}_d", f"{x}_a"]].to_numpy(float) for x in ("b365", "max", "avg"))
+        ok = ~np.isnan(b).any(1) & ~np.isnan(mx).any(1) & ~np.isnan(av).any(1)
+        res["odds_quality"] = {"n": int(ok.sum()),
+                               "b365_vs_avg": round(float(np.nanmean(b[ok] / av[ok] - 1)), 4),
+                               "max_vs_b365": round(float(np.nanmean(mx[ok] / b[ok] - 1)), 4),
+                               "b365_is_best": round(float((b[ok] >= mx[ok] - 1e-9).mean()), 4),
+                               "margin_b365": round(float(np.nanmean((1 / b[ok]).sum(1) - 1)), 4),
+                               "margin_max": round(float(np.nanmean((1 / mx[ok]).sum(1) - 1)), 4)}
     try:
         ou = _ou_backtest(settings, matches, c)
         if ou:

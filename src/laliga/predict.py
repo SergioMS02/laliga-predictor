@@ -30,7 +30,8 @@ def upcoming_odds(settings: Settings) -> pd.DataFrame:
     if df.empty:
         return pd.DataFrame()
     cols = ["season", "home", "away", "odds_h", "odds_d", "odds_a"] + [
-        c for c in ("b365_h", "b365_d", "b365_a", "b365_o25", "b365_u25", "ou_o25", "ou_u25") if c in df]
+        c for c in ("b365_h", "b365_d", "b365_a", "b365_o25", "b365_u25", "ou_o25", "ou_u25",
+                    "max_h", "max_d", "max_a", "avg_h", "avg_d", "avg_a") if c in df]
     return df[cols].dropna(subset=["odds_h"])
 
 
@@ -217,7 +218,7 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
 
     # 5) Mercado (y su movimiento desde la primera cuota vista) y clima
     odds = upcoming_odds(settings) if online else pd.DataFrame()
-    b365, b365_ou, mkt_ou = {}, {}, {}
+    b365, b365_ou, mkt_ou, best_odds = {}, {}, {}, {}
     if len(odds):
         if "b365_h" in odds:
             b365 = {(r.season, r.home, r.away): [r.b365_h, r.b365_d, r.b365_a] for r in odds.itertuples()
@@ -225,6 +226,9 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
         if "b365_o25" in odds:
             b365_ou = {(r.season, r.home, r.away): [r.b365_o25, r.b365_u25] for r in odds.itertuples()
                        if not pd.isna(r.b365_o25) and not pd.isna(r.b365_u25)}
+        if "max_h" in odds:
+            best_odds = {(r.season, r.home, r.away): {"max": [r.max_h, r.max_d, r.max_a], "avg": [r.avg_h, r.avg_d, r.avg_a]}
+                         for r in odds.itertuples() if not pd.isna(r.max_h)}
         if "ou_o25" in odds:
             from .betting import devig2
             mkt_ou = {(r.season, r.home, r.away): devig2(r.ou_o25, r.ou_u25) for r in odds.itertuples()}
@@ -294,12 +298,21 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             "b365": [float(x) for x in b365[(r.season, r.home, r.away)]] if (r.season, r.home, r.away) in b365 else None,
             "b365_ou": [float(x) for x in b365_ou[(r.season, r.home, r.away)]] if (r.season, r.home, r.away) in b365_ou else None,
             "ou": _ou_block(o["dc"], mkt_ou.get((r.season, r.home, r.away)), ou_w, blend_ou),
+            "odds_market": _clean_odds(best_odds.get((r.season, r.home, r.away))),
+            "espn_id": str(events[(r.home, r.away)]) if (r.home, r.away) in events else None,
             "scorers": _scorers(o, players, r, season_now),
             "_snapshot": movements.make_snapshot(
                 r, o, rho=dc.params.rho, a=a_coef, b=b_coef, max_goals=dc.max_goals),
         })
     preds.sort(key=lambda d: (d["kickoff_utc"] or d["date"], d["home"]))
     return preds
+
+
+def _clean_odds(d: dict | None) -> dict | None:
+    if not d:
+        return None
+    out = {k: [None if pd.isna(x) else round(float(x), 2) for x in v] for k, v in d.items()}
+    return out if any(x is not None for v in out.values() for x in v) else None
 
 
 def _scorers(o: dict, players, r, season: int) -> dict:
@@ -348,7 +361,29 @@ def save_predictions(settings: Settings, preds: list[dict], merge: bool = False,
     rows = pd.DataFrame([{k: p[k] for k in ("generated_at", "season", "date", "home", "away", "p_home", "p_draw",
                                               "p_away", "model", "lineup_confirmed")} for p in preds])
     rows.to_csv(log_p, mode="a", header=not log_p.exists(), index=False)
+    save_prematch(settings, preds)
     return [m for m in moves.values() if m and m.get("important")]
+
+
+def save_prematch(settings: Settings, preds: list[dict], keep_days: int = 3) -> None:
+    """Última predicción antes de empezar de cada partido (para la probabilidad en directo de la web)."""
+    p = settings.predictions_dir / "prematch.json"
+    try:
+        old = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    except json.JSONDecodeError:
+        old = {}
+    now = pd.Timestamp.now(tz="UTC")
+    for x in preds:
+        old[f"{x['home']}|{x['away']}"] = {
+            "home": x["home"], "away": x["away"], "date": x["date"], "kickoff_utc": x.get("kickoff_utc"),
+            "espn_id": x.get("espn_id"), "p": [x["p_home"], x["p_draw"], x["p_away"]],
+            "xg": [x["dc"]["xg_home"], x["dc"]["xg_away"]]}
+    keep = {}
+    for k, v in old.items():
+        t = pd.Timestamp(v["kickoff_utc"]) if v.get("kickoff_utc") else pd.Timestamp(v["date"], tz="Europe/Madrid")
+        if t >= now - pd.Timedelta(days=keep_days):
+            keep[k] = v
+    p.write_text(json.dumps(keep, ensure_ascii=False), encoding="utf-8")
 
 
 def _pct(x: float) -> str:

@@ -32,9 +32,11 @@ B365_COLS = ["b365_h", "b365_d", "b365_a", "b365c_h", "b365c_d", "b365c_a"]
 OU_COLS = ["b365_o25", "b365_u25", "b365c_o25", "b365c_u25", "ou_o25", "ou_u25", "ouc_o25", "ouc_u25"]
 PRE_OU = [("P>2.5", "P<2.5"), ("Avg>2.5", "Avg<2.5"), ("BbAv>2.5", "BbAv<2.5")]
 CLOSE_OU = [("PC>2.5", "PC<2.5"), ("AvgC>2.5", "AvgC<2.5")]
+# Mejor cuota y cuota media del mercado (antes del partido), para comparar casas
+MKT_COLS = ["max_h", "max_d", "max_a", "avg_h", "avg_d", "avg_a"]
 COLUMNS = ["season", "date", "kickoff", "home", "away", "hg", "ag", "result", "referee",
            *STAT_MAP.values(), "odds_h", "odds_d", "odds_a", "odds_close_h", "odds_close_d",
-           "odds_close_a", *B365_COLS, *OU_COLS, "source"]
+           "odds_close_a", *B365_COLS, *OU_COLS, *MKT_COLS, "source"]
 DIVISIONS = {"SP1": "LaLiga", "SP2": "Segunda"}
 
 
@@ -122,6 +124,10 @@ def standardize_football_data(raw: pd.DataFrame, source: str, div: str = "SP1") 
                        (("ou_o25", "ou_u25"), PRE_OU), (("ouc_o25", "ouc_u25"), CLOSE_OU)):
         v = _pick_odds(raw, opts)
         df[cols[0]], df[cols[1]] = v.T
+    mx = _pick_odds(raw, [("MaxH", "MaxD", "MaxA"), ("BbMxH", "BbMxD", "BbMxA")])
+    av = _pick_odds(raw, [("AvgH", "AvgD", "AvgA"), ("BbAvH", "BbAvD", "BbAvA")])
+    df["max_h"], df["max_d"], df["max_a"] = mx.T
+    df["avg_h"], df["avg_d"], df["avg_a"] = av.T
     df["season"] = df["date"].map(season_of)
     df["source"] = source
     return df[COLUMNS].reset_index(drop=True)
@@ -144,7 +150,7 @@ def fetch_season(settings: Settings, start_year: int, refresh: bool = False,
         cached = _read_cache(cache)
         # una copia del espejo no trae cuotas, y las cachés antiguas no traen Bet365 ni más/menos:
         # en ambos casos se reintenta la fuente principal
-        if not (cached["source"] == "mirror").all() and "b365_o25" in cached.columns:
+        if not (cached["source"] == "mirror").all() and "max_h" in cached.columns:
             return cached
     sources = (("football_data_url", "football-data"), ("mirror_url", "mirror")) if div == "SP1" else \
         (("football_data_url", "football-data"),)

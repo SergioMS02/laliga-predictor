@@ -35,6 +35,7 @@
 <div class="navbar" id="navbar">
   <nav class="tabs wrap" aria-label="Secciones">
     <a href="#partidos" data-tab="partidos">Partidos</a>
+    <a href="#directo" data-tab="directo">En directo</a>
     <a href="#quiniela" data-tab="quiniela">Quiniela</a>
     <a href="#apuestas" data-tab="apuestas">Apuestas</a>
     <a href="#clasificacion" data-tab="clasificacion">Clasificación</a>
@@ -75,6 +76,13 @@
     </div>
     <div id="standings"></div>
   </section>
+  <section aria-labelledby="pich-title">
+    <div class="section-head">
+      <h2 id="pich-title" class="section-title">Pichichi</h2>
+      <p class="section-note">Quién acabará como máximo goleador, simulando los goles que le quedan a cada jugador.</p>
+    </div>
+    <div id="pichichi"></div>
+  </section>
   <section aria-labelledby="dist-title">
     <div class="section-head">
       <h2 id="dist-title" class="section-title">Dónde puede acabar cada equipo</h2>
@@ -91,6 +99,16 @@
       <p class="section-note">Ordenados por su fuerza actual (Elo). Elige un equipo para ver sus números.</p>
     </div>
     <div class="teams" id="teams"></div>
+  </section>
+ </div>
+
+ <div class="view" data-view="directo" hidden>
+  <section aria-labelledby="live-title">
+    <div class="section-head">
+      <h2 id="live-title" class="section-title">En directo</h2>
+      <p class="section-note">Marcadores, goles, tarjetas, cambios y estadísticas al momento (se actualiza solo cada 30 segundos). Pulsa un partido para ver el detalle y su probabilidad en directo.</p>
+    </div>
+    <div id="live-list" aria-live="polite"></div>
   </section>
  </div>
 
@@ -161,10 +179,11 @@
 
 <footer class="footer">
   <div class="wrap">
-    <p>Se actualiza solo cada día y vuelve a calcular cuando salen las alineaciones. Datos públicos y gratuitos: football-data.co.uk, ESPN, Understat, openfootball, Open-Meteo, Google News y combinacionganadora.com (boleto de la quiniela).</p>
+    <p>Se actualiza solo cada día y vuelve a calcular cuando salen las alineaciones. Datos públicos y gratuitos: football-data.co.uk, ESPN, Understat, openfootball, Open-Meteo, Google News, combinacionganadora.com (boleto de la quiniela) y eduardolosilla.es (lo que juega la gente y probabilidades de Betfair).</p>
     <p>Son probabilidades, no certezas. Las apuestas y la quiniela son simuladas: no es un consejo de apuesta. Juega con responsabilidad (+18).</p>
   </div>
 </footer>
 <script src="app.js"></script>
+<script src="live.js"></script>
 </body>
 </html>

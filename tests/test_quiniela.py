@@ -134,3 +134,59 @@ def test_scorers():
     assert out[0]["name"] == "Delantero Uno" and out[0]["p"] > out[1]["p"] > 0
     assert all(0 <= r["p"] < 1 for r in out)
     assert scorers.scorer_probs(xi, 1.6, None, "A", 2026) == []
+
+
+def test_public_parse_and_value_ticket():
+    import json as _json
+    state = {"probabilidades": {"2027_16": {"numJornada": 16, "fechaModificacion": {"lae": 1},
+             "partidos": {"lae": [{"porc_1": 80, "porc_X": 15, "porc_2": 5}] * 14,
+                          "real": [{"porc_1_dec": 55.5, "porc_X_dec": 25, "porc_2_dec": 19.5}] * 14,
+                          "quinielista": []}}}}
+    raw = _json.dumps(state).replace('"', "&q;")
+    page = f'<script id="eduardo-losilla-state" type="application/json">{raw}</script>'
+    pub = q.parse_public(page)
+    assert pub[16]["lae"][0] == pytest.approx([0.8, 0.15, 0.05])
+    assert pub[16]["real"][0] == pytest.approx([0.555, 0.25, 0.195])
+    rows = [{"p": [0.55, 0.25, 0.2]} for _ in range(14)]
+    t = q.build_tickets(rows, {"price": 0.75, "max_bets": 16}, pub[16]["lae"], 1_000_000)
+    assert set(t) == {"sencilla", "reducida", "valor"}
+    v = t["valor"]
+    assert v["bets"] <= 16 and v["ev"] >= 0
+    # contra una mayoría que juega 1 al 80 %, el boleto de valor mete signos X/2
+    assert any(c != ["1"] for c in v["picks"])
+    assert v["ev"] > t["reducida"]["ev"]
+
+
+def test_ev_helpers():
+    probs = [[0.5, 0.3, 0.2]] * 14
+    outs = q.simulate_outcomes(probs, 2000, seed=1)
+    assert outs.shape == (2000, 14) and set(np.unique(outs)) <= {0, 1, 2}
+    w = q.winners_by_outcome(probs, outs, 1000)
+    assert w.shape == (2000, 15) and np.allclose(w.sum(1), 1000)
+    pr = q.prize_matrix(w, 1e6)
+    assert (pr[:, :10] == 0).all() and (pr[:, 14] >= 0).all()
+
+
+def test_eurelo_run_and_lookup():
+    from laliga import eurelo
+    m = pd.DataFrame({"date": pd.date_range("2025-08-01", periods=6, freq="7D"),
+                      "home": ["A", "B", "A", "Napoli", "A", "Bodo/Glimt"], "away": ["B", "A", "C", "Bodo/Glimt", "Napoli", "C"],
+                      "hg": [3, 0, 2, 1, 2, 1], "ag": [0, 1, 0, 1, 0, 0], "league": ["SP1", "SP1", "SP1", "I1", "UCL", "NOR"]})
+    r = eurelo.run_elo(m, {"SP1": 1500, "I1": 1500, "NOR": 1300})
+    rt = dict(zip(r.team, r.rating))
+    assert rt["A"] > rt["B"] and set(r.league) >= {"SP1", "I1", "NOR"}
+    L = eurelo.Lookup(r.assign(team=r.team))
+    assert L.find("Nápoles")[0] == "Napoli"
+    assert L.find("Bodoglimt")[0] == "Bodo/Glimt"
+    assert L.find("Equipo Desconocido") is None
+
+
+def test_match_probs_priority():
+    la = {"Sevilla", "Osasuna"}
+    preds = {("Sevilla", "Osasuna"): {"p_home": 0.5, "p_draw": 0.3, "p_away": 0.2, "dc": {"xg_home": 1.4, "xg_away": 1.0}}}
+    r = q.match_probs("Sevilla", "Osasuna", preds, None, la, {}, market=[0.4, 0.3, 0.3])
+    assert r["source"] == "modelo LaLiga"
+    r = q.match_probs("Porto", "PSV", {}, None, la, {}, market=[0.45, 0.27, 0.28])
+    assert r["source"] == "mercado" and r["p"] == pytest.approx([0.45, 0.27, 0.28])
+    r = q.match_probs("Porto", "PSV", {}, None, la, {})
+    assert r["source"].startswith("estimación")

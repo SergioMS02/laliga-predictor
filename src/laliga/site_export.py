@@ -120,6 +120,61 @@ def project_season(settings: Settings, matches: pd.DataFrame, season: int, table
     return {"n_sims": int(nsim), "remaining": int(len(rem)), "teams": out}
 
 
+def project_scorers(settings: Settings, matches: pd.DataFrame, season: int, players: pd.DataFrame | None,
+                    n: int = N_SIMS, seed: int = 11, top: int = 12) -> dict | None:
+    """Pichichi: goles finales de cada jugador = goles actuales + goles en lo que queda.
+
+    Los goles que quedan siguen una Poisson con media = goles esperados de su equipo en sus
+    partidos restantes (Dixon-Coles) × la parte del xG del equipo que produce el jugador
+    (temporada actual, completada con la anterior si aún hay pocos partidos)."""
+    if players is None or players.empty:
+        return None
+    s = matches[matches.season == season]
+    rem = s[s.hg.isna()]
+    cur = players[players.season == season]
+    if cur.empty:
+        return None
+    teams = sorted(set(s.home) | set(s.away))
+    ref = pd.Timestamp.now().normalize() + pd.Timedelta(days=1)
+    dc = DixonColes.from_settings(settings).fit(matches, ref, teams, pipeline._new_teams(matches, season))
+    team_left = {t: 0.0 for t in teams}
+    for r in rem.itertuples():
+        lam, mu = dc.expected_goals(r.home, r.away)
+        team_left[r.home] = team_left.get(r.home, 0) + lam
+        team_left[r.away] = team_left.get(r.away, 0) + mu
+    prev = players[players.season == season - 1]
+    rows = []
+    for t, g in cur.groupby("team"):
+        txg = g.xg.sum()
+        games = max(int(g.games.max() or 0), 1)
+        w_cur = min(1.0, games / 15)  # con pocas jornadas pesa también la temporada pasada
+        pv = prev[prev.team == t]
+        pv_share = (pv.set_index("player").xg / pv.xg.sum()) if len(pv) and pv.xg.sum() > 0 else pd.Series(dtype=float)
+        for r in g.itertuples():
+            share = (r.xg / txg) if txg > 0 else 0.0
+            if r.player in pv_share.index:
+                share = w_cur * share + (1 - w_cur) * float(pv_share[r.player])
+            rows.append({"name": r.player, "team": t, "goals": int(r.goals or 0), "share": share,
+                         "left": team_left.get(t, 0.0) * share})
+    df = pd.DataFrame(rows)
+    if df.empty:
+        return None
+    df["exp"] = df.goals + df.left
+    cand = df.sort_values("exp", ascending=False).head(40).reset_index(drop=True)
+    rng = np.random.default_rng(seed)
+    sims = cand.goals.to_numpy()[None, :] + rng.poisson(cand.left.to_numpy()[None, :], size=(n, len(cand)))
+    mx = sims.max(1, keepdims=True)
+    win = (sims == mx)
+    p_top = (win / win.sum(1, keepdims=True)).mean(0)  # empates repartidos
+    cand["p"] = p_top
+    cand["p10"] = np.percentile(sims, 10, axis=0)
+    cand["p90"] = np.percentile(sims, 90, axis=0)
+    out = cand.sort_values(["p", "exp"], ascending=False).head(top)
+    return {"n_sims": int(n), "players": [
+        {"name": r.name, "team": r.team, "goals": int(r.goals), "exp": _r(r.exp, 1), "p": _r(r.p, 4),
+         "range": [int(r.p10), int(r.p90)]} for r in out.itertuples()]}
+
+
 def record_projection_history(settings: Settings, proj: dict) -> list[dict]:
     p = settings.predictions_dir / "projection_history.jsonl"
     rows = []
@@ -300,10 +355,16 @@ def export(settings: Settings, matches: pd.DataFrame, preds: list[dict] | None =
             old = {}
     if with_projection:
         out["projection"] = project_season(settings, matches, season, table)
+        try:
+            out["scorers"] = project_scorers(settings, matches, season, players)
+        except Exception as e:  # nunca debe tumbar la web
+            log.warning("Pichichi no disponible: %s", e)
+            out["scorers"] = old.get("scorers")
         hist = record_projection_history(settings, out["projection"])
         out["projection_history"] = hist[-60:]
     else:
         out["projection"] = old.get("projection")
+        out["scorers"] = old.get("scorers")
         out["projection_history"] = old.get("projection_history", [])
     if preds is None:
         lp = settings.predictions_dir / "latest.json"
