@@ -10,27 +10,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p out
-          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
-          i=0
-          while read -r u; do
-            [ -z "$u" ] && continue
-            i=$((i+1))
-            curl -sS -L -m 30 -A "$UA" -H "Accept: application/json, text/html" -o out/$i.body -w "$i %{http_code} %{content_type} $u\n" "$u" >> out/index.txt 2>>out/err.txt || echo "$i FAIL $u" >> out/index.txt
-          done <<'URLS'
-          https://www.loteriasyapuestas.es/servicios/proximosv3?game_id=LAQU&num=2
-          https://www.loteriasyapuestas.es/servicios/buscadorSorteos?game_id=LAQU&celebrados=false&fechaInicioInclusiva=20261020&fechaFinInclusiva=20261110
-          https://www.loteriasyapuestas.es/servicios/buscadorSorteos?game_id=LAQU&celebrados=true&fechaInicioInclusiva=20260901&fechaFinInclusiva=20261025
-          https://www.loteriasyapuestas.es/es/la-quiniela
-          https://www.eduardolosilla.es/quiniela
-          https://www.quinielista.es/
-          https://www.combinacionganadora.com/quiniela/
-          https://site.api.espn.com/apis/site/v2/sports/soccer/esp.2/scoreboard
-          URLS
-          for y in 0506 0607 0708 0809 0910 1011 1112 1213 1314 1415 1516 1617 1718 1819 1920 2021 2122 2223 2324 2425 2526 2627; do
-            curl -sS -m 30 -A "$UA" -o out/SP2_$y.csv https://www.football-data.co.uk/mmz4281/$y/SP2.csv || true
-            curl -sS -m 30 -A "$UA" -o out/SP1_$y.csv https://www.football-data.co.uk/mmz4281/$y/SP1.csv || true
-          done
-          curl -sS -m 30 -A "$UA" -o out/fixtures.csv https://www.football-data.co.uk/fixtures.csv || true
+          mkdir -p raw
+          python3 - <<'PY'
+          import requests, time, pathlib
+          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) laliga-predictor/0.1 (+uso personal, no comercial)"
+          out = pathlib.Path("raw")
+          urls = {f"{d}_{y:02d}{y+1:02d}.csv": f"https://www.football-data.co.uk/mmz4281/{y:02d}{y+1:02d}/{d}.csv" for d in ("SP1","SP2") for y in range(5, 27)}
+          urls["fixtures.csv"] = "https://www.football-data.co.uk/fixtures.csv"
+          for k in range(0, 9):
+              d = f"2026-{10 + (k // 5)}-{1 + (k % 5) * 7:02d}"
+          for n, u in urls.items():
+              try:
+                  r = s.get(u, timeout=30); print(n, r.status_code, len(r.content)); (out / n).write_bytes(r.content)
+              except Exception as e: print(n, e)
+          for d in ["2026-10-21", "2026-10-28", "2026-10-18", "2026-10-11", "2026-10-04"]:
+              r = s.get(f"https://www.combinacionganadora.com/quiniela/resultados/{d}/", timeout=30, headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36"})
+              print(d, r.status_code, len(r.content)); (out / f"cg_{d}.html").write_bytes(r.content)
+          PY
           git config user.name probe; git config user.email probe@example.com
-          git add out; git commit -qm probe-out; git push
+          git add raw; git commit -qm probe-out2; git push
