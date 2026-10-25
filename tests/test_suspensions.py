@@ -49,3 +49,10 @@ def test_served_in_scheduled_match():
                       "away": ["X", "Real Madrid", "Alaves"], "hg": [1, None, None], "ag": [0, None, None]})
     assert sp.suspended_by_cards(cards, m, "Barcelona", pd.Timestamp("2026-10-25 20:00"))
     assert sp.suspended_by_cards(cards, m, "Barcelona", pd.Timestamp("2026-11-01 16:00")) == []
+
+
+def test_same_surname_other_team():
+    items = [_it("Facundo Bernal, sancionado con dos partidos tras su roja ante el Barça", team="Barcelona")]
+    assert sp.parse_sanctions(items, ["Marc Bernal", "Pedri"]) == []
+    items = [_it("Marc Bernal, sancionado con un partido", team="Barcelona")]
+    assert sp.parse_sanctions(items, ["Marc Bernal", "Pedri"])[0]["player"] == "Marc Bernal"

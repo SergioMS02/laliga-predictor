@@ -128,6 +128,23 @@ def news_url(team: str, days: int = 30) -> str:
     return f"https://news.google.com/rss/search?q={quote_plus(q)}&hl=es&gl=ES&ceid=ES:es"
 
 
+_LOWER_OK = {"el", "la", "los", "las", "de", "del", "y", "a", "e", "o", "que", "con", "para", "por", "sin", "tras"}
+
+
+def _other_person(text: str, player: str) -> bool:
+    """True si el apellido aparece precedido de otro nombre propio (p. ej. "Facundo Bernal" no es
+    "Marc Bernal"): evita atribuir a un jugador la sanción de un rival con el mismo apellido."""
+    toks = player.split()
+    if len(toks) < 2:
+        return False
+    first, last = plain(toks[0]), plain(toks[-1])
+    hits = list(re.finditer(r"([A-ZÁÉÍÓÚÑÜ][\wáéíóúñü]+)\s+" + re.escape(toks[-1]), text))
+    if not hits:
+        return False
+    return all(plain(h.group(1)) not in (first, *[plain(x) for x in toks[:-1]]) and plain(h.group(1)) not in _LOWER_OK
+               for h in hits)
+
+
 def parse_sanctions(items, squad: list[str]) -> list[dict]:
     """[{player, games, date}] de los titulares que hablan de sanciones de jugadores de la plantilla."""
     sq = {p: plain(p) for p in squad}
@@ -139,7 +156,8 @@ def parse_sanctions(items, squad: list[str]) -> list[dict]:
         if not _ANY_SANCTION.search(text):
             continue
         t = plain(text)
-        who = [p for p, ks in keys.items() if ks and any(re.search(rf"\b{k}\b", t) for k in ks[-1:] + ks[:1])]
+        who = [p for p, ks in keys.items() if ks and any(re.search(rf"\b{k}\b", t) for k in ks[-1:] + ks[:1])
+               and not _other_person(text, p)]
         if len(who) != 1:  # ambiguo o ninguno: mejor no adivinar
             continue
         games = None
