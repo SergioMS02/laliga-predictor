@@ -214,6 +214,13 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                 log.warning("Plantilla no disponible para %s: %s", team, e)
                 rost[side] = []
         info["roster"] = rost
+        for side in ("home", "away"):  # portero suplente: el disponible con más minutos según la plantilla
+            for pl in (squads.get(side) or {}).get("xi", []):
+                if pl.get("name") == "Portero suplente":
+                    gks = [x for x in rost.get(side, []) if x["role"] == "G" and x["status"] in ("disponible", "suplente")
+                           and x["name"] != pl.get("replaces")]
+                    if gks:
+                        pl["name"] = max(gks, key=lambda x: ((x.get("minutes") or 0), x.get("imp") or 0))["name"]
         info["squads"] = squads
         lam0, mu0 = dc.expected_goals(r.home, r.away)
         lam, mu = av.adjust_goals(lam0, mu0, info["d_home"], info["d_away"], a_coef, b_coef)
