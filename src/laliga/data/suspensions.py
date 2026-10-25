@@ -90,8 +90,10 @@ def suspended_by_cards(cards: pd.DataFrame, matches: pd.DataFrame, team: str, be
     if cards is None or cards.empty:
         return []
     c = cards[(cards.team == team) & (cards.date < before)].sort_values("date")
-    played = matches[((matches.home == team) | (matches.away == team)) & matches.hg.notna() & (matches.date < before)]
-    played_dates = sorted(pd.to_datetime(played.date).dt.normalize())
+    # partidos de liga del equipo antes de este (jugados o ya programados): en ellos se cumple la sanción
+    mine = matches[((matches.home == team) | (matches.away == team)) &
+                   (pd.to_datetime(matches.date).dt.normalize() < pd.Timestamp(before).normalize())]
+    played_dates = sorted(pd.to_datetime(mine.date).dt.normalize())
     out = []
     for player, g in c.groupby("player"):
         triggers = []
@@ -165,12 +167,15 @@ def suspended_by_news(settings: Settings, team: str, squad: list[str], matches: 
         log.warning("Noticias de sanciones no disponibles para %s: %s", team, e)
         return []
     found = parse_sanctions(items, squad)
-    played = matches[((matches.home == team) | (matches.away == team)) & matches.hg.notna()]
+    mine = matches[(matches.home == team) | (matches.away == team)]
+    mine_dates = pd.to_datetime(mine.date).dt.normalize()
     best: dict[str, dict] = {}
     for f in found:
         if f["date"] is None:
             continue
-        n_played = int((pd.to_datetime(played.date) > pd.Timestamp(f["date"]).normalize()).sum())
+        # partidos entre la noticia y este (jugados o programados antes): en ellos se va cumpliendo
+        n_played = int(((mine_dates > pd.Timestamp(f["date"]).normalize()) &
+                        (mine_dates < pd.Timestamp(before).normalize())).sum())
         if f["games"]:
             left = f["games"] - n_played
         else:  # "sancionado" sin número: un partido, solo si es reciente

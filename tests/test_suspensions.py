@@ -41,3 +41,11 @@ def test_cards():
     # ya cumplida si el equipo jugó después
     m2 = pd.concat([m, pd.DataFrame({"date": [pd.Timestamp("2026-10-22")], "home": "Real Madrid", "away": "Y", "hg": 0, "ag": 0})])
     assert sp.suspended_by_cards(cards, m2, "Real Madrid", pd.Timestamp("2026-10-25")) == []
+
+
+def test_served_in_scheduled_match():
+    cards = pd.DataFrame({"date": pd.to_datetime(["2026-10-18"]), "team": "Barcelona", "player": ["B"], "card": ["red"]})
+    m = pd.DataFrame({"date": pd.to_datetime(["2026-10-18", "2026-10-25", "2026-11-01"]), "home": "Barcelona",
+                      "away": ["X", "Real Madrid", "Alaves"], "hg": [1, None, None], "ag": [0, None, None]})
+    assert sp.suspended_by_cards(cards, m, "Barcelona", pd.Timestamp("2026-10-25 20:00"))
+    assert sp.suspended_by_cards(cards, m, "Barcelona", pd.Timestamp("2026-11-01 16:00")) == []
