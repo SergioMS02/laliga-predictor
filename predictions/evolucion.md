@@ -1,29 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-25 20:06 UTC. Umbral de cambio importante: 4 puntos.
-
-## Barcelona – Real Madrid (2026-10-25)
-
-1 ▆▆▆▆▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂▂▂▂▂ · 2 ▂▂▂▂▂▂▂▂▂▂▂
-
-| Momento (Madrid) | 1 | X | 2 | Alineación |
-|---|---|---|---|---|
-| 25/10 15:08 | 63% | 19% | 18% |  |
-| 25/10 17:15 | 64% | 18% | 18% |  |
-| 25/10 18:46 | 65% | 18% | 17% |  |
-| 25/10 18:53 | 63% | 20% | 18% |  |
-| 25/10 18:56 | 63% | 20% | 18% |  |
-| 25/10 19:01 | 65% | 18% | 17% |  |
-| 25/10 19:19 | 69% | 17% | 14% |  |
-| 25/10 19:39 | 69% | 17% | 15% |  |
-| 25/10 19:46 | 69% | 17% | 15% |  |
-| 25/10 20:07 | 70% | 16% | 13% | ✅ |
-| 25/10 21:05 | 64% | 18% | 18% | ✅ |
-
-**Cambios importantes**
-
-- 25/10 21:05 — Barcelona – Real Madrid: gana Barcelona 70% → 64%
-  - -6.3 pts · Modelo: modelo reentrenado o recalibrado
+Actualizado: 2026-10-25 20:24 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Sevilla – Osasuna (2026-10-26)
 
