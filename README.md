@@ -1,5 +1,7 @@
 # LaLiga Predictor
 
+**Web en directo: [sergioms02.github.io/laliga-predictor](https://sergioms02.github.io/laliga-predictor/)** — partidos, quiniela oficial, apuestas simuladas, clasificación proyectada, equipos y aciertos. Se actualiza sola.
+
 Predicciones probabilísticas (1X2, goles esperados, marcador, +2.5, ambos marcan) para cada partido de LaLiga, actualizadas con toda la información disponible hasta el pitido inicial: resultados, tiros y xG de las últimas temporadas, cuotas de mercado y su movimiento, árbitro, estadio y desplazamiento, descanso real (incluidos partidos de Champions, Europa League, Conference y Copa), lo que se juega cada equipo en la clasificación, historial directo, sanciones probables, horario, parones internacionales, derbis, cambios de entrenador, clima previsto, bajas detectadas en noticias y, cuando se publica, la alineación oficial (separando el impacto en ataque y en defensa).
 
 Coste: 0 €. Todo funciona sin claves; las claves gratuitas (Telegram, Gemini) solo activan extras.
@@ -114,7 +116,7 @@ La apuesta se actualiza con la última cuota hasta que empieza el partido, se co
 
 Todo queda en `predictions/bets.csv` (historial completo), `predictions/bets_summary.json` (balance) y `predictions/betting_backtest.json` (lo que habría pasado en temporadas pasadas). Se configura en `config.yaml → betting`. Resultados en temporadas de prueba (2021-2026): favorito −1,2 % (1.989 apuestas), valor −6,6 % (387), Kelly −10,8 % (369), goles con muy pocas apuestas, porque en goles el modelo apenas añade nada al mercado. **No es un consejo de apuesta**: las casas aciertan algo más que el modelo y cobran margen, así que lo esperable es perder a la larga.
 
-Para activarla (una vez): *Settings → Pages → Build and deployment → Source:* **GitHub Actions**. Después, *Actions → Web → Run workflow*. Quedará en `https://<tu-usuario>.github.io/laliga-predictor/`.
+Para activarla (una vez): *Settings → Pages → Build and deployment → Source:* **GitHub Actions**. Después, *Actions → Web → Run workflow*. Quedará en `https://<tu-usuario>.github.io/laliga-predictor/` (la de este repositorio: https://sergioms02.github.io/laliga-predictor/).
 
 Para verla en local: `python site/build.py && python -m http.server -d site` y abre `http://localhost:8000`.
 
