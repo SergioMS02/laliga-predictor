@@ -143,8 +143,12 @@ def player_card_probs(cards: pd.DataFrame | None, lineups: pd.DataFrame | None, 
         a = apps.get(key, 0) if key else 0
         a = max(a, min(y, n_games))
         rate = (y + 4 * base) / (a + 4)  # encogido con 4 partidos de la media
-        lam = rate * (team_yellow_exp / max(team_yellow_avg, 1e-6))
-        out.append({"name": name, "p": round(1 - math.exp(-lam), 3), "yellows": y})
+        out.append({"name": name, "rate": rate, "yellows": y})
+    # las amarillas del once suman las esperadas del equipo (el 90 %: el resto, suplentes y banquillo)
+    tot = sum(o["rate"] for o in out) or 1.0
+    k = 0.9 * team_yellow_exp / tot
+    for o in out:
+        o["p"] = round(1 - math.exp(-o.pop("rate") * k), 3)
     out.sort(key=lambda d: -d["p"])
     return out[:top]
 
