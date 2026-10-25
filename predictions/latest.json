@@ -1,35 +1,35 @@
 [
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-10-25",
   "kickoff_utc": "2026-10-25T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Real Madrid",
-  "p_home": 0.6281,
-  "p_draw": 0.1953,
-  "p_away": 0.1766,
+  "p_home": 0.6545,
+  "p_draw": 0.1781,
+  "p_away": 0.1674,
   "model": "stacker_mercado",
   "dc": {
-   "p_home": 0.5701,
-   "p_draw": 0.2149,
-   "p_away": 0.215,
-   "xg_home": 2.1449,
-   "xg_away": 1.2657,
-   "p_over25": 0.6623,
-   "p_btts": 0.6387,
+   "p_home": 0.6592,
+   "p_draw": 0.1813,
+   "p_away": 0.1595,
+   "xg_home": 2.5534,
+   "xg_away": 1.2163,
+   "p_over25": 0.7262,
+   "p_btts": 0.6527,
    "top_scores": [
     [
      "2-1",
-     0.09614350038371346
+     0.09143644039694164
+    ],
+    [
+     "3-1",
+     0.07782486191672468
     ],
     [
      "1-1",
-     0.09442461034506658
-    ],
-    [
-     "2-0",
-     0.07596320735568592
+     0.07543572356952802
     ]
    ]
   },
@@ -52,11 +52,11 @@
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
-   0.291,
+   0.0,
    0.171
   ],
   "deficit_defence": [
-   0.114,
+   0.0,
    0.304
   ],
   "context": {
@@ -74,20 +74,7 @@
    "post_break": 0.0
   },
   "absences": {
-   "Barcelona": [
-    {
-     "player": "Marc Bernal",
-     "status": "out",
-     "reason": "suspension",
-     "source": "sancionado (le quedan 4 partidos): Bernal, del Betis, es sancionado con cuatro partidos por su expulsión ante el Barcelona - "
-    },
-    {
-     "player": "Lamine Yamal",
-     "status": "out",
-     "reason": "suspension",
-     "source": "sancionado (le quedan 4 partidos): Facundo Bernal, sancionado con cuatro partidos por agresión a Lamine Yamal - Canal Sur"
-    }
-   ],
+   "Barcelona": [],
    "Real Madrid": [
     {
      "player": "Thibaut Courtois",
@@ -124,7 +111,7 @@
       "role": "M",
       "imp": 1.0,
       "att": 1.16,
-      "absent": "out",
+      "absent": null,
       "usual": true
      },
      {
@@ -209,18 +196,7 @@
       "usual": true
      }
     ],
-    "out": [
-     {
-      "name": "Marc Bernal",
-      "status": "out",
-      "imp": 0.33
-     },
-     {
-      "name": "Lamine Yamal",
-      "status": "out",
-      "imp": 1.0
-     }
-    ]
+    "out": []
    },
    "away": {
     "confirmed": false,
@@ -350,10 +326,10 @@
    4.5
   ],
   "ou": {
-   "p_over": 0.817,
-   "p_over_model": 0.6623,
+   "p_over": 0.8209,
+   "p_over_model": 0.7262,
    "p_over_market": 0.8047,
-   "p_btts": 0.6387
+   "p_btts": 0.6527
   },
   "odds_market": {
    "max": [
@@ -372,54 +348,54 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.464,
+     "p": 0.524,
      "xg90": 1.02
     },
     {
+     "name": "Lamine Yamal",
+     "p": 0.356,
+     "xg90": 0.66
+    },
+    {
      "name": "Anthony Gordon",
-     "p": 0.287,
+     "p": 0.332,
      "xg90": 0.55
     },
     {
      "name": "Fermín López",
-     "p": 0.212,
+     "p": 0.247,
      "xg90": 0.42
     },
     {
      "name": "Rodri",
-     "p": 0.112,
+     "p": 0.132,
      "xg90": 0.21
-    },
-    {
-     "name": "Eric García",
-     "p": 0.073,
-     "xg90": 0.12
     }
    ],
    "away": [
     {
      "name": "Kylian Mbappé",
-     "p": 0.359,
+     "p": 0.347,
      "xg90": 1.01
     },
     {
      "name": "Jude Bellingham",
-     "p": 0.127,
+     "p": 0.123,
      "xg90": 0.3
     },
     {
      "name": "Arda Güler",
-     "p": 0.112,
+     "p": 0.108,
      "xg90": 0.26
     },
     {
      "name": "Denzel Dumfries",
-     "p": 0.064,
+     "p": 0.061,
      "xg90": 0.13
     },
     {
      "name": "Dean Huijsen",
-     "p": 0.045,
+     "p": 0.044,
      "xg90": 0.09
     }
    ]
@@ -428,57 +404,57 @@
    "home": "Barcelona",
    "away": "Real Madrid",
    "date": "2026-10-25",
-   "from_ts": "2026-10-25T17:53:51.534712+00:00",
-   "to_ts": "2026-10-25T17:56:46.744205+00:00",
+   "from_ts": "2026-10-25T17:56:46.744205+00:00",
+   "to_ts": "2026-10-25T18:01:26.218166+00:00",
    "p_from": [
     0.6281,
     0.1953,
     0.1766
    ],
    "p_to": [
-    0.6281,
-    0.1953,
-    0.1766
+    0.6545,
+    0.1781,
+    0.1674
    ],
    "delta_pts": [
-    0.0,
-    0.0,
-    0.0
+    2.6,
+    -1.7,
+    -0.9
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-10-26",
   "kickoff_utc": "2026-10-26T20:00:00+00:00",
   "home": "Sevilla",
   "away": "Osasuna",
-  "p_home": 0.4877,
-  "p_draw": 0.2877,
-  "p_away": 0.2245,
+  "p_home": 0.4906,
+  "p_draw": 0.286,
+  "p_away": 0.2234,
   "model": "stacker_mercado",
   "dc": {
-   "p_home": 0.4789,
-   "p_draw": 0.2606,
-   "p_away": 0.2605,
-   "xg_home": 1.6056,
-   "xg_away": 1.1247,
-   "p_over25": 0.5138,
-   "p_btts": 0.5459,
+   "p_home": 0.4871,
+   "p_draw": 0.2585,
+   "p_away": 0.2543,
+   "xg_home": 1.6301,
+   "xg_away": 1.1156,
+   "p_over25": 0.5175,
+   "p_btts": 0.5468,
    "top_scores": [
     [
      "1-1",
-     0.1240154249516447
+     0.12297829163081822
     ],
     [
      "1-0",
-     0.09841190031252219
+     0.09843205771027712
     ],
     [
      "2-1",
-     0.09451977874604978
+     0.09516178562522105
     ]
    ]
   },
@@ -499,13 +475,13 @@
    0.2276
   ],
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "ninguna",
   "deficit": [
-   0.025,
+   0.0,
    0.0
   ],
   "deficit_defence": [
-   0.023,
+   0.0,
    0.0
   ],
   "context": {
@@ -523,14 +499,7 @@
    "post_break": 0.0
   },
   "absences": {
-   "Sevilla": [
-    {
-     "player": "Peque",
-     "status": "out",
-     "reason": "suspension",
-     "source": "sancionado (le quedan 1 partido): El codazo de Güler a Peque no sancionado colma la paciencia de las peñas sevillistas - IUS"
-    }
-   ],
+   "Sevilla": [],
    "Osasuna": []
   },
   "lineups": null,
@@ -639,13 +608,7 @@
       "usual": true
      }
     ],
-    "out": [
-     {
-      "name": "Peque",
-      "status": "out",
-      "imp": 0.33
-     }
-    ]
+    "out": []
    },
    "away": {
     "confirmed": false,
@@ -764,10 +727,10 @@
    1.73
   ],
   "ou": {
-   "p_over": 0.444,
-   "p_over_model": 0.5138,
+   "p_over": 0.4444,
+   "p_over_model": 0.5175,
    "p_over_market": 0.443,
-   "p_btts": 0.5459
+   "p_btts": 0.5468
   },
   "odds_market": {
    "max": [
@@ -786,39 +749,39 @@
    "home": [
     {
      "name": "Robbie Ure",
-     "p": 0.311,
+     "p": 0.315,
      "xg90": 0.38
     },
     {
      "name": "Youssouf Fofana",
-     "p": 0.291,
+     "p": 0.295,
      "xg90": 0.33
     },
     {
      "name": "Felix Correia",
-     "p": 0.253,
+     "p": 0.256,
      "xg90": 0.28
     },
     {
      "name": "Jon Guridi",
-     "p": 0.212,
+     "p": 0.215,
      "xg90": 0.21
     },
     {
      "name": "Miguel Sierra",
-     "p": 0.1,
+     "p": 0.101,
      "xg90": 0.1
     }
    ],
    "away": [
     {
      "name": "Ante Budimir",
-     "p": 0.345,
+     "p": 0.343,
      "xg90": 0.64
     },
     {
      "name": "Raúl García",
-     "p": 0.315,
+     "p": 0.313,
      "xg90": 0.51
     },
     {
@@ -842,28 +805,28 @@
    "home": "Sevilla",
    "away": "Osasuna",
    "date": "2026-10-26",
-   "from_ts": "2026-10-25T17:53:51.534712+00:00",
-   "to_ts": "2026-10-25T17:56:46.744205+00:00",
+   "from_ts": "2026-10-25T17:56:46.744205+00:00",
+   "to_ts": "2026-10-25T18:01:26.218166+00:00",
    "p_from": [
-    0.4906,
-    0.286,
-    0.2234
-   ],
-   "p_to": [
     0.4877,
     0.2877,
     0.2245
    ],
+   "p_to": [
+    0.4906,
+    0.286,
+    0.2234
+   ],
    "delta_pts": [
-    -0.3,
-    0.2,
-    0.1
+    0.3,
+    -0.2,
+    -0.1
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-10-30",
   "kickoff_utc": "2026-10-30T20:00:00+00:00",
@@ -1230,32 +1193,10 @@
     }
    ]
   },
-  "movement": {
-   "home": "Villarreal",
-   "away": "Espanol",
-   "date": "2026-10-30",
-   "from_ts": "2026-10-25T17:46:59.529096+00:00",
-   "to_ts": "2026-10-25T17:56:46.744205+00:00",
-   "p_from": [
-    0.6896,
-    0.2051,
-    0.1053
-   ],
-   "p_to": [
-    0.6896,
-    0.2051,
-    0.1053
-   ],
-   "delta_pts": [
-    0.0,
-    0.0,
-    0.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T13:00:00+00:00",
@@ -1612,7 +1553,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T15:15:00+00:00",
@@ -1990,32 +1931,10 @@
     }
    ]
   },
-  "movement": {
-   "home": "Vallecano",
-   "away": "Celta",
-   "date": "2026-10-31",
-   "from_ts": "2026-10-25T17:46:59.529096+00:00",
-   "to_ts": "2026-10-25T17:56:46.744205+00:00",
-   "p_from": [
-    0.4244,
-    0.3109,
-    0.2648
-   ],
-   "p_to": [
-    0.4244,
-    0.3109,
-    0.2648
-   ],
-   "delta_pts": [
-    0.0,
-    0.0,
-    0.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T17:30:00+00:00",
@@ -2382,61 +2301,39 @@
     }
    ]
   },
-  "movement": {
-   "home": "Betis",
-   "away": "Malaga",
-   "date": "2026-10-31",
-   "from_ts": "2026-10-25T17:46:59.529096+00:00",
-   "to_ts": "2026-10-25T17:56:46.744205+00:00",
-   "p_from": [
-    0.7356,
-    0.1612,
-    0.1031
-   ],
-   "p_to": [
-    0.7356,
-    0.1612,
-    0.1031
-   ],
-   "delta_pts": [
-    0.0,
-    0.0,
-    0.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Alaves",
-  "p_home": 0.8417,
-  "p_draw": 0.1197,
-  "p_away": 0.0386,
+  "p_home": 0.8843,
+  "p_draw": 0.0866,
+  "p_away": 0.0292,
   "model": "stacker",
   "dc": {
-   "p_home": 0.7492,
-   "p_draw": 0.1584,
-   "p_away": 0.0923,
-   "xg_home": 2.587,
-   "xg_away": 0.8219,
-   "p_over25": 0.662,
-   "p_btts": 0.522,
+   "p_home": 0.8211,
+   "p_draw": 0.1177,
+   "p_away": 0.0612,
+   "xg_home": 3.0797,
+   "xg_away": 0.7899,
+   "p_over25": 0.7421,
+   "p_btts": 0.5237,
    "top_scores": [
     [
-     "2-0",
-     0.11069092363439317
-    ],
-    [
      "3-0",
-     0.09545270698690682
+     0.10162200067744855
     ],
     [
-     "2-1",
-     0.09098192366317417
+     "2-0",
+     0.09899288494350622
+    ],
+    [
+     "3-1",
+     0.08027083275828899
     ]
    ]
   },
@@ -2453,13 +2350,13 @@
   },
   "market": null,
   "lineup_confirmed": false,
-  "availability_source": "noticias",
+  "availability_source": "ninguna",
   "deficit": [
-   0.291,
+   0.0,
    0.0
   ],
   "deficit_defence": [
-   0.114,
+   0.0,
    0.0
   ],
   "context": {
@@ -2477,20 +2374,7 @@
    "post_break": 0.0
   },
   "absences": {
-   "Barcelona": [
-    {
-     "player": "Marc Bernal",
-     "status": "out",
-     "reason": "suspension",
-     "source": "sancionado (le quedan 3 partidos): Bernal, del Betis, es sancionado con cuatro partidos por su expulsión ante el Barcelona - "
-    },
-    {
-     "player": "Lamine Yamal",
-     "status": "out",
-     "reason": "suspension",
-     "source": "sancionado (le quedan 3 partidos): Facundo Bernal, sancionado con cuatro partidos por agresión a Lamine Yamal - Canal Sur"
-    }
-   ],
+   "Barcelona": [],
    "Alaves": []
   },
   "lineups": null,
@@ -2514,7 +2398,7 @@
       "role": "M",
       "imp": 1.0,
       "att": 1.16,
-      "absent": "out",
+      "absent": null,
       "usual": true
      },
      {
@@ -2599,18 +2483,7 @@
       "usual": true
      }
     ],
-    "out": [
-     {
-      "name": "Marc Bernal",
-      "status": "out",
-      "imp": 0.33
-     },
-     {
-      "name": "Lamine Yamal",
-      "status": "out",
-      "imp": 1.0
-     }
-    ]
+    "out": []
    },
    "away": {
     "confirmed": false,
@@ -2722,10 +2595,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.662,
-   "p_over_model": 0.662,
+   "p_over": 0.7421,
+   "p_over_model": 0.7421,
    "p_over_market": null,
-   "p_btts": 0.522
+   "p_btts": 0.5237
   },
   "odds_market": null,
   "espn_id": "401882822",
@@ -2733,54 +2606,54 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.528,
+     "p": 0.591,
      "xg90": 1.02
     },
     {
+     "name": "Lamine Yamal",
+     "p": 0.411,
+     "xg90": 0.66
+    },
+    {
      "name": "Anthony Gordon",
-     "p": 0.335,
+     "p": 0.385,
      "xg90": 0.55
     },
     {
      "name": "Fermín López",
-     "p": 0.25,
+     "p": 0.29,
      "xg90": 0.42
     },
     {
      "name": "Rodri",
-     "p": 0.133,
+     "p": 0.157,
      "xg90": 0.21
-    },
-    {
-     "name": "Eric García",
-     "p": 0.087,
-     "xg90": 0.12
     }
    ],
    "away": [
     {
      "name": "Toni Martínez",
-     "p": 0.202,
+     "p": 0.195,
      "xg90": 0.42
     },
     {
      "name": "Lucas Boyé",
-     "p": 0.193,
+     "p": 0.186,
      "xg90": 0.46
     },
     {
      "name": "Pablo Ibáñez",
-     "p": 0.069,
+     "p": 0.066,
      "xg90": 0.15
     },
     {
      "name": "Ángel Pérez",
-     "p": 0.067,
+     "p": 0.064,
      "xg90": 0.13
     },
     {
      "name": "Ville Koski",
-     "p": 0.05,
+     "p": 0.048,
      "xg90": 0.1
     }
    ]
@@ -2789,28 +2662,41 @@
    "home": "Barcelona",
    "away": "Alaves",
    "date": "2026-10-31",
-   "from_ts": "2026-10-25T17:53:51.534712+00:00",
-   "to_ts": "2026-10-25T17:56:46.744205+00:00",
+   "from_ts": "2026-10-25T17:56:46.744205+00:00",
+   "to_ts": "2026-10-25T18:01:26.218166+00:00",
    "p_from": [
     0.8417,
     0.1197,
     0.0386
    ],
    "p_to": [
-    0.8417,
-    0.1197,
-    0.0386
+    0.8843,
+    0.0866,
+    0.0292
    ],
    "delta_pts": [
-    0.0,
-    0.0,
-    0.0
+    4.3,
+    -3.3,
+    -0.9
    ],
-   "important": false
+   "important": true,
+   "focus": "X",
+   "reasons": [
+    {
+     "factor": "Bajas y alineaciones",
+     "key": "bajas",
+     "effect_pts": [
+      4.3,
+      -3.3,
+      -0.9
+     ],
+     "detail": "Barcelona: recupera: Marc Bernal, Lamine Yamal; déficit ataque 29%→0%, defensa 11%→0%"
+    }
+   ]
   }
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T13:00:00+00:00",
@@ -3188,32 +3074,10 @@
     }
    ]
   },
-  "movement": {
-   "home": "Getafe",
-   "away": "Sevilla",
-   "date": "2026-11-01",
-   "from_ts": "2026-10-25T17:46:59.529096+00:00",
-   "to_ts": "2026-10-25T17:56:46.744205+00:00",
-   "p_from": [
-    0.3498,
-    0.3271,
-    0.323
-   ],
-   "p_to": [
-    0.3498,
-    0.3271,
-    0.323
-   ],
-   "delta_pts": [
-    0.0,
-    0.0,
-    0.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T15:15:00+00:00",
@@ -3604,61 +3468,39 @@
     }
    ]
   },
-  "movement": {
-   "home": "Santander",
-   "away": "Real Madrid",
-   "date": "2026-11-01",
-   "from_ts": "2026-10-25T17:46:59.529096+00:00",
-   "to_ts": "2026-10-25T17:56:46.744205+00:00",
-   "p_from": [
-    0.1148,
-    0.1677,
-    0.7175
-   ],
-   "p_to": [
-    0.1148,
-    0.1677,
-    0.7175
-   ],
-   "delta_pts": [
-    0.0,
-    0.0,
-    0.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T17:30:00+00:00",
   "home": "Elche",
   "away": "Valencia",
-  "p_home": 0.5116,
-  "p_draw": 0.2589,
-  "p_away": 0.2295,
+  "p_home": 0.5189,
+  "p_draw": 0.256,
+  "p_away": 0.2251,
   "model": "stacker",
   "dc": {
-   "p_home": 0.5108,
-   "p_draw": 0.2634,
-   "p_away": 0.2258,
-   "xg_home": 1.5944,
-   "xg_away": 0.9789,
-   "p_over25": 0.4749,
-   "p_btts": 0.5039,
+   "p_home": 0.5203,
+   "p_draw": 0.261,
+   "p_away": 0.2187,
+   "xg_home": 1.6173,
+   "xg_away": 0.964,
+   "p_over25": 0.4769,
+   "p_btts": 0.5022,
    "top_scores": [
     [
      "1-1",
-     0.1254051505923939
+     0.12427355650800999
     ],
     [
      "1-0",
-     0.11527681793971295
+     0.11610655128602161
     ],
     [
      "2-0",
-     0.09695639124770261
+     0.09897131657242979
     ]
    ]
   },
@@ -3677,11 +3519,11 @@
   "lineup_confirmed": false,
   "availability_source": "noticias",
   "deficit": [
-   0.024,
+   0.0,
    0.12
   ],
   "deficit_defence": [
-   0.044,
+   0.0,
    0.023
   ],
   "context": {
@@ -3699,14 +3541,7 @@
    "post_break": 0.0
   },
   "absences": {
-   "Elche": [
-    {
-     "player": "Facundo Buonanotte",
-     "status": "out",
-     "reason": "suspension",
-     "source": "sancionado (le quedan 3 partidos): Cuatro partidos de sanción a Facundo Bernal por su agresión y cabezazo a Lamine Yamal - Eu"
-    }
-   ],
+   "Elche": [],
    "Valencia": [
     {
      "player": "David Otorbi",
@@ -3828,13 +3663,7 @@
       "usual": true
      }
     ],
-    "out": [
-     {
-      "name": "Facundo Buonanotte",
-      "status": "out",
-      "imp": 0.3
-     }
-    ]
+    "out": []
    },
    "away": {
     "confirmed": false,
@@ -3957,10 +3786,10 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.4749,
-   "p_over_model": 0.4749,
+   "p_over": 0.4769,
+   "p_over_model": 0.4769,
    "p_over_market": null,
-   "p_btts": 0.5039
+   "p_btts": 0.5022
   },
   "odds_market": null,
   "espn_id": "401882823",
@@ -3968,22 +3797,22 @@
    "home": [
     {
      "name": "Federico Redondo",
-     "p": 0.145,
+     "p": 0.147,
      "xg90": 0.14
     },
     {
      "name": "Roy Revivo",
-     "p": 0.088,
+     "p": 0.09,
      "xg90": 0.08
     },
     {
      "name": "Germán Valera",
-     "p": 0.077,
+     "p": 0.078,
      "xg90": 0.08
     },
     {
      "name": "Gonzalo Villar",
-     "p": 0.041,
+     "p": 0.042,
      "xg90": 0.04
     },
     {
@@ -3995,22 +3824,22 @@
    "away": [
     {
      "name": "Hugo Duro",
-     "p": 0.237,
+     "p": 0.234,
      "xg90": 0.39
     },
     {
      "name": "Arnaut Danjuma",
-     "p": 0.132,
+     "p": 0.13,
      "xg90": 0.23
     },
     {
      "name": "Javier Guerra",
-     "p": 0.076,
+     "p": 0.075,
      "xg90": 0.13
     },
     {
      "name": "Pepelu",
-     "p": 0.069,
+     "p": 0.068,
      "xg90": 0.11
     },
     {
@@ -4024,28 +3853,28 @@
    "home": "Elche",
    "away": "Valencia",
    "date": "2026-11-01",
-   "from_ts": "2026-10-25T17:46:59.529096+00:00",
-   "to_ts": "2026-10-25T17:56:46.744205+00:00",
+   "from_ts": "2026-10-25T17:56:46.744205+00:00",
+   "to_ts": "2026-10-25T18:01:26.218166+00:00",
    "p_from": [
     0.5116,
     0.2589,
     0.2295
    ],
    "p_to": [
-    0.5116,
-    0.2589,
-    0.2295
+    0.5189,
+    0.256,
+    0.2251
    ],
    "delta_pts": [
-    0.0,
-    0.0,
-    0.0
+    0.7,
+    -0.3,
+    -0.4
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-25T17:56:46.744205+00:00",
+  "generated_at": "2026-10-25T18:01:26.218166+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T20:00:00+00:00",
