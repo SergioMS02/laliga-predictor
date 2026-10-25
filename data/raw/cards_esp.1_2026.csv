@@ -1,0 +1,476 @@
+date,team,player,card
+2026-08-15 00:00:00,Getafe,Davinchi,yellow
+2026-08-15 00:00:00,Getafe,Mario Martín,yellow
+2026-08-15 00:00:00,Getafe,Kiko Femenía,red
+2026-08-15 00:00:00,Getafe,,yellow
+2026-08-15 00:00:00,Alaves,Denis Suárez,yellow
+2026-08-15 00:00:00,Alaves,Abde Rebbach,yellow
+2026-08-15 00:00:00,Getafe,Djené,yellow
+2026-08-15 00:00:00,Alaves,Antonio Blanco,yellow
+2026-08-15 00:00:00,Alaves,Mariano Díaz,yellow
+2026-08-15 00:00:00,Sevilla,Isaac Romero,yellow
+2026-08-15 00:00:00,Sevilla,Jon Guridi,yellow
+2026-08-15 00:00:00,Vallecano,Álvaro García,yellow
+2026-08-15 00:00:00,Vallecano,Unai López,yellow
+2026-08-15 00:00:00,Vallecano,Fran Pérez,yellow
+2026-08-15 00:00:00,Sevilla,Gabriel Suazo,yellow
+2026-08-15 00:00:00,Sevilla,Enrique Salas,red
+2026-08-15 00:00:00,Sevilla,Lucien Agoumé,yellow
+2026-08-15 00:00:00,Vallecano,Alexandre Alemão,yellow
+2026-08-16 00:00:00,Santander,Gustavo Puerta,yellow
+2026-08-16 00:00:00,Villarreal,Juan Foyth,yellow
+2026-08-16 00:00:00,Santander,,yellow
+2026-08-16 00:00:00,Villarreal,Pape Gueye,yellow
+2026-08-16 00:00:00,Santander,Pablo Ramon,yellow
+2026-08-16 00:00:00,Villarreal,Santiago Mouriño,yellow
+2026-08-16 00:00:00,Villarreal,Carlos Romero,yellow
+2026-08-16 00:00:00,Espanol,Urko Gonzalez,yellow
+2026-08-16 00:00:00,Espanol,Cala,yellow
+2026-08-16 00:00:00,Espanol,Javi Hernandez,yellow
+2026-08-17 00:00:00,La Coruna,Ximo Navarro,yellow
+2026-08-17 00:00:00,La Coruna,Lorenzo Amatucci,yellow
+2026-08-17 00:00:00,Elche,Gonzalo Villar,yellow
+2026-08-17 00:00:00,Elche,Umaru,yellow
+2026-08-19 00:00:00,Ath Madrid,Dávid Hancko,yellow
+2026-08-19 00:00:00,Ath Madrid,Jorge Domínguez,yellow
+2026-08-19 00:00:00,Malaga,Carlos Puga,yellow
+2026-08-19 00:00:00,Malaga,Juan Cruz,yellow
+2026-08-19 00:00:00,Malaga,Ramón Enríquez,yellow
+2026-08-20 00:00:00,Alaves,Nahuel Tenaglia,yellow
+2026-08-20 00:00:00,Vallecano,Sergio Camello,yellow
+2026-08-20 00:00:00,Alaves,Nicolás Valentini,yellow
+2026-08-21 00:00:00,Sociedad,Sergio Gómez,yellow
+2026-08-21 00:00:00,Sociedad,Jon Aramburu,yellow
+2026-08-21 00:00:00,Sociedad,Igor Zubeldia,yellow
+2026-08-21 00:00:00,Betis,Natan,yellow
+2026-08-21 00:00:00,Betis,Fran García,yellow
+2026-08-21 00:00:00,Betis,Héctor Bellerín,yellow
+2026-08-22 00:00:00,Ath Bilbao,Yuri Berchiche,red
+2026-08-22 00:00:00,Sevilla,Peque,yellow
+2026-08-22 00:00:00,Ath Bilbao,Gorka Guruzeta,yellow
+2026-08-22 00:00:00,Sevilla,Miguel Sierra,yellow
+2026-08-22 00:00:00,Sevilla,Jon Guridi,yellow
+2026-08-22 00:00:00,Ath Bilbao,Iñigo Ruiz de Galarreta,yellow
+2026-08-22 00:00:00,Sevilla,Isaac Romero,yellow
+2026-08-22 00:00:00,Sevilla,Nico Guillén,yellow
+2026-08-22 00:00:00,Valencia,Justin de Haas,yellow
+2026-08-22 00:00:00,Valencia,Stole Dimitrievski,yellow
+2026-08-22 00:00:00,Celta,Sergio Carreira,yellow
+2026-08-22 00:00:00,Celta,Javi Rueda,yellow
+2026-08-22 00:00:00,Celta,Andrei Radu,yellow
+2026-08-22 00:00:00,Espanol,Cala,yellow
+2026-08-22 00:00:00,Real Madrid,Vinícius Júnior,yellow
+2026-08-22 00:00:00,Espanol,Clemens Riedel,yellow
+2026-08-22 00:00:00,Espanol,Edu Expósito,yellow
+2026-08-22 00:00:00,Espanol,Pere Milla,yellow
+2026-08-22 00:00:00,Espanol,Pol Lozano,yellow
+2026-08-23 00:00:00,Villarreal,Santiago Mouriño,yellow
+2026-08-23 00:00:00,Ath Madrid,Álex Baena,yellow
+2026-08-23 00:00:00,Ath Madrid,,yellow
+2026-08-23 00:00:00,Ath Madrid,Robin Le Normand,red
+2026-08-23 00:00:00,Ath Madrid,Morten Hjulmand,yellow
+2026-08-23 00:00:00,Ath Madrid,José María Giménez,yellow
+2026-08-23 00:00:00,Villarreal,Juan Foyth,yellow
+2026-08-23 00:00:00,Santander,Jorge Salinas,yellow
+2026-08-23 00:00:00,Getafe,Saba Sazonov,yellow
+2026-08-23 00:00:00,Santander,Alvaro Mantilla,yellow
+2026-08-23 00:00:00,Santander,Manu,yellow
+2026-08-23 00:00:00,Elche,Ali Houary,yellow
+2026-08-24 00:00:00,Levante,Iván Romero,yellow
+2026-08-24 00:00:00,Osasuna,Enrique Barja,yellow
+2026-08-24 00:00:00,Osasuna,Sergio Herrera,yellow
+2026-08-24 00:00:00,La Coruna,Mario Soriano Carreno,yellow
+2026-08-24 00:00:00,La Coruna,Giacomo Quagliata,yellow
+2026-08-24 00:00:00,Malaga,David Larrubia,yellow
+2026-08-24 00:00:00,La Coruna,Ximo Navarro,yellow
+2026-08-24 00:00:00,La Coruna,Bil Nsongo,yellow
+2026-08-25 00:00:00,Valencia,Ryunosuke Sato,yellow
+2026-08-25 00:00:00,Betis,Junior Firpo,yellow
+2026-08-25 00:00:00,Valencia,Mouctar Diakhaby,yellow
+2026-08-26 00:00:00,Real Madrid,Álvaro Carreras,yellow
+2026-08-26 00:00:00,Sociedad,Yangel Herrera,yellow
+2026-08-26 00:00:00,Sociedad,Jon Aramburu,yellow
+2026-08-26 00:00:00,Sociedad,Luken Beitia,yellow
+2026-08-26 00:00:00,Real Madrid,Ibrahima Konaté,yellow
+2026-08-26 00:00:00,Real Madrid,Eduardo Camavinga,yellow
+2026-08-27 00:00:00,Osasuna,Jon Moncayola,yellow
+2026-08-27 00:00:00,Celta,Marcos Alonso,red
+2026-08-27 00:00:00,Barcelona,Xavi Espart,yellow
+2026-08-27 00:00:00,Ath Bilbao,Gorka Guruzeta,yellow
+2026-08-27 00:00:00,Ath Bilbao,Johaneko Louis Jean,yellow
+2026-08-28 00:00:00,Santander,Facundo González,yellow
+2026-08-28 00:00:00,Santander,Alvaro Mantilla,yellow
+2026-08-28 00:00:00,Elche,Facundo Buonanotte,yellow
+2026-08-28 00:00:00,Alaves,,yellow
+2026-08-28 00:00:00,Alaves,Abde Rebbach,yellow
+2026-08-28 00:00:00,Villarreal,Nicolas Pépé,yellow
+2026-08-28 00:00:00,Alaves,Mariano Díaz,yellow
+2026-08-28 00:00:00,Alaves,Antonio Sivera,yellow
+2026-08-28 00:00:00,Villarreal,Renato Veiga,yellow
+2026-08-29 00:00:00,Betis,Pablo García,yellow
+2026-08-29 00:00:00,Levante,Jeremy Toljan,yellow
+2026-08-29 00:00:00,Sociedad,Beñat Turrientes,yellow
+2026-08-29 00:00:00,Espanol,Urko Gonzalez,yellow
+2026-08-29 00:00:00,Espanol,Marcos Fernández,yellow
+2026-08-29 00:00:00,Espanol,Roger Hinojo,yellow
+2026-08-29 00:00:00,Espanol,Rafael Bauza,yellow
+2026-08-29 00:00:00,Sociedad,Igor Zubeldia,yellow
+2026-08-29 00:00:00,Sociedad,,red
+2026-08-29 00:00:00,Ath Madrid,Marcos Llorente,yellow
+2026-08-29 00:00:00,Sevilla,Isaac Romero,yellow
+2026-08-29 00:00:00,Sevilla,Gabriel Suazo,yellow
+2026-08-29 00:00:00,Ath Madrid,Marc Pubill,yellow
+2026-08-30 00:00:00,Malaga,Chupete,yellow
+2026-08-30 00:00:00,Malaga,Ramón Enríquez,yellow
+2026-08-30 00:00:00,Valencia,Mouctar Diakhaby,yellow
+2026-08-30 00:00:00,La Coruna,Adrià Altimira,yellow
+2026-08-30 00:00:00,La Coruna,Adrià Altimira,red
+2026-08-30 00:00:00,Ath Bilbao,Yuri Berchiche,yellow
+2026-08-30 00:00:00,Ath Bilbao,Robert Navarro,yellow
+2026-08-30 00:00:00,Ath Bilbao,Beñat Gerenabarrena,yellow
+2026-08-31 00:00:00,Osasuna,Jorge Herrando,yellow
+2026-08-31 00:00:00,Getafe,Djené,yellow
+2026-08-31 00:00:00,Getafe,Johan Mojica,yellow
+2026-08-31 00:00:00,Getafe,Enes Ünal,yellow
+2026-08-31 00:00:00,Getafe,Orel Mangala,yellow
+2026-08-31 00:00:00,Osasuna,Iker Muñoz,yellow
+2026-08-31 00:00:00,Osasuna,Raúl García,yellow
+2026-08-31 00:00:00,Osasuna,Sergio Herrera,yellow
+2026-08-31 00:00:00,Osasuna,Enrique Barja,yellow
+2026-08-31 00:00:00,Vallecano,Adrià Pedrosa,yellow
+2026-09-03 00:00:00,Sociedad,Yangel Herrera,yellow
+2026-09-03 00:00:00,Celta,Yoel Lago,yellow
+2026-09-03 00:00:00,Celta,Marcos Alonso,yellow
+2026-09-03 00:00:00,Celta,Couhaib Driouech,yellow
+2026-09-03 00:00:00,Sociedad,Luka Sucic,yellow
+2026-09-04 00:00:00,Real Madrid,Arda Güler,yellow
+2026-09-04 00:00:00,Real Madrid,Ibrahima Konaté,yellow
+2026-09-04 00:00:00,Real Madrid,,yellow
+2026-09-04 00:00:00,Real Madrid,Eduardo Camavinga,yellow
+2026-09-04 00:00:00,Betis,Facundo Bernal,yellow
+2026-09-04 00:00:00,Betis,Marc Roca,yellow
+2026-09-04 00:00:00,Betis,Natan,yellow
+2026-09-04 00:00:00,Real Madrid,Vinícius Júnior,yellow
+2026-09-05 00:00:00,Ath Madrid,Lee Kang-In,yellow
+2026-09-05 00:00:00,Vallecano,Óscar Valentín,yellow
+2026-09-05 00:00:00,Santander,Yassir Zabiri,yellow
+2026-09-05 00:00:00,Santander,Iñigo Vicente,yellow
+2026-09-05 00:00:00,Vallecano,Sergio Camello,yellow
+2026-09-05 00:00:00,Vallecano,Florian Lejeune,yellow
+2026-09-05 00:00:00,Vallecano,Fran Pérez,red
+2026-09-05 00:00:00,Vallecano,Jorge de Frutos,red
+2026-09-05 00:00:00,Villarreal,Santi Comesaña,yellow
+2026-09-05 00:00:00,Villarreal,Tajon Buchanan,yellow
+2026-09-05 00:00:00,La Coruna,Lorenzo Amatucci,yellow
+2026-09-05 00:00:00,La Coruna,Yeremay Hernández,yellow
+2026-09-06 00:00:00,Barcelona,Pau Cubarsí,yellow
+2026-09-06 00:00:00,Barcelona,Rodri,yellow
+2026-09-06 00:00:00,Barcelona,Fermín López,yellow
+2026-09-06 00:00:00,Valencia,Arnau Martínez,yellow
+2026-09-06 00:00:00,Osasuna,Abel Bretones,yellow
+2026-09-06 00:00:00,Alaves,Abde Rebbach,yellow
+2026-09-06 00:00:00,Osasuna,Rockson Yeboah,yellow
+2026-09-06 00:00:00,Malaga,Daniel Lorenzo,yellow
+2026-09-06 00:00:00,Malaga,Rafa Garrido,yellow
+2026-09-06 00:00:00,Malaga,Pablo Martínez,yellow
+2026-09-06 00:00:00,Levante,Adrián de la Fuente,yellow
+2026-09-06 00:00:00,Levante,,yellow
+2026-09-06 00:00:00,Malaga,Carlos Puga,yellow
+2026-09-06 00:00:00,Levante,Aïssa Mandi,yellow
+2026-09-06 00:00:00,Sevilla,Giorgi Kochorashvili,yellow
+2026-09-06 00:00:00,Espanol,Cala,yellow
+2026-09-06 00:00:00,Sevilla,Robbie Ure,yellow
+2026-09-06 00:00:00,Sevilla,Miguel Sierra,yellow
+2026-09-06 00:00:00,Espanol,Gabriel Moscardo,yellow
+2026-09-06 00:00:00,Sevilla,Arouna Sangante,red
+2026-09-06 00:00:00,Sevilla,,yellow
+2026-09-07 00:00:00,Getafe,Johan Mojica,yellow
+2026-09-07 00:00:00,Getafe,Zaid Romero,yellow
+2026-09-07 00:00:00,Getafe,Zaid Romero,red
+2026-09-07 00:00:00,Celta,Carl Starfelt,yellow
+2026-09-07 00:00:00,Getafe,Ramón Terrats,yellow
+2026-09-07 00:00:00,Celta,Marcos Alonso,yellow
+2026-09-07 00:00:00,Sociedad,Jon Aramburu,yellow
+2026-09-07 00:00:00,Elche,José Antonio Morente,yellow
+2026-09-07 00:00:00,Elche,Abiel Osorio,yellow
+2026-09-07 00:00:00,Sociedad,Jon Martín,red
+2026-09-07 00:00:00,Elche,Germán Valera,yellow
+2026-09-07 00:00:00,Elche,Thomas Lemar,yellow
+2026-09-11 00:00:00,Valencia,Ryunosuke Sato,yellow
+2026-09-11 00:00:00,Sevilla,Chidera Ejuke,yellow
+2026-09-11 00:00:00,Valencia,Pablo Maffeo,yellow
+2026-09-12 00:00:00,Alaves,Nahuel Tenaglia,yellow
+2026-09-12 00:00:00,Alaves,Pablo Ibáñez,yellow
+2026-09-12 00:00:00,Santander,Yassir Zabiri,yellow
+2026-09-12 00:00:00,Alaves,Antonio Blanco,yellow
+2026-09-12 00:00:00,Santander,Jorge Salinas,yellow
+2026-09-12 00:00:00,Santander,André Almeida,red
+2026-09-12 00:00:00,Osasuna,Enrique Barja,yellow
+2026-09-12 00:00:00,Osasuna,Jon Moncayola,yellow
+2026-09-12 00:00:00,Espanol,Clemens Riedel,yellow
+2026-09-12 00:00:00,Espanol,Omar El Hilali,yellow
+2026-09-12 00:00:00,Espanol,Roger Hinojo,yellow
+2026-09-12 00:00:00,Elche,Federico Redondo,yellow
+2026-09-12 00:00:00,Elche,Abiel Osorio,yellow
+2026-09-12 00:00:00,Ath Bilbao,Álex Berenguer,yellow
+2026-09-12 00:00:00,Ath Bilbao,Beñat Gerenabarrena,yellow
+2026-09-12 00:00:00,Elche,Rubén Sánchez,yellow
+2026-09-12 00:00:00,Ath Bilbao,Yuri Berchiche,yellow
+2026-09-12 00:00:00,Vallecano,Pathé Ciss,yellow
+2026-09-13 00:00:00,Malaga,Einar Galilea,yellow
+2026-09-13 00:00:00,Celta,Yoel Lago,yellow
+2026-09-13 00:00:00,Barcelona,Gerard Martín,yellow
+2026-09-13 00:00:00,Levante,Hugo Sotelo,yellow
+2026-09-13 00:00:00,Getafe,Ivan Azón,yellow
+2026-09-13 00:00:00,La Coruna,Lucas Noubi,yellow
+2026-09-13 00:00:00,Getafe,Enes Ünal,yellow
+2026-09-13 00:00:00,Getafe,Mario Martín,yellow
+2026-09-13 00:00:00,Sociedad,Yangel Herrera,yellow
+2026-09-13 00:00:00,Sociedad,,yellow
+2026-09-13 00:00:00,Ath Madrid,Johnny Cardoso,yellow
+2026-09-13 00:00:00,Sociedad,Mikel Oyarzabal,yellow
+2026-09-14 00:00:00,Villarreal,Renato Veiga,yellow
+2026-09-15 00:00:00,Vallecano,Unai López,yellow
+2026-09-15 00:00:00,Espanol,Marcos Fernández,yellow
+2026-09-15 00:00:00,Vallecano,Giorgi Tsitaishvili,yellow
+2026-09-15 00:00:00,Vallecano,Pathé Ciss,yellow
+2026-09-15 00:00:00,Vallecano,Gnangoro Bouare Samake,yellow
+2026-09-15 00:00:00,Vallecano,Alexandre Alemão,yellow
+2026-09-15 00:00:00,Espanol,Omar El Hilali,red
+2026-09-15 00:00:00,Valencia,Javier Guerra,yellow
+2026-09-15 00:00:00,Alaves,Antonio Blanco,yellow
+2026-09-15 00:00:00,Valencia,Pepelu,yellow
+2026-09-15 00:00:00,Valencia,Aaron Mayol,yellow
+2026-09-15 00:00:00,Valencia,Guido Rodríguez,yellow
+2026-09-15 00:00:00,Real Madrid,Yan Diomande,yellow
+2026-09-15 00:00:00,Elche,Marc Aguado,yellow
+2026-09-15 00:00:00,Real Madrid,Ibrahima Konaté,yellow
+2026-09-15 00:00:00,Elche,Lucas Cepeda,yellow
+2026-09-15 00:00:00,Elche,Josan,yellow
+2026-09-15 00:00:00,Elche,Gonzalo Villar,yellow
+2026-09-16 00:00:00,Ath Madrid,Ademola Lookman,yellow
+2026-09-16 00:00:00,Osasuna,Rubén García,yellow
+2026-09-16 00:00:00,Osasuna,Abel Bretones,yellow
+2026-09-16 00:00:00,La Coruna,Angeliño,red
+2026-09-16 00:00:00,Sevilla,Enrique Salas,yellow
+2026-09-16 00:00:00,La Coruna,Lorenzo Amatucci,yellow
+2026-09-16 00:00:00,Sevilla,Jon Guridi,yellow
+2026-09-16 00:00:00,Sevilla,Isaac Romero,yellow
+2026-09-16 00:00:00,Sevilla,Juan Iglesias,yellow
+2026-09-16 00:00:00,Santander,Pedro Felipe,yellow
+2026-09-16 00:00:00,Barcelona,Lamine Yamal,yellow
+2026-09-16 00:00:00,Barcelona,Karim Adeyemi,yellow
+2026-09-16 00:00:00,Santander,Yassir Zabiri,yellow
+2026-09-16 00:00:00,Barcelona,João Cancelo,yellow
+2026-09-17 00:00:00,Getafe,,yellow
+2026-09-17 00:00:00,Betis,Ángel Ortiz,yellow
+2026-09-17 00:00:00,Getafe,Davinchi,yellow
+2026-09-17 00:00:00,Getafe,Mario Martín,yellow
+2026-09-17 00:00:00,Getafe,Nemanja Gudelj,yellow
+2026-09-17 00:00:00,Getafe,Sebastián Boselli,yellow
+2026-09-17 00:00:00,Getafe,Mario Martín,red
+2026-09-17 00:00:00,Malaga,José Salinas,yellow
+2026-09-17 00:00:00,Villarreal,Ilias Akhomach,yellow
+2026-09-17 00:00:00,Malaga,David Larrubia,yellow
+2026-09-17 00:00:00,Malaga,Einar Galilea,yellow
+2026-09-17 00:00:00,Malaga,Ramón Enríquez,yellow
+2026-09-17 00:00:00,Malaga,Alfonso Herrero,yellow
+2026-09-18 00:00:00,Elche,Federico Redondo,red
+2026-09-18 00:00:00,Elche,Fer Niño,yellow
+2026-09-18 00:00:00,Espanol,Edu Expósito,yellow
+2026-09-18 00:00:00,Espanol,Clemens Riedel,yellow
+2026-09-18 00:00:00,Elche,Lucas Cepeda,yellow
+2026-09-19 00:00:00,Osasuna,Asier Osambela,yellow
+2026-09-19 00:00:00,Vallecano,Pathé Ciss,yellow
+2026-09-19 00:00:00,Osasuna,Jon Moncayola,yellow
+2026-09-19 00:00:00,Osasuna,Sergio Herrera,yellow
+2026-09-19 00:00:00,Vallecano,Alexandre Alemão,yellow
+2026-09-19 00:00:00,Ath Bilbao,Iñigo Ruiz de Galarreta,yellow
+2026-09-19 00:00:00,Ath Bilbao,Jesús Areso,yellow
+2026-09-19 00:00:00,Celta,Javi Rueda,yellow
+2026-09-19 00:00:00,Santander,Yassir Zabiri,yellow
+2026-09-19 00:00:00,Santander,Jeanuël Belocian,yellow
+2026-09-19 00:00:00,Celta,Yoel Lago,yellow
+2026-09-19 00:00:00,Santander,Pablo Ramon,yellow
+2026-09-19 00:00:00,Santander,Sergio Canales,yellow
+2026-09-19 00:00:00,Santander,Iñigo Vicente,yellow
+2026-09-19 00:00:00,Sevilla,Lucien Agoumé,yellow
+2026-09-20 00:00:00,Getafe,Johan Mojica,yellow
+2026-09-20 00:00:00,Malaga,Eneko Jauregui,yellow
+2026-09-20 00:00:00,Malaga,David Larrubia,yellow
+2026-09-20 00:00:00,Getafe,Nemanja Gudelj,yellow
+2026-09-20 00:00:00,Getafe,Francho Serrano,yellow
+2026-09-20 00:00:00,Getafe,Ramón Terrats,yellow
+2026-09-20 00:00:00,Ath Madrid,,yellow
+2026-09-20 00:00:00,Ath Madrid,Marc Pubill,yellow
+2026-09-20 00:00:00,Ath Madrid,Cristian Romero,yellow
+2026-09-20 00:00:00,Real Madrid,Denzel Dumfries,yellow
+2026-09-20 00:00:00,Real Madrid,Dean Huijsen,red
+2026-09-20 00:00:00,Real Madrid,Jude Bellingham,yellow
+2026-09-20 00:00:00,La Coruna,Bright Ede,yellow
+2026-09-20 00:00:00,Betis,Valentín Gómez,yellow
+2026-09-20 00:00:00,Levante,Aïssa Mandi,yellow
+2026-09-20 00:00:00,Levante,,yellow
+2026-09-20 00:00:00,Villarreal,Tajon Buchanan,yellow
+2026-09-20 00:00:00,Valencia,Justin de Haas,yellow
+2026-09-20 00:00:00,Valencia,José Gayà,yellow
+2026-09-20 00:00:00,Sociedad,Luka Sucic,yellow
+2026-09-20 00:00:00,Sociedad,Orri Óskarsson,yellow
+2026-09-20 00:00:00,Sociedad,Orri Óskarsson,red
+2026-10-09 00:00:00,Espanol,Javi Hernandez,yellow
+2026-10-09 00:00:00,Espanol,Bryan Zaragoza,yellow
+2026-10-09 00:00:00,Malaga,Carlos Puga,yellow
+2026-10-09 00:00:00,Malaga,Chupete,yellow
+2026-10-09 00:00:00,Espanol,Omar El Hilali,yellow
+2026-10-09 00:00:00,Malaga,Carlos Dotor,yellow
+2026-10-09 00:00:00,Espanol,Clemens Riedel,yellow
+2026-10-09 00:00:00,Espanol,Roger Hinojo,yellow
+2026-10-09 00:00:00,Malaga,Adam Aznou,yellow
+2026-10-10 00:00:00,Ath Madrid,Ademola Lookman,yellow
+2026-10-10 00:00:00,Ath Madrid,Robin Le Normand,yellow
+2026-10-10 00:00:00,Alaves,Ángel Pérez,red
+2026-10-10 00:00:00,Ath Madrid,Johnny Cardoso,yellow
+2026-10-10 00:00:00,Getafe,Kiko Femenía,yellow
+2026-10-10 00:00:00,Getafe,Johan Mojica,yellow
+2026-10-10 00:00:00,Barcelona,Dani Olmo,yellow
+2026-10-10 00:00:00,Getafe,Sebastián Boselli,yellow
+2026-10-10 00:00:00,Getafe,Ramón Terrats,yellow
+2026-10-10 00:00:00,Barcelona,Fermín López,yellow
+2026-10-10 00:00:00,Villarreal,Renato Veiga,yellow
+2026-10-10 00:00:00,Real Madrid,Jude Bellingham,yellow
+2026-10-10 00:00:00,Real Madrid,,yellow
+2026-10-10 00:00:00,Real Madrid,Vinícius Júnior,red
+2026-10-10 00:00:00,Real Madrid,Ibrahima Konaté,yellow
+2026-10-10 00:00:00,Real Madrid,Antonio Rüdiger,yellow
+2026-10-10 00:00:00,Villarreal,Pau Navarro,yellow
+2026-10-10 00:00:00,Real Madrid,Aurélien Tchouaméni,yellow
+2026-10-10 00:00:00,Real Madrid,Kylian Mbappé,yellow
+2026-10-11 00:00:00,Celta,Yoel Lago,yellow
+2026-10-11 00:00:00,Celta,Javi Rueda,yellow
+2026-10-11 00:00:00,Celta,Aleix Febas,yellow
+2026-10-11 00:00:00,Elche,Marc Aguado,yellow
+2026-10-11 00:00:00,La Coruna,David Mella,yellow
+2026-10-11 00:00:00,Sociedad,Pablo Marín,red
+2026-10-11 00:00:00,La Coruna,José María Giménez,yellow
+2026-10-11 00:00:00,La Coruna,Lorenzo Amatucci,red
+2026-10-11 00:00:00,Sociedad,Yangel Herrera,yellow
+2026-10-11 00:00:00,Osasuna,Jon Moncayola,yellow
+2026-10-11 00:00:00,Osasuna,Unai Santos,yellow
+2026-10-11 00:00:00,Betis,Cucho Hernández,yellow
+2026-10-11 00:00:00,Osasuna,Lucas Torró,yellow
+2026-10-11 00:00:00,Betis,Marc Roca,yellow
+2026-10-11 00:00:00,Osasuna,Valentin Rosier,yellow
+2026-10-11 00:00:00,Osasuna,Alejandro Catena,yellow
+2026-10-11 00:00:00,Santander,Pablo Ramon,yellow
+2026-10-11 00:00:00,Valencia,Guido Rodríguez,yellow
+2026-10-11 00:00:00,Santander,Jorge Salinas,yellow
+2026-10-11 00:00:00,Valencia,Dani Raba,yellow
+2026-10-11 00:00:00,Valencia,Pablo Maffeo,yellow
+2026-10-11 00:00:00,Santander,Iván Martín,yellow
+2026-10-12 00:00:00,Levante,Adrián de la Fuente,yellow
+2026-10-12 00:00:00,Sevilla,Felix Correia,yellow
+2026-10-12 00:00:00,Sevilla,Andrés Castrín,yellow
+2026-10-12 00:00:00,Sevilla,,yellow
+2026-10-12 00:00:00,Levante,Dani Requena,yellow
+2026-10-12 00:00:00,Sevilla,Alfonso González,yellow
+2026-10-12 00:00:00,Sevilla,Isaac Romero,yellow
+2026-10-12 00:00:00,Sevilla,Juan Iglesias,yellow
+2026-10-12 00:00:00,Sevilla,Isaac Romero,red
+2026-10-16 00:00:00,Levante,Iván Romero,yellow
+2026-10-16 00:00:00,La Coruna,Luismi Cruz,yellow
+2026-10-16 00:00:00,Levante,Adrián de la Fuente,yellow
+2026-10-16 00:00:00,La Coruna,Adrià Altimira,yellow
+2026-10-17 00:00:00,Ath Madrid,Morten Hjulmand,yellow
+2026-10-17 00:00:00,Ath Madrid,Lee Kang-In,yellow
+2026-10-17 00:00:00,Ath Madrid,Cristian Romero,yellow
+2026-10-17 00:00:00,Ath Madrid,Álex Baena,yellow
+2026-10-17 00:00:00,Ath Madrid,Rodrigo Mendoza,yellow
+2026-10-17 00:00:00,Espanol,Roger Hinojo,yellow
+2026-10-17 00:00:00,Espanol,Unai Núñez,yellow
+2026-10-17 00:00:00,Elche,Gonzalo Villar,yellow
+2026-10-17 00:00:00,Elche,José Antonio Morente,yellow
+2026-10-17 00:00:00,Elche,Roy Revivo,yellow
+2026-10-17 00:00:00,Villarreal,Alex Freeman,yellow
+2026-10-17 00:00:00,Elche,Víctor Chust,yellow
+2026-10-17 00:00:00,Villarreal,Juan Foyth,yellow
+2026-10-17 00:00:00,Barcelona,Fermín López,yellow
+2026-10-17 00:00:00,Betis,Héctor Bellerín,yellow
+2026-10-17 00:00:00,Betis,,yellow
+2026-10-17 00:00:00,Betis,Facundo Bernal,yellow
+2026-10-17 00:00:00,Betis,Facundo Bernal,red
+2026-10-17 00:00:00,Barcelona,Lamine Yamal,yellow
+2026-10-17 00:00:00,Betis,Diego Llorente,yellow
+2026-10-17 00:00:00,Valencia,Dani Raba,yellow
+2026-10-17 00:00:00,Ath Bilbao,Aymeric Laporte,yellow
+2026-10-17 00:00:00,Ath Bilbao,Beñat Gerenabarrena,yellow
+2026-10-17 00:00:00,Ath Bilbao,Iñigo Ruiz de Galarreta,yellow
+2026-10-17 00:00:00,Valencia,Pepelu,yellow
+2026-10-17 00:00:00,Valencia,César Tárrega,yellow
+2026-10-18 00:00:00,Santander,Alvaro Mantilla,yellow
+2026-10-18 00:00:00,Osasuna,Valentin Rosier,yellow
+2026-10-18 00:00:00,Santander,Jorge Salinas,yellow
+2026-10-18 00:00:00,Osasuna,Ante Budimir,yellow
+2026-10-18 00:00:00,Santander,Iván Martín,yellow
+2026-10-18 00:00:00,Celta,Sebastián Cáceres,yellow
+2026-10-18 00:00:00,Alaves,Toni Martínez,yellow
+2026-10-18 00:00:00,Sociedad,Jon Martín,yellow
+2026-10-18 00:00:00,Sociedad,Mamadou Sarr,yellow
+2026-10-18 00:00:00,Sevilla,Felix Correia,yellow
+2026-10-18 00:00:00,Real Madrid,Dean Huijsen,yellow
+2026-10-18 00:00:00,Sevilla,Juan Iglesias,yellow
+2026-10-18 00:00:00,Real Madrid,Marc Cucurella,yellow
+2026-10-19 00:00:00,Getafe,Kiko Femenía,yellow
+2026-10-19 00:00:00,Getafe,Djené,yellow
+2026-10-19 00:00:00,Getafe,Djené,red
+2026-10-19 00:00:00,Vallecano,Iván Balliu,yellow
+2026-10-19 00:00:00,Getafe,Francho Serrano,yellow
+2026-10-19 00:00:00,Vallecano,Pathé Ciss,yellow
+2026-10-19 00:00:00,Getafe,Dani Carvajal,yellow
+2026-10-19 00:00:00,Getafe,Enes Ünal,yellow
+2026-10-19 00:00:00,Getafe,Nemanja Gudelj,yellow
+2026-10-19 00:00:00,Vallecano,Sergio Camello,yellow
+2026-10-21 00:00:00,Ath Bilbao,Aymeric Laporte,red
+2026-10-21 00:00:00,Levante,Etta Eyong,yellow
+2026-10-21 00:00:00,Levante,Jeremy Toljan,yellow
+2026-10-21 00:00:00,Ath Bilbao,Yuri Berchiche,yellow
+2026-10-23 00:00:00,Alaves,Lucas Boyé,yellow
+2026-10-23 00:00:00,Alaves,Nahuel Tenaglia,yellow
+2026-10-23 00:00:00,Malaga,Carlos Dotor,yellow
+2026-10-23 00:00:00,Malaga,,yellow
+2026-10-24 00:00:00,Elche,Javier Morcillo,yellow
+2026-10-24 00:00:00,Elche,Gonzalo Villar,yellow
+2026-10-24 00:00:00,Elche,Federico Redondo,yellow
+2026-10-24 00:00:00,Vallecano,Pathé Ciss,yellow
+2026-10-24 00:00:00,Vallecano,Adrià Pedrosa,yellow
+2026-10-24 00:00:00,Vallecano,Álvaro García,yellow
+2026-10-24 00:00:00,Santander,Iñigo Vicente,yellow
+2026-10-24 00:00:00,Espanol,Pol Lozano,yellow
+2026-10-24 00:00:00,Espanol,,yellow
+2026-10-24 00:00:00,Santander,Pablo Ramon,yellow
+2026-10-24 00:00:00,Espanol,Urko Gonzalez,yellow
+2026-10-24 00:00:00,Espanol,Javier Puado,yellow
+2026-10-24 00:00:00,Espanol,Edu Expósito,yellow
+2026-10-24 00:00:00,Santander,Jorge Salinas,yellow
+2026-10-24 00:00:00,Valencia,Dani Raba,yellow
+2026-10-24 00:00:00,Villarreal,Renato Veiga,yellow
+2026-10-24 00:00:00,Villarreal,Ayoze Pérez,yellow
+2026-10-24 00:00:00,Villarreal,Tajon Buchanan,yellow
+2026-10-24 00:00:00,Valencia,Pablo Maffeo,yellow
+2026-10-24 00:00:00,Valencia,Guido Rodríguez,yellow
+2026-10-24 00:00:00,Villarreal,Pape Gueye,red
+2026-10-24 00:00:00,Valencia,Harvey Elliott,yellow
+2026-10-24 00:00:00,Valencia,Harvey Elliott,red
+2026-10-24 00:00:00,Ath Madrid,Marc Pubill,yellow
+2026-10-24 00:00:00,La Coruna,Yeremay Hernández,yellow
+2026-10-24 00:00:00,La Coruna,Giacomo Quagliata,yellow
+2026-10-24 00:00:00,Ath Madrid,Alexander Sørloth,yellow
+2026-10-24 00:00:00,Ath Madrid,Álex Baena,yellow
+2026-10-24 00:00:00,Ath Madrid,Giuliano Simeone,yellow
+2026-10-25 00:00:00,Getafe,Ramón Terrats,yellow
+2026-10-25 00:00:00,Getafe,Dani Carvajal,yellow
+2026-10-25 00:00:00,Getafe,Johan Mojica,yellow
+2026-10-25 00:00:00,Ath Bilbao,Beñat Gerenabarrena,yellow
+2026-10-25 00:00:00,Getafe,Mario Martín,red
+2026-10-25 00:00:00,Celta,Ilaix Moriba,yellow
+2026-10-25 00:00:00,Betis,Diego Llorente,yellow
+2026-10-25 00:00:00,Celta,Sergio Carreira,yellow
