@@ -1,6 +1,6 @@
 [
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-10-25",
   "kickoff_utc": "2026-10-25T20:00:00+00:00",
@@ -21,15 +21,15 @@
    "top_scores": [
     [
      "2-1",
-     0.09170986937869424
+     0.0917098693786941
     ],
     [
      "3-1",
-     0.07756889843694917
+     0.07756889843694931
     ],
     [
      "1-1",
-     0.07613797527254285
+     0.07613797527254242
     ]
    ]
   },
@@ -86,7 +86,7 @@
      "player": "Vinícius Júnior",
      "status": "out",
      "reason": "suspension",
-     "source": "sancionado (le quedan 3 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
+     "source": "sancionado (le quedan 3 partidos): Oficial: cuatro partidos de sanción a Vinicius, que se pierde el clásico - ABC"
     }
    ]
   },
@@ -204,10 +204,10 @@
     "xi": [
      {
       "name": "Andriy Lunin",
-      "pos": "G",
-      "role": "G",
+      "pos": "SUB",
+      "role": "M",
       "imp": 0.0,
-      "att": 0.0,
+      "att": 0.01,
       "absent": null,
       "usual": false,
       "replaces": "Thibaut Courtois"
@@ -316,7 +316,7 @@
       "name": "Vinícius Júnior",
       "status": "out",
       "reason": "suspension",
-      "source": "sancionado (le quedan 3 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció",
+      "source": "sancionado (le quedan 3 partidos): Oficial: cuatro partidos de sanción a Vinicius, que se pierde el clásico - ABC",
       "imp": 0.78
      }
     ]
@@ -788,7 +788,7 @@
      "goals": 1,
      "minutes": 592,
      "status": "sancionado",
-     "source": "sancionado (le quedan 3 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
+     "source": "sancionado (le quedan 3 partidos): Oficial: cuatro partidos de sanción a Vinicius, que se pierde el clásico - ABC"
     },
     {
      "name": "Arda Güler",
@@ -974,10 +974,32 @@
     0.1615
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Barcelona",
+   "away": "Real Madrid",
+   "date": "2026-10-25",
+   "from_ts": "2026-10-25T18:19:14.530876+00:00",
+   "to_ts": "2026-10-25T18:39:13.230230+00:00",
+   "p_from": [
+    0.69,
+    0.1662,
+    0.1438
+   ],
+   "p_to": [
+    0.6874,
+    0.1675,
+    0.1451
+   ],
+   "delta_pts": [
+    -0.3,
+    0.1,
+    0.1
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-10-26",
   "kickoff_utc": "2026-10-26T20:00:00+00:00",
@@ -998,15 +1020,15 @@
    "top_scores": [
     [
      "1-1",
-     0.12297829163081837
+     0.12297829163081822
     ],
     [
      "1-0",
-     0.09843205771027727
+     0.09843205771027712
     ],
     [
      "2-1",
-     0.09516178562522112
+     0.09516178562522105
     ]
    ]
   },
@@ -1949,7 +1971,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-10-30",
   "kickoff_utc": "2026-10-30T20:00:00+00:00",
@@ -1970,15 +1992,15 @@
    "top_scores": [
     [
      "1-1",
-     0.11025020987061629
+     0.11025020987061639
     ],
     [
      "1-0",
-     0.10380246055229903
+     0.10380246055229925
     ],
     [
      "2-0",
-     0.10366018544319427
+     0.10366018544319415
     ]
    ]
   },
@@ -2862,7 +2884,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T13:00:00+00:00",
@@ -2883,15 +2905,15 @@
    "top_scores": [
     [
      "1-1",
-     0.11571399525209831
+     0.1157139952520985
     ],
     [
      "1-2",
-     0.094229794763512
+     0.09422979476351208
     ],
     [
      "0-1",
-     0.0800852361063072
+     0.0800852361063079
     ]
    ]
   },
@@ -3803,7 +3825,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T15:15:00+00:00",
@@ -3824,15 +3846,15 @@
    "top_scores": [
     [
      "1-1",
-     0.14046372432716092
+     0.14046372432716078
     ],
     [
      "0-1",
-     0.11387300625310597
+     0.11387300625310619
     ],
     [
      "0-0",
-     0.112601076398443
+     0.11260107639844283
     ]
    ]
   },
@@ -3923,11 +3945,11 @@
       "usual": true
      },
      {
-      "name": "Óscar Valentín",
-      "pos": "SUB",
-      "role": "M",
+      "name": "Mujaid Sadick",
+      "pos": "CD-L",
+      "role": "D",
       "imp": 0.44,
-      "att": 0.11,
+      "att": 0.01,
       "absent": null,
       "usual": false,
       "replaces": "Pathé Ciss"
@@ -4766,7 +4788,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T17:30:00+00:00",
@@ -4787,15 +4809,15 @@
    "top_scores": [
     [
      "2-0",
-     0.12813551915874782
+     0.12813551915874818
     ],
     [
      "1-0",
-     0.10490584142550471
+     0.10490584142550599
     ],
     [
      "3-0",
-     0.10033304269586822
+     0.10033304269586768
     ]
    ]
   },
@@ -5724,7 +5746,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T20:00:00+00:00",
@@ -5745,15 +5767,15 @@
    "top_scores": [
     [
      "3-0",
-     0.10162200067744868
+     0.10162200067744855
     ],
     [
      "2-0",
-     0.09899288494350679
+     0.09899288494350622
     ],
     [
      "3-1",
-     0.08027083275828896
+     0.08027083275828899
     ]
    ]
   },
@@ -6638,7 +6660,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T13:00:00+00:00",
@@ -6659,15 +6681,15 @@
    "top_scores": [
     [
      "0-0",
-     0.1508760041220574
+     0.15087600412205573
     ],
     [
      "1-1",
-     0.1423989390933073
+     0.1423989390933072
     ],
     [
      "0-1",
-     0.13376290625900886
+     0.13376290625900775
     ]
    ]
   },
@@ -6767,11 +6789,11 @@
       "usual": true
      },
      {
-      "name": "Dani Carvajal",
-      "pos": "CD-R",
-      "role": "D",
-      "imp": 0.2,
-      "att": 0.1,
+      "name": "Andrés García",
+      "pos": "SUB",
+      "role": "M",
+      "imp": 0.6,
+      "att": 0.07,
       "absent": null,
       "usual": false,
       "replaces": "Johan Mojica"
@@ -6795,11 +6817,11 @@
       "usual": true
      },
      {
-      "name": "Andrés García",
+      "name": "Orel Mangala",
       "pos": "SUB",
       "role": "M",
       "imp": 0.6,
-      "att": 0.07,
+      "att": 0.03,
       "absent": null,
       "usual": false,
       "replaces": "Mario Martín"
@@ -7647,7 +7669,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T15:15:00+00:00",
@@ -7668,15 +7690,15 @@
    "top_scores": [
     [
      "1-2",
-     0.08565028167266386
+     0.08565028167266546
     ],
     [
      "1-3",
-     0.08060262942636116
+     0.08060262942636091
     ],
     [
      "0-2",
-     0.07160085584222091
+     0.0716008558422226
     ]
    ]
   },
@@ -7736,7 +7758,7 @@
      "player": "Vinícius Júnior",
      "status": "out",
      "reason": "suspension",
-     "source": "sancionado (le quedan 2 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
+     "source": "sancionado (le quedan 2 partidos): Oficial: cuatro partidos de sanción a Vinicius, que se pierde el clásico - ABC"
     }
    ]
   },
@@ -7783,11 +7805,11 @@
       "usual": true
      },
      {
-      "name": "Andrés Martín",
-      "pos": "AM-R",
+      "name": "Facundo González",
+      "pos": "SUB",
       "role": "M",
-      "imp": 0.4,
-      "att": 0.91,
+      "imp": 0.3,
+      "att": 0.25,
       "absent": null,
       "usual": false,
       "replaces": "Jorge Salinas"
@@ -7863,10 +7885,10 @@
     "xi": [
      {
       "name": "Andriy Lunin",
-      "pos": "G",
-      "role": "G",
+      "pos": "SUB",
+      "role": "M",
       "imp": 0.0,
-      "att": 0.0,
+      "att": 0.01,
       "absent": null,
       "usual": false,
       "replaces": "Thibaut Courtois"
@@ -7975,7 +7997,7 @@
       "name": "Vinícius Júnior",
       "status": "out",
       "reason": "suspension",
-      "source": "sancionado (le quedan 2 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció",
+      "source": "sancionado (le quedan 2 partidos): Oficial: cuatro partidos de sanción a Vinicius, que se pierde el clásico - ABC",
       "imp": 0.78
      }
     ]
@@ -7995,28 +8017,28 @@
    "home": [
     {
      "name": "Yassir Zabiri",
-     "p": 0.351,
+     "p": 0.4,
      "xg90": 0.7
     },
     {
-     "name": "Andrés Martín",
-     "p": 0.336,
-     "xg90": 0.64
-    },
-    {
      "name": "Sergio Canales",
-     "p": 0.124,
+     "p": 0.145,
      "xg90": 0.21
     },
     {
      "name": "Alvaro Mantilla",
-     "p": 0.045,
+     "p": 0.053,
      "xg90": 0.07
     },
     {
      "name": "Jeanuël Belocian",
-     "p": 0.042,
+     "p": 0.049,
      "xg90": 0.06
+    },
+    {
+     "name": "Iñigo Vicente",
+     "p": 0.033,
+     "xg90": 0.04
     }
    ],
    "away": [
@@ -8466,7 +8488,7 @@
      "goals": 1,
      "minutes": 592,
      "status": "sancionado",
-     "source": "sancionado (le quedan 2 partidos): Apelación no hace caso al recurso del Real Madrid y mantiene los cuatro partidos de sanció"
+     "source": "sancionado (le quedan 2 partidos): Oficial: cuatro partidos de sanción a Vinicius, que se pierde el clásico - ABC"
     },
     {
      "name": "Arda Güler",
@@ -8652,10 +8674,32 @@
     0.708
    ]
   },
-  "movement": null
+  "movement": {
+   "home": "Santander",
+   "away": "Real Madrid",
+   "date": "2026-11-01",
+   "from_ts": "2026-10-25T17:56:46.744205+00:00",
+   "to_ts": "2026-10-25T18:39:13.230230+00:00",
+   "p_from": [
+    0.1148,
+    0.1677,
+    0.7175
+   ],
+   "p_to": [
+    0.114,
+    0.1672,
+    0.7188
+   ],
+   "delta_pts": [
+    -0.1,
+    -0.1,
+    0.1
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T17:30:00+00:00",
@@ -8676,15 +8720,15 @@
    "top_scores": [
     [
      "1-1",
-     0.12420883390191356
+     0.12420883390191365
     ],
     [
      "1-0",
-     0.11604608211787937
+     0.11604608211787959
     ],
     [
      "2-0",
-     0.09900320088778448
+     0.09900320088778429
     ]
    ]
   },
@@ -9635,7 +9679,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-25T18:32:58.637024+00:00",
+  "generated_at": "2026-10-25T18:39:13.230230+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T20:00:00+00:00",
@@ -9656,7 +9700,7 @@
    "top_scores": [
     [
      "1-1",
-     0.1188654728864623
+     0.11886547288646225
     ],
     [
      "2-1",
@@ -9664,7 +9708,7 @@
     ],
     [
      "1-0",
-     0.08892653454264027
+     0.08892653454264045
     ]
    ]
   },
