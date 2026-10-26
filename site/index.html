@@ -11,6 +11,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 <header class="masthead">
@@ -28,6 +31,7 @@
         <div><dt>X</dt><dd>empate</dd></div>
         <div><dt>2</dt><dd>gana el visitante</dd></div>
       </dl>
+      <button class="theme lang" id="lang" type="button" title="Idioma / Language">EN</button>
       <button class="theme" id="theme" type="button" aria-label="Cambiar entre modo claro y oscuro" title="Modo claro u oscuro">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
       </button>
@@ -302,8 +306,10 @@
   <a href="#ligas" data-tab="ligas">Otras ligas, copas y Europa <span aria-hidden="true">›</span></a>
   <a href="#aciertos" data-tab="aciertos">Aciertos y fuentes <span aria-hidden="true">›</span></a>
 </div>
+<script src="i18n.js"></script>
 <script src="extra.js"></script>
 <script src="app.js"></script>
 <script src="live.js"></script>
+<script>if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));</script>
 </body>
 </html>

@@ -83,6 +83,7 @@ def main() -> None:
         "props_eval": read_json(PRED / "props_eval.json", {}),
         "polymarket_eval": read_json(ROOT / "data" / "state" / "polymarket_eval.json", {}),
         "leagues": read_json(PRED / "leagues.json", {}),
+        "quinigol": read_json(PRED / "quinigol.json", {}),
         "projection_calib": read_json(ROOT / "data" / "state" / "projection_calib.json", {}),
         "live_calib": read_json(ROOT / "data" / "state" / "live_calib.json", {}),
         "availability_eval": read_json(ROOT / "data" / "state" / "tuned.json", {}).get("availability", {}),

@@ -59,7 +59,11 @@ def _bets(s, matches, preds, send: bool = False) -> dict | None:
 
 
 def _quiniela(s, preds=None, online: bool = True, send: bool = False) -> None:
-    from . import quiniela
+    from . import quiniela, quinigol
+    try:
+        quinigol.update(s, preds, online=online)
+    except Exception as e:
+        log.warning("No se pudo actualizar el Quinigol: %s", e)
     try:
         before = quiniela.load(s)["jornadas"]
         st = quiniela.update(s, preds, online=online)

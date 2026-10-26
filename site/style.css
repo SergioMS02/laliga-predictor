@@ -761,7 +761,7 @@ button:not(:disabled):active, .more:active { transform: scale(0.97); }
 .row__main:active, .lv:active { transform: none; background: var(--fill); }
 .dtabs button[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 @media (hover: hover) and (pointer: fine) {
-  .dtabs button:hover { border-color: var(--ink-soft); color: var(--ink); }
+  .dtabs button:not([aria-selected="true"]):hover { border-color: var(--ink-soft); color: var(--ink); }
   .row__main:hover { background: color-mix(in srgb, var(--fill) 45%, transparent); }
 }
 /* el detalle de un partido se abre con la altura (rejilla) y el contenido aparece */
@@ -904,3 +904,8 @@ button:not(:disabled):active, .more:active { transform: scale(0.97); }
   .gl:nth-child(-n+2) { border-top: 0; }
   .gl:nth-child(2n) { border-left: 1px solid var(--line); }
 }
+.track.qg td.is-pick { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 700; }
+.track.qg td.is-real { color: var(--slip); font-weight: 700; }
+.track.qg th.l { white-space: normal; min-width: 180px; }
+.theme.lang { font: 700 0.85rem/1 var(--font-cond); letter-spacing: 0.02em; }
+.masthead__side { gap: 10px; }

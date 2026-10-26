@@ -745,7 +745,7 @@ function propsTrackHtml() {
   const t = (DATA.extra || {}).track_props || {};
   const pe0 = DATA.props_eval || {};
   if (!t.n) return (pe0.cards ? `<p class="quiet small">En temporadas pasadas (${pe0.n} partidos), el modelo de tarjetas falla de media por ${dec(pe0.cards.mae_modelo, 2)} amarillas por partido (con la media de la liga: ${dec(pe0.cards.mae_media, 2)}) y el de córners por ${dec(pe0.corners.mae_modelo, 2)} (media: ${dec(pe0.corners.mae_media, 2)}).</p>` : "") + '<p class="quiet">El seguimiento en vivo se irá llenando a medida que se jueguen los partidos predichos desde ahora.</p>';
-  const row = (lab, x, fmt) => x ? `<tr><th scope="row" class="l">${lab}</th><td>${fmt(x.pred_mean ?? x.pred)}</td><td>${fmt(x.obs)}</td><td>${x.n}</td><td>${x.brier != null ? dec(x.brier, 3) : x.mae != null ? `±${dec(x.mae, 2)}` : "–"}</td></tr>` : "";
+  const row = (lab, x, fmt) => x ? `<tr><th scope="row" class="l">${lab}</th><td>${fmt(x.pred_mean ?? x.pred)}</td><td>${fmt(x.obs)}</td><td>${x.n ?? t.n ?? "–"}</td><td>${x.brier != null ? dec(x.brier, 3) : x.mae != null ? `±${dec(x.mae, 2)}` : "–"}</td></tr>` : "";
   const pc = (v) => `${Math.round(100 * v)} %`, n2 = (v) => dec(v, 2);
   let sc = "";
   if (t.scorers) sc = `<p>Goleadores: el modelo esperaba <b>${dec(t.scorers.expected_goals, 1)}</b> partidos con gol entre los jugadores señalados y hubo <b>${t.scorers.actual}</b> (${t.scorers.n} predicciones).</p>${calibMini(t.scorers.bins, "Goleadores")}`;
@@ -899,7 +899,7 @@ function betsBtHtml() {
 /* ---------- Quiniela oficial ---------- */
 let Q_SEL = null;
 const qDate = (d) => new Date(d + "T12:00:00").toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" });
-const SRC_SHORT = { "modelo LaLiga": "Modelo", "mercado": "Casas", "modelo Segunda": "Modelo 2ª", "Elo europeo": "Elo", "Elo Liga F": "Elo", "estimación por categoría": "Aprox.", "estimación genérica (femenino)": "Aprox." };
+const SRC_SHORT = { "modelo LaLiga": "Modelo", "mercado": "Casas", "modelo Segunda": "Modelo 2ª", "Elo europeo": "Elo", "Elo Liga F": "Elo", "Elo LaLiga": "Elo", "estimación por categoría": "Aprox.", "estimación genérica (femenino)": "Aprox." };
 function qOutcome(m) {
   if (m == null || m.hg == null || m.ag == null) return null;
   return m.hg > m.ag ? "1" : m.hg === m.ag ? "X" : "2";

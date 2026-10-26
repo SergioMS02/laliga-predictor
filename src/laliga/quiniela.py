@@ -329,6 +329,8 @@ def match_probs(home: str, away: str, preds: dict, seg: SegundaModel | None, lal
         return TIER_RATING.get(tier, TIER_RATING[3])
     p = elo_probs(rating(h, th), rating(a, ta))
     lam, mu = goals_from_probs(p)
+    if th == 1 and ta == 1 and h in elo and a in elo:  # dos equipos de LaLiga: su Elo real, no una categoría
+        return {"p": p, "lam": lam, "mu": mu, "source": "Elo LaLiga", "teams": [h, a]}
     return {"p": p, "lam": lam, "mu": mu, "source": "estimación por categoría", "teams": [h, a]}
 
 
