@@ -10,34 +10,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p raw13
-          python3 - <<'PY' > raw13/out.txt 2>&1 || true
+          mkdir -p raw14
+          python3 - <<'PY' > raw14/out.txt 2>&1 || true
           import requests, json, re
-          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-          G = "https://gamma-api.polymarket.com"
-          base = None
-          js = s.get(G + "/events", params={"series_id": "10193", "closed": "false", "limit": 100}, timeout=40).json()
-          slugs = [e["slug"] for e in js]
-          mains = [x for x in slugs if re.fullmatch(r"lal-[a-z0-9]+-[a-z0-9]+-[0-9]{4}-[0-9]{2}-[0-9]{2}", x)]
-          print("mains", mains[:12])
-          base = mains[0]
-          for suf in ["", "-halftime-result", "-exact-score", "-first-to-score", "-total-corners", "-more-markets", "-player-props", "-second-half-result"]:
-              ev = s.get(G + "/events", params={"slug": base + suf}, timeout=30).json()
-              if not ev: print("NONE", suf); continue
-              e = ev[0]
-              print("\n==", base + suf, e.get("title"), round(e.get("volume") or 0), len(e.get("markets") or []))
-              for m in (e.get("markets") or [])[:40]:
-                  print("  ", repr(m.get("groupItemTitle")), "|", m.get("question"), "|", m.get("outcomes"), m.get("outcomePrices"), round(float(m.get("volumeNum") or 0)), m.get("sportsMarketType"), m.get("line"))
-          # quinigol
-          for u in ["https://www.combinacionganadora.com/quinigol/", "https://www.eduardolosilla.es/quinigol", "https://www.loteriasyapuestas.es/es/quinigol",
-                    "https://www.transfermarkt.es/laliga/startseite/wettbewerb/ES1", "https://www.transfermarkt.com/laliga/startseite/wettbewerb/ES1"]:
+          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36"
+          for u in ["https://static.dataradar.es/marcador/json/partidos_quinigol.json", "https://static.dataradar.es/marcador/json/partidos_quiniela.json"]:
+              r = s.get(u, timeout=30); print("URL", u, r.status_code, r.headers.get("access-control-allow-origin")); print(r.text[:3000])
+          r = s.get("https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard", params={"dates": "20261025"}, timeout=30).json()
+          c = r["events"][0]["competitions"][0]["competitors"][0]
+          print("ESPN stats names", [x.get("name") for x in c.get("statistics", [])])
+          print(json.dumps(c.get("statistics", [])[:20])[:1500])
+          # eduardolosilla quinigol api guesses
+          for u in ["https://www.eduardolosilla.es/api/v1/quinigol/jornada", "https://api.eduardolosilla.es/quinigol", "https://www.combinacionganadora.com/quinigol/resultados/"]:
               try:
-                  r = s.get(u, timeout=30)
-                  name = re.sub(r"[^a-z0-9]+", "_", u)[-40:]
-                  open("raw13/" + name + ".html", "w").write(r.text[:400000])
-                  print("URL", u, r.status_code, len(r.text))
-              except Exception as ex:
-                  print("URL", u, "ERR", ex)
+                  r = s.get(u, timeout=20); print("URL", u, r.status_code, r.text[:300].replace("\n"," "))
+              except Exception as ex: print("URL", u, ex)
           PY
           git config user.name probe; git config user.email probe@example.com
-          git add raw13; git commit -qm probe-out13; git push origin HEAD:probe
+          git add raw14; git commit -qm probe-out14; git push origin HEAD:probe
