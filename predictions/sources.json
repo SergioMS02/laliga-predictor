@@ -1,5 +1,5 @@
 {
- "at": "2026-10-26T12:24+00:00",
+ "at": "2026-10-26T12:59+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -43,7 +43,7 @@
   },
   "futbolfantasy (lesionados y sancionados)": {
    "ok": true,
-   "rows": 73,
+   "rows": 74,
    "error": null
   },
   "ESPN (alineaciones y árbitro del partido)": {

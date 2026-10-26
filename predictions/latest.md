@@ -1,15 +1,15 @@
 # Predicciones LaLiga
 
-Generado: 2026-10-26 12:23 UTC
+Generado: 2026-10-26 12:58 UTC
 
 | Fecha | Partido | 1 | X | 2 | Evolución 1 | xG | Marcador más probable | +2.5 | Ambos marcan | Info |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 26/10 21:00 | Sevilla – Osasuna | 49% | 28% | 22% | ▄▄▄▄▄▄▄▄ 49→49% = | 1.68–1.13 | 1-1 (12%) | 53% | 56% | 🚑 Marcão, Miguel Sierra, Jorge Herrando, Aimar Oroz, Romain Del Castillo |
-| 30/10 21:00 | Villarreal – Espanol | 70% | 20% | 11% | ▆▆▆▆▆▆▆ 71→70% ▼ | 1.96–0.97 | 1-1 (11%) | 56% | 54% | 🚑 Nicolas Pépé, Nathan Saliba?, Pape Gueye, Jofre Carreras, Kike García |
+| 30/10 21:00 | Villarreal – Espanol | 69% | 20% | 11% | ▆▆▆▆▆▆▆▆ 71→69% ▼ | 1.95–0.98 | 1-1 (11%) | 56% | 54% | 🚑 Ilias Akhomach?, Nathan Saliba?, Nicolas Pépé, Pape Gueye, Jofre Carreras, Kike García |
 | 31/10 14:00 | Levante – Ath Madrid | 21% | 23% | 56% | ▂▂▂▂▂▂▂▂ 21→21% = | 1.30–1.75 | 1-1 (11%) | 59% | 61% | 🚑 Adrián de la Fuente?, Hugo Sotelo?, Enzo Bardeli?, Johnny Cardoso, Koke, Cristian Romero |
 | 31/10 16:15 | Vallecano – Celta | 45% | 30% | 25% | ▄▄▄▄▄▄▄▄ 48→45% ▼ | 1.22–1.14 | 1-1 (14%) | 42% | 49% | 🚑 Luiz Felipe, Augusto Batalla, Andrei Ratiu?, Pathé Ciss, Carl Starfelt, Borja Iglesias |
 | 31/10 18:30 | Betis – Malaga | 74% | 16% | 10% | ▇▆▆▆▆▆▆▆ 77→74% ▼ | 2.36–0.70 | 2-0 (13%) | 59% | 46% | 🚑 Cucho Hernández, Junior Firpo, Facundo Bernal, Joaquín Muñoz, Julen Lobete, Aarón Ochoa |
-| 31/10 21:00 | Barcelona – Alaves | 87% | 10% | 4% | ███▇▇█▇█▇ 89→87% ▼ | 3.00–0.86 | 3-0 (9%) | 74% | 55% | 🚑 Andreas Christensen, Roony Bardghji, Dani Olmo, Xavi Espart?, Jules Koundé, Eric García |
+| 31/10 21:00 | Barcelona – Alaves | 87% | 10% | 4% | ███▇▇█▇█▇▇ 89→87% ▼ | 2.99–0.88 | 2-0 (9%) | 74% | 56% | 🚑 Xavi Espart, Andreas Christensen, Roony Bardghji, Dani Olmo, Jules Koundé, Eric García |
 | 01/11 14:00 | Getafe – Sevilla | 37% | 32% | 31% | ▄▄▃▃▃▃▃ 39→37% ▼ | 1.05–0.99 | 1-1 (14%) | 33% | 41% | 🚑 Juanmi Jiménez, Christantus Uche, Orel Mangala?, Zaid Romero?, Mario Martín, Johan Mojica |
 | 01/11 16:15 | Santander – Real Madrid | 10% | 15% | 75% | ▁▁▁▁▁▁▁▁▁▁ 10→10% = | 1.13–3.06 | 1-3 (8%) | 79% | 65% | 🚑 Simon Eriksson?, Jorge Salinas, Raúl Asencio, Rodrygo Goes, Federico Valverde?, Vinícius Júnior |
 | 01/11 18:30 | Elche – Valencia | 50% | 26% | 24% | ▄▅▅▅▅▅▅▅▅ 48→50% ▲ | 1.61–1.03 | 1-1 (12%) | 49% | 52% | 🚑 Marc Aguado, Sergi Canós, Diego López, David Otorbi, José Manuel Copete?, Dimitri Foulquier? |

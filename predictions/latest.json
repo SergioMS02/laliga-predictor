@@ -1,6 +1,6 @@
 [
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-10-26",
   "kickoff_utc": "2026-10-26T20:00:00+00:00",
@@ -21,37 +21,33 @@
     0.2764,
     0.206
    ],
-   "volume": 11029,
-   "liquidity": 981449,
+   "volume": 14733,
+   "liquidity": 1178129,
    "url": "https://polymarket.com/event/lal-sev-osa-2026-10-26",
    "slug": "lal-sev-osa-2026-10-26",
    "overround": -0.005,
    "used": false,
-   "reason": "poco volumen (11.029 $)",
+   "reason": "poco volumen (14.733 $)",
    "model_weight": null,
    "more": {
     "totals": {
      "1.5": {
       "p": 0.695,
-      "volume": 2445
+      "volume": 2473
      },
      "2.5": {
       "p": 0.425,
-      "volume": 2788
+      "volume": 4792
      }
     },
     "btts": {
      "p": 0.475,
-     "volume": 7199
+     "volume": 8239
     },
     "corners": {
      "8.5": {
       "p": 0.505,
       "volume": 2308
-     },
-     "2.5": {
-      "p": 0.68,
-      "volume": 2950
      }
     }
    }
@@ -67,15 +63,15 @@
    "top_scores": [
     [
      "1-1",
-     0.12050639132879465
+     0.12050639132848495
     ],
     [
      "2-1",
-     0.0958745403430854
+     0.09587454034317024
     ],
     [
      "1-0",
-     0.09472600239570049
+     0.09472600239516532
     ]
    ]
   },
@@ -421,6 +417,7 @@
    "p_over": 0.4455,
    "p_over_model": 0.5331,
    "p_over_market": 0.443,
+   "market_src": "casas",
    "p_btts": 0.5577
   },
   "odds_market": {
@@ -1573,82 +1570,60 @@
    ],
    "market_weight": 0.0
   },
-  "movement": {
-   "home": "Sevilla",
-   "away": "Osasuna",
-   "date": "2026-10-26",
-   "from_ts": "2026-10-25T20:05:46.256661+00:00",
-   "to_ts": "2026-10-26T12:23:29.011916+00:00",
-   "p_from": [
-    0.4898,
-    0.2845,
-    0.2258
-   ],
-   "p_to": [
-    0.493,
-    0.283,
-    0.224
-   ],
-   "delta_pts": [
-    0.3,
-    -0.2,
-    -0.2
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-10-30",
   "kickoff_utc": "2026-10-30T20:00:00+00:00",
   "home": "Villarreal",
   "away": "Espanol",
-  "p_home": 0.6954,
-  "p_draw": 0.1995,
-  "p_away": 0.1052,
+  "p_home": 0.6921,
+  "p_draw": 0.2014,
+  "p_away": 0.1065,
   "model": "stacker",
   "p_model": [
-   0.6954,
-   0.1995,
-   0.1052
+   0.6921,
+   0.2014,
+   0.1065
   ],
   "polymarket": {
    "p": [
-    0.6533,
-    0.196,
-    0.1508
+    0.655,
+    0.195,
+    0.15
    ],
-   "volume": 203,
-   "liquidity": 28448,
+   "volume": 427,
+   "liquidity": 29030,
    "url": "https://polymarket.com/event/lal-vil-esp-2026-10-30",
    "slug": "lal-vil-esp-2026-10-30",
-   "overround": -0.005,
+   "overround": 0.0,
    "used": false,
-   "reason": "poco volumen (203 $)",
+   "reason": "poco volumen (427 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
-   "p_home": 0.5993,
-   "p_draw": 0.2251,
-   "p_away": 0.1756,
-   "xg_home": 1.9646,
-   "xg_away": 0.9726,
-   "p_over25": 0.5626,
-   "p_btts": 0.5401,
+   "p_home": 0.5946,
+   "p_draw": 0.2267,
+   "p_away": 0.1787,
+   "xg_home": 1.9505,
+   "xg_away": 0.9795,
+   "p_over25": 0.5609,
+   "p_btts": 0.5411,
    "top_scores": [
     [
      "1-1",
-     0.10668930445420512
+     0.10744445816234696
     ],
     [
      "2-0",
-     0.10230933613637
+     0.10157096363564608
     ],
     [
      "2-1",
-     0.09950514506299435
+     0.09949165487741773
     ]
    ]
   },
@@ -1667,11 +1642,11 @@
   "lineup_confirmed": false,
   "availability_source": "lesionados y sancionados",
   "deficit": [
-   0.278,
+   0.337,
    0.0
   ],
   "deficit_defence": [
-   0.146,
+   0.171,
    0.0
   ],
   "context": {
@@ -1691,16 +1666,22 @@
   "absences": {
    "Villarreal": [
     {
-     "player": "Nicolas Pépé",
-     "status": "out",
+     "player": "Ilias Akhomach",
+     "status": "doubtful",
      "reason": "injury",
-     "source": "futbolfantasy: Operado del ojo · Baja hasta finales de octubre"
+     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
     },
     {
      "player": "Nathan Saliba",
      "status": "doubtful",
      "reason": "injury",
      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
+    },
+    {
+     "player": "Nicolas Pépé",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Operado del ojo · Baja hasta finales de octubre"
     },
     {
      "player": "Pape Gueye",
@@ -1818,7 +1799,7 @@
       "role": "M",
       "imp": 0.5,
       "att": 0.46,
-      "absent": null,
+      "absent": "doubtful",
       "usual": true
      },
      {
@@ -1833,10 +1814,10 @@
     ],
     "out": [
      {
-      "name": "Nicolas Pépé",
-      "status": "out",
+      "name": "Ilias Akhomach",
+      "status": "doubtful",
       "reason": "injury",
-      "source": "futbolfantasy: Operado del ojo · Baja hasta finales de octubre",
+      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11",
       "imp": 0.5
      },
      {
@@ -1845,6 +1826,13 @@
       "reason": "injury",
       "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11",
       "imp": 0.3
+     },
+     {
+      "name": "Nicolas Pépé",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Operado del ojo · Baja hasta finales de octubre",
+      "imp": 0.5
      },
      {
       "name": "Pape Gueye",
@@ -1980,71 +1968,72 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5626,
-   "p_over_model": 0.5626,
+   "p_over": 0.5609,
+   "p_over_model": 0.5609,
    "p_over_market": null,
-   "p_btts": 0.5401
+   "market_src": null,
+   "p_btts": 0.5411
   },
   "odds_market": null,
   "markets": {
    "double_chance": {
     "1X": 0.8913,
-    "X2": 0.314,
-    "12": 0.7947
+    "X2": 0.3144,
+    "12": 0.7943
    },
    "draw_no_bet": {
-    "1": 0.8632,
-    "2": 0.1368
+    "1": 0.8631,
+    "2": 0.1369
    },
    "totals": {
-    "0.5": 0.9281,
-    "1.5": 0.7568,
-    "2.5": 0.5071,
-    "3.5": 0.2866,
-    "4.5": 0.1375
+    "0.5": 0.9276,
+    "1.5": 0.7555,
+    "2.5": 0.5054,
+    "3.5": 0.285,
+    "4.5": 0.1365
    },
    "team_totals": {
     "home": {
-     "0.5": 0.8683,
-     "1.5": 0.6012,
-     "2.5": 0.3306
+     "0.5": 0.8676,
+     "1.5": 0.5999,
+     "2.5": 0.3293
     },
     "away": {
-     "0.5": 0.4914,
-     "1.5": 0.1475,
-     "2.5": 0.0313
+     "0.5": 0.4903,
+     "1.5": 0.1468,
+     "2.5": 0.0311
     }
    },
-   "btts": 0.4315,
+   "btts": 0.4303,
    "clean_sheet": {
-    "home": 0.5086,
-    "away": 0.1317
+    "home": 0.5097,
+    "away": 0.1324
    },
    "margin": {
-    "home3+": 0.2259,
+    "home3+": 0.2251,
     "home2": 0.2123,
-    "home1": 0.2478,
-    "draw": 0.2053,
-    "away1": 0.0794,
+    "home1": 0.2482,
+    "draw": 0.2057,
+    "away1": 0.0795,
     "away2": 0.0236,
     "away3+": 0.0057
    },
    "exact": [
     {
      "score": "2-0",
-     "p": 0.1377
+     "p": 0.1379
     },
     {
      "score": "1-0",
-     "p": 0.1309
+     "p": 0.1315
     },
     {
      "score": "1-1",
-     "p": 0.0967
+     "p": 0.0969
     },
     {
      "score": "2-1",
-     "p": 0.0931
+     "p": 0.093
     },
     {
      "score": "3-0",
@@ -2052,199 +2041,199 @@
     },
     {
      "score": "0-0",
-     "p": 0.0719
+     "p": 0.0724
     },
     {
      "score": "3-1",
-     "p": 0.0629
+     "p": 0.0627
     },
     {
      "score": "4-0",
-     "p": 0.0471
+     "p": 0.047
     }
    ],
    "asian": {
     "-2.5": {
-     "win": 0.2259,
+     "win": 0.2251,
      "push": 0.0,
-     "lose": 0.7741,
-     "fair_home": 4.427,
-     "fair_away": 1.292
+     "lose": 0.7749,
+     "fair_home": 4.443,
+     "fair_away": 1.29
     },
     "-2.25": {
-     "win": 0.2259,
-     "push": 0.1062,
-     "lose": 0.668,
-     "fair_home": 3.957,
-     "fair_away": 1.338
+     "win": 0.2251,
+     "push": 0.1061,
+     "lose": 0.6688,
+     "fair_home": 3.971,
+     "fair_away": 1.337
     },
     "-2.0": {
-     "win": 0.2259,
+     "win": 0.2251,
      "push": 0.2123,
-     "lose": 0.5618,
-     "fair_home": 3.487,
-     "fair_away": 1.402
+     "lose": 0.5626,
+     "fair_home": 3.5,
+     "fair_away": 1.4
     },
     "-1.75": {
-     "win": 0.332,
-     "push": 0.1062,
-     "lose": 0.5618,
-     "fair_home": 2.692,
-     "fair_away": 1.591
+     "win": 0.3312,
+     "push": 0.1061,
+     "lose": 0.5626,
+     "fair_home": 2.699,
+     "fair_away": 1.589
     },
     "-1.5": {
-     "win": 0.4382,
+     "win": 0.4374,
      "push": 0.0,
-     "lose": 0.5618,
-     "fair_home": 2.282,
-     "fair_away": 1.78
+     "lose": 0.5626,
+     "fair_home": 2.286,
+     "fair_away": 1.777
     },
     "-1.25": {
-     "win": 0.4382,
-     "push": 0.1239,
-     "lose": 0.4379,
-     "fair_home": 1.999,
-     "fair_away": 2.001
+     "win": 0.4374,
+     "push": 0.1241,
+     "lose": 0.4385,
+     "fair_home": 2.003,
+     "fair_away": 1.997
     },
     "-1.0": {
-     "win": 0.4382,
-     "push": 0.2478,
-     "lose": 0.314,
-     "fair_home": 1.716,
-     "fair_away": 2.396
+     "win": 0.4374,
+     "push": 0.2482,
+     "lose": 0.3144,
+     "fair_home": 1.719,
+     "fair_away": 2.391
     },
     "-0.75": {
-     "win": 0.5621,
-     "push": 0.1239,
-     "lose": 0.314,
-     "fair_home": 1.559,
-     "fair_away": 2.79
+     "win": 0.5615,
+     "push": 0.1241,
+     "lose": 0.3144,
+     "fair_home": 1.56,
+     "fair_away": 2.786
     },
     "-0.5": {
-     "win": 0.686,
+     "win": 0.6856,
      "push": 0.0,
-     "lose": 0.314,
-     "fair_home": 1.458,
-     "fair_away": 3.185
+     "lose": 0.3144,
+     "fair_home": 1.459,
+     "fair_away": 3.18
     },
     "-0.25": {
-     "win": 0.686,
-     "push": 0.1026,
-     "lose": 0.2113,
-     "fair_home": 1.308,
-     "fair_away": 4.246
+     "win": 0.6856,
+     "push": 0.1029,
+     "lose": 0.2116,
+     "fair_home": 1.309,
+     "fair_away": 4.24
     },
     "0.0": {
-     "win": 0.686,
-     "push": 0.2053,
+     "win": 0.6856,
+     "push": 0.2057,
      "lose": 0.1087,
-     "fair_home": 1.158,
-     "fair_away": 7.312
+     "fair_home": 1.159,
+     "fair_away": 7.306
     },
     "0.25": {
-     "win": 0.7887,
-     "push": 0.1026,
+     "win": 0.7884,
+     "push": 0.1029,
      "lose": 0.1087,
      "fair_home": 1.138,
-     "fair_away": 8.256
+     "fair_away": 8.252
     },
     "0.5": {
      "win": 0.8913,
      "push": 0.0,
      "lose": 0.1087,
      "fair_home": 1.122,
-     "fair_away": 9.2
+     "fair_away": 9.198
     },
     "0.75": {
      "win": 0.8913,
      "push": 0.0397,
      "lose": 0.069,
      "fair_home": 1.077,
-     "fair_away": 13.919
+     "fair_away": 13.921
     },
     "1.0": {
      "win": 0.8913,
-     "push": 0.0794,
-     "lose": 0.0293,
+     "push": 0.0795,
+     "lose": 0.0292,
      "fair_home": 1.033,
-     "fair_away": 31.425
+     "fair_away": 31.477
     },
     "1.25": {
      "win": 0.931,
      "push": 0.0397,
-     "lose": 0.0293,
+     "lose": 0.0292,
      "fair_home": 1.031,
-     "fair_away": 32.78
+     "fair_away": 32.835
     },
     "1.5": {
-     "win": 0.9707,
+     "win": 0.9708,
      "push": 0.0,
-     "lose": 0.0293,
+     "lose": 0.0292,
      "fair_home": 1.03,
-     "fair_away": 34.135
+     "fair_away": 34.194
     }
    },
    "half_time": {
-    "1": 0.4904,
-    "X": 0.3902,
-    "2": 0.1194,
-    "over_0.5": 0.6962,
-    "over_1.5": 0.3343
+    "1": 0.4898,
+    "X": 0.3909,
+    "2": 0.1193,
+    "over_0.5": 0.6953,
+    "over_1.5": 0.3332
    },
    "ht_ft": {
-    "1/1": 0.4495,
+    "1/1": 0.449,
     "1/X": 0.0342,
     "1/2": 0.0067,
-    "X/1": 0.2151,
-    "X/X": 0.1271,
-    "X/2": 0.048,
-    "2/1": 0.0263,
+    "X/1": 0.2152,
+    "X/X": 0.1276,
+    "X/2": 0.0481,
+    "2/1": 0.0262,
     "2/X": 0.0342,
     "2/2": 0.0588
    },
    "quinigol": {
     "home": [
-     0.1317,
-     0.267,
+     0.1324,
+     0.2677,
      0.2706,
-     0.3306
+     0.3293
     ],
     "away": [
-     0.5086,
-     0.3438,
-     0.1162,
-     0.0313
+     0.5097,
+     0.3435,
+     0.1158,
+     0.0311
     ],
     "joint": [
      [
-      0.0719,
-      0.0404,
+      0.0724,
+      0.0406,
       0.0153,
       0.0041
      ],
      [
-      0.1309,
-      0.0967,
+      0.1315,
+      0.0969,
       0.031,
+      0.0083
+     ],
+     [
+      0.1379,
+      0.093,
+      0.0313,
       0.0084
      ],
      [
-      0.1377,
-      0.0931,
-      0.0315,
-      0.0085
-     ],
-     [
-      0.1682,
-      0.1137,
-      0.0384,
-      0.0103
+      0.1678,
+      0.1131,
+      0.0381,
+      0.0102
      ]
     ]
    },
    "goals": [
-    2.027,
-    0.676
+    2.022,
+    0.674
    ]
   },
   "espn_id": "401882817",
@@ -2252,17 +2241,17 @@
    "home": [
     {
      "name": "Ayoze Pérez",
-     "p": 0.337,
+     "p": 0.335,
      "xg90": 0.55
     },
     {
      "name": "Alberto Moleiro",
-     "p": 0.198,
+     "p": 0.197,
      "xg90": 0.29
     },
     {
      "name": "Ilias Akhomach",
-     "p": 0.137,
+     "p": 0.136,
      "xg90": 0.19
     },
     {
@@ -2272,24 +2261,24 @@
     },
     {
      "name": "Santi Comesaña",
-     "p": 0.118,
+     "p": 0.117,
      "xg90": 0.16
     }
    ],
    "away": [
     {
      "name": "Roberto Fernández",
-     "p": 0.234,
+     "p": 0.235,
      "xg90": 0.43
     },
     {
      "name": "Cala",
-     "p": 0.15,
+     "p": 0.151,
      "xg90": 0.26
     },
     {
      "name": "Javi Hernandez",
-     "p": 0.063,
+     "p": 0.064,
      "xg90": 0.1
     },
     {
@@ -2299,7 +2288,7 @@
     },
     {
      "name": "Leandro Cabrera",
-     "p": 0.057,
+     "p": 0.058,
      "xg90": 0.09
     }
    ]
@@ -2459,7 +2448,8 @@
      "att": 0.55,
      "goals": 0,
      "minutes": 392,
-     "status": "disponible"
+     "status": "duda",
+     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
     },
     {
      "name": "Nathan Saliba",
@@ -2904,8 +2894,8 @@
     0.93
    ],
    "xg_adj": [
-    1.96,
-    0.97
+    1.95,
+    0.98
    ],
    "p_full": [
     0.6231,
@@ -2913,37 +2903,37 @@
     0.1598
    ],
    "p_adj": [
-    0.5993,
-    0.2251,
-    0.1756
+    0.5946,
+    0.2267,
+    0.1787
    ]
   },
   "movement": {
    "home": "Villarreal",
    "away": "Espanol",
    "date": "2026-10-30",
-   "from_ts": "2026-10-25T20:05:46.256661+00:00",
-   "to_ts": "2026-10-26T12:23:29.011916+00:00",
+   "from_ts": "2026-10-26T12:23:29.011916+00:00",
+   "to_ts": "2026-10-26T12:58:34.352867+00:00",
    "p_from": [
-    0.694,
-    0.2007,
-    0.1053
-   ],
-   "p_to": [
     0.6954,
     0.1995,
     0.1052
    ],
+   "p_to": [
+    0.6921,
+    0.2014,
+    0.1065
+   ],
    "delta_pts": [
-    0.1,
-    -0.1,
-    -0.0
+    -0.3,
+    0.2,
+    0.1
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T13:00:00+00:00",
@@ -2960,15 +2950,15 @@
   ],
   "polymarket": {
    "p": [
-    0.19,
-    0.205,
-    0.605
+    0.194,
+    0.204,
+    0.602
    ],
    "volume": 1014,
-   "liquidity": 30684,
+   "liquidity": 30986,
    "url": "https://polymarket.com/event/lal-lev-mad-2026-10-31",
    "slug": "lal-lev-mad-2026-10-31",
-   "overround": 0.0,
+   "overround": 0.005,
    "used": false,
    "reason": "poco volumen (1.014 $)",
    "model_weight": null,
@@ -2985,15 +2975,15 @@
    "top_scores": [
     [
      "1-1",
-     0.113702417014879
+     0.11370241701511519
     ],
     [
      "1-2",
-     0.09422521882656118
+     0.09422521882637351
     ],
     [
      "0-1",
-     0.0773336862735985
+     0.0773336862734274
     ]
    ]
   },
@@ -3340,6 +3330,7 @@
    "p_over": 0.5868,
    "p_over_model": 0.5868,
    "p_over_market": null,
+   "market_src": null,
    "p_btts": 0.6061
   },
   "odds_market": null,
@@ -4325,7 +4316,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T15:15:00+00:00",
@@ -4347,7 +4338,7 @@
     0.315
    ],
    "volume": 56,
-   "liquidity": 28677,
+   "liquidity": 29983,
    "url": "https://polymarket.com/event/lal-ray-cel-2026-10-31",
    "slug": "lal-ray-cel-2026-10-31",
    "overround": 0.0,
@@ -4367,15 +4358,15 @@
    "top_scores": [
     [
      "1-1",
-     0.13840100675275926
+     0.1384010067526522
     ],
     [
      "1-0",
-     0.10814760769112139
+     0.10814760769053235
     ],
     [
      "0-0",
-     0.10173446110139597
+     0.10173446110074919
     ]
    ]
   },
@@ -4763,6 +4754,7 @@
    "p_over": 0.4189,
    "p_over_model": 0.4189,
    "p_over_market": null,
+   "market_src": null,
    "p_btts": 0.4857
   },
   "odds_market": null,
@@ -5810,32 +5802,10 @@
     0.3352
    ]
   },
-  "movement": {
-   "home": "Vallecano",
-   "away": "Celta",
-   "date": "2026-10-31",
-   "from_ts": "2026-10-25T20:05:46.256661+00:00",
-   "to_ts": "2026-10-26T12:23:29.011916+00:00",
-   "p_from": [
-    0.4453,
-    0.3,
-    0.2547
-   ],
-   "p_to": [
-    0.447,
-    0.2986,
-    0.2544
-   ],
-   "delta_pts": [
-    0.2,
-    -0.1,
-    -0.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T17:30:00+00:00",
@@ -5857,7 +5827,7 @@
     0.1206
    ],
    "volume": 431,
-   "liquidity": 27829,
+   "liquidity": 29777,
    "url": "https://polymarket.com/event/lal-bet-mala-2026-10-31",
    "slug": "lal-bet-mala-2026-10-31",
    "overround": -0.005,
@@ -5877,15 +5847,15 @@
    "top_scores": [
     [
      "2-0",
-     0.13031571105948864
+     0.13031571105891254
     ],
     [
      "1-0",
-     0.10634494356617999
+     0.10634494356533464
     ],
     [
      "3-0",
-     0.1024827042636895
+     0.10248270426355939
     ]
    ]
   },
@@ -6274,6 +6244,7 @@
    "p_over": 0.5904,
    "p_over_model": 0.5904,
    "p_over_market": null,
+   "market_src": null,
    "p_btts": 0.4609
   },
   "odds_market": null,
@@ -7260,20 +7231,20 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-10-31",
   "kickoff_utc": "2026-10-31T20:00:00+00:00",
   "home": "Barcelona",
   "away": "Alaves",
-  "p_home": 0.8684,
-  "p_draw": 0.0964,
-  "p_away": 0.0352,
+  "p_home": 0.8657,
+  "p_draw": 0.0981,
+  "p_away": 0.0362,
   "model": "stacker",
   "p_model": [
-   0.8684,
-   0.0964,
-   0.0352
+   0.8657,
+   0.0981,
+   0.0362
   ],
   "polymarket": {
    "p": [
@@ -7281,36 +7252,36 @@
     0.0995,
     0.0303
    ],
-   "volume": 10712,
-   "liquidity": 59210,
+   "volume": 10724,
+   "liquidity": 59521,
    "url": "https://polymarket.com/event/lal-bar-ala-2026-10-31",
    "slug": "lal-bar-ala-2026-10-31",
    "overround": 0.0055,
    "used": false,
-   "reason": "poco volumen (10.712 $)",
+   "reason": "poco volumen (10.724 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
-   "p_home": 0.7984,
-   "p_draw": 0.1282,
-   "p_away": 0.0735,
-   "xg_home": 3.0024,
-   "xg_away": 0.8628,
-   "p_over25": 0.7414,
-   "p_btts": 0.5522,
+   "p_home": 0.7942,
+   "p_draw": 0.1299,
+   "p_away": 0.0759,
+   "xg_home": 2.9936,
+   "xg_away": 0.879,
+   "p_over25": 0.7426,
+   "p_btts": 0.5584,
    "top_scores": [
     [
-     "3-0",
-     0.09456831143057835
-    ],
-    [
      "2-0",
-     0.09449330868372871
+     0.09324345466915852
     ],
     [
-     "3-1",
-     0.08159387979474271
+     "3-0",
+     0.09304574714007183
+    ],
+    [
+     "2-1",
+     0.08196303972690629
     ]
    ]
   },
@@ -7329,11 +7300,11 @@
   "lineup_confirmed": false,
   "availability_source": "lesionados y sancionados",
   "deficit": [
-   0.139,
+   0.163,
    0.029
   ],
   "deficit_defence": [
-   0.264,
+   0.329,
    0.013
   ],
   "context": {
@@ -7353,6 +7324,12 @@
   "absences": {
    "Barcelona": [
     {
+     "player": "Xavi Espart",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión de tobillo · Baja hasta mediados de diciembre"
+    },
+    {
      "player": "Andreas Christensen",
      "status": "out",
      "reason": "injury",
@@ -7369,12 +7346,6 @@
      "status": "out",
      "reason": "injury",
      "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediadios de noviembre"
-    },
-    {
-     "player": "Xavi Espart",
-     "status": "doubtful",
-     "reason": "injury",
-     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
     },
     {
      "player": "Jules Koundé",
@@ -7447,13 +7418,14 @@
       "usual": true
      },
      {
-      "name": "Xavi Espart",
-      "pos": "RB",
+      "name": "João Cancelo",
+      "pos": "LB",
       "role": "D",
-      "imp": 0.8,
-      "att": 0.26,
-      "absent": "doubtful",
-      "usual": true
+      "imp": 0.3,
+      "att": 0.36,
+      "absent": null,
+      "usual": false,
+      "replaces": "Xavi Espart"
      },
      {
       "name": "Pedri",
@@ -7483,11 +7455,11 @@
       "usual": true
      },
      {
-      "name": "João Cancelo",
-      "pos": "LB",
+      "name": "Álvaro Cortés",
+      "pos": "SUB",
       "role": "D",
-      "imp": 0.3,
-      "att": 0.36,
+      "imp": 0.0,
+      "att": 0.25,
       "absent": null,
       "usual": false,
       "replaces": "Eric García"
@@ -7513,6 +7485,13 @@
     ],
     "out": [
      {
+      "name": "Xavi Espart",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión de tobillo · Baja hasta mediados de diciembre",
+      "imp": 0.8
+     },
+     {
       "name": "Andreas Christensen",
       "status": "out",
       "reason": "injury",
@@ -7532,13 +7511,6 @@
       "reason": "injury",
       "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediadios de noviembre",
       "imp": 0.3
-     },
-     {
-      "name": "Xavi Espart",
-      "status": "doubtful",
-      "reason": "injury",
-      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11",
-      "imp": 0.8
      },
      {
       "name": "Jules Koundé",
@@ -7681,51 +7653,52 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.7414,
-   "p_over_model": 0.7414,
+   "p_over": 0.7426,
+   "p_over_model": 0.7426,
    "p_over_market": null,
-   "p_btts": 0.5522
+   "market_src": null,
+   "p_btts": 0.5584
   },
   "odds_market": null,
   "markets": {
    "double_chance": {
     "1X": 0.9633,
-    "X2": 0.1384,
-    "12": 0.8983
+    "X2": 0.1381,
+    "12": 0.8986
    },
    "draw_no_bet": {
-    "1": 0.9591,
-    "2": 0.0409
+    "1": 0.9592,
+    "2": 0.0408
    },
    "totals": {
-    "0.5": 0.969,
-    "1.5": 0.8723,
-    "2.5": 0.6893,
-    "3.5": 0.4752,
-    "4.5": 0.2849
+    "0.5": 0.9692,
+    "1.5": 0.8729,
+    "2.5": 0.6904,
+    "3.5": 0.4765,
+    "4.5": 0.2861
    },
    "team_totals": {
     "home": {
-     "0.5": 0.9513,
-     "1.5": 0.8042,
-     "2.5": 0.5818
+     "0.5": 0.9516,
+     "1.5": 0.8049,
+     "2.5": 0.5829
     },
     "away": {
-     "0.5": 0.4132,
-     "1.5": 0.1004,
-     "2.5": 0.017
+     "0.5": 0.4137,
+     "1.5": 0.1007,
+     "2.5": 0.0171
     }
    },
-   "btts": 0.3955,
+   "btts": 0.3962,
    "clean_sheet": {
-    "home": 0.5868,
-    "away": 0.0487
+    "home": 0.5863,
+    "away": 0.0484
    },
    "margin": {
-    "home3+": 0.4704,
-    "home2": 0.2163,
-    "home1": 0.1749,
-    "draw": 0.1017,
+    "home3+": 0.4713,
+    "home2": 0.2161,
+    "home1": 0.1745,
+    "draw": 0.1014,
     "away1": 0.0288,
     "away2": 0.0067,
     "away3+": 0.0012
@@ -7733,11 +7706,11 @@
    "exact": [
     {
      "score": "3-0",
-     "p": 0.1315
+     "p": 0.1314
     },
     {
      "score": "2-0",
-     "p": 0.1305
+     "p": 0.1302
     },
     {
      "score": "4-0",
@@ -7745,207 +7718,207 @@
     },
     {
      "score": "1-0",
-     "p": 0.0839
+     "p": 0.0835
     },
     {
      "score": "3-1",
-     "p": 0.0701
+     "p": 0.0702
     },
     {
      "score": "2-1",
-     "p": 0.0696
+     "p": 0.0695
     },
     {
      "score": "5-0",
-     "p": 0.0601
+     "p": 0.0602
     },
     {
      "score": "4-1",
-     "p": 0.053
+     "p": 0.0531
     }
    ],
    "asian": {
     "-2.5": {
-     "win": 0.4704,
+     "win": 0.4713,
      "push": 0.0,
-     "lose": 0.5296,
-     "fair_home": 2.126,
-     "fair_away": 1.888
+     "lose": 0.5287,
+     "fair_home": 2.122,
+     "fair_away": 1.891
     },
     "-2.25": {
-     "win": 0.4704,
-     "push": 0.1082,
-     "lose": 0.4215,
-     "fair_home": 1.896,
-     "fair_away": 2.116
+     "win": 0.4713,
+     "push": 0.1081,
+     "lose": 0.4207,
+     "fair_home": 1.893,
+     "fair_away": 2.12
     },
     "-2.0": {
-     "win": 0.4704,
-     "push": 0.2163,
-     "lose": 0.3133,
-     "fair_home": 1.666,
-     "fair_away": 2.501
+     "win": 0.4713,
+     "push": 0.2161,
+     "lose": 0.3126,
+     "fair_home": 1.663,
+     "fair_away": 2.507
     },
     "-1.75": {
-     "win": 0.5785,
-     "push": 0.1082,
-     "lose": 0.3133,
-     "fair_home": 1.542,
-     "fair_away": 2.847
+     "win": 0.5793,
+     "push": 0.1081,
+     "lose": 0.3126,
+     "fair_home": 1.54,
+     "fair_away": 2.853
     },
     "-1.5": {
-     "win": 0.6867,
+     "win": 0.6874,
      "push": 0.0,
-     "lose": 0.3133,
-     "fair_home": 1.456,
-     "fair_away": 3.192
+     "lose": 0.3126,
+     "fair_home": 1.455,
+     "fair_away": 3.199
     },
     "-1.25": {
-     "win": 0.6867,
-     "push": 0.0874,
-     "lose": 0.2259,
-     "fair_home": 1.329,
-     "fair_away": 4.04
+     "win": 0.6874,
+     "push": 0.0872,
+     "lose": 0.2254,
+     "fair_home": 1.328,
+     "fair_away": 4.05
     },
     "-1.0": {
-     "win": 0.6867,
-     "push": 0.1749,
-     "lose": 0.1384,
-     "fair_home": 1.202,
-     "fair_away": 5.96
+     "win": 0.6874,
+     "push": 0.1745,
+     "lose": 0.1381,
+     "fair_home": 1.201,
+     "fair_away": 5.976
     },
     "-0.75": {
-     "win": 0.7741,
-     "push": 0.0874,
-     "lose": 0.1384,
-     "fair_home": 1.179,
-     "fair_away": 6.592
+     "win": 0.7746,
+     "push": 0.0872,
+     "lose": 0.1381,
+     "fair_home": 1.178,
+     "fair_away": 6.608
     },
     "-0.5": {
-     "win": 0.8616,
+     "win": 0.8619,
      "push": 0.0,
-     "lose": 0.1384,
-     "fair_home": 1.161,
-     "fair_away": 7.223
+     "lose": 0.1381,
+     "fair_home": 1.16,
+     "fair_away": 7.24
     },
     "-0.25": {
-     "win": 0.8616,
-     "push": 0.0508,
-     "lose": 0.0876,
-     "fair_home": 1.102,
-     "fair_away": 10.836
+     "win": 0.8619,
+     "push": 0.0507,
+     "lose": 0.0874,
+     "fair_home": 1.101,
+     "fair_away": 10.86
     },
     "0.0": {
-     "win": 0.8616,
-     "push": 0.1017,
+     "win": 0.8619,
+     "push": 0.1014,
      "lose": 0.0367,
      "fair_home": 1.043,
-     "fair_away": 24.446
+     "fair_away": 24.489
     },
     "0.25": {
-     "win": 0.9124,
-     "push": 0.0508,
+     "win": 0.9126,
+     "push": 0.0507,
      "lose": 0.0367,
      "fair_home": 1.04,
-     "fair_away": 25.83
+     "fair_away": 25.871
     },
     "0.5": {
      "win": 0.9633,
      "push": 0.0,
      "lose": 0.0367,
      "fair_home": 1.038,
-     "fair_away": 27.214
+     "fair_away": 27.253
     },
     "0.75": {
      "win": 0.9633,
      "push": 0.0144,
      "lose": 0.0223,
      "fair_home": 1.023,
-     "fair_away": 44.118
+     "fair_away": 44.174
     },
     "1.0": {
      "win": 0.9633,
      "push": 0.0288,
      "lose": 0.0079,
      "fair_home": 1.008,
-     "fair_away": 122.412
+     "fair_away": 122.455
     },
     "1.25": {
      "win": 0.9777,
      "push": 0.0144,
      "lose": 0.0079,
      "fair_home": 1.008,
-     "fair_away": 124.228
+     "fair_away": 124.268
     },
     "1.5": {
      "win": 0.9921,
      "push": 0.0,
      "lose": 0.0079,
      "fair_home": 1.008,
-     "fair_away": 126.044
+     "fair_away": 126.081
     }
    },
    "half_time": {
-    "1": 0.6569,
-    "X": 0.2791,
+    "1": 0.6573,
+    "X": 0.2787,
     "2": 0.064,
-    "over_0.5": 0.7914,
-    "over_1.5": 0.4645
+    "over_0.5": 0.792,
+    "over_1.5": 0.4654
    },
    "ht_ft": {
-    "1/1": 0.6358,
-    "1/X": 0.0184,
+    "1/1": 0.6363,
+    "1/X": 0.0183,
     "1/2": 0.0027,
-    "X/1": 0.2024,
-    "X/X": 0.06,
+    "X/1": 0.2022,
+    "X/X": 0.0598,
     "X/2": 0.0167,
     "2/1": 0.0259,
-    "2/X": 0.0184,
+    "2/X": 0.0183,
     "2/2": 0.0197
    },
    "quinigol": {
     "home": [
-     0.0487,
-     0.1471,
-     0.2224,
-     0.5818
+     0.0484,
+     0.1466,
+     0.222,
+     0.5829
     ],
     "away": [
-     0.5868,
-     0.3128,
-     0.0834,
-     0.017
+     0.5863,
+     0.3131,
+     0.0836,
+     0.0171
     ],
     "joint": [
      [
-      0.031,
-      0.0128,
-      0.0041,
+      0.0308,
+      0.0127,
+      0.004,
       0.0008
      ],
      [
-      0.0839,
-      0.0485,
+      0.0835,
+      0.0483,
       0.0123,
       0.0025
      ],
      [
-      0.1305,
-      0.0696,
-      0.0185,
+      0.1302,
+      0.0695,
+      0.0186,
       0.0038
      ],
      [
-      0.3414,
-      0.182,
-      0.0485,
-      0.0099
+      0.3417,
+      0.1825,
+      0.0487,
+      0.01
      ]
     ]
    },
    "goals": [
-    3.023,
-    0.533
+    3.028,
+    0.534
    ]
   },
   "espn_id": "401882822",
@@ -7953,12 +7926,12 @@
    "home": [
     {
      "name": "Raphinha",
-     "p": 0.529,
+     "p": 0.528,
      "xg90": 0.98
     },
     {
      "name": "Lamine Yamal",
-     "p": 0.41,
+     "p": 0.409,
      "xg90": 0.66
     },
     {
@@ -7968,7 +7941,7 @@
     },
     {
      "name": "Fermín López",
-     "p": 0.277,
+     "p": 0.276,
      "xg90": 0.41
     },
     {
@@ -7980,27 +7953,27 @@
    "away": [
     {
      "name": "Lucas Boyé",
-     "p": 0.202,
+     "p": 0.205,
      "xg90": 0.46
     },
     {
      "name": "Toni Martínez",
-     "p": 0.189,
+     "p": 0.192,
      "xg90": 0.42
     },
     {
      "name": "Pablo Ibáñez",
-     "p": 0.072,
+     "p": 0.074,
      "xg90": 0.15
     },
     {
      "name": "Ángel Pérez",
-     "p": 0.07,
+     "p": 0.071,
      "xg90": 0.13
     },
     {
      "name": "Ville Koski",
-     "p": 0.052,
+     "p": 0.053,
      "xg90": 0.1
     }
    ]
@@ -8041,8 +8014,8 @@
      "att": 0.26,
      "goals": 1,
      "minutes": 655,
-     "status": "duda",
-     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 11"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión de tobillo · Baja hasta mediados de diciembre"
     },
     {
      "name": "Pau Cubarsí",
@@ -8596,22 +8569,22 @@
      {
       "name": "Fermín López",
       "yellows": 3,
-      "p": 0.24
+      "p": 0.235
      },
      {
       "name": "João Cancelo",
       "yellows": 1,
-      "p": 0.182
+      "p": 0.178
      },
      {
       "name": "Lamine Yamal",
       "yellows": 2,
-      "p": 0.146
+      "p": 0.143
      },
      {
-      "name": "Rodri",
-      "yellows": 1,
-      "p": 0.12
+      "name": "Álvaro Cortés",
+      "yellows": 0,
+      "p": 0.136
      }
     ],
     "away": [
@@ -8644,8 +8617,8 @@
     0.8
    ],
    "xg_adj": [
-    3.0,
-    0.86
+    2.99,
+    0.88
    ],
    "p_full": [
     0.8142,
@@ -8653,37 +8626,37 @@
     0.0645
    ],
    "p_adj": [
-    0.7984,
-    0.1282,
-    0.0735
+    0.7942,
+    0.1299,
+    0.0759
    ]
   },
   "movement": {
    "home": "Barcelona",
    "away": "Alaves",
    "date": "2026-10-31",
-   "from_ts": "2026-10-25T20:05:46.256661+00:00",
-   "to_ts": "2026-10-26T12:23:29.011916+00:00",
+   "from_ts": "2026-10-26T12:23:29.011916+00:00",
+   "to_ts": "2026-10-26T12:58:34.352867+00:00",
    "p_from": [
-    0.8766,
-    0.0917,
-    0.0317
-   ],
-   "p_to": [
     0.8684,
     0.0964,
     0.0352
    ],
+   "p_to": [
+    0.8657,
+    0.0981,
+    0.0362
+   ],
    "delta_pts": [
-    -0.8,
-    0.5,
-    0.4
+    -0.3,
+    0.2,
+    0.1
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T13:00:00+00:00",
@@ -8705,7 +8678,7 @@
     0.3713
    ],
    "volume": 132,
-   "liquidity": 28869,
+   "liquidity": 29276,
    "url": "https://polymarket.com/event/lal-get-sev-2026-11-01",
    "slug": "lal-get-sev-2026-11-01",
    "overround": 0.01,
@@ -8725,15 +8698,15 @@
    "top_scores": [
     [
      "1-1",
-     0.14235239763272017
+     0.14235239763275456
     ],
     [
      "0-0",
-     0.1379097582141529
+     0.1379097582135784
     ],
     [
      "1-0",
-     0.12998100547157504
+     0.12998100547106972
     ]
    ]
   },
@@ -9109,6 +9082,7 @@
    "p_over": 0.3327,
    "p_over_model": 0.3327,
    "p_over_market": null,
+   "market_src": null,
    "p_btts": 0.4144
   },
   "odds_market": null,
@@ -10226,32 +10200,10 @@
     0.3236
    ]
   },
-  "movement": {
-   "home": "Getafe",
-   "away": "Sevilla",
-   "date": "2026-11-01",
-   "from_ts": "2026-10-25T20:05:46.256661+00:00",
-   "to_ts": "2026-10-26T12:23:29.011916+00:00",
-   "p_from": [
-    0.3718,
-    0.3167,
-    0.3115
-   ],
-   "p_to": [
-    0.3679,
-    0.3176,
-    0.3145
-   ],
-   "delta_pts": [
-    -0.4,
-    0.1,
-    0.3
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T15:15:00+00:00",
@@ -10272,13 +10224,13 @@
     0.12,
     0.79
    ],
-   "volume": 6426,
-   "liquidity": 36010,
+   "volume": 6432,
+   "liquidity": 34166,
    "url": "https://polymarket.com/event/lal-rrc-rea-2026-11-01",
    "slug": "lal-rrc-rea-2026-11-01",
    "overround": 0.0,
    "used": false,
-   "reason": "poco volumen (6.426 $)",
+   "reason": "poco volumen (6.432 $)",
    "model_weight": null,
    "more": {}
   },
@@ -10293,15 +10245,15 @@
    "top_scores": [
     [
      "1-3",
-     0.08172823843574768
+     0.081728238435717
     ],
     [
      "1-2",
-     0.08018716324843496
+     0.08018716324798265
     ],
     [
      "0-3",
-     0.07208169769407767
+     0.07208169769400388
     ]
    ]
   },
@@ -10650,6 +10602,7 @@
    "p_over": 0.7886,
    "p_over_model": 0.7886,
    "p_over_market": null,
+   "market_src": null,
    "p_btts": 0.6491
   },
   "odds_market": null,
@@ -11658,32 +11611,10 @@
     0.7544
    ]
   },
-  "movement": {
-   "home": "Santander",
-   "away": "Real Madrid",
-   "date": "2026-11-01",
-   "from_ts": "2026-10-25T20:05:46.256661+00:00",
-   "to_ts": "2026-10-26T12:23:29.011916+00:00",
-   "p_from": [
-    0.1028,
-    0.156,
-    0.7412
-   ],
-   "p_to": [
-    0.0985,
-    0.1521,
-    0.7495
-   ],
-   "delta_pts": [
-    -0.4,
-    -0.4,
-    0.8
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T17:30:00+00:00",
@@ -11705,7 +11636,7 @@
     0.3383
    ],
    "volume": 128,
-   "liquidity": 28482,
+   "liquidity": 30017,
    "url": "https://polymarket.com/event/lal-elc-val-2026-11-01",
    "slug": "lal-elc-val-2026-11-01",
    "overround": 0.005,
@@ -11725,15 +11656,15 @@
    "top_scores": [
     [
      "1-1",
-     0.12440179594335976
+     0.12440179594316267
     ],
     [
      "1-0",
-     0.10826518781043284
+     0.10826518781004958
     ],
     [
      "2-1",
-     0.09537015489726855
+     0.09537015489737193
     ]
    ]
   },
@@ -12107,6 +12038,7 @@
    "p_over": 0.4931,
    "p_over_model": 0.4931,
    "p_over_market": null,
+   "market_src": null,
    "p_btts": 0.5217
   },
   "odds_market": null,
@@ -13097,32 +13029,10 @@
     0.2358
    ]
   },
-  "movement": {
-   "home": "Elche",
-   "away": "Valencia",
-   "date": "2026-11-01",
-   "from_ts": "2026-10-25T20:05:46.256661+00:00",
-   "to_ts": "2026-10-26T12:23:29.011916+00:00",
-   "p_from": [
-    0.5051,
-    0.2584,
-    0.2365
-   ],
-   "p_to": [
-    0.5041,
-    0.2593,
-    0.2366
-   ],
-   "delta_pts": [
-    -0.1,
-    0.1,
-    0.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-11-01",
   "kickoff_utc": "2026-11-01T20:00:00+00:00",
@@ -13144,7 +13054,7 @@
     0.28
    ],
    "volume": 260,
-   "liquidity": 28875,
+   "liquidity": 28871,
    "url": "https://polymarket.com/event/lal-bil-rso-2026-11-01",
    "slug": "lal-bil-rso-2026-11-01",
    "overround": 0.0,
@@ -13164,15 +13074,15 @@
    "top_scores": [
     [
      "1-1",
-     0.12055835139374248
+     0.1205583513934253
     ],
     [
      "2-1",
-     0.09385955306921487
+     0.09385955306926175
     ],
     [
      "1-0",
-     0.08730002114844009
+     0.08730002114786008
     ]
    ]
   },
@@ -13520,6 +13430,7 @@
    "p_over": 0.546,
    "p_over_model": 0.546,
    "p_over_market": null,
+   "market_src": null,
    "p_btts": 0.5755
   },
   "odds_market": null,
@@ -14530,7 +14441,7 @@
   "movement": null
  },
  {
-  "generated_at": "2026-10-26T12:23:29.011916+00:00",
+  "generated_at": "2026-10-26T12:58:34.352867+00:00",
   "season": 2026,
   "date": "2026-11-02",
   "kickoff_utc": "2026-11-02T20:00:00+00:00",
@@ -14552,7 +14463,7 @@
     0.2626
    ],
    "volume": 52,
-   "liquidity": 20751,
+   "liquidity": 20815,
    "url": "https://polymarket.com/event/lal-dep-osa-2026-11-02",
    "slug": "lal-dep-osa-2026-11-02",
    "overround": -0.01,
@@ -14572,15 +14483,15 @@
    "top_scores": [
     [
      "1-1",
-     0.13111356055969098
+     0.1311135605596993
     ],
     [
      "1-0",
-     0.10668985610952805
+     0.10668985610918183
     ],
     [
      "2-1",
-     0.09036100495524635
+     0.09036100495521628
     ]
    ]
   },
@@ -14941,6 +14852,7 @@
    "p_over": 0.469,
    "p_over_model": 0.469,
    "p_over_market": null,
+   "market_src": null,
    "p_btts": 0.5172
   },
   "odds_market": null,
@@ -15960,28 +15872,6 @@
     0.2794
    ]
   },
-  "movement": {
-   "home": "La Coruna",
-   "away": "Osasuna",
-   "date": "2026-11-02",
-   "from_ts": "2026-10-25T14:08:15.381588+00:00",
-   "to_ts": "2026-10-26T12:23:29.011916+00:00",
-   "p_from": [
-    0.5063,
-    0.2686,
-    0.2251
-   ],
-   "p_to": [
-    0.4844,
-    0.2952,
-    0.2203
-   ],
-   "delta_pts": [
-    -2.2,
-    2.7,
-    -0.5
-   ],
-   "important": false
-  }
+  "movement": null
  }
 ]

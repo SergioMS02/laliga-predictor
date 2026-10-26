@@ -1,6 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-26 12:23 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-10-26 12:58 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Sevilla – Osasuna (2026-10-26)
 
@@ -19,7 +19,7 @@ Actualizado: 2026-10-26 12:23 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Villarreal – Espanol (2026-10-30)
 
-1 ▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂ · 2 ▁▁▁▁▁▁▁
+1 ▆▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂▂ · 2 ▁▁▁▁▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -30,6 +30,7 @@ Actualizado: 2026-10-26 12:23 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 20:39 | 65% | 23% | 12% |  |
 | 25/10 21:05 | 69% | 20% | 11% |  |
 | 26/10 13:23 | 70% | 20% | 11% |  |
+| 26/10 13:58 | 69% | 20% | 11% |  |
 
 ## Levante – Ath Madrid (2026-10-31)
 
@@ -76,7 +77,7 @@ Actualizado: 2026-10-26 12:23 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Barcelona – Alaves (2026-10-31)
 
-1 ███▇▇█▇█▇ · X ▁▁▁▁▁▁▁▁▁ · 2 ▁▁▁▁▁▁▁▁▁
+1 ███▇▇█▇█▇▇ · X ▁▁▁▁▁▁▁▁▁▁ · 2 ▁▁▁▁▁▁▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -89,6 +90,7 @@ Actualizado: 2026-10-26 12:23 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 20:39 | 87% | 10% | 3% |  |
 | 25/10 21:05 | 88% | 9% | 3% |  |
 | 26/10 13:23 | 87% | 10% | 4% |  |
+| 26/10 13:58 | 87% | 10% | 4% |  |
 
 **Cambios importantes**
 
