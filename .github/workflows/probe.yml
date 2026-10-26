@@ -9,22 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: main, path: mainrepo }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q -e mainrepo
       - run: |
-          mkdir -p raw14
-          python3 - <<'PY' > raw14/out.txt 2>&1 || true
-          import requests, json, re
-          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36"
-          for u in ["https://static.dataradar.es/marcador/json/partidos_quinigol.json", "https://static.dataradar.es/marcador/json/partidos_quiniela.json"]:
-              r = s.get(u, timeout=30); print("URL", u, r.status_code, r.headers.get("access-control-allow-origin")); print(r.text[:3000])
-          r = s.get("https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard", params={"dates": "20261025"}, timeout=30).json()
-          c = r["events"][0]["competitions"][0]["competitors"][0]
-          print("ESPN stats names", [x.get("name") for x in c.get("statistics", [])])
-          print(json.dumps(c.get("statistics", [])[:20])[:1500])
-          # eduardolosilla quinigol api guesses
-          for u in ["https://www.eduardolosilla.es/api/v1/quinigol/jornada", "https://api.eduardolosilla.es/quinigol", "https://www.combinacionganadora.com/quinigol/resultados/"]:
-              try:
-                  r = s.get(u, timeout=20); print("URL", u, r.status_code, r.text[:300].replace("\n"," "))
-              except Exception as ex: print("URL", u, ex)
+          mkdir -p raw15
+          cd mainrepo
+          python - <<'PY' > ../raw15/out.txt 2>&1 || true
+          from laliga.config import load_settings
+          from laliga.data import news
+          s = load_settings()
+          for t in ["Barcelona", "Sevilla"]:
+              items = news.fetch_team_news(s, t)
+              print(t, len(items), [i.title[:70] for i in items[:3]])
           PY
+          cd ..
           git config user.name probe; git config user.email probe@example.com
-          git add raw14; git commit -qm probe-out14; git push origin HEAD:probe
+          git add raw15; git commit -qm probe-out15; git push origin HEAD:probe
