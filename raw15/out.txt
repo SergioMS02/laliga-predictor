@@ -1,0 +1,2 @@
+Barcelona 15 ['Comunicado médico de Xavi Espart - FC Barcelona', 'Fede Valverde jugó lesionado 40 minutos contra el FC Barcelona en el C', 'Espart, siete semanas de baja - Mundo Deportivo']
+Sevilla 15 ['Alineaciones probables del Sevilla - Osasuna de LaLiga EA Sports 2026-', 'LISTA DE 25 JUGADORES CON STASSIN, GURIDI Y KOCHORASHVILI - Sevilla FC', 'Se confirman las dos primeras bajas para el Getafe CF-Sevilla FC - Dia']
