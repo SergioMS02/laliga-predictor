@@ -1,0 +1,174 @@
+mains ['lal-ray-bil-2026-10-10', 'lal-sev-osa-2026-10-26', 'lal-vil-esp-2026-10-30', 'lal-lev-mad-2026-10-31', 'lal-ray-cel-2026-10-31', 'lal-bet-mala-2026-10-31', 'lal-bar-ala-2026-10-31', 'lal-get-sev-2026-11-01', 'lal-rrc-rea-2026-11-01', 'lal-elc-val-2026-11-01', 'lal-bil-rso-2026-11-01', 'lal-dep-osa-2026-11-02']
+
+== lal-ray-bil-2026-10-10 Rayo Vallecano de Madrid vs. Athletic Club 1001531 3
+   'Rayo Vallecano de Madrid' | Will Rayo Vallecano de Madrid win on 2026-10-10? | ["Yes", "No"] ["0.32", "0.68"] 206436 moneyline None
+   'Draw (Rayo Vallecano de Madrid vs. Athletic Club)' | Will Rayo Vallecano de Madrid vs. Athletic Club end in a draw? | ["Yes", "No"] ["0.315", "0.685"] 30121 moneyline None
+   'Athletic Club' | Will Athletic Club win on 2026-10-10? | ["Yes", "No"] ["0.45", "0.55"] 764974 moneyline None
+
+== lal-ray-bil-2026-10-10-halftime-result Rayo Vallecano de Madrid vs. Athletic Club - Halftime Result 31932 3
+   'Rayo Vallecano de Madrid' | Rayo Vallecano de Madrid leading at halftime? | ["Yes", "No"] ["0.32", "0.68"] 17168 soccer_halftime_result None
+   'Draw' | Rayo Vallecano de Madrid vs. Athletic Club: Draw at halftime? | ["Yes", "No"] ["0.37", "0.63"] 6739 soccer_halftime_result None
+   'Athletic Club' | Athletic Club leading at halftime? | ["Yes", "No"] ["0.56", "0.44"] 8025 soccer_halftime_result None
+
+== lal-ray-bil-2026-10-10-exact-score Rayo Vallecano de Madrid vs. Athletic Club - Exact Score 16653 37
+   'Rayo Vallecano de Madrid 0 - 0 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 0 - 0 Athletic Club? | ["Yes", "No"] ["0.245", "0.755"] 1387 soccer_exact_score None
+   'Rayo Vallecano de Madrid 0 - 1 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 0 - 1 Athletic Club? | ["Yes", "No"] ["0.505", "0.495"] 1905 soccer_exact_score None
+   'Rayo Vallecano de Madrid 1 - 0 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 1 - 0 Athletic Club? | ["Yes", "No"] ["0.505", "0.495"] 646 soccer_exact_score None
+   'Rayo Vallecano de Madrid 0 - 2 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 0 - 2 Athletic Club? | ["Yes", "No"] ["0.501", "0.499"] 369 soccer_exact_score None
+   'Rayo Vallecano de Madrid 1 - 1 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 1 - 1 Athletic Club? | ["Yes", "No"] ["0.505", "0.495"] 644 soccer_exact_score None
+   'Rayo Vallecano de Madrid 2 - 0 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 2 - 0 Athletic Club? | ["Yes", "No"] ["0.501", "0.499"] 702 soccer_exact_score None
+   'Rayo Vallecano de Madrid 0 - 3 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 0 - 3 Athletic Club? | ["Yes", "No"] ["0.2495", "0.7505"] 5075 soccer_exact_score None
+   'Rayo Vallecano de Madrid 1 - 2 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 1 - 2 Athletic Club? | ["Yes", "No"] ["0.505", "0.495"] 398 soccer_exact_score None
+   'Rayo Vallecano de Madrid 2 - 1 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 2 - 1 Athletic Club? | ["Yes", "No"] ["0.505", "0.495"] 197 soccer_exact_score None
+   'Rayo Vallecano de Madrid 3 - 0 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 3 - 0 Athletic Club? | ["Yes", "No"] ["0.5005", "0.4995"] 99 soccer_exact_score None
+   'Rayo Vallecano de Madrid 0 - 4 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 0 - 4 Athletic Club? | ["Yes", "No"] ["0.501", "0.499"] 598 soccer_exact_score None
+   'Rayo Vallecano de Madrid 1 - 3 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 1 - 3 Athletic Club? | ["Yes", "No"] ["0.501", "0.499"] 1648 soccer_exact_score None
+   'Rayo Vallecano de Madrid 2 - 2 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 2 - 2 Athletic Club? | ["Yes", "No"] ["0.501", "0.499"] 768 soccer_exact_score None
+   'Rayo Vallecano de Madrid 3 - 1 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 3 - 1 Athletic Club? | ["Yes", "No"] ["0.0505", "0.9495"] 78 soccer_exact_score None
+   'Rayo Vallecano de Madrid 4 - 0 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 4 - 0 Athletic Club? | ["Yes", "No"] ["0.05", "0.95"] 136 soccer_exact_score None
+   'Rayo Vallecano de Madrid 0 - 5 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 0 - 5 Athletic Club? | ["Yes", "No"] ["0.05", "0.95"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 1 - 4 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 1 - 4 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 2 - 3 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 2 - 3 Athletic Club? | ["Yes", "No"] ["0.025", "0.975"] 108 soccer_exact_score None
+   'Rayo Vallecano de Madrid 3 - 2 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 3 - 2 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 40 soccer_exact_score None
+   'Rayo Vallecano de Madrid 4 - 1 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 4 - 1 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 5 - 0 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 5 - 0 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 1 - 5 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 1 - 5 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 2 - 4 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 2 - 4 Athletic Club? | ["Yes", "No"] ["0.025", "0.975"] 111 soccer_exact_score None
+   'Rayo Vallecano de Madrid 3 - 3 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 3 - 3 Athletic Club? | ["Yes", "No"] ["0.5005", "0.4995"] 1395 soccer_exact_score None
+   'Rayo Vallecano de Madrid 4 - 2 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 4 - 2 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 143 soccer_exact_score None
+   'Rayo Vallecano de Madrid 5 - 1 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 5 - 1 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 2 - 5 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 2 - 5 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 3 - 4 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 3 - 4 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 4 - 3 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 4 - 3 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 5 - 2 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 5 - 2 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 3 - 5 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 3 - 5 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 4 - 4 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 4 - 4 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 208 soccer_exact_score None
+   'Rayo Vallecano de Madrid 5 - 3 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 5 - 3 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 4 - 5 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 4 - 5 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 5 - 4 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 5 - 4 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Rayo Vallecano de Madrid 5 - 5 Athletic Club' | Exact Score: Rayo Vallecano de Madrid 5 - 5 Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_exact_score None
+   'Any Other Score' | Exact Score: Any Other Score? | ["Yes", "No"] ["0.025", "0.975"] 0 soccer_exact_score None
+
+== lal-ray-bil-2026-10-10-first-to-score Rayo Vallecano de Madrid vs. Athletic Club - First Team to Score 62 3
+   'Rayo Vallecano de Madrid' | Rayo Vallecano de Madrid to score first vs. Athletic Club? | ["Yes", "No"] ["0.5", "0.5"] 5 soccer_first_to_score None
+   'Athletic Club' | Athletic Club to score first vs. Rayo Vallecano de Madrid? | ["Yes", "No"] ["0.5", "0.5"] 5 soccer_first_to_score None
+   'Neither' | Rayo Vallecano de Madrid vs. Athletic Club: Neither team to score first? | ["Yes", "No"] ["0.5", "0.5"] 52 soccer_first_to_score None
+
+== lal-ray-bil-2026-10-10-total-corners Rayo Vallecano de Madrid vs. Athletic Club - Total Corners 12822 23
+   'Total Corners: O/U 7.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 7.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 168 total_corners 7.5
+   'Total Corners: O/U 8.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 8.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 275 total_corners 8.5
+   'Total Corners: O/U 9.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 9.5 Total Corners | ["Over", "Under"] ["0.275", "0.725"] 854 total_corners 9.5
+   'Total Corners: O/U 10.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 10.5 Total Corners | ["Over", "Under"] ["0.505", "0.495"] 11147 total_corners 10.5
+   'Total Corners: O/U 11.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 11.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 130 total_corners 11.5
+   'Total Corners: O/U 12.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 12.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 0 total_corners 12.5
+   'Total Corners: O/U 13.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 13.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 0 total_corners 13.5
+   '1st Half Total Corners: O/U 3.5' | Rayo Vallecano de Madrid vs. Athletic Club: 1st Half O/U 3.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_first_half_total_corners 3.5
+   '1st Half Total Corners: O/U 4.5' | Rayo Vallecano de Madrid vs. Athletic Club: 1st Half O/U 4.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_first_half_total_corners 4.5
+   '1st Half Total Corners: O/U 5.5' | Rayo Vallecano de Madrid vs. Athletic Club: 1st Half O/U 5.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_first_half_total_corners 5.5
+   '2nd Half Total Corners: O/U 3.5' | Rayo Vallecano de Madrid vs. Athletic Club: 2nd Half O/U 3.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_second_half_total_corners 3.5
+   '2nd Half Total Corners: O/U 4.5' | Rayo Vallecano de Madrid vs. Athletic Club: 2nd Half O/U 4.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_second_half_total_corners 4.5
+   '2nd Half Total Corners: O/U 5.5' | Rayo Vallecano de Madrid vs. Athletic Club: 2nd Half O/U 5.5 Total Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_second_half_total_corners 5.5
+   'Rayo Vallecano de Madrid Corners: O/U 2.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 2.5 Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_team_total_corners 2.5
+   'Rayo Vallecano de Madrid Corners: O/U 3.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 3.5 Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_team_total_corners 3.5
+   'Rayo Vallecano de Madrid Corners: O/U 4.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 4.5 Corners | ["Over", "Under"] ["0.5", "0.5"] 12 soccer_team_total_corners 4.5
+   'Rayo Vallecano de Madrid Corners: O/U 5.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 5.5 Corners | ["Over", "Under"] ["0.5", "0.5"] 13 soccer_team_total_corners 5.5
+   'Athletic Club Corners: O/U 2.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 2.5 Corners | ["Over", "Under"] ["0.5", "0.5"] 5 soccer_team_total_corners 2.5
+   'Athletic Club Corners: O/U 3.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 3.5 Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_team_total_corners 3.5
+   'Athletic Club Corners: O/U 4.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 4.5 Corners | ["Over", "Under"] ["0.5", "0.5"] 218 soccer_team_total_corners 4.5
+   'Athletic Club Corners: O/U 5.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 5.5 Corners | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_team_total_corners 5.5
+   'Total Corners: Odd or Even' | Rayo Vallecano de Madrid vs. Athletic Club: Total Corners Odd or Even? | ["Odd", "Even"] ["0.5", "0.5"] 0 soccer_game_corners_odd_even None
+   'Team to Take First Corner' | Rayo Vallecano de Madrid vs. Athletic Club: Team to Take First Corner | ["Rayo Vallecano de Madrid", "Athletic Club"] ["0.5", "0.5"] 0 soccer_first_corner None
+
+== lal-ray-bil-2026-10-10-more-markets Rayo Vallecano de Madrid vs. Athletic Club - More Markets 307658 68
+   'Rayo Vallecano de Madrid (-1.5)' | Spread: Rayo Vallecano de Madrid (-1.5) | ["Rayo Vallecano de Madrid", "Athletic Club"] ["0.285", "0.715"] 1991 spreads -1.5
+   'Athletic Club (-1.5)' | Spread: Athletic Club (-1.5) | ["Athletic Club", "Rayo Vallecano de Madrid"] ["0.28", "0.72"] 3829 spreads -1.5
+   'Rayo Vallecano de Madrid (-2.5)' | Spread: Rayo Vallecano de Madrid (-2.5) | ["Rayo Vallecano de Madrid", "Athletic Club"] ["0.5", "0.5"] 86 spreads -2.5
+   'Athletic Club (-2.5)' | Spread: Athletic Club (-2.5) | ["Athletic Club", "Rayo Vallecano de Madrid"] ["0.5", "0.5"] 196 spreads -2.5
+   'Rayo Vallecano de Madrid (-3.5)' | Spread: Rayo Vallecano de Madrid (-3.5) | ["Rayo Vallecano de Madrid", "Athletic Club"] ["0.5", "0.5"] 0 spreads -3.5
+   'Athletic Club (-3.5)' | Spread: Athletic Club (-3.5) | ["Athletic Club", "Rayo Vallecano de Madrid"] ["0.5", "0.5"] 0 spreads -3.5
+   'Rayo Vallecano de Madrid (-4.5)' | Spread: Rayo Vallecano de Madrid (-4.5) | ["Rayo Vallecano de Madrid", "Athletic Club"] ["0.5", "0.5"] 0 spreads -4.5
+   'Athletic Club (-4.5)' | Spread: Athletic Club (-4.5) | ["Athletic Club", "Rayo Vallecano de Madrid"] ["0.5", "0.5"] 0 spreads -4.5
+   'Rayo Vallecano de Madrid (-5.5)' | Spread: Rayo Vallecano de Madrid (-5.5) | ["Rayo Vallecano de Madrid", "Athletic Club"] ["0.5", "0.5"] 0 spreads -5.5
+   'Athletic Club (-5.5)' | Spread: Athletic Club (-5.5) | ["Athletic Club", "Rayo Vallecano de Madrid"] ["0.5", "0.5"] 0 spreads -5.5
+   'O/U 0.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 0.5 | ["Over", "Under"] ["0.665", "0.335"] 17154 totals 0.5
+   'O/U 1.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 1.5 | ["Over", "Under"] ["0.395", "0.605"] 29006 totals 1.5
+   'O/U 2.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 2.5 | ["Over", "Under"] ["0.355", "0.645"] 115979 totals 2.5
+   'O/U 3.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 3.5 | ["Over", "Under"] ["0.39", "0.61"] 30984 totals 3.5
+   'O/U 4.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 4.5 | ["Over", "Under"] ["0.28", "0.72"] 7544 totals 4.5
+   'O/U 5.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 5.5 | ["Over", "Under"] ["0.225", "0.775"] 3995 totals 5.5
+   'O/U 6.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 6.5 | ["Over", "Under"] ["0.445", "0.555"] 1276 totals 6.5
+   'O/U 7.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 7.5 | ["Over", "Under"] ["0.49", "0.51"] 42 totals 7.5
+   'O/U 8.5' | Rayo Vallecano de Madrid vs. Athletic Club: O/U 8.5 | ["Over", "Under"] ["0.49", "0.51"] 42 totals 8.5
+   'Both Teams to Score' | Rayo Vallecano de Madrid vs. Athletic Club: Both Teams to Score | ["Yes", "No"] ["0.3", "0.7"] 25272 both_teams_to_score None
+   'Both Teams to Score in First Half' | Rayo Vallecano de Madrid vs. Athletic Club: Both Teams to Score in First Half | ["Yes", "No"] ["0.445", "0.555"] 801 both_teams_to_score_first_half None
+   '1st Half O/U 0.5' | Rayo Vallecano de Madrid vs. Athletic Club: 1st Half O/U 0.5 | ["Over", "Under"] ["0.485", "0.515"] 38567 first_half_totals 0.5
+   '1st Half O/U 1.5' | Rayo Vallecano de Madrid vs. Athletic Club: 1st Half O/U 1.5 | ["Over", "Under"] ["0.0355", "0.9645"] 16217 first_half_totals 1.5
+   '1st Half O/U 2.5' | Rayo Vallecano de Madrid vs. Athletic Club: 1st Half O/U 2.5 | ["Over", "Under"] ["0.03", "0.97"] 9705 first_half_totals 2.5
+   '1st Half O/U 3.5' | Rayo Vallecano de Madrid vs. Athletic Club: 1st Half O/U 3.5 | ["Over", "Under"] ["0.5", "0.5"] 0 first_half_totals 3.5
+   '1st Half O/U 4.5' | Rayo Vallecano de Madrid vs. Athletic Club: 1st Half O/U 4.5 | ["Over", "Under"] ["0.5", "0.5"] 0 first_half_totals 4.5
+   'Rayo Vallecano de Madrid O/U 0.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 0.5 | ["Over", "Under"] ["0.53", "0.47"] 1133 soccer_team_totals 0.5
+   'Rayo Vallecano de Madrid O/U 1.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 1.5 | ["Over", "Under"] ["0.47", "0.53"] 1115 soccer_team_totals 1.5
+   'Rayo Vallecano de Madrid O/U 2.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 2.5 | ["Over", "Under"] ["0.445", "0.555"] 1026 soccer_team_totals 2.5
+   'Rayo Vallecano de Madrid O/U 3.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 3.5 | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_team_totals 3.5
+   'Rayo Vallecano de Madrid O/U 4.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 4.5 | ["Over", "Under"] ["0.5", "0.5"] 10 soccer_team_totals 4.5
+   'Rayo Vallecano de Madrid O/U 5.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid O/U 5.5 | ["Over", "Under"] ["0.485", "0.515"] 20 soccer_team_totals 5.5
+   'Athletic Club O/U 0.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 0.5 | ["Over", "Under"] ["0.655", "0.345"] 28 soccer_team_totals 0.5
+   'Athletic Club O/U 1.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 1.5 | ["Over", "Under"] ["0.5", "0.5"] 12 soccer_team_totals 1.5
+   'Athletic Club O/U 2.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 2.5 | ["Over", "Under"] ["0.5", "0.5"] 210 soccer_team_totals 2.5
+   'Athletic Club O/U 3.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 3.5 | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_team_totals 3.5
+   'Athletic Club O/U 4.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 4.5 | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_team_totals 4.5
+   'Athletic Club O/U 5.5' | Rayo Vallecano de Madrid vs. Athletic Club: Athletic Club O/U 5.5 | ["Over", "Under"] ["0.5", "0.5"] 20 soccer_team_totals 5.5
+   'Rayo Vallecano de Madrid 1st Half O/U 0.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid 1st Half O/U 0.5 | ["Over", "Under"] ["0.5", "0.5"] 40 soccer_first_half_team_totals 0.5
+   'Rayo Vallecano de Madrid 1st Half O/U 1.5' | Rayo Vallecano de Madrid vs. Athletic Club: Rayo Vallecano de Madrid 1st Half O/U 1.5 | ["Over", "Under"] ["0.5", "0.5"] 0 soccer_first_half_team_totals 1.5
+
+== lal-ray-bil-2026-10-10-player-props Rayo Vallecano de Madrid vs. Athletic Club - Player Props 0 372
+   'Goalscorer: Pathé Ciss' | Pathé Ciss: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Pedro Díaz' | Pedro Díaz: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Sergio Camello' | Sergio Camello: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Mujaid Sadick' | Mujaid Sadick: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Florian Lejeune' | Florian Lejeune: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Adrià Pedrosa' | Adrià Pedrosa: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Iván Balliu' | Iván Balliu: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Álvaro García' | Álvaro García: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Jorge de Frutos' | Jorge de Frutos: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Unai López' | Unai López: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Álex Berenguer' | Álex Berenguer: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Beñat Gerenabarrena' | Beñat Gerenabarrena: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Peio Canales' | Peio Canales: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Jesús Areso' | Jesús Areso: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Aitor Paredes' | Aitor Paredes: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Roberto Navarro' | Roberto Navarro: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Yeray Álvarez' | Yeray Álvarez: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Iñaki Williams' | Iñaki Williams: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Ruiz de Galarreta' | Ruiz de Galarreta: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Goalscorer: Yuri Berchiche' | Yuri Berchiche: Anytime Goalscorer | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_anytime_goalscorer None
+   'Pathé Ciss: 2+ goals' | Pathé Ciss: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Pathé Ciss: 3+ goals' | Pathé Ciss: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+   'Pedro Díaz: 2+ goals' | Pedro Díaz: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Pedro Díaz: 3+ goals' | Pedro Díaz: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+   'Sergio Camello: 2+ goals' | Sergio Camello: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Sergio Camello: 3+ goals' | Sergio Camello: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+   'Mujaid Sadick: 2+ goals' | Mujaid Sadick: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Mujaid Sadick: 3+ goals' | Mujaid Sadick: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+   'Florian Lejeune: 2+ goals' | Florian Lejeune: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Florian Lejeune: 3+ goals' | Florian Lejeune: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+   'Adrià Pedrosa: 2+ goals' | Adrià Pedrosa: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Adrià Pedrosa: 3+ goals' | Adrià Pedrosa: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+   'Iván Balliu: 2+ goals' | Iván Balliu: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Iván Balliu: 3+ goals' | Iván Balliu: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+   'Álvaro García: 2+ goals' | Álvaro García: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Álvaro García: 3+ goals' | Álvaro García: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+   'Jorge de Frutos: 2+ goals' | Jorge de Frutos: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Jorge de Frutos: 3+ goals' | Jorge de Frutos: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+   'Unai López: 2+ goals' | Unai López: 2+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 1.5
+   'Unai López: 3+ goals' | Unai López: 3+ goals | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_player_goals 2.5
+
+== lal-ray-bil-2026-10-10-second-half-result Rayo Vallecano de Madrid vs. Athletic Club - Second Half Result 0 3
+   'Rayo Vallecano de Madrid' | Rayo Vallecano de Madrid to win the second half? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_second_half_result None
+   'Draw' | Rayo Vallecano de Madrid vs. Athletic Club: Second half draw? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_second_half_result None
+   'Athletic Club' | Athletic Club to win the second half? | ["Yes", "No"] ["0.5", "0.5"] 0 soccer_second_half_result None
+URL https://www.combinacionganadora.com/quinigol/ 200 319802
+URL https://www.eduardolosilla.es/quinigol 200 259425
+URL https://www.loteriasyapuestas.es/es/quinigol 403 391
+URL https://www.transfermarkt.es/laliga/startseite/wettbewerb/ES1 202 0
+URL https://www.transfermarkt.com/laliga/startseite/wettbewerb/ES1 202 0
