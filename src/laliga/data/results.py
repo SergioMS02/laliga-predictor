@@ -21,6 +21,7 @@ STAT_MAP = {
     "HS": "h_shots", "AS": "a_shots", "HST": "h_sot", "AST": "a_sot",
     "HC": "h_corners", "AC": "a_corners", "HY": "h_yellow", "AY": "a_yellow",
     "HR": "h_red", "AR": "a_red", "HF": "h_fouls", "AF": "a_fouls",
+    "HTHG": "h_ht", "HTAG": "a_ht",  # goles al descanso
 }
 # Prioridad de cuotas previas (publicadas antes de la jornada) y de cierre
 PRE_ODDS = [("PSH", "PSD", "PSA"), ("AvgH", "AvgD", "AvgA"), ("BbAvH", "BbAvD", "BbAvA"),
@@ -34,9 +35,12 @@ PRE_OU = [("P>2.5", "P<2.5"), ("Avg>2.5", "Avg<2.5"), ("BbAv>2.5", "BbAv<2.5")]
 CLOSE_OU = [("PC>2.5", "PC<2.5"), ("AvgC>2.5", "AvgC<2.5")]
 # Mejor cuota y cuota media del mercado (antes del partido), para comparar casas
 MKT_COLS = ["max_h", "max_d", "max_a", "avg_h", "avg_d", "avg_a"]
+# Hándicap asiático: línea (para el local) y cuotas medias (o Pinnacle/Bet365)
+AH_COLS = ["ah_line", "ah_h", "ah_a"]
+AH_ODDS = [("AvgAHH", "AvgAHA"), ("PAHH", "PAHA"), ("B365AHH", "B365AHA"), ("BbAvAHH", "BbAvAHA")]
 COLUMNS = ["season", "date", "kickoff", "home", "away", "hg", "ag", "result", "referee",
            *STAT_MAP.values(), "odds_h", "odds_d", "odds_a", "odds_close_h", "odds_close_d",
-           "odds_close_a", *B365_COLS, *OU_COLS, *MKT_COLS, "source"]
+           "odds_close_a", *B365_COLS, *OU_COLS, *MKT_COLS, *AH_COLS, "source"]
 DIVISIONS = {"SP1": "LaLiga", "SP2": "Segunda"}
 
 
@@ -127,6 +131,9 @@ def standardize_football_data(raw: pd.DataFrame, source: str, div: str = "SP1") 
     mx = _pick_odds(raw, [("MaxH", "MaxD", "MaxA"), ("BbMxH", "BbMxD", "BbMxA")])
     av = _pick_odds(raw, [("AvgH", "AvgD", "AvgA"), ("BbAvH", "BbAvD", "BbAvA")])
     df["max_h"], df["max_d"], df["max_a"] = mx.T
+    line = raw["AHh"] if "AHh" in raw.columns else raw["BbAHh"] if "BbAHh" in raw.columns else pd.Series(np.nan, index=raw.index)
+    df["ah_line"] = pd.to_numeric(line, errors="coerce")
+    df["ah_h"], df["ah_a"] = _pick_odds(raw, AH_ODDS).T
     df["avg_h"], df["avg_d"], df["avg_a"] = av.T
     df["season"] = df["date"].map(season_of)
     df["source"] = source
@@ -150,7 +157,7 @@ def fetch_season(settings: Settings, start_year: int, refresh: bool = False,
         cached = _read_cache(cache)
         # una copia del espejo no trae cuotas, y las cachés antiguas no traen Bet365 ni más/menos:
         # en ambos casos se reintenta la fuente principal
-        if not (cached["source"] == "mirror").all() and "max_h" in cached.columns:
+        if not (cached["source"] == "mirror").all() and "h_ht" in cached.columns:
             return cached
     sources = (("football_data_url", "football-data"), ("mirror_url", "mirror")) if div == "SP1" else \
         (("football_data_url", "football-data"),)

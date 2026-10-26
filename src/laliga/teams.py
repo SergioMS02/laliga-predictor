@@ -177,3 +177,12 @@ def is_island(team: str) -> bool:
 def coords(team: str) -> tuple[float, float] | None:
     s = STADIUMS.get(team)
     return (s[0], s[1]) if s else None
+
+
+# Nombre para mostrar (el mismo que usa la web)
+DISPLAY = {
+    "Ath Madrid": "Atlético", "Ath Bilbao": "Athletic", "Sociedad": "Real Sociedad", "Vallecano": "Rayo Vallecano",
+    "Espanol": "Espanyol", "La Coruna": "Deportivo", "Santander": "Racing", "Betis": "Real Betis", "Alaves": "Alavés",
+    "Malaga": "Málaga", "Leganes": "Leganés", "Cadiz": "Cádiz", "Almeria": "Almería", "Sp Gijon": "Sporting",
+    "Mirandes": "Mirandés", "Castellon": "Castellón", "Cordoba": "Córdoba",
+}

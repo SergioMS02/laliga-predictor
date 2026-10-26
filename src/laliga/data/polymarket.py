@@ -144,6 +144,64 @@ def fetch_matches(settings: Settings, online: bool = True) -> list[dict]:
     return []
 
 
+# ---------------------------------------------------------------------------
+# 1b) Mercados secundarios de cada partido (goles, ambos marcan, descanso, córners)
+# ---------------------------------------------------------------------------
+MIN_SECONDARY_VOLUME = 2000  # $ en el contrato; por debajo, el precio suele ser 0,50 sin operaciones
+
+
+def parse_secondary(more: dict | None, ht: dict | None, corners: dict | None, home: str, away: str) -> dict:
+    """Probabilidades de los mercados secundarios con volumen suficiente."""
+    out: dict = {}
+
+    def ok(m):
+        return _f(m.get("volumeNum") or m.get("volume")) >= MIN_SECONDARY_VOLUME and not m.get("closed")
+    for m in (more or {}).get("markets") or []:
+        if not ok(m):
+            continue
+        t, line, p = m.get("sportsMarketType"), m.get("line"), _yes(m)
+        if p is None:
+            continue
+        vol = round(_f(m.get("volumeNum")))
+        if t == "totals" and line is not None:
+            out.setdefault("totals", {})[str(float(line))] = {"p": round(p, 4), "volume": vol}
+        elif t == "both_teams_to_score":
+            out["btts"] = {"p": round(p, 4), "volume": vol}
+        elif t == "first_half_totals" and line is not None:
+            out.setdefault("ht_totals", {})[str(float(line))] = {"p": round(p, 4), "volume": vol}
+    if ht:
+        hp = {}
+        vol = 0.0
+        for m in ht.get("markets") or []:
+            p = _yes(m)
+            title = m.get("groupItemTitle") or ""
+            k = "X" if title.startswith("Draw") else "1" if team(title) == home else "2" if team(title) == away else None
+            if k and p is not None:
+                hp[k] = p
+                vol += _f(m.get("volumeNum"))
+        if len(hp) == 3 and vol >= 3 * MIN_SECONDARY_VOLUME:
+            tot = sum(hp.values())
+            out["half_time"] = {"p": [round(hp[k] / tot, 4) for k in "1X2"], "volume": round(vol)}
+    for m in (corners or {}).get("markets") or []:
+        if ok(m) and m.get("line") is not None and _yes(m) is not None:
+            out.setdefault("corners", {})[str(float(m["line"]))] = {"p": round(_yes(m), 4), "volume": round(_f(m.get("volumeNum")))}
+    return out
+
+
+def fetch_secondary(settings: Settings, m: dict, online: bool = True) -> dict:
+    if not online or not m:
+        return {}
+    ev = {}
+    for suf in ("-more-markets", "-halftime-result", "-total-corners"):
+        try:
+            js = http.get(f"{GAMMA}/events", params={"slug": m["slug"] + suf}, timeout=25, retries=1).json()
+            ev[suf] = js[0] if isinstance(js, list) and js else None
+        except Exception as e:
+            log.warning("Polymarket %s%s: %s", m["slug"], suf, e)
+            ev[suf] = None
+    return parse_secondary(ev["-more-markets"], ev["-halftime-result"], ev["-total-corners"], m["home"], m["away"])
+
+
 def _naive(t) -> pd.Timestamp:
     t = pd.Timestamp(t)
     return t.tz_convert(None) if t.tzinfo else t
@@ -369,6 +427,97 @@ def update_history(settings: Settings, online: bool = True, max_pages: int = 21)
     return df
 
 
+OU_COLS = ["slug", "date", "home", "away", "p_over25", "p_btts", "vol_over25", "vol_btts"]
+
+
+def update_history_secondary(settings: Settings, online: bool = True, max_new: int = 600) -> pd.DataFrame:
+    """Precio antes del inicio de +2,5 goles y de ambos marcan en los partidos cerrados."""
+    path = settings.processed_dir / "polymarket_history_goals.csv"
+    df = pd.read_csv(path) if path.exists() else pd.DataFrame(columns=OU_COLS)
+    main = settings.processed_dir / "polymarket_history.csv"
+    if not online or not main.exists():
+        return df
+    h = pd.read_csv(main)
+    todo = h[~h.slug.isin(set(df.slug))].sort_values("kickoff", ascending=False).head(max_new)
+    rows = []
+    for r in todo.itertuples():
+        try:
+            js = http.get(f"{GAMMA}/events", params={"slug": r.slug + "-more-markets"}, timeout=25, retries=1).json()
+            ev = js[0] if isinstance(js, list) and js else None
+            t0 = int(pd.Timestamp(r.kickoff).timestamp())
+            p_o = p_b = None
+            v_o = v_b = 0.0
+            for m in (ev or {}).get("markets") or []:
+                t = m.get("sportsMarketType")
+                if t == "totals" and m.get("line") is not None and abs(float(m["line"]) - 2.5) < 1e-6:
+                    p_o, v_o = _price_before(json.loads(m["clobTokenIds"])[0], t0), _f(m.get("volumeNum"))
+                elif t == "both_teams_to_score":
+                    p_b, v_b = _price_before(json.loads(m["clobTokenIds"])[0], t0), _f(m.get("volumeNum"))
+            rows.append({"slug": r.slug, "date": r.date, "home": r.home, "away": r.away, "p_over25": p_o, "p_btts": p_b,
+                         "vol_over25": round(v_o), "vol_btts": round(v_b)})
+        except Exception as e:
+            log.warning("Polymarket goles %s: %s", r.slug, e)
+            if isinstance(e, http.HostUnavailable):
+                break
+    if rows:
+        df = pd.concat([df, pd.DataFrame(rows, columns=OU_COLS)], ignore_index=True).drop_duplicates("slug", keep="last")
+        df.to_csv(path, index=False)
+    return df
+
+
+def evaluate_goals(matches: pd.DataFrame, hist: pd.DataFrame, oos: pd.DataFrame | None, min_volume: float = 5000) -> dict:
+    """Más de 2,5 goles y ambos marcan: Polymarket frente al cierre de las casas y al modelo."""
+    from ..betting import devig2
+    from ..models.dixon_coles import score_matrix
+    if hist is None or hist.empty:
+        return {}
+    res = matches[matches.hg.notna()].copy()
+    res["d"] = pd.to_datetime(res.date).dt.normalize()
+    h = hist.copy()
+    h["d"] = pd.to_datetime(h.date)
+    x = h.merge(res, on=["home", "away"], suffixes=("", "_m"))
+    x = x[(x.d - x.d_m).abs() <= pd.Timedelta(days=3)]
+    if oos is not None and len(oos):
+        x = x.merge(oos[["season", "home", "away", "dc_lam", "dc_mu"]], on=["season", "home", "away"], how="left")
+    out = {}
+    for key, ycol, vcol in (("over25", None, "vol_over25"), ("btts", None, "vol_btts")):
+        d = x[x[f"p_{key}"].notna() & (x[vcol] >= min_volume)].copy()
+        if len(d) < 30:
+            out[key] = {"n": int(len(d))}
+            continue
+        y = ((d.hg + d.ag) > 2.5).astype(float).to_numpy() if key == "over25" else ((d.hg > 0) & (d.ag > 0)).astype(float).to_numpy()
+        P = d[f"p_{key}"].to_numpy(float)
+
+        def ll(p, m):
+            p = np.clip(p[m], 1e-6, 1 - 1e-6)
+            return round(float(-np.mean(y[m] * np.log(p) + (1 - y[m]) * np.log(1 - p))), 4)
+        m_all = np.ones(len(d), bool)
+        r = {"n": int(len(d)), "polymarket": ll(P, m_all)}
+        if "dc_lam" in d:
+            mod = []
+            for lam, mu in zip(d.dc_lam, d.dc_mu):
+                if not np.isfinite([lam, mu]).all():
+                    mod.append(np.nan)
+                    continue
+                sm = score_matrix(lam, mu, -0.05, 10)
+                sm = sm / sm.sum()
+                i, j = np.indices(sm.shape)
+                mod.append(float(sm[(i + j) > 2].sum()) if key == "over25" else float(sm[(i > 0) & (j > 0)].sum()))
+            mod = np.array(mod)
+            ok = np.isfinite(mod)
+            if ok.sum() >= 30:
+                r["modelo"] = ll(np.where(ok, mod, 0.5), ok)
+                r["polymarket_mismos"] = ll(P, ok)
+        if key == "over25" and "ouc_o25" in d:
+            bk = np.array([devig2(a, b)[0] if np.isfinite([a, b]).all() else np.nan for a, b in zip(d.ouc_o25, d.ouc_u25)])
+            ok = np.isfinite(bk)
+            if ok.sum() >= 30:
+                r["cierre_casas"] = ll(np.where(ok, bk, 0.5), ok)
+                r["polymarket_mismos_casas"] = ll(P, ok)
+        out[key] = r
+    return out
+
+
 def evaluate(settings: Settings, matches: pd.DataFrame, hist: pd.DataFrame, bt: pd.DataFrame | None = None) -> dict:
     """Log-loss de Polymarket (precio antes del inicio) frente al cierre de las casas y al modelo, y
     el peso del modelo que minimiza la log-loss de la mezcla."""
@@ -432,6 +581,13 @@ def run_evaluation(settings: Settings, matches: pd.DataFrame, online: bool = Tru
     p = settings.processed_dir / "backtest_predictions.csv"
     bt = pd.read_csv(p, index_col=0) if p.exists() else None
     ev = evaluate(settings, matches.reset_index(drop=True), hist, bt)
+    try:
+        goals = update_history_secondary(settings, online)
+        op = settings.processed_dir / "oos_table.csv"
+        oos = pd.read_csv(op) if op.exists() else None
+        ev["goals"] = evaluate_goals(matches.reset_index(drop=True), goals, oos)
+    except Exception as e:
+        log.warning("Polymarket (goles) sin evaluar: %s", e)
     if ev:
         ev["updated"] = datetime.now(timezone.utc).date().isoformat()
         (settings.state_dir / "polymarket_eval.json").write_text(json.dumps(ev, ensure_ascii=False, indent=1),

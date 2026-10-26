@@ -103,13 +103,14 @@ def live_dataset(shots: pd.DataFrame, oos: pd.DataFrame, minutes=(15, 30, 45, 60
     s = shots[shots.minute >= 0].copy()
     s["sot"] = s.result.isin(ON_TARGET).astype(int)
     s["goal"] = (s.result == "Goal").astype(int)
-    pri = oos.set_index(["season", "home", "away"])[["dc_lam", "dc_mu"]]
+    pri = {(int(a), b, c): (float(l), float(m)) for a, b, c, l, m in
+           zip(oos.season, oos.home, oos.away, oos.dc_lam, oos.dc_mu)}
     rows = []
     for (season, mid, home, away), g in s.groupby(["season", "match_id", "home", "away"]):
-        key = (season, home, away)
-        if key not in pri.index:
+        key = (int(season), home, away)
+        if key not in pri:
             continue
-        lam, mu = pri.loc[key].iloc[0] if isinstance(pri.loc[key], pd.DataFrame) else pri.loc[key]
+        lam, mu = pri[key]
         for t in minutes:
             b, a_ = g[g.minute < t], g[g.minute >= t]
             rows.append({"season": season, "match_id": mid, "t": t, "lam": lam, "mu": mu,
@@ -119,32 +120,50 @@ def live_dataset(shots: pd.DataFrame, oos: pd.DataFrame, minutes=(15, 30, 45, 60
     return pd.DataFrame(rows)
 
 
-def remaining_rate(lam, t, sot, beta: float, k: float, sot_per_goal: float):
-    """Goles esperados que quedan para un equipo: previa × (90−t)/90 × (ritmo observado de tiros a
-    puerta frente al esperado)^β, encogido con k minutos de «previa»."""
-    t = np.asarray(t, float)
-    exp_sot = lam * sot_per_goal * t / 90
-    ratio = (np.asarray(sot, float) + k * sot_per_goal * lam / 90) / (exp_sot + k * sot_per_goal * lam / 90)
-    return lam * np.clip(90 - t, 0, None) / 90 * ratio ** beta
+def remaining_rate(lam, t, obs, gamma: float, per_goal: float):
+    """Goles esperados que quedan para un equipo: previa × (90−t)/90 × exp(γ·z), con z la desviación
+    estandarizada de sus tiros a puerta (u xG) respecto a lo esperado hasta el minuto t."""
+    lam, t, obs = np.asarray(lam, float), np.asarray(t, float), np.asarray(obs, float)
+    exp = lam * per_goal * t / 90
+    z = (obs - exp) / np.sqrt(exp + 1e-9) * np.sqrt(t / 90)
+    return lam * np.clip(90 - t, 0, None) / 90 * np.exp(gamma * z)
 
 
 def calibrate_live(ds: pd.DataFrame) -> dict:
-    """Ajusta β y k por máxima verosimilitud Poisson de los goles posteriores."""
-    from scipy.optimize import minimize
+    """Ajusta γ por máxima verosimilitud Poisson de los goles posteriores, con tiros a puerta (lo que
+    ESPN da en directo) y, como referencia, con xG."""
+    from scipy.optimize import minimize_scalar
     if ds.empty:
         return {}
-    spg = float((ds.sot_h.sum() + ds.sot_a.sum()) / max(1e-9, (ds.lam * ds.t / 90).sum() + (ds.mu * ds.t / 90).sum()))
+    base_t = (ds.lam * ds.t / 90).sum() + (ds.mu * ds.t / 90).sum()
+    out = {"n": int(len(ds)), "matches": int(ds.match_id.nunique())}
+    for col, key in (("sot", "tiros_a_puerta"), ("xg", "xg")):
+        per = float((ds[f"{col}_h"].sum() + ds[f"{col}_a"].sum()) / max(base_t, 1e-9))
 
-    def nll(theta):
-        beta, logk = theta
-        k = np.exp(logk)
-        rh = remaining_rate(ds.lam, ds.t, ds.sot_h, beta, k, spg)
-        ra = remaining_rate(ds.mu, ds.t, ds.sot_a, beta, k, spg)
-        return float(np.sum(rh - ds.g_h_after * np.log(rh + 1e-12)) + np.sum(ra - ds.g_a_after * np.log(ra + 1e-12)))
-    base = nll([0.0, 0.0])
-    r = minimize(nll, [0.3, np.log(30)], method="Nelder-Mead")
-    beta, k = float(r.x[0]), float(np.exp(r.x[1]))
-    n = len(ds)
-    return {"beta": round(beta, 3), "k_minutes": round(k, 1), "sot_per_goal": round(spg, 3), "n": int(n),
-            "matches": int(ds.match_id.nunique()),
-            "nll_per_obs": {"solo_marcador": round(base / n / 2, 4), "con_tiros": round(float(r.fun) / n / 2, 4)}}
+        def nll(g):
+            r_h = remaining_rate(ds.lam, ds.t, ds[f"{col}_h"], g, per)
+            r_a = remaining_rate(ds.mu, ds.t, ds[f"{col}_a"], g, per)
+            return float((np.sum(r_h - ds.g_h_after * np.log(r_h + 1e-12)) +
+                          np.sum(r_a - ds.g_a_after * np.log(r_a + 1e-12))) / len(ds) / 2)
+        r = minimize_scalar(nll, bounds=(-0.5, 1.0), method="bounded")
+        out[key] = {"gamma": round(float(r.x), 4), "per_goal": round(per, 3),
+                    "nll_solo_marcador": round(nll(0.0), 5), "nll_con_dato": round(float(r.fun), 5)}
+    out["gamma"], out["sot_per_goal"] = out["tiros_a_puerta"]["gamma"], out["tiros_a_puerta"]["per_goal"]
+    return out
+
+
+def run_live_calibration(settings: Settings, matches_oos: pd.DataFrame | None = None, online: bool = True) -> dict:
+    import json
+    from datetime import datetime, timezone
+    from .results import current_season
+    cur = current_season()
+    shots = load_shots(settings, list(range(cur - 5, cur + 1)), online=online)
+    p = settings.processed_dir / "oos_table.csv"
+    oos = matches_oos if matches_oos is not None else (pd.read_csv(p) if p.exists() else None)
+    if oos is None or shots.empty:
+        return {}
+    out = calibrate_live(live_dataset(shots, oos))
+    if out:
+        out["updated"] = datetime.now(timezone.utc).date().isoformat()
+        (settings.state_dir / "live_calib.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
+    return out

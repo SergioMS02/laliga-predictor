@@ -28,7 +28,9 @@ function parseEvent(ev, lg, lgName) {
     team: d.team && d.team.id, clock: (d.clock || {}).displayValue || "", goal: !!d.scoringPlay, own: !!d.ownGoal, pen: !!d.penaltyKick,
     yellow: !!d.yellowCard, red: !!d.redCard, who: ((d.athletesInvolved || [])[0] || {}).shortName || ((d.athletesInvolved || [])[0] || {}).displayName || "",
   }));
+  const sotC = (t) => { const x = (t.statistics || []).find((q) => q.name === "shotsOnTarget"); return x ? parseFloat(x.displayValue) : null; };
   return {
+    sot: [sotC(side.home), sotC(side.away)],
     id: ev.id, lg, lgName, date: ev.date, state: st.type.state, completed: st.type.completed,
     clock: st.displayClock, detail: st.type.shortDetail, period: st.period,
     home: team(side.home), away: team(side.away), details,
@@ -49,10 +51,19 @@ async function fetchLive() {
 
 /* ---------- Probabilidad en directo (desde la predicción previa del modelo) ---------- */
 function poisPmf(l, n = 10) { const out = []; let p = Math.exp(-l); for (let k = 0; k <= n; k++) { out.push(p); p *= l / (k + 1); } return out; }
-function liveProbs(lam, mu, minute, hg, ag, redH = 0, redA = 0) {
+// ajuste por tiros a puerta: exp(γ·z), z = desviación estandarizada de los tiros a puerta frente a lo
+// esperado hasta ese minuto (γ medido con los tiros de Understat; aporta poco, ver Aciertos)
+function sotFactor(prior, minute, sot) {
+  const c = DATA.live_calib || {};
+  if (sot == null || !c.gamma || !c.sot_per_goal || minute <= 0) return 1;
+  const t = Math.min(minute, 90), exp = prior * c.sot_per_goal * t / 90;
+  const z = (sot - exp) / Math.sqrt(exp + 1e-9) * Math.sqrt(t / 90);
+  return Math.exp(c.gamma * Math.max(-4, Math.min(4, z)));
+}
+function liveProbs(lam, mu, minute, hg, ag, redH = 0, redA = 0, sotH = null, sotA = null) {
   const rem = Math.max(0.01, (95 - Math.min(minute, 94)) / 95);
-  const l = lam * rem * Math.pow(0.7, redH) * Math.pow(1.18, redA);
-  const m = mu * rem * Math.pow(0.7, redA) * Math.pow(1.18, redH);
+  const l = lam * rem * Math.pow(0.7, redH) * Math.pow(1.18, redA) * sotFactor(lam, minute, sotH);
+  const m = mu * rem * Math.pow(0.7, redA) * Math.pow(1.18, redH) * sotFactor(mu, minute, sotA);
   const ph = poisPmf(l), pa = poisPmf(m);
   let w = 0, d = 0, lo = 0;
   for (let x = 0; x < ph.length; x++) for (let y = 0; y < pa.length; y++) {
@@ -80,6 +91,16 @@ function prematchFor(e) {
   if (!hit) hit = (DATA.matches || []).map((m) => ({ home: m.home, away: m.away, p: [m.p_home, m.p_draw, m.p_away], xg: [m.dc.xg_home, m.dc.xg_away] }))
     .find((x) => sameTeam(name(x.home), e.home.full) && sameTeam(name(x.away), e.away.full));
   if (hit) return { p: hit.p, xg: hit.xg, src: "modelo", slug: hit.poly_slug || ((DATA.matches || []).find((m) => m.home === hit.home && m.away === hit.away && m.polymarket) || { polymarket: {} }).polymarket.slug };
+  for (const lg of Object.values((DATA.leagues || {}).leagues || {})) {
+    for (const m of lg.upcoming || []) {
+      if (m.xg && sameTeam(m.home, e.home.full) && sameTeam(m.away, e.away.full)) return { p: m.p, xg: m.xg, src: lg.name };
+    }
+  }
+  for (const c of Object.values((DATA.leagues || {}).cups || {})) {
+    for (const m of c.matches || []) {
+      if (m.xg && m.p && String(m.id) === String(e.id)) return { p: m.p, xg: m.xg, src: "Elo" };
+    }
+  }
   for (const j of Object.values((DATA.quiniela || {}).jornadas || {})) {
     for (const r of j.rows || []) {
       if (sameTeam(r.home, e.home.full) && sameTeam(r.away, e.away.full)) return { p: r.p, xg: [r.lam, r.mu], src: r.source };
@@ -94,12 +115,24 @@ function minuteOf(e) {
   if (!m) return e.period >= 2 ? 45 : 0;
   return Math.min(95, Number(m[1]) + (m[2] ? Number(m[2]) : 0));
 }
+function sotOf(e) {
+  // tiros a puerta: del resumen del partido (si está abierto) o de las estadísticas del marcador
+  const T = ((LIVE.summary[e.id] || {}).boxscore || {}).teams || [];
+  const out = [null, null];
+  T.forEach((t) => {
+    const st = (t.statistics || []).find((x) => x.name === "shotsOnTarget");
+    if (st) out[String(t.team.id) === String(e.home.id) ? 0 : 1] = parseFloat(st.displayValue);
+  });
+  if (out[0] == null && e.sot) return e.sot;
+  return out;
+}
 function liveProbFor(e) {
   const pm = prematchFor(e);
   if (!pm || !pm.xg || pm.xg[0] == null) return null;
   const reds = (tid) => e.details.filter((d) => d.red && d.team === tid).length;
   if (e.state === "pre") return { now: pm.p, pre: pm.p, src: pm.src };
-  const now = liveProbs(pm.xg[0], pm.xg[1], minuteOf(e), e.home.score || 0, e.away.score || 0, reds(e.home.id), reds(e.away.id));
+  const sot = sotOf(e);
+  const now = liveProbs(pm.xg[0], pm.xg[1], minuteOf(e), e.home.score || 0, e.away.score || 0, reds(e.home.id), reds(e.away.id), sot[0], sot[1]);
   const h = (LIVE.probHist[e.id] = LIVE.probHist[e.id] || [{ m: 0, p: pm.p }]);
   const mm = minuteOf(e);
   if (!h.length || h[h.length - 1].m !== mm) h.push({ m: mm, p: now });
@@ -237,7 +270,7 @@ function detailLive(e) {
     const h = LIVE.probHist[e.id] || [];
     prob = `<div class="lvd__prob"><h4>Probabilidad ${e.state === "post" ? "final" : "en directo"}</h4>
       <div class="lvd__pb"><span style="width:${(100 * pr.now[0]).toFixed(1)}%">${pct(pr.now[0])} %</span><span style="width:${(100 * pr.now[1]).toFixed(1)}%">${pct(pr.now[1])} %</span><span style="width:${(100 * pr.now[2]).toFixed(1)}%">${pct(pr.now[2])} %</span></div>
-      <p class="quiet small">Antes del partido: ${pct(pr.pre[0])} / ${pct(pr.pre[1])} / ${pct(pr.pre[2])} % (${esc(pr.src)}). Se recalcula con el marcador, el minuto y las expulsiones a partir de los goles esperados del modelo.</p>
+      <p class="quiet small">Antes del partido: ${pct(pr.pre[0])} / ${pct(pr.pre[1])} / ${pct(pr.pre[2])} % (${esc(pr.src)}). Se recalcula con el marcador, el minuto, las expulsiones y los tiros a puerta a partir de los goles esperados del modelo.</p>
       ${polyLive(e)}
       ${h.length > 2 ? probChart(h, LIVE.polyHist[e.id] || []) : ""}</div>`;
   }
@@ -318,6 +351,17 @@ function renderLive() {
   const y = window.scrollY;
   el.innerHTML = liveListHtml();
   window.scrollTo(0, y);
+  // un gol nuevo se marca un momento en el marcador
+  LIVE.prevScore = LIVE.prevScore || {};
+  for (const e of LIVE.events) {
+    const sc = `${e.home.score}-${e.away.score}`;
+    const prev = LIVE.prevScore[e.id];
+    if (prev && prev !== sc && e.state !== "pre") {
+      const n = el.querySelector(`.lv[data-id="${e.id}"] .lv__sc`);
+      if (n) n.classList.add("flash");
+    }
+    LIVE.prevScore[e.id] = sc;
+  }
   el.querySelectorAll(".lv").forEach((b) => b.addEventListener("click", async () => {
     const id = b.dataset.id;
     LIVE.open = LIVE.open === id ? null : id;
@@ -335,8 +379,7 @@ function renderLive() {
 }
 function updateBadge() {
   const n = LIVE.events.filter((e) => e.state === "in").length;
-  const a = document.querySelector('.tabs a[data-tab="directo"]');
-  if (a) a.classList.toggle("has-live", n > 0);
+  document.querySelectorAll('.tabs a[data-tab="directo"], .bnav a[data-tab="directo"]').forEach((a) => a.classList.toggle("has-live", n > 0));
   const gl = document.getElementById("gl-live");
   if (gl) {
     const live = LIVE.events.filter((e) => e.state === "in");

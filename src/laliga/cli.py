@@ -81,6 +81,14 @@ def _quiniela(s, preds=None, online: bool = True, send: bool = False) -> None:
             notify.send(s, m)
 
 
+def _leagues(s, online: bool, with_eval: bool = False) -> None:
+    from . import leagues
+    try:
+        leagues.build(s, online=online, with_eval=with_eval)
+    except Exception as e:  # nunca debe tumbar la predicción de LaLiga
+        log.warning("Otras competiciones no disponibles: %s", e)
+
+
 def _export_site(s, matches, projection: bool, online: bool = True) -> None:
     from . import site_export
     try:
@@ -103,7 +111,7 @@ def _notify_moves(s, moves: list[dict], send: bool) -> None:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="laliga", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("command", choices=["update", "tune", "backtest", "train", "predict", "watch-lineups",
-                                        "backfill-espn", "calibrate-availability", "evaluate-live", "export-site",
+                                        "backfill-espn", "calibrate-availability", "leagues", "evaluate-live", "export-site",
                                         "settle", "quiniela", "all"])
     ap.add_argument("--offline", action="store_true", help="no usar red (solo caché)")
     ap.add_argument("--days", type=int, default=None, help="horizonte de predicción en días")
@@ -156,6 +164,12 @@ def main(argv: list[str] | None = None) -> int:
             print("Proyección: sigma", cp.get("sigma"))
         except Exception as e:
             log.warning("Calibración de la proyección no disponible: %s", e)
+        _leagues(s, online, with_eval=True)
+        try:  # probabilidad en directo con tiros a puerta (Understat, minuto a minuto)
+            from .data import shots as shots_mod
+            print("Directo:", shots_mod.run_live_calibration(s, online=online))
+        except Exception as e:
+            log.warning("Calibración del directo no disponible: %s", e)
         try:  # Polymarket frente al cierre de las casas y al modelo (y peso del modelo en la mezcla)
             from .data import polymarket
             print("Polymarket:", polymarket.run_evaluation(s, matches, online=online))
@@ -182,6 +196,9 @@ def main(argv: list[str] | None = None) -> int:
         except (RuntimeError, FileNotFoundError) as e:
             print(f"Peso del once frente al mercado no disponible: {e}")
         return 0
+    if cmd == "leagues":
+        _leagues(s, online)
+        return 0
     if cmd == "export-site":
         _export_site(s, matches, projection=True, online=online)
         return 0
@@ -205,6 +222,7 @@ def main(argv: list[str] | None = None) -> int:
         _notify_moves(s, big, a.notify)
         _bets(s, matches, preds, send=a.notify)
         _quiniela(s, preds, online=online, send=a.notify)
+        _leagues(s, online)
         _export_site(s, matches, projection=True, online=online)
         if a.notify and preds:
             soon = notify.upcoming_within(preds, int(s.get("notify", "summary_hours", 48)))

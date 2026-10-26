@@ -108,7 +108,8 @@ def simulate_rest(base: pd.DataFrame, rem: pd.DataFrame, lam: np.ndarray, mu: np
     # desempate aproximado: puntos, diferencia de goles, goles a favor (LaLiga usa el golaveraje particular)
     key = sim_pts * 1e6 + (sim_gd + 500) * 1e3 + sim_gf + rng.random(sim_pts.shape) * 1e-3
     ranks = np.argsort(np.argsort(-key, axis=1), axis=1) + 1
-    return {"ranks": ranks, "pts": sim_pts, "teams": teams, "hg": hg, "ag": ag}
+    return {"ranks": ranks, "pts": sim_pts, "teams": teams, "hg": hg, "ag": ag,
+            "pairs": list(zip(rem.home, rem.away))}
 
 
 def season_sigma(settings: Settings) -> float:
@@ -150,7 +151,9 @@ def project_season(settings: Settings, matches: pd.DataFrame, season: int, table
         })
     out.sort(key=lambda d: d["exp_pos"])
     res = {"n_sims": int(nsim), "remaining": int(len(rem)), "sigma": round(sigma, 3), "teams": out,
-           "thresholds": _thresholds(ranks, sim_pts, k)}
+           "thresholds": _thresholds(ranks, sim_pts, k), "_sim": sim,
+           "_left": {t: float(lam[rem.home.to_numpy() == t].sum() + mu[rem.away.to_numpy() == t].sum()) for t in teams}
+           if not rem.empty else {}}
     if not rem.empty:  # para el simulador «¿y si…?» de la web
         res["fixtures"] = [{"home": r.home, "away": r.away, "date": str(pd.Timestamp(r.date).date()),
                             "lam": _r(lam[j], 3), "mu": _r(mu[j], 3)} for j, r in enumerate(rem.itertuples())]
@@ -486,6 +489,12 @@ def export(settings: Settings, matches: pd.DataFrame, preds: list[dict] | None =
         out["projection"] = old.get("projection")
         out["scorers"] = old.get("scorers")
         out["projection_history"] = old.get("projection_history", [])
+    proj = out.get("projection") or {}
+    sim, left = proj.pop("_sim", None), proj.pop("_left", None)
+    try:
+        _insights(settings, matches, season, table, seq, players, out, old, sim, left, online and with_projection)
+    except Exception as e:
+        log.warning("Análisis extra no disponible: %s", e)
     try:  # mercados de temporada de Polymarket frente a la proyección
         from .data import polymarket
         mk = polymarket.fetch_season(settings, season, online=online and with_projection)
@@ -497,6 +506,12 @@ def export(settings: Settings, matches: pd.DataFrame, preds: list[dict] | None =
         lp = settings.predictions_dir / "latest.json"
         preds = json.loads(lp.read_text(encoding="utf-8")) if lp.exists() else []
     out["h2h"] = {f"{p['home']}|{p['away']}": head_to_head(matches, p["home"], p["away"]) for p in preds}
+    try:
+        from . import insights
+        from .teams import DISPLAY
+        out["previews"] = {f"{p['home']}|{p['away']}": insights.preview(p, out.get("teams") or {}, DISPLAY) for p in preds}
+    except Exception as e:
+        log.warning("Previas: %s", e)
     out["track"] = track_record(settings, matches)
     try:
         out["track_props"] = track_props(settings, matches)
@@ -517,6 +532,36 @@ def export(settings: Settings, matches: pd.DataFrame, preds: list[dict] | None =
 # ---------------------------------------------------------------------------
 # Calibración de la incertidumbre de la proyección
 # ---------------------------------------------------------------------------
+def _insights(settings, matches, season, table, seq, players, out, old, sim, left, online) -> None:
+    from . import insights
+    from .data import shots as shots_mod
+    try:
+        shots = shots_mod.load_shots(settings, [season - 1], online=False)
+        cur = shots_mod.fetch_shots(settings, season, online=online, max_new=80)
+        shots = pd.concat([shots, cur], ignore_index=True) if len(shots) else cur
+    except Exception as e:
+        log.warning("Tiros no disponibles: %s", e)
+        shots = None
+    hist = insights.team_history(settings, season)
+    out["luck"] = insights.luck_table(hist) or old.get("luck")
+    out["styles"] = insights.team_styles(hist) or old.get("styles")
+    try:
+        out["style_matchups"] = insights.style_matchups(matches, settings, [season - 3, season - 2, season - 1])
+    except Exception as e:
+        log.warning("Estilos: %s", e)
+    out["elo_history"] = insights.elo_history(matches, seq)
+    out["referees"] = insights.referee_stats(matches, season)
+    out["players"] = insights.player_cards(settings, season, None, shots)
+    if sim is not None:
+        try:
+            out["awards"] = insights.season_awards(settings, table, sim, players, season, left or {})
+        except Exception as e:
+            log.warning("Premios de temporada: %s", e)
+            out["awards"] = old.get("awards")
+    else:
+        out["awards"] = old.get("awards")
+
+
 def calibrate_projection(settings: Settings, matches: pd.DataFrame, seasons: list[int],
                          rounds=(5, 10, 15, 20, 25, 30), sigmas=(0.0, 0.05, 0.08, 0.1, 0.12, 0.15, 0.2, 0.25),
                          n: int = 3000) -> dict:

@@ -15,9 +15,12 @@
 <body>
 <header class="masthead">
   <div class="wrap masthead__inner">
-    <div>
-      <h1 class="masthead__title">Quiniela del modelo</h1>
-      <p class="masthead__sub" id="updated">Cargando predicciones…</p>
+    <div class="masthead__brand">
+      <span class="mark" aria-hidden="true"><i class="on">1</i><i>X</i><i>2</i></span>
+      <div>
+        <h1 class="masthead__title">Quiniela del modelo</h1>
+        <p class="masthead__sub" id="updated">Cargando predicciones…</p>
+      </div>
     </div>
     <div class="masthead__side">
       <dl class="legend" aria-label="Leyenda">
@@ -40,6 +43,8 @@
     <a href="#apuestas" data-tab="apuestas">Apuestas</a>
     <a href="#clasificacion" data-tab="clasificacion">Clasificación</a>
     <a href="#equipos" data-tab="equipos">Equipos</a>
+    <a href="#jugadores" data-tab="jugadores">Jugadores</a>
+    <a href="#ligas" data-tab="ligas">Otras ligas</a>
     <a href="#aciertos" data-tab="aciertos">Aciertos</a>
   </nav>
 </div>
@@ -54,7 +59,7 @@
       <h2 id="slip-title" class="section-title">Próximos partidos</h2>
       <p class="section-note">Cada casilla se rellena según la probabilidad. El círculo marca el resultado más probable. Pulsa un partido para ver cómo ha cambiado y por qué.</p>
     </div>
-    <div class="slip" role="list" id="slip"></div>
+    <div class="slip" role="list" id="slip" aria-busy="true"><div class="skel-row" aria-hidden="true"><span class="skel" style="width:20px"></span><span class="skel" style="width:62%"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span></div><div class="skel-row" aria-hidden="true"><span class="skel" style="width:20px"></span><span class="skel" style="width:48%"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span></div><div class="skel-row" aria-hidden="true"><span class="skel" style="width:20px"></span><span class="skel" style="width:70%"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span></div><div class="skel-row" aria-hidden="true"><span class="skel" style="width:20px"></span><span class="skel" style="width:55%"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span></div><div class="skel-row" aria-hidden="true"><span class="skel" style="width:20px"></span><span class="skel" style="width:40%"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span></div><div class="skel-row" aria-hidden="true"><span class="skel" style="width:20px"></span><span class="skel" style="width:66%"></span><span class="skel"></span><span class="skel"></span><span class="skel"></span></div></div>
     <p class="empty" id="empty" hidden>No hay partidos en los próximos días. La próxima jornada aparecerá en cuanto se publique el calendario.</p>
   </section>
 
@@ -76,12 +81,40 @@
     </div>
     <div id="standings"></div>
   </section>
+  <section aria-labelledby="thr-title">
+    <div class="section-head">
+      <h2 id="thr-title" class="section-title">Puntos que harán falta</h2>
+      <p class="section-note">Puntos del último que entra en cada zona, en las simulaciones de lo que queda de temporada.</p>
+    </div>
+    <div id="thresholds"></div>
+  </section>
+  <section aria-labelledby="sim-title">
+    <div class="section-head">
+      <h2 id="sim-title" class="section-title">Simulador: ¿y si…?</h2>
+      <p class="section-note">Fija el resultado de los partidos que quieras y mira cómo cambia la liga.</p>
+    </div>
+    <div id="simulator"></div>
+  </section>
+  <section aria-labelledby="luck-title">
+    <div class="section-head">
+      <h2 id="luck-title" class="section-title">Tabla de la suerte</h2>
+      <p class="section-note">Puntos reales frente a los que merecía cada equipo por sus ocasiones.</p>
+    </div>
+    <div id="luck"></div>
+  </section>
   <section aria-labelledby="pich-title">
     <div class="section-head">
       <h2 id="pich-title" class="section-title">Pichichi</h2>
       <p class="section-note">Quién acabará como máximo goleador, simulando los goles que le quedan a cada jugador.</p>
     </div>
     <div id="pichichi"></div>
+  </section>
+  <section aria-labelledby="aw-title">
+    <div class="section-head">
+      <h2 id="aw-title" class="section-title">Otros premios</h2>
+      <p class="section-note">Máximo asistente, Zamora y equipos más y menos goleados, con las mismas simulaciones.</p>
+    </div>
+    <div id="awards"></div>
   </section>
   <section aria-labelledby="poly-title">
     <div class="section-head">
@@ -109,6 +142,41 @@
   </section>
  </div>
 
+
+ <div class="view" data-view="jugadores" hidden>
+  <section aria-labelledby="pl-title">
+    <div class="section-head">
+      <h2 id="pl-title" class="section-title">Jugadores</h2>
+      <p class="section-note">Goles, asistencias, xG, xA, minutos, tarjetas, penaltis y mapa de tiros de cada jugador.</p>
+    </div>
+    <div id="players"></div>
+  </section>
+  <section aria-labelledby="ref-title">
+    <div class="section-head">
+      <h2 id="ref-title" class="section-title">Árbitros</h2>
+      <p class="section-note">Tarjetas, faltas, goles y victorias locales con cada árbitro.</p>
+    </div>
+    <div id="referees"></div>
+  </section>
+ </div>
+
+ <div class="view" data-view="ligas" hidden>
+  <section aria-labelledby="lg-title">
+    <div class="section-head">
+      <h2 id="lg-title" class="section-title">Otras ligas</h2>
+      <p class="section-note">Segunda, Liga F, Premier League, Serie A, Bundesliga y Ligue 1: clasificación, proyección y próximos partidos.</p>
+    </div>
+    <div id="leagues"></div>
+  </section>
+  <section aria-labelledby="cups-title">
+    <div class="section-head">
+      <h2 id="cups-title" class="section-title">Copas y Europa</h2>
+      <p class="section-note">Copa del Rey, Liga F y equipos españoles en Champions, Europa League y Conference.</p>
+    </div>
+    <div id="cups"></div>
+  </section>
+ </div>
+
  <div class="view" data-view="directo" hidden>
   <section aria-labelledby="live-title">
     <div class="section-head">
@@ -133,6 +201,13 @@
       <p class="section-note">Aciertos y premios reales de cada boleto, con la tabla oficial de premios de cada jornada.</p>
     </div>
     <div id="quiniela-hist"></div>
+  </section>
+  <section aria-labelledby="qg-title">
+    <div class="section-head">
+      <h2 id="qg-title" class="section-title">Quinigol</h2>
+      <p class="section-note">Goles de cada equipo (0, 1, 2 o M) en los próximos partidos de LaLiga.</p>
+    </div>
+    <div id="quinigol"></div>
   </section>
  </div>
 
@@ -175,6 +250,13 @@
     </div>
     <div id="poly-eval"></div>
   </section>
+  <section aria-labelledby="ms-title">
+    <div class="section-head">
+      <h2 id="ms-title" class="section-title">Lo que se ha medido</h2>
+      <p class="section-note">Cada mejora se comprueba con partidos pasados antes de darla por buena; aquí, lo que salió.</p>
+    </div>
+    <div id="measured"></div>
+  </section>
   <section aria-labelledby="trust-title" class="trust-section">
     <div class="section-head">
       <h2 id="trust-title" class="section-title">¿Cuánto acierta a largo plazo?</h2>
@@ -204,6 +286,23 @@
     <p>Son probabilidades, no certezas. Las apuestas y la quiniela son simuladas: no es un consejo de apuesta. Juega con responsabilidad (+18).</p>
   </div>
 </footer>
+<nav class="bnav" aria-label="Secciones principales">
+  <a href="#partidos" data-tab="partidos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M9 5v14M14.5 9.5l1.5 1.5 3-3"/></svg>Partidos</a>
+  <a href="#directo" data-tab="directo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>Directo</a>
+  <a href="#quiniela" data-tab="quiniela"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>Quiniela</a>
+  <a href="#clasificacion" data-tab="clasificacion"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>Liga</a>
+  <button type="button" id="more-btn" aria-expanded="false" aria-controls="sheet"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="18" cy="12" r="1.2"/></svg>Más</button>
+</nav>
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-label="Más secciones" aria-modal="true">
+  <div class="sheet__grab" aria-hidden="true"></div>
+  <a href="#apuestas" data-tab="apuestas">Apuestas simuladas <span aria-hidden="true">›</span></a>
+  <a href="#equipos" data-tab="equipos">Equipos <span aria-hidden="true">›</span></a>
+  <a href="#jugadores" data-tab="jugadores">Jugadores y árbitros <span aria-hidden="true">›</span></a>
+  <a href="#ligas" data-tab="ligas">Otras ligas, copas y Europa <span aria-hidden="true">›</span></a>
+  <a href="#aciertos" data-tab="aciertos">Aciertos y fuentes <span aria-hidden="true">›</span></a>
+</div>
+<script src="extra.js"></script>
 <script src="app.js"></script>
 <script src="live.js"></script>
 </body>

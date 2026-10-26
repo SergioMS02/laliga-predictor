@@ -465,10 +465,12 @@ function statsHtml(m) {
 }
 
 function detailHtml(m, i) {
-  const tabs = [["probs", "Probabilidades"], ["lineup", "Alineaciones"], ["stats", "Estadísticas"]];
+  const tabs = [["probs", "Probabilidades"], ["markets", "Más mercados"], ["lineup", "Alineaciones"], ["stats", "Estadísticas"]];
   return `<div class="dtabs" role="tablist" aria-label="Detalle del partido">${tabs.map(([k, l], j) =>
     `<button role="tab" id="t${i}-${k}" aria-controls="p${i}-${k}" aria-selected="${j === 0}" tabindex="${j === 0 ? 0 : -1}" data-k="${k}">${l}</button>`).join("")}</div>
+    ${EXTRA.previewHtml(m)}
     <div role="tabpanel" id="p${i}-probs" aria-labelledby="t${i}-probs">${probsHtml(m)}</div>
+    <div role="tabpanel" id="p${i}-markets" aria-labelledby="t${i}-markets" hidden>${EXTRA.marketsHtml(m)}</div>
     <div role="tabpanel" id="p${i}-lineup" aria-labelledby="t${i}-lineup" hidden>${pitchHtml(m)}</div>
     <div role="tabpanel" id="p${i}-stats" aria-labelledby="t${i}-stats" hidden>${statsHtml(m)}</div>`;
 }
@@ -706,8 +708,10 @@ function teamsHtml(sel) {
         const home = mm.home === sel; const pw = home ? mm.p_home : mm.p_away;
         return `<li>${home ? "vs" : "en"} ${esc(name(home ? mm.away : mm.home))}: gana ${pct(pw)} %, empate ${pct(mm.p_draw)} %</li>`;
       }).join("")}</ul>` : ""}
+      ${EXTRA.styleHtml(sel)}
       <h4>Fuerza (Elo) en las dos últimas temporadas</h4>${lineChart(t.elo_hist)}
       <p class="quiet small">En verano todos los equipos se acercan un poco a la media: por eso hay un salto entre temporadas.</p>
+      ${EXTRA.eloSeasonsHtml(sel)}
       ${ph.length >= 2 ? `<h4>Puntos finales proyectados, día a día</h4>${lineChart(ph.map((p) => [p[0], p[1]]), 520, 150, "var(--ink)")}` : ""}
       ${playersTable(t, sel)}`;
   }
@@ -1056,17 +1060,43 @@ function setupTheme() {
 
 /* ---------- Navegación ---------- */
 function route() {
+  const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (document.startViewTransition && !reduce && ROUTED) document.startViewTransition(routeNow);
+  else routeNow();
+  ROUTED = true;
+}
+let ROUTED = false;
+function routeNow() {
+  closeSheet();
   const h = decodeURIComponent(location.hash.slice(1) || "partidos");
   const [view, arg] = h.split("/");
-  const v = ["partidos", "directo", "quiniela", "clasificacion", "equipos", "aciertos", "apuestas", "equipo"].includes(view) ? view : "partidos";
+  const v = ["partidos", "directo", "quiniela", "clasificacion", "equipos", "aciertos", "apuestas", "equipo", "jugadores", "ligas"].includes(view) ? view : "partidos";
   const tabv = v === "equipo" ? "equipos" : v;
   document.querySelectorAll(".view").forEach((el) => (el.hidden = el.dataset.view !== tabv));
-  document.querySelectorAll(".tabs a").forEach((a) => a.setAttribute("aria-current", a.dataset.tab === tabv ? "page" : "false"));
+  document.querySelectorAll(".tabs a, .bnav a, .sheet a").forEach((a) => a.setAttribute("aria-current", a.dataset.tab === tabv ? "page" : "false"));
+  const inSheet = ["apuestas", "equipos", "jugadores", "ligas", "aciertos"].includes(tabv);
+  const mb = document.getElementById("more-btn");
+  if (mb) mb.classList.toggle("is-current", inSheet);
   if (tabv === "clasificacion") {
     document.getElementById("standings").innerHTML = standingsHtml();
     document.getElementById("positions").innerHTML = positionsHtml();
     document.getElementById("pichichi").innerHTML = pichichiHtml();
     document.getElementById("poly-season").innerHTML = polySeasonHtml();
+    document.getElementById("thresholds").innerHTML = EXTRA.thresholdsHtml();
+    const sim = document.getElementById("simulator");
+    sim.innerHTML = EXTRA.simulatorHtml(); EXTRA.wireSimulator(sim);
+    document.getElementById("luck").innerHTML = EXTRA.luckHtml();
+    document.getElementById("awards").innerHTML = EXTRA.awardsHtml();
+  }
+  if (tabv === "jugadores") {
+    const pl = document.getElementById("players");
+    pl.innerHTML = EXTRA.playersHtml(); EXTRA.wirePlayers(pl);
+    document.getElementById("referees").innerHTML = EXTRA.refereesHtml();
+  }
+  if (tabv === "ligas") {
+    const lg = document.getElementById("leagues");
+    lg.innerHTML = EXTRA.leaguesHtml(); EXTRA.wireLeagues(lg);
+    document.getElementById("cups").innerHTML = EXTRA.cupsHtml();
   }
   if (tabv === "equipos") {
     const teams = Object.entries((DATA.extra || {}).teams || {}).sort((a, b) => (b[1].elo || 0) - (a[1].elo || 0));
@@ -1077,25 +1107,47 @@ function route() {
   if (tabv === "quiniela") {
     if (arg) Q_SEL = arg;
     renderQuiniela();
+    document.getElementById("quinigol").innerHTML = EXTRA.quinigolHtml() || '<p class="quiet">Aparecerá con los próximos partidos.</p>';
   }
   if (tabv === "aciertos") {
     document.getElementById("track").innerHTML = trackHtml();
     document.getElementById("track-props").innerHTML = propsTrackHtml();
     document.getElementById("poly-eval").innerHTML = polyEvalHtml();
+    document.getElementById("measured").innerHTML = EXTRA.measuredHtml();
     document.getElementById("sources").innerHTML = sourcesHtml();
   }
+}
+
+/* ---------- Hoja «Más» del móvil ---------- */
+function closeSheet() {
+  const sh = document.getElementById("sheet"), sc = document.getElementById("scrim"), b = document.getElementById("more-btn");
+  if (!sh) return;
+  sh.classList.remove("is-open"); sc.classList.remove("is-open"); b.setAttribute("aria-expanded", "false");
+}
+function setupSheet() {
+  const sh = document.getElementById("sheet"), sc = document.getElementById("scrim"), b = document.getElementById("more-btn");
+  if (!sh) return;
+  b.addEventListener("click", () => {
+    const open = !sh.classList.contains("is-open");
+    sh.classList.toggle("is-open", open); sc.classList.toggle("is-open", open); b.setAttribute("aria-expanded", String(open));
+    if (open) sh.querySelector("a").focus({ preventScroll: true });
+  });
+  sc.addEventListener("click", closeSheet);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeSheet(); });
 }
 
 /* ---------- Arranque ---------- */
 let DATA = null;
 async function main() {
   setupTheme();
+  setupSheet();
   try {
     const r = await fetch("data.json", { cache: "no-store" });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     DATA = await r.json();
   } catch (e) {
     document.getElementById("updated").textContent = "No se pudieron cargar las predicciones. Vuelve a intentarlo en unos minutos.";
+    document.getElementById("slip").innerHTML = '<p class="empty">No se pudieron cargar las predicciones. <button type="button" class="more" onclick="location.reload()">Reintentar</button></p>';
     return;
   }
   const ms = DATA.matches || [];
@@ -1103,6 +1155,7 @@ async function main() {
   document.getElementById("updated").textContent = ms.length ? `${upd}. ${ms.length} partidos en los próximos días.` : upd;
 
   const slip = document.getElementById("slip");
+  slip.removeAttribute("aria-busy");
   if (!ms.length) { document.getElementById("empty").hidden = false; slip.hidden = true; }
   const dayOf = (m) => (m.kickoff_utc ? new Date(m.kickoff_utc).toLocaleDateString("es-ES", { timeZone: tz, weekday: "long", day: "numeric", month: "long" })
     : new Date(m.date + "T12:00:00").toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" }));

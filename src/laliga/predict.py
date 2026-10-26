@@ -31,7 +31,7 @@ def upcoming_odds(settings: Settings) -> pd.DataFrame:
         return pd.DataFrame()
     cols = ["season", "home", "away", "odds_h", "odds_d", "odds_a"] + [
         c for c in ("b365_h", "b365_d", "b365_a", "b365_o25", "b365_u25", "ou_o25", "ou_u25",
-                    "max_h", "max_d", "max_a", "avg_h", "avg_d", "avg_a") if c in df]
+                    "max_h", "max_d", "max_a", "avg_h", "avg_d", "avg_a", "ah_line", "ah_h", "ah_a") if c in df]
     return df[cols].dropna(subset=["odds_h"])
 
 
@@ -277,8 +277,13 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
 
     # 5) Mercado (y su movimiento desde la primera cuota vista) y clima
     odds = upcoming_odds(settings) if online else pd.DataFrame()
-    b365, b365_ou, mkt_ou, best_odds = {}, {}, {}, {}
+    b365, b365_ou, mkt_ou, best_odds, ah_odds = {}, {}, {}, {}, {}
+    from . import markets as markets_mod
+    ht_sh = markets_mod.ht_share(matches)
     if len(odds):
+        if "ah_line" in odds:
+            ah_odds = {(r.season, r.home, r.away): (r.ah_line, r.ah_h, r.ah_a) for r in odds.itertuples()
+                       if not pd.isna(r.ah_line) and not pd.isna(r.ah_h)}
         if "b365_h" in odds:
             b365 = {(r.season, r.home, r.away): [r.b365_h, r.b365_d, r.b365_a] for r in odds.itertuples()
                     if not pd.isna(r.b365_h)}
@@ -361,6 +366,11 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
         if pm_m:
             poly = {k2: pm_m[k2] for k2 in ("p", "volume", "liquidity", "url", "slug", "overround")}
             poly.update(used=pm_ok, reason=pm_why, model_weight=round(poly_w, 2) if pm_ok else None)
+            if online and not pm_m.get("live") and not pm_m.get("closed"):
+                try:
+                    poly["more"] = pmk.fetch_secondary(settings, pm_m, online)
+                except Exception as e:
+                    log.warning("Polymarket secundarios: %s", e)
             if pm_ok:
                 final[k] = pmk.blend(p_model, pm_m["p"], poly_w)
         preds.append({
@@ -395,6 +405,7 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             "b365_ou": [float(x) for x in b365_ou[(r.season, r.home, r.away)]] if (r.season, r.home, r.away) in b365_ou else None,
             "ou": _ou_block(o["dc"], mkt_ou.get((r.season, r.home, r.away)), ou_w, blend_ou),
             "odds_market": _clean_odds(best_odds.get((r.season, r.home, r.away))),
+            "markets": _markets(final[k], o["dc"], dc.params.rho, ah_odds.get((r.season, r.home, r.away)), ht_sh),
             "espn_id": str(events[(r.home, r.away)]) if (r.home, r.away) in events else None,
             "scorers": _scorers(o, players, r, season_now),
             "roster": o.get("roster"),
@@ -406,6 +417,23 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
         preds[-1]["_snapshot"]["poly"] = {"p": pm_m["p"], "w": round(poly_w, 3)} if pm_ok else None
     preds.sort(key=lambda d: (d["kickoff_utc"] or d["date"], d["home"]))
     return preds
+
+
+def _markets(p_final, dcp: dict, rho: float, ah: tuple | None, share: float) -> dict | None:
+    """Mercados derivados, con goles esperados coherentes con la probabilidad final del 1X2."""
+    try:
+        from . import markets as markets_mod
+        from .models.dixon_coles import score_matrix
+        tot = float(dcp["xg_home"]) + float(dcp["xg_away"])
+        lam, mu = xg_for_probs([float(x) for x in p_final], tot)
+        out = markets_mod.from_matrix(score_matrix(lam, mu, rho, 10), lam, mu, rho, share)
+        out["goals"] = [lam, mu]
+        if ah:
+            out["ah_market"] = markets_mod.ah_value(out, *ah)
+        return out
+    except Exception as e:
+        log.warning("Mercados derivados: %s", e)
+        return None
 
 
 def _props(pm, r, o: dict, cards, lineups, season: int) -> dict | None:
@@ -542,7 +570,7 @@ def xg_for_probs(p: list[float], total: float) -> list[float]:
     from scipy.stats import poisson
     k = np.arange(11)
     best, err = [total / 2, total / 2], 9.0
-    for t in total * np.linspace(0.8, 1.2, 9):
+    for t in total * np.linspace(0.92, 1.08, 5):  # el total de goles casi fijo (coherente con más/menos)
         for s in np.linspace(0.15, 0.85, 71):
             ph, pa = poisson.pmf(k, t * s), poisson.pmf(k, t * (1 - s))
             m = np.outer(ph, pa)
