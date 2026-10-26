@@ -1,0 +1,479 @@
+slug,date,home,away,p_over25,p_btts,vol_over25,vol_btts
+lal-bar-rea-2026-10-25,2026-10-25,Barcelona,Real Madrid,0.825,0.765,283766,224224
+lal-rso-lev-2026-10-25,2026-10-25,Sociedad,Levante,0.665,0.625,7283,8100
+lal-cel-bet-2026-10-25,2026-10-25,Celta,Betis,0.495,0.575,251517,37748
+lal-bil-get-2026-10-25,2026-10-25,Ath Bilbao,Getafe,0.465,0.455,386742,10359
+lal-mad-dep-2026-10-24,2026-10-24,Ath Madrid,La Coruna,0.655,0.485,371776,38467
+lal-val-vil-2026-10-24,2026-10-24,Valencia,Villarreal,0.545,0.595,125820,18081
+lal-rrc-esp-2026-10-24,2026-10-24,Santander,Espanol,0.625,0.655,50096,13622
+lal-ray-elc-2026-10-24,2026-10-24,Vallecano,Elche,0.545,0.565,399138,28370
+lal-ala-mala-2026-10-23,2026-10-23,Alaves,Malaga,0.455,0.455,81586,21103
+lal-lev-bil-2026-09-16,2026-09-16,Levante,Ath Bilbao,0.485,0.55,479529,30755
+lal-get-ray-2026-10-19,2026-10-19,Getafe,Vallecano,0.335,0.445,230358,40357
+lal-rea-sev-2026-10-18,2026-10-18,Real Madrid,Sevilla,0.715,0.545,162980,56154
+lal-mala-rso-2026-10-18,2026-10-18,Malaga,Sociedad,0.585,0.625,45476,7158
+lal-cel-ala-2026-10-18,2026-10-18,Celta,Alaves,0.365,0.455,93445,29816
+lal-osa-rrc-2026-10-18,2026-10-18,Osasuna,Santander,0.575,0.605,59960,32644
+lal-val-bil-2026-10-17,2026-10-17,Valencia,Ath Bilbao,0.425,0.505,23493,56319
+lal-bet-bar-2026-10-17,2026-10-17,Betis,Barcelona,0.785,0.705,167404,41519
+lal-vil-elc-2026-10-17,2026-10-17,Villarreal,Elche,0.675,0.595,34724,12379
+lal-esp-mad-2026-10-17,2026-10-17,Espanol,Ath Madrid,0.555,0.555,120021,15844
+lal-dep-lev-2026-10-16,2026-10-16,La Coruna,Levante,0.495,0.555,238023,35118
+lal-lev-sev-2026-10-12,2026-10-12,Levante,Sevilla,0.455,0.535,149014,50774
+lal-rrc-val-2026-10-11,2026-10-11,Santander,Valencia,0.565,0.605,72339,6332
+lal-bet-osa-2026-10-11,2026-10-11,Betis,Osasuna,0.605,0.545,438032,15698
+lal-rso-dep-2026-10-11,2026-10-11,Sociedad,La Coruna,0.545,0.565,95370,16991
+lal-elc-cel-2026-10-11,2026-10-11,Elche,Celta,0.505,0.565,111235,6047
+lal-rea-vil-2026-10-10,2026-10-10,Real Madrid,Villarreal,0.735,0.625,98813,23515
+lal-bar-get-2026-10-10,2026-10-10,Barcelona,Getafe,0.755,0.465,83483,40634
+lal-ala-mad-2026-10-10,2026-10-10,Alaves,Ath Madrid,0.485,0.515,193831,14986
+lal-mala-esp-2026-10-09,2026-10-09,Malaga,Espanol,0.485,0.565,112654,30221
+lal-val-rso-2026-09-20,2026-09-20,Valencia,Sociedad,0.495,0.565,350232,5241
+lal-dep-bet-2026-09-20,2026-09-20,La Coruna,Betis,0.525,0.575,118538,62097
+lal-vil-lev-2026-09-20,2026-09-20,Villarreal,Levante,0.625,0.595,25883,18116
+lal-mad-rea-2026-09-20,2026-09-20,Ath Madrid,Real Madrid,0.635,0.665,306955,154488
+lal-get-mala-2026-09-20,2026-09-20,Getafe,Malaga,0.385,0.445,44920,36292
+lal-sev-bar-2026-09-19,2026-09-19,Sevilla,Barcelona,0.755,0.605,219204,92385
+lal-cel-rrc-2026-09-19,2026-09-19,Celta,Santander,0.565,0.585,32443,14681
+lal-bil-ala-2026-09-19,2026-09-19,Ath Bilbao,Alaves,0.455,0.465,113076,10315
+lal-osa-ray-2026-09-19,2026-09-19,Osasuna,Vallecano,0.445,0.535,205504,38271
+lal-esp-elc-2026-09-18,2026-09-18,Espanol,Elche,0.545,0.575,123659,79172
+lal-mala-vil-2026-09-17,2026-09-17,Malaga,Villarreal,0.565,0.605,45526,13944
+lal-bet-get-2026-09-17,2026-09-17,Betis,Getafe,0.475,0.465,191409,39738
+lal-bar-rrc-2026-09-16,2026-09-16,Barcelona,Santander,0.895,0.545,58764,62543
+lal-mad-osa-2026-09-16,2026-09-16,Ath Madrid,Osasuna,0.605,0.485,214202,82121
+lal-dep-sev-2026-09-16,2026-09-16,La Coruna,Sevilla,0.435,0.525,43926,55059
+lal-elc-rea-2026-09-15,2026-09-15,Elche,Real Madrid,0.745,0.545,232671,80994
+lal-ala-val-2026-09-15,2026-09-15,Alaves,Valencia,0.445,0.475,115682,16223
+lal-ray-esp-2026-09-15,2026-09-15,Vallecano,Espanol,0.465,0.535,150903,96567
+lal-vil-bet-2026-09-14,2026-09-14,Villarreal,Betis,0.685,0.685,130691,67255
+lal-rso-mad-2026-09-13,2026-09-13,Sociedad,Ath Madrid,0.555,0.605,141728,82804
+lal-get-dep-2026-09-13,2026-09-13,Getafe,La Coruna,0.355,0.46,139189,75296
+lal-lev-bar-2026-09-13,2026-09-13,Levante,Barcelona,0.805,0.585,50609,52686
+lal-cel-mala-2026-09-13,2026-09-13,Celta,Malaga,0.465,0.485,144688,24102
+lal-rea-ray-2026-09-12,2026-09-12,Real Madrid,Vallecano,0.765,0.515,41859,38227
+lal-bil-elc-2026-09-12,2026-09-12,Ath Bilbao,Elche,0.575,0.505,130019,35572
+lal-osa-esp-2026-09-12,2026-09-12,Osasuna,Espanol,0.445,0.515,220797,14631
+lal-rrc-ala-2026-09-12,2026-09-12,Santander,Alaves,0.555,0.605,93551,28526
+lal-sev-val-2026-09-11,2026-09-11,Sevilla,Valencia,0.445,0.475,62802,33902
+lal-elc-rso-2026-09-07,2026-09-07,Elche,Sociedad,0.545,0.595,282670,48014
+lal-get-cel-2026-09-07,2026-09-07,Getafe,Celta,0.275,0.375,152690,30918
+lal-esp-sev-2026-09-06,2026-09-06,Espanol,Sevilla,0.425,0.505,171270,112884
+lal-mala-lev-2026-09-06,2026-09-06,Malaga,Levante,0.505,0.575,358176,14276
+lal-ala-osa-2026-09-06,2026-09-06,Alaves,Osasuna,0.385,0.465,24691,30371
+lal-val-bar-2026-09-06,2026-09-06,Valencia,Barcelona,0.715,0.555,108656,52613
+lal-vil-dep-2026-09-05,2026-09-05,Villarreal,La Coruna,0.585,0.525,156585,25196
+lal-ray-rrc-2026-09-05,2026-09-05,Vallecano,Santander,0.585,0.615,53177,5387
+lal-bil-mad-2026-09-05,2026-09-05,Ath Bilbao,Ath Madrid,0.505,0.565,59529,15796
+lal-bet-rea-2026-09-04,2026-09-04,Betis,Real Madrid,0.695,0.635,109537,56126
+lal-rso-cel-2026-09-03,2026-09-03,Sociedad,Celta,0.525,0.545,75899,15699
+lal-bar-ray-2026-08-31,2026-08-31,Barcelona,Vallecano,0.815,0.495,67165,71734
+lal-osa-get-2026-08-31,2026-08-31,Osasuna,Getafe,0.305,0.39,139331,74553
+lal-cel-bil-2026-08-30,2026-08-30,Celta,Ath Bilbao,0.405,0.495,304979,24519
+lal-dep-val-2026-08-30,2026-08-30,La Coruna,Valencia,0.385,0.485,28401,26843
+lal-rea-mala-2026-08-30,2026-08-30,Real Madrid,Malaga,0.805,0.475,84948,84000
+lal-sev-mad-2026-08-29,2026-08-29,Sevilla,Ath Madrid,0.465,0.525,350098,125874
+lal-rso-esp-2026-08-29,2026-08-29,Sociedad,Espanol,0.545,0.575,277846,7928
+lal-lev-bet-2026-08-29,2026-08-29,Levante,Betis,0.515,0.575,132738,13443
+lal-ala-vil-2026-08-28,2026-08-28,Alaves,Villarreal,0.535,0.59,138345,66970
+lal-rrc-elc-2026-08-28,2026-08-28,Santander,Elche,0.555,0.595,69907,19757
+lal-bar-bil-2026-08-27,2026-08-27,Barcelona,Ath Bilbao,0.725,0.555,414967,76959
+lal-cel-osa-2026-08-16,2026-08-16,Celta,Osasuna,0.405,0.465,82545,34779
+lal-rea-rso-2026-08-26,2026-08-26,Real Madrid,Sociedad,0.735,0.535,214813,121765
+lal-val-bet-2026-08-25,2026-08-25,Valencia,Betis,0.435,0.525,166838,142737
+lal-mala-dep-2026-08-24,2026-08-24,Malaga,La Coruna,0.415,0.505,283828,17274
+lal-osa-lev-2026-08-24,2026-08-24,Osasuna,Levante,0.435,0.485,78823,26656
+lal-elc-bar-2026-08-23,2026-08-23,Elche,Barcelona,0.655,0.545,145074,50320
+lal-get-rrc-2026-08-23,2026-08-23,Getafe,Santander,0.425,0.505,63126,54043
+lal-mad-vil-2026-08-23,2026-08-23,Ath Madrid,Villarreal,0.575,0.595,182382,33185
+lal-esp-rea-2026-08-22,2026-08-22,Espanol,Real Madrid,0.615,0.535,335025,84050
+lal-val-cel-2026-08-22,2026-08-22,Valencia,Celta,0.405,0.495,46670,19894
+lal-bil-sev-2026-08-22,2026-08-22,Ath Bilbao,Sevilla,0.435,0.465,49654,18438
+lal-bet-rso-2026-08-21,2026-08-21,Betis,Sociedad,0.525,0.585,95234,46308
+lal-ray-ala-2026-08-20,2026-08-20,Vallecano,Alaves,0.405,0.485,208193,41638
+lal-mad-mala-2026-08-19,2026-08-19,Ath Madrid,Malaga,0.575,0.495,272048,45522
+lal-dep-elc-2026-08-17,2026-08-17,La Coruna,Elche,0.405,0.485,320836,66517
+lal-esp-lev-2026-08-16,2026-08-16,Espanol,Levante,0.445,0.505,298257,31827
+lal-rrc-vil-2026-08-16,2026-08-16,Santander,Villarreal,0.635,0.645,86077,14547
+lal-sev-ray-2026-08-15,2026-08-15,Sevilla,Vallecano,0.355,0.465,190207,32600
+lal-ala-get-2026-08-15,2026-08-15,Alaves,Getafe,0.275,0.375,77745,26365
+lal-vil-mad-2026-05-24,2026-05-24,Villarreal,Ath Madrid,0.695,0.71,75137,56274
+lal-gir-elc-2026-05-23,2026-05-23,Girona,Elche,0.535,0.565,63563,10779
+lal-bet-lev-2026-05-23,2026-05-23,Betis,Levante,0.595,0.635,128225,3776
+lal-rea-bil-2026-05-23,2026-05-23,Real Madrid,Ath Bilbao,0.675,0.625,18537,8777
+lal-cel-sev-2026-05-23,2026-05-23,Celta,Sevilla,0.425,0.485,27453,29668
+lal-val-bar-2026-05-23,2026-05-23,Valencia,Barcelona,0.665,0.675,31248,14321
+lal-ala-ray-2026-05-23,2026-05-23,Alaves,Vallecano,0.455,0.515,57864,17347
+lal-get-osa-2026-05-23,2026-05-23,Getafe,Osasuna,0.265,0.385,41735,22137
+lal-esp-rso-2026-05-23,2026-05-23,Espanol,Sociedad,0.555,0.595,98540,8250
+lal-mal-ovi-2026-05-23,2026-05-23,Mallorca,Oviedo,0.505,0.465,38707,2355
+lal-bar-bet-2026-05-17,2026-05-17,Barcelona,Betis,0.735,0.61,58940,32473
+lal-bil-cel-2026-05-17,2026-05-17,Ath Bilbao,Celta,0.435,0.505,27671,22616
+lal-ray-vil-2026-05-17,2026-05-17,Vallecano,Villarreal,0.555,0.58,22886,8620
+lal-sev-rea-2026-05-17,2026-05-17,Sevilla,Real Madrid,0.575,0.615,89008,25232
+lal-lev-mal-2026-05-17,2026-05-17,Levante,Mallorca,0.505,0.565,43573,11400
+lal-rso-val-2026-05-17,2026-05-17,Sociedad,Valencia,0.495,0.56,30396,19867
+lal-ovi-ala-2026-05-17,2026-05-17,Oviedo,Alaves,0.395,0.475,95093,15670
+lal-osa-esp-2026-05-17,2026-05-17,Osasuna,Espanol,0.405,0.495,75695,22445
+lal-mad-gir-2026-05-17,2026-05-17,Ath Madrid,Girona,0.585,0.585,83287,18031
+lal-elc-get-2026-05-17,2026-05-17,Elche,Getafe,0.345,0.445,26912,32319
+lal-rea-ovi-2026-05-14,2026-05-14,Real Madrid,Oviedo,0.665,0.505,137485,60053
+lal-gir-rso-2026-05-14,2026-05-14,Girona,Sociedad,0.555,0.585,194958,83789
+lal-val-ray-2026-05-14,2026-05-14,Valencia,Vallecano,0.395,0.485,111368,97643
+lal-get-mal-2026-05-13,2026-05-13,Getafe,Mallorca,0.325,0.415,71597,38447
+lal-ala-bar-2026-05-13,2026-05-13,Alaves,Barcelona,0.615,0.635,157106,33808
+lal-esp-bil-2026-05-13,2026-05-13,Espanol,Ath Bilbao,0.365,0.465,69815,64542
+lal-vil-sev-2026-05-13,2026-05-13,Villarreal,Sevilla,0.525,0.585,218255,47782
+lal-osa-mad-2026-05-12,2026-05-12,Osasuna,Ath Madrid,0.535,0.58,320127,179520
+lal-bet-elc-2026-05-12,2026-05-12,Betis,Elche,0.585,0.575,115833,34542
+lal-cel-lev-2026-05-12,2026-05-12,Celta,Levante,0.545,0.565,148137,69889
+lal-ray-gir-2026-05-11,2026-05-11,Vallecano,Girona,0.485,0.555,521506,41142
+lal-bar-rea-2026-05-10,2026-05-10,Barcelona,Real Madrid,0.715,0.695,189612,156825
+lal-ovi-get-2026-05-10,2026-05-10,Oviedo,Getafe,0.285,0.375,41652,22402
+lal-bil-val-2026-05-10,2026-05-10,Ath Bilbao,Valencia,0.455,0.475,332028,15788
+lal-mal-vil-2026-05-10,2026-05-10,Mallorca,Villarreal,0.555,0.605,63276,14122
+lal-rso-bet-2026-05-09,2026-05-09,Sociedad,Betis,0.585,0.635,155429,41325
+lal-mad-cel-2026-05-09,2026-05-09,Ath Madrid,Celta,0.585,0.605,52598,12066
+lal-sev-esp-2026-05-09,2026-05-09,Sevilla,Espanol,0.355,0.435,46678,28973
+lal-elc-ala-2026-05-09,2026-05-09,Elche,Alaves,0.485,0.565,106800,32685
+lal-lev-osa-2026-05-08,2026-05-08,Levante,Osasuna,0.485,0.565,160975,13048
+lal-sev-rso-2026-05-04,2026-05-04,Sevilla,Sociedad,0.445,0.525,111811,45241
+lal-esp-rea-2026-05-03,2026-05-03,Espanol,Real Madrid,0.595,0.605,199710,28214
+lal-bet-ovi-2026-05-03,2026-05-03,Betis,Oviedo,0.495,0.485,72464,13413
+lal-get-ray-2026-05-03,2026-05-03,Getafe,Vallecano,0.345,0.42,41549,13578
+lal-cel-elc-2026-05-03,2026-05-03,Celta,Elche,0.555,0.565,236327,42711
+lal-osa-bar-2026-05-02,2026-05-02,Osasuna,Barcelona,0.625,0.615,68548,38699
+lal-ala-bil-2026-05-02,2026-05-02,Alaves,Ath Bilbao,0.435,0.52,33884,13981
+lal-val-mad-2026-05-02,2026-05-02,Valencia,Ath Madrid,0.515,0.525,269410,18506
+lal-vil-lev-2026-05-02,2026-05-02,Villarreal,Levante,0.645,0.635,51139,19700
+lal-gir-mal-2026-05-01,2026-05-01,Girona,Mallorca,0.505,0.55,61910,36812
+lal-esp-lev-2026-04-27,2026-04-27,Espanol,Levante,0.495,0.555,150613,33903
+lal-vil-cel-2026-04-26,2026-04-26,Villarreal,Celta,0.585,0.61,91307,23318
+lal-osa-sev-2026-04-26,2026-04-26,Osasuna,Sevilla,0.415,0.485,130677,20019
+lal-ovi-elc-2026-04-26,2026-04-26,Oviedo,Elche,0.415,0.505,209734,24067
+lal-ray-rso-2026-04-26,2026-04-26,Vallecano,Sociedad,0.555,0.605,93981,20422
+lal-mad-bil-2026-04-25,2026-04-25,Ath Madrid,Ath Bilbao,0.525,0.565,377155,30487
+lal-val-gir-2026-04-25,2026-04-25,Valencia,Girona,0.475,0.545,47366,23281
+lal-get-bar-2026-04-25,2026-04-25,Getafe,Barcelona,0.49,0.495,275201,27127
+lal-ala-mal-2026-04-25,2026-04-25,Alaves,Mallorca,0.495,0.545,133323,34731
+lal-bet-rea-2026-04-24,2026-04-24,Betis,Real Madrid,0.655,0.665,109688,51615
+lal-ovi-vil-2026-04-23,2026-04-23,Oviedo,Villarreal,0.475,0.545,112313,28292
+lal-ray-esp-2026-04-23,2026-04-23,Vallecano,Espanol,0.495,0.555,104897,26555
+lal-lev-sev-2026-04-23,2026-04-23,Levante,Sevilla,0.44,0.515,86639,19225
+lal-bar-cel-2026-04-22,2026-04-22,Barcelona,Celta,0.735,0.57,108972,54160
+lal-rso-get-2026-04-22,2026-04-22,Sociedad,Getafe,0.375,0.475,60575,29353
+lal-elc-mad-2026-04-22,2026-04-22,Elche,Ath Madrid,0.545,0.595,197299,18327
+lal-gir-bet-2026-04-21,2026-04-21,Girona,Betis,0.505,0.575,24528,9633
+lal-rea-ala-2026-04-21,2026-04-21,Real Madrid,Alaves,0.755,0.555,201859,54763
+lal-bil-osa-2026-04-21,2026-04-21,Ath Bilbao,Osasuna,0.475,0.525,97633,19791
+lal-mal-val-2026-04-21,2026-04-21,Mallorca,Valencia,0.445,0.525,103889,28856
+lal-lev-get-2026-04-13,2026-04-13,Levante,Getafe,0.365,0.465,43135,17878
+lal-bil-vil-2026-04-12,2026-04-12,Ath Bilbao,Villarreal,0.495,0.545,155529,103452
+lal-cel-ovi-2026-04-12,2026-04-12,Celta,Oviedo,0.445,0.475,527499,24776
+lal-mal-ray-2026-04-12,2026-04-12,Mallorca,Vallecano,0.475,0.55,177300,10847
+lal-osa-bet-2026-04-12,2026-04-12,Osasuna,Betis,0.475,0.54,84907,11048
+lal-sev-mad-2026-04-11,2026-04-11,Sevilla,Ath Madrid,0.515,0.565,257745,28137
+lal-bar-esp-2026-04-11,2026-04-11,Barcelona,Espanol,0.705,0.575,46536,19052
+lal-elc-val-2026-04-11,2026-04-11,Elche,Valencia,0.535,0.585,296549,21334
+lal-rso-ala-2026-04-11,2026-04-11,Sociedad,Alaves,0.54,0.565,72706,15255
+lal-rea-gir-2026-04-10,2026-04-10,Real Madrid,Girona,0.745,0.635,140955,64973
+lal-gir-vil-2026-04-06,2026-04-06,Girona,Villarreal,0.585,0.625,110548,29064
+lal-ala-osa-2026-04-05,2026-04-05,Alaves,Osasuna,0.415,0.505,74262,8870
+lal-ovi-sev-2026-04-05,2026-04-05,Oviedo,Sevilla,0.375,0.475,118505,9608
+lal-val-cel-2026-04-05,2026-04-05,Valencia,Celta,0.425,0.515,56846,55955
+lal-get-bil-2026-04-05,2026-04-05,Getafe,Ath Bilbao,0.305,0.405,129688,27101
+lal-mad-bar-2026-04-04,2026-04-04,Ath Madrid,Barcelona,0.695,0.695,140878,47430
+lal-bet-esp-2026-04-04,2026-04-04,Betis,Espanol,0.505,0.545,390689,20585
+lal-mal-rea-2026-04-04,2026-04-04,Mallorca,Real Madrid,0.635,0.6,225757,70748
+lal-rso-lev-2026-04-04,2026-04-04,Sociedad,Levante,0.605,0.585,270427,4059
+lal-ray-elc-2026-04-03,2026-04-03,Vallecano,Elche,0.525,0.545,197819,54616
+lal-rea-mad-2026-03-22,2026-03-22,Real Madrid,Ath Madrid,0.605,0.635,0,0
+lal-bil-bet-2026-03-22,2026-03-22,Ath Bilbao,Betis,0.475,0.535,0,0
+lal-cel-ala-2026-03-22,2026-03-22,Celta,Alaves,0.445,0.505,0,0
+lal-bar-ray-2026-03-22,2026-03-22,Barcelona,Vallecano,0.75,0.57,0,0
+lal-sev-val-2026-03-21,2026-03-21,Sevilla,Valencia,0.385,0.475,0,0
+lal-lev-ovi-2026-03-21,2026-03-21,Levante,Oviedo,0.425,0.495,0,0
+lal-osa-gir-2026-03-21,2026-03-21,Osasuna,Girona,0.535,0.57,0,24903
+lal-esp-get-2026-03-21,2026-03-21,Espanol,Getafe,0.305,0.405,0,0
+lal-elc-mal-2026-03-21,2026-03-21,Elche,Mallorca,0.495,0.55,0,0
+lal-vil-rso-2026-03-20,2026-03-20,Villarreal,Sociedad,0.565,0.595,92511,46359
+lal-ray-lev-2026-03-16,2026-03-16,Vallecano,Levante,0.46,0.495,0,0
+lal-rso-osa-2026-03-15,2026-03-15,Sociedad,Osasuna,0.495,0.545,78987,0
+lal-bet-cel-2026-03-15,2026-03-15,Betis,Celta,0.485,0.545,0,0
+lal-bar-sev-2026-03-15,2026-03-15,Barcelona,Sevilla,0.705,0.575,0,0
+lal-mal-esp-2026-03-15,2026-03-15,Mallorca,Espanol,0.415,0.5,0,0
+lal-rea-elc-2026-03-14,2026-03-14,Real Madrid,Elche,0.675,0.525,0,0
+lal-ovi-val-2026-03-14,2026-03-14,Oviedo,Valencia,0.435,0.505,0,0
+lal-mad-get-2026-03-14,2026-03-14,Ath Madrid,Getafe,0.385,0.41,0,0
+lal-gir-bil-2026-03-14,2026-03-14,Girona,Ath Bilbao,0.475,0.55,0,0
+lal-ala-vil-2026-03-13,2026-03-13,Alaves,Villarreal,0.495,0.56,0,0
+lal-esp-ovi-2026-03-09,2026-03-09,Espanol,Oviedo,0.405,0.475,0,0
+lal-val-ala-2026-03-08,2026-03-08,Valencia,Alaves,0.375,0.46,0,0
+lal-sev-ray-2026-03-08,2026-03-08,Sevilla,Vallecano,0.405,0.505,0,0
+lal-vil-elc-2026-03-08,2026-03-08,Villarreal,Elche,0.605,0.545,0,0
+lal-bil-bar-2026-03-08,2026-03-08,Ath Bilbao,Barcelona,0.64,0.605,0,0
+lal-mad-rso-2026-03-07,2026-03-07,Ath Madrid,Sociedad,0.555,0.555,0,0
+lal-lev-gir-2026-03-07,2026-03-07,Levante,Girona,0.515,0.575,0,0
+lal-get-bet-2026-03-07,2026-03-07,Getafe,Betis,0.335,0.445,0,0
+lal-cel-rea-2026-03-07,2026-03-07,Celta,Real Madrid,0.495,0.575,0,0
+lal-osa-mal-2026-03-06,2026-03-06,Osasuna,Mallorca,0.43,0.46,0,0
+lal-ray-ovi-2026-02-07,2026-02-07,Vallecano,Oviedo,0.425,0.73,0,0
+lal-rea-get-2026-03-02,2026-03-02,Real Madrid,Getafe,0.47,0.41,689710,92732
+lal-gir-cel-2026-03-01,2026-03-01,Girona,Celta,0.455,0.545,593145,200923
+lal-bet-sev-2026-03-01,2026-03-01,Betis,Sevilla,0.475,0.51,46459,17048
+lal-val-osa-2026-03-01,2026-03-01,Valencia,Osasuna,0.42,0.495,14107,41492
+lal-elc-esp-2026-03-01,2026-03-01,Elche,Espanol,0.485,0.555,660462,13111
+lal-ovi-mad-2026-02-28,2026-02-28,Oviedo,Ath Madrid,0.475,0.51,240707,9314
+lal-mal-rso-2026-02-28,2026-02-28,Mallorca,Sociedad,0.435,0.515,75597,32009
+lal-bar-vil-2026-02-28,2026-02-28,Barcelona,Villarreal,0.77,0.675,48648,49415
+lal-ray-bil-2026-02-28,2026-02-28,Vallecano,Ath Bilbao,0.415,0.505,45095,15513
+lal-lev-ala-2026-02-27,2026-02-27,Levante,Alaves,0.415,0.505,28461,17014
+lal-ala-gir-2026-02-23,2026-02-23,Alaves,Girona,0.445,0.525,748388,12490
+lal-vil-val-2026-02-22,2026-02-22,Villarreal,Valencia,0.515,0.535,43156,9220
+lal-cel-mal-2026-02-22,2026-02-22,Celta,Mallorca,0.445,0.485,626085,11760
+lal-bar-lev-2026-02-22,2026-02-22,Barcelona,Levante,0.815,0.515,51617,28663
+lal-get-sev-2026-02-22,2026-02-22,Getafe,Sevilla,0.275,0.385,40362,11988
+lal-mad-esp-2026-02-21,2026-02-21,Ath Madrid,Espanol,0.545,0.48,100595,20965
+lal-osa-rea-2026-02-21,2026-02-21,Osasuna,Real Madrid,0.575,0.585,151638,131978
+lal-bet-ray-2026-02-21,2026-02-21,Betis,Vallecano,0.505,0.545,71366,9172
+lal-rso-ovi-2026-02-21,2026-02-21,Sociedad,Oviedo,0.485,0.465,89443,34109
+lal-bil-elc-2026-02-20,2026-02-20,Ath Bilbao,Elche,0.505,0.525,265754,91831
+lal-gir-bar-2026-02-16,2026-02-16,Girona,Barcelona,0.735,0.635,179567,55978
+lal-mal-bet-2026-02-15,2026-02-15,Mallorca,Betis,0.45,0.53,53014,27254
+lal-lev-val-2026-02-15,2026-02-15,Levante,Valencia,0.455,0.545,98123,13057
+lal-ovi-bil-2026-02-15,2026-02-15,Oviedo,Ath Bilbao,0.385,0.475,54203,15576
+lal-rea-rso-2026-02-14,2026-02-14,Real Madrid,Sociedad,0.615,0.53,73214,41947
+lal-sev-ala-2026-02-14,2026-02-14,Sevilla,Alaves,0.375,0.46,44371,13815
+lal-ray-mad-2026-02-14,2026-02-14,Vallecano,Ath Madrid,0.47,0.495,285440,25216
+lal-esp-cel-2026-02-14,2026-02-14,Espanol,Celta,0.385,0.48,67694,18117
+lal-elc-osa-2026-02-13,2026-02-13,Elche,Osasuna,0.445,0.525,100007,26413
+lal-vil-esp-2026-02-09,2026-02-09,Villarreal,Espanol,0.525,0.545,65201,42815
+lal-val-rea-2026-02-08,2026-02-08,Valencia,Real Madrid,0.575,0.57,75322,26892
+lal-mad-bet-2026-02-08,2026-02-08,Ath Madrid,Betis,0.6,0.54,148134,21064
+lal-bil-lev-2026-02-08,2026-02-08,Ath Bilbao,Levante,0.515,0.495,271088,8534
+lal-ala-get-2026-02-08,2026-02-08,Alaves,Getafe,0.245,0.34,34451,9898
+lal-rso-elc-2026-02-07,2026-02-07,Sociedad,Elche,0.545,0.545,301740,19864
+lal-sev-gir-2026-02-07,2026-02-07,Sevilla,Girona,0.475,0.525,37938,12920
+lal-bar-mal-2026-02-07,2026-02-07,Barcelona,Mallorca,0.76,0.51,34623,10293
+lal-cel-osa-2026-02-06,2026-02-06,Celta,Osasuna,0.445,0.51,121171,19299
+lal-mal-sev-2026-02-02,2026-02-02,Mallorca,Sevilla,0.405,0.49,88799,37711
+lal-bil-rso-2026-02-01,2026-02-01,Ath Bilbao,Sociedad,0.435,0.515,72845,59013
+lal-get-cel-2026-02-01,2026-02-01,Getafe,Celta,0.315,0.41,130963,21542
+lal-bet-val-2026-02-01,2026-02-01,Betis,Valencia,0.485,0.515,174856,9619
+lal-rea-ray-2026-02-01,2026-02-01,Real Madrid,Vallecano,0.69,0.55,97596,31301
+lal-elc-bar-2026-01-31,2026-01-31,Elche,Barcelona,0.735,0.6,49625,22666
+lal-lev-mad-2026-01-31,2026-01-31,Levante,Ath Madrid,0.545,0.545,84029,5342
+lal-osa-vil-2026-01-31,2026-01-31,Osasuna,Villarreal,0.505,0.57,51137,3999
+lal-ovi-gir-2026-01-31,2026-01-31,Oviedo,Girona,0.41,0.495,252985,17980
+lal-esp-ala-2026-01-30,2026-01-30,Espanol,Alaves,0.365,0.435,91014,15134
+lal-gir-get-2026-01-26,2026-01-26,Girona,Getafe,0.335,0.415,70971,31106
+lal-ala-bet-2026-01-25,2026-01-25,Alaves,Betis,0.385,0.47,31481,15502
+lal-rso-cel-2026-01-25,2026-01-25,Sociedad,Celta,0.455,0.525,37085,19610
+lal-bar-ovi-2026-01-25,2026-01-25,Barcelona,Oviedo,0.775,0.51,79113,34911
+lal-mad-mal-2026-01-25,2026-01-25,Ath Madrid,Mallorca,0.545,0.435,70676,22862
+lal-vil-rea-2026-01-24,2026-01-24,Villarreal,Real Madrid,0.675,0.675,74740,21890
+lal-sev-bil-2026-01-24,2026-01-24,Sevilla,Ath Bilbao,0.385,0.48,42957,11673
+lal-val-esp-2026-01-24,2026-01-24,Valencia,Espanol,0.41,0.49,19042,8930
+lal-ray-osa-2026-01-24,2026-01-24,Vallecano,Osasuna,0.405,0.48,80341,7888
+lal-lev-elc-2026-01-23,2026-01-23,Levante,Elche,0.505,0.56,29006,19989
+lal-elc-sev-2026-01-19,2026-01-19,Elche,Sevilla,0.385,0.47,165264,11012
+lal-rso-bar-2026-01-18,2026-01-18,Sociedad,Barcelona,0.665,0.635,31758,14878
+lal-cel-ray-2026-01-18,2026-01-18,Celta,Vallecano,0.425,0.495,105933,4496
+lal-mad-ala-2026-01-18,2026-01-18,Ath Madrid,Alaves,0.5,0.425,47709,6182
+lal-get-val-2026-01-18,2026-01-18,Getafe,Valencia,0.285,0.385,6556,18153
+lal-bet-vil-2026-01-17,2026-01-17,Betis,Villarreal,0.565,0.62,267524,10702
+lal-osa-ovi-2026-01-17,2026-01-17,Osasuna,Oviedo,0.42,0.455,72280,2682
+lal-mal-bil-2026-01-17,2026-01-17,Mallorca,Ath Bilbao,0.395,0.485,299255,6041
+lal-rea-lev-2026-01-17,2026-01-17,Real Madrid,Levante,0.77,0.51,50778,16377
+lal-esp-gir-2026-01-16,2026-01-16,Espanol,Girona,0.435,0.495,38625,14197
+lal-sev-cel-2026-01-12,2026-01-12,Sevilla,Celta,0.405,0.485,65577,40250
+lal-lev-esp-2026-01-11,2026-01-11,Levante,Espanol,0.465,0.53,195966,11104
+lal-ray-mal-2026-01-11,2026-01-11,Vallecano,Mallorca,0.365,0.425,112558,4100
+lal-val-elc-2026-01-10,2026-01-10,Valencia,Elche,0.415,0.48,46609,22038
+lal-gir-osa-2026-01-10,2026-01-10,Girona,Osasuna,0.415,0.49,15750,13586
+lal-vil-ala-2026-01-10,2026-01-10,Villarreal,Alaves,0.495,0.46,84797,10598
+lal-ovi-bet-2026-01-10,2026-01-10,Oviedo,Betis,0.465,0.525,165128,28709
+lal-get-rso-2026-01-09,2026-01-09,Getafe,Sociedad,0.325,0.415,33177,14244
+lal-rso-mad-2026-01-04,2026-01-04,Sociedad,Ath Madrid,0.54,0.56,133835,11909
+lal-mal-gir-2026-01-04,2026-01-04,Mallorca,Girona,0.415,0.5,24835,4342
+lal-ala-ovi-2026-01-04,2026-01-04,Alaves,Oviedo,0.275,0.365,10815,7462
+lal-rea-bet-2026-01-04,2026-01-04,Real Madrid,Betis,0.63,0.58,12545,13324
+lal-sev-lev-2026-01-04,2026-01-04,Sevilla,Levante,0.515,0.525,238878,2663
+lal-esp-bar-2026-01-03,2026-01-03,Espanol,Barcelona,0.645,0.6,92819,14930
+lal-elc-vil-2026-01-03,2026-01-03,Elche,Villarreal,0.53,0.58,137893,26462
+lal-osa-bil-2026-01-03,2026-01-03,Osasuna,Ath Bilbao,0.375,0.475,43605,2768
+lal-cel-val-2026-01-03,2026-01-03,Celta,Valencia,0.42,0.49,273546,10791
+lal-ray-get-2026-01-02,2026-01-02,Vallecano,Getafe,0.285,0.37,21411,12909
+lal-bil-esp-2025-12-22,2025-12-22,Ath Bilbao,Espanol,0.425,0.465,42153,13353
+lal-bet-get-2025-12-21,2025-12-21,Betis,Getafe,0.36,0.4,58477,14195
+lal-elc-ray-2025-12-21,2025-12-21,Elche,Vallecano,0.365,0.46,33385,6688
+lal-vil-bar-2025-12-21,2025-12-21,Villarreal,Barcelona,0.72,0.705,45542,46211
+lal-gir-mad-2025-12-21,2025-12-21,Girona,Ath Madrid,0.515,0.535,92121,9559
+lal-rea-sev-2025-12-20,2025-12-20,Real Madrid,Sevilla,0.695,0.49,57218,1585
+lal-osa-ala-2025-12-20,2025-12-20,Osasuna,Alaves,0.315,0.395,16463,981
+lal-lev-rso-2025-12-20,2025-12-20,Levante,Sociedad,0.46,0.53,11310,2458
+lal-ovi-cel-2025-12-20,2025-12-20,Oviedo,Celta,0.395,0.47,42821,465
+lal-val-mal-2025-12-19,2025-12-19,Valencia,Mallorca,0.395,0.46,41713,1671
+lal-ray-bet-2025-12-15,2025-12-15,Vallecano,Betis,0.435,0.525,68464,34715
+lal-ala-rea-2025-12-14,2025-12-14,Alaves,Real Madrid,0.545,0.53,75835,10443
+lal-lev-vil-2025-12-14,2025-12-14,Levante,Villarreal,0.605,0.595,56518,16539
+lal-cel-bil-2025-12-14,2025-12-14,Celta,Ath Bilbao,0.415,0.505,64093,6181
+lal-sev-ovi-2025-12-14,2025-12-14,Sevilla,Oviedo,0.395,0.465,20606,4219
+lal-get-esp-2025-12-13,2025-12-13,Getafe,Espanol,0.265,0.37,26453,7372
+lal-bar-osa-2025-12-13,2025-12-13,Barcelona,Osasuna,0.755,0.535,69416,11661
+lal-mal-elc-2025-12-13,2025-12-13,Mallorca,Elche,0.38,0.47,14955,2804
+lal-mad-val-2025-12-13,2025-12-13,Ath Madrid,Valencia,0.605,0.475,75850,13039
+lal-rso-gir-2025-12-12,2025-12-12,Sociedad,Girona,0.495,0.515,85037,3172
+lal-osa-lev-2025-12-08,2025-12-08,Osasuna,Levante,0.525,0.52,40163,4551
+lal-rea-cel-2025-12-07,2025-12-07,Real Madrid,Celta,0.695,0.55,95790,17789
+lal-esp-ray-2025-12-07,2025-12-07,Espanol,Vallecano,0.405,0.485,33712,2857
+lal-val-sev-2025-12-07,2025-12-07,Valencia,Sevilla,0.425,0.48,46255,5143
+lal-elc-gir-2025-12-07,2025-12-07,Elche,Girona,0.465,0.525,22864,3944
+lal-bil-mad-2025-12-06,2025-12-06,Ath Bilbao,Ath Madrid,0.44,0.52,30286,2773
+lal-bet-bar-2025-12-06,2025-12-06,Betis,Barcelona,0.715,0.705,12230,11071
+lal-ala-rso-2025-12-06,2025-12-06,Alaves,Sociedad,0.355,0.45,15738,20946
+lal-vil-get-2025-12-06,2025-12-06,Villarreal,Getafe,0.435,0.445,125023,2735
+lal-ovi-mal-2025-12-05,2025-12-05,Oviedo,Mallorca,0.37,0.465,58948,1467
+lal-bil-rea-2025-12-03,2025-12-03,Ath Bilbao,Real Madrid,0.505,0.54,41638,14606
+lal-bar-mad-2025-12-02,2025-12-02,Barcelona,Ath Madrid,0.69,0.67,18362,28316
+lal-ray-val-2025-12-01,2025-12-01,Vallecano,Valencia,0.42,0.485,41839,5636
+lal-gir-rea-2025-11-30,2025-11-30,Girona,Real Madrid,0.715,0.615,62412,11195
+lal-cel-esp-2025-11-30,2025-11-30,Celta,Espanol,0.485,0.55,45088,6756
+lal-sev-bet-2025-11-30,2025-11-30,Sevilla,Betis,0.46,0.545,65365,4394
+lal-rso-vil-2025-11-30,2025-11-30,Sociedad,Villarreal,0.515,0.565,50730,8959
+lal-mad-ovi-2025-11-29,2025-11-29,Ath Madrid,Oviedo,0.59,0.41,19628,3913
+lal-lev-bil-2025-11-29,2025-11-29,Levante,Ath Bilbao,0.46,0.52,14190,3206
+lal-bar-ala-2025-11-29,2025-11-29,Barcelona,Alaves,0.685,0.52,7362,7693
+lal-mal-osa-2025-11-29,2025-11-29,Mallorca,Osasuna,0.395,0.48,42031,4525
+lal-get-elc-2025-11-28,2025-11-28,Getafe,Elche,0.335,0.43,24378,3229
+lal-esp-sev-2025-11-24,2025-11-24,Espanol,Sevilla,0.51,0.53,12514,1994
+lal-elc-rea-2025-11-23,2025-11-23,Elche,Real Madrid,0.635,0.565,13865,2142
+lal-get-mad-2025-11-23,2025-11-23,Getafe,Ath Madrid,0.35,0.405,21333,4919
+lal-bet-gir-2025-11-23,2025-11-23,Betis,Girona,0.615,0.57,48038,1188
+lal-ovi-ray-2025-11-23,2025-11-23,Oviedo,Vallecano,0.425,0.5,18591,3167
+lal-vil-mal-2025-11-22,2025-11-22,Villarreal,Mallorca,0.57,0.5,47309,305
+lal-osa-rso-2025-11-22,2025-11-22,Osasuna,Sociedad,0.385,0.49,1134,1050
+lal-bar-bil-2025-11-22,2025-11-22,Barcelona,Ath Bilbao,0.665,0.59,11459,3429
+lal-ala-cel-2025-11-22,2025-11-22,Alaves,Celta,0.395,0.495,5741,4141
+lal-val-lev-2025-11-21,2025-11-21,Valencia,Levante,0.485,0.54,77195,1456
+lal-cel-bar-2025-11-09,2025-11-09,Celta,Barcelona,,0.7,0,11149
+lal-val-bet-2025-11-09,2025-11-09,Valencia,Betis,0.5,0.565,34105,6752
+lal-mal-get-2025-11-09,2025-11-09,Mallorca,Getafe,,0.41,0,3359
+lal-ray-rea-2025-11-09,2025-11-09,Vallecano,Real Madrid,0.63,0.59,37360,5391
+lal-bil-ovi-2025-11-09,2025-11-09,Ath Bilbao,Oviedo,0.405,0.4,4346,3450
+lal-esp-vil-2025-11-08,2025-11-08,Espanol,Villarreal,0.505,0.79,25341,3360
+lal-mad-lev-2025-11-08,2025-11-08,Ath Madrid,Levante,,0.49,0,3680
+lal-sev-osa-2025-11-08,2025-11-08,Sevilla,Osasuna,0.46,0.535,3521,2750
+lal-gir-ala-2025-11-08,2025-11-08,Girona,Alaves,0.445,0.5,21697,1111
+lal-elc-rso-2025-11-07,2025-11-07,Elche,Sociedad,0.425,0.505,21295,2629
+lal-ovi-osa-2025-11-03,2025-11-03,Oviedo,Osasuna,0.43,0.51,16782,5561
+lal-bet-mal-2025-11-02,2025-11-02,Betis,Mallorca,0.56,0.535,9303,2544
+lal-bar-elc-2025-11-02,2025-11-02,Barcelona,Elche,,0.585,0,9185
+lal-ala-esp-2025-11-02,2025-11-02,Alaves,Espanol,0.395,0.48,48435,2687
+lal-lev-cel-2025-11-02,2025-11-02,Levante,Celta,0.525,0.59,5374,1486
+lal-rea-val-2025-11-01,2025-11-01,Real Madrid,Valencia,,0.47,0,5801
+lal-rso-bil-2025-11-01,2025-11-01,Sociedad,Ath Bilbao,0.35,0.7,73921,2547
+lal-mad-sev-2025-11-01,2025-11-01,Ath Madrid,Sevilla,0.56,0.49,12496,2222
+lal-vil-ray-2025-11-01,2025-11-01,Villarreal,Vallecano,0.57,0.585,49598,1380
+lal-get-gir-2025-10-31,2025-10-31,Getafe,Girona,,0.43,0,3149
+lal-bet-mad-2025-10-27,2025-10-27,Betis,Ath Madrid,0.51,0.575,121742,18185
+lal-ray-ala-2025-10-26,2025-10-26,Vallecano,Alaves,0.36,0.435,2308,836
+lal-osa-cel-2025-10-26,2025-10-26,Osasuna,Celta,0.435,0.525,3337,791
+lal-rea-bar-2025-10-26,2025-10-26,Real Madrid,Barcelona,,0.73,0,16150
+lal-mal-lev-2025-10-26,2025-10-26,Mallorca,Levante,0.47,0.52,23742,282
+lal-val-vil-2025-10-25,2025-10-25,Valencia,Villarreal,0.505,0.575,32267,863
+lal-bil-get-2025-10-25,2025-10-25,Ath Bilbao,Getafe,,0.365,0,95
+lal-esp-elc-2025-10-25,2025-10-25,Espanol,Elche,0.445,0.495,1248,2
+lal-gir-ovi-2025-10-25,2025-10-25,Girona,Oviedo,0.485,0.495,55244,428
+lal-rso-sev-2025-10-24,2025-10-24,Sociedad,Sevilla,0.485,0.5,1272,246
+lal-ala-val-2025-10-20,2025-10-20,Alaves,Valencia,,,0,0
+lal-get-rea-2025-10-19,2025-10-19,Getafe,Real Madrid,,,0,0
+lal-lev-ray-2025-10-19,2025-10-19,Levante,Vallecano,,,0,0
+lal-cel-rso-2025-10-19,2025-10-19,Celta,Sociedad,,,0,0
+lal-elc-bil-2025-10-19,2025-10-19,Elche,Ath Bilbao,,,0,0
+lal-mad-osa-2025-10-18,2025-10-18,Ath Madrid,Osasuna,,,0,0
+lal-vil-bet-2025-10-18,2025-10-18,Villarreal,Betis,,,0,0
+lal-bar-gir-2025-10-18,2025-10-18,Barcelona,Girona,,,0,0
+lal-sev-mal-2025-10-18,2025-10-18,Sevilla,Mallorca,,,0,0
+lal-ovi-esp-2025-10-17,2025-10-17,Oviedo,Espanol,0.39,,20697,0
+lal-cel-mad-2025-10-05,2025-10-05,Celta,Ath Madrid,0.505,,0,0
+lal-rso-ray-2025-10-05,2025-10-05,Sociedad,Vallecano,0.485,,0,0
+lal-esp-bet-2025-10-05,2025-10-05,Espanol,Betis,0.5,,200,0
+lal-sev-bar-2025-10-05,2025-10-05,Sevilla,Barcelona,,,0,0
+lal-ala-elc-2025-10-05,2025-10-05,Alaves,Elche,,,0,0
+lal-rea-vil-2025-10-04,2025-10-04,Real Madrid,Villarreal,,,0,0
+lal-bil-mal-2025-10-04,2025-10-04,Ath Bilbao,Mallorca,,,0,0
+lal-gir-val-2025-10-04,2025-10-04,Girona,Valencia,,,0,0
+lal-ovi-lev-2025-10-04,2025-10-04,Oviedo,Levante,,,0,0
+lal-osa-get-2025-10-03,2025-10-03,Osasuna,Getafe,,,0,0
+lal-val-ovi-2025-09-30,2025-09-30,Valencia,Oviedo,,,0,0
+lal-val-ovi-2025-09-29,2025-09-29,Valencia,Oviedo,,,0,0
+lal-bet-osa-2025-09-28,2025-09-28,Betis,Osasuna,,,0,0
+lal-bar-rso-2025-09-28,2025-09-28,Barcelona,Sociedad,,,0,0
+lal-elc-cel-2025-09-28,2025-09-28,Elche,Celta,,,0,0
+lal-ray-sev-2025-09-28,2025-09-28,Vallecano,Sevilla,,,0,0
+lal-vil-bil-2025-09-27,2025-09-27,Villarreal,Ath Bilbao,,,0,0
+lal-mal-ala-2025-09-27,2025-09-27,Mallorca,Alaves,,,0,0
+lal-mad-rea-2025-09-27,2025-09-27,Ath Madrid,Real Madrid,,,0,0
+lal-get-lev-2025-09-27,2025-09-27,Getafe,Levante,,,0,0
+lal-gir-esp-2025-09-26,2025-09-26,Girona,Espanol,,,0,0
+lal-ovi-bar-2025-09-25,2025-09-25,Oviedo,Barcelona,,,0,0
+lal-osa-elc-2025-09-25,2025-09-25,Osasuna,Elche,,,0,0
+lal-mad-ray-2025-09-24,2025-09-24,Ath Madrid,Vallecano,,,0,0
+lal-rso-mal-2025-09-24,2025-09-24,Sociedad,Mallorca,,,0,0
+lal-get-ala-2025-09-24,2025-09-24,Getafe,Alaves,,,0,0
+lal-sev-vil-2025-09-23,2025-09-23,Sevilla,Villarreal,,,0,0
+lal-lev-rea-2025-09-23,2025-09-23,Levante,Real Madrid,,,0,0
+lal-bil-gir-2025-09-23,2025-09-23,Ath Bilbao,Girona,,,0,0
+lal-esp-val-2025-09-23,2025-09-23,Espanol,Valencia,,,0,0
+lal-bar-get-2025-09-21,2025-09-21,Barcelona,Getafe,,,0,0
+lal-elc-ovi-2025-09-21,2025-09-21,Elche,Oviedo,,,0,0
+lal-mal-mad-2025-09-21,2025-09-21,Mallorca,Ath Madrid,,,0,0
+lal-ray-cel-2025-09-21,2025-09-21,Vallecano,Celta,,,0,0
+lal-val-bil-2025-09-20,2025-09-20,Valencia,Ath Bilbao,,,0,0
+lal-vil-osa-2025-09-20,2025-09-20,Villarreal,Osasuna,,,0,0
+lal-ala-sev-2025-09-20,2025-09-20,Alaves,Sevilla,,,0,0
+lal-rea-esp-2025-09-20,2025-09-20,Real Madrid,Espanol,,,0,0
+lal-gir-lev-2025-09-20,2025-09-20,Girona,Levante,,,0,0
+lal-bet-rso-2025-09-19,2025-09-19,Betis,Sociedad,,,0,0
+lal-esp-mal-2025-09-15,2025-09-15,Espanol,Mallorca,,,0,0
+lal-bar-val-2025-09-14,2025-09-14,Barcelona,Valencia,,,0,0
+lal-osa-ray-2025-09-14,2025-09-14,Osasuna,Vallecano,,,0,0
+lal-lev-bet-2025-09-14,2025-09-14,Levante,Betis,,,0,0
+lal-cel-gir-2025-09-14,2025-09-14,Celta,Girona,,,0,0
+lal-mad-vil-2025-09-13,2025-09-13,Ath Madrid,Villarreal,,,0,0
+lal-bil-ala-2025-09-13,2025-09-13,Ath Bilbao,Alaves,,,0,0
+lal-rso-rea-2025-09-13,2025-09-13,Sociedad,Real Madrid,,,0,0
+lal-get-ovi-2025-09-13,2025-09-13,Getafe,Oviedo,,,0,0
+lal-sev-elc-2025-09-12,2025-09-12,Sevilla,Elche,,,0,0
+lal-ray-bar-2025-08-31,2025-08-31,Vallecano,Barcelona,,,0,0
+lal-esp-osa-2025-08-31,2025-08-31,Espanol,Osasuna,,,0,0
+lal-bet-bil-2025-08-31,2025-08-31,Betis,Ath Bilbao,,,0,0
+lal-cel-vil-2025-08-31,2025-08-31,Celta,Villarreal,,,0,0
+lal-rea-mal-2025-08-30,2025-08-30,Real Madrid,Mallorca,,,0,0
+lal-gir-sev-2025-08-30,2025-08-30,Girona,Sevilla,,,0,0
+lal-ovi-rso-2025-08-30,2025-08-30,Oviedo,Sociedad,,,0,0
+lal-ala-mad-2025-08-30,2025-08-30,Alaves,Ath Madrid,,,0,0
+lal-val-get-2025-08-29,2025-08-29,Valencia,Getafe,,,0,0
+lal-elc-lev-2025-08-29,2025-08-29,Elche,Levante,,,0,0
+lal-cel-bet-2025-08-27,2025-08-27,Celta,Betis,,,0,0
+lal-sev-get-2025-08-25,2025-08-25,Sevilla,Getafe,,,0,0
+lal-bil-ray-2025-08-25,2025-08-25,Ath Bilbao,Vallecano,,,0,0
+lal-ovi-rea-2025-08-24,2025-08-24,Oviedo,Real Madrid,,,0,0
+lal-vil-gir-2025-08-24,2025-08-24,Villarreal,Girona,,,0,0
+lal-rso-esp-2025-08-24,2025-08-24,Sociedad,Espanol,,,0,0
+lal-osa-val-2025-08-24,2025-08-24,Osasuna,Valencia,,,0,0
+lal-lev-bar-2025-08-23,2025-08-23,Levante,Barcelona,,,0,0
+lal-mad-elc-2025-08-23,2025-08-23,Ath Madrid,Elche,,,0,0
+lal-mal-cel-2025-08-23,2025-08-23,Mallorca,Celta,,,0,0
+lal-bet-ala-2025-08-22,2025-08-22,Betis,Alaves,,,0,0
+lal-rea-osa-2025-08-19,2025-08-19,Real Madrid,Osasuna,,,0,0
+lal-elc-bet-2025-08-18,2025-08-18,Elche,Betis,,,0,0
+lal-esp-mad-2025-08-17,2025-08-17,Espanol,Ath Madrid,,,0,0
+lal-bil-sev-2025-08-17,2025-08-17,Ath Bilbao,Sevilla,,,0,0
+lal-cel-get-2025-08-17,2025-08-17,Celta,Getafe,,,0,0
+lal-val-rso-2025-08-16,2025-08-16,Valencia,Sociedad,,,0,0
+lal-ala-lev-2025-08-16,2025-08-16,Alaves,Levante,,,0,0
+lal-mal-bar-2025-08-16,2025-08-16,Mallorca,Barcelona,,,0,0
+lal-vil-ovi-2025-08-15,2025-08-15,Villarreal,Oviedo,,,0,0
+lal-gir-ray-2025-08-15,2025-08-15,Girona,Vallecano,,,0,0

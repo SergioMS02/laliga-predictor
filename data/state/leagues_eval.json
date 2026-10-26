@@ -1,0 +1,42 @@
+{
+ "SP2": {
+  "season": 2025,
+  "n": 462,
+  "modelo": 1.0623,
+  "mercado": 1.0301,
+  "mezcla": 1.0301,
+  "w_model": 0.0
+ },
+ "E0": {
+  "season": 2025,
+  "n": 380,
+  "modelo": 1.0308,
+  "mercado": 1.0173,
+  "mezcla": 1.0171,
+  "w_model": 0.1
+ },
+ "I1": {
+  "season": 2025,
+  "n": 380,
+  "modelo": 0.9942,
+  "mercado": 0.9805,
+  "mezcla": 0.9804,
+  "w_model": 0.1
+ },
+ "D1": {
+  "season": 2025,
+  "n": 306,
+  "modelo": 0.9748,
+  "mercado": 0.9524,
+  "mezcla": 0.9524,
+  "w_model": 0.0
+ },
+ "F1": {
+  "season": 2025,
+  "n": 306,
+  "modelo": 1.0048,
+  "mercado": 0.9729,
+  "mezcla": 0.9729,
+  "w_model": 0.0
+ }
+}
