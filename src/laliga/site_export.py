@@ -65,48 +65,80 @@ def standings(matches: pd.DataFrame, season: int) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 # Proyección de la temporada (Monte Carlo con Dixon-Coles)
 # ---------------------------------------------------------------------------
+def simulate_rest(base: pd.DataFrame, rem: pd.DataFrame, lam: np.ndarray, mu: np.ndarray, n: int,
+                  sigma: float = 0.0, seed: int = 7) -> dict:
+    """Simula los partidos que quedan. `sigma`: incertidumbre (desviación típica, en escala log) de la
+    fuerza de ataque y defensa de cada equipo, sorteada una vez por temporada simulada: el modelo no
+    conoce la fuerza real con exactitud y los equipos cambian a lo largo del año (lesiones, fichajes,
+    entrenadores). Sin ella, la simulación da probabilidades demasiado extremas."""
+    teams = list(base.team)
+    idx = {t: i for i, t in enumerate(teams)}
+    k = len(teams)
+    rng = np.random.default_rng(seed)
+    base_pts = base.pts.to_numpy(float)
+    base_gd = base.dg.to_numpy(float)
+    base_gf = base.gf.to_numpy(float)
+    if rem.empty:
+        key = base_pts * 1e6 + (base_gd + 500) * 1e3 + base_gf
+        ranks = np.argsort(np.argsort(-key))[None, :] + 1
+        return {"ranks": ranks, "pts": base_pts[None, :], "teams": teams}
+    hi = rem.home.map(idx).to_numpy()
+    ai = rem.away.map(idx).to_numpy()
+    L = np.tile(lam, (n, 1))
+    M = np.tile(mu, (n, 1))
+    if sigma > 0:
+        att = rng.normal(0, sigma, (n, k))
+        dfn = rng.normal(0, sigma, (n, k))
+        L = L * np.exp(att[:, hi] + dfn[:, ai])
+        M = M * np.exp(att[:, ai] + dfn[:, hi])
+    hg = rng.poisson(L)
+    ag = rng.poisson(M)
+    ph = np.where(hg > ag, 3, np.where(hg == ag, 1, 0))
+    pa = np.where(ag > hg, 3, np.where(hg == ag, 1, 0))
+    sim_pts = np.tile(base_pts, (n, 1))
+    sim_gd = np.tile(base_gd, (n, 1))
+    sim_gf = np.tile(base_gf, (n, 1))
+    for j in range(len(rem)):  # acumulación por partido (columnas), vectorizada en simulaciones
+        sim_pts[:, hi[j]] += ph[:, j]
+        sim_pts[:, ai[j]] += pa[:, j]
+        sim_gd[:, hi[j]] += hg[:, j] - ag[:, j]
+        sim_gd[:, ai[j]] += ag[:, j] - hg[:, j]
+        sim_gf[:, hi[j]] += hg[:, j]
+        sim_gf[:, ai[j]] += ag[:, j]
+    # desempate aproximado: puntos, diferencia de goles, goles a favor (LaLiga usa el golaveraje particular)
+    key = sim_pts * 1e6 + (sim_gd + 500) * 1e3 + sim_gf + rng.random(sim_pts.shape) * 1e-3
+    ranks = np.argsort(np.argsort(-key, axis=1), axis=1) + 1
+    return {"ranks": ranks, "pts": sim_pts, "teams": teams, "hg": hg, "ag": ag}
+
+
+def season_sigma(settings: Settings) -> float:
+    """Incertidumbre de la fuerza calibrada con temporadas pasadas (`calibrate_projection`)."""
+    p = settings.state_dir / "projection_calib.json"
+    try:
+        return float(json.loads(p.read_text(encoding="utf-8"))["sigma"])
+    except (OSError, ValueError, KeyError):
+        return float(settings.get("projection", "sigma", 0.12))
+
+
 def project_season(settings: Settings, matches: pd.DataFrame, season: int, table: pd.DataFrame,
-                   n: int = N_SIMS, seed: int = 7) -> dict:
+                   n: int = N_SIMS, seed: int = 7, sigma: float | None = None) -> dict:
     s = matches[matches.season == season]
     rem = s[s.hg.isna()]
     teams = list(table.team)
-    idx = {t: i for i, t in enumerate(teams)}
     k = len(teams)
-    base_pts = table.set_index("team").pts.reindex(teams).to_numpy(float)
-    base_gd = table.set_index("team").dg.reindex(teams).to_numpy(float)
-    base_gf = table.set_index("team").gf.reindex(teams).to_numpy(float)
-    if rem.empty:
-        sim_pts = np.tile(base_pts, (1, 1))
-        ranks = np.argsort(np.argsort(-(base_pts * 1e6 + base_gd * 1e3 + base_gf)))[None, :] + 1
-    else:
+    sigma = season_sigma(settings) if sigma is None else sigma
+    lam = mu = np.array([])
+    if not rem.empty:
         ref = pd.Timestamp.now().normalize() + pd.Timedelta(days=1)
         dc = DixonColes.from_settings(settings).fit(matches, ref, teams, pipeline._new_teams(matches, season))
-        lam = np.array([dc.expected_goals(r.home, r.away)[0] for r in rem.itertuples()])
-        mu = np.array([dc.expected_goals(r.home, r.away)[1] for r in rem.itertuples()])
-        hi = rem.home.map(idx).to_numpy()
-        ai = rem.away.map(idx).to_numpy()
-        rng = np.random.default_rng(seed)
-        hg = rng.poisson(lam, size=(n, len(rem)))
-        ag = rng.poisson(mu, size=(n, len(rem)))
-        ph = np.where(hg > ag, 3, np.where(hg == ag, 1, 0))
-        pa = np.where(ag > hg, 3, np.where(hg == ag, 1, 0))
-        sim_pts = np.tile(base_pts, (n, 1))
-        sim_gd = np.tile(base_gd, (n, 1))
-        sim_gf = np.tile(base_gf, (n, 1))
-        for j in range(len(rem)):  # acumulación por partido (columnas), vectorizada en simulaciones
-            sim_pts[:, hi[j]] += ph[:, j]
-            sim_pts[:, ai[j]] += pa[:, j]
-            sim_gd[:, hi[j]] += hg[:, j] - ag[:, j]
-            sim_gd[:, ai[j]] += ag[:, j] - hg[:, j]
-            sim_gf[:, hi[j]] += hg[:, j]
-            sim_gf[:, ai[j]] += ag[:, j]
-        # desempate aproximado: puntos, diferencia de goles, goles a favor (LaLiga usa el golaveraje particular)
-        key = sim_pts * 1e6 + (sim_gd + 500) * 1e3 + sim_gf + rng.random(sim_pts.shape) * 1e-3
-        ranks = np.argsort(np.argsort(-key, axis=1), axis=1) + 1
+        eg = [dc.expected_goals(r.home, r.away) for r in rem.itertuples()]
+        lam = np.array([e[0] for e in eg])
+        mu = np.array([e[1] for e in eg])
+    sim = simulate_rest(table, rem, lam, mu, n if not rem.empty else 1, sigma, seed)
+    ranks, sim_pts = sim["ranks"], sim["pts"]
     nsim = ranks.shape[0]
     out = []
-    for t in teams:
-        i = idx[t]
+    for i, t in enumerate(teams):
         r = ranks[:, i]
         pts = sim_pts[:, i]
         out.append({
@@ -117,7 +149,22 @@ def project_season(settings: Settings, matches: pd.DataFrame, season: int, table
             "pos_probs": [_r((r == p).mean(), 4) for p in range(1, k + 1)],
         })
     out.sort(key=lambda d: d["exp_pos"])
-    return {"n_sims": int(nsim), "remaining": int(len(rem)), "teams": out}
+    res = {"n_sims": int(nsim), "remaining": int(len(rem)), "sigma": round(sigma, 3), "teams": out,
+           "thresholds": _thresholds(ranks, sim_pts, k)}
+    if not rem.empty:  # para el simulador «¿y si…?» de la web
+        res["fixtures"] = [{"home": r.home, "away": r.away, "date": str(pd.Timestamp(r.date).date()),
+                            "lam": _r(lam[j], 3), "mu": _r(mu[j], 3)} for j, r in enumerate(rem.itertuples())]
+    return res
+
+
+def _thresholds(ranks: np.ndarray, pts: np.ndarray, k: int) -> dict:
+    """Puntos que hacen falta: puntos del último que entra en cada zona, en las simulaciones."""
+    order = np.sort(pts, axis=1)[:, ::-1]  # puntos por puesto (aprox. sin desempates)
+    out = {}
+    for key, pos in (("title", 1), ("ucl", 4), ("europe", 7), ("safe", k - 3)):
+        v = order[:, pos - 1]
+        out[key] = {"median": _r(np.median(v), 0), "p90": _r(np.percentile(v, 90), 0)}
+    return out
 
 
 def project_scorers(settings: Settings, matches: pd.DataFrame, season: int, players: pd.DataFrame | None,
@@ -464,4 +511,53 @@ def export(settings: Settings, matches: pd.DataFrame, preds: list[dict] | None =
     else:
         out["scorers_history"] = old.get("scorers_history", [])
     path.write_text(json.dumps(out, ensure_ascii=False, default=_json_default), encoding="utf-8")
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Calibración de la incertidumbre de la proyección
+# ---------------------------------------------------------------------------
+def calibrate_projection(settings: Settings, matches: pd.DataFrame, seasons: list[int],
+                         rounds=(5, 10, 15, 20, 25, 30), sigmas=(0.0, 0.05, 0.08, 0.1, 0.12, 0.15, 0.2, 0.25),
+                         n: int = 3000) -> dict:
+    """Proyecta temporadas pasadas desde varias jornadas con cada `sigma` y mide lo bien que acierta el
+    puesto final real (log-verosimilitud) y título/Champions/descenso (Brier)."""
+    res = {s: {"ll": [], "brier": []} for s in sigmas}
+    for season in seasons:
+        sm = matches[(matches.season == season)].sort_values("date")
+        if sm.hg.isna().any() or len(sm) < 370:
+            continue
+        final = standings(sm, season).set_index("team").pos
+        k = len(final)
+        for rnd in rounds:
+            cut = sm.date.iloc[rnd * (k // 2)]  # fecha del primer partido tras la jornada `rnd`
+            played = sm[sm.date < cut]
+            rem = sm[sm.date >= cut]
+            base = standings(pd.concat([played, rem.assign(hg=np.nan, ag=np.nan)]), season)
+            dc = DixonColes.from_settings(settings).fit(matches, cut, list(base.team), pipeline._new_teams(matches, season))
+            eg = [dc.expected_goals(r.home, r.away) for r in rem.itertuples()]
+            lam, mu = np.array([e[0] for e in eg]), np.array([e[1] for e in eg])
+            for sg in sigmas:
+                sim = simulate_rest(base, rem, lam, mu, n, sg, seed=rnd)
+                ranks = sim["ranks"]
+                ll, br = [], []
+                for i, t in enumerate(sim["teams"]):
+                    r = ranks[:, i]
+                    real = int(final[t])
+                    ll.append(np.log((np.sum(r == real) + 0.5) / (n + 0.5 * k)))
+                    for lo, hi_ in ((1, 1), (1, 4), (k - 2, k)):
+                        p = ((r >= lo) & (r <= hi_)).mean()
+                        y = float(lo <= real <= hi_)
+                        br.append((p - y) ** 2)
+                res[sg]["ll"].append(np.mean(ll))
+                res[sg]["brier"].append(np.mean(br))
+            log.info("Calibración proyección %s jornada %s hecha", season, rnd)
+    table = [{"sigma": s, "loglik": round(float(np.mean(v["ll"])), 4), "brier": round(float(np.mean(v["brier"])), 5),
+              "n": len(v["ll"])} for s, v in res.items() if v["ll"]]
+    if not table:
+        return {}
+    best = max(table, key=lambda d: d["loglik"])
+    out = {"sigma": best["sigma"], "table": table, "seasons": seasons, "rounds": list(rounds),
+           "updated": datetime.now(timezone.utc).date().isoformat()}
+    (settings.state_dir / "projection_calib.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
     return out

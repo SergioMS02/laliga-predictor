@@ -149,6 +149,13 @@ def main(argv: list[str] | None = None) -> int:
             print("Tarjetas y córners:", pe)
         except Exception as e:
             log.warning("Evaluación de tarjetas y córners no disponible: %s", e)
+        try:  # incertidumbre de la proyección de temporada, medida con temporadas pasadas
+            from . import site_export
+            cur = results.current_season()
+            cp = site_export.calibrate_projection(s, matches.reset_index(drop=True), list(range(cur - 11, cur)))
+            print("Proyección: sigma", cp.get("sigma"))
+        except Exception as e:
+            log.warning("Calibración de la proyección no disponible: %s", e)
         try:  # Polymarket frente al cierre de las casas y al modelo (y peso del modelo en la mezcla)
             from .data import polymarket
             print("Polymarket:", polymarket.run_evaluation(s, matches, online=online))
