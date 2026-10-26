@@ -2680,3 +2680,30 @@ season,match_id,date,home,away,side,team,minute,player,assist,situation,shot_typ
 2026,30864,2026-10-25,Barcelona,Real Madrid,a,Real Madrid,70,Arda Güler,Kylian Mbappe-Lottin,OpenPlay,LeftFoot,SavedShot,0.02910875529050827,0.8269999694824218,0.29700000762939455
 2026,30864,2026-10-25,Barcelona,Real Madrid,a,Real Madrid,77,Jude Bellingham,,OpenPlay,RightFoot,BlockedShot,0.08000043034553528,0.8959999847412109,0.5790000152587891
 2026,30864,2026-10-25,Barcelona,Real Madrid,a,Real Madrid,86,Kylian Mbappe-Lottin,Eduardo Camavinga,OpenPlay,RightFoot,Goal,0.6185407042503357,0.9159999847412109,0.4879999923706055
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,6,Isaac Romero,,OpenPlay,LeftFoot,BlockedShot,0.033795490860939026,0.785,0.4420000076293945
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,6,Felix Correia,Juan Iglesias,OpenPlay,LeftFoot,MissedShots,0.07823139429092407,0.9209999847412109,0.6170000076293946
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,19,Andrés Castrín,,OpenPlay,RightFoot,MissedShots,0.011409704573452473,0.7190000152587891,0.395
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,23,Kike Salas,,OpenPlay,LeftFoot,SavedShot,0.012900769710540771,0.7269999694824218,0.41200000762939454
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,23,Isaac Romero,Youssouf Fofana,OpenPlay,LeftFoot,Goal,0.031305089592933655,0.79,0.5990000152587891
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,31,Felix Correia,Isaac Romero,OpenPlay,RightFoot,MissedShots,0.023094916716217995,0.74,0.625999984741211
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,38,Andrés Castrín,Chidera Ejuke,FromCorner,RightFoot,MissedShots,0.07006662338972092,0.909000015258789,0.3990000152587891
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,40,Chidera Ejuke,Lucas Stassin,OpenPlay,RightFoot,SavedShot,0.04246317967772484,0.85,0.27
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,46,Chidera Ejuke,,SetPiece,RightFoot,BlockedShot,0.06872127205133438,0.860999984741211,0.509000015258789
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,47,Lucas Stassin,Kike Salas,OpenPlay,Head,MissedShots,0.05973720923066139,0.9109999847412109,0.5729999923706055
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,68,Youssouf Fofana,,DirectFreekick,RightFoot,SavedShot,0.030804067850112915,0.6730000305175782,0.634000015258789
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,69,Juan Iglesias,Felix Correia,FromCorner,RightFoot,ShotOnPost,0.06120936572551727,0.8930000305175781,0.509000015258789
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,69,Robbie Ure,,FromCorner,LeftFoot,BlockedShot,0.07858022302389145,0.9519999694824218,0.6419999694824219
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,73,Kike Salas,Ruben Vargas,FromCorner,Head,SavedShot,0.11291296780109406,0.9259999847412109,0.534000015258789
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,76,Manu Bueno,Ruben Vargas,OpenPlay,LeftFoot,SavedShot,0.026028042659163475,0.7869999694824219,0.30100000381469727
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,80,Gabriel Suazo,,FromCorner,LeftFoot,MissedShots,0.03155039995908737,0.815,0.62
+2026,30868,2026-10-26,Sevilla,Osasuna,h,Sevilla,81,Felix Correia,Youssouf Fofana,OpenPlay,RightFoot,Goal,0.10553983598947525,0.875999984741211,0.6320000076293946
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,3,Ante Budimir,,OpenPlay,LeftFoot,BlockedShot,0.11074592918157578,0.9419999694824219,0.6359999847412109
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,3,Enzo Boyomo,Rubén García,FromCorner,Head,MissedShots,0.3217504918575287,0.9209999847412109,0.47
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,14,Moi Gómez,,OpenPlay,RightFoot,MissedShots,0.03489554673433304,0.7909999847412109,0.575
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,16,Ante Budimir,Moi Gómez,OpenPlay,RightFoot,MissedShots,0.0400344654917717,0.8719999694824219,0.40099998474121096
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,51,Lucas Torró,,OpenPlay,RightFoot,BlockedShot,0.048450883477926254,0.8130000305175781,0.49900001525878906
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,59,Jonathan Dubasin,,OpenPlay,LeftFoot,BlockedShot,0.02991720288991928,0.815,0.675
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,87,Raul García,,OpenPlay,RightFoot,BlockedShot,0.020578136667609215,0.7469999694824219,0.425
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,88,Raul García,Raul Moro,FromCorner,RightFoot,MissedShots,0.08936429023742676,0.9269999694824219,0.44599998474121094
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,88,Ante Budimir,Raul Moro,OpenPlay,Head,SavedShot,0.027345504611730576,0.8590000152587891,0.49700000762939456
+2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,90,Alejandro Catena,Ante Budimir,OpenPlay,Head,SavedShot,0.03446359559893608,0.870999984741211,0.4379999923706055
