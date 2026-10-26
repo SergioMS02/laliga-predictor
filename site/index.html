@@ -7,9 +7,8 @@
 <meta name="description" content="Probabilidades de cada partido de LaLiga, cómo han cambiado y por qué.">
 <meta name="theme-color" content="#D7182A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23D7182A'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='18' text-anchor='middle' fill='white'%3E1X2%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -186,6 +185,7 @@
     <div class="section-head">
       <h2 id="live-title" class="section-title">En directo</h2>
       <p class="section-note">Marcadores, goles, tarjetas, cambios y estadísticas al momento (se actualiza solo cada 30 segundos). Pulsa un partido para ver el detalle y su probabilidad en directo.</p>
+      <p class="section-note small">Estos datos los pide tu navegador a ESPN (y, al abrir un partido de LaLiga, a Polymarket) solo mientras usas esta pestaña: esos servicios ven tu dirección IP. <a href="legal.html#privacidad">Privacidad</a>.</p>
     </div>
     <div id="live-list" aria-live="polite"></div>
   </section>
@@ -288,6 +288,7 @@
   <div class="wrap">
     <p>Se actualiza solo cada día y vuelve a calcular cuando salen las alineaciones. Datos públicos y gratuitos: football-data.co.uk, ESPN, Understat, openfootball, Open-Meteo, Google News, combinacionganadora.com (boleto de la quiniela) y eduardolosilla.es (lo que juega la gente y probabilidades de Betfair).</p>
     <p>Son probabilidades, no certezas. Las apuestas y la quiniela son simuladas: no es un consejo de apuesta. Juega con responsabilidad (+18).</p>
+    <p class="legal-links"><a href="legal.html#aviso">Aviso legal</a> · <a href="legal.html#condiciones">Condiciones de uso</a> · <a href="legal.html#privacidad">Privacidad</a> · <a href="legal.html#cookies">Cookies</a> · Sin cookies ni analítica.</p>
   </div>
 </footer>
 <nav class="bnav" aria-label="Secciones principales">
@@ -305,6 +306,7 @@
   <a href="#jugadores" data-tab="jugadores">Jugadores y árbitros <span aria-hidden="true">›</span></a>
   <a href="#ligas" data-tab="ligas">Otras ligas, copas y Europa <span aria-hidden="true">›</span></a>
   <a href="#aciertos" data-tab="aciertos">Aciertos y fuentes <span aria-hidden="true">›</span></a>
+  <a href="legal.html">Aviso legal y privacidad <span aria-hidden="true">›</span></a>
 </div>
 <script src="i18n.js"></script>
 <script src="extra.js"></script>

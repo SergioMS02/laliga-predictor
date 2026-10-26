@@ -266,7 +266,10 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
     if online:
         pipeline._status("ESPN (alineaciones y árbitro del partido)", len(details) > 0, len(details))
         if use_news:
-            pipeline._status("Google News (bajas)", n_news > 0, n_news)
+            if fantasy_av is not None:  # solo es el respaldo de futbolfantasy: hoy no hizo falta
+                pipeline._status("Google News (bajas)", True, None, note="en reserva: futbolfantasy ha respondido")
+            else:
+                pipeline._status("Google News (bajas)", n_news > 0, n_news)
 
     for o in out_rows:
         i = o["idx"]

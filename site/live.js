@@ -407,6 +407,7 @@ async function tick() {
   if (onTab) renderLive();
 }
 function startLive() {
+  if (LIVE.gen) { tick(); return; }  // ya en marcha: actualiza ahora y sigue en segundo plano
   clearTimeout(LIVE.timer);
   const gen = (LIVE.gen = (LIVE.gen || 0) + 1);
   const period = () => (document.getElementById("live-list").closest(".view").hidden ? 120000 : 30000);

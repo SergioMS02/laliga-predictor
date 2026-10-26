@@ -114,7 +114,7 @@ const I18N = (() => {
     "Porteros": "Goalkeepers", "Defensas": "Defenders", "Centrocampistas": "Midfielders", "Delanteros": "Forwards", "hoy": "today", "Aparecerán tras la próxima actualización.": "Will appear after the next update.",
     "Aparecerá tras la próxima actualización.": "Will appear after the next update.", "Aparecerá con los próximos partidos.": "Will appear with the next matches.",
     "Los mercados aparecerán en la próxima actualización.": "The markets will appear after the next update.", "No quedan partidos por simular.": "No matches left to simulate.",
-    "Sin novedades": "No news", "Disponible": "Available", "Sin datos": "No data", "derbi": "derby", "vuelta de parón internacional": "back from the international break",
+    "Sin novedades": "No news", "Disponible": "Available", "Sin datos": "No data", "En reserva": "Standby", "(futbolfantasy ha respondido)": "(futbolfantasy responded)", "derbi": "derby", "vuelta de parón internacional": "back from the international break",
     "Todavía no ha terminado ninguna jornada con boleto del modelo.": "No round with a model coupon has finished yet.",
     "No hay partidos en los próximos días. La próxima jornada aparecerá en cuanto se publique el calendario.": "No matches in the coming days. The next round will appear as soon as the fixtures are published.",
     "No hay partidos de estas competiciones hoy.": "No matches in these competitions today.", "Ver más": "See more", "Quitar": "Remove",

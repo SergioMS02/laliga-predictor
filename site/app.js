@@ -766,7 +766,7 @@ function sourcesHtml() {
   const src = s.sources || {};
   const keys = Object.keys(src);
   if (!keys.length) return '<li class="quiet">Sin información todavía.</li>';
-  return keys.map((k) => `<li class="${src[k].ok ? "ok" : "ko"}"><span>${src[k].ok ? "Disponible" : "Sin datos"}</span> ${esc(k)}${src[k].rows != null && src[k].ok ? ` <span class="quiet">(${src[k].rows})</span>` : ""}</li>`).join("")
+  return keys.map((k) => `<li class="${src[k].note ? "standby" : src[k].ok ? "ok" : "ko"}"><span>${src[k].note ? "En reserva" : src[k].ok ? "Disponible" : "Sin datos"}</span> ${esc(k)}${src[k].note ? ` <span class="quiet">(${esc(src[k].note.replace(/^en reserva: /, ""))})</span>` : src[k].rows != null && src[k].ok ? ` <span class="quiet">(${src[k].rows})</span>` : ""}</li>`).join("")
     + (s.at ? `<li class="quiet">Comprobado el ${esc(fmtTs(s.at))}</li>` : "");
 }
 
@@ -1192,7 +1192,7 @@ async function main() {
   document.getElementById("glance").innerHTML = glanceHtml();
   window.addEventListener("hashchange", route);
   route();
-  if (window.startLive) window.startLive();
+  // los marcadores en directo se piden a ESPN solo cuando se abre «En directo» (ver Privacidad)
   const lv = DATA.live || {};
   if (lv.n) document.getElementById("live").textContent =
     `En partidos reales ya jugados desde que está en marcha: ${lv.n} predicciones, error ${dec(lv.log_loss)}, acierta el resultado el ${(100 * lv.accuracy).toFixed(0)} % de las veces.`;

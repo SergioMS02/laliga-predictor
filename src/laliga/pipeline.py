@@ -72,9 +72,10 @@ _ESPN_ERR: dict = {}
 SOURCE_STATUS: dict = {}
 
 
-def _status(name: str, ok: bool, rows: int | None = None, error: str | None = None) -> None:
-    """Registra qué fuentes respondieron en esta ejecución (se guarda en predictions/sources.json)."""
-    SOURCE_STATUS[name] = {"ok": bool(ok), "rows": None if rows is None else int(rows), "error": error}
+def _status(name: str, ok: bool, rows: int | None = None, error: str | None = None, note: str | None = None) -> None:
+    """Registra qué fuentes respondieron en esta ejecución (se guarda en predictions/sources.json).
+    `note`: fuente de reserva que no hizo falta consultar."""
+    SOURCE_STATUS[name] = {"ok": bool(ok), "rows": None if rows is None else int(rows), "error": error, "note": note}
 
 
 def save_status(settings: Settings) -> None:
