@@ -909,3 +909,7 @@ button:not(:disabled):active, .more:active { transform: scale(0.97); }
 .track.qg th.l { white-space: normal; min-width: 180px; }
 .theme.lang { font: 700 0.85rem/1 var(--font-cond); letter-spacing: 0.02em; }
 .masthead__side { gap: 10px; }
+.track.qg tr.qg-m th { background: var(--paper); font-size: 0.92rem; padding-top: 10px; border-bottom: 0; }
+.track.qg td.l.small { color: var(--ink-soft); max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
+.track.qg th.l { min-width: 0; }
+@media (max-width: 760px) { .track.qg td.l.small { max-width: 96px; } .track.qg td, .track.qg th { padding: 6px 5px; } .track.qg small { display: none; } }

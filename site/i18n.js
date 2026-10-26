@@ -146,7 +146,7 @@ const I18N = (() => {
     [/^(.+) \$ negociados$/, "$1 $ traded"], [/^\((.+) negociados\)$/, "($1 traded)"], [/^(.+) negociados en este contrato$/, "$1 traded in this contract"],
     [/^no se usa: poco volumen \((.+)\)$/, "not used: low volume ($1)"], [/^no se usa: poca liquidez \((.+)\)$/, "not used: low liquidity ($1)"], [/^no se usa: en juego$/, "not used: in play"],
     [/^(.+), puesto (\d+): (.+)$/, "$1, position $2: $3"], [/^Estilo de juego: (.+)$/, "Playing style: $1"], [/^Fuerza \(Elo\) por temporada desde (\d+)$/, "Strength (Elo) by season since $1"],
-    [/^Jornada (\d+)$/, "Round $1"], [/^Boleto abierto: se actualiza hasta el primer partido \(última vez (.+)\)$/, "Coupon open: updated until the first match (last time $1)"],
+    [/^Jornada (\d+)$/, "Round $1"], [/^Jornada (\d+) · (.+)$/, (m, a, b) => `Round ${a} · ${b.replace("terminada", "finished").replace("en juego", "in play").replace("boleto abierto", "coupon open").replace(/aciertos?/, "hits").replace("rellenado con la jornada empezada (no cuenta)", "filled in after the round started (not counted)")}`], [/^Boleto abierto: se actualiza hasta el primer partido \(última vez (.+)\)$/, "Coupon open: updated until the first match (last time $1)"],
     [/^Más probable: (.+) \((\d+) %\)$/, "Most likely: $1 ($2%)"], [/^1 entre (.+)$/, "1 in $1"], [/^de 100 € iniciales \((.+)\)$/, "from an initial €100 ($1)"],
     [/^(\d+) ap\.$/, "$1 bets"], [/^\((\d+) ap\.\)$/, "($1 bets)"], [/^Próximos (\d+) de (\d+)\.?$/, "Next $1 of $2."], [/^Quitar mis (\d+) resultados$/, "Remove my $1 results"],
     [/^(\d+) temporadas simuladas en tu navegador\..*$/, "$1 seasons simulated in your browser. In green or red, the change against the projection without your results."],

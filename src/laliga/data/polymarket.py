@@ -183,7 +183,8 @@ def parse_secondary(more: dict | None, ht: dict | None, corners: dict | None, ho
             tot = sum(hp.values())
             out["half_time"] = {"p": [round(hp[k] / tot, 4) for k in "1X2"], "volume": round(vol)}
     for m in (corners or {}).get("markets") or []:
-        if ok(m) and m.get("line") is not None and _yes(m) is not None:
+        if ok(m) and m.get("line") is not None and _yes(m) is not None and float(m["line"]) >= 6.5 \
+                and (m.get("groupItemTitle") or "").startswith("Total"):  # córners del partido, no de un equipo
             out.setdefault("corners", {})[str(float(m["line"]))] = {"p": round(_yes(m), 4), "volume": round(_f(m.get("volumeNum")))}
     return out
 

@@ -307,14 +307,15 @@ function quinigolOfficial(j, all, sm) {
     const t = j.ticket[i] || "";
     const res = r.result || "";
     const st = r.live ? '<span class="live-dot"></span>' : res ? `<b class="qres ${res === t ? "ok" : "ko"}">${r.hg}-${r.ag}</b>` : `<span class="quiet small">${esc(r.when || "")}</span>`;
-    return `<tr><th scope="row" class="l" rowspan="2">${r.n}. ${esc(r.home)} – ${esc(r.away)}<br><span class="src src--${(SRC_SHORT[r.source] || "x").replace(/[^a-z]/gi, "")}">${esc(SRC_SHORT[r.source] || r.source)}</span> ${st}</th><td class="l small">Local</td>${cells(r.q.home, r.public && r.public[0], t[0], res[0])}<td class="num" rowspan="2"><b>${t[0] || ""}-${t[1] || ""}</b><br><small class="quiet">${pc1(r.q.p_pick)} %</small></td></tr>
-      <tr><td class="l small">Visitante</td>${cells(r.q.away, r.public && r.public[1], t[1], res[1])}</tr>`;
+    return `<tr class="qg-m"><th scope="rowgroup" colspan="6" class="l">${r.n}. ${esc(r.home)} – ${esc(r.away)} <span class="src src--${(SRC_SHORT[r.source] || "x").replace(/[^a-z]/gi, "")}">${esc(SRC_SHORT[r.source] || r.source)}</span> ${st}</th></tr>
+      <tr><td class="l small">${esc(r.home)}</td>${cells(r.q.home, r.public && r.public[0], t[0], res[0])}<td class="num" rowspan="2"><b>${t[0] || ""}-${t[1] || ""}</b><br><small class="quiet">${pc1(r.q.p_pick)} %</small></td></tr>
+      <tr><td class="l small">${esc(r.away)}</td>${cells(r.q.away, r.public && r.public[1], t[1], res[1])}</tr>`;
   }).join("");
   const hd = j.hits_dist || [];
   const p2 = hd.slice(2).reduce((a, b) => a + b, 0);
   const done = all.filter((x) => x.settled && x.rows);
   return `<p class="qstatus">Jornada ${j.jornada}${j.settled ? ` · terminada: <b>${j.hits} acierto${j.hits === 1 ? "" : "s"}</b>` : j.frozen ? " · en juego" : " · boleto abierto"}${j.late ? " · rellenado con la jornada empezada (no cuenta)" : ""}</p>
-    <div class="tbl-wrap"><table class="track qg"><thead><tr><th scope="col" class="l">Partido</th><th scope="col" class="l"></th>${C.map((c) => `<th scope="col" class="num">${c}</th>`).join("")}<th scope="col" class="num">Boleto</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="tbl-wrap"><table class="track qg"><thead><tr><th scope="col" class="l">Equipo</th>${C.map((c) => `<th scope="col" class="num">${c}</th>`).join("")}<th scope="col" class="num">Boleto</th></tr></thead><tbody>${rows}</tbody></table></div>
     <p class="quiet small">Probabilidad (%) de que cada equipo marque 0, 1, 2 o más goles (M); en pequeño, lo que juega la gente. Subrayado: lo que marca el boleto (el resultado conjunto más probable de cada partido); en rojo, lo que pasó. Aciertos esperados ${dec(j.expected_hits, 2)}; probabilidad de cobrar (2 o más) ${pc1(p2)} %.${sm && sm.jornadas ? ` Historial: ${sm.jornadas} jornadas, ${sm.hits} aciertos (esperados ${dec(sm.expected, 1)}), premio en ${sm.with_prize}.` : ""}</p>`;
 }
 function quinigolFromMatches() {
