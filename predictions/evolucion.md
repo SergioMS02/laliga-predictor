@@ -1,10 +1,10 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-10-26 12:23 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Sevilla – Osasuna (2026-10-26)
 
-1 ▄▄▄▄▄▄▄ · X ▃▃▃▃▃▃▃ · 2 ▂▂▂▂▂▂▂
+1 ▄▄▄▄▄▄▄▄ · X ▃▃▃▃▃▃▃▃ · 2 ▂▂▂▂▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -15,10 +15,11 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 19:01 | 49% | 29% | 22% |  |
 | 25/10 20:39 | 47% | 30% | 24% |  |
 | 25/10 21:05 | 49% | 28% | 23% |  |
+| 26/10 13:23 | 49% | 28% | 22% |  |
 
 ## Villarreal – Espanol (2026-10-30)
 
-1 ▆▆▆▆▆▆ · X ▂▂▂▂▂▂ · 2 ▁▁▁▁▁▁
+1 ▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂ · 2 ▁▁▁▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -28,6 +29,7 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 18:56 | 69% | 21% | 11% |  |
 | 25/10 20:39 | 65% | 23% | 12% |  |
 | 25/10 21:05 | 69% | 20% | 11% |  |
+| 26/10 13:23 | 70% | 20% | 11% |  |
 
 ## Levante – Ath Madrid (2026-10-31)
 
@@ -45,7 +47,7 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Vallecano – Celta (2026-10-31)
 
-1 ▄▄▄▄▄▄▄ · X ▃▃▃▃▃▃▃ · 2 ▂▃▃▃▃▃▃
+1 ▄▄▄▄▄▄▄▄ · X ▃▃▃▃▃▃▃▃ · 2 ▂▃▃▃▃▃▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -56,6 +58,7 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 18:56 | 42% | 31% | 26% |  |
 | 25/10 20:39 | 44% | 31% | 25% |  |
 | 25/10 21:05 | 45% | 30% | 25% |  |
+| 26/10 13:23 | 45% | 30% | 25% |  |
 
 ## Betis – Malaga (2026-10-31)
 
@@ -73,7 +76,7 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Barcelona – Alaves (2026-10-31)
 
-1 ███▇▇█▇█ · X ▁▁▁▁▁▁▁▁ · 2 ▁▁▁▁▁▁▁▁
+1 ███▇▇█▇█▇ · X ▁▁▁▁▁▁▁▁▁ · 2 ▁▁▁▁▁▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -85,6 +88,7 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 19:01 | 88% | 9% | 3% |  |
 | 25/10 20:39 | 87% | 10% | 3% |  |
 | 25/10 21:05 | 88% | 9% | 3% |  |
+| 26/10 13:23 | 87% | 10% | 4% |  |
 
 **Cambios importantes**
 
@@ -93,7 +97,7 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Getafe – Sevilla (2026-11-01)
 
-1 ▄▄▃▃▃▃ · X ▃▃▃▃▃▃ · 2 ▃▃▃▃▃▃
+1 ▄▄▃▃▃▃▃ · X ▃▃▃▃▃▃▃ · 2 ▃▃▃▃▃▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -103,10 +107,11 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 18:56 | 35% | 33% | 32% |  |
 | 25/10 20:39 | 37% | 33% | 31% |  |
 | 25/10 21:05 | 37% | 32% | 31% |  |
+| 26/10 13:23 | 37% | 32% | 31% |  |
 
 ## Santander – Real Madrid (2026-11-01)
 
-1 ▁▁▁▁▁▁▁▁▁ · X ▂▂▂▂▂▂▂▂▂ · 2 ▆▆▆▆▆▆▆▆▆
+1 ▁▁▁▁▁▁▁▁▁▁ · X ▂▂▂▂▂▂▂▂▂▂ · 2 ▆▆▆▆▆▆▆▆▆▆
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -119,10 +124,11 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 19:46 | 11% | 17% | 72% |  |
 | 25/10 20:39 | 11% | 17% | 73% |  |
 | 25/10 21:05 | 10% | 16% | 74% |  |
+| 26/10 13:23 | 10% | 15% | 75% |  |
 
 ## Elche – Valencia (2026-11-01)
 
-1 ▄▅▅▅▅▅▅▅ · X ▃▃▃▃▃▃▃▃ · 2 ▃▂▂▂▂▂▂▂
+1 ▄▅▅▅▅▅▅▅▅ · X ▃▃▃▃▃▃▃▃▃ · 2 ▃▂▂▂▂▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -134,6 +140,7 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 19:01 | 52% | 26% | 23% |  |
 | 25/10 20:39 | 52% | 26% | 22% |  |
 | 25/10 21:05 | 51% | 26% | 24% |  |
+| 26/10 13:23 | 50% | 26% | 24% |  |
 
 ## Ath Bilbao – Sociedad (2026-11-01)
 
@@ -151,4 +158,13 @@ Actualizado: 2026-10-25 21:47 UTC. Umbral de cambio importante: 4 puntos.
 
 - 25/10 20:39 — Ath Bilbao – Sociedad: gana Ath Bilbao 54% → 49%
   - -5.1 pts · Bajas y alineaciones: Ath Bilbao: baja: Gorka Guruzeta, Unai Egiluz, Oihan Sancet; duda: Iñigo Ruiz de Galarreta; déficit ataque 0%→28%, defensa 0%→11%
+
+## La Coruna – Osasuna (2026-11-02)
+
+1 ▅▄ · X ▃▃ · 2 ▂▂
+
+| Momento (Madrid) | 1 | X | 2 | Alineación |
+|---|---|---|---|---|
+| 25/10 15:08 | 51% | 27% | 23% |  |
+| 26/10 13:23 | 48% | 30% | 22% |  |
 
