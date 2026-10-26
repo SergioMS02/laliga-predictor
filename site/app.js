@@ -181,7 +181,7 @@ function goalsFacts(m) {
   const pov = ou.p_over != null ? ou.p_over : m.dc.p_over25;
   const btts = ou.p_btts != null ? ou.p_btts : m.dc.p_btts;
   const note = ou.p_over_market != null
-    ? `Modelo ${pct(ou.p_over_model)} %, casas ${pct(ou.p_over_market)} %`
+    ? `Modelo ${pct(ou.p_over_model)} %, ${ou.market_src === "Polymarket" ? "Polymarket" : "casas"} ${pct(ou.p_over_market)} %`
     : "Solo modelo (sin cuotas todavía)";
   return `<dl class="facts">
       <div><dt>Goles esperados</dt><dd>${dec(m.dc.xg_home, 2)} – ${dec(m.dc.xg_away, 2)}</dd></div>

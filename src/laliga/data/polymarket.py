@@ -509,7 +509,7 @@ def evaluate_goals(matches: pd.DataFrame, hist: pd.DataFrame, oos: pd.DataFrame 
                 r["modelo"] = ll(np.where(ok, mod, 0.5), ok)
                 r["polymarket_mismos"] = ll(P, ok)
         if key == "over25" and "ouc_o25" in d:
-            bk = np.array([devig2(a, b)[0] if np.isfinite([a, b]).all() else np.nan for a, b in zip(d.ouc_o25, d.ouc_u25)])
+            bk = np.array([(devig2(a, b) or np.nan) if np.isfinite([a, b]).all() else np.nan for a, b in zip(d.ouc_o25, d.ouc_u25)])
             ok = np.isfinite(bk)
             if ok.sum() >= 30:
                 r["cierre_casas"] = ll(np.where(ok, bk, 0.5), ok)

@@ -403,7 +403,8 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             "squads": o.get("squads"),
             "b365": [float(x) for x in b365[(r.season, r.home, r.away)]] if (r.season, r.home, r.away) in b365 else None,
             "b365_ou": [float(x) for x in b365_ou[(r.season, r.home, r.away)]] if (r.season, r.home, r.away) in b365_ou else None,
-            "ou": _ou_block(o["dc"], mkt_ou.get((r.season, r.home, r.away)), ou_w, blend_ou),
+            "ou": _ou_block(o["dc"], _poly_ou(poly) or mkt_ou.get((r.season, r.home, r.away)), ou_w, blend_ou,
+                            "Polymarket" if _poly_ou(poly) else ("casas" if mkt_ou.get((r.season, r.home, r.away)) else None)),
             "odds_market": _clean_odds(best_odds.get((r.season, r.home, r.away))),
             "markets": _markets(final[k], o["dc"], dc.params.rho, ah_odds.get((r.season, r.home, r.away)), ht_sh),
             "espn_id": str(events[(r.home, r.away)]) if (r.home, r.away) in events else None,
@@ -505,11 +506,18 @@ def _scorers(o: dict, players, r, season: int) -> dict:
     return out
 
 
-def _ou_block(dcp: dict, p_mkt: float | None, w: dict, blend) -> dict:
+def _poly_ou(poly: dict | None, min_volume: float = 5000) -> float | None:
+    """Más de 2,5 en Polymarket si el contrato tiene volumen: medido mejor que el cierre de las casas
+    (log-loss 0,6605 frente a 0,6619 en 332 partidos) y que el modelo (0,6774)."""
+    t = ((poly or {}).get("more") or {}).get("totals", {}).get("2.5")
+    return float(t["p"]) if t and t.get("volume", 0) >= min_volume else None
+
+
+def _ou_block(dcp: dict, p_mkt: float | None, w: dict, blend, src: str | None = None) -> dict:
     """Goles: más de 2,5 (modelo combinado con el mercado) y ambos marcan (modelo)."""
     pm = float(dcp["p_over25"])
     return {"p_over": round(blend(pm, p_mkt, w), 4), "p_over_model": round(pm, 4),
-            "p_over_market": None if p_mkt is None else round(float(p_mkt), 4),
+            "p_over_market": None if p_mkt is None else round(float(p_mkt), 4), "market_src": src,
             "p_btts": round(float(dcp["p_btts"]), 4)}
 
 

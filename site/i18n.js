@@ -131,7 +131,7 @@ const I18N = (() => {
     [/^Ningún cambio ha superado aún los (\d+) puntos\. Cuando ocurra, aquí verás qué lo provocó\.$/, "No change has passed $1 points yet. When one does, you will see what caused it here."],
     [/^Cambios de (\d+) puntos o más y lo que los provocó\.$/, "Changes of $1 points or more and what caused them."],
     [/^Goles esperados: (.+)$/, "Expected goals: $1"], [/^Bajas: (.+)$/, "Absences: $1"], [/^Bajas y dudas: (.+)$/, "Absences and doubts: $1"],
-    [/^En el once probable: (.+)$/, "In the likely XI: $1"], [/^Modelo (\d+) %, casas (\d+) %$/, "Model $1%, bookmakers $2%"],
+    [/^En el once probable: (.+)$/, "In the likely XI: $1"], [/^Modelo (\d+) %, casas (\d+) %$/, "Model $1%, bookmakers $2%"], [/^Modelo (\d+) %, Polymarket (\d+) %$/, "Model $1%, Polymarket $2%"],
     [/^Goles de (.+) en filas y de (.+) en columnas$/, "$1 goals in rows, $2 goals in columns"], [/^Más de ([\d,]+): (\d+) %$/, (m, a, b) => `Over ${a.replace(",", ".")}: ${b}%`],
     [/^Más de ([\d,]+)$/, (m, a) => `Over ${a.replace(",", ".")}`], [/^(.+): jugadores clave$/, "$1: key players"], [/^(.+) gana al descanso$/, "$1 ahead at half time"],
     [/^(.+) marca$/, "$1 scores"], [/^(.+) deja la portería a cero$/, "$1 keeps a clean sheet"], [/^(.+) \(empate devuelve\)$/, "$1 (draw refunded)"],
