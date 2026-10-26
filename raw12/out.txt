@@ -1,0 +1,16 @@
+INFO:laliga.data.shots:Tiros Understat 2019: 380 partidos nuevos
+INFO:laliga.data.shots:Tiros Understat 2020: 380 partidos nuevos
+INFO:laliga.data.shots:Tiros Understat 2021: 380 partidos nuevos
+INFO:laliga.data.shots:Tiros Understat 2022: 380 partidos nuevos
+INFO:laliga.data.shots:Tiros Understat 2023: 380 partidos nuevos
+INFO:laliga.data.shots:Tiros Understat 2024: 380 partidos nuevos
+INFO:laliga.data.shots:Tiros Understat 2025: 380 partidos nuevos
+INFO:laliga.data.shots:Tiros Understat 2026: 98 partidos nuevos
+2019 8604 380
+2020 8132 380
+2021 8977 380
+2022 9374 380
+2023 9311 380
+2024 9056 380
+2025 9523 380
+2026 2681 98
