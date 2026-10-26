@@ -7,47 +7,30 @@ permissions:
 jobs:
   p:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: mainrepo
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -e mainrepo
       - run: |
-          mkdir -p raw11
-          python3 - <<'PY' > raw11/out.txt 2>&1
-          import requests, json, re, csv, time
-          from datetime import datetime, timezone
-          s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0"
-          G = "https://gamma-api.polymarket.com"
-          evs = []
-          for off in range(0, 6000, 100):
-              r = s.get(G + "/events", params={"series_id": "10193", "closed": "true", "limit": 100, "offset": off}, timeout=40)
-              js = r.json()
-              if not isinstance(js, list) or not js:
-                  print("stop", off, str(js)[:200]); break
-              for e in js:
-                  if re.fullmatch(r"lal-[a-z0-9]+-[a-z0-9]+-\d{4}-\d{2}-\d{2}", e.get("slug","")):
-                      evs.append(e)
-          print("main closed events", len(evs))
-          w = csv.writer(open("raw11/hist.csv", "w"))
-          w.writerow(["slug","title","start","volume","outcome","p_close","p_6h","p_24h","last_trade","resolved"])
-          for e in evs:
-              st = e.get("startTime") or e.get("endDate")
-              try:
-                  t0 = int(datetime.fromisoformat(st.replace("Z","+00:00")).timestamp())
-              except Exception: continue
-              for m in e.get("markets", []):
-                  try: tok = json.loads(m["clobTokenIds"])[0]
-                  except Exception: continue
-                  pc = p6 = p24 = None
-                  try:
-                      h = s.get("https://clob.polymarket.com/prices-history", params={"market": tok, "startTs": t0-26*3600, "endTs": t0, "fidelity": 5}, timeout=30).json().get("history", [])
-                      pre = [x for x in h if x["t"] <= t0]
-                      if pre:
-                          pc = pre[-1]["p"]
-                          b6 = [x for x in pre if x["t"] <= t0-6*3600]; p6 = b6[-1]["p"] if b6 else None
-                          b24 = [x for x in pre if x["t"] <= t0-24*3600]; p24 = b24[-1]["p"] if b24 else None
-                  except Exception as ex:
-                      print("err", e["slug"], ex)
-                  w.writerow([e["slug"], e.get("title"), st, round(e.get("volume") or 0), m.get("groupItemTitle"), pc, p6, p24, m.get("lastTradePrice"), m.get("outcomePrices")])
-          print("done")
+          mkdir -p raw12
+          cd mainrepo
+          python - <<'PY' > ../raw12/out.txt 2>&1 || true
+          import logging; logging.basicConfig(level=logging.INFO)
+          from laliga.config import load_settings
+          from laliga.data import shots
+          s = load_settings()
+          for y in range(2019, 2027):
+              df = shots.fetch_shots(s, y, online=True, max_new=400)
+              print(y, len(df), df.match_id.nunique())
           PY
+          cp data/raw/understat/shots_*.csv ../raw12/ 2>/dev/null || true
+          cd ..
           git config user.name probe; git config user.email probe@example.com
-          git add raw11; git commit -qm probe-out11; git push origin HEAD:probe
+          git add raw12; git commit -qm probe-out12; git push origin HEAD:probe
