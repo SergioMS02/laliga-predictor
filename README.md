@@ -98,6 +98,14 @@ Pestañas:
 - **Seguimiento de mercados secundarios** (pestaña Aciertos): +2,5 goles, ambos marcan, goleadores, tarjetas y córners predichos frente a lo que pasó (`predictions/props_log.csv`).
 - **Pichichi** (en Clasificación): probabilidad de cada jugador de acabar máximo goleador (goles actuales + goles esperados de su equipo en lo que queda × su parte del xG del equipo).
 - **Polymarket** (`data/polymarket.py`, solo lectura de precios; el proyecto no opera allí): ver abajo.
+- **Más mercados** (`markets.py`): de la matriz de marcadores salen doble oportunidad, empate no válido, hándicap asiático (con la línea del mercado y su valor), más/menos de 0,5 a 4,5, goles de cada equipo, descanso, descanso/final, marcador exacto y Quinigol, junto a los precios de Polymarket con volumen.
+- **Clasificación**: puntos que harán falta para cada zona, **simulador «¿y si…?»** (fijas resultados y se simula en el navegador), **tabla de la suerte** (puntos frente a xPts de Understat), premios (máximo asistente, Zamora aproximado, equipo más y menos goleado). La proyección incluye la incertidumbre de la fuerza de cada equipo (8 %, medida con 60 proyecciones de 2015 a 2025; el efecto es pequeño).
+- **Equipos**: estilo de juego (presión PPDA, llegadas, ocasiones; agrupado en estilos con k-medias) y Elo de cada temporada desde 2005. **Jugadores**: goles, xG, asistencias, xA, minutos, tarjetas, penaltis y mapa de tiros (tiros de Understat). **Árbitros**: tarjetas, faltas, goles y victorias locales.
+- **Otras ligas** (`leagues.py`): Segunda, Liga F, Premier, Serie A, Bundesliga y Ligue 1 con clasificación, proyección, próximos partidos (mercado + Dixon-Coles; en todas el mercado acierta más que el modelo propio) y seguimiento; Copa del Rey, Liga F y equipos españoles en Europa con el Elo europeo.
+- **Previas automáticas** de cada partido a partir de los datos (sin inventar nada).
+- **Directo con tiros a puerta**: la probabilidad en directo se ajusta con los tiros a puerta (γ medido con 2.000 partidos de Understat minuto a minuto; aporta poco frente al marcador y el minuto, y así se explica en Aciertos). También para otras ligas.
+- **Quinigol** (`quinigol.py`): los 6 partidos oficiales y lo que juega la gente (marcador público de dataradar.es), boleto del modelo y seguimiento.
+- **Versión en inglés** (botón EN/ES) e **instalable** como app (manifiesto y service worker: abre sin conexión con los últimos datos).
 - **Quiniela** y **Apuestas**: ver abajo.
 - En cada partido: más/menos de 2,5 goles (modelo combinado con el mercado), ambos marcan, cuotas de Bet365 y **probables goleadores** (probabilidad de que marque cada titular, con su xG por 90 de Understat y los goles esperados de su equipo).
 
