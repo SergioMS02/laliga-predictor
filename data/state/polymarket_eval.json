@@ -1,94 +1,94 @@
 {
- "n": 424,
- "n_all": 465,
+ "n": 434,
+ "n_all": 475,
  "min_volume": 50000.0,
  "since": "2025-08-15",
  "logloss": {
-  "polymarket": 0.9531,
-  "cierre_casas": 0.9529,
+  "polymarket": 0.9522,
+  "cierre_casas": 0.952,
   "modelo": 0.9596,
-  "mezcla": 0.9534
+  "mezcla": 0.9525
  },
  "blend": [
   {
    "w_model": 0.0,
-   "logloss": 0.9531
+   "logloss": 0.9522
   },
   {
    "w_model": 0.05,
-   "logloss": 0.9532
+   "logloss": 0.9524
   },
   {
    "w_model": 0.1,
-   "logloss": 0.9534
+   "logloss": 0.9525
   },
   {
    "w_model": 0.15,
-   "logloss": 0.9535
+   "logloss": 0.9528
   },
   {
    "w_model": 0.2,
-   "logloss": 0.9537
+   "logloss": 0.953
   },
   {
    "w_model": 0.25,
-   "logloss": 0.9539
+   "logloss": 0.9532
   },
   {
    "w_model": 0.3,
-   "logloss": 0.9541
+   "logloss": 0.9535
   },
   {
    "w_model": 0.35,
-   "logloss": 0.9544
+   "logloss": 0.9538
   },
   {
    "w_model": 0.4,
-   "logloss": 0.9546
+   "logloss": 0.9541
   },
   {
    "w_model": 0.45,
-   "logloss": 0.9549
+   "logloss": 0.9544
   },
   {
    "w_model": 0.5,
-   "logloss": 0.9553
+   "logloss": 0.9548
   },
   {
    "w_model": 0.55,
-   "logloss": 0.9556
+   "logloss": 0.9552
   },
   {
    "w_model": 0.6,
-   "logloss": 0.9559
+   "logloss": 0.9556
   },
   {
    "w_model": 0.65,
-   "logloss": 0.9563
+   "logloss": 0.956
   },
   {
    "w_model": 0.7,
-   "logloss": 0.9567
+   "logloss": 0.9564
   },
   {
    "w_model": 0.75,
-   "logloss": 0.9571
+   "logloss": 0.9569
   },
   {
    "w_model": 0.8,
-   "logloss": 0.9576
+   "logloss": 0.9574
   },
   {
    "w_model": 0.85,
-   "logloss": 0.9581
+   "logloss": 0.9579
   },
   {
    "w_model": 0.9,
-   "logloss": 0.9586
+   "logloss": 0.9585
   },
   {
    "w_model": 0.95,
-   "logloss": 0.9591
+   "logloss": 0.959
   },
   {
    "w_model": 1.0,
@@ -100,9 +100,25 @@
  "diff_vs_close": {
   "mean": 0.0002,
   "ci95": [
-   -0.0019,
+   -0.002,
    0.0023
   ]
  },
- "updated": "2026-10-26"
+ "goals": {
+  "over25": {
+   "n": 342,
+   "polymarket": 0.6586,
+   "modelo": 0.6779,
+   "polymarket_mismos": 0.6586,
+   "cierre_casas": 0.6599,
+   "polymarket_mismos_casas": 0.6586
+  },
+  "btts": {
+   "n": 295,
+   "polymarket": 0.6633,
+   "modelo": 0.6842,
+   "polymarket_mismos": 0.6633
+  }
+ },
+ "updated": "2026-10-27"
 }
