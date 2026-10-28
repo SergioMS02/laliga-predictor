@@ -1,5 +1,5 @@
 {
- "at": "2026-10-27T12:09+00:00",
+ "at": "2026-10-28T12:52+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -14,8 +14,8 @@
    "note": null
   },
   "football-data (próximos partidos y cuotas)": {
-   "ok": true,
-   "rows": 10,
+   "ok": false,
+   "rows": 0,
    "error": null,
    "note": null
   },
@@ -51,7 +51,7 @@
   },
   "futbolfantasy (lesionados y sancionados)": {
    "ok": true,
-   "rows": 71,
+   "rows": 67,
    "error": null,
    "note": null
   },
