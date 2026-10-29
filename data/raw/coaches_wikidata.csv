@@ -18,86 +18,6 @@ Celta,2023-07-01,Rafael Benítez
 Celta,2022-11-02,Carlos Augusto Soares da Costa Faria Carvalhal
 Getafe,2021-10-06,Quique Sánchez Flores
 Getafe,2023-04-29,José Bordalás
-Barcelona,2003-07-01,Frank Rijkaard
-Barcelona,1941-07-01,Ramon Guzmán
-Barcelona,1935-07-01,Patrick O'Connell
-Barcelona,1981-07-01,Udo Lattek
-Barcelona,1942-02-01,Juan José Nogués
-Barcelona,1996-07-14,Bobby Robson
-Barcelona,1940-03-20,Josep Planas i Artés
-Barcelona,1934-07-01,Franz Platko
-Barcelona,1979-04-18,Joaquim Rifé
-Barcelona,1961-11-25,Ladislao Kubala
-Barcelona,2003-01-29,Toño de la Cruz
-Barcelona,2002-07-01,Louis van Gaal
-Barcelona,2020-01-13,Quique Setién
-Barcelona,1960-05-01,Enric Rabassa
-Barcelona,1964-10-16,Vicente Sasot
-Barcelona,1947-07-01,Enrique Fernández Viola
-Barcelona,1944-07-01,José Samitier
-Barcelona,1976-04-01,Laureano Ruiz
-Barcelona,2008-06-01,Pep Guardiola
-Barcelona,1980-11-06,Helenio Herrera
-Barcelona,1991-04-12,Johan Cruyff
-Barcelona,1961-07-01,Luis Miró
-Barcelona,1984-06-01,Terry Venables
-Barcelona,2024-07-01,Hansi Flick
-Barcelona,1971-07-01,Rinus Michels
-Barcelona,1983-03-04,José Luis Romero Robledo
-Barcelona,2001-04-24,Carles Rexach
-Barcelona,1963-01-08,Josep Gonzalvo
-Barcelona,2020-08-19,Ronald Koeman
-Barcelona,1929-03-26,James Bellamy
-Barcelona,1983-03-08,César Luis Menotti
-Barcelona,1978-07-01,Lucien Müller
-Barcelona,2012-07-01,Francesc Vilanova i Bayó
-Barcelona,2017-07-01,Ernesto Valverde
-Barcelona,1980-03-06,Helenio Herrera
-Barcelona,1975-07-01,Hennes Weisweiler
-Barcelona,1956-07-01,Domènec Balmanya
-Barcelona,1913-01-15,Jack Greenwell
-Barcelona,2021-11-06,Xavi Hernández
-Barcelona,1997-07-01,Louis van Gaal
-Barcelona,1970-01-01,Vic Buckingham
-Barcelona,1912-12-30,Jack Alderson
-Barcelona,1923-08-01,Jesza Poszony
-Barcelona,1960-07-01,Ljubiša Broćić
-Barcelona,1912-01-01,William Charles Lambe
-Barcelona,1965-07-01,Roque Olsen
-Barcelona,1958-04-25,Helenio Herrera
-Barcelona,1923-10-12,Alf Spouncer
-Barcelona,1950-01-23,Ramón Llorens Pujadas
-Barcelona,2014-07-01,Luis Enrique Martínez García
-Barcelona,2003-02-03,Radomir Antić
-Barcelona,1967-07-01,Salvador Artigas
-Barcelona,1963-07-01,César Rodríguez
-Barcelona,1987-09-23,Q576614
-Barcelona,1950-07-01,Ferdinand Daučík
-Barcelona,2000-07-01,Lorenzo Serra Ferrer
-Barcelona,1926-02-01,Richard Kohn
-Barcelona,1924-12-01,Ralph Kirby
-Barcelona,1961-01-15,Enrique Orizaola
-Barcelona,1969-10-15,Josep Seguer
-Barcelona,2013-07-23,Gerardo Martino
-Barcelona,1926-12-01,Romà Forns
-Barcelona,1912-09-01,Miles Barron
-Barcelona,1976-07-01,Rinus Michels
-Real Madrid,2025-05-25,Xabi Alonso
-Real Madrid,2006-07-06,Fabio Capello
-Real Madrid,2018-10-29,Santiago Solari
-Real Madrid,2010-07-01,José Mourinho
-Real Madrid,2019-03-11,Zinedine Zidane
-Real Madrid,2018-07-01,Julen Lopetegui
-Real Madrid,1996-07-01,Fabio Capello
-Real Madrid,1997-07-01,Jupp Heynckes
-Real Madrid,2021-07-01,Carlo Ancelotti
-Real Madrid,2013-07-01,Carlo Ancelotti
-Real Madrid,2016-01-04,Zinedine Zidane
-Ath Bilbao,2018-07-01,Eduardo Berizzo
-Ath Bilbao,2026-05-01,Edin Terzić
-Ath Bilbao,2013-07-01,Ernesto Valverde
-Real Madrid,2026-01-13,Álvaro Arbeloa
-Real Madrid,2026-01-01,José Mourinho
 Vallecano,2024-02-14,Iñigo Pérez
 Vallecano,2024-02-14,Iñigo Pérez
 Vallecano,2017-02-21,Miguel Ángel Sánchez Muñoz
@@ -242,6 +162,86 @@ Sp Gijon,2025-10-08,Borja Jiménez Sáez
 Sp Gijon,2025-10-08,Borja Jiménez Sáez
 Sp Gijon,2025-10-08,Borja Jiménez Sáez
 Villarreal,2026-06-01,Iñigo Pérez
+Barcelona,2003-07-01,Frank Rijkaard
+Barcelona,1941-07-01,Ramon Guzmán
+Barcelona,1935-07-01,Patrick O'Connell
+Barcelona,1981-07-01,Udo Lattek
+Barcelona,1942-02-01,Juan José Nogués
+Barcelona,1996-07-14,Bobby Robson
+Barcelona,1940-03-20,Josep Planas i Artés
+Barcelona,1934-07-01,Franz Platko
+Barcelona,1979-04-18,Joaquim Rifé
+Barcelona,1961-11-25,Ladislao Kubala
+Barcelona,2003-01-29,Toño de la Cruz
+Barcelona,2002-07-01,Louis van Gaal
+Barcelona,2020-01-13,Quique Setién
+Barcelona,1960-05-01,Enric Rabassa
+Barcelona,1964-10-16,Vicente Sasot
+Barcelona,1947-07-01,Enrique Fernández Viola
+Barcelona,1944-07-01,José Samitier
+Barcelona,1976-04-01,Laureano Ruiz
+Barcelona,2008-06-01,Pep Guardiola
+Barcelona,1980-11-06,Helenio Herrera
+Barcelona,1991-04-12,Johan Cruyff
+Barcelona,1961-07-01,Luis Miró
+Barcelona,1984-06-01,Terry Venables
+Barcelona,2024-07-01,Hansi Flick
+Barcelona,1971-07-01,Rinus Michels
+Barcelona,1983-03-04,José Luis Romero Robledo
+Barcelona,2001-04-24,Carles Rexach
+Barcelona,1963-01-08,Josep Gonzalvo
+Barcelona,2020-08-19,Ronald Koeman
+Barcelona,1929-03-26,James Bellamy
+Barcelona,1983-03-08,César Luis Menotti
+Barcelona,1978-07-01,Lucien Müller
+Barcelona,2012-07-01,Francesc Vilanova i Bayó
+Barcelona,2017-07-01,Ernesto Valverde
+Barcelona,1980-03-06,Helenio Herrera
+Barcelona,1975-07-01,Hennes Weisweiler
+Barcelona,1956-07-01,Domènec Balmanya
+Barcelona,1913-01-15,Jack Greenwell
+Barcelona,2021-11-06,Xavi Hernández
+Barcelona,1997-07-01,Louis van Gaal
+Barcelona,1970-01-01,Vic Buckingham
+Barcelona,1912-12-30,Jack Alderson
+Barcelona,1923-08-01,Jesza Poszony
+Barcelona,1960-07-01,Ljubiša Broćić
+Barcelona,1912-01-01,William Charles Lambe
+Barcelona,1965-07-01,Roque Olsen
+Barcelona,1958-04-25,Helenio Herrera
+Barcelona,1923-10-12,Alf Spouncer
+Barcelona,1950-01-23,Ramón Llorens Pujadas
+Barcelona,2014-07-01,Luis Enrique Martínez García
+Barcelona,2003-02-03,Radomir Antić
+Barcelona,1967-07-01,Salvador Artigas
+Barcelona,1963-07-01,César Rodríguez
+Barcelona,1987-09-23,Q576614
+Barcelona,1950-07-01,Ferdinand Daučík
+Barcelona,2000-07-01,Lorenzo Serra Ferrer
+Barcelona,1926-02-01,Richard Kohn
+Barcelona,1924-12-01,Ralph Kirby
+Barcelona,1961-01-15,Enrique Orizaola
+Barcelona,1969-10-15,Josep Seguer
+Barcelona,2013-07-23,Gerardo Martino
+Barcelona,1926-12-01,Romà Forns
+Barcelona,1912-09-01,Miles Barron
+Barcelona,1976-07-01,Rinus Michels
+Real Madrid,2025-05-25,Xabi Alonso
+Real Madrid,2006-07-06,Fabio Capello
+Real Madrid,2018-10-29,Santiago Solari
+Real Madrid,2010-07-01,José Mourinho
+Real Madrid,2019-03-11,Zinedine Zidane
+Real Madrid,2018-07-01,Julen Lopetegui
+Real Madrid,1996-07-01,Fabio Capello
+Real Madrid,1997-07-01,Jupp Heynckes
+Real Madrid,2021-07-01,Carlo Ancelotti
+Real Madrid,2013-07-01,Carlo Ancelotti
+Real Madrid,2016-01-04,Zinedine Zidane
+Ath Bilbao,2018-07-01,Eduardo Berizzo
+Ath Bilbao,2026-05-01,Edin Terzić
+Ath Bilbao,2013-07-01,Ernesto Valverde
+Real Madrid,2026-01-13,Álvaro Arbeloa
+Real Madrid,2026-01-01,José Mourinho
 Elche,2023-03-21,Sebastián Beccacece
 Elche,2022-10-05,Alberto Gallego Lancuentra
 Elche,2021-11-25,Sergio Mantecón
