@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30T12:53+00:00",
+ "at": "2026-10-30T18:34+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -21,7 +21,7 @@
   },
   "ESPN (calendario, horarios, alineaciones)": {
    "ok": true,
-   "rows": 115,
+   "rows": 114,
    "error": null,
    "note": null
   },
@@ -46,30 +46,6 @@
   "Wikidata (entrenadores)": {
    "ok": true,
    "rows": 214,
-   "error": null,
-   "note": null
-  },
-  "futbolfantasy (lesionados y sancionados)": {
-   "ok": true,
-   "rows": 68,
-   "error": null,
-   "note": null
-  },
-  "ESPN (alineaciones y árbitro del partido)": {
-   "ok": true,
-   "rows": 11,
-   "error": null,
-   "note": null
-  },
-  "Google News (bajas)": {
-   "ok": true,
-   "rows": null,
-   "error": null,
-   "note": "en reserva: futbolfantasy ha respondido"
-  },
-  "Polymarket (precios de partidos)": {
-   "ok": true,
-   "rows": 21,
    "error": null,
    "note": null
   }
