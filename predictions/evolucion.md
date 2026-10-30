@@ -1,10 +1,10 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-10-30 12:53 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Villarreal – Espanol (2026-10-30)
 
-1 ▆▆▆▆▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂▂▂▂▂ · 2 ▁▁▁▁▁▁▁▁▁▁▁
+1 ▆▆▆▆▆▆▆▆▆▆▆▆ · X ▂▂▂▂▂▂▂▂▂▂▂▂ · 2 ▁▁▁▁▁▁▁▁▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -19,10 +19,11 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 27/10 13:08 | 71% | 19% | 10% |  |
 | 28/10 13:51 | 72% | 19% | 9% |  |
 | 29/10 13:58 | 72% | 19% | 9% |  |
+| 30/10 13:52 | 72% | 17% | 11% |  |
 
 ## Levante – Ath Madrid (2026-10-31)
 
-1 ▂▂▂▂▂▂▂▂ · X ▂▂▂▂▂▂▂▂ · 2 ▅▅▅▅▅▅▅▅
+1 ▂▂▂▂▂▂▂▂▂ · X ▂▂▂▂▂▂▂▂▂ · 2 ▅▅▅▅▅▅▅▅▅
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -34,10 +35,11 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 21:05 | 21% | 23% | 55% |  |
 | 25/10 22:47 | 21% | 23% | 56% |  |
 | 27/10 13:08 | 21% | 23% | 55% |  |
+| 30/10 13:52 | 20% | 22% | 58% |  |
 
 ## Vallecano – Celta (2026-10-31)
 
-1 ▄▄▄▄▄▄▄▄▄▄ · X ▃▃▃▃▃▃▃▃▃▃ · 2 ▂▃▃▃▃▃▃▃▃▃
+1 ▄▄▄▄▄▄▄▄▄▄▄ · X ▃▃▃▃▃▃▃▃▃▃▃ · 2 ▂▃▃▃▃▃▃▃▃▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -51,10 +53,11 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 26/10 13:23 | 45% | 30% | 25% |  |
 | 27/10 13:08 | 44% | 30% | 25% |  |
 | 29/10 13:58 | 44% | 30% | 25% |  |
+| 30/10 13:52 | 43% | 30% | 27% |  |
 
 ## Betis – Malaga (2026-10-31)
 
-1 ▇▆▆▆▆▆▆▇▇ · X ▂▂▂▂▂▂▂▂▂ · 2 ▁▁▁▁▁▁▁▁▁
+1 ▇▆▆▆▆▆▆▇▇▇ · X ▂▂▂▂▂▂▂▂▂▂ · 2 ▁▁▁▁▁▁▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -67,10 +70,11 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 21:05 | 74% | 16% | 10% |  |
 | 27/10 13:08 | 75% | 16% | 9% |  |
 | 29/10 13:58 | 75% | 16% | 9% |  |
+| 30/10 13:52 | 75% | 15% | 10% |  |
 
 ## Barcelona – Alaves (2026-10-31)
 
-1 ███▇▇█▇█▇▇▇██ · X ▁▁▁▁▁▁▁▁▁▁▁▁▁ · 2 ▁▁▁▁▁▁▁▁▁▁▁▁▁
+1 ███▇▇█▇█▇▇▇███ · X ▁▁▁▁▁▁▁▁▁▁▁▁▁▁ · 2 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -87,6 +91,7 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 27/10 13:08 | 87% | 10% | 3% |  |
 | 28/10 13:51 | 88% | 9% | 3% |  |
 | 29/10 13:58 | 89% | 8% | 4% |  |
+| 30/10 13:52 | 88% | 7% | 4% |  |
 
 **Cambios importantes**
 
@@ -95,7 +100,7 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Getafe – Sevilla (2026-11-01)
 
-1 ▄▄▃▃▃▃▃▃▃ · X ▃▃▃▃▃▃▃▃▃ · 2 ▃▃▃▃▃▃▃▃▃
+1 ▄▄▃▃▃▃▃▃▃▃ · X ▃▃▃▃▃▃▃▃▃▃ · 2 ▃▃▃▃▃▃▃▃▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -108,10 +113,17 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 26/10 13:23 | 37% | 32% | 31% |  |
 | 27/10 13:08 | 35% | 32% | 33% |  |
 | 29/10 13:58 | 35% | 32% | 32% |  |
+| 30/10 13:52 | 31% | 35% | 34% |  |
+
+**Cambios importantes**
+
+- 30/10 13:52 — Getafe – Sevilla: gana Getafe 35% → 31%
+  - -8.6 pts · Cuotas de mercado: primeras cuotas disponibles 3.09/2.96/2.45
+  - +4.4 pts · Modelo: cambio de modelo (stacker → stacker_mercado)
 
 ## Santander – Real Madrid (2026-11-01)
 
-1 ▁▁▁▁▁▁▁▁▁▁▁▁▁ · X ▂▂▂▂▂▂▂▂▂▂▂▂▂ · 2 ▆▆▆▆▆▆▆▆▆▆▆▆▆
+1 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁ · X ▂▂▂▂▂▂▂▂▂▂▂▂▂▂ · 2 ▆▆▆▆▆▆▆▆▆▆▆▆▆▆
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -128,10 +140,11 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 27/10 13:08 | 12% | 16% | 72% |  |
 | 28/10 13:51 | 12% | 16% | 72% |  |
 | 29/10 13:58 | 12% | 16% | 72% |  |
+| 30/10 13:52 | 12% | 13% | 75% |  |
 
 ## Elche – Valencia (2026-11-01)
 
-1 ▄▅▅▅▅▅▅▅▅▅▅▅ · X ▃▃▃▃▃▃▃▃▃▃▃▃ · 2 ▃▂▂▂▂▂▂▂▂▂▂▂
+1 ▄▅▅▅▅▅▅▅▅▅▅▅▄ · X ▃▃▃▃▃▃▃▃▃▃▃▃▃ · 2 ▃▂▂▂▂▂▂▂▂▂▂▂▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -147,10 +160,17 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 27/10 13:08 | 52% | 26% | 22% |  |
 | 28/10 13:51 | 52% | 26% | 22% |  |
 | 29/10 13:58 | 52% | 26% | 23% |  |
+| 30/10 13:52 | 46% | 29% | 25% |  |
+
+**Cambios importantes**
+
+- 30/10 13:52 — Elche – Valencia: gana Elche 52% → 46%
+  - -3.3 pts · Modelo: cambio de modelo (stacker → stacker_mercado)
+  - -2.8 pts · Cuotas de mercado: primeras cuotas disponibles 2.30/3.33/3.01
 
 ## Ath Bilbao – Sociedad (2026-11-01)
 
-1 ▅▅▄▅▅▅▅ · X ▂▃▃▃▃▃▃ · 2 ▂▂▂▂▂▂▂
+1 ▅▅▄▅▅▅▅▄ · X ▂▃▃▃▃▃▃▃ · 2 ▂▂▂▂▂▂▂▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -161,6 +181,7 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 25/10 22:47 | 53% | 26% | 21% |  |
 | 27/10 13:08 | 51% | 26% | 22% |  |
 | 28/10 13:51 | 51% | 26% | 23% |  |
+| 30/10 13:52 | 48% | 27% | 25% |  |
 
 **Cambios importantes**
 
@@ -169,7 +190,7 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 
 ## La Coruna – Osasuna (2026-11-02)
 
-1 ▅▄▅▅▅ · X ▃▃▃▃▃ · 2 ▂▂▂▂▂
+1 ▅▄▅▅▅▄ · X ▃▃▃▃▃▃ · 2 ▂▂▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -178,4 +199,13 @@ Actualizado: 2026-10-29 12:59 UTC. Umbral de cambio importante: 4 puntos.
 | 27/10 13:08 | 50% | 29% | 21% |  |
 | 28/10 13:51 | 50% | 29% | 21% |  |
 | 29/10 13:58 | 50% | 29% | 21% |  |
+| 30/10 13:52 | 47% | 30% | 24% |  |
+
+## Sevilla – Alaves (2026-11-06)
+
+1 ▄ · X ▃ · 2 ▂
+
+| Momento (Madrid) | 1 | X | 2 | Alineación |
+|---|---|---|---|---|
+| 30/10 13:52 | 46% | 29% | 24% |  |
 
