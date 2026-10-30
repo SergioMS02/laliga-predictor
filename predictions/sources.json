@@ -1,5 +1,5 @@
 {
- "at": "2026-10-30T18:34+00:00",
+ "at": "2026-10-30T22:39+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -33,7 +33,7 @@
   },
   "Understat (xG)": {
    "ok": true,
-   "rows": 4659,
+   "rows": 4660,
    "error": null,
    "note": null
   },

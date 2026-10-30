@@ -2707,3 +2707,22 @@ season,match_id,date,home,away,side,team,minute,player,assist,situation,shot_typ
 2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,88,Raul García,Raul Moro,FromCorner,RightFoot,MissedShots,0.08936429023742676,0.9269999694824219,0.44599998474121094
 2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,88,Ante Budimir,Raul Moro,OpenPlay,Head,SavedShot,0.027345504611730576,0.8590000152587891,0.49700000762939456
 2026,30868,2026-10-26,Sevilla,Osasuna,a,Osasuna,90,Alejandro Catena,Ante Budimir,OpenPlay,Head,SavedShot,0.03446359559893608,0.870999984741211,0.4379999923706055
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,10,Carlos Macià,Gerard Moreno,OpenPlay,RightFoot,MissedShots,0.02383091300725937,0.7630000305175781,0.41200000762939454
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,12,Santiago Mouriño,Georges Mikautadze,FromCorner,Head,MissedShots,0.06928671896457672,0.9369999694824219,0.49700000762939456
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,21,Tajon Buchanan,,OpenPlay,RightFoot,BlockedShot,0.05899907648563385,0.9009999847412109,0.6730000305175782
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,25,Georges Mikautadze,Nicolas Pepe,OpenPlay,LeftFoot,SavedShot,0.023163164034485817,0.7769999694824219,0.33799999237060546
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,33,Sergi Cardona,Tajon Buchanan,OpenPlay,LeftFoot,SavedShot,0.06522134691476822,0.9569999694824218,0.6619999694824219
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,35,Nicolas Pepe,Santiago Mouriño,OpenPlay,LeftFoot,MissedShots,0.021656369790434837,0.7759999847412109,0.28600000381469726
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,41,Nicolas Pepe,Alberto Moleiro,SetPiece,LeftFoot,MissedShots,0.018002480268478394,0.8390000152587891,0.19
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,52,Tajon Buchanan,Sergi Cardona,OpenPlay,RightFoot,BlockedShot,0.020402923226356506,0.765,0.749000015258789
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,54,Georges Mikautadze,Renato Veiga,OpenPlay,RightFoot,SavedShot,0.09510952234268188,0.9380000305175781,0.4109999847412109
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,54,Nicolas Pepe,Santiago Mouriño,OpenPlay,LeftFoot,SavedShot,0.03257257118821144,0.7709999847412109,0.29100000381469726
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,62,Tajon Buchanan,Santiago Comesaña,OpenPlay,LeftFoot,BlockedShot,0.07744989544153214,0.8390000152587891,0.605
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,65,Tajon Buchanan,Carlos Romero,OpenPlay,RightFoot,MissedShots,0.029073351994156837,0.8930000305175781,0.7469999694824219
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,75,Georges Mikautadze,,OpenPlay,RightFoot,MissedShots,0.06637080758810043,0.84,0.64
+2026,30879,2026-10-30,Villarreal,Espanol,h,Villarreal,90,Tani Oluwaseyi,Georges Mikautadze,OpenPlay,LeftFoot,BlockedShot,0.02670403942465782,0.7759999847412109,0.5940000152587891
+2026,30879,2026-10-30,Villarreal,Espanol,a,Espanol,23,Alejandro Santiago,Javi Hernández,OpenPlay,LeftFoot,MissedShots,0.01999877765774727,0.7180000305175781,0.38799999237060545
+2026,30879,2026-10-30,Villarreal,Espanol,a,Espanol,28,Bryan Zaragoza,Rafael Bauza,OpenPlay,RightFoot,SavedShot,0.03865046799182892,0.884000015258789,0.7140000152587891
+2026,30879,2026-10-30,Villarreal,Espanol,a,Espanol,38,Bryan Zaragoza,Rafael Bauza,OpenPlay,RightFoot,BlockedShot,0.0165797658264637,0.769000015258789,0.695
+2026,30879,2026-10-30,Villarreal,Espanol,a,Espanol,59,Leandro Cabrera,Bryan Zaragoza,SetPiece,LeftFoot,Goal,0.42592185735702515,0.9169999694824219,0.514000015258789
+2026,30879,2026-10-30,Villarreal,Espanol,a,Espanol,86,Javi Puado,Omar El Hilali,OpenPlay,RightFoot,SavedShot,0.018791040405631065,0.7219999694824218,0.759000015258789
