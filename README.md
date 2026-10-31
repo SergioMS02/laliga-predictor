@@ -101,7 +101,7 @@ Pestañas:
 - **Más mercados** (`markets.py`): de la matriz de marcadores salen doble oportunidad, empate no válido, hándicap asiático (con la línea del mercado y su valor), más/menos de 0,5 a 4,5, goles de cada equipo, descanso, descanso/final, marcador exacto y Quinigol, junto a los precios de Polymarket con volumen.
 - **Clasificación**: puntos que harán falta para cada zona, **simulador «¿y si…?»** (fijas resultados y se simula en el navegador), **tabla de la suerte** (puntos frente a xPts de Understat), premios (máximo asistente, Zamora aproximado, equipo más y menos goleado). La proyección incluye la incertidumbre de la fuerza de cada equipo (8 %, medida con 60 proyecciones de 2015 a 2025; el efecto es pequeño).
 - **Equipos**: estilo de juego (presión PPDA, llegadas, ocasiones; agrupado en estilos con k-medias) y Elo de cada temporada desde 2005. **Jugadores**: goles, xG, asistencias, xA, minutos, tarjetas, penaltis y mapa de tiros (tiros de Understat). **Árbitros**: tarjetas, faltas, goles y victorias locales.
-- **Otras ligas** (`leagues.py`): Segunda, Liga F, Premier, Serie A, Bundesliga y Ligue 1 con clasificación, proyección, próximos partidos (mercado + Dixon-Coles; en todas el mercado acierta más que el modelo propio) y seguimiento; Copa del Rey, Liga F y equipos españoles en Europa con el Elo europeo.
+- **Otras ligas** (`leagues.py`): Segunda, Liga F, Premier, Serie A, Bundesliga y Ligue 1 con clasificación, proyección, próximos partidos (con cuotas, solo mercado: en todas acierta más que el Dixon-Coles propio, que queda para partidos sin cuotas y la proyección) y seguimiento; Copa del Rey, Liga F y equipos españoles en Europa con el Elo europeo.
 - **Previas automáticas** de cada partido a partir de los datos (sin inventar nada).
 - **Directo con tiros a puerta**: la probabilidad en directo se ajusta con los tiros a puerta (γ medido con 2.000 partidos de Understat minuto a minuto; aporta poco frente al marcador y el minuto, y así se explica en Aciertos). También para otras ligas.
 - **Quinigol** (`quinigol.py`): los 6 partidos oficiales y lo que juega la gente (marcador público de dataradar.es), boleto del modelo y seguimiento.
@@ -133,17 +133,38 @@ Cada vez que se predice, el bot "apuesta" con las cuotas de **Bet365** (las de f
 - **Favorito**: 10 € al resultado más probable.
 - **Valor**: 10 € solo cuando probabilidad del modelo × cuota ≥ 1,05 (y cuota ≤ 8).
 - **Goles**: 10 € a más/menos de 2,5 cuando esa cuota tiene valor (margen 2 %).
-- **Kelly**: las apuestas de valor, con importe = 1/4 de Kelly sobre un fondo que empieza en 100 € (máximo 5 % del fondo por apuesta).
+- **Mercado recalibrado**: 10 € cuando la probabilidad del mercado recalibrado (ver *Lo que he aprendido*) × cuota ≥ 1,02.
+- **Combinada de favoritos**: una por jornada (viernes-lunes o martes-jueves), 10 € a los hasta 3 favoritos más claros que el modelo da al menos al 60 %. Es la estrategia del **test preregistrado** (abajo).
+
+Se retiraron dos estrategias: **Kelly** (−10,8 % en el backtest; dimensionar con Kelly una ventaja negativa solo pierde más despacio, `kelly_stake()` queda para cuando algo demuestre ventaja) y la **combinada de valor** (9 aciertos en 111 boletos con cuota media 37: con esa varianza no se aprende nada en años).
+
+Las combinadas se ajustan hasta que empieza su primer partido, se dan por perdidas en cuanto falla una selección y se guardan en `predictions/parlays.csv`. En una combinada las probabilidades y el margen de la casa se multiplican, así que, si las selecciones no tienen valor por separado, el boleto pierde más que las apuestas sueltas.
 
 La apuesta se actualiza con la última cuota hasta que empieza el partido, se congela y se liquida **en cuanto termina** (una ejecución cada 30 minutos lo comprueba). Para cada apuesta se guarda la primera cuota a la que la vio el modelo y la de cierre: la métrica **«frente al cierre» (CLV)** dice si el modelo detecta algo antes que el mercado, y con pocas apuestas es mucho más fiable que el beneficio.
 
 La simulación de temporadas pasadas también compara casas: la misma estrategia con la cuota de Bet365, la media del mercado y la mejor cuota disponible (en 2021-2026 el favorito pasa de −1,2 % con Bet365 a +2,6 % con la mejor cuota; Bet365 solo ofrece la mejor cuota en el 8 % de los casos). En cada partido se muestran la mejor cuota y la media.
 
-Todo queda en `predictions/bets.csv` (historial completo), `predictions/bets_summary.json` (balance) y `predictions/betting_backtest.json` (lo que habría pasado en temporadas pasadas). Se configura en `config.yaml → betting`. Resultados en temporadas de prueba (2021-2026): favorito −1,2 % (1.989 apuestas), valor −6,6 % (387), Kelly −10,8 % (369), goles con muy pocas apuestas, porque en goles el modelo apenas añade nada al mercado. **No es un consejo de apuesta**: las casas aciertan algo más que el modelo y cobran margen, así que lo esperable es perder a la larga.
+Cada estrategia muestra el **intervalo de confianza del 95 % de su rentabilidad** (bootstrap por apuestas): si incluye el 0, todavía puede ser suerte.
+
+**Test preregistrado** (`config.yaml → preregistro`, fijado el 31/10/2026 antes de ver datos en directo): combinada de favoritos con 3 selecciones de ≥ 60 %. Cuenta lo apostado desde el 1/11/2026 y se juzga con 60 boletos liquidados (unas dos temporadas): superado si el IC 95 % del ROI queda entero por encima de 0 y el CLV medio es positivo. Si alguien cambia esas reglas, la web marca el test como **invalidado** en vez de dejar reajustarlo hasta que salga bonito.
+
+Todo queda en `predictions/bets.csv` (historial completo), `predictions/bets_summary.json` (balance) y `predictions/betting_backtest.json` (lo que habría pasado en temporadas pasadas). Se configura en `config.yaml → betting`. Resultados en temporadas de prueba (2021-2026): favorito −1,2 % (1.989 apuestas), valor −7,1 % (389, IC −23 % a +9 %), goles con muy pocas apuestas, porque en goles el modelo apenas añade nada al mercado. Mercado recalibrado: +39 % en solo 44 apuestas (IC −23 % a +113 %): no dice nada todavía. Combinada de favoritos (backtest offline del 31/10/2026): +20,9 % en 153 boletos (IC +2 % a +41 %; aciertan el 52 % frente al 43 % que daba el modelo), por el sesgo favorito-sorpresa (los favoritos de ≥ 60 % sueltos dan +6,6 % en 493 apuestas y la combinada lo amplifica); dos de seis temporadas en negativo, así que es una pista, no una prueba: para eso está el test preregistrado. **No es un consejo de apuesta**: las casas aciertan algo más que el modelo y cobran margen, así que lo esperable es perder a la larga.
 
 Para activarla (una vez): *Settings → Pages → Build and deployment → Source:* **GitHub Actions**. Después, *Actions → Web → Run workflow*. Quedará en `https://<tu-usuario>.github.io/laliga-predictor/` (la de este repositorio: https://sergioms02.github.io/laliga-predictor/).
 
 Para verla en local: `python site/build.py && python -m http.server -d site` y abre `http://localhost:8000`.
+
+## Lo que he aprendido
+
+Resumen honesto de lo que dicen los datos (temporadas de prueba 2021/22 a 2026/27, cada partido predicho solo con lo anterior):
+
+1. **El modelo no gana al mercado.** Log-loss 0,982 frente a 0,963 de las cuotas de Bet365 antes del partido y 0,962 del cierre. Añadir árbitro, clima, noticias, viajes o congestión europea mueve el error ±0,001 (ruido); la selección de variables solo se queda con la forma en tiros y el calendario. Las cuotas ya incorporan casi todo lo que un modelo con datos públicos puede saber.
+2. **No hay un rincón donde el modelo sea mejor** (`segments.py`, pestaña Aciertos). En ningún tipo de partido (primeras jornadas, recién ascendidos, tras jugar en Europa, entre semana, parones, derbis, entrenador nuevo) el modelo supera a las cuotas con un intervalo de confianza que no cruce el 0. Lo más cercano son las primeras jornadas (empate técnico). Y cuanto más discrepa el modelo del mercado, peor: con discrepancias de 12 puntos o más, su error es 0,10 mayor. Cuando el modelo «ve algo» que el mercado no, casi siempre es el modelo el que se equivoca.
+3. **El único sesgo que aparece es el favorito-sorpresa.** En todos los tramos, los favoritos ganan algo más de lo que dicen sus cuotas (por ejemplo, 70 % frente al 65 % implícito en el tramo 60-70 %). Apostar a favoritos de ≥ 60 % sueltos da +6,6 % en 493 apuestas, y la combinada de favoritos lo amplifica (+21 %, IC +2 % a +41 %).
+4. **Corregir ese sesgo no basta para ganar a las casas** (`market_recal.py`). Un mercado recalibrado con una regresión logística sobre las propias cuotas mejora el error de 0,9646 a 0,9633, igual que el cierre (0,9639), pero el intervalo de la mejora (−0,0032 a +0,0008) cruza el 0. Es una pista coherente con el punto 3, no una prueba.
+5. **Con apuestas, el beneficio engaña y el CLV y los intervalos no.** 153 boletos parecen muchos, pero el IC de la combinada va de +2 % a +41 % y una sola temporada (+70 %) pesa mucho. Por eso la combinada de favoritos pasa a un test preregistrado con reglas fijadas antes de ver los datos: si en dos temporadas no se sostiene, era suerte.
+
+Conclusión: con datos públicos y gratis se puede igualar casi al mercado, no superarlo. Lo valioso del proyecto no es ganar dinero, sino medir con honestidad: validación walk-forward, calibración, intervalos de confianza y preregistrar las hipótesis antes de comprobarlas.
 
 ## Automatización gratis (GitHub Actions)
 
@@ -275,7 +296,10 @@ src/laliga/
   pipeline.py  backtest walk-forward y tabla de entrenamiento
   predict.py   predicción con toda la información del momento
   movements.py historial de probabilidades y explicación de cambios
+  betting.py       apuestas simuladas, combinadas, IC del ROI y test preregistrado
+  market_recal.py  mercado recalibrado (sesgo favorito-sorpresa), walk-forward
+  segments.py      modelo frente a mercado por tipo de partido
   tune.py · history.py · notify.py · cli.py
-tests/       102 tests, sin red (liga sintética + ejemplos reales de cada fuente)
+tests/       tests sin red (liga sintética + ejemplos reales de cada fuente)
 .github/workflows/  predict · weekly · tests
 ```

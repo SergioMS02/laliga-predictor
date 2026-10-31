@@ -277,7 +277,7 @@ function leaguesHtml() {
   return `<div class="lg-tabs" role="tablist" aria-label="Competición">${codes.map((c) => `<button type="button" role="tab" aria-selected="${c === LG.code}" data-lg="${c}">${esc(L[c].name)}</button>`).join("")}</div>
     <div class="lg-grid"><div>${table}<p class="quiet small">${lg.remaining} partidos por jugar, simulados con el modelo (incertidumbre incluida). ${LG.code === "LF" ? "Liga F: con el Elo femenino calculado con los resultados de ESPN." : ""}</p></div>
     <div><h4>Próximos partidos</h4>${up ? `<ul class="lg-list">${up}</ul>` : '<p class="quiet small">No hay partidos con cuotas publicadas en los próximos días.</p>'}
-    ${ev ? `<p class="quiet small">Medido en la temporada ${ev.season}-${String(ev.season + 1).slice(2)} (${ev.n} partidos, log-loss, menos es mejor): modelo ${dec(ev.modelo, 3)}, mercado ${dec(ev.mercado, 3)}. La probabilidad mezcla ${Math.round(100 * (1 - Math.max(0.1, ev.w_model)))} % mercado y ${Math.round(100 * Math.max(0.1, ev.w_model))} % modelo.</p>` : ""}
+    ${ev ? `<p class="quiet small">Medido en la temporada ${ev.season}-${String(ev.season + 1).slice(2)} (${ev.n} partidos, log-loss, menos es mejor): modelo ${dec(ev.modelo, 3)}, mercado ${dec(ev.mercado, 3)}. Como el mercado acierta más, con cuotas la probabilidad es la del mercado; el modelo solo se usa en partidos sin cuotas y para proyectar la clasificación.</p>` : ""}
     ${tr.n ? `<p class="quiet small">Desde que se sigue: ${tr.n} partidos, acierta el ${pc1(tr.accuracy)} %, log-loss ${dec(tr.log_loss, 3)}.</p>` : ""}</div></div>`;
 }
 function probBar(p) {

@@ -798,7 +798,8 @@ const STRATS = {
   favorito: { title: "Favorito del modelo", short: "Favorito", color: "var(--slip)" },
   valor: { title: "Apuesta de valor", short: "Valor", color: "var(--ink)", dash: true },
   goles: { title: "Más/menos 2,5 goles", short: "Goles", color: "var(--c3)" },
-  kelly: { title: "Kelly (fondo de 100 €)", short: "Kelly", color: "var(--c4)", dash: true },
+  recalibrado: { title: "Mercado recalibrado", short: "Recalibrado", color: "var(--c4)", dash: true },
+  comb_favoritos: { title: "Combinada de favoritos", short: "Comb. favoritos", color: "var(--c5)", parlay: true },
 };
 const pickName = (b) => (b.market === "ou25"
   ? (String(b.pick) === "+2.5" ? "más de 2,5 goles" : "menos de 2,5 goles")
@@ -808,9 +809,7 @@ function stratCard(key, s, live) {
   if (!s) return "";
   const meta = STRATS[key] || { title: key };
   const cls = s.profit > 0 ? "up" : s.profit < 0 ? "down" : "";
-  const big = key === "kelly" && s.bankroll != null
-    ? `<p class="strat__profit ${cls}">${dec(s.bankroll, 2)} €</p><p class="quiet small">de ${dec(s.bankroll_start || 100, 0)} € iniciales (${eur(s.profit)})</p>`
-    : `<p class="strat__profit ${cls}">${s.bets ? eur(s.profit) : "–"}</p>`;
+  const big = `<p class="strat__profit ${cls}">${s.bets ? eur(s.profit) : "–"}</p>`;
   return `<article class="strat" style="--accent:${meta.color}"><h3>${meta.title}</h3>
     <p class="quiet">${esc(s.label)}.</p>
     ${big}
@@ -819,6 +818,8 @@ function stratCard(key, s, live) {
       <div><dt>Acertadas</dt><dd>${s.bets ? `${s.won} <small>(${Math.round((100 * s.won) / s.bets)} %)</small>` : "–"}</dd></div>
       <div><dt>Rentabilidad</dt><dd class="${cls}">${pctSigned(s.roi)}</dd></div>
       <div><dt>Cuota media</dt><dd>${s.avg_odds != null ? dec(s.avg_odds, 2) : "–"}</dd></div>
+      ${s.avg_prob != null ? `<div><dt title="Probabilidad media de acertar el boleto completo según el modelo">Prob. del boleto</dt><dd>${pct(s.avg_prob)} %</dd></div>` : ""}
+      ${s.roi_ci95 ? `<div><dt title="Intervalo de confianza del 95 % de la rentabilidad: si incluye el 0, todavía puede ser suerte">IC 95 %</dt><dd>${pctSigned(s.roi_ci95[0], 0)} a ${pctSigned(s.roi_ci95[1], 0)}</dd></div>` : ""}
       <div><dt title="Cuota a la que lo vio primero frente a la cuota de cierre">Frente al cierre</dt><dd class="${s.clv > 0 ? "up" : s.clv < 0 ? "down" : ""}">${pctSigned(s.clv)}</dd></div>
     </dl></article>`;
 }
@@ -840,13 +841,79 @@ function betRows(list, done) {
         : `<td>${pct(x.prob)} %</td><td class="${x.ev >= 0 ? "up" : "down"}">${x.ev >= 0 ? "+" : ""}${dec(100 * x.ev, 0)} %</td>`}</tr>`;
   }).join("");
 }
+const legTxt = (l) => `${esc(name(l.home))} – ${esc(name(l.away))}: ${esc(pickName({ ...l, market: "1x2" }))} a ${dec(l.odds, 2)}${l.score ? ` <b class="${l.won ? "up" : "down"}">${esc(l.score)}</b>` : ""}`;
+function parlayRows(list, done) {
+  return list.map((x) => {
+    const meta = STRATS[x.strategy] || { short: x.strategy };
+    const when = new Date(x.slot).toLocaleDateString("es-ES", { day: "numeric", month: "short" });
+    const legs = (x.legs || []).map((l) => `<li>${legTxt(l)}</li>`).join("");
+    return `<tr><th scope="row" class="l">Jornada del ${esc(when)}<ul class="legs">${legs}</ul></th>
+      <td><span class="tag" style="--accent:${meta.color}">${meta.short}</span></td>
+      <td>${dec(x.odds, 2)}</td><td>${pct(x.prob)} %</td><td>${dec(x.stake, 0)} €</td>
+      ${done ? `<td class="${x.profit > 0 ? "up" : "down"}">${eur(x.profit)}</td>` : `<td class="${x.ev >= 0 ? "up" : "down"}">${x.ev >= 0 ? "+" : ""}${dec(100 * x.ev, 0)} %</td>`}</tr>`;
+  }).join("");
+}
+function parlaysHtml(b) {
+  const keep = (x) => BET_FILTER === "todas" || x.strategy === BET_FILTER;
+  const ps = (b.parlays || []).filter(keep);
+  if (!ps.length) return "";
+  const open = ps.filter((x) => x.status === "pendiente"), done = ps.filter((x) => x.status !== "pendiente");
+  const head = (last) => `<thead><tr><th scope="col" class="l">Selecciones</th><th scope="col">Estrategia</th><th scope="col">Cuota</th><th scope="col">Prob. del modelo</th><th scope="col">Importe</th><th scope="col">${last}</th></tr></thead>`;
+  return `<h4>Combinadas</h4>
+    ${open.length ? `<div class="tbl-wrap"><table class="track">${head("Valor esperado")}<tbody>${parlayRows(open, false)}</tbody></table></div>` : ""}
+    ${done.length ? `<div class="tbl-wrap"><table class="track">${head("Ganancia")}<tbody>${parlayRows(done.slice(0, LIMIT), true)}</tbody></table></div>` : ""}`;
+}
+function preregHtml(pr) {
+  if (!pr) return "";
+  const lab = { "en curso": "En curso", superado: "Superado", "no superado": "No superado", invalidado: "Invalidado" };
+  const cls = pr.estado === "superado" ? "up" : pr.estado === "en curso" ? "" : "down";
+  const ci = pr.roi_ci95 ? `${pctSigned(pr.roi_ci95[0], 0)} a ${pctSigned(pr.roi_ci95[1], 0)}` : "–";
+  const reglas = Object.entries(pr.reglas || {}).map(([k, v]) => `${esc(k)} = ${esc(String(v))}`).join(", ");
+  return `<article class="prereg"><h3>Test preregistrado: ${esc((STRATS[pr.estrategia] || {}).title || pr.estrategia)} <span class="prereg__state ${cls}">${lab[pr.estado] || esc(pr.estado)}</span></h3>
+    <p class="quiet small">Reglas fijadas antes de ver datos en directo (${esc(reglas)}); cuenta desde el ${esc(pr.desde)}. ${esc(pr.criterio)}</p>
+    <dl class="strat__facts">
+      <div><dt>Boletos</dt><dd>${pr.n} <small>de ${pr.min_apuestas}</small></dd></div>
+      <div><dt>Rentabilidad</dt><dd>${pctSigned(pr.roi)}</dd></div>
+      <div><dt>IC 95 %</dt><dd>${ci}</dd></div>
+      <div><dt>Frente al cierre</dt><dd>${pctSigned(pr.clv)}</dd></div>
+    </dl>
+    ${pr.estado === "invalidado" ? `<p class="down small">Se han cambiado reglas a mitad del test (${esc(pr.reglas_cambiadas.join(", "))}): el resultado ya no vale como prueba.</p>` : ""}</article>`;
+}
+function segmentsHtml() {
+  const sg = DATA.segments || {};
+  if (!sg.segmentos) return '<p class="quiet">Disponible tras el próximo reentrenamiento semanal.</p>';
+  const rows = sg.segmentos.map((x) => `<tr><th scope="row" class="l">${esc(x.segmento)}</th><td>${x.n}</td>
+    <td>${dec(x.modelo, 3)}</td><td>${dec(x.mercado, 3)}</td>
+    <td class="${x.veredicto === "modelo mejor" ? "up" : x.veredicto === "mercado mejor" ? "down" : ""}">${x.diff > 0 ? "+" : ""}${dec(x.diff, 3)} <small>(${dec(x.ci95[0], 3)} a ${dec(x.ci95[1], 3)})</small></td>
+    <td>${esc(x.veredicto)}</td></tr>`).join("");
+  return `<h4>Modelo frente a las cuotas, por tipo de partido</h4>
+    <div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Partidos</th><th scope="col">N</th><th scope="col">Error del modelo</th><th scope="col">Error del mercado</th><th scope="col">Diferencia (IC 95 %)</th><th scope="col">Veredicto</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <p class="quiet small">Error = log-loss (menos es mejor). Diferencia negativa: el modelo acierta más que las cuotas de Bet365 antes del partido. Si el intervalo cruza el 0, ese tipo de partido no dice nada. Cuanto más discrepa el modelo del mercado, más suele equivocarse el modelo.</p>`;
+}
+function recalHtml() {
+  const r = DATA.market_recal || {};
+  if (!r.log_loss) return "";
+  const d = r.diff_vs_mercado || {};
+  const fav = (r.favoritos || []).map((x) => `<tr><th scope="row" class="l">${esc(x.tramo)}</th><td>${x.n}</td><td>${pct(x.cuota_dice)} %</td><td>${pct(x.recalibrado_dice)} %</td><td><b>${pct(x.ganaron)} %</b></td></tr>`).join("");
+  const cc = r.con_cierre;
+  return `<h4>Mercado recalibrado</h4>
+    <p class="quiet small">En vez de intentar ganar a las casas, se corrigen sus sesgos: una regresión logística sobre las probabilidades de las cuotas de Bet365, entrenada solo con las ${r.window} temporadas anteriores a cada temporada de prueba.</p>
+    <dl class="strat__facts">
+      <div><dt>Error de las cuotas</dt><dd>${dec(r.log_loss.mercado, 4)}</dd></div>
+      <div><dt>Error recalibrado</dt><dd>${dec(r.log_loss.recalibrado, 4)}</dd></div>
+      <div><dt>Diferencia (IC 95 %)</dt><dd>${d.mean > 0 ? "+" : ""}${dec(d.mean, 4)} <small>(${dec(d.ci95[0], 4)} a ${dec(d.ci95[1], 4)})</small></dd></div>
+      ${cc ? `<div><dt>Error del cierre</dt><dd>${dec(cc.cierre, 4)}</dd></div>` : ""}
+    </dl>
+    ${fav ? `<div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Favorito según la cuota</th><th scope="col">N</th><th scope="col">La cuota dice</th><th scope="col">Recalibrado dice</th><th scope="col">Ganaron</th></tr></thead><tbody>${fav}</tbody></table></div>` : ""}
+    <p class="quiet small">Si la diferencia es negativa y su intervalo no cruza el 0, las cuotas tienen un sesgo aprovechable. La estrategia «Mercado recalibrado» de la pestaña Apuestas apuesta cuando la cuota paga más de lo que dice este modelo.</p>`;
+}
 function betsHtml() {
   const b = DATA.bets || {};
   const st = b.strategies;
   if (!st) return '<p class="quiet">La cartera empezará a apostar en la próxima actualización, en cuanto haya cuotas de Bet365 para los partidos.</p>';
   const c = b.config || {};
   document.getElementById("bets-note").textContent =
-    `Dinero ficticio: ${c.stake} € por apuesta (Kelly: según la ventaja, sobre un fondo de ${c.kelly_bankroll} €) con las cuotas de Bet365. La apuesta se ajusta a la última cuota hasta que empieza el partido y se liquida al terminar.`;
+    `Dinero ficticio: ${c.stake} € por apuesta con las cuotas de Bet365. La apuesta se ajusta a la última cuota hasta que empieza el partido y se liquida al terminar.`;
   const chart = multiLine(seriesOf(st));
   const bets = b.bets || [];
   const keep = (x) => BET_FILTER === "todas" || x.strategy === BET_FILTER;
@@ -857,9 +924,11 @@ function betsHtml() {
   const openT = open.length ? `<h4>Apuestas abiertas</h4><div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Partido</th><th scope="col">Estrategia</th><th scope="col" class="l">Apuesta</th><th scope="col">Cuota</th><th scope="col">Importe</th><th scope="col">Prob. del modelo</th><th scope="col">Valor esperado</th></tr></thead><tbody>${betRows(BET_ALL.open ? open : open.slice(0, LIMIT), false)}</tbody></table></div>${moreBtn("open", open.length)}` : "";
   const doneT = done.length ? `<h4>Historial</h4><div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Partido</th><th scope="col">Estrategia</th><th scope="col" class="l">Apuesta</th><th scope="col">Cuota</th><th scope="col">Importe</th><th scope="col">Resultado</th><th scope="col">Frente al cierre</th><th scope="col">Ganancia</th></tr></thead><tbody>${betRows(BET_ALL.done ? done : done.slice(0, LIMIT), true)}</tbody></table></div>${moreBtn("done", done.length)}`
     : '<p class="quiet">Aún no hay apuestas liquidadas con este filtro: el balance se actualiza unos minutos después de que acabe cada partido.</p>';
-  return `<div class="strats">${Object.keys(STRATS).map((k) => stratCard(k, st[k], true)).join("")}</div>
+  return `${preregHtml(b.preregistro)}<div class="strats">${Object.keys(STRATS).map((k) => stratCard(k, st[k], true)).join("")}</div>
     ${chart ? `<h4>Beneficio acumulado</h4>${chart}` : ""}
-    ${chips}${openT}${doneT}
+    ${chips}${(STRATS[BET_FILTER] || {}).parlay ? "" : openT + doneT}${parlaysHtml(b)}
+    <details class="explain"><summary>¿Por qué las combinadas pierden más?</summary>
+      <p>Una combinada solo se cobra si aciertan todas las selecciones, así que las probabilidades se multiplican: tres favoritos al 70 % dan un boleto del 34 %. La casa cobra margen en cada selección y en la combinada esos márgenes también se multiplican (con un 5 % por partido, unos tres partidos llevan en torno a un 14 %). Juntar favoritos no crea valor: si cada selección por separado no lo tiene, el boleto tampoco.</p></details>
     <details class="explain"><summary>¿Qué es «frente al cierre»?</summary>
       <p>Compara la cuota a la que el modelo vio la apuesta por primera vez con la cuota final justo antes del partido. Si suele ser positiva, el modelo detecta cosas antes de que el mercado las corrija: es la mejor señal de que tiene ventaja real, y mucho menos ruidosa que el beneficio, que depende de la suerte de cada partido.</p></details>`;
 }
@@ -1113,6 +1182,8 @@ function routeNow() {
     document.getElementById("track").innerHTML = trackHtml();
     document.getElementById("track-props").innerHTML = propsTrackHtml();
     document.getElementById("poly-eval").innerHTML = polyEvalHtml();
+    document.getElementById("segments").innerHTML = segmentsHtml();
+    document.getElementById("recal").innerHTML = recalHtml();
     document.getElementById("measured").innerHTML = EXTRA.measuredHtml();
     document.getElementById("sources").innerHTML = sourcesHtml();
   }
