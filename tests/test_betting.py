@@ -168,3 +168,96 @@ def test_odds_compare_in_backtest(settings):
     oc = res["odds_compare"]["favorito"]
     assert oc["mejor"]["roi"] > oc["bet365"]["roi"]
     assert res["odds_quality"]["b365_is_best"] < 0.5
+
+
+def test_slot_of():
+    # viernes-lunes = mismo fin de semana; martes-jueves = jornada entre semana
+    assert betting.slot_of("2026-10-30") == betting.slot_of("2026-11-02") == "2026-10-30"
+    assert betting.slot_of("2026-11-03") == betting.slot_of("2026-11-05") == "2026-11-03"
+    assert betting.slot_of("2026-11-06") == "2026-11-06"
+
+
+def test_choose_legs():
+    c = betting.cfg(type("S", (), {"raw": {}})())
+    cands = [{"home": "A", "away": "B", "p": [0.70, 0.2, 0.1], "odds": [1.4, 4.5, 8.0]},
+             {"home": "C", "away": "D", "p": [0.15, 0.2, 0.65], "odds": [6.5, 4.5, 1.5]},
+             {"home": "E", "away": "F", "p": [0.45, 0.3, 0.25], "odds": [2.1, 3.3, 3.6]},  # favorito < 60 %
+             {"home": "G", "away": "H", "p": [0.80, 0.15, 0.05], "odds": [1.2, 6.0, 13.0]},
+             {"home": "I", "away": "J", "p": [0.62, 0.2, 0.18], "odds": [1.6, 4.0, 5.0]}]
+    legs = betting.choose_legs(cands, "comb_favoritos", c)
+    assert [x["home"] for x in legs] == ["G", "A", "C"]  # los 3 más probables, cada uno ≥ 60 %
+    # valor: A (0.7*1.4=0.98 no), I (0.62*1.6=0.99 no), E empate 0.3*3.3=0.99 no... solo con valor
+    cands[2]["odds"] = [2.5, 3.3, 3.6]  # 0.45*2.5 = 1.125
+    cands[4]["odds"] = [1.75, 4.0, 5.0]  # 0.62*1.75 = 1.085
+    legs = betting.choose_legs(cands, "comb_valor", c)
+    assert {x["home"] for x in legs} == {"E", "I"}
+    assert betting.choose_legs(cands[:1], "comb_favoritos", c) is None  # una sola selección no es combinada
+
+
+def _wk(home, away, p, b365, ko):
+    return _pred(home=home, away=away, p=p, b365=b365, ko=ko) | {"date": ko[:10]}
+
+
+def test_parlay_lifecycle(settings):
+    preds = [_wk("Barcelona", "Getafe", (0.75, 0.15, 0.10), (1.35, 5.0, 9.0), "2026-10-31T15:00:00+00:00"),
+             _wk("Sevilla", "Real Madrid", (0.15, 0.20, 0.65), (6.0, 4.5, 1.55), "2026-11-01T20:00:00+00:00"),
+             _wk("Betis", "Elche", (0.62, 0.22, 0.16), (1.70, 3.8, 5.0), "2026-11-02T20:00:00+00:00")]
+    t0 = pd.Timestamp("2026-10-30T10:00", tz="UTC")
+    mt = pd.DataFrame([{"season": 2026, "home": p["home"], "away": p["away"], "hg": np.nan, "ag": np.nan}
+                       for p in preds])
+    out = betting.update(settings, mt, preds, now=t0)
+    par = betting.load_parlays(settings).set_index("strategy")
+    fav = par.loc["comb_favoritos"]
+    assert fav.n_legs == 3 and fav.slot == "2026-10-30" and fav.status == "pendiente"
+    assert fav.odds == pytest.approx(1.35 * 1.55 * 1.70, abs=1e-3)
+    assert fav.prob == pytest.approx(0.75 * 0.65 * 0.62, abs=1e-3)
+    assert len(out["parlays_placed"]) >= 1
+    # empieza el primer partido: la combinada queda congelada aunque cambien las cuotas
+    preds2 = [dict(p, b365=[x * 1.1 for x in p["b365"]]) for p in preds]
+    betting.update(settings, mt, preds2, now=pd.Timestamp("2026-10-31T16:00", tz="UTC"))
+    assert betting.load_parlays(settings).set_index("strategy").loc["comb_favoritos", "odds"] == pytest.approx(fav.odds)
+    # el Barça gana: sigue pendiente; el Madrid empata: perdida sin esperar al lunes
+    mt.loc[0, ["hg", "ag"]] = [2, 0]
+    betting.update(settings, mt, [], now=pd.Timestamp("2026-10-31T18:00", tz="UTC"))
+    assert betting.load_parlays(settings).set_index("strategy").loc["comb_favoritos", "status"] == "pendiente"
+    mt.loc[1, ["hg", "ag"]] = [1, 1]
+    out = betting.update(settings, mt, [], now=pd.Timestamp("2026-11-01T22:00", tz="UTC"))
+    r = betting.load_parlays(settings).set_index("strategy").loc["comb_favoritos"]
+    assert r.status == "perdida" and r.profit == -10
+    assert any(x["strategy"] == "comb_favoritos" for x in out["parlays_settled"])
+    s = json.loads((settings.predictions_dir / "bets_summary.json").read_text())
+    assert s["strategies"]["comb_favoritos"]["bets"] == 1 and s["strategies"]["comb_favoritos"]["profit"] == -10
+    assert s["parlays"][0]["legs"][0]["home"]
+    assert "Combinada" in betting.format_parlays(out["parlays_placed"], out["parlays_settled"])
+
+
+def test_parlay_won(settings):
+    preds = [_wk("Barcelona", "Getafe", (0.75, 0.15, 0.10), (1.35, 5.0, 9.0), "2026-10-31T15:00:00+00:00"),
+             _wk("Betis", "Elche", (0.62, 0.22, 0.16), (1.70, 3.8, 5.0), "2026-11-01T20:00:00+00:00")]
+    mt = pd.DataFrame([{"season": 2026, "home": p["home"], "away": p["away"], "hg": np.nan, "ag": np.nan,
+                        "b365c_h": 1.30} for p in preds])
+    betting.update(settings, mt, preds, now=pd.Timestamp("2026-10-30T10:00", tz="UTC"))
+    mt[["hg", "ag"]] = [[3, 0], [2, 1]]
+    betting.update(settings, mt, [], now=pd.Timestamp("2026-11-02T10:00", tz="UTC"))
+    r = betting.load_parlays(settings).set_index("strategy").loc["comb_favoritos"]
+    assert r.status == "ganada" and r.profit == pytest.approx(10 * (1.35 * 1.70 - 1), abs=0.02)
+    assert r.clv == pytest.approx(1.35 * 1.70 / (1.30 * 1.30) - 1, abs=1e-3)
+
+
+def test_parlay_backtest_loses_with_margin(settings):
+    rng = np.random.default_rng(3)
+    n = 4000
+    p = rng.dirichlet([6, 3, 3], n)
+    y = np.array([rng.choice(3, p=pp) for pp in p])
+    odds = 0.95 / p
+    m = pd.DataFrame({"season": 2024, "date": pd.date_range("2022-08-05", periods=n, freq="8h"),
+                      "home": [f"H{i}" for i in range(n)], "away": "B", "hg": 1.0, "ag": 0.0,
+                      "b365_h": odds[:, 0], "b365_d": odds[:, 1], "b365_a": odds[:, 2]})
+    pd.DataFrame({"season": m.season, "y": y, "stacker_H": p[:, 0], "stacker_D": p[:, 1], "stacker_A": p[:, 2]},
+                 index=m.index).to_csv(settings.processed_dir / "backtest_predictions.csv")
+    res = betting.backtest_strategies(settings, m)
+    cf = res["strategies"]["comb_favoritos"]
+    single = res["strategies"]["favorito"]
+    assert cf["bets"] > 50 and cf["roi"] < 0
+    assert cf["hit_rate"] == pytest.approx(cf["avg_prob"], abs=0.08)  # probabilidades bien calibradas
+    assert cf["roi"] < single["roi"]  # el margen se multiplica: la combinada pierde más

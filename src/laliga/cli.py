@@ -49,7 +49,8 @@ def _bets(s, matches, preds, send: bool = False) -> dict | None:
         log.warning("No se pudo actualizar la cartera simulada: %s", e)
         return None
     txt = "\n\n".join(t for t in (betting.format_placed(r["placed"]),
-                                    betting.format_settled(r["settled"], betting.summarize(r["ledger"], betting.cfg(s))))
+                                    betting.format_settled(r["settled"], betting.summarize(r["ledger"], betting.cfg(s))),
+                                    betting.format_parlays(r.get("parlays_placed", []), r.get("parlays_settled", [])))
                        if t)
     if txt:
         print(txt)

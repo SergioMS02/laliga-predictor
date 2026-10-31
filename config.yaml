@@ -94,6 +94,9 @@ betting:
   kelly_bankroll: 100       # estrategia "kelly": fondo inicial
   kelly_fraction: 0.25      # fracción de Kelly (1/4: prudente)
   kelly_max_frac: 0.05      # nunca más del 5 % del fondo en una apuesta
+  parlay_legs: 3            # combinadas: máximo de selecciones por boleto (una por jornada y estrategia)
+  parlay_min_legs: 2
+  parlay_min_leg_prob: 0.6  # combinada de favoritos: cada selección con al menos un 60 % según el modelo
 
 polymarket:                 # precios de Polymarket (solo lectura; el proyecto no opera allí)
   enabled: true

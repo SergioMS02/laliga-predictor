@@ -31,6 +31,7 @@
   --focus: #1F5FD6;
   --c3: #0F8A7E;
   --c4: #B7791F;
+  --c5: #7A4FC4;
   --radius-sheet: 6px;
   --shadow-sheet: 0 1px 0 rgba(27, 35, 64, 0.06), 0 12px 30px -18px rgba(27, 35, 64, 0.35);
   --font-cond: "Barlow Condensed", "Arial Narrow", sans-serif;
@@ -54,6 +55,7 @@
     --focus: #7EA8FF;
     --c3: #3CC7B6;
     --c4: #F0B44C;
+    --c5: #B394F2;
     --shadow-sheet: 0 12px 30px -18px rgba(0, 0, 0, 0.8);
     color-scheme: dark;
   }
@@ -62,7 +64,7 @@
   --paper: #12151D; --sheet: #191D28; --ink: #E9EAF1; --ink-soft: #A3A8BC; --slip: #FF5C6A;
   --rule: #4A2A33; --fill: rgba(255, 92, 106, 0.18); --fill-max: rgba(255, 92, 106, 0.32);
   --pencil: #F2F2F2; --up: #48C78E; --down: #FF6B78; --focus: #7EA8FF; color-scheme: dark;
-  --c3: #3CC7B6; --c4: #F0B44C; --shadow-sheet: 0 12px 30px -18px rgba(0, 0, 0, 0.8);
+  --c3: #3CC7B6; --c4: #F0B44C; --c5: #B394F2; --shadow-sheet: 0 12px 30px -18px rgba(0, 0, 0, 0.8);
 }
 :root[data-theme="light"] { color-scheme: light; }
 
@@ -928,3 +930,7 @@ button:not(:disabled):active, .more:active { transform: scale(0.97); }
 .track.qg th.l { min-width: 0; }
 @media (max-width: 760px) { .track.qg td.l.small { max-width: 96px; } .track.qg td, .track.qg th { padding: 6px 5px; } .track.qg small { display: none; } }
 .sources li.standby span:first-child { color: var(--ink-soft); }
+
+/* Combinadas: selecciones del boleto */
+.legs { margin: 0.3rem 0 0; padding-left: 1.1rem; font-weight: 400; font-size: 0.9em; color: var(--ink-soft); }
+.legs li { margin: 0.1rem 0; }
