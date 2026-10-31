@@ -1,6 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-10-31 12:25 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-10-31 19:33 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Levante – Ath Madrid (2026-10-31)
 
@@ -58,7 +58,7 @@ Actualizado: 2026-10-31 12:25 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Barcelona – Alaves (2026-10-31)
 
-1 ███▇▇█▇█▇▇▇███ · X ▁▁▁▁▁▁▁▁▁▁▁▁▁▁ · 2 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+1 ███▇▇█▇█▇▇▇████ · X ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ · 2 ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -76,6 +76,7 @@ Actualizado: 2026-10-31 12:25 UTC. Umbral de cambio importante: 4 puntos.
 | 28/10 13:51 | 88% | 9% | 3% |  |
 | 29/10 13:58 | 89% | 8% | 4% |  |
 | 30/10 13:52 | 88% | 7% | 4% |  |
+| 31/10 20:33 | 90% | 6% | 4% | ✅ |
 
 **Cambios importantes**
 

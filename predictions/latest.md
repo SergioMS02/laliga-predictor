@@ -7,7 +7,7 @@ Generado: 2026-10-31 12:25 UTC
 | 31/10 14:00 | Levante – Ath Madrid | 20% | 22% | 58% | ▂▂▂▂▂▂▂▂▂▂ 21→20% ▼ | 1.28–1.79 | 1-1 (11%) | 59% | 61% | ✅ alineaciones |
 | 31/10 16:15 | Vallecano – Celta | 43% | 30% | 27% | ▄▄▄▄▄▄▄▄▄▄▄▄ 48→43% ▼ | 1.22–1.13 | 1-1 (14%) | 42% | 48% | 🚑 Marash Kumbulla, Luiz Felipe, Augusto Batalla, Pathé Ciss, Carl Starfelt, Borja Iglesias |
 | 31/10 18:30 | Betis – Malaga | 75% | 15% | 10% | ▇▆▆▆▆▆▆▇▇▇▇ 77→75% ▼ | 2.41–0.70 | 2-0 (13%) | 60% | 46% | 🚑 Cucho Hernández, Junior Firpo, Facundo Bernal, Joaquín Muñoz, Julen Lobete, Aarón Ochoa |
-| 31/10 21:00 | Barcelona – Alaves | 89% | 7% | 4% | ▇▇█▇█▇▇▇████ 89→89% = | 3.00–0.88 | 3-0 (9%) | 74% | 56% | 🚑 Xavi Espart, Andreas Christensen, Roony Bardghji, Dani Olmo, Jules Koundé, Eric García |
+| 31/10 21:00 | Barcelona – Alaves | 90% | 6% | 4% | ▇▇█▇█▇▇▇████ 89→90% ▲ | 3.19–0.85 | 3-0 (10%) | 77% | 55% | ✅ alineaciones |
 | 01/11 14:00 | Getafe – Sevilla | 31% | 35% | 35% | ▄▄▃▃▃▃▃▃▃▃▃ 39→31% ▼ | 1.03–1.01 | 1-1 (14%) | 33% | 41% | 🚑 Juanmi Jiménez, Christantus Uche, Zaid Romero, Johan Mojica, Mario Martín, Marcão |
 | 01/11 16:15 | Santander – Real Madrid | 12% | 13% | 75% | ▁▁▁▁▁▁▁▁▁▁▁▁ 10→12% ▲ | 1.11–3.10 | 1-3 (8%) | 79% | 64% | 🚑 Andrés Martín, Jorge Salinas, Raúl Asencio, Rodrygo Goes, Federico Valverde?, Vinícius Júnior |
 | 01/11 18:30 | Elche – Valencia | 46% | 29% | 25% | ▅▅▅▅▅▅▅▅▅▅▄▄ 48→46% ▼ | 1.61–1.04 | 1-1 (12%) | 49% | 52% | 🚑 Marc Aguado, Pedro Bigas?, Sergi Canós, Diego López, Kayne Van Oevelen, David Otorbi |
