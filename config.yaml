@@ -91,12 +91,21 @@ betting:
   max_odds: 8.0             # no apostar a cuotas mayores
   min_prob: 0.0
   ou_min_edge: 0.02         # estrategia "goles" (más/menos 2,5): margen mínimo
-  kelly_bankroll: 100       # estrategia "kelly": fondo inicial
-  kelly_fraction: 0.25      # fracción de Kelly (1/4: prudente)
-  kelly_max_frac: 0.05      # nunca más del 5 % del fondo en una apuesta
+  recal_min_edge: 0.02      # estrategia "recalibrado": probabilidad recalibrada × cuota ≥ 1,02
   parlay_legs: 3            # combinadas: máximo de selecciones por boleto (una por jornada y estrategia)
   parlay_min_legs: 2
   parlay_min_leg_prob: 0.6  # combinada de favoritos: cada selección con al menos un 60 % según el modelo
+
+# Test preregistrado (fijado el 31/10/2026, antes de ver datos en directo). No tocar las reglas:
+# si cambian, la web marca el test como invalidado. Solo cuenta lo apostado desde "desde".
+preregistro:
+  estrategia: comb_favoritos
+  desde: "2026-11-01"
+  min_apuestas: 60          # boletos liquidados antes de juzgar (unas dos temporadas)
+  reglas:                   # deben coincidir con betting:
+    parlay_legs: 3
+    parlay_min_leg_prob: 0.6
+  criterio: "Superado si, con al menos 60 boletos, el IC 95 % del ROI queda entero por encima de 0 y el CLV medio es positivo."
 
 polymarket:                 # precios de Polymarket (solo lectura; el proyecto no opera allí)
   enabled: true

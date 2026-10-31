@@ -299,6 +299,16 @@ def backtest(settings: Settings, matches: pd.DataFrame, with_weather: bool = Fal
     (settings.processed_dir / "backtest.json").write_text(json.dumps(report, indent=2, ensure_ascii=False))
     pd.DataFrame({"season": seasons, "y": y, **{f"{k}_{c}": P[k][:, i] for k in P for i, c in enumerate("HDA")}},
                  index=idx).to_csv(settings.processed_dir / "backtest_predictions.csv")
+    try:  # mercado recalibrado (antes de las apuestas: la estrategia «recalibrado» usa sus probabilidades)
+        from . import market_recal
+        market_recal.run(settings, matches)
+    except Exception as e:
+        log.warning("Mercado recalibrado no disponible: %s", e)
+    try:  # ¿dónde discrepa el modelo del mercado y quién acierta?
+        from . import segments
+        segments.run(settings, matches)
+    except Exception as e:
+        log.warning("Análisis por segmentos no disponible: %s", e)
     try:
         from . import betting
         betting.backtest_strategies(settings, matches)

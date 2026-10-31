@@ -78,6 +78,8 @@ def main() -> None:
         "sources": read_json(PRED / "sources.json", {}),
         "bets": read_json(PRED / "bets_summary.json", {}),
         "bets_backtest": read_json(PRED / "betting_backtest.json", {}),
+        "segments": read_json(PRED / "segments.json", {}),
+        "market_recal": read_json(PRED / "market_recal.json", {}),
         "quiniela": read_json(PRED / "quiniela.json", {}),
         "prematch": read_json(PRED / "prematch.json", {}),
         "props_eval": read_json(PRED / "props_eval.json", {}),

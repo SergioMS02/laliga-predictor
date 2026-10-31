@@ -2,8 +2,9 @@
 y partidos de Copa del Rey, Champions, Europa League, Conference y Liga F (Elo europeo).
 
 Para cada liga: clasificación, proyección de la temporada (los partidos que faltan son los cruces de
-ida y vuelta aún no jugados), predicción de los próximos partidos y su seguimiento. La mezcla entre
-el modelo y el mercado se mide con la última temporada completa de cada liga (`evaluate`).
+ida y vuelta aún no jugados), predicción de los próximos partidos y su seguimiento. Con cuotas, la
+probabilidad es la del mercado: el modelo propio no lo mejora en ninguna liga (`evaluate`, que se sigue
+midiendo con la última temporada completa). El Dixon-Coles se usa sin cuotas y para proyectar la temporada.
 
 Escribe predictions/leagues.json.
 """
@@ -352,7 +353,10 @@ def build(settings: Settings, online: bool = True, with_eval: bool = False) -> d
                     evals[code] = evaluate(settings, m, cur - 1)
                 except Exception as e:
                     log.warning("Evaluación %s: %s", code, e)
-            w = max(0.1, (evals.get(code) or {}).get("w_model", 0.2))  # como en LaLiga, mínimo 10 % de modelo
+            # En todas las ligas el mercado acierta más que el Dixon-Coles propio (evaluate: el peso óptimo
+            # del modelo sale 0-0,1, dentro del ruido). Con cuotas se usa solo el mercado; el modelo queda para
+            # los partidos sin cuotas, la proyección de la temporada y los goles esperados.
+            w = 0.0
             preds = upcoming(settings, m, cur, w)
             track = update_log(settings, code, preds, m)
             out["leagues"][code] = {"name": meta["name"], "espn": meta["espn"], **project(settings, m, cur, meta["zones"]),

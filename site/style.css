@@ -934,3 +934,6 @@ button:not(:disabled):active, .more:active { transform: scale(0.97); }
 /* Combinadas: selecciones del boleto */
 .legs { margin: 0.3rem 0 0; padding-left: 1.1rem; font-weight: 400; font-size: 0.9em; color: var(--ink-soft); }
 .legs li { margin: 0.1rem 0; }
+.prereg { border: 1px solid var(--rule); border-left: 4px solid var(--c5); border-radius: var(--radius-sheet); padding: 0.8rem 1rem; margin: 0 0 1rem; background: var(--sheet); }
+.prereg h3 { margin: 0 0 0.3rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
+.prereg__state { font-size: 0.8em; padding: 0.05rem 0.5rem; border-radius: 999px; border: 1px solid currentColor; }

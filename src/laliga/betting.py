@@ -4,8 +4,12 @@ Estrategias:
   favorito  10 € al resultado más probable según el modelo (rellenar la quiniela)
   valor     10 € solo si probabilidad del modelo × cuota ≥ 1 + margen mínimo
   goles     10 € a más/menos de 2,5 goles cuando esa cuota tiene valor
-  kelly     las mismas apuestas que "valor", pero el importe depende de la ventaja
-            (fracción de Kelly) sobre un fondo que empieza en 100 €
+  comb_favoritos  una combinada por jornada con los favoritos más claros (ver más abajo)
+  recalibrado     10 € cuando la probabilidad del mercado recalibrado (market_recal.py) × cuota
+                  supera 1 + margen mínimo: busca el sesgo favorito-sorpresa de las casas
+
+kelly_stake() se conserva para cuando una estrategia demuestre ventaja: con ventaja negativa,
+apostar según Kelly solo sirve para perder más despacio.
 
 Cada apuesta queda "colocada" con la última cuota de Bet365 vista antes del partido y se
 liquida cuando hay resultado. También se guarda la primera cuota a la que el modelo la vio
@@ -36,8 +40,7 @@ STRATEGIES = {
     "favorito": {"label": "Al resultado más probable de cada partido", "market": "1x2"},
     "valor": {"label": "Solo cuando la cuota paga más de lo que dice el modelo", "market": "1x2"},
     "goles": {"label": "Más o menos de 2,5 goles cuando esa cuota tiene valor", "market": "ou25"},
-    "kelly": {"label": "Las apuestas de valor, con importe según la ventaja (Kelly) sobre un fondo de 100 €",
-              "market": "1x2"},
+    "recalibrado": {"label": "Solo cuando la cuota paga más de lo que dice el mercado recalibrado", "market": "1x2"},
 }
 LEDGER_COLS = ["strategy", "market", "season", "date", "kickoff_utc", "home", "away", "pick", "prob", "odds",
                "odds_first", "odds_close", "close_src", "clv", "ev", "stake", "placed_at", "status", "score",
@@ -50,9 +53,20 @@ OU_BLEND_DEFAULT = {"a_model": 0.2, "a_market": 0.8, "b": 0.0, "n": 0}
 def cfg(settings: Settings) -> dict:
     c = {"stake": 10.0, "min_edge": 0.05, "max_odds": 8.0, "min_prob": 0.0, "ou_min_edge": 0.02,
          "kelly_bankroll": 100.0, "kelly_fraction": 0.25, "kelly_max_frac": 0.05, "kelly_min_stake": 0.5}
-    c.update({"parlay_legs": 3, "parlay_min_legs": 2, "parlay_min_leg_prob": 0.6})
+    c.update({"recal_min_edge": 0.02, "parlay_legs": 3, "parlay_min_legs": 2, "parlay_min_leg_prob": 0.6})
     c.update(getattr(settings, "raw", {}).get("betting", {}) or {})
     return c
+
+
+def roi_ci(stakes, profits, n_boot: int = 4000, seed: int = 0) -> list[float] | None:
+    """IC 95 % del ROI remuestreando apuestas (bootstrap). Con pocas apuestas es muy ancho, y es la idea."""
+    st, pr = np.asarray(stakes, float), np.asarray(profits, float)
+    if len(st) < 5 or st.sum() <= 0:
+        return None
+    rng = np.random.default_rng(seed)
+    idx = rng.integers(0, len(st), (n_boot, len(st)))
+    bs = pr[idx].sum(1) / st[idx].sum(1)
+    return [round(float(np.percentile(bs, 2.5)), 4), round(float(np.percentile(bs, 97.5)), 4)]
 
 
 def _clean(odds) -> np.ndarray:
@@ -69,8 +83,8 @@ def decide(p, odds, strategy: str, c: dict):
     if strategy == "favorito":
         i = int(np.argmax(p))
         return i, float(o[i]), float(ev[i])
-    if strategy in ("valor", "kelly", "goles"):
-        edge = c["ou_min_edge"] if strategy == "goles" else c["min_edge"]
+    if strategy in ("valor", "recalibrado", "goles"):
+        edge = {"goles": c["ou_min_edge"], "recalibrado": c.get("recal_min_edge", 0.02)}.get(strategy, c["min_edge"])
         ok = (ev >= edge) & (o <= c["max_odds"]) & (p >= c["min_prob"])
         if not ok.any():
             return None
@@ -153,7 +167,10 @@ def load_ledger(settings: Settings) -> pd.DataFrame:
     return _typed(pd.read_csv(p, dtype={"pick": str, "score": str}))
 
 
-def _market_inputs(p: dict, market: str):
+def _market_inputs(p: dict, market: str, strategy: str = ""):
+    if strategy == "recalibrado":
+        r = p.get("market_recal")
+        return (list(r), p.get("b365")) if r else (None, None)
     if market == "1x2":
         return [p["p_home"], p["p_draw"], p["p_away"]], p.get("b365")
     ou = p.get("ou") or {}
@@ -163,11 +180,6 @@ def _market_inputs(p: dict, market: str):
     if po is None:
         return None, None
     return [po, 1 - po], p.get("b365_ou")
-
-
-def bankroll(led: pd.DataFrame, c: dict) -> float:
-    k = led[(led.strategy == "kelly") & led.status.isin(["ganada", "perdida"])]
-    return float(c["kelly_bankroll"] + k.profit.sum())
 
 
 def _closing(m: pd.Series, market: str, pick: str) -> float:
@@ -194,7 +206,12 @@ def update(settings: Settings, matches: pd.DataFrame, preds: list[dict], now: pd
         now = now.tz_localize("UTC")
     stamp = now.isoformat(timespec="minutes")
     led = load_ledger(settings)
-    bank = bankroll(led, c)
+    from . import market_recal
+    rm = market_recal.load_model(settings)
+    for p in preds:
+        if p.get("market_recal") is None:
+            p["market_recal"] = market_recal.recal_from_odds(rm, p.get("b365"))
+    led = led[led.strategy.isin(list(STRATEGIES)) | (led.status != "pendiente")]  # estrategias retiradas
     rows, placed = [], []
     # 1) colocar o actualizar (hasta el inicio del partido)
     for p in preds:
@@ -207,16 +224,14 @@ def update(settings: Settings, matches: pd.DataFrame, preds: list[dict], now: pd
             if (mask & (led.status != "pendiente")).any():
                 continue
             prev = led[mask & (led.status == "pendiente")]
-            probs, odds = _market_inputs(p, mk)
+            probs, odds = _market_inputs(p, mk, strat)
             d = decide(probs, odds, strat, c) if probs is not None and odds else None
             led = led[~(mask & (led.status == "pendiente"))]  # se sustituye (o se retira si ya no hay apuesta)
             if d is None:
                 continue
             i, o, ev = d
             pick = (OUT if mk == "1x2" else OU_OUT)[i]
-            stake = kelly_stake(probs[i], o, bank, c) if strat == "kelly" else float(c["stake"])
-            if stake <= 0:
-                continue
+            stake = float(c["stake"])
             same = len(prev) > 0 and str(prev.pick.iloc[0]) == pick
             first = float(prev.odds_first.iloc[0]) if same and np.isfinite(prev.odds_first.iloc[0]) else o
             row = {"strategy": strat, "market": mk, "season": p["season"], "date": p["date"],
@@ -290,14 +305,12 @@ def summarize(led: pd.DataFrame, c: dict) -> dict:
             "label": meta["label"], "market": meta["market"], "bets": int(len(done)),
             "won": int((done.status == "ganada").sum()), "staked": round(staked, 2), "profit": round(profit, 2),
             "roi": round(profit / staked, 4) if staked else None,
+            "roi_ci95": roi_ci(done.stake, done.profit),
             "avg_odds": round(float(done.odds.mean()), 2) if len(done) else None,
             "pending": int((d.status == "pendiente").sum()), "curve": _curve(done),
             "clv": round(float(clv.mean()), 4) if len(clv) else None,
             "beat_close": round(float((clv > 0).mean()), 3) if len(clv) else None,
         }
-        if strat == "kelly":
-            s["bankroll_start"] = float(c["kelly_bankroll"])
-            s["bankroll"] = round(float(c["kelly_bankroll"]) + profit, 2)
         out[strat] = s
     return out
 
@@ -307,12 +320,13 @@ def write_summary(settings: Settings, led: pd.DataFrame, parlays: pd.DataFrame |
     s = summarize(led, c)
     parlays = load_parlays(settings) if parlays is None else parlays
     s.update(summarize_parlays(parlays))
-    recent = led.sort_values(["date", "home"], ascending=False).head(300)
-    rp = parlays.sort_values("slot", ascending=False).head(100).copy()
+    recent = led[led.strategy.isin(list(STRATEGIES))].sort_values(["date", "home"], ascending=False).head(300)
+    rp = parlays[parlays.strategy.isin(list(PARLAYS))].sort_values("slot", ascending=False).head(100).copy()
     rp["legs"] = [json.loads(x) for x in rp.legs]
     out = {"updated": datetime.now(timezone.utc).isoformat(timespec="minutes"), "config": c,
            "strategies": s, "bets": json.loads(recent.to_json(orient="records", force_ascii=False)),
-           "parlays": json.loads(rp.to_json(orient="records", force_ascii=False))}
+           "parlays": json.loads(rp.to_json(orient="records", force_ascii=False)),
+           "preregistro": preregistration(settings, parlays, led)}
     (settings.predictions_dir / "bets_summary.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
     return out
 
@@ -349,7 +363,6 @@ def format_placed(placed: list[dict]) -> str:
 PARLAYS = {
     "comb_favoritos": {"label": "Combinada de los favoritos más claros de la jornada (cada uno con al menos "
                                 "un 60 % según el modelo)"},
-    "comb_valor": {"label": "Combinada de las selecciones con valor de la jornada"},
 }
 PARLAY_COLS = ["strategy", "season", "slot", "legs", "n_legs", "prob", "odds", "odds_first", "odds_close", "clv",
                "ev", "stake", "kickoff_first", "placed_at", "status", "score", "profit", "settled_at"]
@@ -382,17 +395,12 @@ def choose_legs(cands: list[dict], strategy: str, c: dict) -> list[dict] | None:
             d = decide(m["p"], m["odds"], "favorito", c)
             if d is None or m["p"][d[0]] < c["parlay_min_leg_prob"]:
                 continue
-        elif strategy == "comb_valor":
-            d = decide(m["p"], m["odds"], "valor", c)
-            if d is None:
-                continue
         else:
             raise ValueError(strategy)
         i, o, ev = d
         legs.append({**{k: v for k, v in m.items() if k not in ("p", "odds")},
                      "pick": OUT[i], "prob": round(float(m["p"][i]), 4), "odds": float(o), "ev": round(ev, 4)})
-    key = "prob" if strategy == "comb_favoritos" else "ev"
-    legs = sorted(legs, key=lambda x: -x[key])[: int(c["parlay_legs"])]
+    legs = sorted(legs, key=lambda x: -x["prob"])[: int(c["parlay_legs"])]
     return legs if len(legs) >= int(c["parlay_min_legs"]) else None
 
 
@@ -501,6 +509,41 @@ def update_parlays(settings: Settings, matches: pd.DataFrame, preds: list[dict],
     return {"parlays": led, "placed": placed, "settled": settled}
 
 
+def preregistration(settings: Settings, parlays: pd.DataFrame, singles: pd.DataFrame | None = None) -> dict | None:
+    """Test preregistrado: reglas fijadas en config.yaml → preregistro ANTES de ver los datos en directo.
+
+    Solo cuentan los boletos/apuestas colocados desde la fecha de inicio. Si alguien cambia el umbral
+    después, el test queda invalidado (en vez de reajustarlo hasta que salga bonito)."""
+    pr = getattr(settings, "raw", {}).get("preregistro") or {}
+    if not pr:
+        return None
+    c = cfg(settings)
+    strat, since = pr.get("estrategia", "comb_favoritos"), str(pr.get("desde", "2026-11-01"))
+    if strat in PARLAYS:
+        d = parlays[(parlays.strategy == strat) & parlays.status.isin(["ganada", "perdida"])]
+        d = d[d.slot.astype(str) >= since]
+    else:
+        d = singles if singles is not None else pd.DataFrame(columns=LEDGER_COLS)
+        d = d[(d.strategy == strat) & d.status.isin(["ganada", "perdida"]) & (d.date.astype(str) >= since)]
+    n, need = int(len(d)), int(pr.get("min_apuestas", 60))
+    staked = float(d.stake.sum())
+    ci = roi_ci(d.stake, d.profit)
+    clv = d.clv.dropna()
+    changed = [k for k, v in (pr.get("reglas") or {}).items() if k in c and float(c[k]) != float(v)]
+    out = {"estrategia": strat, "desde": since, "min_apuestas": need, "reglas": pr.get("reglas") or {},
+           "criterio": pr.get("criterio", ""), "n": n,
+           "roi": round(float(d.profit.sum()) / staked, 4) if staked else None, "roi_ci95": ci,
+           "clv": round(float(clv.mean()), 4) if len(clv) else None, "reglas_cambiadas": changed}
+    if changed:
+        out["estado"] = "invalidado"
+    elif n < need:
+        out["estado"] = "en curso"
+    else:
+        ok = ci is not None and ci[0] > 0 and out["clv"] is not None and out["clv"] > 0
+        out["estado"] = "superado" if ok else "no superado"
+    return out
+
+
 def summarize_parlays(led: pd.DataFrame) -> dict:
     out = {}
     for strat, meta in PARLAYS.items():
@@ -512,6 +555,7 @@ def summarize_parlays(led: pd.DataFrame) -> dict:
             "label": meta["label"], "market": "combinada", "bets": int(len(done)),
             "won": int((done.status == "ganada").sum()), "staked": round(staked, 2), "profit": round(profit, 2),
             "roi": round(profit / staked, 4) if staked else None,
+            "roi_ci95": roi_ci(done.stake, done.profit),
             "avg_odds": round(float(done.odds.mean()), 2) if len(done) else None,
             "avg_prob": round(float(done.prob.mean()), 4) if len(done) else None,
             "pending": int((d.status == "pendiente").sum()),
@@ -570,6 +614,7 @@ def _strategy_result(rows: list, label: str, extra: dict | None = None) -> dict:
     out = {
         "label": label, "bets": int(len(df)), "won": int(df.won.sum()), "staked": round(staked, 2),
         "profit": round(float(df.profit.sum()), 2), "roi": round(float(df.profit.sum()) / staked, 4) if staked else None,
+        "roi_ci95": roi_ci(df.stake, df.profit),
         "avg_odds": round(float(df.odds.mean()), 2),
         "clv": round(float(df.clv.mean()), 4) if df.clv.notna().any() else None,
         "beat_close": round(float((df.clv.dropna() > 0).mean()), 3) if df.clv.notna().any() else None,
@@ -603,24 +648,26 @@ def backtest_strategies(settings: Settings, matches: pd.DataFrame) -> dict | Non
     seasons = m.season.to_numpy().astype(int)
     dates = m.date.astype(str).str[:10].to_numpy()
     order = np.argsort(dates, kind="stable")
-    for strat in ("favorito", "valor", "kelly"):
-        rows, bank = [], float(c["kelly_bankroll"])
+    rp = settings.processed_dir / "market_recal_oos.csv"
+    recal = np.full_like(probs, np.nan)
+    if rp.exists():
+        r = pd.read_csv(rp, index_col=0).reindex(m.index)
+        recal = r[["recal_H", "recal_D", "recal_A"]].to_numpy(float)
+    for strat in ("favorito", "valor", "recalibrado"):
+        pr = recal if strat == "recalibrado" else probs
+        rows = []
         for k in order:
-            d = decide(probs[k], odds[k], strat, c)
+            d = decide(pr[k], odds[k], strat, c)
             if d is None:
                 continue
             i, o, _ = d
-            stake = kelly_stake(probs[k][i], o, bank, c) if strat == "kelly" else float(c["stake"])
-            if stake <= 0:
-                continue
+            stake = float(c["stake"])
             won = i == y[k]
             prof = stake * (o - 1) if won else -stake
-            bank += prof
             cl = o / close[k][i] - 1 if np.isfinite(close[k][i]) and close[k][i] > 1 else np.nan
             rows.append((seasons[k], dates[k], stake, prof, won, o, cl))
         if rows:
-            extra = {"bankroll_start": c["kelly_bankroll"], "bankroll": round(bank, 2)} if strat == "kelly" else None
-            res["strategies"][strat] = _strategy_result(rows, STRATEGIES[strat]["label"], extra=extra)
+            res["strategies"][strat] = _strategy_result(rows, STRATEGIES[strat]["label"])
     res["strategies"].update(_parlay_backtest(m, probs, odds, close, y, seasons, dates, c))
     # ¿Y si se apostara siempre a la mejor cuota del mercado, o a la media?
     res["odds_compare"] = {}
