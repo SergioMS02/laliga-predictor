@@ -2890,3 +2890,24 @@ season,match_id,date,home,away,side,team,minute,player,assist,situation,shot_typ
 2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,90,Brahim Diaz,Kylian Mbappe-Lottin,OpenPlay,RightFoot,BlockedShot,0.11880550533533096,0.884000015258789,0.5670000076293945
 2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,93,Endrick,Jude Bellingham,OpenPlay,LeftFoot,MissedShots,0.04997585713863373,0.7959999847412109,0.38299999237060545
 2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,95,Kylian Mbappe-Lottin,Endrick,OpenPlay,RightFoot,BlockedShot,0.09587317705154419,0.8819999694824219,0.710999984741211
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,20,Lucas Cepeda,Victor Chust,OpenPlay,RightFoot,ShotOnPost,0.06957437843084335,0.9169999694824219,0.31
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,31,Roy Revivo,Victor Chust,OpenPlay,LeftFoot,SavedShot,0.019660890102386475,0.700999984741211,0.600999984741211
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,32,Facundo Buonanotte,Gonzalo Villar,FromCorner,Head,BlockedShot,0.044908102601766586,0.914000015258789,0.4909999847412109
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,32,Roy Revivo,,FromCorner,LeftFoot,MissedShots,0.10377110540866852,0.9259999847412109,0.519000015258789
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,43,Fernando Niño,,OpenPlay,RightFoot,MissedShots,0.06712737679481506,0.8780000305175781,0.625999984741211
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,50,Lucas Cepeda,Fernando Niño,OpenPlay,LeftFoot,SavedShot,0.05851128324866295,0.85,0.3559999847412109
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,54,Facundo Buonanotte,German Valera,OpenPlay,Head,MissedShots,0.13100537657737732,0.9180000305175782,0.49900001525878906
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,63,German Valera,Roy Revivo,OpenPlay,LeftFoot,MissedShots,0.03246122971177101,0.83,0.695
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,73,Victor Chust,,DirectFreekick,RightFoot,BlockedShot,0.06934738904237747,0.7730000305175782,0.6630000305175782
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,76,Facundo Buonanotte,,DirectFreekick,LeftFoot,BlockedShot,0.07035665959119797,0.745999984741211,0.4909999847412109
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,76,Fernando Niño,Gonzalo Villar,FromCorner,Head,MissedShots,0.0329769141972065,0.9569999694824218,0.37799999237060544
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,88,Fernando Niño,Rubén Sánchez,OpenPlay,Head,MissedShots,0.052326321601867676,0.874000015258789,0.4829999923706055
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,89,Federico Redondo,Gonzalo Villar,OpenPlay,RightFoot,MissedShots,0.01715879701077938,0.7230000305175781,0.37599998474121094
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,92,Matías Dituro,Gonzalo Villar,SetPiece,Head,MissedShots,0.052729833871126175,0.875999984741211,0.500999984741211
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,93,Federico Redondo,Matías Dituro,SetPiece,Head,SavedShot,0.3512957990169525,0.9580000305175781,0.5820000076293945
+2026,30873,2026-11-01,Elche,Valencia,h,Elche,93,Fernando Niño,Rubén Sánchez,SetPiece,RightFoot,MissedShots,0.11684748530387878,0.9230000305175782,0.53
+2026,30873,2026-11-01,Elche,Valencia,a,Valencia,38,Pablo Maffeo,Javier Guerra,OpenPlay,RightFoot,MissedShots,0.06306581199169159,0.8830000305175781,0.2989999961853027
+2026,30873,2026-11-01,Elche,Valencia,a,Valencia,55,César Tárrega,Javier Guerra,FromCorner,Head,MissedShots,0.0664113312959671,0.8980000305175782,0.47099998474121096
+2026,30873,2026-11-01,Elche,Valencia,a,Valencia,64,Umar Sadiq,,OpenPlay,RightFoot,SavedShot,0.017264585942029953,0.7659999847412109,0.3029999923706055
+2026,30873,2026-11-01,Elche,Valencia,a,Valencia,65,Umar Sadiq,Luis Rioja,OpenPlay,RightFoot,SavedShot,0.3024696111679077,0.9830000305175781,0.395
+2026,30873,2026-11-01,Elche,Valencia,a,Valencia,68,Umar Sadiq,Arnaut Danjuma Groeneveld,OpenPlay,LeftFoot,Goal,0.7259610891342163,0.9730000305175781,0.4620000076293945
