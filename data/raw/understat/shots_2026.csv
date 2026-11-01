@@ -2815,3 +2815,23 @@ season,match_id,date,home,away,side,team,minute,player,assist,situation,shot_typ
 2026,30871,2026-10-31,Betis,Malaga,a,Malaga,75,Rafita,Dani Lorenzo,OpenPlay,RightFoot,MissedShots,0.016529953107237816,0.705,0.5629999923706055
 2026,30871,2026-10-31,Betis,Malaga,a,Malaga,84,Chupe,Rafa Rodríguez,OpenPlay,Head,MissedShots,0.24146829545497894,0.8969999694824219,0.4909999847412109
 2026,30871,2026-10-31,Betis,Malaga,a,Malaga,91,Eneko Jauregi,Dani Lorenzo,FromCorner,RightFoot,MissedShots,0.05212664604187012,0.899000015258789,0.575999984741211
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,7,Raphinha,Fermín López,OpenPlay,LeftFoot,Goal,0.6124897003173828,0.9419999694824219,0.4829999923706055
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,13,Fermín López,Karim Adeyemi,OpenPlay,LeftFoot,BlockedShot,0.024676863104104996,0.765,0.67
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,22,Fermín López,Lamine Yamal,OpenPlay,RightFoot,Goal,0.05880780890583992,0.9619999694824218,0.3039999961853027
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,25,Lamine Yamal,Fermín López,OpenPlay,LeftFoot,MissedShots,0.10717297345399857,0.9680000305175781,0.3170000076293945
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,33,Raphinha,Lamine Yamal,OpenPlay,LeftFoot,MissedShots,0.7418652176856995,0.9590000152587891,0.5020000076293946
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,34,Lamine Yamal,Karim Adeyemi,OpenPlay,RightFoot,SavedShot,0.5668197870254517,0.9640000152587891,0.43
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,40,Raphinha,Fermín López,OpenPlay,LeftFoot,Goal,0.4286629855632782,0.840999984741211,0.4129999923706055
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,44,Lamine Yamal,Pau Cubarsí,OpenPlay,LeftFoot,BlockedShot,0.08087775856256485,0.8830000305175781,0.27799999237060546
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,45,Lamine Yamal,João Cancelo,OpenPlay,LeftFoot,Goal,0.038585253059864044,0.7969999694824219,0.38299999237060545
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,49,Lamine Yamal,,SetPiece,LeftFoot,BlockedShot,0.017598457634449005,0.7780000305175782,0.37400001525878906
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,53,Karim Adeyemi,Fermín López,OpenPlay,RightFoot,MissedShots,0.5154030323028564,0.904000015258789,0.545
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,63,Lamine Yamal,Gabriel Jesus,OpenPlay,LeftFoot,Goal,0.4734981060028076,0.860999984741211,0.5690000152587891
+2026,30874,2026-10-31,Barcelona,Alaves,h,Barcelona,80,Anthony Gordon,Rodri,OpenPlay,RightFoot,Goal,0.4134718179702759,0.8830000305175781,0.6270000076293946
+2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,10,Abderrahmane Rebbach,Ángel Pérez,OpenPlay,RightFoot,MissedShots,0.520268440246582,0.875,0.5520000076293945
+2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,11,Ángel Pérez,Antonio Sivera,OpenPlay,RightFoot,SavedShot,0.030343830585479736,0.945,0.29200000762939454
+2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,12,Lucas Boyé,Denis Suárez,FromCorner,Head,BlockedShot,0.06450919061899185,0.899000015258789,0.54
+2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,36,Lucas Boyé,Denis Suárez,OpenPlay,RightFoot,BlockedShot,0.08804400265216827,0.8630000305175781,0.5740000152587891
+2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,36,Carlos Benavídez,Denis Suárez,OpenPlay,RightFoot,SavedShot,0.05612771585583687,0.8140000152587891,0.51
+2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,83,Mariano,,OpenPlay,RightFoot,Goal,0.31695178151130676,0.865999984741211,0.46
+2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,89,Antonio Martínez,Pablo Ibáñez,OpenPlay,RightFoot,BlockedShot,0.05200418084859848,0.879000015258789,0.40900001525878904
