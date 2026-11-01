@@ -1,6 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-01 13:20 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-11-01 16:35 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Santander – Real Madrid (2026-11-01)
 
@@ -32,7 +32,7 @@ Actualizado: 2026-11-01 13:20 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Elche – Valencia (2026-11-01)
 
-1 ▄▅▅▅▅▅▅▅▅▅▅▅▄▄▄ · X ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ · 2 ▃▂▂▂▂▂▂▂▂▂▂▂▃▃▃
+1 ▄▅▅▅▅▅▅▅▅▅▅▅▄▄▄▄ · X ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ · 2 ▃▂▂▂▂▂▂▂▂▂▂▂▃▃▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -51,12 +51,17 @@ Actualizado: 2026-11-01 13:20 UTC. Umbral de cambio importante: 4 puntos.
 | 30/10 13:52 | 46% | 29% | 25% |  |
 | 31/10 13:25 | 46% | 29% | 25% |  |
 | 01/11 14:19 | 46% | 29% | 25% |  |
+| 01/11 17:35 | 41% | 29% | 30% | ✅ |
 
 **Cambios importantes**
 
 - 30/10 13:52 — Elche – Valencia: gana Elche 52% → 46%
   - -3.3 pts · Modelo: cambio de modelo (stacker → stacker_mercado)
   - -2.8 pts · Cuotas de mercado: primeras cuotas disponibles 2.30/3.33/3.01
+- 01/11 17:35 — Elche – Valencia: gana Elche 46% → 41%
+  - -4.7 pts · Precio de Polymarket: empieza a usarse (40 / 29 / 30 %, 90 % del peso)
+  - -0.6 pts · Efecto combinado de varios factores
+  - +0.7 pts · Bajas y alineaciones: alineaciones oficiales publicadas · Elche: no salen de inicio: Marc Aguado, José Antonio Morente; recupera: Marc Aguado, Pedro Bigas; déficit ataque 3%→0%, defensa 6%→3% · Valencia: no salen de inicio: Javier Guerra, Filip Ugrinic, Justin de Haas, Hugo Duro; recupera: Sergi Canós, José Manuel Copete, Diego López, Kayne Van Oevelen, David Otorbi, Harvey Elliott; déficit ataque 12%→21%, defensa 3%→15%
 
 ## Ath Bilbao – Sociedad (2026-11-01)
 

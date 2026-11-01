@@ -5,7 +5,7 @@ Generado: 2026-11-01 13:19 UTC
 | Fecha | Partido | 1 | X | 2 | Evolución 1 | xG | Marcador más probable | +2.5 | Ambos marcan | Info |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 01/11 16:15 | Santander – Real Madrid | 8% | 12% | 80% | ▁▁▁▁▁▁▁▁▁▁▁▁ 10→8% ▼ | 1.13–3.05 | 1-3 (8%) | 79% | 65% | 🚑 Andrés Martín, Jorge Salinas, Raúl Asencio, Federico Valverde, Rodrygo Goes, Ferland Mendy |
-| 01/11 18:30 | Elche – Valencia | 46% | 29% | 25% | ▅▅▅▅▅▅▅▅▅▄▄▄ 48→46% ▼ | 1.61–1.03 | 1-1 (12%) | 49% | 52% | 🚑 Marc Aguado, Pedro Bigas?, Sergi Canós, José Manuel Copete, Diego López, Kayne Van Oevelen |
+| 01/11 18:30 | Elche – Valencia | 41% | 29% | 30% | ▅▅▅▅▅▅▅▅▄▄▄▄ 48→41% ▼ | 1.68–1.01 | 1-1 (12%) | 50% | 52% | ✅ alineaciones |
 | 01/11 21:00 | Ath Bilbao – Sociedad | 49% | 26% | 24% | ▅▅▄▅▅▅▅▄▄▄ 53→49% ▼ | 1.67–1.21 | 1-1 (12%) | 55% | 57% | 🚑 Gorka Guruzeta, Unai Egiluz, Iñigo Ruiz de Galarreta, Álvaro Odriozola, Arsen Zakharyan, Luken Beitia |
 | 02/11 21:00 | La Coruna – Osasuna | 46% | 30% | 24% | ▅▄▅▅▅▄▄▄ 51→46% ▼ | 1.45–1.08 | 1-1 (13%) | 46% | 51% | 🚑 Bright Ede, Marc Casadó?, Pierre-Emerick Aubameyang, Zakaria Eddahchouri?, Jorge Herrando, Aimar Oroz |
 | 06/11 21:00 | Sevilla – Alaves | 48% | 28% | 24% | ▄▄ 46→48% ▲ | 1.57–1.12 | 1-1 (12%) | 50% | 54% | 🚑 Marcão, Miguel Sierra, Facundo Garcés, Mikel Rodriguez |
@@ -28,5 +28,9 @@ Generado: 2026-11-01 13:19 UTC
   - -2.8 pts · Cuotas de mercado: primeras cuotas disponibles 2.30/3.33/3.01
 - 01/11 14:19 — Santander – Real Madrid: gana Santander 12% → 8%
   - -4.2 pts · Precio de Polymarket: empieza a usarse (7 / 11 / 81 %, 90 % del peso)
+- 01/11 17:35 — Elche – Valencia: gana Elche 46% → 41%
+  - -4.7 pts · Precio de Polymarket: empieza a usarse (40 / 29 / 30 %, 90 % del peso)
+  - -0.6 pts · Efecto combinado de varios factores
+  - +0.7 pts · Bajas y alineaciones: alineaciones oficiales publicadas · Elche: no salen de inicio: Marc Aguado, José Antonio Morente; recupera: Marc Aguado, Pedro Bigas; déficit ataque 3%→0%, defensa 6%→3% · Valencia: no salen de inicio: Javier Guerra, Filip Ugrinic, Justin de Haas, Hugo Duro; recupera: Sergi Canós, José Manuel Copete, Diego López, Kayne Van Oevelen, David Otorbi, Harvey Elliott; déficit ataque 12%→21%, defensa 3%→15%
 
 1/X/2 = modelo final (meta-modelo). xG, marcadores, +2.5 y ambos marcan = Dixon-Coles ajustado por bajas. `?` = duda. Evolución 1 = probabilidad de victoria local en cada actualización (detalle en `evolucion.md`).
