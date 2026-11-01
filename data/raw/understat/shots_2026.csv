@@ -2835,3 +2835,58 @@ season,match_id,date,home,away,side,team,minute,player,assist,situation,shot_typ
 2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,36,Carlos Benavídez,Denis Suárez,OpenPlay,RightFoot,SavedShot,0.05612771585583687,0.8140000152587891,0.51
 2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,83,Mariano,,OpenPlay,RightFoot,Goal,0.31695178151130676,0.865999984741211,0.46
 2026,30874,2026-10-31,Barcelona,Alaves,a,Alaves,89,Antonio Martínez,Pablo Ibáñez,OpenPlay,RightFoot,BlockedShot,0.05200418084859848,0.879000015258789,0.40900001525878904
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,4,Sebastián Boselli,Ramón Terrats,SetPiece,Head,MissedShots,0.08810710161924362,0.905,0.5570000076293945
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,51,Sebastián Boselli,Davinchi,SetPiece,LeftFoot,SavedShot,0.050501175224781036,0.8009999847412109,0.47
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,60,Andrés García,Ramón Terrats,OpenPlay,LeftFoot,SavedShot,0.12024058401584625,0.905,0.3629999923706055
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,64,Daniel Carvajal,,OpenPlay,RightFoot,BlockedShot,0.012969261966645718,0.754000015258789,0.3029999923706055
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,67,Enes Ünal,Martín Satriano,OpenPlay,RightFoot,Goal,0.42754560708999634,0.9269999694824219,0.46799999237060547
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,71,Enes Ünal,,DirectFreekick,RightFoot,MissedShots,0.07311378419399261,0.779000015258789,0.664000015258789
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,73,Martín Satriano,Enes Ünal,OpenPlay,RightFoot,Goal,0.49745413661003113,0.9340000152587891,0.4929999923706055
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,82,Martín Satriano,Andrés García,OpenPlay,Head,MissedShots,0.1477838009595871,0.9419999694824219,0.54
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,90,Martín Satriano,Iván Azón,OpenPlay,RightFoot,MissedShots,0.007829048670828342,0.6559999847412109,0.725999984741211
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,91,Nemanja Gudelj,,DirectFreekick,RightFoot,BlockedShot,0.049638278782367706,0.7290000152587891,0.36700000762939455
+2026,30875,2026-11-01,Getafe,Sevilla,h,Getafe,93,Orel Mangala,Andrés García,OpenPlay,RightFoot,Goal,0.10359732061624527,0.845999984741211,0.47299999237060547
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,18,Kike Salas,Felix Correia,FromCorner,Head,Goal,0.04994992911815643,0.89,0.45799999237060546
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,23,Lucas Stassin,Lucien Agoume,OpenPlay,RightFoot,MissedShots,0.054744794964790344,0.8530000305175781,0.659000015258789
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,39,Lucas Stassin,Juan Iglesias,OpenPlay,RightFoot,MissedShots,0.08162437379360199,0.879000015258789,0.4329999923706055
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,40,Chidera Ejuke,Felix Correia,OpenPlay,RightFoot,MissedShots,0.11647944152355194,0.8640000152587891,0.515
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,43,Chidera Ejuke,Andrés Castrín,OpenPlay,RightFoot,SavedShot,0.06604722142219543,0.875,0.3139999961853027
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,46,Gabriel Suazo,,DirectFreekick,LeftFoot,SavedShot,0.05079721659421921,0.74,0.33599998474121096
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,46,Felix Correia,,SetPiece,LeftFoot,MissedShots,0.0588664673268795,0.8909999847412109,0.649000015258789
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,49,Chidera Ejuke,Juan Iglesias,OpenPlay,RightFoot,MissedShots,0.044975314289331436,0.9030000305175782,0.26799999237060546
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,60,Felix Correia,Youssouf Fofana,OpenPlay,RightFoot,SavedShot,0.061575956642627716,0.85,0.715
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,79,Manu Bueno,,OpenPlay,RightFoot,BlockedShot,0.03866903856396675,0.8419999694824218,0.6769999694824219
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,89,Kike Salas,Chidera Ejuke,OpenPlay,Head,MissedShots,0.02590421959757805,0.8969999694824219,0.5570000076293945
+2026,30875,2026-11-01,Getafe,Sevilla,a,Sevilla,95,Kike Salas,Ruben Vargas,OpenPlay,LeftFoot,MissedShots,0.09224962443113327,0.8519999694824218,0.524000015258789
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,12,Iker Luque,,OpenPlay,RightFoot,SavedShot,0.0747900903224945,0.8980000305175782,0.445
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,23,Iker Luque,Iñigo Vicente,OpenPlay,RightFoot,MissedShots,0.055056724697351456,0.9119999694824219,0.69
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,39,Yassir Zabiri,Aarón Martín,OpenPlay,LeftFoot,BlockedShot,0.07106956094503403,0.9359999847412109,0.5970000076293945
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,45,Yassir Zabiri,,OpenPlay,LeftFoot,BlockedShot,0.06092109531164169,0.98,0.6480000305175782
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,52,Yassir Zabiri,Iñigo Vicente,OpenPlay,LeftFoot,MissedShots,0.08402642607688904,0.9669999694824218,0.43
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,54,Iker Luque,Iñigo Vicente,OpenPlay,RightFoot,BlockedShot,0.10163609683513641,0.8980000305175782,0.40400001525878904
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,68,Sergio Canales,Pablo García,OpenPlay,LeftFoot,BlockedShot,0.06847266852855682,0.8119999694824219,0.504000015258789
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,82,Matteo Prati,,OpenPlay,LeftFoot,MissedShots,0.012539763003587723,0.750999984741211,0.624000015258789
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,94,Íñigo Sainz-Maza,Giorgi Guliashvili,OpenPlay,RightFoot,BlockedShot,0.05665479600429535,0.8930000305175781,0.3189999961853027
+2026,30877,2026-11-01,Santander,Real Madrid,h,Santander,94,Pedro Felipe,André Almeida,OpenPlay,Head,BlockedShot,0.10334372520446777,0.9490000152587891,0.49599998474121093
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,6,Arda Güler,Yan Diomande,OpenPlay,LeftFoot,BlockedShot,0.07009343057870865,0.8780000305175781,0.6580000305175782
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,6,Arda Güler,Trent Alexander-Arnold,OpenPlay,RightFoot,MissedShots,0.13013790547847748,0.904000015258789,0.47099998474121096
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,9,Jude Bellingham,Arda Güler,OpenPlay,Head,SavedShot,0.4306785762310028,0.9430000305175781,0.534000015258789
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,10,Kylian Mbappe-Lottin,,Penalty,RightFoot,Goal,0.7432776093482971,0.885,0.5
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,21,Jude Bellingham,Arda Güler,OpenPlay,RightFoot,Goal,0.5543550252914429,0.860999984741211,0.6029999923706054
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,23,Arda Güler,Kylian Mbappe-Lottin,OpenPlay,RightFoot,SavedShot,0.2736968696117401,0.865999984741211,0.3940000152587891
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,31,Aurelien Tchouameni,Arda Güler,FromCorner,Head,MissedShots,0.10711681842803955,0.9280000305175782,0.5509999847412109
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,32,Kylian Mbappe-Lottin,Arda Güler,OpenPlay,LeftFoot,BlockedShot,0.096126027405262,0.8469999694824218,0.43
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,35,Jude Bellingham,Arda Güler,FromCorner,Head,MissedShots,0.04967000335454941,0.9319999694824219,0.5579999923706055
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,35,Yan Diomande,,FromCorner,RightFoot,Goal,0.021403299644589424,0.8130000305175781,0.5059999847412109
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,37,Arda Güler,Jude Bellingham,OpenPlay,LeftFoot,MissedShots,0.028034517541527748,0.7330000305175781,0.3970000076293945
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,40,Arda Güler,Trent Alexander-Arnold,OpenPlay,LeftFoot,SavedShot,0.06254526227712631,0.905,0.27299999237060546
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,49,Aurelien Tchouameni,Kylian Mbappe-Lottin,OpenPlay,RightFoot,MissedShots,0.045518964529037476,0.6909999847412109,0.475
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,59,Kylian Mbappe-Lottin,Jude Bellingham,OpenPlay,RightFoot,ShotOnPost,0.10987220704555511,0.8530000305175781,0.46
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,59,Yan Diomande,,OpenPlay,RightFoot,BlockedShot,0.03206402435898781,0.89,0.705999984741211
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,59,Kylian Mbappe-Lottin,,OpenPlay,RightFoot,MissedShots,0.029498251155018806,0.7759999847412109,0.35700000762939454
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,61,Jude Bellingham,Arda Güler,OpenPlay,LeftFoot,SavedShot,0.06919588893651962,0.9819999694824219,0.62
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,64,Yan Diomande,Kylian Mbappe-Lottin,FromCorner,RightFoot,MissedShots,0.04860783740878105,0.8119999694824219,0.5540000152587891
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,85,Kylian Mbappe-Lottin,Eduardo Camavinga,OpenPlay,RightFoot,MissedShots,0.05291559174656868,0.8780000305175781,0.7180000305175781
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,90,Brahim Diaz,Kylian Mbappe-Lottin,OpenPlay,RightFoot,BlockedShot,0.11880550533533096,0.884000015258789,0.5670000076293945
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,93,Endrick,Jude Bellingham,OpenPlay,LeftFoot,MissedShots,0.04997585713863373,0.7959999847412109,0.38299999237060545
+2026,30877,2026-11-01,Santander,Real Madrid,a,Real Madrid,95,Kylian Mbappe-Lottin,Endrick,OpenPlay,RightFoot,BlockedShot,0.09587317705154419,0.8819999694824219,0.710999984741211
