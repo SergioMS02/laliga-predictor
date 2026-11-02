@@ -1,10 +1,10 @@
 # Predicciones LaLiga
 
-Generado: 2026-11-02 15:47 UTC
+Generado: 2026-11-02 19:59 UTC
 
 | Fecha | Partido | 1 | X | 2 | Evolución 1 | xG | Marcador más probable | +2.5 | Ambos marcan | Info |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 02/11 21:00 | La Coruna – Osasuna | 46% | 30% | 24% | ▅▄▅▅▅▄▄▄ 51→46% ▼ | 1.50–1.06 | 1-1 (13%) | 47% | 51% | 🚑 Bright Ede, Marc Casadó?, Zakaria Eddahchouri?, Jorge Herrando, Aimar Oroz, Romain Del Castillo? |
+| 02/11 21:00 | La Coruna – Osasuna | 47% | 30% | 24% | ▅▄▅▅▅▄▄▄▄ 51→47% ▼ | 1.52–1.01 | 1-1 (13%) | 46% | 50% | ✅ alineaciones |
 | 06/11 21:00 | Sevilla – Alaves | 48% | 28% | 24% | ▄▄▄ 46→48% ▲ | 1.57–1.16 | 1-1 (12%) | 51% | 55% | 🚑 Miguel Sierra, Isaac Romero?, Marcão, Manu Bueno, Facundo Garcés, Mikel Rodriguez |
 | 07/11 14:00 | Malaga – Santander | 45% | 25% | 30% | ▄▄▄ 43→45% ▲ | 1.75–1.41 | 1-1 (11%) | 61% | 63% | 🚑 Julen Lobete, Aarón Ochoa, Joaquín Muñoz?, Pablo Martínez?, Juan Cruz?, Alvaro Mantilla |
 | 07/11 16:15 | Espanol – La Coruna | 38% | 30% | 32% | ▄▄ 40→38% ▼ | 1.35–1.01 | 1-1 (13%) | 42% | 47% | 🚑 Jofre Carreras, Kike García, Roger Hinojo, Éder Sarabia Sanción disciplinaria (1/2) Noticia |

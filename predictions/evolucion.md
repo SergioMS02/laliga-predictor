@@ -1,10 +1,10 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-02 15:47 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-11-02 19:59 UTC. Umbral de cambio importante: 4 puntos.
 
 ## La Coruna – Osasuna (2026-11-02)
 
-1 ▅▄▅▅▅▄▄▄ · X ▃▃▃▃▃▃▃▃ · 2 ▂▂▂▂▂▂▂▂
+1 ▅▄▅▅▅▄▄▄▄ · X ▃▃▃▃▃▃▃▃▃ · 2 ▂▂▂▂▂▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -16,6 +16,7 @@ Actualizado: 2026-11-02 15:47 UTC. Umbral de cambio importante: 4 puntos.
 | 30/10 13:52 | 47% | 30% | 24% |  |
 | 31/10 13:25 | 46% | 30% | 24% |  |
 | 02/11 16:47 | 46% | 30% | 24% |  |
+| 02/11 20:59 | 47% | 30% | 24% | ✅ |
 
 ## Sevilla – Alaves (2026-11-06)
 
