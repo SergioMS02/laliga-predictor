@@ -334,9 +334,16 @@ function measuredHtml() {
   const pc = DATA.projection_calib || {}, lc = DATA.live_calib || {};
   const L = (DATA.leagues || {}).leagues || {};
   const parts = [];
+  const mrv = DATA.market_ratings || {};
+  if (mrv.by_horizon) {
+    const h = mrv.by_horizon["0-7d"] || {}, h4 = mrv.by_horizon["21-28d"] || {}, sc = mrv.sin_cuotas || {};
+    parts.push(`<div class="pm-card"><h4>Fuerza de los equipos según las cuotas</h4><p>Ajustar la fuerza de cada equipo a las cuotas de cierre de sus partidos anteriores predice los partidos siguientes (sin mirar sus cuotas) mejor que el modelo de goles: error ${dec(h.mercado, 4)} frente a ${dec(h.dixon_coles, 4)} la semana siguiente y ${dec(h4.mercado, 4)} frente a ${dec(h4.dixon_coles, 4)} a un mes (${h.n} y ${h4.n} partidos, ${mrv.seasons[0]}-${mrv.seasons[mrv.seasons.length - 1]}).${sc.n ? ` Por eso, en los partidos que aún no tienen cuotas, la predicción es ${Math.round(100 * sc.w)} % esta fuerza y ${Math.round(100 * (1 - sc.w))} % el modelo (error ${dec(sc.mezcla, 4)} frente a ${dec(sc.modelo_sin_cuotas, 4)} solo con el modelo).` : ""} También es lo que usan la proyección de la temporada, el Pichichi, el simulador y las otras ligas.</p></div>`);
+  }
   if (pc.table) {
-    const base = pc.table.find((r) => r.sigma === 0), best = pc.table.find((r) => r.sigma === pc.sigma);
-    parts.push(`<div class="pm-card"><h4>Proyección de la temporada</h4><p>Simular cada temporada con una incertidumbre del ${Math.round(100 * pc.sigma)} % en la fuerza de cada equipo acierta mejor el puesto final que darla por exacta (${pc.table[0].n} proyecciones de ${pc.seasons[0]} a ${pc.seasons[pc.seasons.length - 1]}, desde las jornadas ${pc.rounds.join(", ")}): log-verosimilitud ${dec(best.loglik, 3)} frente a ${dec(base.loglik, 3)}. El efecto es pequeño.</p></div>`);
+    const f = (src, sg) => pc.table.find((r) => (r.source || "dixon_coles") === src && r.sigma === sg);
+    const dcb = pc.table.filter((r) => (r.source || "dixon_coles") === "dixon_coles").sort((a, b) => b.loglik - a.loglik)[0];
+    const best = f(pc.source || "dixon_coles", pc.sigma);
+    if (best && dcb) parts.push(`<div class="pm-card"><h4>Proyección de la temporada</h4><p>Con ${best.n} proyecciones de ${pc.seasons[0]} a ${pc.seasons[pc.seasons.length - 1]} (desde las jornadas ${pc.rounds.join(", ")}), usar la fuerza según las cuotas acierta bastante mejor el puesto final: log-verosimilitud ${dec(best.loglik, 3)} frente a ${dec(dcb.loglik, 3)} con el modelo de goles. Añadir incertidumbre a esa fuerza ya no mejora (${Math.round(100 * pc.sigma)} %).</p></div>`);
   }
   if (lc.tiros_a_puerta) {
     const t = lc.tiros_a_puerta, x = lc.xg;

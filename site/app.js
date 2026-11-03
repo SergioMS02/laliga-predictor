@@ -244,6 +244,7 @@ function contextHtml(m) {
   if (w.temp_c != null) rows.push(["Clima", `${Math.round(w.temp_c)} °C, lluvia ${w.precip_mm ?? 0} mm, viento ${Math.round(w.wind_kmh ?? 0)} km/h`]);
   if (m.market) rows.push(["Mercado", `${pct(m.market[0])} / ${pct(m.market[1])} / ${pct(m.market[2])} %`]);
   if (m.polymarket) rows.push(["Polymarket", polyLine(m)]);
+  if (m.ratings_mercado) rows.push(["Sin cuotas todavía", `${Math.round(100 * m.ratings_mercado.w)} % de la predicción sale de la fuerza de cada equipo según las cuotas de sus partidos anteriores (${pct(m.ratings_mercado.p[0])} / ${pct(m.ratings_mercado.p[1])} / ${pct(m.ratings_mercado.p[2])} %)`]);
   if (oddsLine(m)) rows.push(["Cuotas Bet365", esc(oddsLine(m))]);
   const om = m.odds_market;
   if (om && om.max && om.max[0] != null) {

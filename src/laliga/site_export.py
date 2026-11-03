@@ -112,6 +112,21 @@ def simulate_rest(base: pd.DataFrame, rem: pd.DataFrame, lam: np.ndarray, mu: np
             "pairs": list(zip(rem.home, rem.away))}
 
 
+def projection_source(settings: Settings) -> str:
+    """Fuente de goles esperados para la proyección: la que mejor acertó en temporadas pasadas."""
+    p = settings.state_dir / "projection_calib.json"
+    try:
+        return str(json.loads(p.read_text(encoding="utf-8")).get("source", "mercado"))
+    except (OSError, ValueError):
+        return "mercado"
+
+
+def projection_rates(settings: Settings, matches: pd.DataFrame, ref, teams, new_teams):
+    from .models.market_ratings import rates_model
+    return rates_model(settings, matches, ref, teams, new_teams,
+                       w=0.0 if projection_source(settings) == "dixon_coles" else None)
+
+
 def season_sigma(settings: Settings) -> float:
     """Incertidumbre de la fuerza calibrada con temporadas pasadas (`calibrate_projection`)."""
     p = settings.state_dir / "projection_calib.json"
@@ -131,7 +146,7 @@ def project_season(settings: Settings, matches: pd.DataFrame, season: int, table
     lam = mu = np.array([])
     if not rem.empty:
         ref = pd.Timestamp.now().normalize() + pd.Timedelta(days=1)
-        dc = DixonColes.from_settings(settings).fit(matches, ref, teams, pipeline._new_teams(matches, season))
+        dc = projection_rates(settings, matches, ref, teams, pipeline._new_teams(matches, season))
         eg = [dc.expected_goals(r.home, r.away) for r in rem.itertuples()]
         lam = np.array([e[0] for e in eg])
         mu = np.array([e[1] for e in eg])
@@ -186,7 +201,7 @@ def project_scorers(settings: Settings, matches: pd.DataFrame, season: int, play
         return None
     teams = sorted(set(s.home) | set(s.away))
     ref = pd.Timestamp.now().normalize() + pd.Timedelta(days=1)
-    dc = DixonColes.from_settings(settings).fit(matches, ref, teams, pipeline._new_teams(matches, season))
+    dc = projection_rates(settings, matches, ref, teams, pipeline._new_teams(matches, season))
     team_left = {t: 0.0 for t in teams}
     for r in rem.itertuples():
         lam, mu = dc.expected_goals(r.home, r.away)
@@ -563,11 +578,13 @@ def _insights(settings, matches, season, table, seq, players, out, old, sim, lef
 
 
 def calibrate_projection(settings: Settings, matches: pd.DataFrame, seasons: list[int],
-                         rounds=(5, 10, 15, 20, 25, 30), sigmas=(0.0, 0.05, 0.08, 0.1, 0.12, 0.15, 0.2, 0.25),
-                         n: int = 3000) -> dict:
-    """Proyecta temporadas pasadas desde varias jornadas con cada `sigma` y mide lo bien que acierta el
-    puesto final real (log-verosimilitud) y título/Champions/descenso (Brier)."""
-    res = {s: {"ll": [], "brier": []} for s in sigmas}
+                         rounds=(5, 10, 15, 20, 25, 30), sigmas=(0.0, 0.04, 0.08, 0.12, 0.16),
+                         sources=("dixon_coles", "mercado"), n: int = 3000) -> dict:
+    """Proyecta temporadas pasadas desde varias jornadas con cada fuente de goles esperados (Dixon-Coles
+    o la fuerza deducida de las cuotas) y cada `sigma`, y mide lo bien que acierta el puesto final real
+    (log-verosimilitud) y título/Champions/descenso (Brier)."""
+    from .models.market_ratings import rates_model
+    res = {(src, s): {"ll": [], "brier": []} for src in sources for s in sigmas}
     for season in seasons:
         sm = matches[(matches.season == season)].sort_values("date")
         if sm.hg.isna().any() or len(sm) < 370:
@@ -579,30 +596,32 @@ def calibrate_projection(settings: Settings, matches: pd.DataFrame, seasons: lis
             played = sm[sm.date < cut]
             rem = sm[sm.date >= cut]
             base = standings(pd.concat([played, rem.assign(hg=np.nan, ag=np.nan)]), season)
-            dc = DixonColes.from_settings(settings).fit(matches, cut, list(base.team), pipeline._new_teams(matches, season))
-            eg = [dc.expected_goals(r.home, r.away) for r in rem.itertuples()]
-            lam, mu = np.array([e[0] for e in eg]), np.array([e[1] for e in eg])
-            for sg in sigmas:
-                sim = simulate_rest(base, rem, lam, mu, n, sg, seed=rnd)
-                ranks = sim["ranks"]
-                ll, br = [], []
-                for i, t in enumerate(sim["teams"]):
-                    r = ranks[:, i]
-                    real = int(final[t])
-                    ll.append(np.log((np.sum(r == real) + 0.5) / (n + 0.5 * k)))
-                    for lo, hi_ in ((1, 1), (1, 4), (k - 2, k)):
-                        p = ((r >= lo) & (r <= hi_)).mean()
-                        y = float(lo <= real <= hi_)
-                        br.append((p - y) ** 2)
-                res[sg]["ll"].append(np.mean(ll))
-                res[sg]["brier"].append(np.mean(br))
+            for src in sources:
+                mdl = rates_model(settings, matches, cut, list(base.team), pipeline._new_teams(matches, season),
+                                  w=0.0 if src == "dixon_coles" else None)
+                eg = [mdl.expected_goals(r.home, r.away) for r in rem.itertuples()]
+                lam, mu = np.array([e[0] for e in eg]), np.array([e[1] for e in eg])
+                for sg in sigmas:
+                    sim = simulate_rest(base, rem, lam, mu, n, sg, seed=rnd)
+                    ranks = sim["ranks"]
+                    ll, br = [], []
+                    for i, t in enumerate(sim["teams"]):
+                        r = ranks[:, i]
+                        real = int(final[t])
+                        ll.append(np.log((np.sum(r == real) + 0.5) / (n + 0.5 * k)))
+                        for lo, hi_ in ((1, 1), (1, 4), (k - 2, k)):
+                            p = ((r >= lo) & (r <= hi_)).mean()
+                            y = float(lo <= real <= hi_)
+                            br.append((p - y) ** 2)
+                    res[(src, sg)]["ll"].append(np.mean(ll))
+                    res[(src, sg)]["brier"].append(np.mean(br))
             log.info("Calibración proyección %s jornada %s hecha", season, rnd)
-    table = [{"sigma": s, "loglik": round(float(np.mean(v["ll"])), 4), "brier": round(float(np.mean(v["brier"])), 5),
-              "n": len(v["ll"])} for s, v in res.items() if v["ll"]]
+    table = [{"source": src, "sigma": s, "loglik": round(float(np.mean(v["ll"])), 4),
+              "brier": round(float(np.mean(v["brier"])), 5), "n": len(v["ll"])} for (src, s), v in res.items() if v["ll"]]
     if not table:
         return {}
     best = max(table, key=lambda d: d["loglik"])
-    out = {"sigma": best["sigma"], "table": table, "seasons": seasons, "rounds": list(rounds),
+    out = {"sigma": best["sigma"], "source": best["source"], "table": table, "seasons": seasons, "rounds": list(rounds),
            "updated": datetime.now(timezone.utc).date().isoformat()}
     (settings.state_dir / "projection_calib.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
     return out

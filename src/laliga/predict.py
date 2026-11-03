@@ -301,6 +301,14 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             mkt_ou = {(r.season, r.home, r.away): devig2(r.ou_o25, r.ou_u25) for r in odds.itertuples()}
         record_odds_snapshot(settings, odds[["season", "home", "away", "odds_h", "odds_d", "odds_a"]], now)
     from .data import polymarket as pmk
+    from .models import market_ratings as mrm
+    try:
+        mr_model = mrm.MarketRatings.from_settings(settings).fit(matches, ref, sorted(set(tab.home) | set(tab.away)),
+                                                                   pipeline._new_teams(matches, int(tab.season.max())))
+        mr_w = mrm.no_odds_weight(settings)
+    except Exception as e:
+        log.warning("Ratings del mercado no disponibles: %s", e)
+        mr_model, mr_w = None, 0.0
     poly_cfg = pmk.cfg(settings)
     poly_mkts = pmk.fetch_matches(settings, online)
     poly_w = pmk.model_weight(settings)
@@ -362,6 +370,14 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
             f = final[k] * ratio
             final[k] = f / f.sum()
             impact["market_weight"] = round(w, 3)
+        mr_blend = None
+        if model_used[k] != "stacker_mercado" and mr_model is not None:
+            # sin cuotas todavía: la fuerza deducida de las cuotas de los partidos anteriores acierta
+            # más que el modelo sin mercado (medido; ver market_ratings.json)
+            q = mr_model.predict(r.home, r.away)
+            qp = np.array([q["p_home"], q["p_draw"], q["p_away"]])
+            final[k] = mr_w * qp + (1 - mr_w) * final[k]
+            mr_blend = {"p": [round(float(x), 4) for x in qp], "w": round(mr_w, 3)}
         p_model = final[k].copy()
         pm_m = pmk.for_match(poly_mkts, r.home, r.away, ko if not pd.isna(ko) else r.date)
         pm_ok, pm_why = pmk.usable(pm_m, poly_cfg, now)
@@ -419,6 +435,8 @@ def predict(settings: Settings, matches: pd.DataFrame, sb: pd.DataFrame | None =
                 r, o, rho=dc.params.rho, a=a_coef, b=b_coef, max_goals=dc.max_goals),
         })
         preds[-1]["_snapshot"]["poly"] = {"p": pm_m["p"], "w": round(poly_w, 3)} if pm_ok else None
+        preds[-1]["_snapshot"]["mr"] = mr_blend
+        preds[-1]["ratings_mercado"] = mr_blend
     preds.sort(key=lambda d: (d["kickoff_utc"] or d["date"], d["home"]))
     return preds
 

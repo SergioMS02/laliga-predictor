@@ -104,7 +104,11 @@ def probs_from_snapshot(snap: dict, model: str, stackers: dict, a: float, b: flo
 
 
 def _with_poly(p: np.ndarray, snap: dict) -> np.ndarray:
-    """Mezcla con el precio de Polymarket si esa predicción lo usó."""
+    """Mezcla con la fuerza deducida de las cuotas (partidos sin cuotas) y con el precio de Polymarket
+    si esa predicción los usó."""
+    mr = snap.get("mr")
+    if mr:
+        p = mr["w"] * np.asarray(mr["p"], float) + (1 - mr["w"]) * np.asarray(p, float)
     pm = snap.get("poly")
     if not pm:
         return p
@@ -267,6 +271,13 @@ def explain(prev: dict, new: dict, stackers: dict, matches: pd.DataFrame | None 
         "clima": lambda: _detail_clima(so, sn),
     }
     explained = d_model.copy()
+    if so.get("mr") != sn.get("mr"):
+        d = probs_from_snapshot({**so, "mr": sn.get("mr")}, model, stackers, a, b) - p_old_now
+        explained += d
+        if np.abs(d).max() >= min_effect:
+            contrib.append(("mercado", "Fuerza según las cuotas", d, "cuotas de los partidos ya jugados"))
+        so = {**so, "mr": sn.get("mr")}
+        p_old_now = p_old_now + d
     if so.get("poly") != sn.get("poly"):
         d = probs_from_snapshot({**so, "poly": sn.get("poly")}, model, stackers, a, b) - p_old_now
         explained += d

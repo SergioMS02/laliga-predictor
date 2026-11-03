@@ -115,7 +115,7 @@ def _notify_moves(s, moves: list[dict], send: bool) -> None:
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="laliga", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("command", choices=["update", "tune", "backtest", "train", "predict", "watch-lineups",
-                                        "backfill-espn", "calibrate-availability", "leagues", "evaluate-live", "export-site",
+                                        "backfill-espn", "calibrate-availability", "leagues", "quiniela-backtest", "evaluate-live", "export-site",
                                         "settle", "quiniela", "all"])
     ap.add_argument("--offline", action="store_true", help="no usar red (solo caché)")
     ap.add_argument("--days", type=int, default=None, help="horizonte de predicción en días")
@@ -161,7 +161,14 @@ def main(argv: list[str] | None = None) -> int:
             print("Tarjetas y córners:", pe)
         except Exception as e:
             log.warning("Evaluación de tarjetas y córners no disponible: %s", e)
-        try:  # incertidumbre de la proyección de temporada, medida con temporadas pasadas
+        try:  # fuerza de los equipos deducida de las cuotas: frente a Dixon-Coles en partidos sin cuotas
+            from .models import market_ratings
+            cur = results.current_season()
+            print("Ratings del mercado:", market_ratings.run_evaluation(s, matches.reset_index(drop=True),
+                                                                        list(range(cur - 10, cur))))
+        except Exception as e:
+            log.warning("Evaluación de los ratings del mercado no disponible: %s", e)
+        try:  # incertidumbre y fuente de la proyección de temporada, medidas con temporadas pasadas
             from . import site_export
             cur = results.current_season()
             cp = site_export.calibrate_projection(s, matches.reset_index(drop=True), list(range(cur - 11, cur)))
@@ -169,6 +176,11 @@ def main(argv: list[str] | None = None) -> int:
         except Exception as e:
             log.warning("Calibración de la proyección no disponible: %s", e)
         _leagues(s, online, with_eval=True)
+        try:  # quiniela con premios reales de las jornadas ya jugadas
+            from . import quiniela_backtest
+            print("Quiniela (jornadas reales):", quiniela_backtest.run(s, online=online).get("summary"))
+        except Exception as e:
+            log.warning("Medición de la quiniela no disponible: %s", e)
         try:  # probabilidad en directo con tiros a puerta (Understat, minuto a minuto)
             from .data import shots as shots_mod
             print("Directo:", shots_mod.run_live_calibration(s, online=online))
@@ -202,6 +214,10 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if cmd == "leagues":
         _leagues(s, online)
+        return 0
+    if cmd == "quiniela-backtest":
+        from . import quiniela_backtest
+        print(json.dumps(quiniela_backtest.run(s, online=online)["summary"], indent=2, ensure_ascii=False))
         return 0
     if cmd == "export-site":
         _export_site(s, matches, projection=True, online=online)

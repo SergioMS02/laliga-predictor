@@ -84,8 +84,10 @@ def main() -> None:
         "polymarket_eval": read_json(ROOT / "data" / "state" / "polymarket_eval.json", {}),
         "leagues": read_json(PRED / "leagues.json", {}),
         "quinigol": read_json(PRED / "quinigol.json", {}),
+        "quiniela_backtest": read_json(PRED / "quiniela_backtest.json", {}),
         "projection_calib": read_json(ROOT / "data" / "state" / "projection_calib.json", {}),
         "live_calib": read_json(ROOT / "data" / "state" / "live_calib.json", {}),
+        "market_ratings": read_json(ROOT / "data" / "state" / "market_ratings.json", {}),
         "availability_eval": read_json(ROOT / "data" / "state" / "tuned.json", {}).get("availability", {}),
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")

@@ -408,7 +408,9 @@ def parse_public(page: str) -> dict:
             return [x / 100 for x in v] if sum(v) > 0 else None
         except (TypeError, ValueError, KeyError):
             return None
-    for key, val in (st.get("probabilidades") or {}).items():
+    found = dict(st.get("probabilidades") or {})
+    found.update({k: v for k, v in st.items() if k.startswith("probabilidades_")})  # páginas de cada jornada
+    for key, val in found.items():
         if not isinstance(val, dict) or "partidos" not in val:
             continue
         n = val.get("numJornada") or _num(key.split("_")[-1])

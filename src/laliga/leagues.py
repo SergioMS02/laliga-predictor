@@ -127,7 +127,8 @@ def _dc(settings: Settings, m: pd.DataFrame, ref, season: int) -> DixonColes:
     teams = sorted(set(s.home) | set(s.away))
     prev = m[m.season == season - 1]
     new = (set(teams) - (set(prev.home) | set(prev.away))) if len(prev) else set()
-    return DixonColes.from_settings(settings).fit(m, ref, teams, new)
+    from .models.market_ratings import rates_model
+    return rates_model(settings, m, ref, teams, new)  # fuerza deducida de las cuotas (medido mejor que Dixon-Coles)
 
 
 def evaluate(settings: Settings, m: pd.DataFrame, season: int) -> dict:
