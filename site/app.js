@@ -798,7 +798,6 @@ const STRATS = {
   favorito: { title: "Favorito del modelo", short: "Favorito", color: "var(--slip)" },
   valor: { title: "Apuesta de valor", short: "Valor", color: "var(--ink)", dash: true },
   goles: { title: "Más/menos 2,5 goles", short: "Goles", color: "var(--c3)" },
-  kelly: { title: "Kelly (fondo de 100 €)", short: "Kelly", color: "var(--c4)", dash: true },
 };
 const pickName = (b) => (b.market === "ou25"
   ? (String(b.pick) === "+2.5" ? "más de 2,5 goles" : "menos de 2,5 goles")
@@ -846,7 +845,7 @@ function betsHtml() {
   if (!st) return '<p class="quiet">La cartera empezará a apostar en la próxima actualización, en cuanto haya cuotas de Bet365 para los partidos.</p>';
   const c = b.config || {};
   document.getElementById("bets-note").textContent =
-    `Dinero ficticio: ${c.stake} € por apuesta (Kelly: según la ventaja, sobre un fondo de ${c.kelly_bankroll} €) con las cuotas de Bet365. La apuesta se ajusta a la última cuota hasta que empieza el partido y se liquida al terminar.`;
+    `Dinero ficticio: ${c.stake} € por apuesta con las cuotas de Bet365. La apuesta se ajusta a la última cuota hasta que empieza el partido y se liquida al terminar.`;
   const chart = multiLine(seriesOf(st));
   const bets = b.bets || [];
   const keep = (x) => BET_FILTER === "todas" || x.strategy === BET_FILTER;

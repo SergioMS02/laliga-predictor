@@ -59,11 +59,10 @@ def test_ledger_lifecycle(settings):
     t0 = pd.Timestamp("2026-10-24T10:00", tz="UTC")
     out = betting.update(settings, _matches(), [_pred()], now=t0)
     led = out["ledger"]
-    assert set(led.strategy) == {"favorito", "valor", "goles", "kelly"}
-    assert (led.status == "pendiente").all() and len(out["placed"]) == 4
+    assert set(led.strategy) == {"favorito", "valor", "goles"}
+    assert (led.status == "pendiente").all() and len(out["placed"]) == 3
     assert led.set_index("strategy").loc["valor", "pick"] == "X"
     assert led.set_index("strategy").loc["goles", "pick"] == "+2.5"
-    assert led.set_index("strategy").loc["kelly", "stake"] == pytest.approx(1.0)
     # la cuota cambia antes del partido: se actualiza, no se duplica; "valor" deja de tener valor y se retira;
     # la primera cuota vista se conserva para medir el CLV
     out = betting.update(settings, _matches(), [_pred(b365=(1.75, 3.2, 4.5), ou=(1.75, 2.1))],
@@ -104,7 +103,7 @@ def test_lost_bet_and_no_odds(settings):
     assert set(led.status) == {"perdida"}
     assert (led.profit == -led.stake).all()
     s = json.loads((settings.predictions_dir / "bets_summary.json").read_text())
-    assert s["strategies"]["kelly"]["bankroll"] == pytest.approx(99.0)
+    assert "kelly" not in s["strategies"]
     # sin cuota de cierre de Bet365 se usa la última vista (CLV 0)
     assert s["strategies"]["favorito"]["clv"] == pytest.approx(0.0)
 

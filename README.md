@@ -133,13 +133,12 @@ Cada vez que se predice, el bot "apuesta" con las cuotas de **Bet365** (las de f
 - **Favorito**: 10 € al resultado más probable.
 - **Valor**: 10 € solo cuando probabilidad del modelo × cuota ≥ 1,05 (y cuota ≤ 8).
 - **Goles**: 10 € a más/menos de 2,5 cuando esa cuota tiene valor (margen 2 %).
-- **Kelly**: las apuestas de valor, con importe = 1/4 de Kelly sobre un fondo que empieza en 100 € (máximo 5 % del fondo por apuesta).
 
 La apuesta se actualiza con la última cuota hasta que empieza el partido, se congela y se liquida **en cuanto termina** (una ejecución cada 30 minutos lo comprueba). Para cada apuesta se guarda la primera cuota a la que la vio el modelo y la de cierre: la métrica **«frente al cierre» (CLV)** dice si el modelo detecta algo antes que el mercado, y con pocas apuestas es mucho más fiable que el beneficio.
 
 La simulación de temporadas pasadas también compara casas: la misma estrategia con la cuota de Bet365, la media del mercado y la mejor cuota disponible (en 2021-2026 el favorito pasa de −1,2 % con Bet365 a +2,6 % con la mejor cuota; Bet365 solo ofrece la mejor cuota en el 8 % de los casos). En cada partido se muestran la mejor cuota y la media.
 
-Todo queda en `predictions/bets.csv` (historial completo), `predictions/bets_summary.json` (balance) y `predictions/betting_backtest.json` (lo que habría pasado en temporadas pasadas). Se configura en `config.yaml → betting`. Resultados en temporadas de prueba (2021-2026): favorito −1,2 % (1.989 apuestas), valor −6,6 % (387), Kelly −10,8 % (369), goles con muy pocas apuestas, porque en goles el modelo apenas añade nada al mercado. **No es un consejo de apuesta**: las casas aciertan algo más que el modelo y cobran margen, así que lo esperable es perder a la larga.
+Todo queda en `predictions/bets.csv` (historial completo), `predictions/bets_summary.json` (balance) y `predictions/betting_backtest.json` (lo que habría pasado en temporadas pasadas). Se configura en `config.yaml → betting`. Resultados en temporadas de prueba (2021-2026): favorito −1,2 % (1.989 apuestas), valor −6,6 % (387), goles con muy pocas apuestas, porque en goles el modelo apenas añade nada al mercado. La estrategia Kelly (las de valor con importe según la ventaja) se quitó: apostaba lo mismo que «valor» y perdía más (−10,8 %), porque ajustar el importe a la ventaja solo tiene sentido si la ventaja existe. **No es un consejo de apuesta**: las casas aciertan algo más que el modelo y cobran margen, así que lo esperable es perder a la larga.
 
 Para activarla (una vez): *Settings → Pages → Build and deployment → Source:* **GitHub Actions**. Después, *Actions → Web → Run workflow*. Quedará en `https://<tu-usuario>.github.io/laliga-predictor/` (la de este repositorio: https://sergioms02.github.io/laliga-predictor/).
 

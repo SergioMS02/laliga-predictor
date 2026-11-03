@@ -4,8 +4,8 @@ Estrategias:
   favorito  10 € al resultado más probable según el modelo (rellenar la quiniela)
   valor     10 € solo si probabilidad del modelo × cuota ≥ 1 + margen mínimo
   goles     10 € a más/menos de 2,5 goles cuando esa cuota tiene valor
-  kelly     las mismas apuestas que "valor", pero el importe depende de la ventaja
-            (fracción de Kelly) sobre un fondo que empieza en 100 €
+  (La estrategia «kelly», las mismas apuestas que «valor» con importe según la ventaja, se quitó:
+  sin una ventaja demostrada, ajustar el importe a la ventaja no aporta nada y perdía más.)
 
 Cada apuesta queda "colocada" con la última cuota de Bet365 vista antes del partido y se
 liquida cuando hay resultado. También se guarda la primera cuota a la que el modelo la vio
@@ -36,8 +36,6 @@ STRATEGIES = {
     "favorito": {"label": "Al resultado más probable de cada partido", "market": "1x2"},
     "valor": {"label": "Solo cuando la cuota paga más de lo que dice el modelo", "market": "1x2"},
     "goles": {"label": "Más o menos de 2,5 goles cuando esa cuota tiene valor", "market": "ou25"},
-    "kelly": {"label": "Las apuestas de valor, con importe según la ventaja (Kelly) sobre un fondo de 100 €",
-              "market": "1x2"},
 }
 LEDGER_COLS = ["strategy", "market", "season", "date", "kickoff_utc", "home", "away", "pick", "prob", "odds",
                "odds_first", "odds_close", "close_src", "clv", "ev", "stake", "placed_at", "status", "score",
@@ -149,7 +147,8 @@ def load_ledger(settings: Settings) -> pd.DataFrame:
     p = _path(settings)
     if not p.exists():
         return _typed(pd.DataFrame(columns=LEDGER_COLS))
-    return _typed(pd.read_csv(p, dtype={"pick": str, "score": str}))
+    led = pd.read_csv(p, dtype={"pick": str, "score": str})
+    return _typed(led[led.strategy.isin(STRATEGIES)])  # estrategias retiradas (kelly) fuera
 
 
 def _market_inputs(p: dict, market: str):
@@ -402,7 +401,7 @@ def backtest_strategies(settings: Settings, matches: pd.DataFrame) -> dict | Non
     seasons = m.season.to_numpy().astype(int)
     dates = m.date.astype(str).str[:10].to_numpy()
     order = np.argsort(dates, kind="stable")
-    for strat in ("favorito", "valor", "kelly"):
+    for strat in ("favorito", "valor"):
         rows, bank = [], float(c["kelly_bankroll"])
         for k in order:
             d = decide(probs[k], odds[k], strat, c)
