@@ -1,19 +1,19 @@
 {
- "n": 9995,
- "matches": 1999,
+ "n": 10035,
+ "matches": 2007,
  "tiros_a_puerta": {
-  "gamma": 0.0537,
+  "gamma": 0.054,
   "per_goal": 2.808,
-  "nll_solo_marcador": 0.86518,
-  "nll_con_dato": 0.8648
+  "nll_solo_marcador": 0.86525,
+  "nll_con_dato": 0.86487
  },
  "xg": {
-  "gamma": 0.1368,
-  "per_goal": 0.97,
-  "nll_solo_marcador": 0.86518,
-  "nll_con_dato": 0.86419
+  "gamma": 0.1353,
+  "per_goal": 0.969,
+  "nll_solo_marcador": 0.86525,
+  "nll_con_dato": 0.86428
  },
- "gamma": 0.0537,
+ "gamma": 0.054,
  "sot_per_goal": 2.808,
- "updated": "2026-10-27"
+ "updated": "2026-11-03"
 }

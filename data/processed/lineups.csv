@@ -88520,3 +88520,272 @@ event_id,date,team,player_id,name,position,starter
 401882824,2026-11-02,Osasuna,144759,Aitor Fernández,SUB,False
 401882824,2026-11-02,Osasuna,380918,Iñigo Arguibide,SUB,False
 401882824,2026-11-02,Osasuna,209580,Enrique Barja,SUB,False
+401882817,2026-10-30,Villarreal,119620,Péter Gulácsi,G,True
+401882817,2026-10-30,Villarreal,337011,Renato Veiga,CD-L,True
+401882817,2026-10-30,Villarreal,368878,Pau Navarro,CD-R,True
+401882817,2026-10-30,Villarreal,289072,Sergi Cardona,LB,True
+401882817,2026-10-30,Villarreal,318098,Santiago Mouriño,RB,True
+401882817,2026-10-30,Villarreal,240623,Santi Comesaña,CM-L,True
+401882817,2026-10-30,Villarreal,415438,Carlos Macià,CM-R,True
+401882817,2026-10-30,Villarreal,307390,Alberto Moleiro,LM,True
+401882817,2026-10-30,Villarreal,284769,Tajon Buchanan,RM,True
+401882817,2026-10-30,Villarreal,300002,Georges Mikautadze,CF-L,True
+401882817,2026-10-30,Villarreal,156172,Gerard Moreno,CF-R,True
+401882817,2026-10-30,Villarreal,294039,Tani Oluwaseyi,SUB,False
+401882817,2026-10-30,Villarreal,192133,Ayoze Pérez,SUB,False
+401882817,2026-10-30,Villarreal,3101325,Cheikh Ahmad Tidiane Thiam,SUB,False
+401882817,2026-10-30,Villarreal,3101324,Nizar El Jmili Ben Hamou,SUB,False
+401882817,2026-10-30,Villarreal,307648,Luiz Júnior,SUB,False
+401882817,2026-10-30,Villarreal,271904,Carlos Romero,SUB,False
+401882817,2026-10-30,Villarreal,248276,Alex Freeman,SUB,False
+401882817,2026-10-30,Villarreal,271129,Logan Costa,SUB,False
+401882817,2026-10-30,Villarreal,343640,Rubén Gómez,SUB,False
+401882817,2026-10-30,Villarreal,210397,Nicolas Pépé,SUB,False
+401882817,2026-10-30,Espanol,307419,Ángel Fortuño,G,True
+401882817,2026-10-30,Espanol,133259,Leandro Cabrera,CD-L,True
+401882817,2026-10-30,Espanol,277314,Vanja Drkusic,CD-R,True
+401882817,2026-10-30,Espanol,401377,Roger Hinojo,LB,True
+401882817,2026-10-30,Espanol,310682,Omar El Hilali,RB,True
+401882817,2026-10-30,Espanol,367946,Javi Hernandez,AM,True
+401882817,2026-10-30,Espanol,255272,Edu Expósito,LM,True
+401882817,2026-10-30,Espanol,383900,Rafael Bauza,RM,True
+401882817,2026-10-30,Espanol,318773,Roberto Fernández,F,True
+401882817,2026-10-30,Espanol,311571,Bryan Zaragoza,AM-L,True
+401882817,2026-10-30,Espanol,3111255,Alejandro Santiago Vargas,AM-R,True
+401882817,2026-10-30,Espanol,196914,Pere Milla,SUB,False
+401882817,2026-10-30,Espanol,397289,José Ángel López,SUB,False
+401882817,2026-10-30,Espanol,346210,Quilindschy Hartman,SUB,False
+401882817,2026-10-30,Espanol,260242,Pol Lozano,SUB,False
+401882817,2026-10-30,Espanol,260243,Javier Puado,SUB,False
+401882817,2026-10-30,Espanol,361468,Gabriel Moscardo,SUB,False
+401882817,2026-10-30,Espanol,3111247,Jan Peries Duran,SUB,False
+401882817,2026-10-30,Espanol,179211,Marko Dmitrovic,SUB,False
+401882817,2026-10-30,Espanol,420443,Adama Timera,SUB,False
+401882817,2026-10-30,Espanol,260902,Unai Núñez,SUB,False
+401882817,2026-10-30,Espanol,354621,Marcos Fernández,SUB,False
+401882817,2026-10-30,Espanol,306520,Tyrhys Dolan,SUB,False
+401882818,2026-10-31,Vallecano,207834,Emil Audero,G,True
+401882818,2026-10-31,Vallecano,265996,Mujaid Sadick,CD-L,True
+401882818,2026-10-31,Vallecano,140754,Florian Lejeune,CD-R,True
+401882818,2026-10-31,Vallecano,277292,Adrià Pedrosa,LB,True
+401882818,2026-10-31,Vallecano,287224,Andrei Ratiu,RB,True
+401882818,2026-10-31,Vallecano,264217,Óscar Valentín,CM,True
+401882818,2026-10-31,Vallecano,203711,Unai López,LM,True
+401882818,2026-10-31,Vallecano,264078,Pedro Díaz,RM,True
+401882818,2026-10-31,Vallecano,276652,Sergio Camello,F,True
+401882818,2026-10-31,Vallecano,125200,Álvaro García,LF,True
+401882818,2026-10-31,Vallecano,260740,Jorge de Frutos,RF,True
+401882818,2026-10-31,Vallecano,319231,Jozhua Vertrouwd,SUB,False
+401882818,2026-10-31,Vallecano,377843,Rayane Belaid,SUB,False
+401882818,2026-10-31,Vallecano,313024,Alexandre Alemão,SUB,False
+401882818,2026-10-31,Vallecano,158151,Iván Balliu,SUB,False
+401882818,2026-10-31,Vallecano,3115984,Gnangoro Bouare Samake,SUB,False
+401882818,2026-10-31,Vallecano,192893,Daniel Cárdenas,SUB,False
+401882818,2026-10-31,Vallecano,276847,Randy Nteka,SUB,False
+401882818,2026-10-31,Vallecano,276067,Giorgi Tsitaishvili,SUB,False
+401882818,2026-10-31,Vallecano,264197,Isi Palazón,SUB,False
+401882818,2026-10-31,Vallecano,324505,Fran Pérez,SUB,False
+401882818,2026-10-31,Vallecano,386579,Pelayo Fernández,SUB,False
+401882818,2026-10-31,Celta,144720,Andrei Radu,G,True
+401882818,2026-10-31,Celta,384643,Yoel Lago,CD,True
+401882818,2026-10-31,Celta,285756,Sebastián Cáceres,CD-L,True
+401882818,2026-10-31,Celta,376147,Javi Rodríguez,CD-R,True
+401882818,2026-10-31,Celta,240235,Aleix Febas,CM-L,True
+401882818,2026-10-31,Celta,297829,Ilaix Moriba,CM-R,True
+401882818,2026-10-31,Celta,231838,Javi Galán,LM,True
+401882818,2026-10-31,Celta,331586,Javi Rueda,RM,True
+401882818,2026-10-31,Celta,279904,Ferran Jutglà,F,True
+401882818,2026-10-31,Celta,324811,Hugo Gonzalez,CF-L,True
+401882818,2026-10-31,Celta,188391,Hugo Álvarez,CF-R,True
+401882818,2026-10-31,Celta,21990,Abdoulaye Faye,SUB,False
+401882818,2026-10-31,Celta,146127,Marcos Alonso,SUB,False
+401882818,2026-10-31,Celta,414293,Hugo Burcio,SUB,False
+401882818,2026-10-31,Celta,304592,Couhaib Driouech,SUB,False
+401882818,2026-10-31,Celta,242580,Iván Villar,SUB,False
+401882818,2026-10-31,Celta,414292,Andrés Antañón,SUB,False
+401882818,2026-10-31,Celta,92800,Iago Aspas,SUB,False
+401882818,2026-10-31,Celta,322652,Williot Swedberg,SUB,False
+401882818,2026-10-31,Celta,274272,Altay Bayindir,SUB,False
+401882818,2026-10-31,Celta,298343,Sergio Carreira,SUB,False
+401882818,2026-10-31,Celta,138448,Pablo Durán,SUB,False
+401882825,2026-10-31,Betis,283892,Álvaro Valles,G,True
+401882825,2026-10-31,Betis,301526,Natan,CD-L,True
+401882825,2026-10-31,Betis,145078,Marc Bartra,CD-R,True
+401882825,2026-10-31,Betis,213050,Fran García,LB,True
+401882825,2026-10-31,Betis,178978,Héctor Bellerín,RB,True
+401882825,2026-10-31,Betis,143564,Isco,AM,True
+401882825,2026-10-31,Betis,242008,Marc Roca,LM,True
+401882825,2026-10-31,Betis,227714,Pablo Fornals,RM,True
+401882825,2026-10-31,Betis,279790,Troy Parrott,F,True
+401882825,2026-10-31,Betis,300912,Abde Ezzalzouli,AM-L,True
+401882825,2026-10-31,Betis,70224,Rodrigo Riquelme,AM-R,True
+401882825,2026-10-31,Betis,322908,Nelson Deossa,SUB,False
+401882825,2026-10-31,Betis,411284,José Morante,SUB,False
+401882825,2026-10-31,Betis,336480,Valentín Gómez,SUB,False
+401882825,2026-10-31,Betis,283827,Álvaro Fidalgo,SUB,False
+401882825,2026-10-31,Betis,279660,Diego Conde,SUB,False
+401882825,2026-10-31,Betis,181530,Diego Llorente,SUB,False
+401882825,2026-10-31,Betis,268601,Aitor Ruibal,SUB,False
+401882825,2026-10-31,Betis,207343,Giovani Lo Celso,SUB,False
+401882825,2026-10-31,Betis,202717,Dani Ceballos,SUB,False
+401882825,2026-10-31,Betis,395941,Ángel Ortiz,SUB,False
+401882825,2026-10-31,Betis,390091,Manu González,SUB,False
+401882825,2026-10-31,Betis,281558,Antony,SUB,False
+401882825,2026-10-31,Malaga,240624,Alfonso Herrero,G,True
+401882825,2026-10-31,Malaga,192430,Einar Galilea,CD-L,True
+401882825,2026-10-31,Malaga,261199,Fernando Calero,CD-R,True
+401882825,2026-10-31,Malaga,292225,Ramón Enríquez,DM,True
+401882825,2026-10-31,Malaga,376166,Rafa Garrido,LB,True
+401882825,2026-10-31,Malaga,331785,Carlos Puga,RB,True
+401882825,2026-10-31,Malaga,331533,Daniel Lorenzo,CM-L,True
+401882825,2026-10-31,Malaga,324098,Carlos Dotor,CM-R,True
+401882825,2026-10-31,Malaga,379032,Adam Aznou,LM,True
+401882825,2026-10-31,Malaga,297828,David Larrubia,RM,True
+401882825,2026-10-31,Malaga,373542,Adrián Niño,F,True
+401882825,2026-10-31,Malaga,371564,Izan Merino,SUB,False
+401882825,2026-10-31,Malaga,270610,Eneko Jauregui,SUB,False
+401882825,2026-10-31,Malaga,262061,Juan Berrocal,SUB,False
+401882825,2026-10-31,Malaga,357858,Rafa Rodríguez,SUB,False
+401882825,2026-10-31,Malaga,274971,Jens Cajuste,SUB,False
+401882825,2026-10-31,Malaga,312338,Haitam Abaida,SUB,False
+401882825,2026-10-31,Malaga,388602,Chupete,SUB,False
+401882825,2026-10-31,Malaga,388600,Andres Cespedes,SUB,False
+401882825,2026-10-31,Malaga,310869,Álex Pastor,SUB,False
+401882825,2026-10-31,Malaga,3110513,Juani,SUB,False
+401882825,2026-10-31,Malaga,355503,Carlos López,SUB,False
+401882825,2026-10-31,Malaga,184488,José Salinas,SUB,False
+401882821,2026-11-01,Getafe,196339,David Soria,G,True
+401882821,2026-11-01,Getafe,181355,Djené,CD-L,True
+401882821,2026-11-01,Getafe,359826,Sebastián Boselli,CD-R,True
+401882821,2026-11-01,Getafe,395479,Jean Ives Valou,LB,True
+401882821,2026-11-01,Getafe,168531,Dani Carvajal,RB,True
+401882821,2026-11-01,Getafe,309838,Ramón Terrats,AM,True
+401882821,2026-11-01,Getafe,307186,Francho Serrano,LM,True
+401882821,2026-11-01,Getafe,136673,Nemanja Gudelj,RM,True
+401882821,2026-11-01,Getafe,218122,Enes Ünal,F,True
+401882821,2026-11-01,Getafe,284854,Martín Satriano,AM-L,True
+401882821,2026-11-01,Getafe,356080,Andrés García,AM-R,True
+401882821,2026-11-01,Getafe,388898,Diego Ferrer,SUB,False
+401882821,2026-11-01,Getafe,314403,Saba Sazonov,SUB,False
+401882821,2026-11-01,Getafe,218793,Borja Mayoral,SUB,False
+401882821,2026-11-01,Getafe,277876,Abdel Abqar,SUB,False
+401882821,2026-11-01,Getafe,125749,Kiko Femenía,SUB,False
+401882821,2026-11-01,Getafe,383912,Alberto Risco,SUB,False
+401882821,2026-11-01,Getafe,228424,Orel Mangala,SUB,False
+401882821,2026-11-01,Getafe,310259,Ivan Azón,SUB,False
+401882821,2026-11-01,Getafe,406832,Davinchi,SUB,False
+401882821,2026-11-01,Getafe,344245,Jirí Letácek,SUB,False
+401882821,2026-11-01,Getafe,3121766,Ibrahima Danfakha Keita,SUB,False
+401882821,2026-11-01,Sevilla,159135,Odisseas Vlachodimos,G,True
+401882821,2026-11-01,Sevilla,334163,Enrique Salas,CD-L,True
+401882821,2026-11-01,Sevilla,332246,Andrés Castrín,CD-R,True
+401882821,2026-11-01,Sevilla,222037,Gabriel Suazo,LB,True
+401882821,2026-11-01,Sevilla,279738,Juan Iglesias,RB,True
+401882821,2026-11-01,Sevilla,277307,Youssouf Fofana,CM-L,True
+401882821,2026-11-01,Sevilla,282289,Lucien Agoumé,CM-R,True
+401882821,2026-11-01,Sevilla,288900,Felix Correia,LM,True
+401882821,2026-11-01,Sevilla,254270,Chidera Ejuke,RM,True
+401882821,2026-11-01,Sevilla,365821,Isaac Romero,CF-L,True
+401882821,2026-11-01,Sevilla,323033,Lucas Stassin,CF-R,True
+401882821,2026-11-01,Sevilla,215386,Fábio Cardoso,SUB,False
+401882821,2026-11-01,Sevilla,347359,Peque,SUB,False
+401882821,2026-11-01,Sevilla,304213,Arouna Sangante,SUB,False
+401882821,2026-11-01,Sevilla,362874,Fran González,SUB,False
+401882821,2026-11-01,Sevilla,254320,Jon Guridi,SUB,False
+401882821,2026-11-01,Sevilla,250508,José Ángel Carmona,SUB,False
+401882821,2026-11-01,Sevilla,322993,Robbie Ure,SUB,False
+401882821,2026-11-01,Sevilla,271635,Alfonso González,SUB,False
+401882821,2026-11-01,Sevilla,259513,Rubén Vargas,SUB,False
+401882821,2026-11-01,Sevilla,258923,Giorgi Kochorashvili,SUB,False
+401882821,2026-11-01,Sevilla,387493,Julio Díaz,SUB,False
+401882821,2026-11-01,Sevilla,356228,Manu Bueno,SUB,False
+401882819,2026-11-01,Santander,323970,Julen Agirrezabala,G,True
+401882819,2026-11-01,Santander,333927,Jeanuël Belocian,CD-L,True
+401882819,2026-11-01,Santander,282672,Pablo Ramon,CD-R,True
+401882819,2026-11-01,Santander,242007,Aarón Martín,LB,True
+401882819,2026-11-01,Santander,300471,Alvaro Mantilla,RB,True
+401882819,2026-11-01,Santander,125383,Sergio Canales,AM,True
+401882819,2026-11-01,Santander,107960,Matteo Prati,LM,True
+401882819,2026-11-01,Santander,330545,Iván Martín,RM,True
+401882819,2026-11-01,Santander,390389,Yassir Zabiri,F,True
+401882819,2026-11-01,Santander,284699,Iñigo Vicente,AM-L,True
+401882819,2026-11-01,Santander,417258,Iker Luque,AM-R,True
+401882819,2026-11-01,Santander,286604,André Almeida,SUB,False
+401882819,2026-11-01,Santander,367499,Facundo González,SUB,False
+401882819,2026-11-01,Santander,334268,Juan Carlos Arana,SUB,False
+401882819,2026-11-01,Santander,342654,Maguette Gueye,SUB,False
+401882819,2026-11-01,Santander,222365,Asier Villalibre,SUB,False
+401882819,2026-11-01,Santander,259839,Manu,SUB,False
+401882819,2026-11-01,Santander,399278,Pablo García,SUB,False
+401882819,2026-11-01,Santander,361455,Pedro Felipe,SUB,False
+401882819,2026-11-01,Santander,289439,Giorgi Guliashvili,SUB,False
+401882819,2026-11-01,Santander,279699,Íñigo Sainz,SUB,False
+401882819,2026-11-01,Santander,400222,Simon Eriksson,SUB,False
+401882819,2026-11-01,Real Madrid,134283,Thibaut Courtois,G,True
+401882819,2026-11-01,Real Madrid,356000,Dean Huijsen,CD-L,True
+401882819,2026-11-01,Real Madrid,251634,Ibrahima Konaté,CD-R,True
+401882819,2026-11-01,Real Madrid,259910,Marc Cucurella,LB,True
+401882819,2026-11-01,Real Madrid,223532,Trent Alexander-Arnold,RB,True
+401882819,2026-11-01,Real Madrid,291281,Jude Bellingham,AM,True
+401882819,2026-11-01,Real Madrid,265919,Aurélien Tchouaméni,LM,True
+401882819,2026-11-01,Real Madrid,199833,Bernardo Silva,RM,True
+401882819,2026-11-01,Real Madrid,231388,Kylian Mbappé,F,True
+401882819,2026-11-01,Real Madrid,402479,Yan Diomande,AM-L,True
+401882819,2026-11-01,Real Madrid,310452,Arda Güler,AM-R,True
+401882819,2026-11-01,Real Madrid,346612,Endrick,SUB,False
+401882819,2026-11-01,Real Madrid,310637,Álvaro Carreras,SUB,False
+401882819,2026-11-01,Real Madrid,246532,Brahim Díaz,SUB,False
+401882819,2026-11-01,Real Madrid,228402,Éder Militão,SUB,False
+401882819,2026-11-01,Real Madrid,257237,Andriy Lunin,SUB,False
+401882819,2026-11-01,Real Madrid,285150,Eduardo Camavinga,SUB,False
+401882819,2026-11-01,Real Madrid,169438,Antonio Rüdiger,SUB,False
+401882819,2026-11-01,Real Madrid,409019,Thiago Pitarch,SUB,False
+401882819,2026-11-01,Real Madrid,213248,Denzel Dumfries,SUB,False
+401882819,2026-11-01,Real Madrid,380286,Carlos Espí,SUB,False
+401882819,2026-11-01,Real Madrid,350351,Sergio Mestre,SUB,False
+401882826,2026-11-01,Ath Bilbao,222375,Unai Simón,G,True
+401882826,2026-11-01,Ath Bilbao,159317,Aymeric Laporte,CD-L,True
+401882826,2026-11-01,Ath Bilbao,274016,Dani Vivian,CD-R,True
+401882826,2026-11-01,Ath Bilbao,133768,Yuri Berchiche,LB,True
+401882826,2026-11-01,Ath Bilbao,362572,Hugo Rincón,RB,True
+401882826,2026-11-01,Ath Bilbao,388803,Beñat Gerenabarrena,CM-L,True
+401882826,2026-11-01,Ath Bilbao,388805,Peio Canales,CM-R,True
+401882826,2026-11-01,Ath Bilbao,312146,Nico Williams,LM,True
+401882826,2026-11-01,Ath Bilbao,209579,Álex Berenguer,RM,True
+401882826,2026-11-01,Ath Bilbao,214412,Iñaki Williams,CF-L,True
+401882826,2026-11-01,Ath Bilbao,393762,Maroan Sannadi,CF-R,True
+401882826,2026-11-01,Ath Bilbao,323971,Nico Serrano,SUB,False
+401882826,2026-11-01,Ath Bilbao,347411,Álex Padilla,SUB,False
+401882826,2026-11-01,Ath Bilbao,291616,Oihan Sancet,SUB,False
+401882826,2026-11-01,Ath Bilbao,276996,Robert Navarro,SUB,False
+401882826,2026-11-01,Ath Bilbao,3106512,Jesús Vizcay Hurtado,SUB,False
+401882826,2026-11-01,Ath Bilbao,333214,Johaneko Louis Jean,SUB,False
+401882826,2026-11-01,Ath Bilbao,308254,Aitor Paredes,SUB,False
+401882826,2026-11-01,Ath Bilbao,318785,Beñat Prados,SUB,False
+401882826,2026-11-01,Ath Bilbao,300876,Jesús Areso,SUB,False
+401882826,2026-11-01,Ath Bilbao,217225,Yeray,SUB,False
+401882826,2026-11-01,Ath Bilbao,403371,Alejandro Rego,SUB,False
+401882826,2026-11-01,Ath Bilbao,377792,Mikel Jauregizar,SUB,False
+401882826,2026-11-01,Sociedad,217319,Álex Remiro,G,True
+401882826,2026-11-01,Sociedad,355433,Mamadou Sarr,CD-L,True
+401882826,2026-11-01,Sociedad,366885,Jon Martín,CD-R,True
+401882826,2026-11-01,Sociedad,265993,Sergio Gómez,LB,True
+401882826,2026-11-01,Sociedad,318063,Jon Aramburu,RB,True
+401882826,2026-11-01,Sociedad,235072,Carlos Soler,CM-L,True
+401882826,2026-11-01,Sociedad,388601,Jon Gorrotxategi,CM-R,True
+401882826,2026-11-01,Sociedad,283941,Ander Barrenetxea,LM,True
+401882826,2026-11-01,Sociedad,213141,Gonçalo Guedes,RM,True
+401882826,2026-11-01,Sociedad,229018,Mikel Oyarzabal,CF-L,True
+401882826,2026-11-01,Sociedad,306263,Luka Sucic,CF-R,True
+401882826,2026-11-01,Sociedad,256587,Takefusa Kubo,SUB,False
+401882826,2026-11-01,Sociedad,368327,Aitor Fraga,SUB,False
+401882826,2026-11-01,Sociedad,363039,Héctor Fort,SUB,False
+401882826,2026-11-01,Sociedad,297371,Beñat Turrientes,SUB,False
+401882826,2026-11-01,Sociedad,406379,Job Ochieng,SUB,False
+401882826,2026-11-01,Sociedad,283891,Aihen Muñoz,SUB,False
+401882826,2026-11-01,Sociedad,341367,Orri Óskarsson,SUB,False
+401882826,2026-11-01,Sociedad,326900,Pablo Marín,SUB,False
+401882826,2026-11-01,Sociedad,312011,Unai Marrero,SUB,False
+401882826,2026-11-01,Sociedad,235693,Igor Zubeldia,SUB,False
+401882826,2026-11-01,Sociedad,297359,Jon Pacheco,SUB,False
+401882826,2026-11-01,Sociedad,236185,Yangel Herrera,SUB,False
