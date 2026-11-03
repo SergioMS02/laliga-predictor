@@ -10,28 +10,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          mkdir -p raw16
-          python3 - <<'PY' > raw16/out.txt 2>&1 || true
+          mkdir -p raw17
+          python3 - <<'PY' > raw17/out.txt 2>&1 || true
           import requests, re, json
           s = requests.Session(); s.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36"
-          t = s.get("https://www.eduardolosilla.es/quiniela", timeout=30).text
-          urls = sorted(set(re.findall(r'https?://[a-zA-Z0-9.\-]+/[^"\'\s<>]*', t)))
-          print("URLS", [u for u in urls if "api" in u or "json" in u or "static" in u][:60])
-          js = sorted(set(re.findall(r'src="([^"]+\.js)"', t)))
-          print("JS", js)
-          m = re.search(r'<script id="[^"]*state" type="application/json">(.*?)</script>', t, re.S)
-          raw = m.group(1).replace('&q;','"').replace('&a;','&').replace('&s;',"'").replace('&l;','<').replace('&g;','>')
-          st = json.loads(raw); print("STATE KEYS", list(st.keys()))
-          for k, v in st.items():
-              if k.startswith("porcentajes"): print(k, json.dumps(v)[:1500])
-          for j in js[:8]:
-              u = j if j.startswith("http") else "https://www.eduardolosilla.es/" + j.lstrip("/")
+          b = s.get("https://www.eduardolosilla.es/main.b7acf9bced1373c1c50b.bundle.js", timeout=60).text
+          for kw in ["historico_porcentajes", "datosgeneralesjornada", "porcentajes1x2", "escrutinios", "jornadasJugadas", "probabilidades_"]:
+              for m in list(re.finditer(re.escape(kw), b))[:3]:
+                  print("CTX", kw, b[max(0, m.start() - 300): m.end() + 200].replace("\n", " "))
+          def state(url):
+              t = s.get(url, timeout=40).text
+              m = re.search(r'<script id="[^"]*state" type="application/json">(.*?)</script>', t, re.S)
+              if not m: return None, len(t)
+              raw = m.group(1).replace('&q;','"').replace('&a;','&').replace('&s;',"'").replace('&l;','<').replace('&g;','>')
+              return json.loads(raw), len(t)
+          for u in ["https://www.eduardolosilla.es/quiniela/ayudas/escrutinio/jornada_10", "https://www.eduardolosilla.es/quiniela/ayudas/escrutinio",
+                    "https://www.eduardolosilla.es/quiniela/ayudas/historico-1X2", "https://www.eduardolosilla.es/quiniela/ayudas/porcentajes", "https://www.eduardolosilla.es/extras/descargas/porcentajes1x2"]:
               try:
-                  b = s.get(u, timeout=30).text
-                  hits = sorted(set(re.findall(r'["\'`](/?[a-zA-Z0-9_\-/]*(?:porcentaj|estadistic|historic|jornada|escrutinio|premio)[a-zA-Z0-9_\-/{}$.]*)["\'`]', b)))
-                  hosts = sorted(set(re.findall(r'https?://[a-zA-Z0-9.\-]+', b)))
-                  print("BUNDLE", u, len(b), hits[:80], hosts[:30])
+                  st, n = state(u)
+                  print("\nPAGE", u, n, list(st.keys()) if st else None)
+                  if st:
+                      for k, v in st.items():
+                          if k not in ("datosGeneralesQuiniela", "noticias_quiniela"): print("  ", k, json.dumps(v)[:1200])
               except Exception as e: print("ERR", u, e)
           PY
           git config user.name probe; git config user.email probe@example.com
-          git add raw16; git commit -qm probe-out16; git push origin HEAD:probe
+          git add raw17; git commit -qm probe-out17; git push origin HEAD:probe
