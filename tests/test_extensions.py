@@ -96,3 +96,46 @@ def test_previa_sin_inventar():
     t = insights.preview(p, {"Barcelona": {"pos": 1, "pts": 27, "last5": [{"res": "V"}] * 5}, "Alaves": {"pos": 15, "pts": 9}},
                          {"Alaves": "Alavés"})
     assert "Barcelona es claro favorito (80 %)" in t and "Bajas de Alavés: X Y" in t and "Raphinha (45 %)" in t
+
+
+def test_ratings_del_mercado_recuperan_la_fuerza():
+    from laliga.models import market_ratings as mr
+    from laliga.models.dixon_coles import score_matrix
+    # ida y vuelta: goles esperados -> 1X2 y +2,5 -> goles esperados
+    m = score_matrix(1.7, 0.9, mr.RHO, 10)
+    i, j = np.indices(m.shape)
+    p = np.array([[m[i > j].sum(), m[i == j].sum(), m[i < j].sum()]])
+    lam, mu = mr.implied_goals(p, np.array([m[(i + j) > 2].sum()]))
+    assert abs(lam[0] - 1.7) < 0.05 and abs(mu[0] - 0.9) < 0.05
+    # partidos sintéticos con cuotas coherentes con una fuerza conocida: se recupera el orden
+    rng = np.random.default_rng(0)
+    strength = {"A": 0.5, "B": 0.2, "C": 0.0, "D": -0.3}
+    rows = []
+    for k in range(240):
+        h, a = rng.choice(list(strength), 2, replace=False)
+        l_, m_ = np.exp(0.35 + strength[h] - strength[a] * 0.5), np.exp(0.25 + strength[a] - strength[h] * 0.5)
+        sm = score_matrix(l_, m_, mr.RHO, 10)
+        ph, pd_, pa = sm[i > j].sum(), sm[i == j].sum(), sm[i < j].sum()
+        po = sm[(i + j) > 2].sum()
+        rows.append({"date": pd.Timestamp("2026-01-01") + pd.Timedelta(days=k), "home": h, "away": a,
+                     "odds_close_h": 1 / ph, "odds_close_d": 1 / pd_, "odds_close_a": 1 / pa,
+                     "ouc_o25": 1 / po, "ouc_u25": 1 / (1 - po)})
+    r = mr.MarketRatings(xi=0.0, ridge=0.5).fit(pd.DataFrame(rows), "2027-01-01", list(strength), set())
+    order = sorted(strength, key=r.strength, reverse=True)
+    assert order == ["A", "B", "C", "D"]
+    p1 = r.predict("A", "D")
+    assert p1["p_home"] > 0.5
+
+
+def test_backtest_quiniela_con_premios_reales(monkeypatch, tmp_path):
+    from laliga import quiniela_backtest as qb
+    from laliga.config import load_settings
+    s = load_settings(root=tmp_path)
+    ms = [{"n": k + 1, "home": f"H{k}", "away": f"A{k}", "hg": 1, "ag": 0, "status": "final"} for k in range(15)]
+    pg = {"date": "2026-11-01", "jornada": 18, "prev": None, "matches": ms, "recaudacion": 3e6,
+          "prizes": {"14": 5000.0, "13": 100.0, "12": 15.0, "11": 3.0, "10": 0.0, "P15": 80000.0}}
+    monkeypatch.setattr(qb, "collect", lambda st, on, max_back=45: [pg])
+    monkeypatch.setattr(qb, "public_for", lambda st, j, t, on: {"lae": [[0.5, 0.3, 0.2]] * 14, "real": [[0.45, 0.28, 0.27]] * 14})
+    out = qb.run(s, online=True)
+    assert out["summary"]["sencilla"]["premios"] == 5000.0  # 14 aciertos (todos ganan los locales)
+    assert out["summary"]["sencilla"]["coste"] == 0.75

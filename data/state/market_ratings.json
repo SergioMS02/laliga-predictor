@@ -1,0 +1,39 @@
+{
+ "by_horizon": {
+  "0-7d": {
+   "n": 1733,
+   "dixon_coles": 0.9741,
+   "mercado": 0.9673,
+   "mezcla": 0.9672,
+   "w_mercado": 0.9
+  },
+  "21-28d": {
+   "n": 1651,
+   "dixon_coles": 0.9883,
+   "mercado": 0.9813,
+   "mezcla": 0.9813,
+   "w_mercado": 0.9
+  }
+ },
+ "w_mercado": 0.9,
+ "seasons": [
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "updated": "2026-11-03",
+ "sin_cuotas": {
+  "n": 1989,
+  "modelo_sin_cuotas": 0.9816,
+  "ratings_mercado": 0.9751,
+  "mezcla": 0.9745,
+  "w": 0.7
+ }
+}

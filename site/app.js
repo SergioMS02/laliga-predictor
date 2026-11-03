@@ -1107,6 +1107,7 @@ function routeNow() {
   if (tabv === "quiniela") {
     if (arg) Q_SEL = arg;
     renderQuiniela();
+    document.getElementById("qbt").innerHTML = EXTRA.quinielaBacktestHtml();
     document.getElementById("quinigol").innerHTML = EXTRA.quinigolHtml() || '<p class="quiet">Aparecerá con los próximos partidos.</p>';
   }
   if (tabv === "aciertos") {

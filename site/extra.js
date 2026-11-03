@@ -329,6 +329,21 @@ function quinigolFromMatches() {
     <p class="quiet small">Probabilidad (%) de que cada equipo marque 0, 1, 2 o más goles (M), con la matriz de marcadores del modelo. Son los próximos partidos de LaLiga: el boleto oficial del Quinigol puede incluir otros.</p>`;
 }
 
+/* ---------- Quiniela con jornadas reales ---------- */
+function quinielaBacktestHtml() {
+  const B = DATA.quiniela_backtest || {};
+  const S = B.summary || {};
+  const names = { sencilla: "Sencilla", reducida: "Reducida", valor: "Contra la mayoría" };
+  const keys = ["sencilla", "reducida", "valor"].filter((k) => S[k]);
+  if (!keys.length) return '<p class="quiet">Aparecerá tras el próximo reentrenamiento semanal.</p>';
+  const eur2 = (v) => `${dec(v, 2)} €`;
+  const rows = keys.map((k) => { const r = S[k]; return `<tr><th scope="row" class="l">${names[k]}</th><td class="num">${r.jornadas}</td><td class="num">${eur2(r.coste)}</td><td class="num">${eur2(r.premios)}</td><td class="num ${r.roi > 0 ? "up" : "down"}">${r.roi > 0 ? "+" : "−"}${Math.round(Math.abs(100 * r.roi))} %</td><td class="num">${r.con_premio}</td><td class="num">${dec(r.aciertos_medios, 1)}</td><td class="num quiet">${r.ev_estimado != null ? eur2(r.ev_estimado) : "–"}</td></tr>`; }).join("");
+  const v = S.valor;
+  const warn = v && v.ev_estimado != null && v.ev_estimado > v.coste ? `<p class="quiet small"><b>Ojo:</b> el premio esperado que calcula el modelo para «contra la mayoría» (${eur2(v.ev_estimado)} por ${eur2(v.coste)} jugados) está muy por encima de lo cobrado (${eur2(v.premios)}). Con tan pocas jornadas no se puede descartar la mala suerte, porque casi todo ese premio esperado viene de acertar 14, pero de momento no hay ninguna prueba de que funcione: tómalo como una estimación muy optimista.</p>` : "";
+  return `<div class="tbl-wrap"><table class="track"><thead><tr><th scope="col" class="l">Boleto</th><th scope="col" class="num">Jornadas</th><th scope="col" class="num">Jugado</th><th scope="col" class="num">Cobrado</th><th scope="col" class="num">Rentabilidad</th><th scope="col" class="num">Con premio</th><th scope="col" class="num">Aciertos medios</th><th scope="col" class="num">Premio esperado</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <p class="quiet small">Cada boleto rellenado como se hace ahora, con las probabilidades del mercado (Betfair) y lo que jugó la gente en Loterías en cada jornada ya terminada de esta temporada, y cobrado con la tabla oficial de premios de esa jornada. Solo hay porcentajes públicos de la temporada en curso, así que la muestra es pequeña; se amplía sola cada semana.</p>${warn}`;
+}
+
 /* ---------- Lo que se ha medido (Aciertos) ---------- */
 function measuredHtml() {
   const pc = DATA.projection_calib || {}, lc = DATA.live_calib || {};
@@ -360,5 +375,5 @@ function measuredHtml() {
   return parts.length ? `<div class="pm-grid">${parts.join("")}</div>` : '<p class="quiet">Aparecerá tras el próximo reentrenamiento semanal.</p>';
 }
 
-window.EXTRA = { measuredHtml, previewHtml, marketsHtml, thresholdsHtml, simulatorHtml, wireSimulator, luckHtml, awardsHtml, styleHtml,
+window.EXTRA = { measuredHtml, quinielaBacktestHtml, previewHtml, marketsHtml, thresholdsHtml, simulatorHtml, wireSimulator, luckHtml, awardsHtml, styleHtml,
   eloSeasonsHtml, playersHtml, wirePlayers, refereesHtml, leaguesHtml, wireLeagues, cupsHtml, quinigolHtml };
