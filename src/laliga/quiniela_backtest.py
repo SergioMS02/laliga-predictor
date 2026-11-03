@@ -97,10 +97,12 @@ def public_for(settings: Settings, jornada: int, season_tag: int | None, online:
 def run(settings: Settings, online: bool = True) -> dict:
     c = q.cfg(settings)
     pages = collect(settings, online)
+    diag = {"paginas": len(pages), "sin_porcentajes": [], "errores": []}
     rows_out = []
     for pg in sorted(pages, key=lambda p: p["date"]):
         pub = public_for(settings, pg["jornada"], None, online)
         if not pub or len(pg["matches"]) < 14:
+            diag["sin_porcentajes"].append(pg["jornada"])
             continue
         rows = []
         for k, m in enumerate(pg["matches"][:15]):
@@ -113,10 +115,14 @@ def run(settings: Settings, online: bool = True) -> dict:
         if len(rows) < 14:
             continue
         rec = pg.get("recaudacion") or q.DEFAULT_RECAUDACION
-        tickets = q.build_tickets(rows, c, pub["lae"][:14], rec)
-        j = {"tickets": tickets, "matches": pg["matches"][:15], "prizes": pg["prizes"],
-             "pleno": q.pleno_probs(rows[14]["lam"], rows[14]["mu"]) if len(rows) > 14 else None}
-        res = q.settle(j)
+        try:
+            tickets = q.build_tickets(rows, c, pub["lae"][:14], rec)
+            j = {"tickets": tickets, "matches": pg["matches"][:15], "prizes": pg["prizes"],
+                 "pleno": q.pleno_probs(rows[14]["lam"], rows[14]["mu"]) if len(rows) > 14 else None}
+            res = q.settle(j)
+        except Exception as e:
+            diag["errores"].append(f"{pg['jornada']}: {e}")
+            continue
         rows_out.append({"date": pg["date"], "jornada": pg["jornada"], "recaudacion": rec,
                          **{k: {"hits": res[k]["hits"], "prize": res[k]["prize"], "cost": tickets[k]["cost"],
                                 "ev": tickets[k].get("ev"), "p10": tickets[k].get("p10plus")}
@@ -135,6 +141,7 @@ def run(settings: Settings, online: bool = True) -> dict:
                       "aciertos_medios": round(float(np.mean([x["hits"] for x in r])), 2),
                       "ev_estimado": round(float(np.sum(evs)), 2) if evs else None}
     out = {"updated": datetime.now(timezone.utc).isoformat(timespec="minutes"), "jornadas": rows_out, "summary": summary,
+           "diagnostico": diag,
            "nota": "Probabilidades del mercado (Betfair) y porcentajes de Loterías publicados por eduardolosilla.es; "
                    "premios y resultados oficiales de combinacionganadora.com."}
     (settings.predictions_dir / "quiniela_backtest.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
