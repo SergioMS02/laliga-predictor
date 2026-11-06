@@ -411,3 +411,13 @@ generated_at,season,date,home,away,p_home,p_draw,p_away,model,lineup_confirmed
 2026-11-05T14:38:12.934233+00:00,2026,2026-11-08,Celta,Levante,0.533,0.2516,0.2154,stacker,False
 2026-11-05T14:38:12.934233+00:00,2026,2026-11-08,Villarreal,Getafe,0.6206,0.2329,0.1464,stacker,False
 2026-11-05T14:38:12.934233+00:00,2026,2026-11-08,Ath Madrid,Barcelona,0.3135,0.2403,0.4462,stacker,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-06,Sevilla,Alaves,0.5238,0.2772,0.199,stacker_mercado,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-07,Malaga,Santander,0.4107,0.2697,0.3196,stacker_mercado,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-07,Espanol,La Coruna,0.3685,0.2965,0.335,stacker_mercado,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-07,Osasuna,Ath Bilbao,0.2816,0.2905,0.4279,stacker_mercado,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-07,Valencia,Real Madrid,0.0906,0.1487,0.7607,stacker_mercado,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-08,Elche,Betis,0.3221,0.2643,0.4136,stacker_mercado,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-08,Sociedad,Vallecano,0.5496,0.2394,0.211,stacker_mercado,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-08,Celta,Levante,0.4938,0.2659,0.2403,stacker_mercado,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-08,Villarreal,Getafe,0.6961,0.1989,0.1051,stacker_mercado,False
+2026-11-06T14:14:52.412715+00:00,2026,2026-11-08,Ath Madrid,Barcelona,0.2924,0.2342,0.4734,stacker_mercado,False
