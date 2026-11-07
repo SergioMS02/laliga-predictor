@@ -1,5 +1,5 @@
 {
- "at": "2026-11-07T12:58+00:00",
+ "at": "2026-11-07T16:06+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -51,13 +51,13 @@
   },
   "futbolfantasy (lesionados y sancionados)": {
    "ok": true,
-   "rows": 71,
+   "rows": 70,
    "error": null,
    "note": null
   },
   "ESPN (alineaciones y árbitro del partido)": {
    "ok": true,
-   "rows": 9,
+   "rows": 1,
    "error": null,
    "note": null
   },
@@ -69,7 +69,7 @@
   },
   "Polymarket (precios de partidos)": {
    "ok": true,
-   "rows": 11,
+   "rows": 10,
    "error": null,
    "note": null
   }

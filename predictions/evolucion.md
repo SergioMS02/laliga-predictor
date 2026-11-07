@@ -1,6 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-07 12:57 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-11-07 16:05 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Malaga – Santander (2026-11-07)
 

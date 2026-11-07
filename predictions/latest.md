@@ -6,7 +6,7 @@ Generado: 2026-11-07 12:57 UTC
 |---|---|---|---|---|---|---|---|---|---|---|
 | 07/11 14:00 | Malaga – Santander | 42% | 26% | 32% | ▄▄▄▄▄▄▄▄▄ 43→42% = | 1.81–1.52 | 1-1 (10%) | 65% | 66% | ✅ alineaciones |
 | 07/11 16:15 | Espanol – La Coruna | 37% | 30% | 34% | ▄▄▃▄▄▄▃▃ 40→37% ▼ | 1.38–1.07 | 1-1 (13%) | 44% | 50% | 🚑 Urko Gonzalez, Jofre Carreras, Kike García, Roger Hinojo, Éder Sarabia Sanción disciplinaria (2/2) Noticia, Zakaria Eddahchouri |
-| 07/11 18:30 | Osasuna – Ath Bilbao | 28% | 29% | 43% | ▃▃▃▃▃▃▃▃▃ 31→28% ▼ | 1.23–1.22 | 1-1 (13%) | 44% | 51% | 🚑 Jorge Herrando, Aimar Oroz, Romain Del Castillo?, Aitor Paredes, Gorka Guruzeta, Unai Egiluz |
+| 07/11 18:30 | Osasuna – Ath Bilbao | 28% | 29% | 43% | ▃▃▃▃▃▃▃▃▃▃ 31→28% ▼ | 1.23–1.23 | 1-1 (13%) | 44% | 51% | 🚑 Jorge Herrando, Aimar Oroz, Romain Del Castillo?, Aitor Paredes, Gorka Guruzeta, Unai Egiluz |
 | 07/11 21:00 | Valencia – Real Madrid | 9% | 15% | 76% | ▂▂▂▂▂▂▁▁ 18→9% ▼ | 0.90–1.75 | 0-1 (12%) | 49% | 49% | 🚑 Sergi Canós, Diego López, David Otorbi, Raúl Asencio, Rodrygo Goes, Ferland Mendy |
 | 08/11 14:00 | Elche – Betis | 32% | 26% | 41% | ▄▃▃▃▃▃ 38→32% ▼ | 1.43–1.44 | 1-1 (12%) | 55% | 59% | 🚑 Marc Aguado, Thomas Lemar, Gonzalo Villar?, Cucho Hernández, Facundo Bernal |
 | 08/11 16:15 | Sociedad – Vallecano | 55% | 24% | 21% | ▅▅▅▅▅▅▅▅ 53→55% ▲ | 1.83–1.17 | 1-1 (11%) | 58% | 58% | 🚑 Mamadou Sarr, Álvaro Odriozola, Marash Kumbulla, Luiz Felipe, Augusto Batalla, Álvaro García |
