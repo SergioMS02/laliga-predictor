@@ -1,31 +1,10 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
-
-## Sevilla – Alaves (2026-11-06)
-
-1 ▄▄▄▄▄▄▅ · X ▃▃▃▃▃▃▃ · 2 ▂▂▂▂▃▃▂
-
-| Momento (Madrid) | 1 | X | 2 | Alineación |
-|---|---|---|---|---|
-| 30/10 13:52 | 46% | 29% | 24% |  |
-| 01/11 14:19 | 48% | 28% | 24% |  |
-| 02/11 16:47 | 48% | 28% | 24% |  |
-| 03/11 15:11 | 48% | 28% | 24% |  |
-| 03/11 20:27 | 46% | 28% | 25% |  |
-| 05/11 15:38 | 46% | 28% | 25% |  |
-| 06/11 15:14 | 52% | 28% | 20% |  |
-
-**Cambios importantes**
-
-- 06/11 15:14 — Sevilla – Alaves: gana Alaves 25% → 20%
-  - -5.1 pts · Precio de Polymarket: empieza a usarse (53 / 28 / 20 %, 90 % del peso)
-  - -2.7 pts · Cuotas de mercado: primeras cuotas disponibles 1.86/3.40/4.38
-  - +2.4 pts · Efecto combinado de varios factores
+Actualizado: 2026-11-07 12:57 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Malaga – Santander (2026-11-07)
 
-1 ▄▄▄▄▄▄▄▄ · X ▃▃▂▂▃▃▃▃ · 2 ▃▃▃▃▃▃▃▃
+1 ▄▄▄▄▄▄▄▄▄ · X ▃▃▂▂▃▃▃▃▃ · 2 ▃▃▃▃▃▃▃▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -37,10 +16,11 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 | 04/11 15:31 | 43% | 26% | 31% |  |
 | 05/11 15:38 | 43% | 25% | 31% |  |
 | 06/11 15:14 | 41% | 27% | 32% |  |
+| 07/11 13:57 | 42% | 26% | 32% | ✅ |
 
 ## Espanol – La Coruna (2026-11-07)
 
-1 ▄▄▃▄▄▄▃ · X ▃▃▃▃▃▃▃ · 2 ▃▃▃▃▃▃▃
+1 ▄▄▃▄▄▄▃▃ · X ▃▃▃▃▃▃▃▃ · 2 ▃▃▃▃▃▃▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -51,6 +31,7 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 | 04/11 15:31 | 45% | 28% | 27% |  |
 | 05/11 15:38 | 45% | 28% | 27% |  |
 | 06/11 15:14 | 37% | 30% | 34% |  |
+| 07/11 13:57 | 37% | 30% | 34% |  |
 
 **Cambios importantes**
 
@@ -63,7 +44,7 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Osasuna – Ath Bilbao (2026-11-07)
 
-1 ▃▃▃▃▃▃▃▃ · X ▃▃▃▃▃▃▃▃ · 2 ▄▄▄▄▄▄▄▄
+1 ▃▃▃▃▃▃▃▃▃ · X ▃▃▃▃▃▃▃▃▃ · 2 ▄▄▄▄▄▄▄▄▄
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -75,10 +56,11 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 | 04/11 15:31 | 32% | 29% | 39% |  |
 | 05/11 15:38 | 32% | 29% | 39% |  |
 | 06/11 15:14 | 28% | 29% | 43% |  |
+| 07/11 13:57 | 28% | 29% | 43% |  |
 
 ## Valencia – Real Madrid (2026-11-07)
 
-1 ▂▂▂▂▂▂▁ · X ▃▃▃▂▂▂▂ · 2 ▅▅▅▅▅▅▇
+1 ▂▂▂▂▂▂▁▁ · X ▃▃▃▂▂▂▂▂ · 2 ▅▅▅▅▅▅▇▇
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -89,6 +71,7 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 | 04/11 15:31 | 17% | 23% | 60% |  |
 | 05/11 15:38 | 17% | 23% | 60% |  |
 | 06/11 15:14 | 9% | 15% | 76% |  |
+| 07/11 13:57 | 9% | 15% | 76% |  |
 
 **Cambios importantes**
 
@@ -112,7 +95,7 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Sociedad – Vallecano (2026-11-08)
 
-1 ▅▅▅▅▅▅▅ · X ▂▃▃▃▃▃▂ · 2 ▂▂▂▂▂▂▂
+1 ▅▅▅▅▅▅▅▅ · X ▂▃▃▃▃▃▂▂ · 2 ▂▂▂▂▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -123,6 +106,7 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 | 04/11 15:31 | 51% | 25% | 24% |  |
 | 05/11 15:38 | 51% | 25% | 24% |  |
 | 06/11 15:14 | 55% | 24% | 21% |  |
+| 07/11 13:57 | 55% | 24% | 21% |  |
 
 **Cambios importantes**
 
@@ -133,7 +117,7 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Celta – Levante (2026-11-08)
 
-1 ▄▄▄▅▄ · X ▃▃▃▃▃ · 2 ▂▃▃▂▂
+1 ▄▄▄▅▄▄ · X ▃▃▃▃▃▃ · 2 ▂▃▃▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -142,6 +126,7 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 | 03/11 15:11 | 48% | 26% | 25% |  |
 | 03/11 20:27 | 53% | 25% | 22% |  |
 | 06/11 15:14 | 49% | 27% | 24% |  |
+| 07/11 13:57 | 49% | 27% | 24% |  |
 
 **Cambios importantes**
 
@@ -150,7 +135,7 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Villarreal – Getafe (2026-11-08)
 
-1 ▆▆▅▅▆ · X ▂▂▂▂▂ · 2 ▁▁▂▂▁
+1 ▆▆▅▅▆▆ · X ▂▂▂▂▂▂ · 2 ▁▁▂▂▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -159,6 +144,7 @@ Actualizado: 2026-11-06 14:15 UTC. Umbral de cambio importante: 4 puntos.
 | 03/11 20:27 | 62% | 23% | 15% |  |
 | 04/11 15:31 | 62% | 23% | 15% |  |
 | 06/11 15:14 | 70% | 20% | 11% |  |
+| 07/11 13:57 | 70% | 20% | 10% |  |
 
 **Cambios importantes**
 
