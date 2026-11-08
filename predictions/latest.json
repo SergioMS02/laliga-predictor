@@ -1465,96 +1465,96 @@
   }
  },
  {
-  "generated_at": "2026-11-08T13:21:21.690539+00:00",
+  "generated_at": "2026-11-08T16:30:41.209640+00:00",
   "season": 2026,
   "date": "2026-11-08",
   "kickoff_utc": "2026-11-08T17:30:00+00:00",
   "home": "Celta",
   "away": "Levante",
-  "p_home": 0.494,
-  "p_draw": 0.2647,
-  "p_away": 0.2414,
+  "p_home": 0.4898,
+  "p_draw": 0.2693,
+  "p_away": 0.2409,
   "model": "stacker_mercado",
   "p_model": [
-   0.494,
-   0.2647,
-   0.2414
+   0.4898,
+   0.2693,
+   0.2409
   ],
   "polymarket": {
    "p": [
-    0.5323,
-    0.2637,
-    0.204
+    0.5276,
+    0.2663,
+    0.206
    ],
-   "volume": 5427,
-   "liquidity": 348645,
+   "volume": 6879,
+   "liquidity": 519182,
    "url": "https://polymarket.com/event/lal-cel-lev-2026-11-08",
    "slug": "lal-cel-lev-2026-11-08",
-   "overround": 0.005,
+   "overround": -0.005,
    "used": false,
-   "reason": "poco volumen (5.427 $)",
+   "reason": "poco volumen (6.879 $)",
    "model_weight": null,
    "more": {
     "totals": {
      "2.5": {
       "p": 0.505,
-      "volume": 221761
+      "volume": 222082
      },
      "3.5": {
-      "p": 0.295,
-      "volume": 4623
+      "p": 0.285,
+      "volume": 4963
      }
     }
    }
   },
   "dc": {
-   "p_home": 0.5238,
-   "p_draw": 0.2445,
-   "p_away": 0.2317,
-   "xg_home": 1.7795,
-   "xg_away": 1.1144,
-   "p_over25": 0.5526,
-   "p_btts": 0.5642,
+   "p_home": 0.5082,
+   "p_draw": 0.2521,
+   "p_away": 0.2397,
+   "xg_home": 1.6978,
+   "xg_away": 1.0977,
+   "p_over25": 0.5295,
+   "p_btts": 0.5503,
    "top_scores": [
     [
      "1-1",
-     0.11542356528551487
-    ],
-    [
-     "2-1",
-     0.09767978652599922
+     0.11972606996065173
     ],
     [
      "1-0",
-     0.0928734116215862
+     0.09782033226766466
+    ],
+    [
+     "2-1",
+     0.0966406943918743
     ]
    ]
   },
   "xg_base": [
-   1.73,
-   1.081
+   1.728,
+   1.085
   ],
   "elo_diff": 89.7,
   "referee": null,
   "weather": {
-   "temp_c": 21.1,
-   "precip_mm": 0.1,
-   "wind_kmh": 17.8
+   "temp_c": 20.7,
+   "precip_mm": 0.0,
+   "wind_kmh": 16.4
   },
   "market": [
    0.5156,
    0.2579,
    0.2265
   ],
-  "lineup_confirmed": false,
-  "availability_source": "lesionados y sancionados",
+  "lineup_confirmed": true,
+  "availability_source": "alineación oficial",
   "deficit": [
-   0.093,
-   0.042
+   0.478,
+   0.236
   ],
   "deficit_defence": [
-   0.124,
-   0.138
+   0.142,
+   0.144
   ],
   "context": {
    "stake_diff_late": -0.02,
@@ -1570,59 +1570,39 @@
    "red_prev_away": 0.0,
    "post_break": 0.0
   },
-  "absences": {
-   "Celta": [
-    {
-     "player": "Carl Starfelt",
-     "status": "out",
-     "reason": "injury",
-     "source": "futbolfantasy: Lesión en el semimembranoso · Baja hasta mediados de noviembre"
-    },
-    {
-     "player": "Borja Iglesias",
-     "status": "out",
-     "reason": "injury",
-     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre"
-    },
-    {
-     "player": "Miguel Román",
-     "status": "out",
-     "reason": "injury",
-     "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja hasta principios de noviembre"
-    },
-    {
-     "player": "Álvaro Núñez",
-     "status": "out",
-     "reason": "injury",
-     "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediados de noviembre"
-    },
-    {
-     "player": "Jones El-Abdellaoui",
-     "status": "out",
-     "reason": "injury",
-     "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja confirmada para la jornada 12"
-    },
-    {
-     "player": "Bernard Somuah",
-     "status": "out",
-     "reason": "injury",
-     "source": "futbolfantasy: Rotura de la sindesmosis del tobillo izquierdo · Baja hasta finales de enero"
-    }
+  "absences": {},
+  "lineups": {
+   "home": [
+    "Andrei Radu",
+    "Javi Rodríguez",
+    "Sebastián Cáceres",
+    "Marcos Alonso",
+    "Sergio Carreira",
+    "Ilaix Moriba",
+    "Javi Rueda",
+    "Andrés Antañón",
+    "Iago Aspas",
+    "Couhaib Driouech",
+    "Pablo Durán"
    ],
-   "Levante": [
-    {
-     "player": "Manu Sánchez",
-     "status": "out",
-     "reason": "injury",
-     "source": "futbolfantasy: Lesión en los isquiotibiales · Baja confirmada para la jornada 12"
-    }
+   "away": [
+    "Mathew Ryan",
+    "Aïssa Mandi",
+    "Jeremy Toljan",
+    "Nacho Pérez",
+    "Ifeanyi Ndukwe",
+    "Hugo Sotelo",
+    "Jon Ander Olasagasti",
+    "Dani Requena",
+    "Thiago Fernandez",
+    "Roger Brugué",
+    "Etta Eyong"
    ]
   },
-  "lineups": null,
   "squads": {
    "home": {
-    "confirmed": false,
-    "formation": null,
+    "confirmed": true,
+    "formation": "3-4-3",
     "xi": [
      {
       "name": "Andrei Radu",
@@ -1631,148 +1611,146 @@
       "imp": 1.0,
       "att": 0.01,
       "absent": null,
+      "jersey": "13",
       "usual": true
-     },
-     {
-      "name": "Ilaix Moriba",
-      "pos": "CM-R",
-      "role": "M",
-      "imp": 1.0,
-      "att": 0.13,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Yoel Lago",
-      "pos": "CD",
-      "role": "D",
-      "imp": 0.9,
-      "att": 0.01,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Ferran Jutglà",
-      "pos": "F",
-      "role": "F",
-      "imp": 0.7,
-      "att": 0.37,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Javi Rueda",
-      "pos": "RM",
-      "role": "M",
-      "imp": 0.7,
-      "att": 0.3,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Hugo Gonzalez",
-      "pos": "CF-L",
-      "role": "F",
-      "imp": 0.6,
-      "att": 0.64,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Hugo Álvarez",
-      "pos": "CF-R",
-      "role": "F",
-      "imp": 0.6,
-      "att": 0.32,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Marcos Alonso",
-      "pos": "SUB",
-      "role": "D",
-      "imp": 0.6,
-      "att": 0.11,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Javi Galán",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.5,
-      "att": 0.14,
-      "absent": null,
-      "usual": false,
-      "replaces": "Miguel Román"
      },
      {
       "name": "Javi Rodríguez",
-      "pos": "CD-R",
+      "pos": "D",
       "role": "D",
       "imp": 0.5,
       "att": 0.08,
       "absent": null,
+      "jersey": "20",
       "usual": true
      },
      {
-      "name": "Williot Swedberg",
-      "pos": "SUB",
-      "role": "F",
-      "imp": 0.5,
-      "att": 0.48,
+      "name": "Sebastián Cáceres",
+      "pos": "D",
+      "role": "D",
+      "imp": 0.4,
+      "att": 0.02,
       "absent": null,
+      "jersey": "21",
+      "usual": false
+     },
+     {
+      "name": "Marcos Alonso",
+      "pos": "D",
+      "role": "D",
+      "imp": 0.6,
+      "att": 0.11,
+      "absent": null,
+      "jersey": "3",
       "usual": true
+     },
+     {
+      "name": "Sergio Carreira",
+      "pos": "M",
+      "role": "M",
+      "imp": 0.4,
+      "att": 0.13,
+      "absent": null,
+      "jersey": "5",
+      "usual": false
+     },
+     {
+      "name": "Ilaix Moriba",
+      "pos": "M",
+      "role": "M",
+      "imp": 1.0,
+      "att": 0.13,
+      "absent": null,
+      "jersey": "6",
+      "usual": true
+     },
+     {
+      "name": "Javi Rueda",
+      "pos": "M",
+      "role": "M",
+      "imp": 0.7,
+      "att": 0.3,
+      "absent": null,
+      "jersey": "17",
+      "usual": true
+     },
+     {
+      "name": "Andrés Antañón",
+      "pos": "M",
+      "role": "M",
+      "imp": 0.1,
+      "att": 0.25,
+      "absent": null,
+      "jersey": "28",
+      "usual": false
+     },
+     {
+      "name": "Iago Aspas",
+      "pos": "F",
+      "role": "F",
+      "imp": 0.2,
+      "att": 0.66,
+      "absent": null,
+      "jersey": "10",
+      "usual": false
+     },
+     {
+      "name": "Couhaib Driouech",
+      "pos": "F",
+      "role": "F",
+      "imp": 0.1,
+      "att": 0.25,
+      "absent": null,
+      "jersey": "24",
+      "usual": false
+     },
+     {
+      "name": "Pablo Durán",
+      "pos": "F",
+      "role": "F",
+      "imp": 0.4,
+      "att": 0.39,
+      "absent": null,
+      "jersey": "11",
+      "usual": false
      }
     ],
     "out": [
      {
-      "name": "Carl Starfelt",
-      "status": "out",
-      "reason": "injury",
-      "source": "futbolfantasy: Lesión en el semimembranoso · Baja hasta mediados de noviembre",
-      "imp": 0.2
+      "name": "Yoel Lago",
+      "status": "no titular",
+      "imp": 0.9
      },
      {
-      "name": "Borja Iglesias",
-      "status": "out",
-      "reason": "injury",
-      "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre",
-      "imp": 0.0
+      "name": "Ferran Jutglà",
+      "status": "no titular",
+      "imp": 0.7
+     },
+     {
+      "name": "Hugo Gonzalez",
+      "status": "no titular",
+      "imp": 0.6
+     },
+     {
+      "name": "Hugo Álvarez",
+      "status": "no titular",
+      "imp": 0.6
      },
      {
       "name": "Miguel Román",
-      "status": "out",
-      "reason": "injury",
-      "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja hasta principios de noviembre",
+      "status": "no titular",
       "imp": 0.5
      },
      {
-      "name": "Álvaro Núñez",
-      "status": "out",
-      "reason": "injury",
-      "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediados de noviembre",
-      "imp": 0.4
-     },
-     {
-      "name": "Jones El-Abdellaoui",
-      "status": "out",
-      "reason": "injury",
-      "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja confirmada para la jornada 12",
-      "imp": 0.1
-     },
-     {
-      "name": "Bernard Somuah",
-      "status": "out",
-      "reason": "injury",
-      "source": "futbolfantasy: Rotura de la sindesmosis del tobillo izquierdo · Baja hasta finales de enero",
-      "imp": 0
+      "name": "Williot Swedberg",
+      "status": "no titular",
+      "imp": 0.5
      }
     ]
    },
    "away": {
-    "confirmed": false,
-    "formation": null,
+    "confirmed": true,
+    "formation": "4-3-3",
     "xi": [
      {
       "name": "Mathew Ryan",
@@ -1781,107 +1759,135 @@
       "imp": 1.0,
       "att": 0.01,
       "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Roger Brugué",
-      "pos": "RF",
-      "role": "M",
-      "imp": 1.0,
-      "att": 0.48,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Jeremy Toljan",
-      "pos": "RB",
-      "role": "D",
-      "imp": 0.5,
-      "att": 0.16,
-      "absent": null,
-      "usual": false,
-      "replaces": "Manu Sánchez"
-     },
-     {
-      "name": "Iván Romero",
-      "pos": "LM",
-      "role": "M",
-      "imp": 0.9,
-      "att": 0.49,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Jon Ander Olasagasti",
-      "pos": "CM",
-      "role": "M",
-      "imp": 0.9,
-      "att": 0.36,
-      "absent": null,
+      "jersey": "13",
       "usual": true
      },
      {
       "name": "Aïssa Mandi",
-      "pos": "CD-R",
+      "pos": "D",
       "role": "D",
       "imp": 0.8,
       "att": 0.04,
       "absent": null,
+      "jersey": "2",
       "usual": true
      },
      {
-      "name": "Thiago Fernández",
-      "pos": "LF",
-      "role": "M",
-      "imp": 0.8,
-      "att": 0.25,
-      "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Adrián de la Fuente",
-      "pos": "SUB",
+      "name": "Jeremy Toljan",
+      "pos": "D",
       "role": "D",
-      "imp": 0.7,
-      "att": 0.2,
+      "imp": 0.5,
+      "att": 0.16,
       "absent": null,
-      "usual": true
-     },
-     {
-      "name": "Orio Rey",
-      "pos": "SUB",
-      "role": "M",
-      "imp": 0.6,
-      "att": 0.03,
-      "absent": null,
+      "jersey": "22",
       "usual": true
      },
      {
       "name": "Nacho Pérez",
-      "pos": "LB",
+      "pos": "D",
       "role": "D",
       "imp": 0.6,
       "att": 0.23,
       "absent": null,
+      "jersey": "29",
       "usual": true
      },
      {
-      "name": "Enzo Bardeli",
-      "pos": "RM",
+      "name": "Ifeanyi Ndukwe",
+      "pos": "D",
+      "role": "D",
+      "imp": 0.5,
+      "att": 0.1,
+      "absent": null,
+      "jersey": "3",
+      "usual": true
+     },
+     {
+      "name": "Hugo Sotelo",
+      "pos": "M",
+      "role": "M",
+      "imp": 0.1,
+      "att": 0.25,
+      "absent": null,
+      "jersey": "5",
+      "usual": false
+     },
+     {
+      "name": "Jon Ander Olasagasti",
+      "pos": "M",
+      "role": "M",
+      "imp": 0.9,
+      "att": 0.36,
+      "absent": null,
+      "jersey": "8",
+      "usual": true
+     },
+     {
+      "name": "Dani Requena",
+      "pos": "M",
       "role": "M",
       "imp": 0.5,
-      "att": 0.16,
+      "att": 0.18,
       "absent": null,
+      "jersey": "6",
       "usual": true
+     },
+     {
+      "name": "Thiago Fernandez",
+      "pos": "F",
+      "role": "F",
+      "imp": 0.8,
+      "att": 0.25,
+      "absent": null,
+      "jersey": "24",
+      "usual": true
+     },
+     {
+      "name": "Roger Brugué",
+      "pos": "F",
+      "role": "F",
+      "imp": 1.0,
+      "att": 0.48,
+      "absent": null,
+      "jersey": "7",
+      "usual": true
+     },
+     {
+      "name": "Etta Eyong",
+      "pos": "F",
+      "role": "F",
+      "imp": 0.1,
+      "att": 0.5,
+      "absent": null,
+      "jersey": "21",
+      "usual": false
      }
     ],
     "out": [
      {
       "name": "Manu Sánchez",
-      "status": "out",
-      "reason": "injury",
-      "source": "futbolfantasy: Lesión en los isquiotibiales · Baja confirmada para la jornada 12",
+      "status": "no titular",
       "imp": 0.9
+     },
+     {
+      "name": "Iván Romero",
+      "status": "no titular",
+      "imp": 0.9
+     },
+     {
+      "name": "Adrián de la Fuente",
+      "status": "no titular",
+      "imp": 0.7
+     },
+     {
+      "name": "Orio Rey",
+      "status": "no titular",
+      "imp": 0.6
+     },
+     {
+      "name": "Enzo Bardeli",
+      "status": "no titular",
+      "imp": 0.5
      }
     ]
    }
@@ -1896,11 +1902,11 @@
    1.93
   ],
   "ou": {
-   "p_over": 0.5104,
-   "p_over_model": 0.5526,
+   "p_over": 0.5084,
+   "p_over_model": 0.5295,
    "p_over_market": 0.505,
    "market_src": "Polymarket",
-   "p_btts": 0.5642
+   "p_btts": 0.5503
   },
   "odds_market": {
    "max": [
@@ -1916,263 +1922,263 @@
   },
   "markets": {
    "double_chance": {
-    "1X": 0.7528,
-    "X2": 0.509,
-    "12": 0.7381
+    "1X": 0.7535,
+    "X2": 0.5142,
+    "12": 0.7323
    },
    "draw_no_bet": {
-    "1": 0.6651,
-    "2": 0.3349
+    "1": 0.6634,
+    "2": 0.3366
    },
    "totals": {
-    "0.5": 0.9241,
-    "1.5": 0.7505,
-    "2.5": 0.497,
-    "3.5": 0.2775,
-    "4.5": 0.1315
+    "0.5": 0.9173,
+    "1.5": 0.7334,
+    "2.5": 0.4745,
+    "3.5": 0.2579,
+    "4.5": 0.1186
    },
    "team_totals": {
     "home": {
-     "0.5": 0.7975,
-     "1.5": 0.4741,
-     "2.5": 0.2159
+     "0.5": 0.7863,
+     "1.5": 0.4565,
+     "2.5": 0.202
     },
     "away": {
-     "0.5": 0.6553,
-     "1.5": 0.2881,
-     "2.5": 0.0926
+     "0.5": 0.6426,
+     "1.5": 0.2749,
+     "2.5": 0.0857
     }
    },
-   "btts": 0.5287,
+   "btts": 0.5116,
    "clean_sheet": {
-    "home": 0.3447,
-    "away": 0.2025
+    "home": 0.3574,
+    "away": 0.2137
    },
    "margin": {
-    "home3+": 0.1082,
-    "home2": 0.1515,
-    "home1": 0.2312,
-    "draw": 0.2619,
-    "away1": 0.1522,
-    "away2": 0.0674,
-    "away3+": 0.0276
+    "home3+": 0.1026,
+    "home2": 0.1497,
+    "home1": 0.2335,
+    "draw": 0.2677,
+    "away1": 0.1536,
+    "away2": 0.0666,
+    "away3+": 0.0263
    },
    "exact": [
     {
      "score": "1-1",
-     "p": 0.1248
+     "p": 0.1275
     },
     {
      "score": "1-0",
-     "p": 0.1054
+     "p": 0.1116
     },
     {
      "score": "2-1",
-     "p": 0.0948
+     "p": 0.0936
     },
     {
      "score": "2-0",
-     "p": 0.089
+     "p": 0.0909
     },
     {
      "score": "0-0",
-     "p": 0.0759
+     "p": 0.0827
     },
     {
      "score": "0-1",
-     "p": 0.0682
+     "p": 0.0723
     },
     {
      "score": "1-2",
-     "p": 0.0632
+     "p": 0.0624
     },
     {
      "score": "2-2",
-     "p": 0.0505
+     "p": 0.0481
     }
    ],
    "asian": {
     "-2.5": {
-     "win": 0.1082,
+     "win": 0.1026,
      "push": 0.0,
-     "lose": 0.8918,
-     "fair_home": 9.239,
-     "fair_away": 1.121
+     "lose": 0.8974,
+     "fair_home": 9.745,
+     "fair_away": 1.114
     },
     "-2.25": {
-     "win": 0.1082,
-     "push": 0.0758,
-     "lose": 0.816,
-     "fair_home": 8.539,
-     "fair_away": 1.133
+     "win": 0.1026,
+     "push": 0.0748,
+     "lose": 0.8225,
+     "fair_home": 9.015,
+     "fair_away": 1.125
     },
     "-2.0": {
-     "win": 0.1082,
-     "push": 0.1515,
-     "lose": 0.7402,
-     "fair_home": 7.839,
-     "fair_away": 1.146
+     "win": 0.1026,
+     "push": 0.1497,
+     "lose": 0.7477,
+     "fair_home": 8.286,
+     "fair_away": 1.137
     },
     "-1.75": {
-     "win": 0.184,
-     "push": 0.0758,
-     "lose": 0.7402,
-     "fair_home": 5.023,
-     "fair_away": 1.249
+     "win": 0.1775,
+     "push": 0.0748,
+     "lose": 0.7477,
+     "fair_home": 5.213,
+     "fair_away": 1.237
     },
     "-1.5": {
-     "win": 0.2598,
+     "win": 0.2523,
      "push": 0.0,
-     "lose": 0.7402,
-     "fair_home": 3.85,
-     "fair_away": 1.351
+     "lose": 0.7477,
+     "fair_home": 3.963,
+     "fair_away": 1.337
     },
     "-1.25": {
-     "win": 0.2598,
-     "push": 0.1156,
-     "lose": 0.6246,
-     "fair_home": 3.405,
-     "fair_away": 1.416
+     "win": 0.2523,
+     "push": 0.1167,
+     "lose": 0.631,
+     "fair_home": 3.501,
+     "fair_away": 1.4
     },
     "-1.0": {
-     "win": 0.2598,
-     "push": 0.2312,
-     "lose": 0.509,
-     "fair_home": 2.96,
-     "fair_away": 1.51
+     "win": 0.2523,
+     "push": 0.2335,
+     "lose": 0.5142,
+     "fair_home": 3.038,
+     "fair_away": 1.491
     },
     "-0.75": {
-     "win": 0.3754,
-     "push": 0.1156,
-     "lose": 0.509,
-     "fair_home": 2.356,
-     "fair_away": 1.737
+     "win": 0.369,
+     "push": 0.1167,
+     "lose": 0.5142,
+     "fair_home": 2.393,
+     "fair_away": 1.718
     },
     "-0.5": {
-     "win": 0.491,
+     "win": 0.4858,
      "push": 0.0,
-     "lose": 0.509,
-     "fair_home": 2.037,
-     "fair_away": 1.965
+     "lose": 0.5142,
+     "fair_home": 2.059,
+     "fair_away": 1.945
     },
     "-0.25": {
-     "win": 0.491,
-     "push": 0.1309,
-     "lose": 0.3781,
-     "fair_home": 1.77,
-     "fair_away": 2.299
+     "win": 0.4858,
+     "push": 0.1339,
+     "lose": 0.3804,
+     "fair_home": 1.783,
+     "fair_away": 2.277
     },
     "0.0": {
-     "win": 0.491,
-     "push": 0.2619,
-     "lose": 0.2472,
-     "fair_home": 1.503,
-     "fair_away": 2.986
+     "win": 0.4858,
+     "push": 0.2677,
+     "lose": 0.2465,
+     "fair_home": 1.507,
+     "fair_away": 2.971
     },
     "0.25": {
-     "win": 0.6219,
-     "push": 0.1309,
-     "lose": 0.2472,
-     "fair_home": 1.397,
-     "fair_away": 3.516
+     "win": 0.6196,
+     "push": 0.1339,
+     "lose": 0.2465,
+     "fair_home": 1.398,
+     "fair_away": 3.514
     },
     "0.5": {
-     "win": 0.7528,
+     "win": 0.7535,
      "push": 0.0,
-     "lose": 0.2472,
-     "fair_home": 1.328,
-     "fair_away": 4.046
+     "lose": 0.2465,
+     "fair_home": 1.327,
+     "fair_away": 4.057
     },
     "0.75": {
-     "win": 0.7528,
-     "push": 0.0761,
-     "lose": 0.1711,
-     "fair_home": 1.227,
-     "fair_away": 5.4
+     "win": 0.7535,
+     "push": 0.0768,
+     "lose": 0.1697,
+     "fair_home": 1.225,
+     "fair_away": 5.44
     },
     "1.0": {
-     "win": 0.7528,
-     "push": 0.1522,
-     "lose": 0.095,
-     "fair_home": 1.126,
-     "fair_away": 8.924
+     "win": 0.7535,
+     "push": 0.1536,
+     "lose": 0.0929,
+     "fair_home": 1.123,
+     "fair_away": 9.111
     },
     "1.25": {
-     "win": 0.8289,
-     "push": 0.0761,
-     "lose": 0.095,
-     "fair_home": 1.115,
-     "fair_away": 9.725
+     "win": 0.8303,
+     "push": 0.0768,
+     "lose": 0.0929,
+     "fair_home": 1.112,
+     "fair_away": 9.938
     },
     "1.5": {
-     "win": 0.905,
+     "win": 0.9071,
      "push": 0.0,
-     "lose": 0.095,
-     "fair_home": 1.105,
-     "fair_away": 10.525
+     "lose": 0.0929,
+     "fair_home": 1.102,
+     "fair_away": 10.764
     }
    },
    "half_time": {
-    "1": 0.3647,
-    "X": 0.4202,
-    "2": 0.2151,
-    "over_0.5": 0.6908,
-    "over_1.5": 0.3279
+    "1": 0.3586,
+    "X": 0.4289,
+    "2": 0.2124,
+    "over_0.5": 0.6783,
+    "over_1.5": 0.3135
    },
    "ht_ft": {
-    "1/1": 0.3003,
-    "1/X": 0.0486,
-    "1/2": 0.0158,
-    "X/1": 0.1705,
-    "X/X": 0.1524,
-    "X/2": 0.0973,
-    "2/1": 0.0263,
-    "2/X": 0.0486,
-    "2/2": 0.1402
+    "1/1": 0.2954,
+    "1/X": 0.0481,
+    "1/2": 0.0151,
+    "X/1": 0.1715,
+    "X/X": 0.159,
+    "X/2": 0.0984,
+    "2/1": 0.0251,
+    "2/X": 0.0481,
+    "2/2": 0.1392
    },
    "quinigol": {
     "home": [
-     0.2025,
-     0.3234,
-     0.2582,
-     0.2159
+     0.2137,
+     0.3298,
+     0.2544,
+     0.202
     ],
     "away": [
-     0.3447,
-     0.3671,
-     0.1955,
-     0.0926
+     0.3574,
+     0.3677,
+     0.1892,
+     0.0857
     ],
     "joint": [
      [
-      0.0759,
-      0.0682,
-      0.0396,
-      0.0188
+      0.0827,
+      0.0723,
+      0.0404,
+      0.0183
      ],
      [
-      0.1054,
-      0.1248,
-      0.0632,
-      0.03
+      0.1116,
+      0.1275,
+      0.0624,
+      0.0283
      ],
      [
-      0.089,
-      0.0948,
-      0.0505,
-      0.0239
+      0.0909,
+      0.0936,
+      0.0481,
+      0.0218
      ],
      [
-      0.0744,
-      0.0793,
-      0.0422,
-      0.02
+      0.0722,
+      0.0743,
+      0.0382,
+      0.0173
      ]
     ]
    },
    "goals": [
-    1.597,
-    1.065
+    1.543,
+    1.029
    ],
    "ah_market": {
     "line": -0.5,
@@ -2181,12 +2187,12 @@
      1.9
     ],
     "fair": [
-     2.037,
-     1.965
+     2.059,
+     1.945
     ],
     "ev": [
-     -0.1015,
-     -0.0329
+     -0.111,
+     -0.023
     ]
    }
   },
@@ -2194,56 +2200,56 @@
   "scorers": {
    "home": [
     {
-     "name": "Hugo Gonzalez",
-     "p": 0.372,
-     "xg90": 0.39
+     "name": "Iago Aspas",
+     "p": 0.313,
+     "xg90": 0.33
     },
     {
-     "name": "Williot Swedberg",
-     "p": 0.317,
-     "xg90": 0.32
-    },
-    {
-     "name": "Ferran Jutglà",
-     "p": 0.268,
-     "xg90": 0.26
-    },
-    {
-     "name": "Hugo Álvarez",
-     "p": 0.146,
-     "xg90": 0.13
+     "name": "Pablo Durán",
+     "p": 0.29,
+     "xg90": 0.3
     },
     {
      "name": "Marcos Alonso",
-     "p": 0.087,
+     "p": 0.083,
      "xg90": 0.07
+    },
+    {
+     "name": "Javi Rueda",
+     "p": 0.08,
+     "xg90": 0.07
+    },
+    {
+     "name": "Sergio Carreira",
+     "p": 0.074,
+     "xg90": 0.06
     }
    ],
    "away": [
     {
      "name": "Roger Brugué",
-     "p": 0.257,
+     "p": 0.245,
      "xg90": 0.45
     },
     {
-     "name": "Iván Romero",
-     "p": 0.222,
-     "xg90": 0.38
-    },
-    {
      "name": "Nacho Pérez",
-     "p": 0.126,
+     "p": 0.124,
      "xg90": 0.19
     },
     {
-     "name": "Adrián de la Fuente",
-     "p": 0.1,
+     "name": "Thiago Fernandez",
+     "p": 0.094,
+     "xg90": 0.16
+    },
+    {
+     "name": "Dani Requena",
+     "p": 0.091,
      "xg90": 0.15
     },
     {
-     "name": "Thiago Fernández",
-     "p": 0.099,
-     "xg90": 0.16
+     "name": "Ifeanyi Ndukwe",
+     "p": 0.072,
+     "xg90": 0.1
     }
    ]
   },
@@ -2256,7 +2262,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Ionut Radu",
@@ -2265,7 +2271,7 @@
      "att": 0.0,
      "goals": 0,
      "minutes": 990,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Iván Villar",
@@ -2274,7 +2280,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Yoel Lago",
@@ -2283,7 +2289,7 @@
      "att": 0.01,
      "goals": 0,
      "minutes": 942,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Marcos Alonso",
@@ -2292,7 +2298,7 @@
      "att": 0.05,
      "goals": 0,
      "minutes": 606,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Javi Rodríguez",
@@ -2301,7 +2307,7 @@
      "att": 0.12,
      "goals": 1,
      "minutes": 502,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Sergio Carreira",
@@ -2310,7 +2316,7 @@
      "att": 0.17,
      "goals": 0,
      "minutes": 600,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Álvaro Núñez",
@@ -2319,8 +2325,7 @@
      "att": 0.02,
      "goals": 0,
      "minutes": 356,
-     "status": "baja",
-     "source": "futbolfantasy: Rotura fibrilar en el aductor · Baja hasta mediados de noviembre"
+     "status": "suplente"
     },
     {
      "name": "Sebastián Cáceres",
@@ -2329,7 +2334,7 @@
      "att": 0.02,
      "goals": 0,
      "minutes": 321,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Carl Starfelt",
@@ -2338,8 +2343,7 @@
      "att": null,
      "goals": 1,
      "minutes": 216,
-     "status": "baja",
-     "source": "futbolfantasy: Lesión en el semimembranoso · Baja hasta mediados de noviembre"
+     "status": "suplente"
     },
     {
      "name": "Abdoulaye Faye",
@@ -2348,7 +2352,7 @@
      "att": null,
      "goals": 0,
      "minutes": 48,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Ilaix Moriba",
@@ -2357,7 +2361,7 @@
      "att": 0.06,
      "goals": 1,
      "minutes": 810,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Javi Rueda",
@@ -2366,7 +2370,7 @@
      "att": 0.21,
      "goals": 0,
      "minutes": 666,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Miguel Román",
@@ -2375,8 +2379,7 @@
      "att": 0.13,
      "goals": 1,
      "minutes": 580,
-     "status": "baja",
-     "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja hasta principios de noviembre"
+     "status": "suplente"
     },
     {
      "name": "Javi Galán",
@@ -2385,7 +2388,7 @@
      "att": 0.14,
      "goals": 0,
      "minutes": 459,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Aleix Febas",
@@ -2394,7 +2397,7 @@
      "att": 0.0,
      "goals": 0,
      "minutes": 468,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Jones El-Abdellaoui",
@@ -2403,8 +2406,7 @@
      "att": null,
      "goals": 0,
      "minutes": 160,
-     "status": "baja",
-     "source": "futbolfantasy: Sometido a artroscopia en la rodilla · Baja confirmada para la jornada 12"
+     "status": "suplente"
     },
     {
      "name": "Hugo Burcio",
@@ -2413,7 +2415,7 @@
      "att": null,
      "goals": 0,
      "minutes": 102,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Borja Iglesias",
@@ -2422,8 +2424,7 @@
      "att": null,
      "goals": 0,
      "minutes": 68,
-     "status": "baja",
-     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre"
+     "status": "suplente"
     },
     {
      "name": "Altay Bayindir",
@@ -2432,7 +2433,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Enrique Ribes",
@@ -2441,7 +2442,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Ángel Arcos",
@@ -2450,7 +2451,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Ferran Jutglà",
@@ -2459,7 +2460,7 @@
      "att": 0.22,
      "goals": 2,
      "minutes": 649,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Hugo Álvarez",
@@ -2468,7 +2469,7 @@
      "att": 0.35,
      "goals": 0,
      "minutes": 576,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Hugo Gonzalez",
@@ -2477,7 +2478,7 @@
      "att": 0.64,
      "goals": 1,
      "minutes": 351,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Williot Swedberg",
@@ -2486,7 +2487,7 @@
      "att": 0.37,
      "goals": 0,
      "minutes": 438,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Pablo Durán",
@@ -2495,7 +2496,7 @@
      "att": 0.38,
      "goals": 2,
      "minutes": 420,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Iago Aspas",
@@ -2504,7 +2505,7 @@
      "att": 0.36,
      "goals": 1,
      "minutes": 286,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Couhaib Driouech",
@@ -2513,7 +2514,7 @@
      "att": null,
      "goals": 0,
      "minutes": 154,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Andrés Antañón",
@@ -2522,7 +2523,7 @@
      "att": null,
      "goals": 0,
      "minutes": 85,
-     "status": "disponible"
+     "status": "titular"
     }
    ],
    "away": [
@@ -2533,7 +2534,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Mat Ryan",
@@ -2542,7 +2543,7 @@
      "att": 0.0,
      "goals": 0,
      "minutes": 990,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Alejandro Primo",
@@ -2551,7 +2552,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Pablo Cuñat",
@@ -2560,7 +2561,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Manu Sánchez",
@@ -2569,8 +2570,7 @@
      "att": 0.06,
      "goals": 0,
      "minutes": 887,
-     "status": "baja",
-     "source": "futbolfantasy: Lesión en los isquiotibiales · Baja confirmada para la jornada 12"
+     "status": "suplente"
     },
     {
      "name": "Aïssa Mandi",
@@ -2579,7 +2579,7 @@
      "att": 0.04,
      "goals": 0,
      "minutes": 785,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Adrián de la Fuente",
@@ -2588,7 +2588,7 @@
      "att": 0.23,
      "goals": 2,
      "minutes": 724,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Nacho Pérez",
@@ -2597,7 +2597,7 @@
      "att": 0.23,
      "goals": 1,
      "minutes": 561,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Jeremy Toljan",
@@ -2606,7 +2606,7 @@
      "att": 0.17,
      "goals": 0,
      "minutes": 509,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Ifeanyi Ndukwe",
@@ -2615,7 +2615,7 @@
      "att": 0.1,
      "goals": 1,
      "minutes": 488,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Jorge Cabello",
@@ -2624,7 +2624,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Roger Brugué",
@@ -2633,7 +2633,7 @@
      "att": 0.5,
      "goals": 5,
      "minutes": 842,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Jon Ander Olasagasti",
@@ -2642,7 +2642,7 @@
      "att": 0.39,
      "goals": 1,
      "minutes": 895,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Iván Romero",
@@ -2651,7 +2651,7 @@
      "att": 0.51,
      "goals": 3,
      "minutes": 798,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Thiago Fernández",
@@ -2660,7 +2660,7 @@
      "att": 0.25,
      "goals": 0,
      "minutes": 667,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Orio Rey",
@@ -2669,7 +2669,7 @@
      "att": 0.01,
      "goals": 0,
      "minutes": 642,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Dani Requena",
@@ -2678,7 +2678,7 @@
      "att": 0.18,
      "goals": 1,
      "minutes": 463,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Enzo Bardeli",
@@ -2687,7 +2687,7 @@
      "att": 0.16,
      "goals": 1,
      "minutes": 450,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Víctor García",
@@ -2696,7 +2696,7 @@
      "att": 0.34,
      "goals": 0,
      "minutes": 353,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Hugo Sotelo",
@@ -2705,7 +2705,7 @@
      "att": null,
      "goals": 0,
      "minutes": 95,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Paco Cortés",
@@ -2714,7 +2714,7 @@
      "att": null,
      "goals": 0,
      "minutes": 73,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Carlos Álvarez",
@@ -2723,7 +2723,7 @@
      "att": null,
      "goals": 0,
      "minutes": 51,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Marc Santos Gavilán",
@@ -2732,7 +2732,7 @@
      "att": null,
      "goals": 0,
      "minutes": 28,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Axel Tape",
@@ -2741,7 +2741,7 @@
      "att": null,
      "goals": 0,
      "minutes": 26,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Manel Usedo Domingo",
@@ -2750,7 +2750,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Ihor Galdin",
@@ -2759,7 +2759,7 @@
      "att": null,
      "goals": null,
      "minutes": null,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Petar Ratkov",
@@ -2768,7 +2768,7 @@
      "att": 0.09,
      "goals": 0,
      "minutes": 278,
-     "status": "disponible"
+     "status": "suplente"
     },
     {
      "name": "Etta Eyong",
@@ -2777,7 +2777,7 @@
      "att": null,
      "goals": 1,
      "minutes": 167,
-     "status": "disponible"
+     "status": "titular"
     },
     {
      "name": "Yanis Kasonga Musuayi",
@@ -2786,7 +2786,7 @@
      "att": null,
      "goals": 0,
      "minutes": 116,
-     "status": "disponible"
+     "status": "suplente"
     }
    ]
   },
@@ -2817,46 +2817,46 @@
    "players": {
     "home": [
      {
-      "name": "Javi Rueda",
-      "yellows": 3,
-      "p": 0.268
+      "name": "Couhaib Driouech",
+      "yellows": 1,
+      "p": 0.226
      },
      {
-      "name": "Yoel Lago",
-      "yellows": 4,
-      "p": 0.267
+      "name": "Javi Rueda",
+      "yellows": 3,
+      "p": 0.221
+     },
+     {
+      "name": "Sergio Carreira",
+      "yellows": 2,
+      "p": 0.201
      },
      {
       "name": "Marcos Alonso",
       "yellows": 2,
-      "p": 0.205
-     },
-     {
-      "name": "Williot Swedberg",
-      "yellows": 1,
-      "p": 0.163
+      "p": 0.167
      }
     ],
     "away": [
      {
-      "name": "Adrián de la Fuente",
-      "yellows": 3,
-      "p": 0.319
+      "name": "Hugo Sotelo",
+      "yellows": 1,
+      "p": 0.293
+     },
+     {
+      "name": "Etta Eyong",
+      "yellows": 1,
+      "p": 0.293
      },
      {
       "name": "Jeremy Toljan",
       "yellows": 2,
-      "p": 0.316
+      "p": 0.257
      },
      {
       "name": "Aïssa Mandi",
       "yellows": 2,
-      "p": 0.231
-     },
-     {
-      "name": "Iván Romero",
-      "yellows": 2,
-      "p": 0.216
+      "p": 0.186
      }
     ]
    }
@@ -2864,92 +2864,114 @@
   "absence_impact": {
    "xg_full": [
     1.73,
-    1.08
+    1.09
    ],
    "xg_adj": [
-    1.78,
-    1.11
+    1.7,
+    1.1
    ],
    "p_full": [
-    0.5199,
-    0.249,
-    0.231
+    0.5184,
+    0.2493,
+    0.2323
    ],
    "p_adj": [
-    0.5238,
-    0.2445,
-    0.2317
+    0.5082,
+    0.2521,
+    0.2397
    ],
    "market_weight": 0.0
   },
   "ratings_mercado": null,
-  "movement": null
+  "movement": {
+   "home": "Celta",
+   "away": "Levante",
+   "date": "2026-11-08",
+   "from_ts": "2026-11-07T12:57:46.802879+00:00",
+   "to_ts": "2026-11-08T16:30:41.209640+00:00",
+   "p_from": [
+    0.4941,
+    0.2651,
+    0.2408
+   ],
+   "p_to": [
+    0.4898,
+    0.2693,
+    0.2409
+   ],
+   "delta_pts": [
+    -0.4,
+    0.4,
+    0.0
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-11-08T13:21:21.690539+00:00",
+  "generated_at": "2026-11-08T16:30:41.209640+00:00",
   "season": 2026,
   "date": "2026-11-08",
   "kickoff_utc": "2026-11-08T17:30:00+00:00",
   "home": "Villarreal",
   "away": "Getafe",
-  "p_home": 0.6973,
+  "p_home": 0.6971,
   "p_draw": 0.1976,
-  "p_away": 0.1051,
+  "p_away": 0.1052,
   "model": "stacker_mercado",
   "p_model": [
-   0.6973,
+   0.6971,
    0.1976,
-   0.1051
+   0.1052
   ],
   "polymarket": {
    "p": [
-    0.6355,
-    0.2217,
-    0.1429
+    0.6482,
+    0.2161,
+    0.1357
    ],
-   "volume": 28045,
-   "liquidity": 440641,
+   "volume": 47231,
+   "liquidity": 713694,
    "url": "https://polymarket.com/event/lal-vil-get-2026-11-08",
    "slug": "lal-vil-get-2026-11-08",
-   "overround": 0.015,
+   "overround": -0.005,
    "used": false,
-   "reason": "poco volumen (28.045 $)",
+   "reason": "poco volumen (47.231 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
-   "p_home": 0.5707,
-   "p_draw": 0.2597,
-   "p_away": 0.1696,
-   "xg_home": 1.6103,
-   "xg_away": 0.7609,
-   "p_over25": 0.4227,
-   "p_btts": 0.4322,
+   "p_home": 0.5694,
+   "p_draw": 0.2601,
+   "p_away": 0.1705,
+   "xg_home": 1.6081,
+   "xg_away": 0.7635,
+   "p_over25": 0.4229,
+   "p_btts": 0.433,
    "top_scores": [
     [
      "1-0",
-     0.1444817612461282
+     0.14415978978773877
     ],
     [
      "2-0",
-     0.12105869391657868
+     0.12067814361998679
     ],
     [
      "1-1",
-     0.12028150761346872
+     0.12051453320738265
     ]
    ]
   },
   "xg_base": [
-   1.623,
-   0.729
+   1.621,
+   0.732
   ],
   "elo_diff": 144.5,
   "referee": null,
   "weather": {
    "temp_c": 18.0,
    "precip_mm": 0.0,
-   "wind_kmh": 3.6
+   "wind_kmh": 3.3
   },
   "market": [
    0.6827,
@@ -3321,10 +3343,10 @@
   ],
   "ou": {
    "p_over": 0.5269,
-   "p_over_model": 0.4227,
+   "p_over_model": 0.4229,
    "p_over_market": 0.5321,
    "market_src": "casas",
-   "p_btts": 0.4322
+   "p_btts": 0.433
   },
   "odds_market": {
    "max": [
@@ -3340,16 +3362,16 @@
   },
   "markets": {
    "double_chance": {
-    "1X": 0.9036,
+    "1X": 0.9037,
     "X2": 0.3022,
-    "12": 0.7942
+    "12": 0.7941
    },
    "draw_no_bet": {
     "1": 0.8787,
     "2": 0.1213
    },
    "totals": {
-    "0.5": 0.9182,
+    "0.5": 0.9181,
     "1.5": 0.7296,
     "2.5": 0.4717,
     "3.5": 0.2555,
@@ -3376,7 +3398,7 @@
     "home3+": 0.2254,
     "home2": 0.2174,
     "home1": 0.255,
-    "draw": 0.2058,
+    "draw": 0.2059,
     "away1": 0.0729,
     "away2": 0.0194,
     "away3+": 0.004
@@ -3404,7 +3426,7 @@
     },
     {
      "score": "0-0",
-     "p": 0.0818
+     "p": 0.0819
     },
     {
      "score": "3-1",
@@ -3488,45 +3510,45 @@
     },
     "0.0": {
      "win": 0.6978,
-     "push": 0.2058,
-     "lose": 0.0964,
+     "push": 0.2059,
+     "lose": 0.0963,
      "fair_home": 1.138,
-     "fair_away": 8.241
+     "fair_away": 8.243
     },
     "0.25": {
      "win": 0.8007,
      "push": 0.1029,
-     "lose": 0.0964,
+     "lose": 0.0963,
      "fair_home": 1.12,
-     "fair_away": 9.309
+     "fair_away": 9.312
     },
     "0.5": {
-     "win": 0.9036,
+     "win": 0.9037,
      "push": 0.0,
-     "lose": 0.0964,
+     "lose": 0.0963,
      "fair_home": 1.107,
-     "fair_away": 10.377
+     "fair_away": 10.38
     },
     "0.75": {
-     "win": 0.9036,
+     "win": 0.9037,
      "push": 0.0365,
      "lose": 0.0599,
      "fair_home": 1.066,
-     "fair_away": 16.086
+     "fair_away": 16.09
     },
     "1.0": {
-     "win": 0.9036,
+     "win": 0.9037,
      "push": 0.0729,
      "lose": 0.0234,
      "fair_home": 1.026,
-     "fair_away": 39.563
+     "fair_away": 39.564
     },
     "1.25": {
      "win": 0.9401,
      "push": 0.0365,
      "lose": 0.0234,
      "fair_home": 1.025,
-     "fair_away": 41.119
+     "fair_away": 41.12
     },
     "1.5": {
      "win": 0.9766,
@@ -3569,8 +3591,8 @@
     ],
     "joint": [
      [
-      0.0818,
-      0.0409,
+      0.0819,
+      0.0408,
       0.0134,
       0.0031
      ],
@@ -3624,7 +3646,7 @@
     },
     {
      "name": "Ayoze Pérez",
-     "p": 0.286,
+     "p": 0.285,
      "xg90": 0.53
     },
     {
@@ -3634,7 +3656,7 @@
     },
     {
      "name": "Pape Gueye",
-     "p": 0.125,
+     "p": 0.124,
      "xg90": 0.2
     },
     {
@@ -3646,7 +3668,7 @@
    "away": [
     {
      "name": "Martín Satriano",
-     "p": 0.193,
+     "p": 0.194,
      "xg90": 0.29
     },
     {
@@ -3656,12 +3678,12 @@
     },
     {
      "name": "Ramón Terrats",
-     "p": 0.125,
+     "p": 0.126,
      "xg90": 0.18
     },
     {
      "name": "Mario Martín",
-     "p": 0.079,
+     "p": 0.08,
      "xg90": 0.11
     },
     {
@@ -4313,41 +4335,19 @@
     0.76
    ],
    "p_full": [
-    0.5823,
-    0.2574,
-    0.1603
+    0.5811,
+    0.2578,
+    0.1612
    ],
    "p_adj": [
-    0.5707,
-    0.2597,
-    0.1696
+    0.5694,
+    0.2601,
+    0.1705
    ],
    "market_weight": 0.0
   },
   "ratings_mercado": null,
-  "movement": {
-   "home": "Villarreal",
-   "away": "Getafe",
-   "date": "2026-11-08",
-   "from_ts": "2026-11-07T12:57:46.802879+00:00",
-   "to_ts": "2026-11-08T13:21:21.690539+00:00",
-   "p_from": [
-    0.6974,
-    0.1978,
-    0.1049
-   ],
-   "p_to": [
-    0.6973,
-    0.1976,
-    0.1051
-   ],
-   "delta_pts": [
-    -0.0,
-    -0.0,
-    0.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
   "generated_at": "2026-11-08T13:21:21.690539+00:00",

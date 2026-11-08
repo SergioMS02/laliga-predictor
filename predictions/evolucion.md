@@ -1,6 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-08 13:21 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-11-08 16:30 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Sociedad – Vallecano (2026-11-08)
 
@@ -27,7 +27,7 @@ Actualizado: 2026-11-08 13:21 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Celta – Levante (2026-11-08)
 
-1 ▄▄▄▅▄▄ · X ▃▃▃▃▃▃ · 2 ▂▃▃▂▂▂
+1 ▄▄▄▅▄▄▄ · X ▃▃▃▃▃▃▃ · 2 ▂▃▃▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -37,6 +37,7 @@ Actualizado: 2026-11-08 13:21 UTC. Umbral de cambio importante: 4 puntos.
 | 03/11 20:27 | 53% | 25% | 22% |  |
 | 06/11 15:14 | 49% | 27% | 24% |  |
 | 07/11 13:57 | 49% | 27% | 24% |  |
+| 08/11 17:30 | 49% | 27% | 24% | ✅ |
 
 **Cambios importantes**
 

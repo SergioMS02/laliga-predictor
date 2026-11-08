@@ -5,8 +5,8 @@ Generado: 2026-11-08 13:21 UTC
 | Fecha | Partido | 1 | X | 2 | Evolución 1 | xG | Marcador más probable | +2.5 | Ambos marcan | Info |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 08/11 16:15 | Sociedad – Vallecano | 55% | 24% | 21% | ▅▅▅▅▅▅▅▅▅ 53→55% ▲ | 1.79–1.18 | 1-1 (11%) | 57% | 58% | 🚑 Mamadou Sarr, Álvaro Odriozola, Mikel Oyarzabal?, Marash Kumbulla, Luiz Felipe, Augusto Batalla |
-| 08/11 18:30 | Celta – Levante | 49% | 26% | 24% | ▄▄▄▅▄▄▄ 49→49% = | 1.78–1.11 | 1-1 (12%) | 55% | 56% | 🚑 Carl Starfelt, Borja Iglesias, Miguel Román, Álvaro Núñez, Jones El-Abdellaoui, Bernard Somuah |
-| 08/11 18:30 | Villarreal – Getafe | 70% | 20% | 11% | ▆▆▅▅▆▆▆ 69→70% ▲ | 1.61–0.76 | 1-0 (14%) | 42% | 43% | 🚑 Alassane Diatta, Gerard Moreno, Juan Foyth, Ilias Akhomach, Juanmi Jiménez, Borja Mayoral |
+| 08/11 18:30 | Celta – Levante | 49% | 27% | 24% | ▄▄▄▅▄▄▄ 49→49% = | 1.70–1.10 | 1-1 (12%) | 53% | 55% | ✅ alineaciones |
+| 08/11 18:30 | Villarreal – Getafe | 70% | 20% | 11% | ▆▆▅▅▆▆▆▆ 69→70% ▲ | 1.61–0.76 | 1-0 (14%) | 42% | 43% | 🚑 Alassane Diatta, Gerard Moreno, Juan Foyth, Ilias Akhomach, Juanmi Jiménez, Borja Mayoral |
 | 08/11 21:00 | Ath Madrid – Barcelona | 30% | 22% | 48% | ▃▃▃▃▃▃▃▃ 31→30% ▼ | 1.69–1.79 | 1-1 (10%) | 67% | 68% | 🚑 Cristian Romero, Xavi Espart, Rodri, Roony Bardghji, Dani Olmo, Jules Koundé |
 
 ## Cambios importantes
