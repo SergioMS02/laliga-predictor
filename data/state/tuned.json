@@ -23,25 +23,25 @@
     "stacker_log_loss": 0.9772107510138927
   },
   "availability": {
-    "attack_coef": 0.1229,
-    "defence_coef": 0.2843,
-    "n_matches": 1910,
+    "attack_coef": 0.1302,
+    "defence_coef": 0.2834,
+    "n_matches": 1920,
     "market_weight_lineup": 0.0,
     "market_weight_eval": {
-      "n": 1910,
+      "n": 1920,
       "previas": {
-        "n": 1910,
+        "n": 1920,
         "w": 0.0,
-        "log_loss_casas": 0.96263,
-        "log_loss_con_once": 0.96263,
-        "log_loss_w1": 0.96385
+        "log_loss_casas": 0.96224,
+        "log_loss_con_once": 0.96224,
+        "log_loss_w1": 0.96347
       },
       "cierre": {
-        "n": 1910,
+        "n": 1920,
         "w": 0.0,
-        "log_loss_casas": 0.96164,
-        "log_loss_con_once": 0.96164,
-        "log_loss_w1": 0.96387
+        "log_loss_casas": 0.96127,
+        "log_loss_con_once": 0.96127,
+        "log_loss_w1": 0.96353
       }
     }
   }
