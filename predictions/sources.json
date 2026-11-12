@@ -1,5 +1,5 @@
 {
- "at": "2026-11-11T20:09+00:00",
+ "at": "2026-11-12T15:11+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -21,7 +21,7 @@
   },
   "ESPN (calendario, horarios, alineaciones)": {
    "ok": true,
-   "rows": 119,
+   "rows": 120,
    "error": null,
    "note": null
   },
