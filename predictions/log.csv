@@ -448,3 +448,8 @@ generated_at,season,date,home,away,p_home,p_draw,p_away,model,lineup_confirmed
 2026-11-08T16:30:41.209640+00:00,2026,2026-11-08,Villarreal,Getafe,0.6971,0.1976,0.1052,stacker_mercado,False
 2026-11-08T13:21:21.690539+00:00,2026,2026-11-08,Ath Madrid,Barcelona,0.3021,0.2161,0.4818,stacker_mercado,False
 2026-11-13T14:32:47.629534+00:00,2026,2026-11-20,Ath Bilbao,Espanol,0.567,0.2537,0.1793,stacker,False
+2026-11-14T13:29:34.945878+00:00,2026,2026-11-20,Ath Bilbao,Espanol,0.5669,0.2538,0.1793,stacker,False
+2026-11-14T13:29:34.945878+00:00,2026,2026-11-21,Alaves,La Coruna,0.4643,0.2815,0.2542,stacker,False
+2026-11-14T13:29:34.945878+00:00,2026,2026-11-21,Vallecano,Valencia,0.4831,0.2736,0.2433,stacker,False
+2026-11-14T13:29:34.945878+00:00,2026,2026-11-21,Sevilla,Betis,0.3608,0.2738,0.3655,stacker,False
+2026-11-14T13:29:34.945878+00:00,2026,2026-11-21,Real Madrid,Celta,0.7392,0.1676,0.0932,stacker,False
