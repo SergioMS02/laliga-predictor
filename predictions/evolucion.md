@@ -1,6 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-15 13:58 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-11-16 15:41 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Ath Bilbao – Espanol (2026-11-20)
 
@@ -28,27 +28,30 @@ Actualizado: 2026-11-15 13:58 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Sevilla – Betis (2026-11-21)
 
-1 ▃ · X ▃ · 2 ▃
+1 ▃▃ · X ▃▃ · 2 ▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 14/11 14:29 | 36% | 27% | 37% |  |
+| 16/11 16:41 | 36% | 27% | 37% |  |
 
 ## Real Madrid – Celta (2026-11-21)
 
-1 ▆ · X ▂ · 2 ▁
+1 ▆▆ · X ▂▂ · 2 ▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 14/11 14:29 | 74% | 17% | 9% |  |
+| 16/11 16:41 | 74% | 17% | 9% |  |
 
 ## Barcelona – Villarreal (2026-11-22)
 
-1 ▆ · X ▂ · 2 ▁
+1 ▆▆ · X ▂▂ · 2 ▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 15/11 14:55 | 74% | 15% | 12% |  |
+| 16/11 16:41 | 73% | 15% | 12% |  |
 
 ## Santander – Sociedad (2026-11-22)
 
@@ -60,17 +63,27 @@ Actualizado: 2026-11-15 13:58 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Osasuna – Malaga (2026-11-22)
 
-1 ▅ · X ▃ · 2 ▂
+1 ▅▅ · X ▃▃ · 2 ▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 15/11 14:55 | 54% | 25% | 21% |  |
+| 16/11 16:41 | 54% | 25% | 21% |  |
 
 ## Getafe – Ath Madrid (2026-11-22)
 
-1 ▂ · X ▃ · 2 ▅
+1 ▂▂ · X ▃▃ · 2 ▅▅
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 15/11 14:55 | 21% | 28% | 50% |  |
+| 16/11 16:41 | 21% | 28% | 50% |  |
+
+## Levante – Elche (2026-11-23)
+
+1 ▄ · X ▃ · 2 ▃
+
+| Momento (Madrid) | 1 | X | 2 | Alineación |
+|---|---|---|---|---|
+| 16/11 16:41 | 45% | 26% | 29% |  |
 
