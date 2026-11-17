@@ -23,7 +23,7 @@
     "stacker_log_loss": 0.9772107510138927
   },
   "availability": {
-    "attack_coef": 0.1302,
+    "attack_coef": 0.1303,
     "defence_coef": 0.2834,
     "n_matches": 1920,
     "market_weight_lineup": 0.0,
