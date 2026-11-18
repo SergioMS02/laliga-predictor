@@ -1,33 +1,33 @@
 [
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-20",
   "kickoff_utc": "2026-11-20T20:00:00+00:00",
   "home": "Ath Bilbao",
   "away": "Espanol",
-  "p_home": 0.5659,
-  "p_draw": 0.254,
-  "p_away": 0.18,
+  "p_home": 0.5658,
+  "p_draw": 0.2541,
+  "p_away": 0.1801,
   "model": "stacker",
   "p_model": [
-   0.5659,
-   0.254,
-   0.18
+   0.5658,
+   0.2541,
+   0.1801
   ],
   "polymarket": {
    "p": [
-    0.6517,
-    0.2139,
-    0.1343
+    0.6683,
+    0.206,
+    0.1256
    ],
-   "volume": 1183,
-   "liquidity": 62494,
+   "volume": 1814,
+   "liquidity": 111186,
    "url": "https://polymarket.com/event/lal-bil-esp-2026-11-20",
    "slug": "lal-bil-esp-2026-11-20",
-   "overround": 0.005,
+   "overround": -0.005,
    "used": false,
-   "reason": "poco volumen (1.183 $)",
+   "reason": "poco volumen (1.814 $)",
    "model_weight": null,
    "more": {}
   },
@@ -36,21 +36,21 @@
    "p_draw": 0.2824,
    "p_away": 0.2241,
    "xg_home": 1.4311,
-   "xg_away": 0.8772,
+   "xg_away": 0.8774,
    "p_over25": 0.4062,
    "p_btts": 0.451,
    "top_scores": [
     [
      "1-0",
-     0.13575849305517487
+     0.13574576159696697
     ],
     [
      "1-1",
-     0.1313547105042637
+     0.13134705458075271
     ],
     [
      "0-0",
-     0.10596202633183731
+     0.10593519871295193
     ]
    ]
   },
@@ -61,9 +61,9 @@
   "elo_diff": 114.2,
   "referee": null,
   "weather": {
-   "temp_c": 11.3,
+   "temp_c": 11.7,
    "precip_mm": 0.0,
-   "wind_kmh": 7.3
+   "wind_kmh": 6.4
   },
   "market": null,
   "lineup_confirmed": false,
@@ -429,26 +429,26 @@
   "odds_market": null,
   "markets": {
    "double_chance": {
-    "1X": 0.8225,
-    "X2": 0.4382,
-    "12": 0.7392
+    "1X": 0.8227,
+    "X2": 0.438,
+    "12": 0.7394
    },
    "draw_no_bet": {
-    "1": 0.7599,
-    "2": 0.2401
+    "1": 0.7601,
+    "2": 0.2399
    },
    "totals": {
-    "0.5": 0.9032,
-    "1.5": 0.6976,
-    "2.5": 0.4303,
-    "3.5": 0.2213,
-    "4.5": 0.0959
+    "0.5": 0.9033,
+    "1.5": 0.6978,
+    "2.5": 0.4306,
+    "3.5": 0.2215,
+    "4.5": 0.096
    },
    "team_totals": {
     "home": {
-     "0.5": 0.7997,
-     "1.5": 0.4776,
-     "2.5": 0.2187
+     "0.5": 0.7999,
+     "1.5": 0.478,
+     "2.5": 0.219
     },
     "away": {
      "0.5": 0.5471,
@@ -456,17 +456,17 @@
      "2.5": 0.0463
     }
    },
-   "btts": 0.4435,
+   "btts": 0.4436,
    "clean_sheet": {
     "home": 0.4529,
-    "away": 0.2003
+    "away": 0.2001
    },
    "margin": {
-    "home3+": 0.1314,
-    "home2": 0.1757,
+    "home3+": 0.1316,
+    "home2": 0.1758,
     "home1": 0.2547,
-    "draw": 0.2608,
-    "away1": 0.1224,
+    "draw": 0.2606,
+    "away1": 0.1223,
     "away2": 0.0426,
     "away3+": 0.0125
    },
@@ -477,7 +477,7 @@
     },
     {
      "score": "1-1",
-     "p": 0.1216
+     "p": 0.1215
     },
     {
      "score": "2-0",
@@ -485,7 +485,7 @@
     },
     {
      "score": "0-0",
-     "p": 0.0968
+     "p": 0.0967
     },
     {
      "score": "2-1",
@@ -493,7 +493,7 @@
     },
     {
      "score": "0-1",
-     "p": 0.0658
+     "p": 0.0657
     },
     {
      "score": "3-0",
@@ -506,149 +506,149 @@
    ],
    "asian": {
     "-2.5": {
-     "win": 0.1314,
+     "win": 0.1316,
      "push": 0.0,
-     "lose": 0.8686,
-     "fair_home": 7.61,
-     "fair_away": 1.151
+     "lose": 0.8684,
+     "fair_home": 7.6,
+     "fair_away": 1.152
     },
     "-2.25": {
-     "win": 0.1314,
+     "win": 0.1316,
      "push": 0.0879,
-     "lose": 0.7807,
-     "fair_home": 6.942,
-     "fair_away": 1.168
+     "lose": 0.7805,
+     "fair_home": 6.932,
+     "fair_away": 1.169
     },
     "-2.0": {
-     "win": 0.1314,
-     "push": 0.1757,
-     "lose": 0.6929,
-     "fair_home": 6.273,
+     "win": 0.1316,
+     "push": 0.1758,
+     "lose": 0.6926,
+     "fair_home": 6.264,
      "fair_away": 1.19
     },
     "-1.75": {
-     "win": 0.2193,
+     "win": 0.2195,
      "push": 0.0879,
-     "lose": 0.6929,
-     "fair_home": 4.16,
-     "fair_away": 1.316
+     "lose": 0.6926,
+     "fair_home": 4.156,
+     "fair_away": 1.317
     },
     "-1.5": {
-     "win": 0.3071,
+     "win": 0.3074,
      "push": 0.0,
-     "lose": 0.6929,
-     "fair_home": 3.256,
-     "fair_away": 1.443
+     "lose": 0.6926,
+     "fair_home": 3.253,
+     "fair_away": 1.444
     },
     "-1.25": {
-     "win": 0.3071,
+     "win": 0.3074,
      "push": 0.1273,
-     "lose": 0.5656,
-     "fair_home": 2.842,
-     "fair_away": 1.543
+     "lose": 0.5653,
+     "fair_home": 2.839,
+     "fair_away": 1.544
     },
     "-1.0": {
-     "win": 0.3071,
+     "win": 0.3074,
      "push": 0.2547,
-     "lose": 0.4382,
-     "fair_home": 2.427,
-     "fair_away": 1.701
+     "lose": 0.438,
+     "fair_home": 2.425,
+     "fair_away": 1.702
     },
     "-0.75": {
-     "win": 0.4344,
+     "win": 0.4347,
      "push": 0.1273,
-     "lose": 0.4382,
-     "fair_home": 2.009,
-     "fair_away": 1.991
+     "lose": 0.438,
+     "fair_home": 2.008,
+     "fair_away": 1.993
     },
     "-0.5": {
-     "win": 0.5618,
+     "win": 0.562,
      "push": 0.0,
-     "lose": 0.4382,
-     "fair_home": 1.78,
-     "fair_away": 2.282
+     "lose": 0.438,
+     "fair_home": 1.779,
+     "fair_away": 2.283
     },
     "-0.25": {
-     "win": 0.5618,
-     "push": 0.1304,
-     "lose": 0.3078,
-     "fair_home": 1.548,
-     "fair_away": 2.825
+     "win": 0.562,
+     "push": 0.1303,
+     "lose": 0.3077,
+     "fair_home": 1.547,
+     "fair_away": 2.827
     },
     "0.0": {
-     "win": 0.5618,
-     "push": 0.2608,
-     "lose": 0.1775,
+     "win": 0.562,
+     "push": 0.2606,
+     "lose": 0.1773,
      "fair_home": 1.316,
-     "fair_away": 4.166
+     "fair_away": 4.169
     },
     "0.25": {
-     "win": 0.6922,
-     "push": 0.1304,
-     "lose": 0.1775,
+     "win": 0.6923,
+     "push": 0.1303,
+     "lose": 0.1773,
      "fair_home": 1.256,
-     "fair_away": 4.9
+     "fair_away": 4.904
     },
     "0.5": {
-     "win": 0.8225,
+     "win": 0.8227,
      "push": 0.0,
-     "lose": 0.1775,
+     "lose": 0.1773,
      "fair_home": 1.216,
-     "fair_away": 5.635
+     "fair_away": 5.639
     },
     "0.75": {
-     "win": 0.8225,
-     "push": 0.0612,
-     "lose": 0.1163,
+     "win": 0.8227,
+     "push": 0.0611,
+     "lose": 0.1162,
      "fair_home": 1.141,
-     "fair_away": 8.074
+     "fair_away": 8.08
     },
     "1.0": {
-     "win": 0.8225,
-     "push": 0.1224,
+     "win": 0.8227,
+     "push": 0.1223,
      "lose": 0.0551,
      "fair_home": 1.067,
-     "fair_away": 15.929
+     "fair_away": 15.943
     },
     "1.25": {
-     "win": 0.8837,
-     "push": 0.0612,
+     "win": 0.8838,
+     "push": 0.0611,
      "lose": 0.0551,
      "fair_home": 1.062,
-     "fair_away": 17.04
+     "fair_away": 17.053
     },
     "1.5": {
      "win": 0.9449,
      "push": 0.0,
      "lose": 0.0551,
      "fair_home": 1.058,
-     "fair_away": 18.15
+     "fair_away": 18.164
     }
    },
    "half_time": {
-    "1": 0.3988,
-    "X": 0.4385,
-    "2": 0.1627,
-    "over_0.5": 0.6529,
-    "over_1.5": 0.2856
+    "1": 0.399,
+    "X": 0.4384,
+    "2": 0.1626,
+    "over_0.5": 0.653,
+    "over_1.5": 0.2858
    },
    "ht_ft": {
-    "1/1": 0.3471,
+    "1/1": 0.3473,
     "1/X": 0.0418,
     "1/2": 0.0099,
-    "X/1": 0.1971,
-    "X/X": 0.165,
-    "X/2": 0.0764,
+    "X/1": 0.1972,
+    "X/X": 0.1649,
+    "X/2": 0.0763,
     "2/1": 0.0236,
     "2/X": 0.0418,
     "2/2": 0.0972
    },
    "quinigol": {
     "home": [
-     0.2003,
-     0.3221,
-     0.2589,
-     0.2187
+     0.2001,
+     0.3219,
+     0.259,
+     0.219
     ],
     "away": [
      0.4529,
@@ -658,15 +658,15 @@
     ],
     "joint": [
      [
-      0.0968,
-      0.0658,
-      0.0285,
+      0.0967,
+      0.0657,
+      0.0284,
       0.0093
      ],
      [
       0.1398,
-      0.1216,
-      0.0458,
+      0.1215,
+      0.0457,
       0.0149
      ],
      [
@@ -676,15 +676,15 @@
       0.012
      ],
      [
-      0.0991,
-      0.0785,
+      0.0992,
+      0.0786,
       0.0311,
       0.0101
      ]
     ]
    },
    "goals": [
-    1.608,
+    1.609,
     0.792
    ]
   },
@@ -1380,7 +1380,7 @@
    "p_full": [
     0.5024,
     0.281,
-    0.2165
+    0.2166
    ],
    "p_adj": [
     0.4935,
@@ -1390,38 +1390,16 @@
   },
   "ratings_mercado": {
    "p": [
-    0.5764,
+    0.5762,
     0.2437,
-    0.1799
+    0.18
    ],
    "w": 0.75
   },
-  "movement": {
-   "home": "Ath Bilbao",
-   "away": "Espanol",
-   "date": "2026-11-20",
-   "from_ts": "2026-11-13T14:32:47.629534+00:00",
-   "to_ts": "2026-11-17T15:58:35.272418+00:00",
-   "p_from": [
-    0.567,
-    0.2537,
-    0.1793
-   ],
-   "p_to": [
-    0.5659,
-    0.254,
-    0.18
-   ],
-   "delta_pts": [
-    -0.1,
-    0.0,
-    0.1
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-21",
   "kickoff_utc": "2026-11-21T13:00:00+00:00",
@@ -1438,40 +1416,40 @@
   ],
   "polymarket": {
    "p": [
-    0.4406,
-    0.2871,
+    0.4356,
+    0.2921,
     0.2723
    ],
-   "volume": 315,
-   "liquidity": 43442,
+   "volume": 425,
+   "liquidity": 66308,
    "url": "https://polymarket.com/event/lal-ala-dep-2026-11-21",
    "slug": "lal-ala-dep-2026-11-21",
    "overround": 0.01,
    "used": false,
-   "reason": "poco volumen (315 $)",
+   "reason": "poco volumen (425 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
    "p_home": 0.4346,
-   "p_draw": 0.2913,
+   "p_draw": 0.2912,
    "p_away": 0.2741,
-   "xg_home": 1.3215,
+   "xg_home": 1.3217,
    "xg_away": 0.9942,
-   "p_over25": 0.4081,
-   "p_btts": 0.4687,
+   "p_over25": 0.4082,
+   "p_btts": 0.4688,
    "top_scores": [
     [
      "1-1",
-     0.1364592669633867
+     0.13644008746122435
     ],
     [
      "1-0",
-     0.12363785251817887
+     0.12364347374892479
     ],
     [
      "0-0",
-     0.10548281804269961
+     0.1054488852615998
     ]
    ]
   },
@@ -1482,9 +1460,9 @@
   "elo_diff": 37.5,
   "referee": null,
   "weather": {
-   "temp_c": 11.9,
+   "temp_c": 12.1,
    "precip_mm": 0.0,
-   "wind_kmh": 29.2
+   "wind_kmh": 21.7
   },
   "market": null,
   "lineup_confirmed": false,
@@ -1526,14 +1504,7 @@
      "source": "futbolfantasy: Rotura de lig. cruzado anterior · Baja hasta abril"
     }
    ],
-   "La Coruna": [
-    {
-     "player": "Zakaria Eddahchouri",
-     "status": "doubtful",
-     "reason": "injury",
-     "source": "futbolfantasy: Fractura de muñeca · Duda para la jornada 13"
-    }
-   ]
+   "La Coruna": []
   },
   "lineups": null,
   "squads": {
@@ -1762,25 +1733,17 @@
       "usual": true
      }
     ],
-    "out": [
-     {
-      "name": "Zakaria Eddahchouri",
-      "status": "doubtful",
-      "reason": "injury",
-      "source": "futbolfantasy: Fractura de muñeca · Duda para la jornada 13",
-      "imp": 0.0
-     }
-    ]
+    "out": []
    }
   },
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.4081,
-   "p_over_model": 0.4081,
+   "p_over": 0.4082,
+   "p_over_model": 0.4082,
    "p_over_market": null,
    "market_src": null,
-   "p_btts": 0.4687
+   "p_btts": 0.4688
   },
   "odds_market": null,
   "markets": {
@@ -1845,7 +1808,7 @@
     },
     {
      "score": "0-1",
-     "p": 0.0895
+     "p": 0.0896
     },
     {
      "score": "2-1",
@@ -1898,7 +1861,7 @@
     },
     "-1.25": {
      "win": 0.2216,
-     "push": 0.121,
+     "push": 0.1211,
      "lose": 0.6574,
      "fair_home": 3.966,
      "fair_away": 1.337
@@ -1912,7 +1875,7 @@
     },
     "-0.75": {
      "win": 0.3426,
-     "push": 0.121,
+     "push": 0.1211,
      "lose": 0.5363,
      "fair_home": 2.565,
      "fair_away": 1.639
@@ -1943,7 +1906,7 @@
      "push": 0.1468,
      "lose": 0.2427,
      "fair_home": 1.398,
-     "fair_away": 3.516
+     "fair_away": 3.515
     },
     "0.5": {
      "win": 0.7573,
@@ -1954,8 +1917,8 @@
     },
     "0.75": {
      "win": 0.7573,
-     "push": 0.0795,
-     "lose": 0.1631,
+     "push": 0.0796,
+     "lose": 0.1632,
      "fair_home": 1.215,
      "fair_away": 5.642
     },
@@ -1964,11 +1927,11 @@
      "push": 0.1591,
      "lose": 0.0836,
      "fair_home": 1.11,
-     "fair_away": 10.059
+     "fair_away": 10.058
     },
     "1.25": {
-     "win": 0.8369,
-     "push": 0.0795,
+     "win": 0.8368,
+     "push": 0.0796,
      "lose": 0.0836,
      "fair_home": 1.1,
      "fair_away": 11.01
@@ -2015,7 +1978,7 @@
     "joint": [
      [
       0.115,
-      0.0895,
+      0.0896,
       0.0428,
       0.0161
      ],
@@ -2555,8 +2518,7 @@
      "att": null,
      "goals": 2,
      "minutes": 74,
-     "status": "duda",
-     "source": "futbolfantasy: Fractura de muñeca · Duda para la jornada 13"
+     "status": "disponible"
     },
     {
      "name": "Teun Gijselhart",
@@ -2755,22 +2717,44 @@
    ],
    "p_adj": [
     0.4346,
-    0.2913,
+    0.2912,
     0.2741
    ]
   },
   "ratings_mercado": {
    "p": [
-    0.486,
+    0.4861,
     0.2781,
     0.2358
    ],
    "w": 0.75
   },
-  "movement": null
+  "movement": {
+   "home": "Alaves",
+   "away": "La Coruna",
+   "date": "2026-11-21",
+   "from_ts": "2026-11-14T13:29:34.945878+00:00",
+   "to_ts": "2026-11-18T15:37:10.699081+00:00",
+   "p_from": [
+    0.4643,
+    0.2815,
+    0.2542
+   ],
+   "p_to": [
+    0.4645,
+    0.2814,
+    0.2541
+   ],
+   "delta_pts": [
+    0.0,
+    -0.0,
+    -0.0
+   ],
+   "important": false
+  }
  },
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-21",
   "kickoff_utc": "2026-11-21T15:15:00+00:00",
@@ -2787,40 +2771,40 @@
   ],
   "polymarket": {
    "p": [
-    0.5025,
-    0.2687,
-    0.2289
+    0.4925,
+    0.2736,
+    0.2338
    ],
-   "volume": 394,
-   "liquidity": 51732,
+   "volume": 398,
+   "liquidity": 79669,
    "url": "https://polymarket.com/event/lal-ray-val-2026-11-21",
    "slug": "lal-ray-val-2026-11-21",
    "overround": 0.005,
    "used": false,
-   "reason": "poco volumen (394 $)",
+   "reason": "poco volumen (398 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
    "p_home": 0.4812,
    "p_draw": 0.2843,
-   "p_away": 0.2344,
+   "p_away": 0.2345,
    "xg_home": 1.4105,
-   "xg_away": 0.9038,
-   "p_over25": 0.4077,
+   "xg_away": 0.9039,
+   "p_over25": 0.4078,
    "p_btts": 0.4564,
    "top_scores": [
     [
      "1-0",
-     0.13281611897808082
+     0.1328052979649796
     ],
     [
      "1-1",
-     0.13259074037922336
+     0.13258013937304297
     ],
     [
      "0-0",
-     0.1054326634540987
+     0.10540325172146126
     ]
    ]
   },
@@ -2831,9 +2815,9 @@
   "elo_diff": 87.5,
   "referee": null,
   "weather": {
-   "temp_c": 10.1,
-   "precip_mm": 0.8,
-   "wind_kmh": 1.8
+   "temp_c": 13.9,
+   "precip_mm": 0.0,
+   "wind_kmh": 5.8
   },
   "market": null,
   "lineup_confirmed": false,
@@ -2928,7 +2912,7 @@
      "player": "Arnaut Danjuma",
      "status": "doubtful",
      "reason": "injury",
-     "source": "futbolfantasy: Molestias en el muslo · Duda para la jornada 13"
+     "source": "futbolfantasy: Sobrecarga en el muslo · Duda para la jornada 13"
     },
     {
      "player": "José Gayà",
@@ -3228,7 +3212,7 @@
       "name": "Arnaut Danjuma",
       "status": "doubtful",
       "reason": "injury",
-      "source": "futbolfantasy: Molestias en el muslo · Duda para la jornada 13",
+      "source": "futbolfantasy: Sobrecarga en el muslo · Duda para la jornada 13",
       "imp": 0.8
      },
      {
@@ -3244,8 +3228,8 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.4077,
-   "p_over_model": 0.4077,
+   "p_over": 0.4078,
+   "p_over_model": 0.4078,
    "p_over_market": null,
    "market_src": null,
    "p_btts": 0.4564
@@ -3262,7 +3246,7 @@
     "2": 0.3269
    },
    "totals": {
-    "0.5": 0.8946,
+    "0.5": 0.8947,
     "1.5": 0.6792,
     "2.5": 0.4079,
     "3.5": 0.2037,
@@ -3305,7 +3289,7 @@
     },
     {
      "score": "0-0",
-     "p": 0.1054
+     "p": 0.1053
     },
     {
      "score": "2-0",
@@ -3418,7 +3402,7 @@
      "push": 0.0,
      "lose": 0.234,
      "fair_home": 1.305,
-     "fair_away": 4.274
+     "fair_away": 4.273
     },
     "0.75": {
      "win": 0.766,
@@ -3482,7 +3466,7 @@
     ],
     "joint": [
      [
-      0.1054,
+      0.1053,
       0.0826,
       0.0403,
       0.0154
@@ -4111,7 +4095,7 @@
      "goals": 0,
      "minutes": 840,
      "status": "duda",
-     "source": "futbolfantasy: Molestias en el muslo · Duda para la jornada 13"
+     "source": "futbolfantasy: Sobrecarga en el muslo · Duda para la jornada 13"
     },
     {
      "name": "Hugo Duro",
@@ -4230,7 +4214,7 @@
    "p_adj": [
     0.4812,
     0.2843,
-    0.2344
+    0.2345
    ]
   },
   "ratings_mercado": {
@@ -4245,12 +4229,12 @@
    "home": "Vallecano",
    "away": "Valencia",
    "date": "2026-11-21",
-   "from_ts": "2026-11-14T13:29:34.945878+00:00",
-   "to_ts": "2026-11-17T15:58:35.272418+00:00",
+   "from_ts": "2026-11-17T15:58:35.272418+00:00",
+   "to_ts": "2026-11-18T15:37:10.699081+00:00",
    "p_from": [
-    0.4831,
-    0.2736,
-    0.2433
+    0.484,
+    0.2733,
+    0.2427
    ],
    "p_to": [
     0.484,
@@ -4258,65 +4242,65 @@
     0.2427
    ],
    "delta_pts": [
-    0.1,
-    -0.0,
-    -0.1
+    0.0,
+    0.0,
+    0.0
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-21",
   "kickoff_utc": "2026-11-21T17:30:00+00:00",
   "home": "Sevilla",
   "away": "Betis",
-  "p_home": 0.3609,
+  "p_home": 0.3612,
   "p_draw": 0.2737,
-  "p_away": 0.3653,
+  "p_away": 0.3651,
   "model": "stacker",
   "p_model": [
-   0.3609,
+   0.3612,
    0.2737,
-   0.3653
+   0.3651
   ],
   "polymarket": {
    "p": [
-    0.3134,
-    0.2736,
-    0.4129
+    0.3266,
+    0.2764,
+    0.397
    ],
-   "volume": 1261,
-   "liquidity": 58043,
+   "volume": 2727,
+   "liquidity": 70061,
    "url": "https://polymarket.com/event/lal-sev-bet-2026-11-21",
    "slug": "lal-sev-bet-2026-11-21",
-   "overround": 0.005,
+   "overround": -0.005,
    "used": false,
-   "reason": "poco volumen (1.261 $)",
+   "reason": "poco volumen (2.727 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
-   "p_home": 0.3436,
+   "p_home": 0.3452,
    "p_draw": 0.2633,
-   "p_away": 0.3931,
-   "xg_home": 1.3591,
-   "xg_away": 1.4686,
-   "p_over25": 0.5371,
-   "p_btts": 0.5782,
+   "p_away": 0.3915,
+   "xg_home": 1.3629,
+   "xg_away": 1.4654,
+   "p_over25": 0.5373,
+   "p_btts": 0.5784,
    "top_scores": [
     [
      "1-1",
-     0.1242380333952153
+     0.12422943023389693
     ],
     [
      "1-2",
-     0.08669174149282374
+     0.0865052696741001
     ],
     [
      "0-1",
-     0.08068670528096568
+     0.08045838599462445
     ]
    ]
   },
@@ -4327,19 +4311,19 @@
   "elo_diff": -61.9,
   "referee": null,
   "weather": {
-   "temp_c": 19.2,
+   "temp_c": 19.6,
    "precip_mm": 0.0,
-   "wind_kmh": 3.7
+   "wind_kmh": 11.5
   },
   "market": null,
   "lineup_confirmed": false,
   "availability_source": "lesionados y sancionados",
   "deficit": [
-   0.084,
+   0.063,
    0.136
   ],
   "deficit_defence": [
-   0.067,
+   0.059,
    0.023
   ],
   "context": {
@@ -4377,12 +4361,6 @@
      "source": "futbolfantasy: Luxación acromioclavicular · Baja hasta enero"
     },
     {
-     "player": "Rubén Vargas",
-     "status": "doubtful",
-     "reason": "injury",
-     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 13"
-    },
-    {
      "player": "Marcão",
      "status": "doubtful",
      "reason": "injury",
@@ -4397,16 +4375,22 @@
    ],
    "Betis": [
     {
-     "player": "Cucho Hernández",
+     "player": "José Morante",
      "status": "out",
      "reason": "injury",
-     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre"
+     "source": "futbolfantasy: Contusión en la cadera · Baja confirmada para la jornada 13"
     },
     {
      "player": "Dani Ceballos",
      "status": "doubtful",
      "reason": "injury",
      "source": "futbolfantasy: Molestias musculares · Duda para la jornada 13"
+    },
+    {
+     "player": "Cucho Hernández",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre"
     }
    ]
   },
@@ -4540,13 +4524,6 @@
       "imp": 0.6
      },
      {
-      "name": "Rubén Vargas",
-      "status": "doubtful",
-      "reason": "injury",
-      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 13",
-      "imp": 0.2
-     },
-     {
       "name": "Marcão",
       "status": "doubtful",
       "reason": "injury",
@@ -4669,11 +4646,11 @@
     ],
     "out": [
      {
-      "name": "Cucho Hernández",
+      "name": "José Morante",
       "status": "out",
       "reason": "injury",
-      "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre",
-      "imp": 0.5
+      "source": "futbolfantasy: Contusión en la cadera · Baja confirmada para la jornada 13",
+      "imp": 0.0
      },
      {
       "name": "Dani Ceballos",
@@ -4681,6 +4658,13 @@
       "reason": "injury",
       "source": "futbolfantasy: Molestias musculares · Duda para la jornada 13",
       "imp": 0.2
+     },
+     {
+      "name": "Cucho Hernández",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión en el sóleo · Baja hasta finales de noviembre",
+      "imp": 0.5
      }
     ]
    }
@@ -4688,11 +4672,11 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5371,
-   "p_over_model": 0.5371,
+   "p_over": 0.5373,
+   "p_over_model": 0.5373,
    "p_over_market": null,
    "market_src": null,
-   "p_btts": 0.5782
+   "p_btts": 0.5784
   },
   "odds_market": null,
   "markets": {
@@ -4732,9 +4716,9 @@
    "margin": {
     "home3+": 0.057,
     "home2": 0.1065,
-    "home1": 0.198,
+    "home1": 0.1981,
     "draw": 0.2769,
-    "away1": 0.198,
+    "away1": 0.1981,
     "away2": 0.1065,
     "away3+": 0.057
    },
@@ -4817,7 +4801,7 @@
     },
     "-1.0": {
      "win": 0.1635,
-     "push": 0.198,
+     "push": 0.1981,
      "lose": 0.6385,
      "fair_home": 4.905,
      "fair_away": 1.256
@@ -4873,7 +4857,7 @@
     },
     "1.0": {
      "win": 0.6385,
-     "push": 0.198,
+     "push": 0.1981,
      "lose": 0.1635,
      "fair_home": 1.256,
      "fair_away": 4.905
@@ -4961,12 +4945,12 @@
    "home": [
     {
      "name": "Robbie Ure",
-     "p": 0.255,
+     "p": 0.256,
      "xg90": 0.36
     },
     {
      "name": "Isaac Romero",
-     "p": 0.204,
+     "p": 0.205,
      "xg90": 0.27
     },
     {
@@ -4976,12 +4960,12 @@
     },
     {
      "name": "Youssouf Fofana",
-     "p": 0.192,
+     "p": 0.193,
      "xg90": 0.25
     },
     {
      "name": "Lucas Stassin",
-     "p": 0.183,
+     "p": 0.184,
      "xg90": 0.25
     }
    ],
@@ -5178,8 +5162,7 @@
      "att": null,
      "goals": 0,
      "minutes": 98,
-     "status": "duda",
-     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 13"
+     "status": "disponible"
     },
     {
      "name": "Julio Díaz",
@@ -5516,7 +5499,8 @@
      "att": null,
      "goals": 1,
      "minutes": 1,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Contusión en la cadera · Baja confirmada para la jornada 13"
     },
     {
      "name": "Diego Conde",
@@ -5615,7 +5599,7 @@
    },
    "corners": [
     5.32,
-    3.75
+    3.76
    ],
    "corners_total": 9.08,
    "p_corners_over": {
@@ -5683,14 +5667,14 @@
     1.47
    ],
    "p_full": [
-    0.3455,
+    0.3456,
     0.2631,
     0.3913
    ],
    "p_adj": [
-    0.3436,
+    0.3452,
     0.2633,
-    0.3931
+    0.3915
    ]
   },
   "ratings_mercado": {
@@ -5705,78 +5689,78 @@
    "home": "Sevilla",
    "away": "Betis",
    "date": "2026-11-21",
-   "from_ts": "2026-11-16T15:41:37.883818+00:00",
-   "to_ts": "2026-11-17T15:58:35.272418+00:00",
+   "from_ts": "2026-11-17T15:58:35.272418+00:00",
+   "to_ts": "2026-11-18T15:37:10.699081+00:00",
    "p_from": [
-    0.3607,
-    0.2738,
-    0.3655
-   ],
-   "p_to": [
     0.3609,
     0.2737,
     0.3653
    ],
+   "p_to": [
+    0.3612,
+    0.2737,
+    0.3651
+   ],
    "delta_pts": [
     0.0,
-    -0.0,
+    0.0,
     -0.0
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-21",
   "kickoff_utc": "2026-11-21T20:00:00+00:00",
   "home": "Real Madrid",
   "away": "Celta",
-  "p_home": 0.7385,
-  "p_draw": 0.168,
-  "p_away": 0.0936,
+  "p_home": 0.7382,
+  "p_draw": 0.1681,
+  "p_away": 0.0937,
   "model": "stacker",
   "p_model": [
-   0.7385,
-   0.168,
-   0.0936
+   0.7382,
+   0.1681,
+   0.0937
   ],
   "polymarket": {
    "p": [
-    0.8308,
-    0.1144,
+    0.8358,
+    0.1095,
     0.0547
    ],
-   "volume": 22428,
-   "liquidity": 145226,
+   "volume": 25160,
+   "liquidity": 283878,
    "url": "https://polymarket.com/event/lal-rea-cel-2026-11-21",
    "slug": "lal-rea-cel-2026-11-21",
    "overround": 0.005,
    "used": false,
-   "reason": "poco volumen (22.428 $)",
+   "reason": "poco volumen (25.160 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
-   "p_home": 0.7073,
-   "p_draw": 0.1886,
-   "p_away": 0.1041,
-   "xg_home": 2.2052,
-   "xg_away": 0.727,
+   "p_home": 0.7072,
+   "p_draw": 0.1887,
+   "p_away": 0.1042,
+   "xg_home": 2.2049,
+   "xg_away": 0.7272,
    "p_over25": 0.5614,
    "p_btts": 0.4642,
    "top_scores": [
     [
      "2-0",
-     0.12955372321389436
+     0.1295314991444024
     ],
     [
      "1-0",
-     0.11302531616028824
+     0.11302926018273675
     ],
     [
      "3-0",
-     0.09523263887747133
+     0.0952019212377517
     ]
    ]
   },
@@ -5787,9 +5771,9 @@
   "elo_diff": 283.6,
   "referee": null,
   "weather": {
-   "temp_c": 8.8,
-   "precip_mm": 1.2,
-   "wind_kmh": 3.2
+   "temp_c": 11.2,
+   "precip_mm": 0.0,
+   "wind_kmh": 2.6
   },
   "market": null,
   "lineup_confirmed": false,
@@ -6129,55 +6113,55 @@
   "odds_market": null,
   "markets": {
    "double_chance": {
-    "1X": 0.9106,
-    "X2": 0.2617,
-    "12": 0.8278
+    "1X": 0.9089,
+    "X2": 0.2705,
+    "12": 0.8205
    },
    "draw_no_bet": {
-    "1": 0.892,
-    "2": 0.108
+    "1": 0.889,
+    "2": 0.111
    },
    "totals": {
-    "0.5": 0.9485,
-    "1.5": 0.8121,
-    "2.5": 0.5877,
-    "3.5": 0.3637,
-    "4.5": 0.193
+    "0.5": 0.9425,
+    "1.5": 0.7947,
+    "2.5": 0.5614,
+    "3.5": 0.3375,
+    "4.5": 0.1734
    },
    "team_totals": {
     "home": {
-     "0.5": 0.9044,
-     "1.5": 0.6801,
-     "2.5": 0.4166
+     "0.5": 0.8954,
+     "1.5": 0.6593,
+     "2.5": 0.3928
     },
     "away": {
-     "0.5": 0.5039,
-     "1.5": 0.1562,
-     "2.5": 0.0343
+     "0.5": 0.4903,
+     "1.5": 0.1468,
+     "2.5": 0.0311
     }
    },
-   "btts": 0.4598,
+   "btts": 0.4433,
    "clean_sheet": {
-    "home": 0.4961,
-    "away": 0.0956
+    "home": 0.5097,
+    "away": 0.1046
    },
    "margin": {
-    "home3+": 0.2918,
-    "home2": 0.2189,
-    "home1": 0.2277,
-    "draw": 0.1722,
-    "away1": 0.0651,
+    "home3+": 0.2761,
+    "home2": 0.2193,
+    "home1": 0.2341,
+    "draw": 0.1795,
+    "away1": 0.0669,
     "away2": 0.0195,
-    "away3+": 0.0048
+    "away3+": 0.0046
    },
    "exact": [
     {
      "score": "2-0",
-     "p": 0.1307
+     "p": 0.1359
     },
     {
      "score": "1-0",
-     "p": 0.1072
+     "p": 0.1161
     },
     {
      "score": "3-0",
@@ -6189,203 +6173,203 @@
     },
     {
      "score": "1-1",
-     "p": 0.0821
+     "p": 0.0853
     },
     {
      "score": "3-1",
-     "p": 0.0717
+     "p": 0.0689
     },
     {
      "score": "4-0",
-     "p": 0.06
+     "p": 0.0577
     },
     {
      "score": "0-0",
-     "p": 0.0515
+     "p": 0.0575
     }
    ],
    "asian": {
     "-2.5": {
-     "win": 0.2918,
+     "win": 0.2761,
      "push": 0.0,
-     "lose": 0.7082,
-     "fair_home": 3.428,
-     "fair_away": 1.412
+     "lose": 0.7239,
+     "fair_home": 3.622,
+     "fair_away": 1.381
     },
     "-2.25": {
-     "win": 0.2918,
-     "push": 0.1094,
-     "lose": 0.5988,
-     "fair_home": 3.052,
-     "fair_away": 1.487
+     "win": 0.2761,
+     "push": 0.1097,
+     "lose": 0.6143,
+     "fair_home": 3.225,
+     "fair_away": 1.449
     },
     "-2.0": {
-     "win": 0.2918,
-     "push": 0.2189,
-     "lose": 0.4894,
-     "fair_home": 2.677,
-     "fair_away": 1.596
+     "win": 0.2761,
+     "push": 0.2193,
+     "lose": 0.5046,
+     "fair_home": 2.828,
+     "fair_away": 1.547
     },
     "-1.75": {
-     "win": 0.4012,
-     "push": 0.1094,
-     "lose": 0.4894,
-     "fair_home": 2.22,
-     "fair_away": 1.82
+     "win": 0.3857,
+     "push": 0.1097,
+     "lose": 0.5046,
+     "fair_home": 2.308,
+     "fair_away": 1.764
     },
     "-1.5": {
-     "win": 0.5106,
+     "win": 0.4954,
      "push": 0.0,
-     "lose": 0.4894,
-     "fair_home": 1.958,
-     "fair_away": 2.043
+     "lose": 0.5046,
+     "fair_home": 2.019,
+     "fair_away": 1.982
     },
     "-1.25": {
-     "win": 0.5106,
-     "push": 0.1139,
-     "lose": 0.3755,
-     "fair_home": 1.735,
-     "fair_away": 2.36
+     "win": 0.4954,
+     "push": 0.117,
+     "lose": 0.3876,
+     "fair_home": 1.782,
+     "fair_away": 2.278
     },
     "-1.0": {
-     "win": 0.5106,
-     "push": 0.2277,
-     "lose": 0.2617,
-     "fair_home": 1.512,
-     "fair_away": 2.951
+     "win": 0.4954,
+     "push": 0.2341,
+     "lose": 0.2705,
+     "fair_home": 1.546,
+     "fair_away": 2.831
     },
     "-0.75": {
-     "win": 0.6245,
-     "push": 0.1139,
-     "lose": 0.2617,
-     "fair_home": 1.419,
-     "fair_away": 3.387
+     "win": 0.6124,
+     "push": 0.117,
+     "lose": 0.2705,
+     "fair_home": 1.442,
+     "fair_away": 3.264
     },
     "-0.5": {
-     "win": 0.7383,
+     "win": 0.7295,
      "push": 0.0,
-     "lose": 0.2617,
-     "fair_home": 1.354,
-     "fair_away": 3.822
+     "lose": 0.2705,
+     "fair_home": 1.371,
+     "fair_away": 3.696
     },
     "-0.25": {
-     "win": 0.7383,
-     "push": 0.0861,
-     "lose": 0.1755,
-     "fair_home": 1.238,
-     "fair_away": 5.206
+     "win": 0.7295,
+     "push": 0.0897,
+     "lose": 0.1808,
+     "fair_home": 1.248,
+     "fair_away": 5.035
     },
     "0.0": {
-     "win": 0.7383,
-     "push": 0.1722,
-     "lose": 0.0894,
-     "fair_home": 1.121,
-     "fair_away": 9.256
+     "win": 0.7295,
+     "push": 0.1795,
+     "lose": 0.0911,
+     "fair_home": 1.125,
+     "fair_away": 9.01
     },
     "0.25": {
-     "win": 0.8245,
-     "push": 0.0861,
-     "lose": 0.0894,
-     "fair_home": 1.108,
-     "fair_away": 10.219
+     "win": 0.8192,
+     "push": 0.0897,
+     "lose": 0.0911,
+     "fair_home": 1.111,
+     "fair_away": 9.996
     },
     "0.5": {
-     "win": 0.9106,
+     "win": 0.9089,
      "push": 0.0,
-     "lose": 0.0894,
-     "fair_home": 1.098,
-     "fair_away": 11.182
+     "lose": 0.0911,
+     "fair_home": 1.1,
+     "fair_away": 10.981
     },
     "0.75": {
-     "win": 0.9106,
-     "push": 0.0326,
-     "lose": 0.0569,
-     "fair_home": 1.062,
-     "fair_away": 17.012
+     "win": 0.9089,
+     "push": 0.0334,
+     "lose": 0.0576,
+     "fair_home": 1.063,
+     "fair_away": 16.775
     },
     "1.0": {
-     "win": 0.9106,
-     "push": 0.0651,
-     "lose": 0.0243,
+     "win": 0.9089,
+     "push": 0.0669,
+     "lose": 0.0242,
      "fair_home": 1.027,
-     "fair_away": 38.459
+     "fair_away": 38.604
     },
     "1.25": {
-     "win": 0.9431,
-     "push": 0.0326,
-     "lose": 0.0243,
+     "win": 0.9424,
+     "push": 0.0334,
+     "lose": 0.0242,
      "fair_home": 1.026,
-     "fair_away": 39.799
+     "fair_away": 39.988
     },
     "1.5": {
-     "win": 0.9757,
+     "win": 0.9758,
      "push": 0.0,
-     "lose": 0.0243,
+     "lose": 0.0242,
      "fair_home": 1.025,
-     "fair_away": 41.138
+     "fair_away": 41.372
     }
    },
    "half_time": {
-    "1": 0.5394,
-    "X": 0.3511,
-    "2": 0.1095,
-    "over_0.5": 0.7393,
-    "over_1.5": 0.3888
+    "1": 0.529,
+    "X": 0.362,
+    "2": 0.109,
+    "over_0.5": 0.7255,
+    "over_1.5": 0.3706
    },
    "ht_ft": {
-    "1/1": 0.5017,
-    "1/X": 0.0315,
-    "1/2": 0.0063,
-    "X/1": 0.2113,
-    "X/X": 0.1011,
-    "X/2": 0.0386,
-    "2/1": 0.0295,
-    "2/X": 0.0315,
-    "2/2": 0.0486
+    "1/1": 0.4914,
+    "1/X": 0.0316,
+    "1/2": 0.0061,
+    "X/1": 0.2142,
+    "X/X": 0.1079,
+    "X/2": 0.0399,
+    "2/1": 0.0281,
+    "2/X": 0.0316,
+    "2/2": 0.0493
    },
    "quinigol": {
     "home": [
-     0.0956,
-     0.2244,
-     0.2634,
-     0.4166
+     0.1046,
+     0.2361,
+     0.2666,
+     0.3928
     ],
     "away": [
-     0.4961,
-     0.3478,
-     0.1219,
-     0.0343
+     0.5097,
+     0.3435,
+     0.1158,
+     0.0311
     ],
     "joint": [
      [
-      0.0515,
-      0.0291,
-      0.0116,
-      0.0033
+      0.0575,
+      0.0317,
+      0.0121,
+      0.0032
      ],
      [
-      0.1072,
-      0.0821,
+      0.1161,
+      0.0853,
       0.0273,
-      0.0077
+      0.0073
      ],
      [
-      0.1307,
+      0.1359,
       0.0916,
-      0.0321,
-      0.009
+      0.0309,
+      0.0083
      ],
      [
-      0.2067,
-      0.1449,
-      0.0508,
-      0.0143
+      0.2002,
+      0.1349,
+      0.0455,
+      0.0122
      ]
     ]
    },
    "goals": [
-    2.348,
-    0.701
+    2.258,
+    0.674
    ]
   },
   "espn_id": "401882798",
@@ -7091,82 +7075,82 @@
     0.73
    ],
    "xg_adj": [
-    2.21,
+    2.2,
     0.73
    ],
    "p_full": [
-    0.7024,
-    0.1912,
+    0.7023,
+    0.1913,
     0.1064
    ],
    "p_adj": [
-    0.7073,
-    0.1886,
-    0.1041
+    0.7072,
+    0.1887,
+    0.1042
    ]
   },
   "ratings_mercado": {
    "p": [
-    0.7379,
-    0.1657,
-    0.0965
+    0.7375,
+    0.1658,
+    0.0966
    ],
    "w": 0.75
   },
   "movement": null
  },
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-22",
   "kickoff_utc": "2026-11-22T13:00:00+00:00",
   "home": "Barcelona",
   "away": "Villarreal",
-  "p_home": 0.7351,
-  "p_draw": 0.1486,
-  "p_away": 0.1163,
+  "p_home": 0.7348,
+  "p_draw": 0.1488,
+  "p_away": 0.1164,
   "model": "stacker",
   "p_model": [
-   0.7351,
-   0.1486,
-   0.1163
+   0.7348,
+   0.1488,
+   0.1164
   ],
   "polymarket": {
    "p": [
-    0.8191,
-    0.1156,
-    0.0653
+    0.815,
+    0.115,
+    0.07
    ],
-   "volume": 34659,
-   "liquidity": 78395,
+   "volume": 37862,
+   "liquidity": 194918,
    "url": "https://polymarket.com/event/lal-bar-vil-2026-11-22",
    "slug": "lal-bar-vil-2026-11-22",
-   "overround": -0.005,
+   "overround": 0.0,
    "used": false,
-   "reason": "poco volumen (34.659 $)",
+   "reason": "poco volumen (37.862 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
-   "p_home": 0.7492,
+   "p_home": 0.7491,
    "p_draw": 0.1409,
-   "p_away": 0.1099,
-   "xg_home": 3.0903,
+   "p_away": 0.11,
+   "xg_home": 3.0898,
    "xg_away": 1.1859,
-   "p_over25": 0.7996,
+   "p_over25": 0.7995,
    "p_btts": 0.6656,
    "top_scores": [
     [
      "3-1",
-     0.0810836737941459
+     0.08108394918894407
     ],
     [
      "2-1",
-     0.07871344110894735
+     0.07872636134824487
     ],
     [
      "3-0",
-     0.06837553344572243
+     0.06837187079979776
     ]
    ]
   },
@@ -7177,9 +7161,9 @@
   "elo_diff": 265.0,
   "referee": null,
   "weather": {
-   "temp_c": 18.8,
+   "temp_c": 19.8,
    "precip_mm": 0.0,
-   "wind_kmh": 8.3
+   "wind_kmh": 14.4
   },
   "market": null,
   "lineup_confirmed": false,
@@ -7551,8 +7535,8 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.7996,
-   "p_over_model": 0.7996,
+   "p_over": 0.7995,
+   "p_over_model": 0.7995,
    "p_over_market": null,
    "market_src": null,
    "p_btts": 0.6656
@@ -7565,36 +7549,36 @@
     "12": 0.8452
    },
    "draw_no_bet": {
-    "1": 0.8619,
-    "2": 0.1381
+    "1": 0.862,
+    "2": 0.138
    },
    "totals": {
-    "0.5": 0.9773,
-    "1.5": 0.9067,
-    "2.5": 0.7522,
-    "3.5": 0.5536,
-    "4.5": 0.3584
+    "0.5": 0.9772,
+    "1.5": 0.9066,
+    "2.5": 0.7519,
+    "3.5": 0.5533,
+    "4.5": 0.358
    },
    "team_totals": {
     "home": {
-     "0.5": 0.9412,
-     "1.5": 0.7744,
-     "2.5": 0.5383
+     "0.5": 0.9411,
+     "1.5": 0.7743,
+     "2.5": 0.5381
     },
     "away": {
-     "0.5": 0.6678,
-     "1.5": 0.3017,
-     "2.5": 0.1
+     "0.5": 0.6675,
+     "1.5": 0.3013,
+     "2.5": 0.0998
     }
    },
-   "btts": 0.6317,
+   "btts": 0.6313,
    "clean_sheet": {
-    "home": 0.3322,
-    "away": 0.0588
+    "home": 0.3325,
+    "away": 0.0589
    },
    "margin": {
-    "home3+": 0.3316,
-    "home2": 0.1995,
+    "home3+": 0.3315,
+    "home2": 0.1996,
     "home1": 0.1974,
     "draw": 0.1548,
     "away1": 0.0748,
@@ -7612,15 +7596,15 @@
     },
     {
      "score": "2-0",
-     "p": 0.0784
+     "p": 0.0786
     },
     {
      "score": "3-0",
-     "p": 0.0741
+     "p": 0.0742
     },
     {
      "score": "1-1",
-     "p": 0.0642
+     "p": 0.0643
     },
     {
      "score": "4-1",
@@ -7632,27 +7616,27 @@
     },
     {
      "score": "1-0",
-     "p": 0.0522
+     "p": 0.0523
     }
    ],
    "asian": {
     "-2.5": {
-     "win": 0.3316,
+     "win": 0.3315,
      "push": 0.0,
-     "lose": 0.6684,
+     "lose": 0.6685,
      "fair_home": 3.016,
      "fair_away": 1.496
     },
     "-2.25": {
-     "win": 0.3316,
+     "win": 0.3315,
      "push": 0.0998,
      "lose": 0.5687,
      "fair_home": 2.715,
      "fair_away": 1.583
     },
     "-2.0": {
-     "win": 0.3316,
-     "push": 0.1995,
+     "win": 0.3315,
+     "push": 0.1996,
      "lose": 0.4689,
      "fair_home": 2.414,
      "fair_away": 1.707
@@ -7690,7 +7674,7 @@
      "push": 0.0987,
      "lose": 0.2715,
      "fair_home": 1.431,
-     "fair_away": 3.319
+     "fair_away": 3.32
     },
     "-0.5": {
      "win": 0.7285,
@@ -7703,72 +7687,72 @@
      "win": 0.7285,
      "push": 0.0774,
      "lose": 0.1941,
-     "fair_home": 1.267,
-     "fair_away": 4.752
+     "fair_home": 1.266,
+     "fair_away": 4.754
     },
     "0.0": {
      "win": 0.7285,
      "push": 0.1548,
      "lose": 0.1167,
      "fair_home": 1.16,
-     "fair_away": 7.24
+     "fair_away": 7.244
     },
     "0.25": {
      "win": 0.8059,
      "push": 0.0774,
      "lose": 0.1167,
      "fair_home": 1.145,
-     "fair_away": 7.903
+     "fair_away": 7.907
     },
     "0.5": {
      "win": 0.8833,
      "push": 0.0,
      "lose": 0.1167,
      "fair_home": 1.132,
-     "fair_away": 8.566
+     "fair_away": 8.571
     },
     "0.75": {
      "win": 0.8833,
      "push": 0.0374,
      "lose": 0.0793,
      "fair_home": 1.09,
-     "fair_away": 12.133
+     "fair_away": 12.142
     },
     "1.0": {
      "win": 0.8833,
      "push": 0.0748,
      "lose": 0.0419,
      "fair_home": 1.047,
-     "fair_away": 22.067
+     "fair_away": 22.092
     },
     "1.25": {
      "win": 0.9207,
      "push": 0.0374,
      "lose": 0.0419,
-     "fair_home": 1.046,
-     "fair_away": 22.959
+     "fair_home": 1.045,
+     "fair_away": 22.985
     },
     "1.5": {
      "win": 0.9581,
      "push": 0.0,
      "lose": 0.0419,
      "fair_home": 1.044,
-     "fair_away": 23.851
+     "fair_away": 23.878
     }
    },
    "half_time": {
     "1": 0.5548,
-    "X": 0.3009,
-    "2": 0.1443,
-    "over_0.5": 0.8236,
-    "over_1.5": 0.5175
+    "X": 0.301,
+    "2": 0.1442,
+    "over_0.5": 0.8234,
+    "over_1.5": 0.5172
    },
    "ht_ft": {
-    "1/1": 0.5065,
+    "1/1": 0.5066,
     "1/X": 0.0368,
     "1/2": 0.0115,
-    "X/1": 0.1832,
-    "X/X": 0.0747,
+    "X/1": 0.1833,
+    "X/X": 0.0748,
     "X/2": 0.0429,
     "2/1": 0.0419,
     "2/X": 0.0368,
@@ -7776,47 +7760,47 @@
    },
    "quinigol": {
     "home": [
-     0.0588,
-     0.1667,
-     0.2361,
-     0.5383
+     0.0589,
+     0.1668,
+     0.2362,
+     0.5381
     ],
     "away": [
-     0.3322,
+     0.3325,
      0.3661,
-     0.2017,
-     0.1
+     0.2016,
+     0.0998
     ],
     "joint": [
      [
-      0.0227,
-      0.0183,
+      0.0228,
+      0.0184,
       0.0119,
       0.0059
      ],
      [
-      0.0522,
-      0.0642,
+      0.0523,
+      0.0643,
       0.0336,
-      0.0167
+      0.0166
      ],
      [
-      0.0784,
+      0.0786,
       0.0865,
       0.0476,
       0.0236
      ],
      [
-      0.1788,
-      0.1971,
-      0.1086,
-      0.0538
+      0.1789,
+      0.197,
+      0.1084,
+      0.0537
      ]
     ]
    },
    "goals": [
-    2.833,
-    1.102
+    2.832,
+    1.101
    ]
   },
   "espn_id": "401882804",
@@ -8445,7 +8429,7 @@
     6.89,
     3.97
    ],
-   "corners_total": 10.86,
+   "corners_total": 10.85,
    "p_corners_over": {
     "8.5": 0.755,
     "9.5": 0.644,
@@ -8511,50 +8495,28 @@
     1.19
    ],
    "p_full": [
-    0.749,
+    0.7489,
     0.1429,
     0.1082
    ],
    "p_adj": [
-    0.7492,
+    0.7491,
     0.1409,
-    0.1099
+    0.11
    ]
   },
   "ratings_mercado": {
    "p": [
-    0.742,
-    0.1496,
-    0.1084
+    0.7416,
+    0.1498,
+    0.1085
    ],
    "w": 0.75
   },
-  "movement": {
-   "home": "Barcelona",
-   "away": "Villarreal",
-   "date": "2026-11-22",
-   "from_ts": "2026-11-16T15:41:37.883818+00:00",
-   "to_ts": "2026-11-17T15:58:35.272418+00:00",
-   "p_from": [
-    0.7345,
-    0.1489,
-    0.1166
-   ],
-   "p_to": [
-    0.7351,
-    0.1486,
-    0.1163
-   ],
-   "delta_pts": [
-    0.1,
-    -0.0,
-    -0.0
-   ],
-   "important": false
-  }
+  "movement": null
  },
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-22",
   "kickoff_utc": "2026-11-22T15:15:00+00:00",
@@ -8571,17 +8533,17 @@
   ],
   "polymarket": {
    "p": [
-    0.3,
-    0.235,
-    0.465
+    0.2921,
+    0.2327,
+    0.4752
    ],
-   "volume": 1167,
-   "liquidity": 32620,
+   "volume": 1169,
+   "liquidity": 43823,
    "url": "https://polymarket.com/event/lal-rrc-rso-2026-11-22",
    "slug": "lal-rrc-rso-2026-11-22",
-   "overround": 0.0,
+   "overround": 0.01,
    "used": false,
-   "reason": "poco volumen (1.167 $)",
+   "reason": "poco volumen (1.169 $)",
    "model_weight": null,
    "more": {}
   },
@@ -8589,22 +8551,22 @@
    "p_home": 0.2941,
    "p_draw": 0.2111,
    "p_away": 0.4948,
-   "xg_home": 1.6992,
-   "xg_away": 2.2191,
-   "p_over25": 0.7497,
-   "p_btts": 0.7323,
+   "xg_home": 1.6988,
+   "xg_away": 2.2185,
+   "p_over25": 0.7495,
+   "p_btts": 0.7321,
    "top_scores": [
     [
      "1-2",
-     0.08315347141552375
+     0.08317245682668829
     ],
     [
      "1-1",
-     0.07886634597842174
+     0.0788987957255318
     ],
     [
      "2-2",
-     0.0706477481778214
+     0.07064669262581667
     ]
    ]
   },
@@ -8615,9 +8577,9 @@
   "elo_diff": 0.1,
   "referee": null,
   "weather": {
-   "temp_c": 15.2,
+   "temp_c": 15.1,
    "precip_mm": 0.0,
-   "wind_kmh": 26.5
+   "wind_kmh": 25.9
   },
   "market": null,
   "lineup_confirmed": false,
@@ -8937,29 +8899,29 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.7497,
-   "p_over_model": 0.7497,
+   "p_over": 0.7495,
+   "p_over_model": 0.7495,
    "p_over_market": null,
    "market_src": null,
-   "p_btts": 0.7323
+   "p_btts": 0.7321
   },
   "odds_market": null,
   "markets": {
    "double_chance": {
-    "1X": 0.5398,
-    "X2": 0.6852,
+    "1X": 0.54,
+    "X2": 0.685,
     "12": 0.775
    },
    "draw_no_bet": {
-    "1": 0.4062,
-    "2": 0.5938
+    "1": 0.4064,
+    "2": 0.5936
    },
    "totals": {
     "0.5": 0.9682,
-    "1.5": 0.8794,
-    "2.5": 0.6981,
-    "3.5": 0.4858,
-    "4.5": 0.2945
+    "1.5": 0.8793,
+    "2.5": 0.698,
+    "3.5": 0.4856,
+    "4.5": 0.2943
    },
    "team_totals": {
     "home": {
@@ -8968,29 +8930,29 @@
      "2.5": 0.2223
     },
     "away": {
-     "0.5": 0.8623,
-     "1.5": 0.5894,
-     "2.5": 0.3187
+     "0.5": 0.8622,
+     "1.5": 0.5891,
+     "2.5": 0.3184
     }
    },
-   "btts": 0.6966,
+   "btts": 0.6965,
    "clean_sheet": {
-    "home": 0.1377,
+    "home": 0.1378,
     "away": 0.1975
    },
    "margin": {
     "home3+": 0.061,
-    "home2": 0.0933,
-    "home1": 0.1605,
+    "home2": 0.0934,
+    "home1": 0.1606,
     "draw": 0.225,
     "away1": 0.1972,
-    "away2": 0.1395,
-    "away3+": 0.1235
+    "away2": 0.1394,
+    "away3+": 0.1234
    },
    "exact": [
     {
      "score": "1-1",
-     "p": 0.092
+     "p": 0.0921
     },
     {
      "score": "1-2",
@@ -8998,7 +8960,7 @@
     },
     {
      "score": "2-1",
-     "p": 0.0709
+     "p": 0.071
     },
     {
      "score": "2-2",
@@ -9014,7 +8976,7 @@
     },
     {
      "score": "0-1",
-     "p": 0.0493
+     "p": 0.0494
     },
     {
      "score": "2-3",
@@ -9026,139 +8988,139 @@
      "win": 0.061,
      "push": 0.0,
      "lose": 0.939,
-     "fair_home": 16.396,
+     "fair_home": 16.385,
      "fair_away": 1.065
     },
     "-2.25": {
      "win": 0.061,
      "push": 0.0467,
-     "lose": 0.8924,
-     "fair_home": 15.631,
+     "lose": 0.8923,
+     "fair_home": 15.62,
      "fair_away": 1.068
     },
     "-2.0": {
      "win": 0.061,
-     "push": 0.0933,
-     "lose": 0.8457,
-     "fair_home": 14.866,
+     "push": 0.0934,
+     "lose": 0.8456,
+     "fair_home": 14.856,
      "fair_away": 1.072
     },
     "-1.75": {
-     "win": 0.1076,
+     "win": 0.1077,
      "push": 0.0467,
-     "lose": 0.8457,
-     "fair_home": 8.856,
+     "lose": 0.8456,
+     "fair_home": 8.85,
      "fair_away": 1.127
     },
     "-1.5": {
-     "win": 0.1543,
+     "win": 0.1544,
      "push": 0.0,
-     "lose": 0.8457,
-     "fair_home": 6.481,
-     "fair_away": 1.182
+     "lose": 0.8456,
+     "fair_home": 6.477,
+     "fair_away": 1.183
     },
     "-1.25": {
-     "win": 0.1543,
-     "push": 0.0802,
-     "lose": 0.7655,
-     "fair_home": 5.961,
+     "win": 0.1544,
+     "push": 0.0803,
+     "lose": 0.7653,
+     "fair_home": 5.957,
      "fair_away": 1.202
     },
     "-1.0": {
-     "win": 0.1543,
-     "push": 0.1605,
-     "lose": 0.6852,
-     "fair_home": 5.441,
+     "win": 0.1544,
+     "push": 0.1606,
+     "lose": 0.685,
+     "fair_home": 5.437,
      "fair_away": 1.225
     },
     "-0.75": {
-     "win": 0.2345,
-     "push": 0.0802,
-     "lose": 0.6852,
-     "fair_home": 3.921,
-     "fair_away": 1.342
+     "win": 0.2347,
+     "push": 0.0803,
+     "lose": 0.685,
+     "fair_home": 3.919,
+     "fair_away": 1.343
     },
     "-0.5": {
-     "win": 0.3148,
+     "win": 0.315,
      "push": 0.0,
-     "lose": 0.6852,
-     "fair_home": 3.177,
-     "fair_away": 1.459
+     "lose": 0.685,
+     "fair_home": 3.175,
+     "fair_away": 1.46
     },
     "-0.25": {
-     "win": 0.3148,
+     "win": 0.315,
      "push": 0.1125,
-     "lose": 0.5727,
-     "fair_home": 2.819,
+     "lose": 0.5725,
+     "fair_home": 2.818,
      "fair_away": 1.55
     },
     "0.0": {
-     "win": 0.3148,
+     "win": 0.315,
      "push": 0.225,
-     "lose": 0.4602,
-     "fair_home": 2.462,
-     "fair_away": 1.684
+     "lose": 0.46,
+     "fair_home": 2.461,
+     "fair_away": 1.685
     },
     "0.25": {
-     "win": 0.4273,
+     "win": 0.4275,
      "push": 0.1125,
-     "lose": 0.4602,
-     "fair_home": 2.077,
-     "fair_away": 1.928
+     "lose": 0.46,
+     "fair_home": 2.076,
+     "fair_away": 1.929
     },
     "0.5": {
-     "win": 0.5398,
+     "win": 0.54,
      "push": 0.0,
-     "lose": 0.4602,
-     "fair_home": 1.853,
-     "fair_away": 2.173
+     "lose": 0.46,
+     "fair_home": 1.852,
+     "fair_away": 2.174
     },
     "0.75": {
-     "win": 0.5398,
+     "win": 0.54,
      "push": 0.0986,
-     "lose": 0.3616,
-     "fair_home": 1.67,
-     "fair_away": 2.493
+     "lose": 0.3614,
+     "fair_home": 1.669,
+     "fair_away": 2.494
     },
     "1.0": {
-     "win": 0.5398,
+     "win": 0.54,
      "push": 0.1972,
-     "lose": 0.263,
+     "lose": 0.2628,
      "fair_home": 1.487,
-     "fair_away": 3.052
+     "fair_away": 3.055
     },
     "1.25": {
-     "win": 0.6384,
+     "win": 0.6386,
      "push": 0.0986,
-     "lose": 0.263,
+     "lose": 0.2628,
      "fair_home": 1.412,
-     "fair_away": 3.427
+     "fair_away": 3.43
     },
     "1.5": {
-     "win": 0.737,
+     "win": 0.7372,
      "push": 0.0,
-     "lose": 0.263,
-     "fair_home": 1.357,
-     "fair_away": 3.802
+     "lose": 0.2628,
+     "fair_home": 1.356,
+     "fair_away": 3.805
     }
    },
    "half_time": {
-    "1": 0.2779,
-    "X": 0.353,
-    "2": 0.3691,
-    "over_0.5": 0.7959,
-    "over_1.5": 0.4716
+    "1": 0.278,
+    "X": 0.3531,
+    "2": 0.3689,
+    "over_0.5": 0.7958,
+    "over_1.5": 0.4715
    },
    "ht_ft": {
-    "1/1": 0.1879,
+    "1/1": 0.188,
     "1/X": 0.0541,
     "1/2": 0.0358,
-    "X/1": 0.1041,
-    "X/X": 0.1076,
-    "X/2": 0.1413,
+    "X/1": 0.1042,
+    "X/X": 0.1077,
+    "X/2": 0.1412,
     "2/1": 0.0273,
     "2/X": 0.0541,
-    "2/2": 0.2877
+    "2/2": 0.2875
    },
    "quinigol": {
     "home": [
@@ -9168,41 +9130,41 @@
      0.2223
     ],
     "away": [
-     0.1377,
-     0.273,
+     0.1378,
+     0.2731,
      0.2707,
-     0.3187
+     0.3184
     ],
     "joint": [
      [
       0.0318,
-      0.0493,
+      0.0494,
       0.0535,
       0.0629
      ],
      [
-      0.0395,
-      0.092,
+      0.0396,
+      0.0921,
       0.0867,
-      0.1021
+      0.102
      ],
      [
       0.0358,
-      0.0709,
+      0.071,
       0.0703,
-      0.0828
+      0.0827
      ],
      [
       0.0306,
       0.0607,
       0.0602,
-      0.0709
+      0.0708
      ]
     ]
    },
    "goals": [
     1.622,
-    1.983
+    1.982
    ]
   },
   "espn_id": "401882800",
@@ -9803,7 +9765,7 @@
    "p_cards_over": {
     "3.5": 0.749,
     "4.5": 0.577,
-    "5.5": 0.402
+    "5.5": 0.401
    },
    "corners": [
     5.24,
@@ -9811,7 +9773,7 @@
    ],
    "corners_total": 11.69,
    "p_corners_over": {
-    "8.5": 0.824,
+    "8.5": 0.823,
     "9.5": 0.729,
     "10.5": 0.619
    },
@@ -9877,7 +9839,7 @@
    "p_full": [
     0.296,
     0.2138,
-    0.4902
+    0.4901
    ],
    "p_adj": [
     0.2941,
@@ -9896,57 +9858,57 @@
   "movement": null
  },
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-22",
   "kickoff_utc": "2026-11-22T17:30:00+00:00",
   "home": "Osasuna",
   "away": "Malaga",
-  "p_home": 0.5393,
-  "p_draw": 0.2528,
-  "p_away": 0.2079,
+  "p_home": 0.5396,
+  "p_draw": 0.2526,
+  "p_away": 0.2077,
   "model": "stacker",
   "p_model": [
-   0.5393,
-   0.2528,
-   0.2079
+   0.5396,
+   0.2526,
+   0.2077
   ],
   "polymarket": {
    "p": [
-    0.5423,
-    0.2587,
-    0.199
+    0.5323,
+    0.2637,
+    0.204
    ],
-   "volume": 1365,
-   "liquidity": 43686,
+   "volume": 2806,
+   "liquidity": 42000,
    "url": "https://polymarket.com/event/lal-osa-mala-2026-11-22",
    "slug": "lal-osa-mala-2026-11-22",
    "overround": 0.005,
    "used": false,
-   "reason": "poco volumen (1.365 $)",
+   "reason": "poco volumen (2.806 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
-   "p_home": 0.6042,
-   "p_draw": 0.2304,
-   "p_away": 0.1654,
-   "xg_home": 1.8883,
-   "xg_away": 0.8847,
-   "p_over25": 0.5241,
-   "p_btts": 0.5038,
+   "p_home": 0.6056,
+   "p_draw": 0.2298,
+   "p_away": 0.1645,
+   "xg_home": 1.8922,
+   "xg_away": 0.8825,
+   "p_over25": 0.5245,
+   "p_btts": 0.5033,
    "top_scores": [
     [
      "1-0",
-     0.11251284810653692
+     0.11256785916520008
     ],
     [
      "2-0",
-     0.11138373230113344
+     0.11165028063784403
     ],
     [
      "1-1",
-     0.10983364104539592
+     0.10958805991546082
     ]
    ]
   },
@@ -9957,19 +9919,19 @@
   "elo_diff": 83.7,
   "referee": null,
   "weather": {
-   "temp_c": 9.8,
+   "temp_c": 9.6,
    "precip_mm": 0.0,
-   "wind_kmh": 7.8
+   "wind_kmh": 8.3
   },
   "market": null,
   "lineup_confirmed": false,
   "availability_source": "lesionados y sancionados",
   "deficit": [
-   0.076,
+   0.06,
    0.157
   ],
   "deficit_defence": [
-   0.328,
+   0.319,
    0.224
   ],
   "context": {
@@ -9999,12 +9961,6 @@
      "status": "out",
      "reason": "injury",
      "source": "futbolfantasy: Lesión en el sóleo · Baja confirmada para la jornada 13"
-    },
-    {
-     "player": "Diego Rico",
-     "status": "doubtful",
-     "reason": "injury",
-     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 13"
     },
     {
      "player": "Romain Del Castillo",
@@ -10170,13 +10126,6 @@
       "imp": 0.8
      },
      {
-      "name": "Diego Rico",
-      "status": "doubtful",
-      "reason": "injury",
-      "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 13",
-      "imp": 0.2
-     },
-     {
       "name": "Romain Del Castillo",
       "status": "doubtful",
       "reason": "injury",
@@ -10332,52 +10281,52 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5241,
-   "p_over_model": 0.5241,
+   "p_over": 0.5245,
+   "p_over_model": 0.5245,
    "p_over_market": null,
    "market_src": null,
-   "p_btts": 0.5038
+   "p_btts": 0.5033
   },
   "odds_market": null,
   "markets": {
    "double_chance": {
-    "1X": 0.7948,
+    "1X": 0.7946,
     "X2": 0.4643,
-    "12": 0.741
+    "12": 0.7411
    },
    "draw_no_bet": {
-    "1": 0.723,
-    "2": 0.277
+    "1": 0.7229,
+    "2": 0.2771
    },
    "totals": {
-    "0.5": 0.9159,
-    "1.5": 0.7291,
-    "2.5": 0.4692,
-    "3.5": 0.2534,
-    "4.5": 0.1157
+    "0.5": 0.916,
+    "1.5": 0.7295,
+    "2.5": 0.4697,
+    "3.5": 0.2538,
+    "4.5": 0.116
    },
    "team_totals": {
     "home": {
-     "0.5": 0.8047,
-     "1.5": 0.4857,
-     "2.5": 0.2252
+     "0.5": 0.8049,
+     "1.5": 0.486,
+     "2.5": 0.2255
     },
     "away": {
-     "0.5": 0.6007,
-     "1.5": 0.2341,
-     "2.5": 0.0659
+     "0.5": 0.6011,
+     "1.5": 0.2345,
+     "2.5": 0.066
     }
    },
-   "btts": 0.4895,
+   "btts": 0.4899,
    "clean_sheet": {
-    "home": 0.3993,
-    "away": 0.1953
+    "home": 0.3989,
+    "away": 0.1951
    },
    "margin": {
-    "home3+": 0.1252,
+    "home3+": 0.1253,
     "home2": 0.1668,
-    "home1": 0.2438,
-    "draw": 0.259,
+    "home1": 0.2437,
+    "draw": 0.2589,
     "away1": 0.1344,
     "away2": 0.0527,
     "away3+": 0.0182
@@ -10385,15 +10334,15 @@
    "exact": [
     {
      "score": "1-1",
-     "p": 0.1231
+     "p": 0.123
     },
     {
      "score": "1-0",
-     "p": 0.1213
+     "p": 0.1211
     },
     {
      "score": "2-0",
-     "p": 0.104
+     "p": 0.1039
     },
     {
      "score": "2-1",
@@ -10401,11 +10350,11 @@
     },
     {
      "score": "0-0",
-     "p": 0.0841
+     "p": 0.084
     },
     {
      "score": "0-1",
-     "p": 0.0655
+     "p": 0.0654
     },
     {
      "score": "3-0",
@@ -10418,56 +10367,56 @@
    ],
    "asian": {
     "-2.5": {
-     "win": 0.1252,
+     "win": 0.1253,
      "push": 0.0,
-     "lose": 0.8748,
-     "fair_home": 7.989,
+     "lose": 0.8747,
+     "fair_home": 7.984,
      "fair_away": 1.143
     },
     "-2.25": {
-     "win": 0.1252,
+     "win": 0.1253,
      "push": 0.0834,
-     "lose": 0.7915,
-     "fair_home": 7.323,
+     "lose": 0.7914,
+     "fair_home": 7.318,
      "fair_away": 1.158
     },
     "-2.0": {
-     "win": 0.1252,
+     "win": 0.1253,
      "push": 0.1668,
-     "lose": 0.7081,
-     "fair_home": 6.657,
+     "lose": 0.708,
+     "fair_home": 6.653,
      "fair_away": 1.177
     },
     "-1.75": {
-     "win": 0.2085,
+     "win": 0.2086,
      "push": 0.0834,
-     "lose": 0.7081,
-     "fair_home": 4.395,
+     "lose": 0.708,
+     "fair_home": 4.394,
      "fair_away": 1.295
     },
     "-1.5": {
-     "win": 0.2919,
+     "win": 0.292,
      "push": 0.0,
-     "lose": 0.7081,
-     "fair_home": 3.426,
+     "lose": 0.708,
+     "fair_home": 3.425,
      "fair_away": 1.412
     },
     "-1.25": {
-     "win": 0.2919,
+     "win": 0.292,
      "push": 0.1219,
-     "lose": 0.5862,
-     "fair_home": 3.008,
+     "lose": 0.5861,
+     "fair_home": 3.007,
      "fair_away": 1.498
     },
     "-1.0": {
-     "win": 0.2919,
-     "push": 0.2438,
+     "win": 0.292,
+     "push": 0.2437,
      "lose": 0.4643,
      "fair_home": 2.59,
      "fair_away": 1.629
     },
     "-0.75": {
-     "win": 0.4138,
+     "win": 0.4139,
      "push": 0.1219,
      "lose": 0.4643,
      "fair_home": 2.122,
@@ -10489,115 +10438,115 @@
     },
     "0.0": {
      "win": 0.5357,
-     "push": 0.259,
-     "lose": 0.2052,
+     "push": 0.2589,
+     "lose": 0.2054,
      "fair_home": 1.383,
-     "fair_away": 3.61
+     "fair_away": 3.609
     },
     "0.25": {
      "win": 0.6652,
      "push": 0.1295,
-     "lose": 0.2052,
+     "lose": 0.2054,
      "fair_home": 1.309,
-     "fair_away": 4.241
+     "fair_away": 4.239
     },
     "0.5": {
-     "win": 0.7948,
+     "win": 0.7946,
      "push": 0.0,
-     "lose": 0.2052,
+     "lose": 0.2054,
      "fair_home": 1.258,
-     "fair_away": 4.872
+     "fair_away": 4.869
     },
     "0.75": {
-     "win": 0.7948,
+     "win": 0.7946,
      "push": 0.0672,
-     "lose": 0.1381,
+     "lose": 0.1382,
      "fair_home": 1.174,
-     "fair_away": 6.757
+     "fair_away": 6.752
     },
     "1.0": {
-     "win": 0.7948,
+     "win": 0.7946,
      "push": 0.1344,
-     "lose": 0.0709,
+     "lose": 0.071,
      "fair_home": 1.089,
-     "fair_away": 12.215
+     "fair_away": 12.2
     },
     "1.25": {
-     "win": 0.8619,
+     "win": 0.8618,
      "push": 0.0672,
-     "lose": 0.0709,
+     "lose": 0.071,
      "fair_home": 1.082,
-     "fair_away": 13.163
+     "fair_away": 13.147
     },
     "1.5": {
-     "win": 0.9291,
+     "win": 0.929,
      "push": 0.0,
-     "lose": 0.0709,
+     "lose": 0.071,
      "fair_home": 1.076,
-     "fair_away": 14.111
+     "fair_away": 14.094
     }
    },
    "half_time": {
-    "1": 0.3884,
-    "X": 0.4265,
-    "2": 0.1851,
-    "over_0.5": 0.6752,
-    "over_1.5": 0.31
+    "1": 0.3885,
+    "X": 0.4263,
+    "2": 0.1852,
+    "over_0.5": 0.6755,
+    "over_1.5": 0.3103
    },
    "ht_ft": {
-    "1/1": 0.3307,
+    "1/1": 0.3308,
     "1/X": 0.0452,
     "1/2": 0.0125,
     "X/1": 0.1855,
-    "X/X": 0.1564,
+    "X/X": 0.1562,
     "X/2": 0.0846,
     "2/1": 0.0256,
     "2/X": 0.0452,
-    "2/2": 0.1143
+    "2/2": 0.1144
    },
    "quinigol": {
     "home": [
-     0.1953,
-     0.319,
+     0.1951,
+     0.3189,
      0.2605,
-     0.2252
+     0.2255
     ],
     "away": [
-     0.3993,
+     0.3989,
      0.3666,
-     0.1683,
-     0.0659
+     0.1685,
+     0.066
     ],
     "joint": [
      [
-      0.0841,
-      0.0655,
+      0.084,
+      0.0654,
       0.0329,
       0.0129
      ],
      [
-      0.1213,
-      0.1231,
+      0.1211,
+      0.123,
       0.0537,
-      0.021
+      0.0211
      ],
      [
-      0.104,
+      0.1039,
       0.0955,
-      0.0438,
+      0.0439,
       0.0172
      ],
      [
       0.0899,
-      0.0826,
-      0.0379,
-      0.0148
+      0.0827,
+      0.038,
+      0.0149
      ]
     ]
    },
    "goals": [
-    1.633,
-    0.918
+    1.634,
+    0.919
    ]
   },
   "espn_id": "401882801",
@@ -10605,7 +10554,7 @@
    "home": [
     {
      "name": "Ante Budimir",
-     "p": 0.504,
+     "p": 0.505,
      "xg90": 0.62
     },
     {
@@ -10758,8 +10707,7 @@
      "att": null,
      "goals": 0,
      "minutes": 105,
-     "status": "duda",
-     "source": "futbolfantasy: Molestias sin determinar · Duda para la jornada 13"
+     "status": "disponible"
     },
     {
      "name": "Jorge Herrando",
@@ -11297,9 +11245,9 @@
     0.1629
    ],
    "p_adj": [
-    0.6042,
-    0.2304,
-    0.1654
+    0.6056,
+    0.2298,
+    0.1645
    ]
   },
   "ratings_mercado": {
@@ -11314,41 +11262,41 @@
    "home": "Osasuna",
    "away": "Malaga",
    "date": "2026-11-22",
-   "from_ts": "2026-11-16T15:41:37.883818+00:00",
-   "to_ts": "2026-11-17T15:58:35.272418+00:00",
+   "from_ts": "2026-11-17T15:58:35.272418+00:00",
+   "to_ts": "2026-11-18T15:37:10.699081+00:00",
    "p_from": [
-    0.5426,
-    0.2517,
-    0.2057
-   ],
-   "p_to": [
     0.5393,
     0.2528,
     0.2079
    ],
+   "p_to": [
+    0.5396,
+    0.2526,
+    0.2077
+   ],
    "delta_pts": [
-    -0.3,
-    0.1,
-    0.2
+    0.0,
+    -0.0,
+    -0.0
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-22",
   "kickoff_utc": "2026-11-22T20:00:00+00:00",
   "home": "Getafe",
   "away": "Ath Madrid",
-  "p_home": 0.2147,
-  "p_draw": 0.2854,
-  "p_away": 0.4999,
+  "p_home": 0.2153,
+  "p_draw": 0.2856,
+  "p_away": 0.4991,
   "model": "stacker",
   "p_model": [
-   0.2147,
-   0.2854,
-   0.4999
+   0.2153,
+   0.2856,
+   0.4991
   ],
   "polymarket": {
    "p": [
@@ -11356,60 +11304,60 @@
     0.2438,
     0.602
    ],
-   "volume": 1113,
-   "liquidity": 55057,
+   "volume": 1204,
+   "liquidity": 68501,
    "url": "https://polymarket.com/event/lal-get-mad-2026-11-22",
    "slug": "lal-get-mad-2026-11-22",
    "overround": 0.005,
    "used": false,
-   "reason": "poco volumen (1.113 $)",
+   "reason": "poco volumen (1.204 $)",
    "model_weight": null,
    "more": {}
   },
   "dc": {
-   "p_home": 0.2289,
-   "p_draw": 0.3085,
-   "p_away": 0.4626,
-   "xg_home": 0.7882,
-   "xg_away": 1.2417,
-   "p_over25": 0.3314,
-   "p_btts": 0.3945,
+   "p_home": 0.2325,
+   "p_draw": 0.31,
+   "p_away": 0.4576,
+   "xg_home": 0.7931,
+   "xg_away": 1.2289,
+   "p_over25": 0.3293,
+   "p_btts": 0.3941,
    "top_scores": [
     [
      "0-1",
-     0.15636706450113896
+     0.15595378906288732
     ],
     [
      "0-0",
-     0.13807880398998634
+     0.13913907741979037
     ],
     [
      "1-1",
-     0.13528097434997585
+     0.13577650350921758
     ]
    ]
   },
   "xg_base": [
-   0.77,
+   0.771,
    1.241
   ],
   "elo_diff": -113.9,
   "referee": null,
   "weather": {
-   "temp_c": 10.2,
+   "temp_c": 8.9,
    "precip_mm": 0.0,
-   "wind_kmh": 3.2
+   "wind_kmh": 3.5
   },
   "market": null,
   "lineup_confirmed": false,
   "availability_source": "lesionados y sancionados",
   "deficit": [
    0.067,
-   0.161
+   0.241
   ],
   "deficit_defence": [
    0.078,
-   0.111
+   0.132
   ],
   "context": {
    "stake_diff_late": 0.021,
@@ -11449,9 +11397,9 @@
    "Ath Madrid": [
     {
      "player": "Ademola Lookman",
-     "status": "doubtful",
+     "status": "out",
      "reason": "injury",
-     "source": "futbolfantasy: Esguince de rodilla · Duda para la jornada 13"
+     "source": "futbolfantasy: Esguince de rodilla · Baja hasta principios de diciembre"
     },
     {
      "player": "Marc Pubill",
@@ -11684,13 +11632,14 @@
       "usual": true
      },
      {
-      "name": "Ademola Lookman",
+      "name": "Jonathan David",
       "pos": "SUB",
       "role": "F",
-      "imp": 0.7,
-      "att": 0.66,
-      "absent": "doubtful",
-      "usual": true
+      "imp": 0.4,
+      "att": 1.5,
+      "absent": null,
+      "usual": false,
+      "replaces": "Ademola Lookman"
      },
      {
       "name": "Morten Hjulmand",
@@ -11705,9 +11654,9 @@
     "out": [
      {
       "name": "Ademola Lookman",
-      "status": "doubtful",
+      "status": "out",
       "reason": "injury",
-      "source": "futbolfantasy: Esguince de rodilla · Duda para la jornada 13",
+      "source": "futbolfantasy: Esguince de rodilla · Baja hasta principios de diciembre",
       "imp": 0.7
      },
      {
@@ -11730,272 +11679,272 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.3314,
-   "p_over_model": 0.3314,
+   "p_over": 0.3293,
+   "p_over_model": 0.3293,
    "p_over_market": null,
    "market_src": null,
-   "p_btts": 0.3945
+   "p_btts": 0.3941
   },
   "odds_market": null,
   "markets": {
    "double_chance": {
-    "1X": 0.5055,
-    "X2": 0.7966,
-    "12": 0.698
+    "1X": 0.5104,
+    "X2": 0.7871,
+    "12": 0.7025
    },
    "draw_no_bet": {
-    "1": 0.2915,
-    "2": 0.7085
+    "1": 0.3031,
+    "2": 0.6969
    },
    "totals": {
-    "0.5": 0.8621,
-    "1.5": 0.6086,
-    "2.5": 0.3314,
-    "3.5": 0.1483,
-    "4.5": 0.0554
+    "0.5": 0.8713,
+    "1.5": 0.6277,
+    "2.5": 0.3512,
+    "3.5": 0.1619,
+    "4.5": 0.0624
    },
    "team_totals": {
     "home": {
-     "0.5": 0.5186,
-     "1.5": 0.1666,
-     "2.5": 0.038
+     "0.5": 0.5407,
+     "1.5": 0.1833,
+     "2.5": 0.0443
     },
     "away": {
-     "0.5": 0.7272,
-     "1.5": 0.3728,
-     "2.5": 0.1427
+     "0.5": 0.7342,
+     "1.5": 0.382,
+     "2.5": 0.1487
     }
    },
-   "btts": 0.3836,
+   "btts": 0.4035,
    "clean_sheet": {
-    "home": 0.2728,
-    "away": 0.4814
+    "home": 0.2658,
+    "away": 0.4593
    },
    "margin": {
-    "home3+": 0.013,
-    "home2": 0.0476,
-    "home1": 0.1429,
-    "draw": 0.302,
-    "away1": 0.259,
-    "away2": 0.1503,
-    "away3+": 0.0852
+    "home3+": 0.015,
+    "home2": 0.0514,
+    "home1": 0.1465,
+    "draw": 0.2975,
+    "away1": 0.2542,
+    "away2": 0.1491,
+    "away3+": 0.0863
    },
    "exact": [
     {
      "score": "0-1",
-     "p": 0.1641
-    },
-    {
-     "score": "0-0",
-     "p": 0.1379
+     "p": 0.1552
     },
     {
      "score": "1-1",
-     "p": 0.1312
+     "p": 0.1324
+    },
+    {
+     "score": "0-0",
+     "p": 0.1287
     },
     {
      "score": "0-2",
-     "p": 0.1108
+     "p": 0.1072
     },
     {
      "score": "1-0",
-     "p": 0.0895
+     "p": 0.0884
     },
     {
      "score": "1-2",
-     "p": 0.081
-    },
-    {
-     "score": "0-3",
-     "p": 0.048
+     "p": 0.0834
     },
     {
      "score": "2-1",
-     "p": 0.0456
+     "p": 0.049
+    },
+    {
+     "score": "0-3",
+     "p": 0.0473
     }
    ],
    "asian": {
     "-2.5": {
-     "win": 0.013,
+     "win": 0.015,
      "push": 0.0,
-     "lose": 0.987,
-     "fair_home": 77.102,
-     "fair_away": 1.013
+     "lose": 0.985,
+     "fair_home": 66.682,
+     "fair_away": 1.015
     },
     "-2.25": {
-     "win": 0.013,
-     "push": 0.0238,
-     "lose": 0.9632,
-     "fair_home": 75.267,
-     "fair_away": 1.013
+     "win": 0.015,
+     "push": 0.0257,
+     "lose": 0.9593,
+     "fair_home": 64.969,
+     "fair_away": 1.016
     },
     "-2.0": {
-     "win": 0.013,
-     "push": 0.0476,
-     "lose": 0.9394,
-     "fair_home": 73.432,
-     "fair_away": 1.014
+     "win": 0.015,
+     "push": 0.0514,
+     "lose": 0.9336,
+     "fair_home": 63.255,
+     "fair_away": 1.016
     },
     "-1.75": {
-     "win": 0.0368,
-     "push": 0.0238,
-     "lose": 0.9394,
-     "fair_home": 26.548,
-     "fair_away": 1.039
+     "win": 0.0407,
+     "push": 0.0257,
+     "lose": 0.9336,
+     "fair_home": 23.941,
+     "fair_away": 1.044
     },
     "-1.5": {
-     "win": 0.0606,
+     "win": 0.0664,
      "push": 0.0,
-     "lose": 0.9394,
-     "fair_home": 16.509,
-     "fair_away": 1.064
+     "lose": 0.9336,
+     "fair_home": 15.061,
+     "fair_away": 1.071
     },
     "-1.25": {
-     "win": 0.0606,
-     "push": 0.0714,
-     "lose": 0.868,
-     "fair_home": 15.33,
-     "fair_away": 1.07
+     "win": 0.0664,
+     "push": 0.0733,
+     "lose": 0.8603,
+     "fair_home": 13.958,
+     "fair_away": 1.077
     },
     "-1.0": {
-     "win": 0.0606,
-     "push": 0.1429,
-     "lose": 0.7966,
-     "fair_home": 14.15,
-     "fair_away": 1.076
+     "win": 0.0664,
+     "push": 0.1465,
+     "lose": 0.7871,
+     "fair_home": 12.854,
+     "fair_away": 1.084
     },
     "-0.75": {
-     "win": 0.132,
-     "push": 0.0714,
-     "lose": 0.7966,
-     "fair_home": 7.034,
-     "fair_away": 1.166
+     "win": 0.1397,
+     "push": 0.0733,
+     "lose": 0.7871,
+     "fair_home": 6.635,
+     "fair_away": 1.177
     },
     "-0.5": {
-     "win": 0.2034,
+     "win": 0.2129,
      "push": 0.0,
-     "lose": 0.7966,
-     "fair_home": 4.915,
-     "fair_away": 1.255
+     "lose": 0.7871,
+     "fair_home": 4.696,
+     "fair_away": 1.271
     },
     "-0.25": {
-     "win": 0.2034,
-     "push": 0.151,
-     "lose": 0.6455,
-     "fair_home": 4.173,
-     "fair_away": 1.315
+     "win": 0.2129,
+     "push": 0.1487,
+     "lose": 0.6383,
+     "fair_home": 3.998,
+     "fair_away": 1.334
     },
     "0.0": {
-     "win": 0.2034,
-     "push": 0.302,
-     "lose": 0.4945,
-     "fair_home": 3.431,
-     "fair_away": 1.411
+     "win": 0.2129,
+     "push": 0.2975,
+     "lose": 0.4896,
+     "fair_home": 3.299,
+     "fair_away": 1.435
     },
     "0.25": {
-     "win": 0.3545,
-     "push": 0.151,
-     "lose": 0.4945,
-     "fair_home": 2.395,
-     "fair_away": 1.717
+     "win": 0.3617,
+     "push": 0.1487,
+     "lose": 0.4896,
+     "fair_home": 2.354,
+     "fair_away": 1.739
     },
     "0.5": {
-     "win": 0.5055,
+     "win": 0.5104,
      "push": 0.0,
-     "lose": 0.4945,
-     "fair_home": 1.978,
-     "fair_away": 2.022
+     "lose": 0.4896,
+     "fair_home": 1.959,
+     "fair_away": 2.043
     },
     "0.75": {
-     "win": 0.5055,
-     "push": 0.1295,
-     "lose": 0.365,
-     "fair_home": 1.722,
-     "fair_away": 2.385
+     "win": 0.5104,
+     "push": 0.1271,
+     "lose": 0.3625,
+     "fair_home": 1.71,
+     "fair_away": 2.408
     },
     "1.0": {
-     "win": 0.5055,
-     "push": 0.259,
-     "lose": 0.2356,
-     "fair_home": 1.466,
-     "fair_away": 3.146
+     "win": 0.5104,
+     "push": 0.2542,
+     "lose": 0.2354,
+     "fair_home": 1.461,
+     "fair_away": 3.169
     },
     "1.25": {
-     "win": 0.635,
-     "push": 0.1295,
-     "lose": 0.2356,
-     "fair_home": 1.371,
-     "fair_away": 3.695
+     "win": 0.6375,
+     "push": 0.1271,
+     "lose": 0.2354,
+     "fair_home": 1.369,
+     "fair_away": 3.709
     },
     "1.5": {
-     "win": 0.7644,
+     "win": 0.7646,
      "push": 0.0,
-     "lose": 0.2356,
+     "lose": 0.2354,
      "fair_home": 1.308,
-     "fair_away": 4.245
+     "fair_away": 4.249
     }
    },
    "half_time": {
-    "1": 0.1694,
-    "X": 0.4876,
-    "2": 0.343,
-    "over_0.5": 0.5914,
-    "over_1.5": 0.2257
+    "1": 0.1777,
+    "X": 0.479,
+    "2": 0.3433,
+    "over_0.5": 0.6043,
+    "over_1.5": 0.2375
    },
    "ht_ft": {
-    "1/1": 0.1103,
-    "1/X": 0.0411,
-    "1/2": 0.0179,
-    "X/1": 0.0906,
-    "X/X": 0.2068,
-    "X/2": 0.1902,
-    "2/1": 0.009,
-    "2/X": 0.0411,
-    "2/2": 0.2929
+    "1/1": 0.1163,
+    "1/X": 0.0425,
+    "1/2": 0.0189,
+    "X/1": 0.0932,
+    "X/X": 0.1994,
+    "X/2": 0.1864,
+    "2/1": 0.01,
+    "2/X": 0.0425,
+    "2/2": 0.2909
    },
    "quinigol": {
     "home": [
-     0.4814,
-     0.3519,
-     0.1286,
-     0.038
+     0.4593,
+     0.3574,
+     0.139,
+     0.0443
     ],
     "away": [
-     0.2728,
-     0.3544,
-     0.2302,
-     0.1427
+     0.2658,
+     0.3522,
+     0.2333,
+     0.1487
     ],
     "joint": [
      [
-      0.1379,
-      0.1641,
-      0.1108,
-      0.0687
+      0.1287,
+      0.1552,
+      0.1072,
+      0.0683
      ],
      [
-      0.0895,
-      0.1312,
-      0.081,
-      0.0502
+      0.0884,
+      0.1324,
+      0.0834,
+      0.0531
      ],
      [
-      0.0351,
-      0.0456,
-      0.0296,
-      0.0183
+      0.0369,
+      0.049,
+      0.0324,
+      0.0207
      ],
      [
-      0.0104,
-      0.0135,
-      0.0088,
-      0.0054
+      0.0118,
+      0.0156,
+      0.0103,
+      0.0066
      ]
     ]
    },
    "goals": [
-    0.731,
-    1.299
+    0.778,
+    1.325
    ]
   },
   "espn_id": "401882803",
@@ -12003,7 +11952,7 @@
    "home": [
     {
      "name": "Martín Satriano",
-     "p": 0.2,
+     "p": 0.201,
      "xg90": 0.29
     },
     {
@@ -12013,44 +11962,44 @@
     },
     {
      "name": "Ramón Terrats",
-     "p": 0.125,
+     "p": 0.126,
      "xg90": 0.18
     },
     {
      "name": "Mario Martín",
-     "p": 0.082,
+     "p": 0.083,
      "xg90": 0.11
     },
     {
      "name": "Andrés García",
-     "p": 0.031,
+     "p": 0.032,
      "xg90": 0.04
     }
    ],
    "away": [
     {
-     "name": "Ademola Lookman",
-     "p": 0.197,
-     "xg90": 0.41
+     "name": "Jonathan David",
+     "p": 0.445,
+     "xg90": 1.12
     },
     {
      "name": "Giuliano Simeone",
-     "p": 0.115,
+     "p": 0.114,
      "xg90": 0.22
     },
     {
      "name": "Lee Kang-In",
-     "p": 0.113,
+     "p": 0.112,
      "xg90": 0.23
     },
     {
      "name": "Álex Baena",
-     "p": 0.082,
+     "p": 0.081,
      "xg90": 0.16
     },
     {
      "name": "Marcos Llorente",
-     "p": 0.04,
+     "p": 0.039,
      "xg90": 0.07
     }
    ]
@@ -12618,8 +12567,8 @@
      "att": 0.45,
      "goals": 1,
      "minutes": 634,
-     "status": "duda",
-     "source": "futbolfantasy: Esguince de rodilla · Duda para la jornada 13"
+     "status": "baja",
+     "source": "futbolfantasy: Esguince de rodilla · Baja hasta principios de diciembre"
     },
     {
      "name": "Jonathan David",
@@ -12659,7 +12608,7 @@
    "corners_total": 9.37,
    "p_corners_over": {
     "8.5": 0.592,
-    "9.5": 0.461,
+    "9.5": 0.462,
     "10.5": 0.339
    },
    "p_red": 0.23,
@@ -12692,22 +12641,22 @@
      {
       "name": "Álex Baena",
       "yellows": 4,
-      "p": 0.364
+      "p": 0.379
      },
      {
       "name": "Marc Pubill",
       "yellows": 4,
-      "p": 0.342
+      "p": 0.356
      },
      {
       "name": "Morten Hjulmand",
       "yellows": 3,
-      "p": 0.324
+      "p": 0.338
      },
      {
       "name": "Marcos Llorente",
       "yellows": 2,
-      "p": 0.218
+      "p": 0.228
      }
     ]
    }
@@ -12719,24 +12668,24 @@
    ],
    "xg_adj": [
     0.79,
-    1.24
+    1.23
    ],
    "p_full": [
-    0.2239,
+    0.224,
     0.3092,
     0.4669
    ],
    "p_adj": [
-    0.2289,
-    0.3085,
-    0.4626
+    0.2325,
+    0.31,
+    0.4576
    ]
   },
   "ratings_mercado": {
    "p": [
-    0.232,
+    0.2322,
     0.279,
-    0.489
+    0.4887
    ],
    "w": 0.75
   },
@@ -12744,41 +12693,41 @@
    "home": "Getafe",
    "away": "Ath Madrid",
    "date": "2026-11-22",
-   "from_ts": "2026-11-16T15:41:37.883818+00:00",
-   "to_ts": "2026-11-17T15:58:35.272418+00:00",
+   "from_ts": "2026-11-17T15:58:35.272418+00:00",
+   "to_ts": "2026-11-18T15:37:10.699081+00:00",
    "p_from": [
-    0.214,
-    0.2849,
-    0.5011
-   ],
-   "p_to": [
     0.2147,
     0.2854,
     0.4999
    ],
+   "p_to": [
+    0.2153,
+    0.2856,
+    0.4991
+   ],
    "delta_pts": [
     0.1,
-    0.1,
+    0.0,
     -0.1
    ],
    "important": false
   }
  },
  {
-  "generated_at": "2026-11-17T15:58:35.272418+00:00",
+  "generated_at": "2026-11-18T15:37:10.699081+00:00",
   "season": 2026,
   "date": "2026-11-23",
   "kickoff_utc": "2026-11-23T20:00:00+00:00",
   "home": "Levante",
   "away": "Elche",
-  "p_home": 0.4481,
-  "p_draw": 0.2633,
-  "p_away": 0.2886,
+  "p_home": 0.4487,
+  "p_draw": 0.263,
+  "p_away": 0.2883,
   "model": "stacker",
   "p_model": [
-   0.4481,
-   0.2633,
-   0.2886
+   0.4487,
+   0.263,
+   0.2883
   ],
   "polymarket": {
    "p": [
@@ -12787,7 +12736,7 @@
     0.285
    ],
    "volume": 1870,
-   "liquidity": 48522,
+   "liquidity": 52421,
    "url": "https://polymarket.com/event/lal-lev-elc-2026-11-23",
    "slug": "lal-lev-elc-2026-11-23",
    "overround": 0.0,
@@ -12797,25 +12746,25 @@
    "more": {}
   },
   "dc": {
-   "p_home": 0.4776,
-   "p_draw": 0.2505,
-   "p_away": 0.2718,
-   "xg_home": 1.7001,
-   "xg_away": 1.2329,
-   "p_over25": 0.5616,
-   "p_btts": 0.585,
+   "p_home": 0.4814,
+   "p_draw": 0.2494,
+   "p_away": 0.2692,
+   "xg_home": 1.7145,
+   "xg_away": 1.2316,
+   "p_over25": 0.5646,
+   "p_btts": 0.5865,
    "top_scores": [
     [
      "1-1",
-     0.11743030481351757
+     0.11674669626904277
     ],
     [
      "2-1",
-     0.09485541343624972
+     0.09511345255288323
     ],
     [
      "1-0",
-     0.08467145475310979
+     0.08428714468160323
     ]
    ]
   },
@@ -12826,20 +12775,20 @@
   "elo_diff": 72.7,
   "referee": null,
   "weather": {
-   "temp_c": 15.9,
+   "temp_c": 12.5,
    "precip_mm": 0.0,
-   "wind_kmh": 5.1
+   "wind_kmh": 6.3
   },
   "market": null,
   "lineup_confirmed": false,
   "availability_source": "lesionados y sancionados",
   "deficit": [
    0.0,
-   0.086
+   0.095
   ],
   "deficit_defence": [
    0.0,
-   0.046
+   0.076
   ],
   "context": {
    "stake_diff_late": 0.0,
@@ -12858,6 +12807,12 @@
   "absences": {
    "Levante": [],
    "Elche": [
+    {
+     "player": "Marc Aguado",
+     "status": "out",
+     "reason": "injury",
+     "source": "futbolfantasy: Lesión de tobillo · Baja hasta finales de noviembre"
+    },
     {
      "player": "Ali Houary",
      "status": "doubtful",
@@ -13087,6 +13042,13 @@
     ],
     "out": [
      {
+      "name": "Marc Aguado",
+      "status": "out",
+      "reason": "injury",
+      "source": "futbolfantasy: Lesión de tobillo · Baja hasta finales de noviembre",
+      "imp": 0.4
+     },
+     {
       "name": "Ali Houary",
       "status": "doubtful",
       "reason": "injury",
@@ -13106,272 +13068,272 @@
   "b365": null,
   "b365_ou": null,
   "ou": {
-   "p_over": 0.5616,
-   "p_over_model": 0.5616,
+   "p_over": 0.5646,
+   "p_over_model": 0.5646,
    "p_over_market": null,
    "market_src": null,
-   "p_btts": 0.585
+   "p_btts": 0.5865
   },
   "odds_market": null,
   "markets": {
    "double_chance": {
-    "1X": 0.7079,
-    "X2": 0.5591,
-    "12": 0.733
+    "1X": 0.7075,
+    "X2": 0.5587,
+    "12": 0.7338
    },
    "draw_no_bet": {
     "1": 0.6014,
     "2": 0.3986
    },
    "totals": {
-    "0.5": 0.9263,
-    "1.5": 0.7573,
-    "2.5": 0.5059,
-    "3.5": 0.2855,
-    "4.5": 0.1368
+    "0.5": 0.9272,
+    "1.5": 0.7596,
+    "2.5": 0.5091,
+    "3.5": 0.2883,
+    "4.5": 0.1387
    },
    "team_totals": {
     "home": {
-     "0.5": 0.7793,
-     "1.5": 0.4458,
-     "2.5": 0.1939
+     "0.5": 0.7809,
+     "1.5": 0.4482,
+     "2.5": 0.1957
     },
     "away": {
-     "0.5": 0.6949,
-     "1.5": 0.3327,
-     "2.5": 0.1177
+     "0.5": 0.6967,
+     "1.5": 0.3348,
+     "2.5": 0.119
     }
    },
-   "btts": 0.5478,
+   "btts": 0.5503,
    "clean_sheet": {
-    "home": 0.3051,
-    "away": 0.2207
+    "home": 0.3033,
+    "away": 0.2191
    },
    "margin": {
-    "home3+": 0.088,
-    "home2": 0.1345,
-    "home1": 0.2184,
-    "draw": 0.267,
-    "away1": 0.1702,
-    "away2": 0.083,
-    "away3+": 0.0389
+    "home3+": 0.0886,
+    "home2": 0.1346,
+    "home1": 0.2181,
+    "draw": 0.2662,
+    "away1": 0.1701,
+    "away2": 0.0832,
+    "away3+": 0.0392
    },
    "exact": [
     {
      "score": "1-1",
-     "p": 0.1271
+     "p": 0.1267
     },
     {
      "score": "1-0",
-     "p": 0.0954
+     "p": 0.0946
     },
     {
      "score": "2-1",
-     "p": 0.0912
+     "p": 0.0914
     },
     {
      "score": "2-0",
-     "p": 0.0769
-    },
-    {
-     "score": "0-0",
-     "p": 0.0737
+     "p": 0.0766
     },
     {
      "score": "0-1",
-     "p": 0.0736
+     "p": 0.073
+    },
+    {
+     "score": "0-0",
+     "p": 0.0728
     },
     {
      "score": "1-2",
-     "p": 0.0717
+     "p": 0.0718
     },
     {
      "score": "2-2",
-     "p": 0.0542
+     "p": 0.0545
     }
    ],
    "asian": {
     "-2.5": {
-     "win": 0.088,
+     "win": 0.0886,
      "push": 0.0,
-     "lose": 0.912,
-     "fair_home": 11.367,
-     "fair_away": 1.096
+     "lose": 0.9114,
+     "fair_home": 11.292,
+     "fair_away": 1.097
     },
     "-2.25": {
-     "win": 0.088,
-     "push": 0.0672,
-     "lose": 0.8448,
-     "fair_home": 10.603,
-     "fair_away": 1.104
+     "win": 0.0886,
+     "push": 0.0673,
+     "lose": 0.8441,
+     "fair_home": 10.532,
+     "fair_away": 1.105
     },
     "-2.0": {
-     "win": 0.088,
-     "push": 0.1345,
-     "lose": 0.7776,
-     "fair_home": 9.839,
-     "fair_away": 1.113
+     "win": 0.0886,
+     "push": 0.1346,
+     "lose": 0.7768,
+     "fair_home": 9.772,
+     "fair_away": 1.114
     },
     "-1.75": {
-     "win": 0.1552,
-     "push": 0.0672,
-     "lose": 0.7776,
-     "fair_home": 6.01,
-     "fair_away": 1.2
+     "win": 0.1559,
+     "push": 0.0673,
+     "lose": 0.7768,
+     "fair_home": 5.983,
+     "fair_away": 1.201
     },
     "-1.5": {
-     "win": 0.2224,
+     "win": 0.2232,
      "push": 0.0,
-     "lose": 0.7776,
-     "fair_home": 4.496,
-     "fair_away": 1.286
+     "lose": 0.7768,
+     "fair_home": 4.48,
+     "fair_away": 1.287
     },
     "-1.25": {
-     "win": 0.2224,
-     "push": 0.1092,
-     "lose": 0.6684,
-     "fair_home": 4.005,
-     "fair_away": 1.333
+     "win": 0.2232,
+     "push": 0.1091,
+     "lose": 0.6677,
+     "fair_home": 3.992,
+     "fair_away": 1.334
     },
     "-1.0": {
-     "win": 0.2224,
-     "push": 0.2184,
-     "lose": 0.5591,
-     "fair_home": 3.514,
-     "fair_away": 1.398
+     "win": 0.2232,
+     "push": 0.2181,
+     "lose": 0.5587,
+     "fair_home": 3.503,
+     "fair_away": 1.4
     },
     "-0.75": {
-     "win": 0.3316,
-     "push": 0.1092,
-     "lose": 0.5591,
-     "fair_home": 2.686,
-     "fair_away": 1.593
+     "win": 0.3323,
+     "push": 0.1091,
+     "lose": 0.5587,
+     "fair_home": 2.681,
+     "fair_away": 1.595
     },
     "-0.5": {
-     "win": 0.4409,
+     "win": 0.4413,
      "push": 0.0,
-     "lose": 0.5591,
-     "fair_home": 2.268,
-     "fair_away": 1.788
+     "lose": 0.5587,
+     "fair_home": 2.266,
+     "fair_away": 1.79
     },
     "-0.25": {
-     "win": 0.4409,
-     "push": 0.1335,
+     "win": 0.4413,
+     "push": 0.1331,
      "lose": 0.4256,
-     "fair_home": 1.965,
-     "fair_away": 2.036
+     "fair_home": 1.964,
+     "fair_away": 2.037
     },
     "0.0": {
-     "win": 0.4409,
-     "push": 0.267,
-     "lose": 0.2921,
+     "win": 0.4413,
+     "push": 0.2662,
+     "lose": 0.2925,
      "fair_home": 1.663,
      "fair_away": 2.509
     },
     "0.25": {
      "win": 0.5744,
-     "push": 0.1335,
-     "lose": 0.2921,
+     "push": 0.1331,
+     "lose": 0.2925,
      "fair_home": 1.509,
-     "fair_away": 2.966
+     "fair_away": 2.964
     },
     "0.5": {
-     "win": 0.7079,
+     "win": 0.7075,
      "push": 0.0,
-     "lose": 0.2921,
+     "lose": 0.2925,
      "fair_home": 1.413,
-     "fair_away": 3.423
+     "fair_away": 3.419
     },
     "0.75": {
-     "win": 0.7079,
-     "push": 0.0851,
-     "lose": 0.207,
-     "fair_home": 1.292,
-     "fair_away": 4.419
+     "win": 0.7075,
+     "push": 0.085,
+     "lose": 0.2074,
+     "fair_home": 1.293,
+     "fair_away": 4.411
     },
     "1.0": {
-     "win": 0.7079,
-     "push": 0.1702,
-     "lose": 0.1219,
-     "fair_home": 1.172,
-     "fair_away": 6.807
+     "win": 0.7075,
+     "push": 0.1701,
+     "lose": 0.1224,
+     "fair_home": 1.173,
+     "fair_away": 6.781
     },
     "1.25": {
-     "win": 0.793,
-     "push": 0.0851,
-     "lose": 0.1219,
+     "win": 0.7926,
+     "push": 0.085,
+     "lose": 0.1224,
      "fair_home": 1.154,
-     "fair_away": 7.505
+     "fair_away": 7.476
     },
     "1.5": {
-     "win": 0.8781,
+     "win": 0.8776,
      "push": 0.0,
-     "lose": 0.1219,
+     "lose": 0.1224,
      "fair_home": 1.139,
-     "fair_away": 8.203
+     "fair_away": 8.171
     }
    },
    "half_time": {
-    "1": 0.3354,
-    "X": 0.4201,
-    "2": 0.2445,
-    "over_0.5": 0.6956,
-    "over_1.5": 0.3336
+    "1": 0.336,
+    "X": 0.4189,
+    "2": 0.245,
+    "over_0.5": 0.6974,
+    "over_1.5": 0.3356
    },
    "ht_ft": {
-    "1/1": 0.2659,
+    "1/1": 0.2663,
     "1/X": 0.0508,
-    "1/2": 0.0187,
-    "X/1": 0.1559,
-    "X/X": 0.1528,
-    "X/2": 0.1114,
-    "2/1": 0.0254,
+    "1/2": 0.0189,
+    "X/1": 0.1557,
+    "X/X": 0.152,
+    "X/2": 0.1113,
+    "2/1": 0.0256,
     "2/X": 0.0508,
-    "2/2": 0.1683
+    "2/2": 0.1686
    },
    "quinigol": {
     "home": [
-     0.2207,
-     0.3335,
-     0.2519,
-     0.1939
+     0.2191,
+     0.3327,
+     0.2525,
+     0.1957
     ],
     "away": [
-     0.3051,
-     0.3622,
-     0.215,
-     0.1177
+     0.3033,
+     0.3618,
+     0.2158,
+     0.119
     ],
     "joint": [
      [
-      0.0737,
-      0.0736,
-      0.0474,
-      0.026
+      0.0728,
+      0.073,
+      0.0473,
+      0.0261
      ],
      [
-      0.0954,
-      0.1271,
-      0.0717,
-      0.0393
+      0.0946,
+      0.1267,
+      0.0718,
+      0.0396
      ],
      [
-      0.0769,
-      0.0912,
-      0.0542,
-      0.0297
+      0.0766,
+      0.0914,
+      0.0545,
+      0.03
      ],
      [
-      0.0592,
-      0.0702,
-      0.0417,
-      0.0228
+      0.0594,
+      0.0708,
+      0.0422,
+      0.0233
      ]
     ]
    },
    "goals": [
-    1.511,
-    1.187
+    1.518,
+    1.193
    ]
   },
   "espn_id": "401882802",
@@ -13379,27 +13341,27 @@
    "home": [
     {
      "name": "Roger Brugué",
-     "p": 0.354,
+     "p": 0.356,
      "xg90": 0.45
     },
     {
      "name": "Iván Romero",
-     "p": 0.308,
+     "p": 0.31,
      "xg90": 0.38
     },
     {
      "name": "Adrián de la Fuente",
-     "p": 0.149,
+     "p": 0.15,
      "xg90": 0.15
     },
     {
      "name": "Thiago Fernandez",
-     "p": 0.142,
+     "p": 0.143,
      "xg90": 0.16
     },
     {
      "name": "Dani Requena",
-     "p": 0.137,
+     "p": 0.138,
      "xg90": 0.15
     }
    ],
@@ -13848,7 +13810,8 @@
      "att": 0.08,
      "goals": 1,
      "minutes": 385,
-     "status": "disponible"
+     "status": "baja",
+     "source": "futbolfantasy: Lesión de tobillo · Baja hasta finales de noviembre"
     },
     {
      "name": "José Antonio Morente",
@@ -13991,13 +13954,13 @@
     "5.5": 0.334
    },
    "corners": [
-    4.47,
+    4.48,
     4.19
    ],
    "corners_total": 8.66,
    "p_corners_over": {
     "8.5": 0.499,
-    "9.5": 0.368,
+    "9.5": 0.369,
     "10.5": 0.255
    },
    "p_red": 0.23,
@@ -14056,23 +14019,23 @@
     1.25
    ],
    "xg_adj": [
-    1.7,
+    1.71,
     1.23
    ],
    "p_full": [
-    0.4692,
+    0.4691,
     0.2521,
     0.2788
    ],
    "p_adj": [
-    0.4776,
-    0.2505,
-    0.2718
+    0.4814,
+    0.2494,
+    0.2692
    ]
   },
   "ratings_mercado": {
    "p": [
-    0.4633,
+    0.4632,
     0.259,
     0.2777
    ],
@@ -14082,22 +14045,22 @@
    "home": "Levante",
    "away": "Elche",
    "date": "2026-11-23",
-   "from_ts": "2026-11-16T15:41:37.883818+00:00",
-   "to_ts": "2026-11-17T15:58:35.272418+00:00",
+   "from_ts": "2026-11-17T15:58:35.272418+00:00",
+   "to_ts": "2026-11-18T15:37:10.699081+00:00",
    "p_from": [
-    0.4469,
-    0.2633,
-    0.2898
-   ],
-   "p_to": [
     0.4481,
     0.2633,
     0.2886
    ],
+   "p_to": [
+    0.4487,
+    0.263,
+    0.2883
+   ],
    "delta_pts": [
     0.1,
-    0.0,
-    -0.1
+    -0.0,
+    -0.0
    ],
    "important": false
   }
