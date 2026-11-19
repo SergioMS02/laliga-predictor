@@ -1,38 +1,41 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-18 15:37 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-11-19 15:42 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Ath Bilbao – Espanol (2026-11-20)
 
-1 ▅▅ · X ▃▃ · 2 ▂▂
+1 ▅▅▅ · X ▃▃▃ · 2 ▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 13/11 15:32 | 57% | 25% | 18% |  |
 | 17/11 16:58 | 57% | 25% | 18% |  |
+| 19/11 16:42 | 57% | 25% | 18% |  |
 
 ## Alaves – La Coruna (2026-11-21)
 
-1 ▄▄ · X ▃▃ · 2 ▃▃
+1 ▄▄▄ · X ▃▃▃ · 2 ▃▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 14/11 14:29 | 46% | 28% | 25% |  |
 | 18/11 16:37 | 46% | 28% | 25% |  |
+| 19/11 16:42 | 47% | 28% | 25% |  |
 
 ## Vallecano – Valencia (2026-11-21)
 
-1 ▄▄▄ · X ▃▃▃ · 2 ▂▂▂
+1 ▄▄▄▄ · X ▃▃▃▃ · 2 ▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 14/11 14:29 | 48% | 27% | 24% |  |
 | 17/11 16:58 | 48% | 27% | 24% |  |
 | 18/11 16:37 | 48% | 27% | 24% |  |
+| 19/11 16:42 | 48% | 27% | 24% |  |
 
 ## Sevilla – Betis (2026-11-21)
 
-1 ▃▃▃▃ · X ▃▃▃▃ · 2 ▃▃▃▃
+1 ▃▃▃▃▃ · X ▃▃▃▃▃ · 2 ▃▃▃▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -40,37 +43,46 @@ Actualizado: 2026-11-18 15:37 UTC. Umbral de cambio importante: 4 puntos.
 | 16/11 16:41 | 36% | 27% | 37% |  |
 | 17/11 16:58 | 36% | 27% | 37% |  |
 | 18/11 16:37 | 36% | 27% | 37% |  |
+| 19/11 16:42 | 36% | 27% | 37% |  |
 
 ## Real Madrid – Celta (2026-11-21)
 
-1 ▆▆ · X ▂▂ · 2 ▁▁
+1 ▆▆▆ · X ▂▂▂ · 2 ▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 14/11 14:29 | 74% | 17% | 9% |  |
 | 16/11 16:41 | 74% | 17% | 9% |  |
+| 19/11 16:42 | 74% | 17% | 9% |  |
 
 ## Barcelona – Villarreal (2026-11-22)
 
-1 ▆▆▆ · X ▂▂▂ · 2 ▁▁▁
+1 ▆▆▆▇ · X ▂▂▂▁ · 2 ▁▁▁▁
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 15/11 14:55 | 74% | 15% | 12% |  |
 | 16/11 16:41 | 73% | 15% | 12% |  |
 | 17/11 16:58 | 74% | 15% | 12% |  |
+| 19/11 16:42 | 81% | 12% | 7% |  |
+
+**Cambios importantes**
+
+- 19/11 16:42 — Barcelona – Villarreal: gana Villarreal 12% → 7%
+  - -4.6 pts · Precio de Polymarket: empieza a usarse (82 / 12 / 7 %, 90 % del peso)
 
 ## Santander – Sociedad (2026-11-22)
 
-1 ▃ · X ▂ · 2 ▄
+1 ▃▃ · X ▂▂ · 2 ▄▄
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
 | 15/11 14:55 | 30% | 24% | 46% |  |
+| 19/11 16:42 | 30% | 24% | 46% |  |
 
 ## Osasuna – Malaga (2026-11-22)
 
-1 ▅▅▅▅ · X ▃▃▃▃ · 2 ▂▂▂▂
+1 ▅▅▅▅▅ · X ▃▃▃▃▃ · 2 ▂▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -78,6 +90,7 @@ Actualizado: 2026-11-18 15:37 UTC. Umbral de cambio importante: 4 puntos.
 | 16/11 16:41 | 54% | 25% | 21% |  |
 | 17/11 16:58 | 54% | 25% | 21% |  |
 | 18/11 16:37 | 54% | 25% | 21% |  |
+| 19/11 16:42 | 54% | 25% | 21% |  |
 
 ## Getafe – Ath Madrid (2026-11-22)
 
