@@ -502,3 +502,14 @@ generated_at,season,date,home,away,p_home,p_draw,p_away,model,lineup_confirmed
 2026-11-19T15:42:43.263762+00:00,2026,2026-11-22,Osasuna,Malaga,0.5389,0.2529,0.2082,stacker,False
 2026-11-19T15:42:43.263762+00:00,2026,2026-11-22,Getafe,Ath Madrid,0.2156,0.2856,0.4988,stacker,False
 2026-11-19T15:42:43.263762+00:00,2026,2026-11-23,Levante,Elche,0.4487,0.263,0.2883,stacker,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-20,Ath Bilbao,Espanol,0.6523,0.2045,0.1432,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-21,Alaves,La Coruna,0.4414,0.2952,0.2633,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-21,Vallecano,Valencia,0.5391,0.2634,0.1975,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-21,Sevilla,Betis,0.3334,0.2822,0.3844,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-21,Real Madrid,Celta,0.8417,0.1036,0.0546,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-22,Barcelona,Villarreal,0.8175,0.1149,0.0676,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-22,Santander,Sociedad,0.2893,0.2284,0.4823,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-22,Osasuna,Malaga,0.5548,0.2452,0.1999,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-22,Getafe,Ath Madrid,0.1838,0.2718,0.5445,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-23,Levante,Elche,0.4382,0.2712,0.2907,stacker_mercado,False
+2026-11-20T15:26:29.048000+00:00,2026,2026-11-27,Levante,Santander,0.5157,0.2319,0.2524,stacker,False
