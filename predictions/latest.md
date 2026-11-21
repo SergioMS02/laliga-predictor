@@ -5,7 +5,7 @@ Generado: 2026-11-21 14:37 UTC
 | Fecha | Partido | 1 | X | 2 | Evolución 1 | xG | Marcador más probable | +2.5 | Ambos marcan | Info |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 21/11 16:15 | Vallecano – Valencia | 49% | 28% | 23% | ▄▄▄▄▅▄ 48→49% ▲ | 1.43–0.93 | 1-1 (13%) | 42% | 47% | ✅ alineaciones |
-| 21/11 18:30 | Sevilla – Betis | 32% | 28% | 39% | ▃▃▃▃▃▃▃ 36→32% ▼ | 1.36–1.48 | 1-1 (12%) | 54% | 58% | 🚑 Alfonso González, José Ángel Carmona, Marcão, Miguel Sierra, Dani Ceballos, José Morante |
+| 21/11 18:30 | Sevilla – Betis | 34% | 29% | 38% | ▃▃▃▃▃▃▃▃ 36→34% ▼ | 1.35–1.46 | 1-1 (12%) | 53% | 57% | ✅ alineaciones |
 | 21/11 21:00 | Real Madrid – Celta | 85% | 10% | 5% | ▆▆▆▇▇ 74→85% ▲ | 2.20–0.73 | 2-0 (13%) | 56% | 46% | 🚑 Raúl Asencio, Rodrygo Goes, Ferland Mendy, Borja Iglesias, Miguel Román |
 | 22/11 14:00 | Barcelona – Villarreal | 81% | 11% | 8% | ▆▆▆▇▇▇ 74→81% ▲ | 3.27–1.16 | 3-1 (8%) | 82% | 66% | 🚑 Xavi Espart, Andreas Christensen, Rodri, Roony Bardghji, Alassane Diatta, Gerard Moreno |
 | 22/11 16:15 | Santander – Sociedad | 29% | 23% | 48% | ▃▃▃▃ 30→29% ▼ | 1.68–2.22 | 1-2 (8%) | 75% | 73% | 🚑 Alvaro Mantilla, Andrés Martín, Maguette Gueye, Ander Barrenetxea, Álvaro Odriozola, Yangel Herrera |

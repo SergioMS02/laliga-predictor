@@ -1,6 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-21 14:37 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-11-21 17:07 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Vallecano – Valencia (2026-11-21)
 
@@ -25,7 +25,7 @@ Actualizado: 2026-11-21 14:37 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Sevilla – Betis (2026-11-21)
 
-1 ▃▃▃▃▃▃▃ · X ▃▃▃▃▃▃▃ · 2 ▃▃▃▃▃▄▄
+1 ▃▃▃▃▃▃▃▃ · X ▃▃▃▃▃▃▃▃ · 2 ▃▃▃▃▃▄▄▄
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -36,6 +36,7 @@ Actualizado: 2026-11-21 14:37 UTC. Umbral de cambio importante: 4 puntos.
 | 19/11 16:42 | 36% | 27% | 37% |  |
 | 20/11 16:26 | 33% | 28% | 38% |  |
 | 21/11 15:37 | 32% | 28% | 39% |  |
+| 21/11 18:06 | 34% | 29% | 38% | ✅ |
 
 ## Real Madrid – Celta (2026-11-21)
 
