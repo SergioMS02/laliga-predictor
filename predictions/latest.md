@@ -5,7 +5,7 @@ Generado: 2026-11-22 14:32 UTC
 | Fecha | Partido | 1 | X | 2 | Evolución 1 | xG | Marcador más probable | +2.5 | Ambos marcan | Info |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 22/11 16:15 | Santander – Sociedad | 30% | 23% | 48% | ▃▃▃▃▃ 30→30% = | 1.78–2.19 | 1-2 (8%) | 76% | 74% | ✅ alineaciones |
-| 22/11 18:30 | Osasuna – Malaga | 55% | 25% | 20% | ▅▅▅▅▅▅▅▅ 54→55% ▲ | 1.88–0.91 | 1-0 (11%) | 53% | 51% | 🚑 Aitor Fernández, Abel Bretones, Rockson Yeboah, Jon Moncayola, Fernando Calero, Julen Lobete |
+| 22/11 18:30 | Osasuna – Malaga | 56% | 24% | 20% | ▅▅▅▅▅▅▅▅▅ 54→56% ▲ | 1.93–0.88 | 2-0 (11%) | 53% | 51% | ✅ alineaciones |
 | 22/11 21:00 | Getafe – Ath Madrid | 14% | 24% | 62% | ▂▂▂▂▂▂▂ 21→14% ▼ | 0.81–1.25 | 0-1 (15%) | 34% | 40% | 🚑 Juanmi Jiménez, Sebastián Boselli, Christantus Uche, Nemanja Gudelj, Ademola Lookman, Marc Pubill |
 | 23/11 21:00 | Levante – Elche | 44% | 27% | 29% | ▄▄▄▄▄ 45→44% ▼ | 1.69–1.25 | 1-1 (12%) | 56% | 59% | 🚑 Yago Santiago, Marc Aguado, Adam Boayar, Ali Houary? |
 | 27/11 21:00 | Levante – Santander | 52% | 23% | 25% | ▅▅▅ 52→52% = | 2.64–1.25 | 2-1 (9%) | 75% | 67% | 🚑 Alvaro Mantilla, Andrés Martín, Maguette Gueye |

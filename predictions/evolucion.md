@@ -1,6 +1,6 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-22 14:33 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-11-22 17:37 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Santander – Sociedad (2026-11-22)
 
@@ -16,7 +16,7 @@ Actualizado: 2026-11-22 14:33 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Osasuna – Malaga (2026-11-22)
 
-1 ▅▅▅▅▅▅▅▅ · X ▃▃▃▃▃▂▂▂ · 2 ▂▂▂▂▂▂▂▂
+1 ▅▅▅▅▅▅▅▅▅ · X ▃▃▃▃▃▂▂▂▂ · 2 ▂▂▂▂▂▂▂▂▂
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -28,6 +28,7 @@ Actualizado: 2026-11-22 14:33 UTC. Umbral de cambio importante: 4 puntos.
 | 20/11 16:26 | 55% | 25% | 20% |  |
 | 21/11 15:37 | 55% | 25% | 20% |  |
 | 22/11 15:32 | 55% | 25% | 20% |  |
+| 22/11 18:37 | 56% | 24% | 20% | ✅ |
 
 ## Getafe – Ath Madrid (2026-11-22)
 
