@@ -1,5 +1,5 @@
 {
- "at": "2026-11-22T20:18+00:00",
+ "at": "2026-11-23T01:07+00:00",
  "sources": {
   "football-data (histórico)": {
    "ok": true,
@@ -39,7 +39,7 @@
   },
   "Europa y Copa (calendario)": {
    "ok": true,
-   "rows": 1498,
+   "rows": 1500,
    "error": null,
    "note": null
   },
