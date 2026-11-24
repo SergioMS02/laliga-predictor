@@ -28,11 +28,11 @@
   2024,
   2025
  ],
- "updated": "2026-11-17",
+ "updated": "2026-11-24",
  "sin_cuotas": {
-  "n": 2019,
-  "modelo_sin_cuotas": 0.9811,
-  "ratings_mercado": 0.9742,
+  "n": 2029,
+  "modelo_sin_cuotas": 0.9812,
+  "ratings_mercado": 0.9741,
   "mezcla": 0.9736,
   "w": 0.75
  }

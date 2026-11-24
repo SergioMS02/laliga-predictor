@@ -1,98 +1,98 @@
 {
- "n": 454,
- "n_all": 495,
+ "n": 464,
+ "n_all": 505,
  "min_volume": 50000.0,
  "since": "2025-08-15",
  "logloss": {
-  "polymarket": 0.9477,
-  "cierre_casas": 0.9475,
-  "modelo": 0.9562,
-  "mezcla": 0.9481
+  "polymarket": 0.9479,
+  "cierre_casas": 0.9476,
+  "modelo": 0.9568,
+  "mezcla": 0.9484
  },
  "blend": [
   {
    "w_model": 0.0,
-   "logloss": 0.9477
-  },
-  {
-   "w_model": 0.05,
    "logloss": 0.9479
   },
   {
-   "w_model": 0.1,
+   "w_model": 0.05,
    "logloss": 0.9481
   },
   {
-   "w_model": 0.15,
+   "w_model": 0.1,
    "logloss": 0.9484
   },
   {
+   "w_model": 0.15,
+   "logloss": 0.9486
+  },
+  {
    "w_model": 0.2,
-   "logloss": 0.9487
+   "logloss": 0.9489
   },
   {
    "w_model": 0.25,
-   "logloss": 0.949
-  },
-  {
-   "w_model": 0.3,
    "logloss": 0.9493
   },
   {
-   "w_model": 0.35,
-   "logloss": 0.9497
+   "w_model": 0.3,
+   "logloss": 0.9496
   },
   {
-   "w_model": 0.4,
+   "w_model": 0.35,
    "logloss": 0.95
   },
   {
-   "w_model": 0.45,
+   "w_model": 0.4,
    "logloss": 0.9504
   },
   {
-   "w_model": 0.5,
+   "w_model": 0.45,
    "logloss": 0.9508
   },
   {
-   "w_model": 0.55,
-   "logloss": 0.9513
+   "w_model": 0.5,
+   "logloss": 0.9512
   },
   {
-   "w_model": 0.6,
+   "w_model": 0.55,
    "logloss": 0.9517
   },
   {
-   "w_model": 0.65,
-   "logloss": 0.9522
+   "w_model": 0.6,
+   "logloss": 0.9521
   },
   {
-   "w_model": 0.7,
+   "w_model": 0.65,
    "logloss": 0.9527
   },
   {
-   "w_model": 0.75,
+   "w_model": 0.7,
    "logloss": 0.9532
   },
   {
+   "w_model": 0.75,
+   "logloss": 0.9537
+  },
+  {
    "w_model": 0.8,
-   "logloss": 0.9538
+   "logloss": 0.9543
   },
   {
    "w_model": 0.85,
-   "logloss": 0.9544
+   "logloss": 0.9549
   },
   {
    "w_model": 0.9,
-   "logloss": 0.955
+   "logloss": 0.9555
   },
   {
    "w_model": 0.95,
-   "logloss": 0.9556
+   "logloss": 0.9561
   },
   {
    "w_model": 1.0,
-   "logloss": 0.9562
+   "logloss": 0.9568
   }
  ],
  "best_model_weight": 0.0,
@@ -100,25 +100,25 @@
  "diff_vs_close": {
   "mean": 0.0002,
   "ci95": [
-   -0.002,
-   0.0025
+   -0.0019,
+   0.0024
   ]
  },
  "goals": {
   "over25": {
-   "n": 362,
-   "polymarket": 0.6597,
-   "modelo": 0.677,
-   "polymarket_mismos": 0.6597,
-   "cierre_casas": 0.661,
-   "polymarket_mismos_casas": 0.6597
+   "n": 372,
+   "polymarket": 0.6582,
+   "modelo": 0.6761,
+   "polymarket_mismos": 0.6582,
+   "cierre_casas": 0.6596,
+   "polymarket_mismos_casas": 0.6582
   },
   "btts": {
-   "n": 315,
-   "polymarket": 0.6681,
-   "modelo": 0.6864,
-   "polymarket_mismos": 0.6681
+   "n": 324,
+   "polymarket": 0.6653,
+   "modelo": 0.6831,
+   "polymarket_mismos": 0.6653
   }
  },
- "updated": "2026-11-17"
+ "updated": "2026-11-24"
 }
