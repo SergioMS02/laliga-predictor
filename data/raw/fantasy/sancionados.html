@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="csrf-token" content="gtjsADRVhIbc6LW8aQYeILY66vxIPGqlMqQqTHPS">
+        <meta name="csrf-token" content="jch85CZHh5imv3WA6nbAzBGkyjeKQPmp4G4YKB4g">
 
         	<title>Sancionados - Jornada 14 - LaLiga 2026/27 - Alineaciones probables - FútbolFantasy</title>
 
@@ -195,6 +195,37 @@
         }
     }
 
+    
+    function ocultarNoAceptar(cmp) {
+        var botones = cmp.getElementsByTagName("button");
+        for (var i = 0; i < botones.length; i++) {
+            var boton = botones[i];
+            var pie = boton.parentElement;
+            var esRechazo = (boton.textContent.trim() === "No aceptar" ||
+                boton.textContent.trim() === "Rechazar todo") &&
+                pie && pie.children.length === 2 &&
+                pie.lastElementChild.tagName === "BUTTON" &&
+                pie.lastElementChild.textContent.trim() === "Aceptar todo";
+            if (esRechazo && boton.dataset.ffHideNoAceptar !== "1") {
+                boton._ffDisplayBeforeHide = {
+                    value: boton.style.getPropertyValue("display"),
+                    priority: boton.style.getPropertyPriority("display")
+                };
+                boton.style.setProperty("display", "none", "important");
+                boton.dataset.ffHideNoAceptar = "1";
+            } else if (!esRechazo && boton.dataset.ffHideNoAceptar === "1") {
+                var original = boton._ffDisplayBeforeHide;
+                if (original && original.value) {
+                    boton.style.setProperty("display", original.value, original.priority);
+                } else {
+                    boton.style.removeProperty("display");
+                }
+                delete boton.dataset.ffHideNoAceptar;
+                delete boton._ffDisplayBeforeHide;
+            }
+        }
+    }
+
     function apply() {
         var h = visibleHeight();
         if (!h) {
@@ -206,6 +237,7 @@
         if (cmp) {
             cmp.style.setProperty('--vh', (h / 100) + 'px');
             fixCmp(cmp, h);
+            ocultarNoAceptar(cmp);
         }
     }
 
@@ -236,10 +268,15 @@
             return;
         }
         waiting.disconnect();
-        rendered.observe(cmp, {childList: true, subtree: true});
+        rendered.observe(cmp, {childList: true, characterData: true, subtree: true});
         onCmpRendered();
     });
-    waiting.observe(docEl, {childList: true, subtree: true});
+    var initialCmp = document.getElementById('sd-cmp');
+    if (initialCmp) {
+        rendered.observe(initialCmp, {childList: true, characterData: true, subtree: true});
+    } else {
+        waiting.observe(docEl, {childList: true, subtree: true});
+    }
     setTimeout(function () { waiting.disconnect(); }, 30000);
 })();
 </script>
@@ -1792,193 +1829,327 @@ document.addEventListener('DOMContentLoaded', function () {
 	</a>
 			</div>
 											<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24327-celta-bournemouth" class="partido hideQtip" data-tooltip="Celta - Bournemouth" >
-	<img alt="Celta" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/5.png" />
-		<div class="fecha"> Jue 26/11 <br>18:45h </div>
-	<img alt="Bournemouth" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/557.png" />
-									<div class="previa con mx-auto d-flex justify-content-center"><i class="fas fa-caret-left my-auto"></i> <span class="my-auto ml-1">Convocados</span></div>
-							<div class="canales">
-					</div>
-	</a>
-			</div>
-						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24326-besiktas-hapoel-beer-sheva" class="partido hideQtip" data-tooltip="Besiktas - Hapoel Beer Sheva" >
-	<img alt="Besiktas" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/532.png" />
-		<div class="fecha"> Jue 26/11 <br>18:45h </div>
-	<img alt="Hapoel Beer Sheva" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/832.png" />
-					<div class="previa ali">Alineaciones</div>
-				<div class="canales">
-					</div>
-	</a>
-			</div>
-						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24328-v-plzen-benfica" class="partido hideQtip" data-tooltip="V. Plzen - Benfica" >
-	<img alt="V. Plzen" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/613.png" />
-		<div class="fecha"> Jue 26/11 <br>18:45h </div>
-	<img alt="Benfica" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/504.png" />
-					<div class="previa ali">Alineaciones</div>
-				<div class="canales">
-					</div>
-	</a>
-			</div>
-						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24329-d-zagreb-b-leverkusen" class="partido hideQtip" data-tooltip="D. Zagreb - B. Leverkusen" >
-	<img alt="D. Zagreb" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/507.png" />
-		<div class="fecha"> Jue 26/11 <br>18:45h </div>
-	<img alt="B. Leverkusen" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/512.png" />
-					<div class="previa ali">Alineaciones</div>
-				<div class="canales">
-					</div>
-	</a>
-			</div>
-						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24332-rb-salzburg-ararat-armenia" class="partido hideQtip" data-tooltip="RB Salzburg - Ararat-Armenia" >
-	<img alt="RB Salzburg" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/586.png" />
-		<div class="fecha"> Jue 26/11 <br>18:45h </div>
-	<img alt="Ararat-Armenia" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/834.png" />
-					<div class="previa ali">Alineaciones</div>
-				<div class="canales">
-					</div>
-	</a>
-			</div>
-						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24330-olympiacos-milan" class="partido hideQtip" data-tooltip="Olympiacos - Milan" >
-	<img alt="Olympiacos" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/519.png" />
-		<div class="fecha"> Jue 26/11 <br>18:45h </div>
-	<img alt="Milan" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/600.png" />
-					<div class="previa ali">Alineaciones</div>
-				<div class="canales">
-					</div>
-	</a>
-			</div>
-						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24333-union-saint-gilloise-lech" class="partido hideQtip" data-tooltip="Union Saint-Gilloise - Lech" >
-	<img alt="Union Saint-Gilloise" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/727.png" />
-		<div class="fecha"> Jue 26/11 <br>18:45h </div>
-	<img alt="Lech" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/709.png" />
-					<div class="previa ali">Alineaciones</div>
-				<div class="canales">
-					</div>
-	</a>
-			</div>
-						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24331-o-marsella-levski" class="partido hideQtip" data-tooltip="O. Marsella - Levski Sofia" >
+				<a href="https://www.futbolfantasy.com/partidos/24331-o-marsella-levski" class="partido hideQtip" data-tooltip="O. Marsella 1-0 Levski Sofia" >
 	<img alt="O. Marsella" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/585.png" />
-		<div class="fecha"> Jue 26/11 <br>18:45h </div>
+		<div class="fecha"> Jue 18:45h </div>
 	<img alt="Levski Sofia" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/830.png" />
-					<div class="previa ali">Alineaciones</div>
-				<div class="canales">
-					</div>
+			<div class="score"><div class="score-local">1</div><div class="score-visitante">0</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24334-sparta-praga-az" class="partido hideQtip" data-tooltip="Sparta Praga - AZ" >
-	<img alt="Sparta Praga" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/679.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
-	<img alt="AZ" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/645.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
-					</div>
+				<a href="https://www.futbolfantasy.com/partidos/24328-v-plzen-benfica" class="partido hideQtip" data-tooltip="V. Plzen 4-0 Benfica" >
+	<img alt="V. Plzen" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/613.png" />
+		<div class="fecha"> Jue 18:45h </div>
+	<img alt="Benfica" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/504.png" />
+			<div class="score"><div class="score-local">4</div><div class="score-visitante">0</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24336-ferencvaros-celje" class="partido hideQtip" data-tooltip="Ferencváros - Celje" >
-	<img alt="Ferencváros" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/654.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
-	<img alt="Celje" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/770.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
-					</div>
+				<a href="https://www.futbolfantasy.com/partidos/24333-union-saint-gilloise-lech" class="partido hideQtip" data-tooltip="Union Saint-Gilloise 2-2 Lech" >
+	<img alt="Union Saint-Gilloise" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/727.png" />
+		<div class="fecha"> Jue 18:45h </div>
+	<img alt="Lech" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/709.png" />
+			<div class="score"><div class="score-local">2</div><div class="score-visitante">2</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24338-nec-stade-rennais" class="partido hideQtip" data-tooltip="NEC - Stade Rennais" >
-	<img alt="NEC" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/828.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
-	<img alt="Stade Rennais" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/653.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
-					</div>
+				<a href="https://www.futbolfantasy.com/partidos/24330-olympiacos-milan" class="partido hideQtip" data-tooltip="Olympiacos 2-4 Milan" >
+	<img alt="Olympiacos" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/519.png" />
+		<div class="fecha"> Jue 18:45h </div>
+	<img alt="Milan" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/600.png" />
+			<div class="score"><div class="score-local">2</div><div class="score-visitante">4</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24339-ofi-creta-anderlecht" class="partido hideQtip" data-tooltip="OFI Creta - Anderlecht" >
-	<img alt="OFI Creta" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/829.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
-	<img alt="Anderlecht" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/571.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
-					</div>
+				<a href="https://www.futbolfantasy.com/partidos/24332-rb-salzburg-ararat-armenia" class="partido hideQtip" data-tooltip="RB Salzburg 2-0 Ararat-Armenia" >
+	<img alt="RB Salzburg" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/586.png" />
+		<div class="fecha"> Jue 18:45h </div>
+	<img alt="Ararat-Armenia" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/834.png" />
+			<div class="score"><div class="score-local">2</div><div class="score-visitante">0</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24342-hoffenheim-sturm-graz" class="partido hideQtip" data-tooltip="Hoffenheim - Sturm Graz" >
-	<img alt="Hoffenheim" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/612.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
-	<img alt="Sturm Graz" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/676.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
-					</div>
+				<a href="https://www.futbolfantasy.com/partidos/24329-d-zagreb-b-leverkusen" class="partido hideQtip" data-tooltip="D. Zagreb 0-2 B. Leverkusen" >
+	<img alt="D. Zagreb" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/507.png" />
+		<div class="fecha"> Jue 18:45h </div>
+	<img alt="B. Leverkusen" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/512.png" />
+			<div class="score"><div class="score-local">0</div><div class="score-visitante">2</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24343-torreense-celtic" class="partido hideQtip" data-tooltip="Torreense - Celtic" >
-	<img alt="Torreense" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/833.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
-	<img alt="Celtic" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/530.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
-					</div>
+				<a href="https://www.futbolfantasy.com/partidos/24327-celta-bournemouth" class="partido hideQtip" data-tooltip="Celta 1-2 Bournemouth" >
+	<img alt="Celta" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/5.png" />
+		<div class="fecha"> Jue 18:45h </div>
+	<img alt="Bournemouth" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/557.png" />
+			<div class="score"><div class="score-local">1</div><div class="score-visitante">2</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24335-crystal-palace-real-sociedad" class="partido hideQtip" data-tooltip="Crystal Palace - Real Sociedad" >
-	<img alt="Crystal Palace" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/560.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
-	<img alt="Real Sociedad" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/16.png" />
-									<div class="previa con mx-auto d-flex justify-content-center"><span class="my-auto mr-1">Convocados</span> <i class="fas fa-caret-right my-auto"></i></div>
-							<div class="canales">
-					</div>
+				<a href="https://www.futbolfantasy.com/partidos/24326-besiktas-hapoel-beer-sheva" class="partido hideQtip" data-tooltip="Besiktas 2-1 Hapoel Beer Sheva" >
+	<img alt="Besiktas" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/532.png" />
+		<div class="fecha"> Jue 18:45h </div>
+	<img alt="Hapoel Beer Sheva" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/832.png" />
+			<div class="score"><div class="score-local">2</div><div class="score-visitante">1</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24337-juventus-omonia" class="partido hideQtip" data-tooltip="Juventus - Omonia" >
-	<img alt="Juventus" class="escudo local lazyload escudo-511" src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/511.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
-	<img alt="Omonia" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/708.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
-					</div>
-	</a>
-			</div>
-						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24340-o-lyon-lillestrom" class="partido hideQtip" data-tooltip="O. Lyon - Lillestrøm" >
+				<a href="https://www.futbolfantasy.com/partidos/24340-o-lyon-lillestrom" class="partido hideQtip" data-tooltip="O. Lyon 0-0 Lillestrøm" >
 	<img alt="O. Lyon" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/513.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
+		<div class="fecha"> Jue 21:00h </div>
 	<img alt="Lillestrøm" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/827.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
-					</div>
+			<div class="score"><div class="score-local">0</div><div class="score-visitante">0</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 						<div class="jornada jornada3" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24341-sunderland-jagiellonia" class="partido hideQtip" data-tooltip="Sunderland - Jagiellonia" >
+				<a href="https://www.futbolfantasy.com/partidos/24337-juventus-omonia" class="partido hideQtip" data-tooltip="Juventus 4-1 Omonia" >
+	<img alt="Juventus" class="escudo local lazyload escudo-511" src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/511.png" />
+		<div class="fecha"> Jue 21:00h </div>
+	<img alt="Omonia" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/708.png" />
+			<div class="score"><div class="score-local">4</div><div class="score-visitante">1</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
+	</a>
+			</div>
+						<div class="jornada jornada3" style="display: none;">
+				<a href="https://www.futbolfantasy.com/partidos/24336-ferencvaros-celje" class="partido hideQtip" data-tooltip="Ferencváros 0-0 Celje" >
+	<img alt="Ferencváros" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/654.png" />
+		<div class="fecha"> Jue 21:00h </div>
+	<img alt="Celje" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/770.png" />
+			<div class="score"><div class="score-local">0</div><div class="score-visitante">0</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
+	</a>
+			</div>
+						<div class="jornada jornada3" style="display: none;">
+				<a href="https://www.futbolfantasy.com/partidos/24341-sunderland-jagiellonia" class="partido hideQtip" data-tooltip="Sunderland 1-1 Jagiellonia" >
 	<img alt="Sunderland" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/798.png" />
-		<div class="fecha"> Jue 26/11 <br>21:00h </div>
+		<div class="fecha"> Jue 21:00h </div>
 	<img alt="Jagiellonia" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/777.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
-					</div>
+			<div class="score"><div class="score-local">1</div><div class="score-visitante">1</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
+	</a>
+			</div>
+						<div class="jornada jornada3" style="display: none;">
+				<a href="https://www.futbolfantasy.com/partidos/24335-crystal-palace-real-sociedad" class="partido hideQtip" data-tooltip="Crystal Palace 2-1 Real Sociedad" >
+	<img alt="Crystal Palace" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/560.png" />
+		<div class="fecha"> Jue 21:00h </div>
+	<img alt="Real Sociedad" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/16.png" />
+			<div class="score"><div class="score-local">2</div><div class="score-visitante">1</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
+	</a>
+			</div>
+						<div class="jornada jornada3" style="display: none;">
+				<a href="https://www.futbolfantasy.com/partidos/24334-sparta-praga-az" class="partido hideQtip" data-tooltip="Sparta Praga 2-4 AZ" >
+	<img alt="Sparta Praga" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/679.png" />
+		<div class="fecha"> Jue 21:00h </div>
+	<img alt="AZ" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/645.png" />
+			<div class="score"><div class="score-local">2</div><div class="score-visitante">4</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
+	</a>
+			</div>
+						<div class="jornada jornada3" style="display: none;">
+				<a href="https://www.futbolfantasy.com/partidos/24338-nec-stade-rennais" class="partido hideQtip" data-tooltip="NEC 3-1 Stade Rennais" >
+	<img alt="NEC" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/828.png" />
+		<div class="fecha"> Jue 21:00h </div>
+	<img alt="Stade Rennais" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/653.png" />
+			<div class="score"><div class="score-local">3</div><div class="score-visitante">1</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
+	</a>
+			</div>
+						<div class="jornada jornada3" style="display: none;">
+				<a href="https://www.futbolfantasy.com/partidos/24343-torreense-celtic" class="partido hideQtip" data-tooltip="Torreense 1-2 Celtic" >
+	<img alt="Torreense" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/833.png" />
+		<div class="fecha"> Jue 21:00h </div>
+	<img alt="Celtic" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/530.png" />
+			<div class="score"><div class="score-local">1</div><div class="score-visitante">2</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
+	</a>
+			</div>
+						<div class="jornada jornada3" style="display: none;">
+				<a href="https://www.futbolfantasy.com/partidos/24339-ofi-creta-anderlecht" class="partido hideQtip" data-tooltip="OFI Creta 1-3 Anderlecht" >
+	<img alt="OFI Creta" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/829.png" />
+		<div class="fecha"> Jue 21:00h </div>
+	<img alt="Anderlecht" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/571.png" />
+			<div class="score"><div class="score-local">1</div><div class="score-visitante">3</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
+	</a>
+			</div>
+						<div class="jornada jornada3" style="display: none;">
+				<a href="https://www.futbolfantasy.com/partidos/24342-hoffenheim-sturm-graz" class="partido hideQtip" data-tooltip="Hoffenheim 3-1 Sturm Graz" >
+	<img alt="Hoffenheim" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/612.png" />
+		<div class="fecha"> Jue 21:00h </div>
+	<img alt="Sturm Graz" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/676.png" />
+			<div class="score"><div class="score-local">3</div><div class="score-visitante">1</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 											<div class="jornada jornada4" style="display: none;">
-				<a href="https://www.futbolfantasy.com/partidos/24398-iberia-1999-getafe" class="partido hideQtip" data-tooltip="Iberia 1999 - Getafe" >
+				<a href="https://www.futbolfantasy.com/partidos/24398-iberia-1999-getafe" class="partido hideQtip" data-tooltip="Iberia 1999 1-0 Getafe" >
 	<img alt="Iberia 1999" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/837.png" />
-		<div class="fecha"> Jue 26/11 <br>18:45h </div>
+		<div class="fecha"> Jue 18:45h </div>
 	<img alt="Getafe" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/8.png" />
-									<div class="previa con mx-auto d-flex justify-content-center"><span class="my-auto mr-1">Convocados</span> <i class="fas fa-caret-right my-auto"></i></div>
-							<div class="canales">
-					</div>
+			<div class="score"><div class="score-local">1</div><div class="score-visitante">0</div></div>
+					
+				<div class="canales puntos">
+							<img alt="Stats" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/tiponoticia/icono_big_stats.png" />
+									
+							<img alt="Comunio" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/cabecera/comunio2.png" />
+			
+			
+			
+			
+		</div>
 	</a>
 			</div>
 											<div class="jornada jornada5" style="">
@@ -1986,7 +2157,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	<img alt="Levante" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/10.png" />
 		<div class="fecha"> Vie 27/11 <br>21:00h </div>
 	<img alt="Racing" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/42.png" />
-									<div class="previa con mx-auto d-flex justify-content-center"><span class="my-auto mr-1">Convocados</span> <i class="fas fa-caret-right my-auto"></i></div>
+									<div class="previa con">Convocados</div>
 							<div class="canales">
 							<img alt="Movistar LaLiga" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/canales/movistarlaliga.png" />
 					</div>
@@ -1997,8 +2168,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	<img alt="Betis" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/4.png" />
 		<div class="fecha"> Sab 28/11 <br>14:00h </div>
 	<img alt="Rayo" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/14.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
+									<div class="previa con mx-auto d-flex justify-content-center"><i class="fas fa-caret-left my-auto"></i> <span class="my-auto ml-1">Convocados</span></div>
+							<div class="canales">
 							<img alt="Movistar LaLiga" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/canales/movistarlaliga.png" />
 					</div>
 	</a>
@@ -2031,8 +2202,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	<img alt="Real Madrid" class="escudo local lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/15.png" />
 		<div class="fecha"> Sab 28/11 <br>21:00h </div>
 	<img alt="Alavés" class="escudo visitante lazyload " src="https://static.futbolfantasy.com/images/transp.png" data-src="//static.futbolfantasy.com/uploads/images/equipos/escudom/28.png" />
-					<div class="previa">Previa</div>
-				<div class="canales">
+									<div class="previa con mx-auto d-flex justify-content-center"><i class="fas fa-caret-left my-auto"></i> <span class="my-auto ml-1">Convocados</span></div>
+							<div class="canales">
 							<img alt="Movistar LaLiga" class="canal lazyload" src="https://static.futbolfantasy.com/images/transp.png" data-src="https://static.futbolfantasy.com/uploads/images/canales/movistarlaliga.png" />
 					</div>
 	</a>
@@ -2442,49 +2613,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			</div>
 </section>
 
-                            <div class="d-none d-lg-block"><script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const containers = document.querySelectorAll('.twitch_streaming');
-		let visibleContainer = null;
-		const headerEquipo = document.querySelectorAll('.headerequipo.with-estadio');
-		if(headerEquipo.length > 0) $('.twitch_streaming.main_streaming').remove();
-
-
-		containers.forEach(container => {
-			const style = window.getComputedStyle(container);
-			const isVisible = style.display !== 'none' && style.visibility !== 'hidden' && container.offsetParent !== null;
-			container.classList.add('active');
-			//if(headerEquipo.length == 0) container.classList.add('mt-3');
-
-			if (!visibleContainer && isVisible) {
-				visibleContainer = container;
-			}
-		});
-
-		if (visibleContainer && visibleContainer.innerHTML.trim() === '') {
-			const iframe = document.createElement('iframe');
-			iframe.frameBorder = '0';
-			iframe.scrolling = 'no';
-			//check if device are desktop or mobile
-			if (window.innerWidth > 768) {
-				iframe.width = '500';
-				iframe.height = '300';
-			} else {
-				iframe.width = '100%';
-				iframe.style.aspectRatio = '16 / 9'
-			}
-			//Check local
-			//if (window.location.host === 'futbolfantasy.com') {
-			iframe.src = 'https://player.twitch.tv/?channel=futbol_fantasy&amp;parent=www.futbolfantasy.com&parent=www.futbolfantasy.com';
-			/*} else {
-				iframe.src = 'https://player.twitch.tv/?channel=futbol_fantasy&amp;parent=www.futbolfantasy.com&parent=http://www.futbolfantasy.com.local';
-			}*/
-			visibleContainer.appendChild(iframe);
-		}
-	});
-	</script>
-
-</div>
+                            <div class="d-none d-lg-block"></div>
                             
                         </div>
                     </div>
@@ -2637,16 +2766,16 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="col-12 col-md-3">
                 <h3>Últimas noticias destacadas</h3>
                 <ul class="noticias">
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155337-manu-sanchez-abandona-el-ciutat-en-muletas-y-el-levante">Manu Sánchez abandona el Ciutat en muletas y el Levante teme una lesión grave</a></li>
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155338-bellingham-en-negociaciones-avanzadas-para-renovar-a-largo-plazo-con-el-real-madrid">Bellingham negocia una renovación de larga duración con el Real Madrid</a></li>
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155344-la-operacion-dovbyk-exige-al-valencia-15-millones-mas-el">La operación Dovbyk exige al Valencia 1,5 millones más el salario</a></li>
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155352-yuri-berenguer-y-yeray-vuelven-al-grupo-pero-hoy-gestiona-cargas-gerenabarrena">Berenguer regresa al grupo, Yuri y Yeray siguen al margen y se ausenta Gerenabarrena</a></li>
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155353-pubill-completa-la-sesion-con-el-grupo-lookman-y-cuti-siguen-al-margen">Pubill completa la sesión con el grupo. Lookman y Cuti siguen al margen</a></li>
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155354-marcao-regresa-al-grupo-tras-mes-y-medio-de-baja-y-el-sevilla-mantiene-tres-ausencias">Marcao regresa al grupo tras mes y medio de baja y el Sevilla mantiene tres ausencias</a></li>
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155355-nathan-saliba-pasara-por-quirofano-y-apunta-a-tres-meses-de-baja">Nathan Saliba pasará por quirófano y apunta a tres meses de baja</a></li>
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155358-manu-sanchez-sufre-una-rotura-del-ligamento-cruzado-y-apunta-a-perderse-el-resto-de-la-tempor">Las primeras pruebas a Manu Sánchez apuntan a una rotura del cruzado</a></li>
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155359-gerard-moreno-regresa-al-grupo-antes-de-visitar-al-slavia-de-praga">Gerard Moreno regresa al grupo antes de visitar al Slavia de Praga</a></li>
-                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155363-el-deportivo-descansa-pendiente-de-ede-y-eddahchouri">El Deportivo descansa pendiente de Ede y Eddahchouri</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155428-funes-seguira-una-jornada-mas-al-frente-del-malaga">Funes seguirá una jornada más al frente del Málaga</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155430-pellegrini-celebra-la-clasificacion-virtual-el-regreso-del-cucho-habla-de-parrott-y-valora-a-">Pellegrini celebra la clasificación virtual, el regreso del Cucho, habla de Parrott y valora a Yaya Touré</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155431-marc-aguado-inicia-la-cuenta-atras-para-su-regreso">Marc Aguado inicia la cuenta atrás para su regreso</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155433-pau-cubarsi-apunta-nuevamente-al-banquillo-frente-al-sab">Según MD, Pau Cubarsí apunta nuevamente al banquillo frente al Sabah</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155434-simeone-desea-reforzar-tres-posiciones-en-el-mercado-de">Simeone desea reforzar tres posiciones en el mercado de invierno, según Moretto</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155435-manchester-united-y-leverkusen-quieren-recuperar-a-bayin">Manchester United y Leverkusen quieren recuperar a Bayindir y Faye en enero</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155436-danjuma-no-entrena-por-el-fallecimiento-de-su-padre-y-jesus-vazquez-sigue-al-margen-en-el-val">El Valencia vuelve al trabajo sin Danjuma y con Jesús Vázquez al margen</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155437-sainz-maza-entrena-a-menor-ritmo-en-el-racing-que-sigue-sin-maguette-mantilla-y-andres-martin">Sáinz-Maza trabaja a menor ritmo y el Racing mantiene tres ausencias</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155438-berenguer-vuelve-a-quedarse-fuera-del-entrenamiento-del-athletic-yuri-y-gerenabarrena-regresa">Berenguer se ausenta y Yuri y Gerenabarrena regresan al grupo</a></li>
+                                        <li class="my-2"><a class="link py-2" href="https://www.futbolfantasy.com/laliga/noticias/155439-borja-iglesias-y-starfelt-completan-su-primer-entrenamiento-entero-con-el-grupo-antes-del-bou">Borja Iglesias y Starfelt completan la sesión con el grupo antes del Bournemouth</a></li>
                                     </ul>
             </div>
             <div class="col-12 col-md-3">
