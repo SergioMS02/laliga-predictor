@@ -1,10 +1,10 @@
 # Evolución de las probabilidades
 
-Actualizado: 2026-11-27 16:38 UTC. Umbral de cambio importante: 4 puntos.
+Actualizado: 2026-11-27 19:22 UTC. Umbral de cambio importante: 4 puntos.
 
 ## Levante – Santander (2026-11-27)
 
-1 ▅▅▅▅▅▄ · X ▂▂▂▂▂▂ · 2 ▃▃▂▂▂▃
+1 ▅▅▅▅▅▄▄ · X ▂▂▂▂▂▂▂ · 2 ▃▃▂▂▂▃▃
 
 | Momento (Madrid) | 1 | X | 2 | Alineación |
 |---|---|---|---|---|
@@ -14,6 +14,7 @@ Actualizado: 2026-11-27 16:38 UTC. Umbral de cambio importante: 4 puntos.
 | 25/11 18:11 | 52% | 23% | 25% |  |
 | 26/11 17:52 | 52% | 23% | 25% |  |
 | 27/11 17:38 | 50% | 24% | 27% |  |
+| 27/11 20:21 | 48% | 24% | 27% | ✅ |
 
 ## Betis – Vallecano (2026-11-28)
 

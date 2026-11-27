@@ -1,10 +1,10 @@
 # Predicciones LaLiga
 
-Generado: 2026-11-27 16:38 UTC
+Generado: 2026-11-27 19:21 UTC
 
 | Fecha | Partido | 1 | X | 2 | Evolución 1 | xG | Marcador más probable | +2.5 | Ambos marcan | Info |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 27/11 21:00 | Levante – Santander | 50% | 24% | 27% | ▅▅▅▅▅▄ 52→50% ▼ | 2.53–1.44 | 2-1 (9%) | 76% | 71% | 🚑 Petar Ratkov, Jeremy Toljan, Manu Sánchez, Alvaro Mantilla, Andrés Martín, Maguette Gueye |
+| 27/11 21:00 | Levante – Santander | 48% | 24% | 27% | ▅▅▅▅▅▄▄ 52→48% ▼ | 2.44–1.46 | 2-1 (9%) | 75% | 70% | ✅ alineaciones |
 | 28/11 14:00 | Betis – Vallecano | 58% | 23% | 19% | ▅▅▅▅▅▅ 56→58% ▲ | 1.72–0.92 | 1-0 (12%) | 49% | 50% | 🚑 Giovani Lo Celso, Dani Ceballos, Luiz Felipe, Augusto Batalla |
 | 28/11 16:15 | Malaga – Ath Bilbao | 21% | 28% | 51% | ▂▂▂▂ 23→21% ▼ | 0.85–1.44 | 0-1 (14%) | 40% | 44% | 🚑 Julen Lobete, Rafa Garrido, Aarón Ochoa, Dani Vivian, Gorka Guruzeta, Unai Egiluz |
 | 28/11 18:30 | Elche – Ath Madrid | 19% | 23% | 58% | ▂▂▂▂▂▂ 22→19% ▼ | 1.11–1.61 | 1-1 (12%) | 51% | 54% | 🚑 Yago Santiago, Thomas Lemar, Rubén Sánchez, Adam Boayar?, Alexander Sørloth, Ademola Lookman |
